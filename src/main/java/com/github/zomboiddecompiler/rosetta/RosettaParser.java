@@ -14,8 +14,13 @@ import java.util.stream.Stream;
 
 
 @SuppressWarnings("unchecked") public class RosettaParser {
+    /// Accumulated list of parsed rosetta packages.
     public final List<RosettaPackage> packages = new ArrayList<>();
 
+    /**
+     * Recursively scans a directory for .json and .yml rosetta files and parses them.
+     * @param directory The root directory to scan for rosetta files.
+     */
     public void parseDirectory(Path directory) {
         assert Files.exists(directory) && Files.isDirectory(directory);
 
@@ -41,6 +46,11 @@ import java.util.stream.Stream;
         }
     }
 
+    /**
+     * Parses a JSON-formatted rosetta file from the given input stream.
+     * @param stream The input stream containing JSON data.
+     * @return True if parsing succeeded, false otherwise.
+     */
     public boolean parseJson(InputStream stream) {
         StringBuilder source = new StringBuilder();
         try (InputStreamReader reader = new InputStreamReader(stream)) {
@@ -57,6 +67,11 @@ import java.util.stream.Stream;
         return this.parseFile(json);
     }
 
+    /**
+     * Parses a YAML-formatted rosetta file from the given input stream.
+     * @param stream The input stream containing YAML data.
+     * @return True if parsing succeeded, false otherwise.
+     */
     public boolean parseYaml(InputStream stream) {
         Map<String, Object> yaml = (Map<String, Object>)RosettaParser.yaml.loadFromInputStream(stream);
         return this.parseFile(yaml);
@@ -64,6 +79,12 @@ import java.util.stream.Stream;
 
     private static final Load yaml = new Load(LoadSettings.builder().build());
 
+    /**
+     * Parses a rosetta file (JSON or YAML) into packages and adds them to the packages list.
+     * Validates version (1.1) and language (java) presence before parsing.
+     * @param raw The parsed data structure (Map) containing rosetta content.
+     * @return True if file structure is valid and was successfully parsed, false otherwise.
+     */
     private boolean parseFile(Map<String, Object> raw) {
         if (!raw.containsKey("version")
                 || !raw.get("version").equals("1.1")
@@ -89,11 +110,38 @@ import java.util.stream.Stream;
         return true;
     }
 
+    /**
+     * Extracts the type name from a type definition, including support for generic types.
+     * @param raw Map containing the type definition with a 'basic' key and optional generic type parameters.
+     * @return The type name as a string, optionally including generic parameters (e.g., "List<String>").
+     */
     private String parseType(Map<String, Object> raw) {
-        // FIXME: generic types are not supported
-        return (String)raw.get("basic");
+        String basicType = (String)raw.get("basic");
+        
+        // Check for generic type parameters
+        @SuppressWarnings("unchecked")
+        List<Map<String, Object>> generics = (List<Map<String, Object>>)raw.get("generics");
+        if (generics != null && !generics.isEmpty()) {
+            StringBuilder typeBuilder = new StringBuilder(basicType).append("<");
+            for (int i = 0; i < generics.size(); i++) {
+                if (i > 0) {
+                    typeBuilder.append(", ");
+                }
+                typeBuilder.append(parseType(generics.get(i)));
+            }
+            typeBuilder.append(">");
+            return typeBuilder.toString();
+        }
+        
+        return basicType;
     }
 
+    /**
+     * Parses a package entry and its contained classes into a RosettaPackage object.
+     * @param raw Map containing class definitions keyed by class name.
+     * @param name The package name.
+     * @return A RosettaPackage object containing all parsed classes.
+     */
     private RosettaPackage parsePackage(Map<String, Object> raw, String name) {
         RosettaPackage rosettaPackage = new RosettaPackage(name);
 
@@ -106,6 +154,12 @@ import java.util.stream.Stream;
         return rosettaPackage;
     }
 
+    /**
+     * Parses a class definition including its methods, fields, and constructors.
+     * @param raw Map containing the class definition with keys like 'methods', 'fields', 'constructors'.
+     * @param name The class name.
+     * @return A RosettaClass object containing all parsed members.
+     */
     private RosettaClass parseClass(Map<String, Object> raw, String name) {
         RosettaClass rosettaClass = new RosettaClass(name);
 
@@ -152,6 +206,11 @@ import java.util.stream.Stream;
         return rosettaClass;
     }
 
+    /**
+     * Parses a collection of field definitions and adds them to the provided RosettaClass.
+     * @param fields Map of field definitions keyed by field name.
+     * @param rosettaClass The RosettaClass to add parsed fields to.
+     */
     private void parseFieldArray(Map<String, Map<String, Object>> fields, RosettaClass rosettaClass) {
         if (fields.isEmpty()) {
             return;
@@ -169,6 +228,11 @@ import java.util.stream.Stream;
         }
     }
 
+    /**
+     * Parses a method return type specification.
+     * @param returns Map containing the return type definition.
+     * @return A RosettaReturn object representing the return type, or RosettaReturn.VOID if type is void.
+     */
     private RosettaReturn parseReturn(Map<String, Object> returns) {
         String type = parseType((Map<String, Object>)returns.get("type"));
         if (type.equalsIgnoreCase("void")) {
@@ -185,6 +249,11 @@ import java.util.stream.Stream;
         return rosettaReturn;
     }
 
+    /**
+     * Parses a list of method/constructor parameters and adds them to the provided executable.
+     * @param executable The RosettaExecutable (method or constructor) to add parameters to.
+     * @param parameters List of parameter definitions to parse.
+     */
     private void parseParameters(RosettaExecutable executable, List<Map<String, Object>> parameters) {
         for (Map<String, Object> parameter : parameters) {
             RosettaParameter rosettaParameter = new RosettaParameter(
@@ -198,6 +267,11 @@ import java.util.stream.Stream;
         }
     }
 
+    /**
+     * Parses a method definition including name, return type, parameters, and modifiers.
+     * @param method Map containing the method definition.
+     * @return A RosettaMethod object with all parsed details.
+     */
     private RosettaMethod parseMethod(Map<String, Object> method) {
         RosettaMethod rosettaMethod = new RosettaMethod(
                 (String)method.get("name"), parseReturn((Map<String, Object>)method.get("return")));
@@ -218,6 +292,11 @@ import java.util.stream.Stream;
         return rosettaMethod;
     }
 
+    /**
+     * Parses a constructor definition including parameters and metadata.
+     * @param constructor Map containing the constructor definition.
+     * @return A RosettaConstructor object with all parsed details.
+     */
     private RosettaConstructor parseConstructor(Map<String, Object> constructor) {
         RosettaConstructor rosettaConstructor = new RosettaConstructor();
 

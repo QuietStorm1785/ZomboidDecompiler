@@ -225,6 +225,11 @@ public class ZomboidDecompiler {
     public record VineflowerArgument(String parameter, Object value) {}
 
     private static List<RosettaPackage> getResourceNamespaces() {
+        return getResourceNamespacesStatic();
+    }
+
+    /// Static access to resource namespaces for use by other components.
+    public static List<RosettaPackage> getResourceNamespacesStatic() {
         URL rosettaURL = ZomboidDecompiler.class.getClassLoader().getResource("rosetta");
         if (rosettaURL != null) {
             try {

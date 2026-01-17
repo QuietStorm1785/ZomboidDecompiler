@@ -44,24 +44,30 @@ public class ZomboidContextSource implements IContextSource, AutoCloseable {
 
     void scanDirectory(final Path current, final List<Entry> classes, final List<String> directories) {
         String relativePath = current.toString().replace(File.separatorChar, '/');
-        // need to remove leading "/" or it writes to root of disk lol
-        relativePath = relativePath.substring(1);
+        // Trim leading slash but allow root to stay empty.
+        if (relativePath.startsWith("/")) {
+            relativePath = relativePath.substring(1);
+        }
         directories.add(relativePath);
+        final String baseDir = relativePath;
+
         try (Stream<Path> files = Files.list(current)) {
-            for (Path file : files.toList()) {
+            files.forEach(file -> {
                 if (Files.isDirectory(file)) {
                     if (this.invertPatterns != this.patterns.partialMatch(file)) {
                         scanDirectory(file, classes, directories);
                     }
-                } else if (
-                        file.getFileName().toString().endsWith(CLASS_SUFFIX)
-                        && this.invertPatterns != this.patterns.fullMatch(file)
-                ) {
-                    String fileName = file.getFileName().toString();
-                    classes.add(Entry.atBase(
-                            relativePath + "/" + fileName.substring(0, fileName.length() - CLASS_SUFFIX.length())));
+                    return;
                 }
-            }
+
+                if (file.getFileName().toString().endsWith(CLASS_SUFFIX)
+                        && this.invertPatterns != this.patterns.fullMatch(file)) {
+                    String fileName = file.getFileName().toString();
+                    String baseName = fileName.substring(0, fileName.length() - CLASS_SUFFIX.length());
+                    String entryPath = baseDir.isEmpty() ? baseName : baseDir + "/" + baseName;
+                    classes.add(Entry.atBase(entryPath));
+                }
+            });
         } catch (IOException e) {
             ZomboidDecompiler.log.log(e);
         }
@@ -177,9 +183,19 @@ public class ZomboidContextSource implements IContextSource, AutoCloseable {
         }
 
         public static ClassPatterns fromString(String patterns) {
+            String trimmed = patterns.trim();
+            // A single '*' matches all classes.
+            if ("*".equals(trimmed)) {
+                return new ClassPatterns(List.of(ClassPattern.matchAll()), new ArrayList<>());
+            }
+
             List<ClassPattern> positivePatterns = new ArrayList<>();
             List<ClassPattern> negativePatterns = new ArrayList<>();
             for (String pattern : patterns.split(",")) {
+                pattern = pattern.trim();
+                if (pattern.isEmpty()) {
+                    continue;
+                }
                 if (pattern.startsWith("-")) {
                     negativePatterns.add(ClassPattern.fromString(pattern.substring(1)));
                 } else {
@@ -259,6 +275,10 @@ public class ZomboidContextSource implements IContextSource, AutoCloseable {
                     elements,
                     isWildcard
             );
+        }
+
+        static ClassPattern matchAll() {
+            return new ClassPattern(new ArrayList<>(), true);
         }
 
         private ClassPattern(List<String> elements, boolean isWildcard) {

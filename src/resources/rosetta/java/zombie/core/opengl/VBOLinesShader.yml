@@ -1,0 +1,31 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.opengl:
+        VBOLinesShader:
+          extends: zombie.core.opengl.Shader
+          modifiers:
+          - public
+          - final
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: onCompileSuccess
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+            return:
+              type:
+                basic: void
+                full: void

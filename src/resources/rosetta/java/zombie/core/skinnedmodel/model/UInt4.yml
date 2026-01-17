@@ -1,0 +1,60 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.model:
+        UInt4:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          notes: Created by LEMMYATI on 03/01/14.
+          fields:
+            W:
+              name: W
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            X:
+              name: X
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            Y:
+              name: Y
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            Z:
+              name: Z
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            - name: w
+              type:
+                basic: int
+                full: int

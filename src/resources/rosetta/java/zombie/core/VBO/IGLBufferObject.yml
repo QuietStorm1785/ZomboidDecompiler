@@ -1,0 +1,198 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.VBO:
+        IGLBufferObject:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: GL_ARRAY_BUFFER
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_BUFFER_SIZE
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_ELEMENT_ARRAY_BUFFER
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_STATIC_DRAW
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_STREAM_DRAW
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_WRITE_ONLY
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: glBindBuffer
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: target
+              type:
+                basic: int
+                full: int
+            - name: buffer
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: glBufferData
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: target
+              type:
+                basic: int
+                full: int
+            - name: data
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: usage
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: glBufferData
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: target
+              type:
+                basic: int
+                full: int
+            - name: data_size
+              type:
+                basic: long
+                full: long
+            - name: usage
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: glDeleteBuffers
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: buffers
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: glGenBuffers
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: glGetBufferParameter
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: target
+              type:
+                basic: int
+                full: int
+            - name: pname
+              type:
+                basic: int
+                full: int
+            - name: params
+              type:
+                basic: IntBuffer
+                full: java.nio.IntBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: glMapBuffer
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: target
+              type:
+                basic: int
+                full: int
+            - name: access
+              type:
+                basic: int
+                full: int
+            - name: length
+              type:
+                basic: long
+                full: long
+            - name: old_buffer
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: glUnmapBuffer
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: target
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean

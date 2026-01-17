@@ -1,0 +1,309 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.fluids:
+        FluidUtil:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          staticFields:
+            MIN_CONTAINER_CAPACITY:
+              name: MIN_CONTAINER_CAPACITY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            MIN_TRANSFER_ACTION_TIME:
+              name: MIN_TRANSFER_ACTION_TIME
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            MIN_UNIT:
+              name: MIN_UNIT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            TRANSFER_ACTION_TIME_PER_LITER:
+              name: TRANSFER_ACTION_TIME_PER_LITER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            UNIT_L:
+              name: UNIT_L
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            UNIT_cL:
+              name: UNIT_cL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            UNIT_cmL:
+              name: UNIT_cmL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            UNIT_dL:
+              name: UNIT_dL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            UNIT_dmL:
+              name: UNIT_dmL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            UNIT_mL:
+              name: UNIT_mL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            UNIT_uL:
+              name: UNIT_uL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            df_liter:
+              name: df_liter
+              modifiers:
+              - private
+              - static
+              type:
+                basic: DecimalFormat
+                full: java.text.DecimalFormat
+            df_liter10:
+              name: df_liter10
+              modifiers:
+              - private
+              - static
+              type:
+                basic: DecimalFormat
+                full: java.text.DecimalFormat
+            df_liter1000:
+              name: df_liter1000
+              modifiers:
+              - private
+              - static
+              type:
+                basic: DecimalFormat
+                full: java.text.DecimalFormat
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: getAmountFormatted
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAmountLiter
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAmountLiter10
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAmountLiter1000
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAmountMilli
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFractionFormatted
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getMinContainerCapacity
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMinTransferActionTime
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMinUnit
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTransferActionTimePerLiter
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getUnitCentiLiter
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getUnitCentiMilliLiter
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getUnitDeciLiter
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getUnitDeciMilliLiter
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getUnitLiter
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getUnitMicroLiter
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getUnitMilliLiter
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: float
+                full: float
+          - name: roundTransfer
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float

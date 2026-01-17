@@ -1,0 +1,35 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      se.krka.kahlua.vm:
+        KahluaTableIterator:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: advance
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getKey
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getValue
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object

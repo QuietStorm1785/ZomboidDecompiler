@@ -1,0 +1,97 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core:
+        Colors.ColorSet:
+          extends: java.lang.Enum<zombie.core.Colors$ColorSet>
+          modifiers:
+          - public
+          - final
+          fields:
+            index:
+              name: index
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Colors.ColorSet
+                full: zombie.core.Colors$ColorSet[]
+            ColorBlind:
+              name: ColorBlind
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Colors.ColorSet
+                full: zombie.core.Colors$ColorSet
+            Game:
+              name: Game
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Colors.ColorSet
+                full: zombie.core.Colors$ColorSet
+            Standard:
+              name: Standard
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Colors.ColorSet
+                full: zombie.core.Colors$ColorSet
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: getIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: Colors.ColorSet
+                full: zombie.core.Colors$ColorSet[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Colors.ColorSet
+                full: zombie.core.Colors$ColorSet
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: Colors.ColorSet
+                full: zombie.core.Colors$ColorSet[]

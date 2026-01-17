@@ -1,0 +1,370 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.skills:
+        PerkFactory:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          staticFields:
+            NextPerkID:
+              name: NextPerkID
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            PerkById:
+              name: PerkById
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.characters.skills.PerkFactory$Perk>
+            PerkByIndex:
+              name: PerkByIndex
+              modifiers:
+              - private
+              - static
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk[]
+            PerkByName:
+              name: PerkByName
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.characters.skills.PerkFactory$Perk>
+            PerkList:
+              name: PerkList
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.skills.PerkFactory$Perk>
+            PerkXPReqMultiplier:
+              name: PerkXPReqMultiplier
+              modifiers:
+              - package
+              - static
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: AddPerk
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: perk
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+            - name: translation
+              type:
+                basic: String
+                full: java.lang.String
+            - name: xp1
+              type:
+                basic: int
+                full: int
+            - name: xp2
+              type:
+                basic: int
+                full: int
+            - name: xp3
+              type:
+                basic: int
+                full: int
+            - name: xp4
+              type:
+                basic: int
+                full: int
+            - name: xp5
+              type:
+                basic: int
+                full: int
+            - name: xp6
+              type:
+                basic: int
+                full: int
+            - name: xp7
+              type:
+                basic: int
+                full: int
+            - name: xp8
+              type:
+                basic: int
+                full: int
+            - name: xp9
+              type:
+                basic: int
+                full: int
+            - name: xp10
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+          - name: AddPerk
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: perk
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+            - name: translation
+              type:
+                basic: String
+                full: java.lang.String
+            - name: xp1
+              type:
+                basic: int
+                full: int
+            - name: xp2
+              type:
+                basic: int
+                full: int
+            - name: xp3
+              type:
+                basic: int
+                full: int
+            - name: xp4
+              type:
+                basic: int
+                full: int
+            - name: xp5
+              type:
+                basic: int
+                full: int
+            - name: xp6
+              type:
+                basic: int
+                full: int
+            - name: xp7
+              type:
+                basic: int
+                full: int
+            - name: xp8
+              type:
+                basic: int
+                full: int
+            - name: xp9
+              type:
+                basic: int
+                full: int
+            - name: xp10
+              type:
+                basic: int
+                full: int
+            - name: passiv
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+          - name: AddPerk
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: perk
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+            - name: translation
+              type:
+                basic: String
+                full: java.lang.String
+            - name: parent
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+            - name: xp1
+              type:
+                basic: int
+                full: int
+            - name: xp2
+              type:
+                basic: int
+                full: int
+            - name: xp3
+              type:
+                basic: int
+                full: int
+            - name: xp4
+              type:
+                basic: int
+                full: int
+            - name: xp5
+              type:
+                basic: int
+                full: int
+            - name: xp6
+              type:
+                basic: int
+                full: int
+            - name: xp7
+              type:
+                basic: int
+                full: int
+            - name: xp8
+              type:
+                basic: int
+                full: int
+            - name: xp9
+              type:
+                basic: int
+                full: int
+            - name: xp10
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+          - name: AddPerk
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: perk
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+            - name: translation
+              type:
+                basic: String
+                full: java.lang.String
+            - name: parent
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+            - name: xp1
+              type:
+                basic: int
+                full: int
+            - name: xp2
+              type:
+                basic: int
+                full: int
+            - name: xp3
+              type:
+                basic: int
+                full: int
+            - name: xp4
+              type:
+                basic: int
+                full: int
+            - name: xp5
+              type:
+                basic: int
+                full: int
+            - name: xp6
+              type:
+                basic: int
+                full: int
+            - name: xp7
+              type:
+                basic: int
+                full: int
+            - name: xp8
+              type:
+                basic: int
+                full: int
+            - name: xp9
+              type:
+                basic: int
+                full: int
+            - name: xp10
+              type:
+                basic: int
+                full: int
+            - name: passiv
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getPerk
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: perk
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+            return:
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+          - name: getPerkFromName
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+          - name: getPerkName
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: type
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: init
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: initTranslations
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void

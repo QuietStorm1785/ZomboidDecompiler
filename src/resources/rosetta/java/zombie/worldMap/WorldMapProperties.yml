@@ -1,0 +1,13 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.worldMap:
+        WorldMapProperties:
+          extends: java.util.HashMap<java.lang.String, java.lang.String>
+          modifiers:
+          - public
+          - final
+          constructors:
+          - modifiers:
+            - public

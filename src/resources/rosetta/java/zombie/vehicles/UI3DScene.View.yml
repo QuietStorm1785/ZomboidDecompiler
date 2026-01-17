@@ -1,0 +1,108 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.vehicles:
+        UI3DScene.View:
+          extends: java.lang.Enum<zombie.vehicles.UI3DScene$View>
+          modifiers:
+          - package
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: UI3DScene.View
+                full: zombie.vehicles.UI3DScene$View[]
+            Back:
+              name: Back
+              modifiers:
+              - public
+              - static
+              type:
+                basic: UI3DScene.View
+                full: zombie.vehicles.UI3DScene$View
+            Bottom:
+              name: Bottom
+              modifiers:
+              - public
+              - static
+              type:
+                basic: UI3DScene.View
+                full: zombie.vehicles.UI3DScene$View
+            Front:
+              name: Front
+              modifiers:
+              - public
+              - static
+              type:
+                basic: UI3DScene.View
+                full: zombie.vehicles.UI3DScene$View
+            Left:
+              name: Left
+              modifiers:
+              - public
+              - static
+              type:
+                basic: UI3DScene.View
+                full: zombie.vehicles.UI3DScene$View
+            Right:
+              name: Right
+              modifiers:
+              - public
+              - static
+              type:
+                basic: UI3DScene.View
+                full: zombie.vehicles.UI3DScene$View
+            Top:
+              name: Top
+              modifiers:
+              - public
+              - static
+              type:
+                basic: UI3DScene.View
+                full: zombie.vehicles.UI3DScene$View
+            UserDefined:
+              name: UserDefined
+              modifiers:
+              - public
+              - static
+              type:
+                basic: UI3DScene.View
+                full: zombie.vehicles.UI3DScene$View
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: UI3DScene.View
+                full: zombie.vehicles.UI3DScene$View[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: UI3DScene.View
+                full: zombie.vehicles.UI3DScene$View
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: UI3DScene.View
+                full: zombie.vehicles.UI3DScene$View[]

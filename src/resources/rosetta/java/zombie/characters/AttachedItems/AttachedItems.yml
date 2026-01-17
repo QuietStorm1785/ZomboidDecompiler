@@ -1,0 +1,205 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.AttachedItems:
+        AttachedItems:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            group:
+              name: group
+              modifiers:
+              - protected
+              type:
+                basic: AttachedLocationGroup
+                full: zombie.characters.AttachedItems.AttachedLocationGroup
+            items:
+              name: items
+              modifiers:
+              - protected
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.AttachedItems.AttachedItem>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: group
+              type:
+                basic: AttachedLocationGroup
+                full: zombie.characters.AttachedItems.AttachedLocationGroup
+          - modifiers:
+            - public
+            parameters:
+            - name: other
+              type:
+                basic: AttachedItems
+                full: zombie.characters.AttachedItems.AttachedItems
+          methods:
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: contains
+            modifiers:
+            - public
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: copyFrom
+            modifiers:
+            - public
+            parameters:
+            - name: other
+              type:
+                basic: AttachedItems
+                full: zombie.characters.AttachedItems.AttachedItems
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forEach
+            modifiers:
+            - public
+            parameters:
+            - name: c
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<zombie.characters.AttachedItems.AttachedItem>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: AttachedItem
+                full: zombie.characters.AttachedItems.AttachedItem
+          - name: getGroup
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AttachedLocationGroup
+                full: zombie.characters.AttachedItems.AttachedLocationGroup
+          - name: getItem
+            modifiers:
+            - public
+            parameters:
+            - name: location
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: getItemByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: getLocation
+            modifiers:
+            - public
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: indexOf
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: indexOf
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: remove
+            modifiers:
+            - public
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setItem
+            modifiers:
+            - public
+            parameters:
+            - name: location
+              type:
+                basic: String
+                full: java.lang.String
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: size
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int

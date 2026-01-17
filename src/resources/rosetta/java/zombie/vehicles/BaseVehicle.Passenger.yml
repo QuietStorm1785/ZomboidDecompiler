@@ -1,0 +1,28 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.vehicles:
+        BaseVehicle.Passenger:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            character:
+              name: character
+              modifiers:
+              - public
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            offset:
+              name: offset
+              modifiers:
+              - private
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+          constructors:
+          - modifiers:
+            - public

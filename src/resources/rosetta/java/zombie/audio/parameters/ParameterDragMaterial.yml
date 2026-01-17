@@ -1,0 +1,41 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.audio.parameters:
+        ParameterDragMaterial:
+          extends: zombie.audio.FMODLocalParameter
+          modifiers:
+          - public
+          - final
+          fields:
+            character:
+              name: character
+              modifiers:
+              - private
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          methods:
+          - name: calculateCurrentValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaterial
+            modifiers:
+            - private
+            return:
+              type:
+                basic: ParameterDragMaterial.DragMaterial
+                full: zombie.audio.parameters.ParameterDragMaterial$DragMaterial

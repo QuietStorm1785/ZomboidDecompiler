@@ -1,0 +1,335 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel:
+        DeadBodyAtlas.BodyParams:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            ambient:
+              name: ambient
+              modifiers:
+              - public
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            angle:
+              name: angle
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            animSetName:
+              name: animSetName
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            attachedModelNames:
+              name: attachedModelNames
+              modifiers:
+              - public
+              type:
+                basic: AttachedModelNames
+                full: zombie.characters.AttachedItems.AttachedModelNames
+            bFemale:
+              name: bFemale
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bKilledByFall:
+              name: bKilledByFall
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bOutside:
+              name: bOutside
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bRoom:
+              name: bRoom
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bSkeleton:
+              name: bSkeleton
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bStanding:
+              name: bStanding
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bZombie:
+              name: bZombie
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            baseVisual:
+              name: baseVisual
+              modifiers:
+              - public
+              type:
+                basic: BaseVisual
+                full: zombie.core.skinnedmodel.visual.BaseVisual
+            diedBoneTransforms:
+              name: diedBoneTransforms
+              modifiers:
+              - public
+              type:
+                basic: TwistableBoneTransform
+                full: zombie.core.skinnedmodel.animation.TwistableBoneTransform[]
+            dir:
+              name: dir
+              modifiers:
+              - public
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            fallOnFront:
+              name: fallOnFront
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            grappleable:
+              name: grappleable
+              modifiers:
+              - public
+              type:
+                basic: IGrappleable
+                full: zombie.core.skinnedmodel.IGrappleable
+            itemVisuals:
+              name: itemVisuals
+              modifiers:
+              - public
+              type:
+                basic: ItemVisuals
+                full: zombie.core.skinnedmodel.visual.ItemVisuals
+            lights:
+              name: lights
+              modifiers:
+              - public
+              type:
+                basic: IsoGridSquare.ResultLight
+                full: zombie.iso.IsoGridSquare$ResultLight[]
+            primaryHandItem:
+              name: primaryHandItem
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            ragdollFall:
+              name: ragdollFall
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            secondaryHandItem:
+              name: secondaryHandItem
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            stateName:
+              name: stateName
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            trackTime:
+              name: trackTime
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            variables:
+              name: variables
+              modifiers:
+              - public
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.lang.String>
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            z:
+              name: z
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: Reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: init
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: DeadBodyAtlas.BodyParams
+                full: zombie.core.skinnedmodel.DeadBodyAtlas$BodyParams
+            return:
+              type:
+                basic: void
+                full: void
+          - name: init
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoDeadBody
+                full: zombie.iso.objects.IsoDeadBody
+            return:
+              type:
+                basic: void
+                full: void
+          - name: init
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            return:
+              type:
+                basic: void
+                full: void
+          - name: init
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoMannequin
+                full: zombie.iso.objects.IsoMannequin
+            return:
+              type:
+                basic: void
+                full: void
+          - name: init
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IHumanVisual
+                full: zombie.core.skinnedmodel.visual.IHumanVisual
+            - name: arg1
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg3
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: initAmbient
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: initDeathPose
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoDeadBody
+                full: zombie.iso.objects.IsoDeadBody
+            return:
+              type:
+                basic: void
+                full: void
+          - name: initDeathPose
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IAnimatable
+                full: zombie.core.skinnedmodel.advancedanimation.IAnimatable
+            return:
+              type:
+                basic: void
+                full: void
+          - name: initLights
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void

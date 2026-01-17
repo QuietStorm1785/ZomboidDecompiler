@@ -1,0 +1,132 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.sprite:
+        IsoSpriteManager:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            IntMap:
+              name: IntMap
+              modifiers:
+              - public
+              type:
+                basic: TIntObjectHashMap
+                full: gnu.trove.map.hash.TIntObjectHashMap<zombie.iso.sprite.IsoSprite>
+            NamedMap:
+              name: NamedMap
+              modifiers:
+              - public
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.iso.sprite.IsoSprite>
+            emptySprite:
+              name: emptySprite
+              modifiers:
+              - private
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+          staticFields:
+            instance:
+              name: instance
+              modifiers:
+              - public
+              - static
+              type:
+                basic: IsoSpriteManager
+                full: zombie.iso.sprite.IsoSpriteManager
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: AddSprite
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+          - name: AddSprite
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+            - name: ID
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+          - name: Dispose
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getOrAddSpriteCache
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+          - name: getOrAddSpriteCache
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+            - name: col
+              type:
+                basic: Color
+                full: zombie.core.Color
+            return:
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+          - name: getSprite
+            modifiers:
+            - public
+            parameters:
+            - name: gid
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+          - name: getSprite
+            modifiers:
+            - public
+            parameters:
+            - name: gid
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite

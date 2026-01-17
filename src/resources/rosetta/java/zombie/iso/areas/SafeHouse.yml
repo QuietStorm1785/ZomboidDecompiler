@@ -1,0 +1,1194 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.areas:
+        SafeHouse:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            datetimeCreated:
+              name: datetimeCreated
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            h:
+              name: h
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            hitPoints:
+              name: hitPoints
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            id:
+              name: id
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            lastVisited:
+              name: lastVisited
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            location:
+              name: location
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            onlineID:
+              name: onlineID
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            openTimer:
+              name: openTimer
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            owner:
+              name: owner
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            playerConnected:
+              name: playerConnected
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            players:
+              name: players
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            playersRespawn:
+              name: playersRespawn
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            title:
+              name: title
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            w:
+              name: w
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            x:
+              name: x
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            y:
+              name: y
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          staticFields:
+            diffError:
+              name: diffError
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            invites:
+              name: invites
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashSet
+                full: java.util.HashSet<java.lang.String>
+            safehouseList:
+              name: safehouseList
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.areas.SafeHouse>
+            tempPlayers:
+              name: tempPlayers
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.IsoPlayer>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: w
+              type:
+                basic: int
+                full: int
+            - name: h
+              type:
+                basic: int
+                full: int
+            - name: player
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: addInvite
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addPlayer
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: alreadyHaveSafehouse
+            modifiers:
+            - public
+            parameters:
+            - name: username
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: alreadyHaveSafehouse
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: checkTrespass
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: containsLocation
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getDatetimeCreated
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getDatetimeCreatedStr
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getH
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getHitPoints
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getId
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getLastVisited
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getLocation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getOnlineID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getOpenTimer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getOwner
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPlayerConnected
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getPlayers
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getPlayersRespawn
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getTitle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getW
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getX2
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getY2
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: haveInvite
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOwner
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOwner
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRespawnInSafehouse
+            modifiers:
+            - public
+            parameters:
+            - name: username
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: playerAllowed
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: playerAllowed
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: removeInvite
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removePlayer
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: output
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDatetimeCreated
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setH
+            modifiers:
+            - public
+            parameters:
+            - name: h
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHitPoints
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLastVisited
+            modifiers:
+            - public
+            parameters:
+            - name: lastVisited
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLocation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOnlineID
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOpenTimer
+            modifiers:
+            - public
+            parameters:
+            - name: openTimer
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOwner
+            modifiers:
+            - public
+            parameters:
+            - name: owner
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPlayerConnected
+            modifiers:
+            - public
+            parameters:
+            - name: playerConnected
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPlayers
+            modifiers:
+            - public
+            parameters:
+            - name: players
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRespawnInSafehouse
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            - name: username
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTitle
+            modifiers:
+            - public
+            parameters:
+            - name: title
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setW
+            modifiers:
+            - public
+            parameters:
+            - name: w
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setX
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setY
+            modifiers:
+            - public
+            parameters:
+            - name: y
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updatePlayersConnected
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateSafehouse
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+            notes: "Update the last visited value everytime someone is in this safehouse\
+              \ If it's\n not visited for some time (SafehouseRemoval serveroption)\
+              \ it's automatically\n removed."
+          staticMethods:
+          - name: addSafeHouse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: addSafeHouse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: allowSafeHouse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canBeSafehouse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: clickedSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: clearSafehouseList
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: findSafeHouse
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: getOnlineID
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSafeHouse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: getSafeHouse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: getSafeHouse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: w
+              type:
+                basic: int
+                full: int
+            - name: h
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: getSafeHouse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: getSafehouseByOwner
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: getSafehouseList
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.areas.SafeHouse>
+          - name: getSafehouseOverlapping
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: getSafehouseOverlapping
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: hasSafehouse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: username
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: hasSafehouse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: hitPoint
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: init
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: intersects
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInSameSafehouse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPlayerAllowedOnSquare
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: sq
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSafeHouse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: username
+              type:
+                basic: String
+                full: java.lang.String
+            - name: doDisableSafehouse
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+            notes: "Return if the square is a safehouse non allowed for the player\
+              \ You need to be\n on a safehouse AND not be allowed to return the safe\
+              \ If you're allowed,\n you'll have null in return If username is null,\
+              \ you basically just return if\n there's a safehouse here"
+          - name: isSafehouseAllowClaim
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+            - name: arg1
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSafehouseAllowInteract
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: arg1
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSafehouseAllowLoot
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: arg1
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSafehouseAllowTrepass
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: arg1
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+          - name: removeSafeHouse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: SafeHouse
+                full: zombie.iso.areas.SafeHouse
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateSafehousePlayersConnected
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void

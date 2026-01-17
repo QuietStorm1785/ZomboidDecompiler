@@ -9,10 +9,13 @@ import org.jetbrains.java.decompiler.main.extern.IVariableNameProvider;
 import org.jetbrains.java.decompiler.main.extern.IVariableNamingFactory;
 import org.jetbrains.java.decompiler.struct.StructMethod;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class RosettaNamingFactory implements IVariableNamingFactory {
+    private Map<String, RosettaClass> classes = new HashMap<>();
+
     @Override
     public @NotNull IVariableNameProvider createFactory(StructMethod method) {
         RosettaClass rosettaClass = classes.get(method.getClassQualifiedName());
@@ -32,8 +35,6 @@ public class RosettaNamingFactory implements IVariableNamingFactory {
                 method
         );
     }
-
-    private Map<String, RosettaClass> classes;
 
     void addClassesFromNamespaces(List<RosettaPackage> namespaces) {
         classes = VineflowerUtils.buildClassMap(namespaces);

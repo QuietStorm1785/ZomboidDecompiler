@@ -1,0 +1,277 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.util.calendar:
+        JulianCalendar:
+          extends: sun.util.calendar.BaseCalendar
+          modifiers:
+          - public
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            BCE:
+              name: BCE
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            CE:
+              name: CE
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            JULIAN_EPOCH:
+              name: JULIAN_EPOCH
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            eras:
+              name: eras
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Era
+                full: sun.util.calendar.Era[]
+          constructors:
+          - modifiers:
+            - package
+          methods:
+          - name: getCalendarDate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: JulianCalendar.Date
+                full: sun.util.calendar.JulianCalendar$Date
+          - name: getCalendarDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: JulianCalendar.Date
+                full: sun.util.calendar.JulianCalendar$Date
+          - name: getCalendarDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+            return:
+              type:
+                basic: JulianCalendar.Date
+                full: sun.util.calendar.JulianCalendar$Date
+          - name: getCalendarDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: TimeZone
+                full: java.util.TimeZone
+            return:
+              type:
+                basic: JulianCalendar.Date
+                full: sun.util.calendar.JulianCalendar$Date
+          - name: getCalendarDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: getCalendarDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: TimeZone
+                full: java.util.TimeZone
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: getCalendarDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: getCalendarDate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: getCalendarDateFromFixedDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getDayOfWeek
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getFixedDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: BaseCalendar.Date
+                full: sun.util.calendar.BaseCalendar$Date
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getYearFromFixedDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isLeapYear
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: newCalendarDate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: JulianCalendar.Date
+                full: sun.util.calendar.JulianCalendar$Date
+          - name: newCalendarDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TimeZone
+                full: java.util.TimeZone
+            return:
+              type:
+                basic: JulianCalendar.Date
+                full: sun.util.calendar.JulianCalendar$Date
+          - name: newCalendarDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TimeZone
+                full: java.util.TimeZone
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: newCalendarDate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate

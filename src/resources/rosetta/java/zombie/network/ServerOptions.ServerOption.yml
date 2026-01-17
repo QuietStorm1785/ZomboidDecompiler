@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.network:
+        ServerOptions.ServerOption:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: asConfigOption
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: ConfigOption
+                full: zombie.config.ConfigOption
+          - name: getTooltip
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String

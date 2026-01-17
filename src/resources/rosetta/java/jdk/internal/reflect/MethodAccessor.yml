@@ -1,0 +1,28 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      jdk.internal.reflect:
+        MethodAccessor:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: invoke
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object

@@ -1,0 +1,65 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.crafting:
+        BaseCraftingLogic.CachedRecipeComparator:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            compareMode:
+              name: compareMode
+              modifiers:
+              - public
+              type:
+                basic: BaseCraftingLogic.CachedRecipeComparator.CompareMode
+                full: zombie.entity.components.crafting.BaseCraftingLogic$CachedRecipeComparator$CompareMode
+            logic:
+              name: logic
+              modifiers:
+              - private
+              type:
+                basic: BaseCraftingLogic
+                full: zombie.entity.components.crafting.BaseCraftingLogic
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: BaseCraftingLogic
+                full: zombie.entity.components.crafting.BaseCraftingLogic
+          methods:
+          - name: compare
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            - name: arg1
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            return:
+              type:
+                basic: int
+                full: int
+          - name: compare
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: int
+                full: int

@@ -1,0 +1,102 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.time.format:
+        FormatStyle:
+          extends: java.lang.Enum<java.time.format.FormatStyle>
+          modifiers:
+          - public
+          - final
+          notes: "Enumeration of the style of a localized date, time or date-time\
+            \ formatter.\n \n These styles are used when obtaining a date-time style\
+            \ from configuration.\n See DateTimeFormatter and DateTimeFormatterBuilder\
+            \ for usage."
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: FormatStyle
+                full: java.time.format.FormatStyle[]
+            FULL:
+              name: FULL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FormatStyle
+                full: java.time.format.FormatStyle
+              notes: "Full text style, with the most detail.\n For example, the format\
+                \ might be 'Tuesday, April 12, 1952 AD' or '3:30:42pm PST'."
+            LONG:
+              name: LONG
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FormatStyle
+                full: java.time.format.FormatStyle
+              notes: "Long text style, with lots of detail.\n For example, the format\
+                \ might be 'January 12, 1952'."
+            MEDIUM:
+              name: MEDIUM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FormatStyle
+                full: java.time.format.FormatStyle
+              notes: "Medium text style, with some detail.\n For example, the format\
+                \ might be 'Jan 12, 1952'."
+            SHORT:
+              name: SHORT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FormatStyle
+                full: java.time.format.FormatStyle
+              notes: "Short text style, typically numeric.\n For example, the format\
+                \ might be '12.13.52' or '3:30pm'."
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: FormatStyle
+                full: java.time.format.FormatStyle[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: FormatStyle
+                full: java.time.format.FormatStyle
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: FormatStyle
+                full: java.time.format.FormatStyle[]
+              notes: an array containing the constants of this enum class, in the
+                order they are declared
+            notes: 'Returns an array containing the constants of this enum class,
+              in
+
+              the order they are declared.'

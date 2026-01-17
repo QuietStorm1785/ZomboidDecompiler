@@ -1,0 +1,85 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      org.lwjgl.util.vector:
+        Vector:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          constructors:
+          - modifiers:
+            - protected
+          methods:
+          - name: length
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: float
+                full: float
+          - name: lengthSquared
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: load
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+            return:
+              type:
+                basic: Vector
+                full: org.lwjgl.util.vector.Vector
+          - name: negate
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Vector
+                full: org.lwjgl.util.vector.Vector
+          - name: normalise
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: Vector
+                full: org.lwjgl.util.vector.Vector
+          - name: scale
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: Vector
+                full: org.lwjgl.util.vector.Vector
+          - name: store
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+            return:
+              type:
+                basic: Vector
+                full: org.lwjgl.util.vector.Vector

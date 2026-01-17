@@ -1,0 +1,176 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.itemConfig:
+        SelectorBucket:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            children:
+              name: children
+              modifiers:
+              - private
+              type:
+                basic: SelectorBucket
+                full: zombie.scripting.itemConfig.SelectorBucket[]
+            onCreate:
+              name: onCreate
+              modifiers:
+              - private
+              type:
+                basic: SelectorBucket
+                full: zombie.scripting.itemConfig.SelectorBucket
+            origSelectorString:
+              name: origSelectorString
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            randomizer:
+              name: randomizer
+              modifiers:
+              - private
+              type:
+                basic: Randomizer
+                full: zombie.scripting.itemConfig.Randomizer
+            selectorIDs:
+              name: selectorIDs
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int[]
+            selectorSituated:
+              name: selectorSituated
+              modifiers:
+              - private
+              type:
+                basic: SituatedType
+                full: zombie.scripting.itemConfig.enums.SituatedType
+            selectorType:
+              name: selectorType
+              modifiers:
+              - private
+              type:
+                basic: SelectorType
+                full: zombie.scripting.itemConfig.enums.SelectorType
+            selectorWorldAge:
+              name: selectorWorldAge
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int[]
+            - name: arg1
+              type:
+                basic: SelectorBucketScript
+                full: zombie.scripting.itemConfig.script.SelectorBucketScript
+            - name: arg2
+              type:
+                basic: SelectorBucket
+                full: zombie.scripting.itemConfig.SelectorBucket[]
+            - name: arg3
+              type:
+                basic: Randomizer
+                full: zombie.scripting.itemConfig.Randomizer
+          methods:
+          - name: Resolve
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: GameEntity
+                full: zombie.entity.GameEntity
+            - name: arg1
+              type:
+                basic: ItemPickInfo
+                full: zombie.inventory.ItemPickInfo
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: ResolveOnCreate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: GameEntity
+                full: zombie.entity.GameEntity
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsSelectorID
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getOrigSelectorString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRandomizer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Randomizer
+                full: zombie.scripting.itemConfig.Randomizer
+          - name: getSelectorIDs
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int[]
+          - name: getSelectorSituated
+            modifiers:
+            - public
+            return:
+              type:
+                basic: SituatedType
+                full: zombie.scripting.itemConfig.enums.SituatedType
+          - name: getSelectorType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: SelectorType
+                full: zombie.scripting.itemConfig.enums.SelectorType
+          - name: getSelectorWorldAge
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: hasSelectorIDs
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean

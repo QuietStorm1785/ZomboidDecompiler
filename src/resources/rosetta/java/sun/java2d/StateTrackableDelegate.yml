@@ -1,0 +1,121 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.java2d:
+        StateTrackableDelegate:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            numDynamicAgents:
+              name: numDynamicAgents
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            theState:
+              name: theState
+              modifiers:
+              - private
+              type:
+                basic: StateTrackable.State
+                full: sun.java2d.StateTrackable$State
+            theTracker:
+              name: theTracker
+              modifiers:
+              - package
+              type:
+                basic: StateTracker
+                full: sun.java2d.StateTracker
+          staticFields:
+            IMMUTABLE_DELEGATE:
+              name: IMMUTABLE_DELEGATE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: StateTrackableDelegate
+                full: sun.java2d.StateTrackableDelegate
+            UNTRACKABLE_DELEGATE:
+              name: UNTRACKABLE_DELEGATE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: StateTrackableDelegate
+                full: sun.java2d.StateTrackableDelegate
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: StateTrackable.State
+                full: sun.java2d.StateTrackable$State
+          methods:
+          - name: addDynamicAgent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getState
+            modifiers:
+            - public
+            return:
+              type:
+                basic: StateTrackable.State
+                full: sun.java2d.StateTrackable$State
+          - name: getStateTracker
+            modifiers:
+            - public
+            return:
+              type:
+                basic: StateTracker
+                full: sun.java2d.StateTracker
+          - name: markDirty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeDynamicAgent
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setImmutable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUntrackable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: createInstance
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: StateTrackable.State
+                full: sun.java2d.StateTrackable$State
+            return:
+              type:
+                basic: StateTrackableDelegate
+                full: sun.java2d.StateTrackableDelegate

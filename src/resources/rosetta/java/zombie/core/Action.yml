@@ -1,0 +1,220 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core:
+        Action:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          - abstract
+          fields:
+            duration:
+              name: duration
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            endTime:
+              name: endTime
+              modifiers:
+              - protected
+              type:
+                basic: long
+                full: long
+            id:
+              name: id
+              modifiers:
+              - protected
+              type:
+                basic: byte
+                full: byte
+            playerID:
+              name: playerID
+              modifiers:
+              - package
+              type:
+                basic: PlayerID
+                full: zombie.network.fields.character.PlayerID
+            startTime:
+              name: startTime
+              modifiers:
+              - protected
+              type:
+                basic: long
+                full: long
+            state:
+              name: state
+              modifiers:
+              - protected
+              type:
+                basic: Transaction.TransactionState
+                full: zombie.core.Transaction$TransactionState
+          staticFields:
+            TimeoutForInfinitiveActions:
+              name: TimeoutForInfinitiveActions
+              modifiers:
+              - protected
+              - static
+              type:
+                basic: int
+                full: int
+            lastId:
+              name: lastId
+              modifiers:
+              - protected
+              - static
+              type:
+                basic: byte
+                full: byte
+          constructors:
+          - modifiers:
+            - package
+          methods:
+          - name: getDuration
+            modifiers:
+            - package
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getProgress
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: isConsistent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUsingTimeout
+            modifiers:
+            - package
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isValid
+            modifiers:
+            - package
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: perform
+            modifiers:
+            - package
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDuration
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setState
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Transaction.TransactionState
+                full: zombie.core.Transaction$TransactionState
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTimeData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: start
+            modifiers:
+            - package
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stop
+            modifiers:
+            - package
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - package
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: write
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void

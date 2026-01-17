@@ -1,0 +1,53 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.audio.parameters:
+        ParameterCharacterMovementSpeed:
+          extends: zombie.audio.FMODLocalParameter
+          modifiers:
+          - public
+          - final
+          fields:
+            character:
+              name: character
+              modifiers:
+              - private
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            movementType:
+              name: movementType
+              modifiers:
+              - private
+              type:
+                basic: ParameterCharacterMovementSpeed.MovementType
+                full: zombie.audio.parameters.ParameterCharacterMovementSpeed$MovementType
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: character
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          methods:
+          - name: calculateCurrentValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: setMovementType
+            modifiers:
+            - public
+            parameters:
+            - name: movementType
+              type:
+                basic: ParameterCharacterMovementSpeed.MovementType
+                full: zombie.audio.parameters.ParameterCharacterMovementSpeed$MovementType
+            return:
+              type:
+                basic: void
+                full: void

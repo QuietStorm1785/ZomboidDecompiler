@@ -1,0 +1,222 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.worldMap:
+        UIWorldMapV3:
+          extends: zombie.worldMap.UIWorldMapV2
+          modifiers:
+          - public
+          fields:
+            m_streetsV1:
+              name: m_streetsV1
+              modifiers:
+              - protected
+              type:
+                basic: WorldMapStreetsV1
+                full: zombie.worldMap.streets.WorldMapStreetsV1
+            m_styleV2:
+              name: m_styleV2
+              modifiers:
+              - private
+              type:
+                basic: WorldMapStyleV2
+                full: zombie.worldMap.styles.WorldMapStyleV2
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UIWorldMap
+                full: zombie.worldMap.UIWorldMap
+          methods:
+          - name: addImagePyramid
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearImages
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getDataHeightInCells
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getDataWidthInCells
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getImagePyramidHeightInSquares
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getImagePyramidMaxX
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getImagePyramidMaxY
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getImagePyramidMinX
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getImagePyramidMinY
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getImagePyramidWidthInSquares
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMaxZoom
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getStreetsAPI
+            modifiers:
+            - public
+            return:
+              type:
+                basic: WorldMapStreetsV1
+                full: zombie.worldMap.streets.WorldMapStreetsV1
+          - name: getStyleAPI
+            modifiers:
+            - public
+            return:
+              type:
+                basic: WorldMapStyleV1
+                full: zombie.worldMap.styles.WorldMapStyleV1
+          - name: isDataLoaded
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setDisplayedArea
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxZoom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transitionTo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

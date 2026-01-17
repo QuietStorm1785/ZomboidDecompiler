@@ -1,0 +1,78 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.text:
+        NumberFormat.Style:
+          extends: java.lang.Enum<java.text.NumberFormat$Style>
+          modifiers:
+          - public
+          - final
+          notes: "A number format style.\n \n Style is an enum which represents the\
+            \ style for formatting\n a number within a given NumberFormat instance."
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: NumberFormat.Style
+                full: java.text.NumberFormat$Style[]
+            LONG:
+              name: LONG
+              modifiers:
+              - public
+              - static
+              type:
+                basic: NumberFormat.Style
+                full: java.text.NumberFormat$Style
+              notes: The LONG number format style.
+            SHORT:
+              name: SHORT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: NumberFormat.Style
+                full: java.text.NumberFormat$Style
+              notes: The SHORT number format style.
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: NumberFormat.Style
+                full: java.text.NumberFormat$Style[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: NumberFormat.Style
+                full: java.text.NumberFormat$Style
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: NumberFormat.Style
+                full: java.text.NumberFormat$Style[]
+              notes: an array containing the constants of this enum class, in the
+                order they are declared
+            notes: 'Returns an array containing the constants of this enum class,
+              in
+
+              the order they are declared.'

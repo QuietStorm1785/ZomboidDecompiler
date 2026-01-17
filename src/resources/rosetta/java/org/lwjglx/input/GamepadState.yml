@@ -1,0 +1,62 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      org.lwjglx.input:
+        GamepadState:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            axesButtons:
+              name: axesButtons
+              modifiers:
+              - public
+              type:
+                basic: GLFWGamepadState
+                full: org.lwjgl.glfw.GLFWGamepadState
+            bPolled:
+              name: bPolled
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            hatState:
+              name: hatState
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            hats:
+              name: hats
+              modifiers:
+              - public
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: quit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: GamepadState
+                full: org.lwjglx.input.GamepadState
+            return:
+              type:
+                basic: void
+                full: void

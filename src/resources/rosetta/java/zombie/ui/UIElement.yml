@@ -1,0 +1,3487 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ui:
+        UIElement:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            Controls:
+              name: Controls
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.ui.UIElement>
+            IgnoreLossControl:
+              name: IgnoreLossControl
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            Parent:
+              name: Parent
+              modifiers:
+              - public
+              type:
+                basic: UIElement
+                full: zombie.ui.UIElement
+            alwaysBack:
+              name: alwaysBack
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            alwaysOnTop:
+              name: alwaysOnTop
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            anchorBottom:
+              name: anchorBottom
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            anchorLeft:
+              name: anchorLeft
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            anchorRight:
+              name: anchorRight
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            anchorTop:
+              name: anchorTop
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bConsumeMouseEvents:
+              name: bConsumeMouseEvents
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            bForceCursorVisible:
+              name: bForceCursorVisible
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            bRenderClippedChildren:
+              name: bRenderClippedChildren
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            bResizeDirty:
+              name: bResizeDirty
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            bScrollChildren:
+              name: bScrollChildren
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bScrollWithParent:
+              name: bScrollWithParent
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bWantExtraMouseEvents:
+              name: bWantExtraMouseEvents
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            bWantKeyEvents:
+              name: bWantKeyEvents
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            capture:
+              name: capture
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            clickX:
+              name: clickX
+              modifiers:
+              - private
+              type:
+                basic: double
+                full: double
+            clickY:
+              name: clickY
+              modifiers:
+              - private
+              type:
+                basic: double
+                full: double
+            clicked:
+              name: clicked
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            clickedValue:
+              name: clickedValue
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            defaultDraw:
+              name: defaultDraw
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            enabled:
+              name: enabled
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            followGameWorld:
+              name: followGameWorld
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            height:
+              name: height
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            lastheight:
+              name: lastheight
+              modifiers:
+              - package
+              type:
+                basic: double
+                full: double
+            lastwidth:
+              name: lastwidth
+              modifiers:
+              - package
+              type:
+                basic: double
+                full: double
+            leftDownTime:
+              name: leftDownTime
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            maxDrawHeight:
+              name: maxDrawHeight
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            playerContext:
+              name: playerContext
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            renderThisPlayerOnly:
+              name: renderThisPlayerOnly
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            scrollHeight:
+              name: scrollHeight
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            shaderStarted:
+              name: shaderStarted
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            table:
+              name: table
+              modifiers:
+              - public
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            toTop:
+              name: toTop
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.ui.UIElement>
+            uiname:
+              name: uiname
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            visible:
+              name: visible
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            width:
+              name: width
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: double
+                full: double
+            xScroll:
+              name: xScroll
+              modifiers:
+              - package
+              type:
+                basic: Double
+                full: java.lang.Double
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: double
+                full: double
+            yScroll:
+              name: yScroll
+              modifiers:
+              - package
+              type:
+                basic: Double
+                full: java.lang.Double
+          staticFields:
+            StencilLevel:
+              name: StencilLevel
+              modifiers:
+              - package
+              - static
+              type:
+                basic: int
+                full: int
+            circleTexture:
+              name: circleTexture
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            tempcol:
+              name: tempcol
+              modifiers:
+              - package
+              - static
+              type:
+                basic: Color
+                full: zombie.core.Color
+            toAdd:
+              name: toAdd
+              modifiers:
+              - package
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.ui.UIElement>
+            white:
+              name: white
+              modifiers:
+              - package
+              - static
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: table
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+          methods:
+          - name: AddChild
+            modifiers:
+            - public
+            parameters:
+            - name: el
+              type:
+                basic: UIElement
+                full: zombie.ui.UIElement
+            return:
+              type:
+                basic: void
+                full: void
+          - name: BringToTop
+            modifiers:
+            - public
+            parameters:
+            - name: el
+              type:
+                basic: UIElement
+                full: zombie.ui.UIElement
+            return:
+              type:
+                basic: void
+                full: void
+          - name: ButtonClicked
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: ClearChildren
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawItemIcon
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawLine
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: double
+                full: double
+            - name: arg7
+              type:
+                basic: double
+                full: double
+            - name: arg8
+              type:
+                basic: double
+                full: double
+            - name: arg9
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawScriptItemIcon
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawSubTextureRGBA
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: subX
+              type:
+                basic: double
+                full: double
+            - name: subY
+              type:
+                basic: double
+                full: double
+            - name: subW
+              type:
+                basic: double
+                full: double
+            - name: subH
+              type:
+                basic: double
+                full: double
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: w
+              type:
+                basic: double
+                full: double
+            - name: h
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawText
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: zoom
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawText
+            modifiers:
+            - public
+            parameters:
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawText
+            modifiers:
+            - public
+            parameters:
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: double
+                full: double
+            - name: height
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawText
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextCentre
+            modifiers:
+            - public
+            parameters:
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextCentre
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextRight
+            modifiers:
+            - public
+            parameters:
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextRight
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextUntrimmed
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTexture
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: tlx
+              type:
+                basic: double
+                full: double
+            - name: tly
+              type:
+                basic: double
+                full: double
+            - name: trx
+              type:
+                basic: double
+                full: double
+            - name: try2
+              type:
+                basic: double
+                full: double
+            - name: brx
+              type:
+                basic: double
+                full: double
+            - name: bry
+              type:
+                basic: double
+                full: double
+            - name: blx
+              type:
+                basic: double
+                full: double
+            - name: bly
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTexture
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureAngle
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: centerX
+              type:
+                basic: double
+                full: double
+            - name: centerY
+              type:
+                basic: double
+                full: double
+            - name: angle
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureAngle
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: centerX
+              type:
+                basic: double
+                full: double
+            - name: centerY
+              type:
+                basic: double
+                full: double
+            - name: angle
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureCol
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: col
+              type:
+                basic: Color
+                full: zombie.core.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureColor
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureIcon
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: double
+                full: double
+            - name: arg7
+              type:
+                basic: double
+                full: double
+            - name: arg8
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureIconMask
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: double
+                full: double
+            - name: arg7
+              type:
+                basic: double
+                full: double
+            - name: arg8
+              type:
+                basic: double
+                full: double
+            - name: arg9
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureIgnoreOffset
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: int
+                full: int
+            - name: height
+              type:
+                basic: int
+                full: int
+            - name: col
+              type:
+                basic: Color
+                full: zombie.core.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTexturePercentage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: double
+                full: double
+            - name: arg7
+              type:
+                basic: double
+                full: double
+            - name: arg8
+              type:
+                basic: double
+                full: double
+            - name: arg9
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTexturePercentageBottomUp
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: double
+                full: double
+            - name: arg7
+              type:
+                basic: double
+                full: double
+            - name: arg8
+              type:
+                basic: double
+                full: double
+            - name: arg9
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureScaled
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: double
+                full: double
+            - name: height
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureScaledAspect
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: double
+                full: double
+            - name: height
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureScaledAspect2
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: double
+                full: double
+            - name: height
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureScaledAspect3
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: double
+                full: double
+            - name: arg7
+              type:
+                basic: double
+                full: double
+            - name: arg8
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureScaledCol
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: double
+                full: double
+            - name: height
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureScaledCol
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: double
+                full: double
+            - name: height
+              type:
+                basic: double
+                full: double
+            - name: col
+              type:
+                basic: Color
+                full: zombie.core.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureScaledColor
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: Double
+                full: java.lang.Double
+            - name: y
+              type:
+                basic: Double
+                full: java.lang.Double
+            - name: width
+              type:
+                basic: Double
+                full: java.lang.Double
+            - name: height
+              type:
+                basic: Double
+                full: java.lang.Double
+            - name: r
+              type:
+                basic: Double
+                full: java.lang.Double
+            - name: g
+              type:
+                basic: Double
+                full: java.lang.Double
+            - name: b
+              type:
+                basic: Double
+                full: java.lang.Double
+            - name: a
+              type:
+                basic: Double
+                full: java.lang.Double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureScaledUniform
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: scale
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureTiled
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: w
+              type:
+                basic: double
+                full: double
+            - name: h
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureTiledX
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: w
+              type:
+                basic: double
+                full: double
+            - name: h
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureTiledY
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: w
+              type:
+                basic: double
+                full: double
+            - name: h
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureTiledYOffset
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: double
+                full: double
+            - name: arg7
+              type:
+                basic: double
+                full: double
+            - name: arg8
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTexture_FlippedX
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: int
+                full: int
+            - name: height
+              type:
+                basic: int
+                full: int
+            - name: col
+              type:
+                basic: Color
+                full: zombie.core.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTexture_FlippedXIgnoreOffset
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: int
+                full: int
+            - name: height
+              type:
+                basic: int
+                full: int
+            - name: col
+              type:
+                basic: Color
+                full: zombie.core.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawUVSliceTexture
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: double
+                full: double
+            - name: height
+              type:
+                basic: double
+                full: double
+            - name: col
+              type:
+                basic: Color
+                full: zombie.core.Color
+            - name: xStart
+              type:
+                basic: double
+                full: double
+            - name: yStart
+              type:
+                basic: double
+                full: double
+            - name: xEnd
+              type:
+                basic: double
+                full: double
+            - name: yEnd
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: EndOutline
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RemoveChild
+            modifiers:
+            - public
+            parameters:
+            - name: el
+              type:
+                basic: UIElement
+                full: zombie.ui.UIElement
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RemoveControl
+            modifiers:
+            - public
+            parameters:
+            - name: el
+              type:
+                basic: UIElement
+                full: zombie.ui.UIElement
+            return:
+              type:
+                basic: void
+                full: void
+          - name: StartOutline
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addBringToTop
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: UIElement
+                full: zombie.ui.UIElement
+            return:
+              type:
+                basic: void
+                full: void
+          - name: backMost
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: bringToTop
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clampToParentX
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+          - name: clampToParentY
+            modifiers:
+            - public
+            parameters:
+            - name: y
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+          - name: clearMaxDrawHeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearStencilRect
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAbsoluteX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+          - name: getAbsoluteY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+          - name: getClickedValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getControls
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.ui.UIElement>
+              notes: the Controls
+          - name: getHeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+              notes: the height
+          - name: getMaxDrawHeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+          - name: getParent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: UIElement
+                full: zombie.ui.UIElement
+              notes: the Parent
+          - name: getParent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: UIElementInterface
+                full: zombie.ui.UIElementInterface
+          - name: getPlayerContext
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getRenderThisPlayerOnly
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getScrollChildren
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: getScrollHeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+          - name: getScrollWithParent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: getTable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+              notes: the table
+          - name: getUIName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getWidth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+              notes: the width
+          - name: getX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+              notes: the x
+          - name: getXScroll
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+          - name: getXScrolled
+            modifiers:
+            - public
+            parameters:
+            - name: parent
+              type:
+                basic: UIElement
+                full: zombie.ui.UIElement
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+          - name: getY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+              notes: the y
+          - name: getYScroll
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+          - name: getYScrolled
+            modifiers:
+            - public
+            parameters:
+            - name: parent
+              type:
+                basic: UIElement
+                full: zombie.ui.UIElement
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+          - name: ignoreHeightChange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: ignoreWidthChange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isAlwaysOnTop
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAnchorBottom
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+              notes: the anchorBottom
+          - name: isAnchorLeft
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+              notes: the anchorLeft
+          - name: isAnchorRight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+              notes: the anchorRight
+          - name: isAnchorTop
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the anchorTop
+          - name: isBackMost
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCapture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+              notes: the capture
+          - name: isConsumeMouseEvents
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDefaultDraw
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+              notes: the defaultDraw
+          - name: isEnabled
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFollowGameWorld
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+              notes: the followGameWorld
+          - name: isForceCursorVisible
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isIgnoreLossControl
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+              notes: the IgnoreLossControl
+          - name: isKeyConsumed
+            modifiers:
+            - public
+            parameters:
+            - name: key
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isModalVisible
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMouseOver
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: isOverElement
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPointOver
+            modifiers:
+            - public
+            parameters:
+            - name: screenX
+              type:
+                basic: double
+                full: double
+            - name: screenY
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: isReallyVisible
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isVisible
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+              notes: the visible
+          - name: isWantExtraMouseEvents
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isWantKeyEvents
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: onConsumeKeyPress
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: onConsumeKeyRelease
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: onConsumeKeyRepeat
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: onConsumeMouseButtonDown
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: onConsumeMouseButtonUp
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: onConsumeMouseMove
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: onConsumeMouseWheel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: onExtendMouseMoveOutside
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onKeyPress
+            modifiers:
+            - public
+            parameters:
+            - name: key
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onKeyRelease
+            modifiers:
+            - public
+            parameters:
+            - name: key
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onKeyRepeat
+            modifiers:
+            - public
+            parameters:
+            - name: key
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onMouseButtonDown
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onMouseButtonDownOutside
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onMouseButtonUpOutside
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onMouseDoubleClick
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: onMouseDown
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: onMouseDownOutside
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onMouseMove
+            modifiers:
+            - public
+            parameters:
+            - name: dx
+              type:
+                basic: double
+                full: double
+            - name: dy
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: onMouseMoveOutside
+            modifiers:
+            - public
+            parameters:
+            - name: dx
+              type:
+                basic: double
+                full: double
+            - name: dy
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onMouseUp
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: onMouseUpOutside
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onMouseWheel
+            modifiers:
+            - public
+            parameters:
+            - name: del
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: onResize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onRightMouseDown
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: onRightMouseDownOutside
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onRightMouseUp
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: onRightMouseUpOutside
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onresize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: repaintStencilRect
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: double
+                full: double
+            - name: height
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: resumeStencil
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAlwaysOnTop
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAnchorBottom
+            modifiers:
+            - public
+            parameters:
+            - name: anchorBottom
+              type:
+                basic: boolean
+                full: boolean
+              notes: the anchorBottom to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAnchorLeft
+            modifiers:
+            - public
+            parameters:
+            - name: anchorLeft
+              type:
+                basic: boolean
+                full: boolean
+              notes: the anchorLeft to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAnchorRight
+            modifiers:
+            - public
+            parameters:
+            - name: anchorRight
+              type:
+                basic: boolean
+                full: boolean
+              notes: the anchorRight to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAnchorTop
+            modifiers:
+            - public
+            parameters:
+            - name: anchorTop
+              type:
+                basic: boolean
+                full: boolean
+              notes: the anchorTop to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCapture
+            modifiers:
+            - public
+            parameters:
+            - name: capture
+              type:
+                basic: boolean
+                full: boolean
+              notes: the capture to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setClickedValue
+            modifiers:
+            - public
+            parameters:
+            - name: clickedValue
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the clickedValue to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setConsumeMouseEvents
+            modifiers:
+            - public
+            parameters:
+            - name: bConsume
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setControls
+            modifiers:
+            - public
+            parameters:
+            - name: Controls
+              type:
+                basic: Vector
+                full: java.util.Vector<zombie.ui.UIElement>
+              notes: the Controls to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDefaultDraw
+            modifiers:
+            - public
+            parameters:
+            - name: defaultDraw
+              type:
+                basic: boolean
+                full: boolean
+              notes: the defaultDraw to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEnabled
+            modifiers:
+            - public
+            parameters:
+            - name: en
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFollowGameWorld
+            modifiers:
+            - public
+            parameters:
+            - name: followGameWorld
+              type:
+                basic: boolean
+                full: boolean
+              notes: the followGameWorld to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setForceCursorVisible
+            modifiers:
+            - public
+            parameters:
+            - name: force
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHeight
+            modifiers:
+            - public
+            parameters:
+            - name: height
+              type:
+                basic: double
+                full: double
+              notes: the height to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHeightOnly
+            modifiers:
+            - public
+            parameters:
+            - name: height
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHeightSilent
+            modifiers:
+            - public
+            parameters:
+            - name: height
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIgnoreLossControl
+            modifiers:
+            - public
+            parameters:
+            - name: IgnoreLossControl
+              type:
+                basic: boolean
+                full: boolean
+              notes: the IgnoreLossControl to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxDrawHeight
+            modifiers:
+            - public
+            parameters:
+            - name: height
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setParent
+            modifiers:
+            - public
+            parameters:
+            - name: Parent
+              type:
+                basic: UIElement
+                full: zombie.ui.UIElement
+              notes: the Parent to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPlayerContext
+            modifiers:
+            - public
+            parameters:
+            - name: nPlayer
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRenderClippedChildren
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRenderThisPlayerOnly
+            modifiers:
+            - public
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setScrollChildren
+            modifiers:
+            - public
+            parameters:
+            - name: bScroll
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setScrollHeight
+            modifiers:
+            - public
+            parameters:
+            - name: h
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setScrollWithParent
+            modifiers:
+            - public
+            parameters:
+            - name: bScroll
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStencilCircle
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStencilRect
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: double
+                full: double
+            - name: height
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTable
+            modifiers:
+            - public
+            parameters:
+            - name: table
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+              notes: the table to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUIName
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVisible
+            modifiers:
+            - public
+            parameters:
+            - name: visible
+              type:
+                basic: boolean
+                full: boolean
+              notes: the visible to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWantExtraMouseEvents
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWantKeyEvents
+            modifiers:
+            - public
+            parameters:
+            - name: want
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWidth
+            modifiers:
+            - public
+            parameters:
+            - name: width
+              type:
+                basic: double
+                full: double
+              notes: the width to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWidthOnly
+            modifiers:
+            - public
+            parameters:
+            - name: width
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWidthSilent
+            modifiers:
+            - public
+            parameters:
+            - name: width
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setX
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+              notes: the x to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setXScroll
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setY
+            modifiers:
+            - public
+            parameters:
+            - name: y
+              type:
+                basic: double
+                full: double
+              notes: the y to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setYScroll
+            modifiers:
+            - public
+            parameters:
+            - name: y
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: suspendStencil
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: tryGetTableValue
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

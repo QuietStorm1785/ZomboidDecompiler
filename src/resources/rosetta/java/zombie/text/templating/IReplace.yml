@@ -1,0 +1,20 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.text.templating:
+        IReplace:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "TurboTuTone.\n Interface that provides (random) String for ITemplateBuilder."
+          methods:
+          - name: getString
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String

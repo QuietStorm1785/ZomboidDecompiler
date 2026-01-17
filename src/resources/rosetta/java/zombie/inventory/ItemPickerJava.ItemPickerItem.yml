@@ -1,0 +1,28 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.inventory:
+        ItemPickerJava.ItemPickerItem:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            chance:
+              name: chance
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            itemName:
+              name: itemName
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public

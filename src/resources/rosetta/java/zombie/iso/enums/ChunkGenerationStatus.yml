@@ -1,0 +1,76 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.enums:
+        ChunkGenerationStatus:
+          extends: java.lang.Enum<zombie.iso.enums.ChunkGenerationStatus>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ChunkGenerationStatus
+                full: zombie.iso.enums.ChunkGenerationStatus[]
+            CORE:
+              name: CORE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ChunkGenerationStatus
+                full: zombie.iso.enums.ChunkGenerationStatus
+            MODDED:
+              name: MODDED
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ChunkGenerationStatus
+                full: zombie.iso.enums.ChunkGenerationStatus
+            WORLDGEN:
+              name: WORLDGEN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ChunkGenerationStatus
+                full: zombie.iso.enums.ChunkGenerationStatus
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ChunkGenerationStatus
+                full: zombie.iso.enums.ChunkGenerationStatus[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ChunkGenerationStatus
+                full: zombie.iso.enums.ChunkGenerationStatus
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ChunkGenerationStatus
+                full: zombie.iso.enums.ChunkGenerationStatus[]

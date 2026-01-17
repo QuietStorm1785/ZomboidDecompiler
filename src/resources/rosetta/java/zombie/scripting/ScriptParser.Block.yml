@@ -1,0 +1,223 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting:
+        ScriptParser.Block:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            children:
+              name: children
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ScriptParser$Block>
+            comment:
+              name: comment
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            elements:
+              name: elements
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ScriptParser$BlockElement>
+            id:
+              name: id
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            type:
+              name: type
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            uid:
+              name: uid
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            values:
+              name: values
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ScriptParser$Value>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: addBlock
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ScriptParser.Block
+                full: zombie.scripting.ScriptParser$Block
+          - name: addValue
+            modifiers:
+            - public
+            parameters:
+            - name: key
+              type:
+                basic: String
+                full: java.lang.String
+            - name: value
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ScriptParser.Value
+                full: zombie.scripting.ScriptParser$Value
+          - name: asBlock
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ScriptParser.Block
+                full: zombie.scripting.ScriptParser$Block
+          - name: asValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ScriptParser.Value
+                full: zombie.scripting.ScriptParser$Value
+          - name: getBlock
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ScriptParser.Block
+                full: zombie.scripting.ScriptParser$Block
+          - name: getUid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getValue
+            modifiers:
+            - public
+            parameters:
+            - name: key
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ScriptParser.Value
+                full: zombie.scripting.ScriptParser$Value
+          - name: isEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: moveValueAfter
+            modifiers:
+            - public
+            parameters:
+            - name: keyMove
+              type:
+                basic: String
+                full: java.lang.String
+            - name: keyAfter
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: prettyPrint
+            modifiers:
+            - public
+            parameters:
+            - name: indent
+              type:
+                basic: int
+                full: int
+            - name: sb
+              type:
+                basic: StringBuilder
+                full: java.lang.StringBuilder
+            - name: eol
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: prettyPrintElements
+            modifiers:
+            - public
+            parameters:
+            - name: indent
+              type:
+                basic: int
+                full: int
+            - name: sb
+              type:
+                basic: StringBuilder
+                full: java.lang.StringBuilder
+            - name: eol
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValue
+            modifiers:
+            - public
+            parameters:
+            - name: key
+              type:
+                basic: String
+                full: java.lang.String
+            - name: value
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void

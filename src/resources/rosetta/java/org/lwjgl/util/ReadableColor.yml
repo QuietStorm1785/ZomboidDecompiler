@@ -1,0 +1,250 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      org.lwjgl.util:
+        ReadableColor:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          staticFields:
+            BLACK:
+              name: BLACK
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ReadableColor
+                full: org.lwjgl.util.ReadableColor
+            BLUE:
+              name: BLUE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ReadableColor
+                full: org.lwjgl.util.ReadableColor
+            CYAN:
+              name: CYAN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ReadableColor
+                full: org.lwjgl.util.ReadableColor
+            DKGREY:
+              name: DKGREY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ReadableColor
+                full: org.lwjgl.util.ReadableColor
+            GREEN:
+              name: GREEN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ReadableColor
+                full: org.lwjgl.util.ReadableColor
+            GREY:
+              name: GREY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ReadableColor
+                full: org.lwjgl.util.ReadableColor
+            LTGREY:
+              name: LTGREY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ReadableColor
+                full: org.lwjgl.util.ReadableColor
+            ORANGE:
+              name: ORANGE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ReadableColor
+                full: org.lwjgl.util.ReadableColor
+            PURPLE:
+              name: PURPLE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ReadableColor
+                full: org.lwjgl.util.ReadableColor
+            RED:
+              name: RED
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ReadableColor
+                full: org.lwjgl.util.ReadableColor
+            WHITE:
+              name: WHITE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ReadableColor
+                full: org.lwjgl.util.ReadableColor
+            YELLOW:
+              name: YELLOW
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ReadableColor
+                full: org.lwjgl.util.ReadableColor
+          methods:
+          - name: getAlpha
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getAlphaByte
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: getBlue
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getBlueByte
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: getGreen
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getGreenByte
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: getRed
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getRedByte
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: writeABGR
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: writeARGB
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: writeBGR
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: writeBGRA
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: writeRGB
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: writeRGBA
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,67 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        WorldMarkers.Point:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            x:
+              name: x
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            y:
+              name: y
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+          methods:
+          - name: notInfinite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: WorldMarkers.Point
+                full: zombie.iso.WorldMarkers$Point
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

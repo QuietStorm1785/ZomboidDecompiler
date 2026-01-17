@@ -1,0 +1,165 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.ui:
+        XuiScript.XuiSpacing:
+          extends: zombie.scripting.ui.XuiScript$XuiVar<java.lang.Float, zombie.scripting.ui.XuiScript$XuiSpacing>
+          modifiers:
+          - public
+          fields:
+            bottom:
+              name: bottom
+              modifiers:
+              - private
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            left:
+              name: left
+              modifiers:
+              - private
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            right:
+              name: right
+              modifiers:
+              - private
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            top:
+              name: top
+              modifiers:
+              - private
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            - name: arg3
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            - name: arg4
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            - name: arg5
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+          methods:
+          - name: fromString
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getBottom
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getLeft
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getRight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTop
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getValueString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isBottomPercent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLeftPercent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRightPercent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTopPercent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isValueSet
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean

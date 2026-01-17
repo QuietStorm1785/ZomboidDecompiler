@@ -1,0 +1,41 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.entity.components.crafting:
+        CraftRecipe.IOScript:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          fields:
+            parentRecipe:
+              name: parentRecipe
+              modifiers:
+              - private
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+          constructors:
+          - modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+          methods:
+          - name: getParentRecipe
+            modifiers:
+            - public
+            return:
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+          - name: getRecipeLineIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int

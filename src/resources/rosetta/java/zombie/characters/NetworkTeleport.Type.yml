@@ -1,0 +1,90 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        NetworkTeleport.Type:
+          extends: java.lang.Enum<zombie.characters.NetworkTeleport$Type>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: NetworkTeleport.Type
+                full: zombie.characters.NetworkTeleport$Type[]
+            disappearing:
+              name: disappearing
+              modifiers:
+              - public
+              - static
+              type:
+                basic: NetworkTeleport.Type
+                full: zombie.characters.NetworkTeleport$Type
+            materialization:
+              name: materialization
+              modifiers:
+              - public
+              - static
+              type:
+                basic: NetworkTeleport.Type
+                full: zombie.characters.NetworkTeleport$Type
+            none:
+              name: none
+              modifiers:
+              - public
+              - static
+              type:
+                basic: NetworkTeleport.Type
+                full: zombie.characters.NetworkTeleport$Type
+            teleportation:
+              name: teleportation
+              modifiers:
+              - public
+              - static
+              type:
+                basic: NetworkTeleport.Type
+                full: zombie.characters.NetworkTeleport$Type
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: NetworkTeleport.Type
+                full: zombie.characters.NetworkTeleport$Type[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: NetworkTeleport.Type
+                full: zombie.characters.NetworkTeleport$Type
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: NetworkTeleport.Type
+                full: zombie.characters.NetworkTeleport$Type[]
+              notes: an array containing the constants of this enum class, in the
+                order they are declared
+            notes: 'Returns an array containing the constants of this enum class,
+              in
+
+              the order they are declared.'

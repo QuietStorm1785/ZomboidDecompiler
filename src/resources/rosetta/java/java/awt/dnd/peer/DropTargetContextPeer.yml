@@ -1,0 +1,119 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt.dnd.peer:
+        DropTargetContextPeer:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: acceptDrag
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: acceptDrop
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: dropComplete
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getDropTarget
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: DropTarget
+                full: java.awt.dnd.DropTarget
+          - name: getTargetActions
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getTransferDataFlavors
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: DataFlavor
+                full: java.awt.datatransfer.DataFlavor[]
+          - name: getTransferable
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Transferable
+                full: java.awt.datatransfer.Transferable
+          - name: isTransferableJVMLocal
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: rejectDrag
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: rejectDrop
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTargetActions
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void

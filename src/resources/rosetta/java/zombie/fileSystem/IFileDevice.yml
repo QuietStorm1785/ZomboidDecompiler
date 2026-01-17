@@ -1,0 +1,75 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.fileSystem:
+        IFileDevice:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: createFile
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: child
+              type:
+                basic: IFile
+                full: zombie.fileSystem.IFile
+            return:
+              type:
+                basic: IFile
+                full: zombie.fileSystem.IFile
+          - name: createStream
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: path
+              type:
+                basic: String
+                full: java.lang.String
+            - name: child
+              type:
+                basic: InputStream
+                full: java.io.InputStream
+            return:
+              type:
+                basic: InputStream
+                full: java.io.InputStream
+          - name: destroyFile
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: file
+              type:
+                basic: IFile
+                full: zombie.fileSystem.IFile
+            return:
+              type:
+                basic: void
+                full: void
+          - name: destroyStream
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: stream
+              type:
+                basic: InputStream
+                full: java.io.InputStream
+            return:
+              type:
+                basic: void
+                full: void
+          - name: name
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String

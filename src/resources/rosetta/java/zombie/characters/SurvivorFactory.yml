@@ -1,0 +1,226 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        SurvivorFactory:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          staticFields:
+            FemaleForenames:
+              name: FemaleForenames
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            MaleForenames:
+              name: MaleForenames
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            Surnames:
+              name: Surnames
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: CreateFamily
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: nCount
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: SurvivorDesc
+                full: zombie.characters.SurvivorDesc[]
+          - name: CreateSurvivor
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: SurvivorDesc
+                full: zombie.characters.SurvivorDesc
+          - name: CreateSurvivor
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: survivorType
+              type:
+                basic: SurvivorFactory.SurvivorType
+                full: zombie.characters.SurvivorFactory$SurvivorType
+            - name: bFemale
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: SurvivorDesc
+                full: zombie.characters.SurvivorDesc
+          - name: CreateSurvivor
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: survivorType
+              type:
+                basic: SurvivorFactory.SurvivorType
+                full: zombie.characters.SurvivorFactory$SurvivorType
+            return:
+              type:
+                basic: SurvivorDesc
+                full: zombie.characters.SurvivorDesc
+          - name: CreateSurvivorGroup
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: nCount
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: SurvivorDesc
+                full: zombie.characters.SurvivorDesc[]
+          - name: InstansiateInCell
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: desc
+              type:
+                basic: SurvivorDesc
+                full: zombie.characters.SurvivorDesc
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoSurvivor
+                full: zombie.characters.IsoSurvivor
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addFemaleForename
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: forename
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addMaleForename
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: forename
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addSurname
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: surName
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getRandomForename
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bFemale
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRandomSurname
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: randomName
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: desc
+              type:
+                basic: SurvivorDesc
+                full: zombie.characters.SurvivorDesc
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTorso
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: survivor
+              type:
+                basic: SurvivorDesc
+                full: zombie.characters.SurvivorDesc
+            return:
+              type:
+                basic: void
+                full: void

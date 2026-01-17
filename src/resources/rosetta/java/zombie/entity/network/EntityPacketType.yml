@@ -1,0 +1,248 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.network:
+        EntityPacketType:
+          extends: java.lang.Enum<zombie.entity.network.EntityPacketType>
+          modifiers:
+          - public
+          - final
+          fields:
+            group:
+              name: group
+              modifiers:
+              - private
+              type:
+                basic: PacketGroup
+                full: zombie.entity.network.PacketGroup
+            id:
+              name: id
+              modifiers:
+              - private
+              type:
+                basic: short
+                full: short
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType[]
+            CraftLogicStartRequest:
+              name: CraftLogicStartRequest
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            CraftLogicStopRequest:
+              name: CraftLogicStopRequest
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            CraftLogicSync:
+              name: CraftLogicSync
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            CraftLogicSyncFull:
+              name: CraftLogicSyncFull
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            MashingLogicStartRequest:
+              name: MashingLogicStartRequest
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            MashingLogicStopRequest:
+              name: MashingLogicStopRequest
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            MashingLogicSync:
+              name: MashingLogicSync
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            MashingLogicSyncFull:
+              name: MashingLogicSyncFull
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            RequestSyncGameEntity:
+              name: RequestSyncGameEntity
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            ResourcesSync:
+              name: ResourcesSync
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            SyncGameEntity:
+              name: SyncGameEntity
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            UpdateUsingPlayer:
+              name: UpdateUsingPlayer
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            entityPacketMap:
+              name: entityPacketMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Short, zombie.entity.network.EntityPacketType>
+          constructors:
+          - modifiers:
+            - private
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: PacketGroup
+                full: zombie.entity.network.PacketGroup
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: short
+                full: short
+            - name: arg1
+              type:
+                basic: PacketGroup
+                full: zombie.entity.network.PacketGroup
+          methods:
+          - name: getGroup
+            modifiers:
+            - public
+            return:
+              type:
+                basic: PacketGroup
+                full: zombie.entity.network.PacketGroup
+          - name: isComponentPacket
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEntityPacket
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: saveToByteBuffer
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: saveToByteBuffer
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType[]
+          - name: FromByteBuffer
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType[]

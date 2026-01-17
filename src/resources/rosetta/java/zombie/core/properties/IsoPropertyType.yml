@@ -1,0 +1,308 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.properties:
+        IsoPropertyType:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          staticFields:
+            BlueLight:
+              name: BlueLight
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            CanAttachAnimal:
+              name: CanAttachAnimal
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            ConnectX:
+              name: ConnectX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            ConnectY:
+              name: ConnectY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Container:
+              name: Container
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            ContainerCapacity:
+              name: ContainerCapacity
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            ContainerCloseSound:
+              name: ContainerCloseSound
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            ContainerOpenSound:
+              name: ContainerOpenSound
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            ContainerPosition:
+              name: ContainerPosition
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            ContainerPutSound:
+              name: ContainerPutSound
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            ContainerTakeSound:
+              name: ContainerTakeSound
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            CustomName:
+              name: CustomName
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DamagedSprite:
+              name: DamagedSprite
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DoubleDoor:
+              name: DoubleDoor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Facing:
+              name: Facing
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            FootstepMaterial:
+              name: FootstepMaterial
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            FuelAmount:
+              name: FuelAmount
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            GarageDoor:
+              name: GarageDoor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            GlassRemovedOffset:
+              name: GlassRemovedOffset
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            GreenLight:
+              name: GreenLight
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            GroupName:
+              name: GroupName
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            IsFridge:
+              name: IsFridge
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            IsMoveAble:
+              name: IsMoveAble
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            IsoType:
+              name: IsoType
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            LightRadius:
+              name: LightRadius
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            MaximumWaterAmount:
+              name: MaximumWaterAmount
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            OpenTileOffset:
+              name: OpenTileOffset
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            PropaneTank:
+              name: PropaneTank
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            RedLight:
+              name: RedLight
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            SmashedTileOffset:
+              name: SmashedTileOffset
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            WaterAmount:
+              name: WaterAmount
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            WindowLocked:
+              name: WindowLocked
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            doorTrans:
+              name: doorTrans
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            names:
+              name: names
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.lang.String>
+            streetlight:
+              name: streetlight
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: lookup
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String

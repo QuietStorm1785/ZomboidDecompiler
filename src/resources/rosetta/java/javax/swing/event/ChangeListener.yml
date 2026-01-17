@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      javax.swing.event:
+        ChangeListener:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: Defines an object which listens for ChangeEvents.
+          methods:
+          - name: stateChanged
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: e
+              type:
+                basic: ChangeEvent
+                full: javax.swing.event.ChangeEvent
+              notes: a ChangeEvent object
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Invoked when the target of the listener has changed its state.

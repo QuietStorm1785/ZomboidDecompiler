@@ -1,0 +1,212 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.fonts:
+        Font:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: drawString
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+              notes: The x location at which to draw the string
+            - name: y
+              type:
+                basic: float
+                full: float
+              notes: The y location at which to draw the string
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+              notes: The text to be displayed
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Draw a string to the screen
+          - name: drawString
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+              notes: The x location at which to draw the string
+            - name: y
+              type:
+                basic: float
+                full: float
+              notes: The y location at which to draw the string
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+              notes: The text to be displayed
+            - name: col
+              type:
+                basic: Color
+                full: zombie.core.Color
+              notes: The colour to draw with
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Draw a string to the screen
+          - name: drawString
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+              notes: The x location at which to draw the string
+            - name: y
+              type:
+                basic: float
+                full: float
+              notes: The y location at which to draw the string
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+              notes: The text to be displayed
+            - name: col
+              type:
+                basic: Color
+                full: zombie.core.Color
+              notes: The colour to draw with
+            - name: startIndex
+              type:
+                basic: int
+                full: int
+              notes: The index of the first character to draw
+            - name: endIndex
+              type:
+                basic: int
+                full: int
+              notes: The index of the last character from the string to draw
+            return:
+              type:
+                basic: void
+                full: void
+            notes: "Draw part of a string to the screen. Note that this will\n still\
+              \ position the text as though it's part of the bigger string."
+          - name: getHeight
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+              notes: The string to obtain the rendered with of
+            return:
+              type:
+                basic: int
+                full: int
+              notes: The width of the given string
+            notes: get the height of the given string
+          - name: getLineHeight
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+              notes: The maxium height of any line drawn by this font
+            notes: get the maximum height of any line drawn by this font
+          - name: getWidth
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+              notes: The string to obtain the rendered with of
+            return:
+              type:
+                basic: int
+                full: int
+              notes: The width of the given string
+            notes: get the width of the given string
+          - name: getWidth
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: xAdvance
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getWidth
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: startIndex
+              type:
+                basic: int
+                full: int
+            - name: endIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getWidth
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: startIndex
+              type:
+                basic: int
+                full: int
+            - name: endIndex
+              type:
+                basic: int
+                full: int
+            - name: xAdvance
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: int
+                full: int

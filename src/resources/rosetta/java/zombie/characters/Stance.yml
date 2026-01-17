@@ -1,0 +1,83 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        Stance:
+          extends: java.lang.Enum<zombie.characters.Stance>
+          modifiers:
+          - public
+          - final
+          notes: Created by LEMMYCOOLER on 26/07/14.
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Stance
+                full: zombie.characters.Stance[]
+            Haste:
+              name: Haste
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Stance
+                full: zombie.characters.Stance
+            Normal:
+              name: Normal
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Stance
+                full: zombie.characters.Stance
+            Stealth:
+              name: Stealth
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Stance
+                full: zombie.characters.Stance
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: Stance
+                full: zombie.characters.Stance[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Stance
+                full: zombie.characters.Stance
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: Stance
+                full: zombie.characters.Stance[]
+              notes: an array containing the constants of this enum class, in the
+                order they are declared
+            notes: 'Returns an array containing the constants of this enum class,
+              in
+
+              the order they are declared.'

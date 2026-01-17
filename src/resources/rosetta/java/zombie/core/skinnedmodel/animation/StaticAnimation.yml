@@ -1,0 +1,197 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.animation:
+        StaticAnimation:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: Created by LEMMY on 3/15/2016.
+          deprecated: true
+          fields:
+            Clip:
+              name: Clip
+              modifiers:
+              - public
+              type:
+                basic: AnimationClip
+                full: zombie.core.skinnedmodel.animation.AnimationClip
+            Matrices:
+              name: Matrices
+              modifiers:
+              - public
+              type:
+                basic: Matrix4f
+                full: org.lwjgl.util.vector.Matrix4f[][]
+            Pose:
+              name: Pose
+              modifiers:
+              - private
+              type:
+                basic: Keyframe
+                full: zombie.core.skinnedmodel.animation.Keyframe[]
+            PrevPose:
+              name: PrevPose
+              modifiers:
+              - private
+              type:
+                basic: Keyframe
+                full: zombie.core.skinnedmodel.animation.Keyframe[]
+            RootMotion:
+              name: RootMotion
+              modifiers:
+              - private
+              type:
+                basic: Matrix4f
+                full: org.lwjgl.util.vector.Matrix4f[]
+            currentKeyframe:
+              name: currentKeyframe
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            currentTimeValue:
+              name: currentTimeValue
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            framesPerSecond:
+              name: framesPerSecond
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            lastTime:
+              name: lastTime
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            name:
+              name: name
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: clip
+              type:
+                basic: AnimationClip
+                full: zombie.core.skinnedmodel.animation.AnimationClip
+          methods:
+          - name: Create
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: doRootMotion
+            modifiers:
+            - public
+            parameters:
+            - name: frames
+              type:
+                basic: List
+                full: java.util.List<zombie.core.skinnedmodel.animation.Keyframe>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getNextKeyFrame
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: Keyframe
+                full: zombie.core.skinnedmodel.animation.Keyframe
+            return:
+              type:
+                basic: Keyframe
+                full: zombie.core.skinnedmodel.animation.Keyframe
+          - name: getPose
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getPosition
+            modifiers:
+            - public
+            parameters:
+            - name: out
+              type:
+                basic: Vector3f
+                full: org.lwjgl.util.vector.Vector3f
+            - name: bone
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Vector3f
+                full: org.lwjgl.util.vector.Vector3f
+          - name: getRotation
+            modifiers:
+            - public
+            parameters:
+            - name: out
+              type:
+                basic: Quaternion
+                full: org.lwjgl.util.vector.Quaternion
+            - name: bone
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Quaternion
+                full: org.lwjgl.util.vector.Quaternion
+          - name: interpolate
+            modifiers:
+            - public
+            parameters:
+            - name: frames
+              type:
+                basic: List
+                full: java.util.List<zombie.core.skinnedmodel.animation.Keyframe>
+            - name: time
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: Keyframe
+                full: zombie.core.skinnedmodel.animation.Keyframe
+          - name: interpolate
+            modifiers:
+            - public
+            parameters:
+            - name: frames
+              type:
+                basic: List
+                full: java.util.List<zombie.core.skinnedmodel.animation.Keyframe>
+            return:
+              type:
+                basic: void
+                full: void

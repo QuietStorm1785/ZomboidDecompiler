@@ -1,0 +1,57 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      javax.swing.event:
+        MenuListener:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: Defines a listener for menu events.
+          methods:
+          - name: menuCanceled
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: e
+              type:
+                basic: MenuEvent
+                full: javax.swing.event.MenuEvent
+              notes: a MenuEvent object
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Invoked when the menu is canceled.
+          - name: menuDeselected
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: e
+              type:
+                basic: MenuEvent
+                full: javax.swing.event.MenuEvent
+              notes: a MenuEvent object
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Invoked when the menu is deselected.
+          - name: menuSelected
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: e
+              type:
+                basic: MenuEvent
+                full: javax.swing.event.MenuEvent
+              notes: a MenuEvent object
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Invoked when a menu is selected.

@@ -1,0 +1,11 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.areas.isoregion.regions:
+        IChunkRegion:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: TurboTuTone.

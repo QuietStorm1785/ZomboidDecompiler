@@ -1,0 +1,117 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.worldgen.maps:
+        BiomeMapEntry:
+          extends: java.lang.Record
+          modifiers:
+          - public
+          - final
+          fields:
+            biome:
+              name: biome
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            ore:
+              name: ore
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            pixel:
+              name: pixel
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            zone:
+              name: zone
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg3
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: biome
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: equals
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hashCode
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: int
+                full: int
+          - name: ore
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: pixel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: toString
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: zone
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

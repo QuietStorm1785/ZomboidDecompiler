@@ -1,0 +1,135 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.objects:
+        VehicleScript.Passenger:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            anims:
+              name: anims
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.VehicleScript$Anim>
+            area:
+              name: area
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            door:
+              name: door
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            door2:
+              name: door2
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            hasRoof:
+              name: hasRoof
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            id:
+              name: id
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            positions:
+              name: positions
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.VehicleScript$Position>
+            showPassenger:
+              name: showPassenger
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            switchSeats:
+              name: switchSeats
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.VehicleScript$Passenger$SwitchSeat>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getId
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPosition
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: VehicleScript.Position
+                full: zombie.scripting.objects.VehicleScript$Position
+          - name: getPositionById
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: VehicleScript.Position
+                full: zombie.scripting.objects.VehicleScript$Position
+          - name: getPositionCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSwitchSeatById
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: VehicleScript.Passenger.SwitchSeat
+                full: zombie.scripting.objects.VehicleScript$Passenger$SwitchSeat
+          - name: makeCopy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: VehicleScript.Passenger
+                full: zombie.scripting.objects.VehicleScript$Passenger

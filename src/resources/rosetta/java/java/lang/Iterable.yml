@@ -1,0 +1,41 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.lang:
+        Iterable:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "Implementing this interface allows an object to be the target of\
+            \ the enhanced\n for statement (sometimes called the \"for-each loop\"\
+            \ statement)."
+          methods:
+          - name: forEach
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<? super T>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: iterator
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Iterator
+                full: java.util.Iterator<T>
+          - name: spliterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Spliterator
+                full: java.util.Spliterator<T>

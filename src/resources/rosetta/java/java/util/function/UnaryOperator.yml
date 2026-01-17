@@ -1,0 +1,38 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util.function:
+        UnaryOperator:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "Represents an operation on a single operand that produces a result\
+            \ of the\n same type as its operand.  This is a specialization of Function\
+            \ for\n the case where the operand and result are of the same type.\n\n\
+            \ This is a functional interface\n whose functional method is Function.apply(Object)."
+          staticMethods:
+          - name: identity
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: UnaryOperator
+                full: java.util.function.UnaryOperator<T>
+              notes: a unary operator that always returns its input argument
+            notes: Returns a unary operator that always returns its input argument.
+          - name: lambda$identity$0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object

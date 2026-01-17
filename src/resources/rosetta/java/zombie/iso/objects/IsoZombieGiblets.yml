@@ -1,0 +1,142 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.objects:
+        IsoZombieGiblets:
+          extends: zombie.iso.IsoPhysicsObject
+          modifiers:
+          - public
+          fields:
+            invis:
+              name: invis
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            time:
+              name: time
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            tintb:
+              name: tintb
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            tintg:
+              name: tintg
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            tintr:
+              name: tintr
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+          - modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: IsoZombieGiblets.GibletType
+                full: zombie.iso.objects.IsoZombieGiblets$GibletType
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            - name: xvel
+              type:
+                basic: float
+                full: float
+            - name: yvel
+              type:
+                basic: float
+                full: float
+          methods:
+          - name: Serialize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getObjectName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: render
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            - name: info
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: bDoAttached
+              type:
+                basic: boolean
+                full: boolean
+            - name: bWallLightingPass
+              type:
+                basic: boolean
+                full: boolean
+            - name: shader
+              type:
+                basic: Shader
+                full: zombie.core.opengl.Shader
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

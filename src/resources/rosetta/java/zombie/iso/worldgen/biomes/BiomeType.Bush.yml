@@ -1,0 +1,84 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.worldgen.biomes:
+        BiomeType.Bush:
+          extends: java.lang.Enum<zombie.iso.worldgen.biomes.BiomeType$Bush>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: BiomeType.Bush
+                full: zombie.iso.worldgen.biomes.BiomeType$Bush[]
+            DRY:
+              name: DRY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BiomeType.Bush
+                full: zombie.iso.worldgen.biomes.BiomeType$Bush
+            FAT:
+              name: FAT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BiomeType.Bush
+                full: zombie.iso.worldgen.biomes.BiomeType$Bush
+            NONE:
+              name: NONE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BiomeType.Bush
+                full: zombie.iso.worldgen.biomes.BiomeType$Bush
+            REGULAR:
+              name: REGULAR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BiomeType.Bush
+                full: zombie.iso.worldgen.biomes.BiomeType$Bush
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: BiomeType.Bush
+                full: zombie.iso.worldgen.biomes.BiomeType$Bush[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: BiomeType.Bush
+                full: zombie.iso.worldgen.biomes.BiomeType$Bush
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: BiomeType.Bush
+                full: zombie.iso.worldgen.biomes.BiomeType$Bush[]

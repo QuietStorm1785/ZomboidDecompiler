@@ -1,0 +1,92 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.itemConfig.enums:
+        SituatedType:
+          extends: java.lang.Enum<zombie.scripting.itemConfig.enums.SituatedType>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: SituatedType
+                full: zombie.scripting.itemConfig.enums.SituatedType[]
+            Exterior:
+              name: Exterior
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SituatedType
+                full: zombie.scripting.itemConfig.enums.SituatedType
+            Interior:
+              name: Interior
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SituatedType
+                full: zombie.scripting.itemConfig.enums.SituatedType
+            Junk:
+              name: Junk
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SituatedType
+                full: zombie.scripting.itemConfig.enums.SituatedType
+            None:
+              name: None
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SituatedType
+                full: zombie.scripting.itemConfig.enums.SituatedType
+            Shop:
+              name: Shop
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SituatedType
+                full: zombie.scripting.itemConfig.enums.SituatedType
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: SituatedType
+                full: zombie.scripting.itemConfig.enums.SituatedType[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: SituatedType
+                full: zombie.scripting.itemConfig.enums.SituatedType
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: SituatedType
+                full: zombie.scripting.itemConfig.enums.SituatedType[]

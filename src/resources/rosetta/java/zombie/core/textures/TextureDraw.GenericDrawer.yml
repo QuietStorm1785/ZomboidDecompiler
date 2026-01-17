@@ -1,0 +1,41 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.textures:
+        TextureDraw.GenericDrawer:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: postRender
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: render
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: render
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TextureDraw
+                full: zombie.core.textures.TextureDraw
+            return:
+              type:
+                basic: void
+                full: void

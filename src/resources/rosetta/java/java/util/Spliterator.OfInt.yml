@@ -1,0 +1,123 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util:
+        Spliterator.OfInt:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: A Spliterator specialized for int values.
+          methods:
+          - name: forEachRemaining
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IntConsumer
+                full: java.util.function.IntConsumer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forEachRemaining
+            modifiers:
+            - public
+            parameters:
+            - name: action
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<? super java.lang.Integer>
+              notes: The action
+            return:
+              type:
+                basic: void
+                full: void
+            notes: "Performs the given action for each remaining element, sequentially\
+              \ in\n the current thread, until all elements have been processed or\
+              \ the action\n throws an exception.  If this Spliterator is Spliterator.ORDERED,\
+              \ actions\n are performed in encounter order.  Exceptions thrown by\
+              \ the action\n are relayed to the caller.\n \n Subsequent behavior of\
+              \ a spliterator is unspecified if the action throws\n an exception."
+          - name: forEachRemaining
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void
+          - name: tryAdvance
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntConsumer
+                full: java.util.function.IntConsumer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: tryAdvance
+            modifiers:
+            - public
+            parameters:
+            - name: action
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<? super java.lang.Integer>
+              notes: The action
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: "false if no remaining elements existed\n upon entry to this\
+                \ method, else true."
+            notes: "If a remaining element exists, performs the given action on it,\n\
+              \ returning true; else returns false.  If this\n Spliterator is Spliterator.ORDERED\
+              \ the action is performed on the\n next element in encounter order.\
+              \  Exceptions thrown by the\n action are relayed to the caller.\n \n\
+              \ Subsequent behavior of a spliterator is unspecified if the action\
+              \ throws\n an exception."
+          - name: tryAdvance
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: trySplit
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Spliterator.OfInt
+                full: java.util.Spliterator$OfInt
+          - name: trySplit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Spliterator.OfPrimitive
+                full: java.util.Spliterator$OfPrimitive
+          - name: trySplit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Spliterator
+                full: java.util.Spliterator

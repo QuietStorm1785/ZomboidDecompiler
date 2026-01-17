@@ -1,0 +1,172 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.attributes:
+        AttributeInstance.Byte:
+          extends: zombie.entity.components.attributes.AttributeInstance$Numeric<zombie.entity.components.attributes.AttributeInstance$Byte,
+            zombie.entity.components.attributes.AttributeType$Byte>
+          modifiers:
+          - public
+          fields:
+            value:
+              name: value
+              modifiers:
+              - private
+              type:
+                basic: byte
+                full: byte
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: copy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AttributeInstance.Byte
+                full: zombie.entity.components.attributes.AttributeInstance$Byte
+          - name: copy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AttributeInstance
+                full: zombie.entity.components.attributes.AttributeInstance
+          - name: equalTo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AttributeInstance.Byte
+                full: zombie.entity.components.attributes.AttributeInstance$Byte
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: equalTo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AttributeInstance
+                full: zombie.entity.components.attributes.AttributeInstance
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: floatValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: fromFloat
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: release
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setType
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: AttributeType.Byte
+                full: zombie.entity.components.attributes.AttributeType$Byte
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setType
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: AttributeType
+                full: zombie.entity.components.attributes.AttributeType
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValueFromScriptString
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: stringValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

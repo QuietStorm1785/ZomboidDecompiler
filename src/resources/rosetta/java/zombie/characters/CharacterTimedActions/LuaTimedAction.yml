@@ -1,0 +1,75 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.CharacterTimedActions:
+        LuaTimedAction:
+          extends: zombie.characters.CharacterTimedActions.BaseAction
+          modifiers:
+          - public
+          - final
+          fields:
+            table:
+              name: table
+              modifiers:
+              - package
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+          staticFields:
+            statObj:
+              name: statObj
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Object
+                full: java.lang.Object[]
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: table
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          methods:
+          - name: perform
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: start
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stop
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: valid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean

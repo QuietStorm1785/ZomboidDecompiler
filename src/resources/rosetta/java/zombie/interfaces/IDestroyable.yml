@@ -1,0 +1,29 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.interfaces:
+        IDestroyable:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: destroy
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+            notes: destory the object
+          - name: isDestroyed
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: returns if the object is destryed or not

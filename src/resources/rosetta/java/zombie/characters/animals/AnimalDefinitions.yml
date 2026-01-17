@@ -1,0 +1,1095 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.animals:
+        AnimalDefinitions:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            addTrackingXp:
+              name: addTrackingXp
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            alwaysFleeHumans:
+              name: alwaysFleeHumans
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            animalSize:
+              name: animalSize
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            animalTypeStr:
+              name: animalTypeStr
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            animset:
+              name: animset
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            attackBack:
+              name: attackBack
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            attackDist:
+              name: attackDist
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            attackIfStressed:
+              name: attackIfStressed
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            attackTimer:
+              name: attackTimer
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            babyType:
+              name: babyType
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            baseDmg:
+              name: baseDmg
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            baseEncumbrance:
+              name: baseEncumbrance
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            bodyModel:
+              name: bodyModel
+              modifiers:
+              - public
+              type:
+                basic: Model
+                full: zombie.core.skinnedmodel.model.Model
+            bodyModelFleece:
+              name: bodyModelFleece
+              modifiers:
+              - public
+              type:
+                basic: Model
+                full: zombie.core.skinnedmodel.model.Model
+            bodyModelFleeceStr:
+              name: bodyModelFleeceStr
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            bodyModelHeadless:
+              name: bodyModelHeadless
+              modifiers:
+              - public
+              type:
+                basic: Model
+                full: zombie.core.skinnedmodel.model.Model
+            bodyModelHeadlessStr:
+              name: bodyModelHeadlessStr
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            bodyModelSkel:
+              name: bodyModelSkel
+              modifiers:
+              - public
+              type:
+                basic: Model
+                full: zombie.core.skinnedmodel.model.Model
+            bodyModelSkelNoHead:
+              name: bodyModelSkelNoHead
+              modifiers:
+              - public
+              type:
+                basic: Model
+                full: zombie.core.skinnedmodel.model.Model
+            bodyModelSkelNoHeadStr:
+              name: bodyModelSkelNoHeadStr
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            bodyModelSkelStr:
+              name: bodyModelSkelStr
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            bodyModelStr:
+              name: bodyModelStr
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            breeds:
+              name: breeds
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.animals.datas.AnimalBreed>
+            canBeAlerted:
+              name: canBeAlerted
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            canBeAttached:
+              name: canBeAttached
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            canBeDomesticated:
+              name: canBeDomesticated
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            canBeFeedByHand:
+              name: canBeFeedByHand
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            canBeKilledWithoutWeapon:
+              name: canBeKilledWithoutWeapon
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            canBeMilked:
+              name: canBeMilked
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            canBePet:
+              name: canBePet
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            canBePicked:
+              name: canBePicked
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            canBeTransported:
+              name: canBeTransported
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            canClimbFences:
+              name: canClimbFences
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            canClimbStairs:
+              name: canClimbStairs
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            canDoLaceration:
+              name: canDoLaceration
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            canThump:
+              name: canThump
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            carcassItem:
+              name: carcassItem
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            collidable:
+              name: collidable
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            collisionSize:
+              name: collisionSize
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            corpseLength:
+              name: corpseLength
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            corpseSize:
+              name: corpseSize
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            distToEat:
+              name: distToEat
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            dontAttackOtherMale:
+              name: dontAttackOtherMale
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            dung:
+              name: dung
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            dungChancePerDay:
+              name: dungChancePerDay
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            eatFromMother:
+              name: eatFromMother
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            eatGrass:
+              name: eatGrass
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            eatTypeTrough:
+              name: eatTypeTrough
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            eatingTypeNbr:
+              name: eatingTypeNbr
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            eggType:
+              name: eggType
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            eggsPerDay:
+              name: eggsPerDay
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            enterHutchTime:
+              name: enterHutchTime
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            exitHutchTime:
+              name: exitHutchTime
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            feedByHandType:
+              name: feedByHandType
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            female:
+              name: female
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            fertilizedTimeMax:
+              name: fertilizedTimeMax
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            fleeZombies:
+              name: fleeZombies
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            genes:
+              name: genes
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            genome:
+              name: genome
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.animals.AnimalAllele>
+            group:
+              name: group
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            happyAnim:
+              name: happyAnim
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            healthLossMultiplier:
+              name: healthLossMultiplier
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            hungerBoost:
+              name: hungerBoost
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            hungerMultiplier:
+              name: hungerMultiplier
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            hutches:
+              name: hutches
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            idleEmoteChance:
+              name: idleEmoteChance
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            idleSoundRadius:
+              name: idleSoundRadius
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            idleSoundVolume:
+              name: idleSoundVolume
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            idleTypeNbr:
+              name: idleTypeNbr
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            knockdownAttack:
+              name: knockdownAttack
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            layEggPeriodStart:
+              name: layEggPeriodStart
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            litterEatTogether:
+              name: litterEatTogether
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            male:
+              name: male
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            mate:
+              name: mate
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            matingPeriodEnd:
+              name: matingPeriodEnd
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            matingPeriodStart:
+              name: matingPeriodStart
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            maxAgeGeriatric:
+              name: maxAgeGeriatric
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            maxBaby:
+              name: maxBaby
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            maxBlood:
+              name: maxBlood
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            maxClutchSize:
+              name: maxClutchSize
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            maxMilk:
+              name: maxMilk
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            maxSize:
+              name: maxSize
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            maxWeight:
+              name: maxWeight
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            maxWool:
+              name: maxWool
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            milkAnimPreset:
+              name: milkAnimPreset
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            minAge:
+              name: minAge
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            minAgeForBaby:
+              name: minAgeForBaby
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            minBaby:
+              name: minBaby
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            minBlood:
+              name: minBlood
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            minBodyPart:
+              name: minBodyPart
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            minClutchSize:
+              name: minClutchSize
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            minEnclosureSize:
+              name: minEnclosureSize
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            minMilk:
+              name: minMilk
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            minSize:
+              name: minSize
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            minWeight:
+              name: minWeight
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            needMom:
+              name: needMom
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            periodicRun:
+              name: periodicRun
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            pregnantPeriod:
+              name: pregnantPeriod
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            ropeBone:
+              name: ropeBone
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            shadowbm:
+              name: shadowbm
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            shadowfm:
+              name: shadowfm
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            shadoww:
+              name: shadoww
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            sitRandomly:
+              name: sitRandomly
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            sittingTypeNbr:
+              name: sittingTypeNbr
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            spottingDist:
+              name: spottingDist
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            stages:
+              name: stages
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.animals.datas.AnimalGrowStage>
+            stressAboveGround:
+              name: stressAboveGround
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            stressUnderRain:
+              name: stressUnderRain
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            textureRotten:
+              name: textureRotten
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            textureSkeleton:
+              name: textureSkeleton
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            textureSkeletonBloody:
+              name: textureSkeletonBloody
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            textureSkinned:
+              name: textureSkinned
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            thirstBoost:
+              name: thirstBoost
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            thirstHungerTrigger:
+              name: thirstHungerTrigger
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            thirstMultiplier:
+              name: thirstMultiplier
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            timeBeforeNextPregnancy:
+              name: timeBeforeNextPregnancy
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            timeToHatch:
+              name: timeToHatch
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            trailerBaseSize:
+              name: trailerBaseSize
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            turnDelta:
+              name: turnDelta
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            udder:
+              name: udder
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            wanderMul:
+              name: wanderMul
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            wild:
+              name: wild
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            wildFleeTimeUntilDeadTimer:
+              name: wildFleeTimeUntilDeadTimer
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          staticFields:
+            animalDefs:
+              name: animalDefs
+              modifiers:
+              - public
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.characters.animals.AnimalDefinitions>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: canBeSkeleton
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getAnimalType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getBabyType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getBodyModelStr
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getBreedByName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: AnimalBreed
+                full: zombie.characters.animals.datas.AnimalBreed
+          - name: getBreeds
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.animals.datas.AnimalBreed>
+          - name: getGroup
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getMaxBaby
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMinBaby
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getRandomBreed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AnimalBreed
+                full: zombie.characters.animals.datas.AnimalBreed
+          - name: getWildFleeTimeUntilDeadTimer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: isInsideHutchTime
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Integer
+                full: java.lang.Integer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOutsideHutchTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          staticMethods:
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAnimalDefs
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.characters.animals.AnimalDefinitions>
+          - name: getAnimalDefsArray
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.animals.AnimalDefinitions>
+          - name: getDef
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoAnimal
+                full: zombie.characters.animals.IsoAnimal
+            return:
+              type:
+                basic: AnimalDefinitions
+                full: zombie.characters.animals.AnimalDefinitions
+          - name: getDef
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: AnimalDefinitions
+                full: zombie.characters.animals.AnimalDefinitions
+          - name: loadAnimalDefinitions
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadBreeds
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: AnimalDefinitions
+                full: zombie.characters.animals.AnimalDefinitions
+            - name: arg1
+              type:
+                basic: KahluaTableImpl
+                full: se.krka.kahlua.j2se.KahluaTableImpl
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadGenes
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: AnimalDefinitions
+                full: zombie.characters.animals.AnimalDefinitions
+            - name: arg1
+              type:
+                basic: KahluaTableImpl
+                full: se.krka.kahlua.j2se.KahluaTableImpl
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadStages
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: AnimalDefinitions
+                full: zombie.characters.animals.AnimalDefinitions
+            - name: arg1
+              type:
+                basic: KahluaTableImpl
+                full: se.krka.kahlua.j2se.KahluaTableImpl
+            return:
+              type:
+                basic: void
+                full: void

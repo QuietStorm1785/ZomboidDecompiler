@@ -1,0 +1,91 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Terrain.RenderTiles.IsoGridSquare:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          - final
+          fields:
+            DoorsAndWalls:
+              name: DoorsAndWalls
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            DoorsAndWalls_SimpleLighting:
+              name: DoorsAndWalls_SimpleLighting
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            Floor:
+              name: Floor
+              modifiers:
+              - public
+              type:
+                basic: Terrain.RenderTiles.IsoGridSquare.Floor
+                full: zombie.debug.options.Terrain$RenderTiles$IsoGridSquare$Floor
+            IsoPadding:
+              name: IsoPadding
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            IsoPaddingAttached:
+              name: IsoPaddingAttached
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            IsoPaddingDeDiamond:
+              name: IsoPaddingDeDiamond
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            MeshCutdown:
+              name: MeshCutdown
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            Objects:
+              name: Objects
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            RenderMinusFloor:
+              name: RenderMinusFloor
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            ShoreFade:
+              name: ShoreFade
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            Walls:
+              name: Walls
+              modifiers:
+              - public
+              type:
+                basic: Terrain.RenderTiles.IsoGridSquare.Walls
+                full: zombie.debug.options.Terrain$RenderTiles$IsoGridSquare$Walls
+          constructors:
+          - modifiers:
+            - public

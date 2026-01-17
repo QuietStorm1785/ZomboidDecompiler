@@ -1,0 +1,315 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.textures:
+        IGLFramebufferObject:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: GL_COLOR_ATTACHMENT0
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_DEPTH24_STENCIL8
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_DEPTH_ATTACHMENT
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_DEPTH_STENCIL
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_FRAMEBUFFER
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_FRAMEBUFFER_COMPLETE
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_FRAMEBUFFER_INCOMPLETE_FORMATS
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_FRAMEBUFFER_UNDEFINED
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_FRAMEBUFFER_UNSUPPORTED
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_RENDERBUFFER
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GL_STENCIL_ATTACHMENT
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: glBindFramebuffer
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: target
+              type:
+                basic: int
+                full: int
+            - name: framebuffer
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: glBindRenderbuffer
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: target
+              type:
+                basic: int
+                full: int
+            - name: renderbuffer
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: glCheckFramebufferStatus
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: target
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: glDeleteFramebuffers
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: renderbuffer
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: glDeleteRenderbuffers
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: renderbuffer
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: glFramebufferRenderbuffer
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: target
+              type:
+                basic: int
+                full: int
+            - name: attachment
+              type:
+                basic: int
+                full: int
+            - name: renderbuffertarget
+              type:
+                basic: int
+                full: int
+            - name: renderbuffer
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: glFramebufferTexture2D
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: target
+              type:
+                basic: int
+                full: int
+            - name: attachment
+              type:
+                basic: int
+                full: int
+            - name: textarget
+              type:
+                basic: int
+                full: int
+            - name: texture
+              type:
+                basic: int
+                full: int
+            - name: level
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: glGenFramebuffers
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: glGenRenderbuffers
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: glRenderbufferStorage
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: target
+              type:
+                basic: int
+                full: int
+            - name: internalformat
+              type:
+                basic: int
+                full: int
+            - name: width
+              type:
+                basic: int
+                full: int
+            - name: height
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void

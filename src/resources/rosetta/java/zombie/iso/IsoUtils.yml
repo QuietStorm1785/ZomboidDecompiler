@@ -1,0 +1,547 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        IsoUtils:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: DistanceManhatten
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: fromX
+              type:
+                basic: float
+                full: float
+            - name: fromY
+              type:
+                basic: float
+                full: float
+            - name: toX
+              type:
+                basic: float
+                full: float
+            - name: toY
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: DistanceManhatten
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: fromX
+              type:
+                basic: float
+                full: float
+            - name: fromY
+              type:
+                basic: float
+                full: float
+            - name: toX
+              type:
+                basic: float
+                full: float
+            - name: toY
+              type:
+                basic: float
+                full: float
+            - name: fromZ
+              type:
+                basic: float
+                full: float
+            - name: toZ
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: DistanceManhattenSquare
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: fromX
+              type:
+                basic: float
+                full: float
+            - name: fromY
+              type:
+                basic: float
+                full: float
+            - name: toX
+              type:
+                basic: float
+                full: float
+            - name: toY
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: DistanceTo
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: fromX
+              type:
+                basic: float
+                full: float
+            - name: fromY
+              type:
+                basic: float
+                full: float
+            - name: toX
+              type:
+                basic: float
+                full: float
+            - name: toY
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: DistanceTo
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: fromX
+              type:
+                basic: float
+                full: float
+            - name: fromY
+              type:
+                basic: float
+                full: float
+            - name: fromZ
+              type:
+                basic: float
+                full: float
+            - name: toX
+              type:
+                basic: float
+                full: float
+            - name: toY
+              type:
+                basic: float
+                full: float
+            - name: toZ
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: DistanceTo2D
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: fromX
+              type:
+                basic: float
+                full: float
+            - name: fromY
+              type:
+                basic: float
+                full: float
+            - name: toX
+              type:
+                basic: float
+                full: float
+            - name: toY
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: DistanceToSquared
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: fromX
+              type:
+                basic: float
+                full: float
+            - name: fromY
+              type:
+                basic: float
+                full: float
+            - name: fromZ
+              type:
+                basic: float
+                full: float
+            - name: toX
+              type:
+                basic: float
+                full: float
+            - name: toY
+              type:
+                basic: float
+                full: float
+            - name: toZ
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: DistanceToSquared
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: fromX
+              type:
+                basic: float
+                full: float
+            - name: fromY
+              type:
+                basic: float
+                full: float
+            - name: toX
+              type:
+                basic: float
+                full: float
+            - name: toY
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: XToIso
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: screenX
+              type:
+                basic: float
+                full: float
+            - name: screenY
+              type:
+                basic: float
+                full: float
+            - name: floor
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: XToIsoTrue
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: screenX
+              type:
+                basic: float
+                full: float
+            - name: screenY
+              type:
+                basic: float
+                full: float
+            - name: floor
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: XToScreen
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: objectX
+              type:
+                basic: float
+                full: float
+            - name: objectY
+              type:
+                basic: float
+                full: float
+            - name: objectZ
+              type:
+                basic: float
+                full: float
+            - name: screenZ
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: XToScreenExact
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: objectX
+              type:
+                basic: float
+                full: float
+            - name: objectY
+              type:
+                basic: float
+                full: float
+            - name: objectZ
+              type:
+                basic: float
+                full: float
+            - name: screenZ
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: XToScreenInt
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: objectX
+              type:
+                basic: int
+                full: int
+            - name: objectY
+              type:
+                basic: int
+                full: int
+            - name: objectZ
+              type:
+                basic: int
+                full: int
+            - name: screenZ
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: YToIso
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: screenX
+              type:
+                basic: float
+                full: float
+            - name: screenY
+              type:
+                basic: float
+                full: float
+            - name: floor
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: YToScreen
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: objectX
+              type:
+                basic: float
+                full: float
+            - name: objectY
+              type:
+                basic: float
+                full: float
+            - name: objectZ
+              type:
+                basic: float
+                full: float
+            - name: screenZ
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: YToScreenExact
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: objectX
+              type:
+                basic: float
+                full: float
+            - name: objectY
+              type:
+                basic: float
+                full: float
+            - name: objectZ
+              type:
+                basic: float
+                full: float
+            - name: screenZ
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: YToScreenInt
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: objectX
+              type:
+                basic: int
+                full: int
+            - name: objectY
+              type:
+                basic: int
+                full: int
+            - name: objectZ
+              type:
+                basic: int
+                full: int
+            - name: screenZ
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: clamp
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: minVal
+              type:
+                basic: float
+                full: float
+            - name: maxVal
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: isSimilarDirection
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: xA
+              type:
+                basic: float
+                full: float
+            - name: yA
+              type:
+                basic: float
+                full: float
+            - name: xB
+              type:
+                basic: float
+                full: float
+            - name: yB
+              type:
+                basic: float
+                full: float
+            - name: similar
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: lerp
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: val
+              type:
+                basic: float
+                full: float
+            - name: min
+              type:
+                basic: float
+                full: float
+            - name: max
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: smoothstep
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: edge0
+              type:
+                basic: float
+                full: float
+            - name: edge1
+              type:
+                basic: float
+                full: float
+            - name: x
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float

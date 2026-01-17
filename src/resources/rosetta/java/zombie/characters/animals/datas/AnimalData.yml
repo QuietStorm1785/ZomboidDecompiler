@@ -1,0 +1,1415 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.animals.datas:
+        AnimalData:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            age:
+              name: age
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            animalToInseminate:
+              name: animalToInseminate
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.animals.IsoAnimal>
+            attachedPlayer:
+              name: attachedPlayer
+              modifiers:
+              - public
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            attachedTree:
+              name: attachedTree
+              modifiers:
+              - private
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            attachedTreeX:
+              name: attachedTreeX
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            attachedTreeY:
+              name: attachedTreeY
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            breed:
+              name: breed
+              modifiers:
+              - public
+              type:
+                basic: AnimalBreed
+                full: zombie.characters.animals.datas.AnimalBreed
+            canHaveMilk:
+              name: canHaveMilk
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            clutchSize:
+              name: clutchSize
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            clutchSizeDone:
+              name: clutchSizeDone
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            currentStage:
+              name: currentStage
+              modifiers:
+              - public
+              type:
+                basic: AnimalGrowStage
+                full: zombie.characters.animals.datas.AnimalGrowStage
+            currentStageNbr:
+              name: currentStageNbr
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            eatingGrass:
+              name: eatingGrass
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            eggLayTime:
+              name: eggLayTime
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            eggTime:
+              name: eggTime
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            eggsToday:
+              name: eggsToday
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            enterHutchTimerAfterDestroy:
+              name: enterHutchTimerAfterDestroy
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            femaleToCheck:
+              name: femaleToCheck
+              modifiers:
+              - private
+              type:
+                basic: IsoAnimal
+                full: zombie.characters.animals.IsoAnimal
+            fertilized:
+              name: fertilized
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            fertilizedTime:
+              name: fertilizedTime
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            goingToInseminate:
+              name: goingToInseminate
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            goingToMom:
+              name: goingToMom
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            goingToMomTest:
+              name: goingToMomTest
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            goingToMomTimer:
+              name: goingToMomTimer
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            hutchPathTimer:
+              name: hutchPathTimer
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            hutchPosition:
+              name: hutchPosition
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            hutchToEnterTimerFailsafe:
+              name: hutchToEnterTimerFailsafe
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            lastHourCheck:
+              name: lastHourCheck
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            lastImpregnateTime:
+              name: lastImpregnateTime
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            lastMilkTimer:
+              name: lastMilkTimer
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            lastPregnancyTime:
+              name: lastPregnancyTime
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            linkedTrough:
+              name: linkedTrough
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.network.SpawnRegions$Point>
+            maleGenome:
+              name: maleGenome
+              modifiers:
+              - public
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.characters.animals.AnimalGene>
+            maxMilkActual:
+              name: maxMilkActual
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            milkQty:
+              name: milkQty
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            originalSize:
+              name: originalSize
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            parent:
+              name: parent
+              modifiers:
+              - public
+              type:
+                basic: IsoAnimal
+                full: zombie.characters.animals.IsoAnimal
+            preferredHutchPosition:
+              name: preferredHutchPosition
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            pregnant:
+              name: pregnant
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            pregnantTime:
+              name: pregnantTime
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            size:
+              name: size
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            timeToLoseMilk:
+              name: timeToLoseMilk
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            timerInseminate:
+              name: timerInseminate
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            troughPathTimer:
+              name: troughPathTimer
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            troughToCheck:
+              name: troughToCheck
+              modifiers:
+              - public
+              type:
+                basic: IsoFeedingTrough
+                full: zombie.iso.objects.IsoFeedingTrough
+            weight:
+              name: weight
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            woolQty:
+              name: woolQty
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            FEATHER_CHANCE_PER_HOUR:
+              name: FEATHER_CHANCE_PER_HOUR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            ONE_DAY_MILLISECONDS:
+              name: ONE_DAY_MILLISECONDS
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            ONE_HOUR_MILLISECONDS:
+              name: ONE_HOUR_MILLISECONDS
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            ONE_WEEK_MILLISECONDS:
+              name: ONE_WEEK_MILLISECONDS
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoAnimal
+                full: zombie.characters.animals.IsoAnimal
+            - name: arg1
+              type:
+                basic: AnimalBreed
+                full: zombie.characters.animals.datas.AnimalBreed
+          methods:
+          - name: calcClutchSize
+            modifiers:
+            - private
+            return:
+              type:
+                basic: int
+                full: int
+          - name: callToTrough
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoFeedingTrough
+                full: zombie.iso.objects.IsoFeedingTrough
+            return:
+              type:
+                basic: void
+                full: void
+          - name: canBePregnant
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canEatFromTrough
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoFeedingTrough
+                full: zombie.iso.objects.IsoFeedingTrough
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: canHaveBaby
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canHaveMilk
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: checkEggs
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PZCalendar
+                full: zombie.util.PZCalendar
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkFertilizedTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkOld
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkPoop
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: checkPregnancy
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkStages
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drink
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drinkFromGround
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drinkFromPuddle
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drinkFromRiver
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: dropFeather
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: eat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: eatAndDrinkAfterMeta
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: eatAndDrinkAfterMetaVehicle
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: eatFood
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: eatFromVehicle
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: eatItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: findFemaleToInseminate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PZCalendar
+                full: zombie.util.PZCalendar
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAge
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getAgeGrowModifier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAgeString
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAttachedPlayer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+          - name: getAttachedTree
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: getAttachedTreeX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getAttachedTreeY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getBreed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AnimalBreed
+                full: zombie.characters.animals.datas.AnimalBreed
+          - name: getClutchSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getDaysSurvived
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getDebugBehaviorString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFertilizedTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getGeriatricPercentage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getGrowStage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.animals.datas.AnimalGrowStage>
+          - name: getHealthLoss
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Float
+                full: java.lang.Float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getHungerReduction
+            modifiers:
+            - private
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getHungerReductionMetaMod
+            modifiers:
+            - private
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getHungerReductionMod
+            modifiers:
+            - private
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getHutchPosition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getInventoryIconTextureName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getLastImpregnatePeriod
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PZCalendar
+                full: zombie.util.PZCalendar
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getLastPregnancyPeriod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getLastTimeMilkedInHour
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Float
+                full: java.lang.Float
+          - name: getMaxAgeGeriatric
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaxMilk
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaxMilkActual
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaxSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaxWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaxWool
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMilkInc
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMilkIncModifier
+            modifiers:
+            - private
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMilkQuantity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMinMilk
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMinSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMinWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getOriginalSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getPreferredHutchPosition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getPregnancyTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getPregnantPeriod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getRandomTroughList
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.objects.IsoFeedingTrough>
+          - name: getRegionHutch
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoHutch
+                full: zombie.iso.objects.IsoHutch
+          - name: getSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getThirstReduction
+            modifiers:
+            - private
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTimeBeforeNextPregnancy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWoolInc
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWoolIncModifier
+            modifiers:
+            - private
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWoolQuantity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: grow
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: growUp
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: haveLayingEggPeriod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hourGrow
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: init
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: initSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: initStage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: initWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isFemale
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFertilized
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInLayingEggPeriod
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PZCalendar
+                full: zombie.util.PZCalendar
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPregnant
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: reduceHealthDueToMilk
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: resetEatingCheck
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAge
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAttachedPlayer
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAttachedTree
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBreed
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AnimalBreed
+                full: zombie.characters.animals.datas.AnimalBreed
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCanHaveMilk
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFertilized
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFertilizedTime
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: setHutchPosition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaleGenome
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.characters.animals.AnimalGene>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxMilkActual
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMilkQuantity
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPreferredHutchPosition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPregnancyTime
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPregnant
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSize
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSizeForced
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWeight
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWoolQuantity
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWoolQuantity
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: tryInseminateInMeta
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PZCalendar
+                full: zombie.util.PZCalendar
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateHealth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateHungerAndThirst
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateLastPregnancyTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateLastTimeMilked
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateMilk
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateWeight
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: shuffleList
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.objects.IsoFeedingTrough>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: swap
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: List
+                full: java.util.List<zombie.iso.objects.IsoFeedingTrough>
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void

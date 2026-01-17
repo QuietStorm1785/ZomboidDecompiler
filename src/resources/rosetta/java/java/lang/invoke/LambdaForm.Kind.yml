@@ -1,0 +1,627 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.lang.invoke:
+        LambdaForm.Kind:
+          extends: java.lang.Enum<java.lang.invoke.LambdaForm$Kind>
+          modifiers:
+          - package
+          - final
+          fields:
+            defaultLambdaName:
+              name: defaultLambdaName
+              modifiers:
+              - package
+              type:
+                basic: String
+                full: java.lang.String
+            methodName:
+              name: methodName
+              modifiers:
+              - package
+              type:
+                basic: String
+                full: java.lang.String
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind[]
+            BOUND_REINVOKER:
+              name: BOUND_REINVOKER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            COLLECT:
+              name: COLLECT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            COLLECTOR:
+              name: COLLECTOR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            CONVERT:
+              name: CONVERT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            DELEGATE:
+              name: DELEGATE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            DIRECT_INVOKE_INTERFACE:
+              name: DIRECT_INVOKE_INTERFACE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            DIRECT_INVOKE_SPECIAL:
+              name: DIRECT_INVOKE_SPECIAL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            DIRECT_INVOKE_SPECIAL_IFC:
+              name: DIRECT_INVOKE_SPECIAL_IFC
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            DIRECT_INVOKE_STATIC:
+              name: DIRECT_INVOKE_STATIC
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            DIRECT_INVOKE_STATIC_INIT:
+              name: DIRECT_INVOKE_STATIC_INIT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            DIRECT_INVOKE_VIRTUAL:
+              name: DIRECT_INVOKE_VIRTUAL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            DIRECT_NEW_INVOKE_SPECIAL:
+              name: DIRECT_NEW_INVOKE_SPECIAL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            EXACT_INVOKER:
+              name: EXACT_INVOKER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            EXACT_LINKER:
+              name: EXACT_LINKER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            FIELD:
+              name: FIELD
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GENERIC:
+              name: GENERIC
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GENERIC_INVOKER:
+              name: GENERIC_INVOKER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GENERIC_LINKER:
+              name: GENERIC_LINKER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_BOOLEAN:
+              name: GET_BOOLEAN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_BOOLEAN_VOLATILE:
+              name: GET_BOOLEAN_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_BYTE:
+              name: GET_BYTE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_BYTE_VOLATILE:
+              name: GET_BYTE_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_CHAR:
+              name: GET_CHAR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_CHAR_VOLATILE:
+              name: GET_CHAR_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_DOUBLE:
+              name: GET_DOUBLE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_DOUBLE_VOLATILE:
+              name: GET_DOUBLE_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_FLOAT:
+              name: GET_FLOAT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_FLOAT_VOLATILE:
+              name: GET_FLOAT_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_INT:
+              name: GET_INT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_INT_VOLATILE:
+              name: GET_INT_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_LONG:
+              name: GET_LONG
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_LONG_VOLATILE:
+              name: GET_LONG_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_REFERENCE:
+              name: GET_REFERENCE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_REFERENCE_VOLATILE:
+              name: GET_REFERENCE_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_SHORT:
+              name: GET_SHORT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GET_SHORT_VOLATILE:
+              name: GET_SHORT_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GUARD:
+              name: GUARD
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            GUARD_WITH_CATCH:
+              name: GUARD_WITH_CATCH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            IDENTITY:
+              name: IDENTITY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            LINK_TO_CALL_SITE:
+              name: LINK_TO_CALL_SITE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            LINK_TO_TARGET_METHOD:
+              name: LINK_TO_TARGET_METHOD
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            LOOP:
+              name: LOOP
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_BOOLEAN:
+              name: PUT_BOOLEAN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_BOOLEAN_VOLATILE:
+              name: PUT_BOOLEAN_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_BYTE:
+              name: PUT_BYTE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_BYTE_VOLATILE:
+              name: PUT_BYTE_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_CHAR:
+              name: PUT_CHAR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_CHAR_VOLATILE:
+              name: PUT_CHAR_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_DOUBLE:
+              name: PUT_DOUBLE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_DOUBLE_VOLATILE:
+              name: PUT_DOUBLE_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_FLOAT:
+              name: PUT_FLOAT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_FLOAT_VOLATILE:
+              name: PUT_FLOAT_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_INT:
+              name: PUT_INT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_INT_VOLATILE:
+              name: PUT_INT_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_LONG:
+              name: PUT_LONG
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_LONG_VOLATILE:
+              name: PUT_LONG_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_REFERENCE:
+              name: PUT_REFERENCE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_REFERENCE_VOLATILE:
+              name: PUT_REFERENCE_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_SHORT:
+              name: PUT_SHORT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            PUT_SHORT_VOLATILE:
+              name: PUT_SHORT_VOLATILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            REINVOKER:
+              name: REINVOKER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            SPREAD:
+              name: SPREAD
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            TABLE_SWITCH:
+              name: TABLE_SWITCH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            TRY_FINALLY:
+              name: TRY_FINALLY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            VARHANDLE_EXACT_INVOKER:
+              name: VARHANDLE_EXACT_INVOKER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            VARHANDLE_INVOKER:
+              name: VARHANDLE_INVOKER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            VARHANDLE_LINKER:
+              name: VARHANDLE_LINKER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+            ZERO:
+              name: ZERO
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: LambdaForm.Kind
+                full: java.lang.invoke.LambdaForm$Kind[]

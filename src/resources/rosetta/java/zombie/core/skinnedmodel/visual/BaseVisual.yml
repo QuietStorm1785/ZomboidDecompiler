@@ -1,0 +1,98 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.visual:
+        BaseVisual:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: clear
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyFrom
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: other
+              type:
+                basic: BaseVisual
+                full: zombie.core.skinnedmodel.visual.BaseVisual
+            return:
+              type:
+                basic: void
+                full: void
+          - name: dressInNamedOutfit
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: outfitName
+              type:
+                basic: String
+                full: java.lang.String
+            - name: itemVisuals
+              type:
+                basic: ItemVisuals
+                full: zombie.core.skinnedmodel.visual.ItemVisuals
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getModel
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Model
+                full: zombie.core.skinnedmodel.model.Model
+          - name: getModelScript
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: ModelScript
+                full: zombie.scripting.objects.ModelScript
+          - name: load
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: input
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: output
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void

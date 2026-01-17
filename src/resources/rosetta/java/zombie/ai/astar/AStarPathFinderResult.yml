@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ai.astar:
+        AStarPathFinderResult:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            maxSearchDistance:
+              name: maxSearchDistance
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            progress:
+              name: progress
+              modifiers:
+              - public
+              type:
+                basic: AStarPathFinder.PathFindProgress
+                full: zombie.ai.astar.AStarPathFinder$PathFindProgress
+          constructors:
+          - modifiers:
+            - public

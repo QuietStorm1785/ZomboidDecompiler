@@ -17,7 +17,15 @@ The decompiled source code will be written to `output/`, along with the dependen
 2) Download the latest .zip from [Releases](https://github.com/demiurgeQuantified/ZomboidDecompiler/releases/latest).
 3) Extract the zip.
 4) Open your command line to the `bin` folder and execute ``ZomboidDecompiler "PATH"``, replacing `PATH` with the path to your game installation's `ProjectZomboid` folder.
-   - Example: ``ZomboidDecompiler "D:\Program Files (x86)\Steam\steamapps\common\ProjectZomboid"``
+   - Example: ``ZomboidDecompiler "D:\Program Files (x86)
+   \Steam\steamapps\common\ProjectZomboid"``
+Another example:
+# Basic usage - includes all members with proper syntax
+./ZomboidDecompiler "path/to/ProjectZomboid"
+
+# With custom parameters to further control output
+./ZomboidDecompiler "path/to/ProjectZomboid" -vf bytecode_source_mapping true
+
 5) Wait a few minutes for decompilation to complete.
 The decompiled source code will be written to `output/`, along with the dependencies and game jar.
 
@@ -27,6 +35,12 @@ The decompiled source code will be written to `output/`, along with the dependen
 - Renaming of function parameters using Rosetta data.
 - Renaming of other variables according to type to enhance readability.
 - Line number remapping for remote debugging.
+
+## Line number remapping limitations
+The CLI flag `--remap-line-numbers` is present for legacy versions but is currently **disabled** for Project Zomboid 42.13+.
+- The tool cannot rewrite the game JAR in 42.13+, so bytecode→source mapping data cannot be injected.
+- When the flag is supplied, a warning is emitted and no class files are modified.
+- For debugging, use the decompiled sources directly and attach your IDE debugger to the running game.
 
 ## Version compatibility chart
 Sometimes the game changes too much for Zomboid Decompiler to reasonably maintain compatibility with older versions.

@@ -1,0 +1,67 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie:
+        ZomboidFileSystem.PZFolder:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            absoluteFile:
+              name: absoluteFile
+              modifiers:
+              - public
+              type:
+                basic: File
+                full: java.io.File
+            canonicalFile:
+              name: canonicalFile
+              modifiers:
+              - public
+              type:
+                basic: File
+                full: java.io.File
+            canonicalURI:
+              name: canonicalURI
+              modifiers:
+              - public
+              type:
+                basic: URI
+                full: java.net.URI
+            lowercaseURI:
+              name: lowercaseURI
+              modifiers:
+              - public
+              type:
+                basic: URI
+                full: java.net.URI
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: File
+                full: java.io.File
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWithCatch
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: File
+                full: java.io.File
+            return:
+              type:
+                basic: void
+                full: void

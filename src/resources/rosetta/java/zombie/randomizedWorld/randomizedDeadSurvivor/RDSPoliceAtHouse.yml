@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.randomizedWorld.randomizedDeadSurvivor:
+        RDSPoliceAtHouse:
+          extends: zombie.randomizedWorld.randomizedDeadSurvivor.RandomizedDeadSurvivorBase
+          modifiers:
+          - public
+          - final
+          notes: 2-3 zombies Cops in the house too with a police car waiting outside.
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: randomizeDeadSurvivor
+            modifiers:
+            - public
+            parameters:
+            - name: def
+              type:
+                basic: BuildingDef
+                full: zombie.iso.BuildingDef
+            return:
+              type:
+                basic: void
+                full: void

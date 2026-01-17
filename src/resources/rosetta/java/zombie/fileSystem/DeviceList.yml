@@ -1,0 +1,53 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.fileSystem:
+        DeviceList:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            m_devices:
+              name: m_devices
+              modifiers:
+              - private
+              type:
+                basic: IFileDevice
+                full: zombie.fileSystem.IFileDevice[]
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: add
+            modifiers:
+            - public
+            parameters:
+            - name: device
+              type:
+                basic: IFileDevice
+                full: zombie.fileSystem.IFileDevice
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createFile
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IFile
+                full: zombie.fileSystem.IFile
+          - name: createStream
+            modifiers:
+            - public
+            parameters:
+            - name: path
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: InputStream
+                full: java.io.InputStream

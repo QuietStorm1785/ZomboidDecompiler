@@ -1,0 +1,37 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Network.Server:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          - final
+          fields:
+            SyncIsoObject:
+              name: SyncIsoObject
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            this$0:
+              name: this$0
+              modifiers:
+              - package
+              type:
+                basic: Network
+                full: zombie.debug.options.Network
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Network
+                full: zombie.debug.options.Network
+            - name: arg1
+              type:
+                basic: IDebugOptionGroup
+                full: zombie.debug.options.IDebugOptionGroup

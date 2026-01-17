@@ -1,0 +1,139 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.awt.image:
+        OffScreenImageSource:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            height:
+              name: height
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            image:
+              name: image
+              modifiers:
+              - package
+              type:
+                basic: BufferedImage
+                full: java.awt.image.BufferedImage
+            properties:
+              name: properties
+              modifiers:
+              - package
+              type:
+                basic: Hashtable
+                full: java.util.Hashtable<?, ?>
+            theConsumer:
+              name: theConsumer
+              modifiers:
+              - private
+              type:
+                basic: ImageConsumer
+                full: java.awt.image.ImageConsumer
+            width:
+              name: width
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: BufferedImage
+                full: java.awt.image.BufferedImage
+            - name: arg1
+              type:
+                basic: Hashtable
+                full: java.util.Hashtable<?, ?>
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: BufferedImage
+                full: java.awt.image.BufferedImage
+          methods:
+          - name: addConsumer
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ImageConsumer
+                full: java.awt.image.ImageConsumer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isConsumer
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ImageConsumer
+                full: java.awt.image.ImageConsumer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: produce
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeConsumer
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ImageConsumer
+                full: java.awt.image.ImageConsumer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: requestTopDownLeftRightResend
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ImageConsumer
+                full: java.awt.image.ImageConsumer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendPixels
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: startProduction
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ImageConsumer
+                full: java.awt.image.ImageConsumer
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,191 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.pathfind:
+        CollideWithObstaclesPoly.ChunkDataZ:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            nodes:
+              name: nodes
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.pathfind.CollideWithObstaclesPoly$CCNode>
+            worldVehicleSeparate:
+              name: worldVehicleSeparate
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.pathfind.CollideWithObstaclesPoly$CCObstacle>
+            worldVehicleUnion:
+              name: worldVehicleUnion
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.pathfind.CollideWithObstaclesPoly$CCObstacle>
+            z:
+              name: z
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            pool:
+              name: pool
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ObjectPool
+                full: zombie.popman.ObjectPool<zombie.pathfind.CollideWithObstaclesPoly$ChunkDataZ>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clipperToObstacles
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Clipper
+                full: zombie.vehicles.Clipper
+            - name: arg1
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg2
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.pathfind.CollideWithObstaclesPoly$CCObstacle>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getEdgesFromBuffer
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: CollideWithObstaclesPoly.CCObstacle
+                full: zombie.pathfind.CollideWithObstaclesPoly$CCObstacle
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: init
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: CollideWithObstaclesPoly
+                full: zombie.pathfind.CollideWithObstaclesPoly
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isCollideN
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCollideW
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOpenDoorAt
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean

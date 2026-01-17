@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.util.enums:
+        IOEnum:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: getBits
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getByteId
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: byte
+                full: byte

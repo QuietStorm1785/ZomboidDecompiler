@@ -1,0 +1,54 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        HaloTextHelper.ColorRGB:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            a:
+              name: a
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            b:
+              name: b
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            g:
+              name: g
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            r:
+              name: r
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: r
+              type:
+                basic: int
+                full: int
+            - name: g
+              type:
+                basic: int
+                full: int
+            - name: b
+              type:
+                basic: int
+                full: int

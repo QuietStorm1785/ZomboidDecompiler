@@ -1,0 +1,187 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.network.packets.character:
+        AnimalPacket:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            alertedID:
+              name: alertedID
+              modifiers:
+              - public
+              type:
+                basic: short
+                full: short
+            breed:
+              name: breed
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            direction:
+              name: direction
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            existanceType:
+              name: existanceType
+              modifiers:
+              - public
+              type:
+                basic: AnimalPacket.Existences
+                full: zombie.network.packets.character.AnimalPacket$Existences
+            health:
+              name: health
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            hutchNestBox:
+              name: hutchNestBox
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+            hutchPosition:
+              name: hutchPosition
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+            idle:
+              name: idle
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            pfbData:
+              name: pfbData
+              modifiers:
+              - public
+              type:
+                basic: PFBData
+                full: zombie.network.fields.character.PFBData
+            realDirection:
+              name: realDirection
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+            realX:
+              name: realX
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            realY:
+              name: realY
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            realZ:
+              name: realZ
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            stateVariables:
+              name: stateVariables
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            type:
+              name: type
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            vehicleID:
+              name: vehicleID
+              modifiers:
+              - public
+              type:
+                basic: VehicleID
+                full: zombie.network.fields.VehicleID
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            z:
+              name: z
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void
+          - name: write
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void

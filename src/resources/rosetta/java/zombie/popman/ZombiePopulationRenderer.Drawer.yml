@@ -1,0 +1,29 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.popman:
+        ZombiePopulationRenderer.Drawer:
+          extends: zombie.core.textures.TextureDraw$GenericDrawer
+          modifiers:
+          - package
+          - final
+          fields:
+            impl:
+              name: impl
+              modifiers:
+              - package
+              type:
+                basic: ZombiePopulationRenderer.DrawerImpl
+                full: zombie.popman.ZombiePopulationRenderer$DrawerImpl
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

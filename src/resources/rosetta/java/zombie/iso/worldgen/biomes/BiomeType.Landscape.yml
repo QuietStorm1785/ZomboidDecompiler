@@ -1,0 +1,84 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.worldgen.biomes:
+        BiomeType.Landscape:
+          extends: java.lang.Enum<zombie.iso.worldgen.biomes.BiomeType$Landscape>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: BiomeType.Landscape
+                full: zombie.iso.worldgen.biomes.BiomeType$Landscape[]
+            FOREST:
+              name: FOREST
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BiomeType.Landscape
+                full: zombie.iso.worldgen.biomes.BiomeType$Landscape
+            LIGHT_FOREST:
+              name: LIGHT_FOREST
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BiomeType.Landscape
+                full: zombie.iso.worldgen.biomes.BiomeType$Landscape
+            NONE:
+              name: NONE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BiomeType.Landscape
+                full: zombie.iso.worldgen.biomes.BiomeType$Landscape
+            PLAIN:
+              name: PLAIN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BiomeType.Landscape
+                full: zombie.iso.worldgen.biomes.BiomeType$Landscape
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: BiomeType.Landscape
+                full: zombie.iso.worldgen.biomes.BiomeType$Landscape[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: BiomeType.Landscape
+                full: zombie.iso.worldgen.biomes.BiomeType$Landscape
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: BiomeType.Landscape
+                full: zombie.iso.worldgen.biomes.BiomeType$Landscape[]

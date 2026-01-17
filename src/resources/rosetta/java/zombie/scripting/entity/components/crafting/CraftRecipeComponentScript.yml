@@ -1,0 +1,132 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.entity.components.crafting:
+        CraftRecipeComponentScript:
+          extends: zombie.scripting.entity.ComponentScript
+          modifiers:
+          - public
+          fields:
+            craftRecipe:
+              name: craftRecipe
+              modifiers:
+              - private
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: InitLoadPP
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnLoadedAfterLua
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnPostWorldDictionaryInit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnScriptsLoaded
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptLoadMode
+                full: zombie.scripting.ScriptLoadMode
+            return:
+              type:
+                basic: void
+                full: void
+          - name: PreReload
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyFrom
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentScript
+                full: zombie.scripting.entity.ComponentScript
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getBuildCategory
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getCraftRecipe
+            modifiers:
+            - public
+            return:
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+          - name: getIconTexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+          - name: getTranslationName
+            modifiers:
+            - private
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isoMasterOnly
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptParser.Block
+                full: zombie.scripting.ScriptParser$Block
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

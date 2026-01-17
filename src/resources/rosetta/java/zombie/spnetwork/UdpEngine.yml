@@ -1,0 +1,40 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.spnetwork:
+        UdpEngine:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: Receive
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Send
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void

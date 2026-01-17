@@ -1,0 +1,493 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.chat:
+        ChatMessage:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            author:
+              name: author
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            chat:
+              name: chat
+              modifiers:
+              - private
+              type:
+                basic: ChatBase
+                full: zombie.chat.ChatBase
+            customColor:
+              name: customColor
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            customTag:
+              name: customTag
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            datetime:
+              name: datetime
+              modifiers:
+              - private
+              type:
+                basic: LocalDateTime
+                full: java.time.LocalDateTime
+            fromDiscord:
+              name: fromDiscord
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            local:
+              name: local
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            overHeadSpeech:
+              name: overHeadSpeech
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            radioChannel:
+              name: radioChannel
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            scramble:
+              name: scramble
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            serverAlert:
+              name: serverAlert
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            serverAuthor:
+              name: serverAuthor
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            shouldAttractZombies:
+              name: shouldAttractZombies
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            showInChat:
+              name: showInChat
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            text:
+              name: text
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            textColor:
+              name: textColor
+              modifiers:
+              - private
+              type:
+                basic: Color
+                full: zombie.core.Color
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: chat
+              type:
+                basic: ChatBase
+                full: zombie.chat.ChatBase
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+          - modifiers:
+            - public
+            parameters:
+            - name: chat
+              type:
+                basic: ChatBase
+                full: zombie.chat.ChatBase
+            - name: datetime
+              type:
+                basic: LocalDateTime
+                full: java.time.LocalDateTime
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: clone
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ChatMessage
+                full: zombie.chat.ChatMessage
+          - name: clone
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getAuthor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getChat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ChatBase
+                full: zombie.chat.ChatBase
+          - name: getChatID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getCustomTag
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDatetime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: LocalDateTime
+                full: java.time.LocalDateTime
+          - name: getDatetimeStr
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRadioChannel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getText
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getTextColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Color
+                full: zombie.core.Color
+          - name: getTextWithPrefix
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getTextWithReplacedParentheses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isCustomColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFromDiscord
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLocal
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOverHeadSpeech
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isScramble
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isServerAlert
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isServerAuthor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isShouldAttractZombies
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isShowAuthor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isShowInChat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: makeFromDiscord
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: pack
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAuthor
+            modifiers:
+            - public
+            parameters:
+            - name: author
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCustomTag
+            modifiers:
+            - public
+            parameters:
+            - name: customTag
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDatetime
+            modifiers:
+            - public
+            parameters:
+            - name: datetime
+              type:
+                basic: LocalDateTime
+                full: java.time.LocalDateTime
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLocal
+            modifiers:
+            - public
+            parameters:
+            - name: local
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOverHeadSpeech
+            modifiers:
+            - public
+            parameters:
+            - name: overHeadSpeech
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRadioChannel
+            modifiers:
+            - public
+            parameters:
+            - name: radioChannel
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setScrambledText
+            modifiers:
+            - public
+            parameters:
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setServerAlert
+            modifiers:
+            - public
+            parameters:
+            - name: serverAlert
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setServerAuthor
+            modifiers:
+            - public
+            parameters:
+            - name: serverAuthor
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setShouldAttractZombies
+            modifiers:
+            - public
+            parameters:
+            - name: shouldAttractZombies
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setShowInChat
+            modifiers:
+            - public
+            parameters:
+            - name: showInChat
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setText
+            modifiers:
+            - public
+            parameters:
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTextColor
+            modifiers:
+            - public
+            parameters:
+            - name: textColor
+              type:
+                basic: Color
+                full: zombie.core.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

@@ -1,0 +1,313 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel:
+        Vector3:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          notes: Created by LEMMYATI on 03/01/14.
+          fields:
+            x:
+              name: x
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            y:
+              name: y
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            z:
+              name: z
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+          - modifiers:
+            - public
+            parameters:
+            - name: vec
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          methods:
+          - name: add
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: add
+            modifiers:
+            - public
+            parameters:
+            - name: vec
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: cross
+            modifiers:
+            - public
+            parameters:
+            - name: vec
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: dot
+            modifiers:
+            - public
+            parameters:
+            - name: vec
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+            return:
+              type:
+                basic: float
+                full: float
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: length
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: mul
+            modifiers:
+            - public
+            parameters:
+            - name: f
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: mul
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: mul
+            modifiers:
+            - public
+            parameters:
+            - name: vec
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: normalize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: vec
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: sub
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: sub
+            modifiers:
+            - public
+            parameters:
+            - name: vec
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: x
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: x
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: y
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: y
+            modifiers:
+            - public
+            parameters:
+            - name: y
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3
+          - name: z
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: z
+            modifiers:
+            - public
+            parameters:
+            - name: z
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: Vector3
+                full: zombie.core.skinnedmodel.Vector3

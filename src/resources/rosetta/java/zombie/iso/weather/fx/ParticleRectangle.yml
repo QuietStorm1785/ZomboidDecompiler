@@ -1,0 +1,148 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.weather.fx:
+        ParticleRectangle:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: TurboTuTone.
+          fields:
+            DEBUG_BOUNDS:
+              name: DEBUG_BOUNDS
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            height:
+              name: height
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            id:
+              name: id
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            particles:
+              name: particles
+              modifiers:
+              - private
+              type:
+                basic: WeatherParticle
+                full: zombie.iso.weather.fx.WeatherParticle[]
+            particlesReqUpdCnt:
+              name: particlesReqUpdCnt
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            particlesToRender:
+              name: particlesToRender
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            width:
+              name: width
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: Reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetParticles
+            modifiers:
+            - public
+            parameters:
+            - name: parts
+              type:
+                basic: WeatherParticle
+                full: zombie.iso.weather.fx.WeatherParticle[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetParticlesStrength
+            modifiers:
+            - public
+            parameters:
+            - name: str
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getHeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getWidth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: requiresUpdate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: update
+            modifiers:
+            - public
+            parameters:
+            - name: delta
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

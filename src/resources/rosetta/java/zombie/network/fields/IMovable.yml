@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.network.fields:
+        IMovable:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: getSpeed
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: isVehicle
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean

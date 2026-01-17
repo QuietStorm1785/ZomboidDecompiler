@@ -1,0 +1,121 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie:
+        SoundManager.AmbientSoundEffect:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            clip:
+              name: clip
+              modifiers:
+              - public
+              type:
+                basic: GameSoundClip
+                full: zombie.audio.GameSoundClip
+            effectiveVolume:
+              name: effectiveVolume
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            eventInstance:
+              name: eventInstance
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            gain:
+              name: gain
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            name:
+              name: name
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isPlaying
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: pause
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setName
+            modifiers:
+            - public
+            parameters:
+            - name: choice
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVolume
+            modifiers:
+            - public
+            parameters:
+            - name: volume
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: start
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stop
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

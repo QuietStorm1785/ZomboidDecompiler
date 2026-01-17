@@ -1,0 +1,108 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.gameStates:
+        LoadingQueueState:
+          extends: zombie.gameStates.GameState
+          modifiers:
+          - public
+          fields:
+            bAButtonDown:
+              name: bAButtonDown
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+          staticFields:
+            bCancel:
+              name: bCancel
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            bDone:
+              name: bDone
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            placeInQueue:
+              name: placeInQueue
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            ui:
+              name: ui
+              modifiers:
+              - private
+              - static
+              type:
+                basic: LoadingQueueUI
+                full: zombie.ui.LoadingQueueUI
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: enter
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: redirectState
+            modifiers:
+            - public
+            return:
+              type:
+                basic: GameState
+                full: zombie.gameStates.GameState
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: GameStateMachine.StateAction
+                full: zombie.gameStates.GameStateMachine$StateAction
+          staticMethods:
+          - name: onConnectionImmediate
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onPlaceInQueue
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.lang.Object>
+            return:
+              type:
+                basic: void
+                full: void

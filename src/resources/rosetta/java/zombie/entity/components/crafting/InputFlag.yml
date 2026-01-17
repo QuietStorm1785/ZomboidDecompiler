@@ -1,0 +1,572 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.crafting:
+        InputFlag:
+          extends: java.lang.Enum<zombie.entity.components.crafting.InputFlag>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag[]
+            AllowDestroyedItem:
+              name: AllowDestroyedItem
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            AllowFavorite:
+              name: AllowFavorite
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            AllowFrozenItem:
+              name: AllowFrozenItem
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            AllowRottenItem:
+              name: AllowRottenItem
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            AutomationOnly:
+              name: AutomationOnly
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            CanBeDoneFromFloor:
+              name: CanBeDoneFromFloor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            CopyClothing:
+              name: CopyClothing
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            DontInheritCondition:
+              name: DontInheritCondition
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            DontPutBack:
+              name: DontPutBack
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            DontRecordInput:
+              name: DontRecordInput
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            DontReplace:
+              name: DontReplace
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            FakeOutput:
+              name: FakeOutput
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            HandcraftOnly:
+              name: HandcraftOnly
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            HasNoUses:
+              name: HasNoUses
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            HasOneUse:
+              name: HasOneUse
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritAmmunition:
+              name: InheritAmmunition
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritColor:
+              name: InheritColor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritCondition:
+              name: InheritCondition
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritCooked:
+              name: InheritCooked
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritFavorite:
+              name: InheritFavorite
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritFood:
+              name: InheritFood
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritFoodAge:
+              name: InheritFoodAge
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritFreezingTime:
+              name: InheritFreezingTime
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritHeadCondition:
+              name: InheritHeadCondition
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritModelVariation:
+              name: InheritModelVariation
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritName:
+              name: InheritName
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritSharpness:
+              name: InheritSharpness
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritUses:
+              name: InheritUses
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritUsesAndEmpty:
+              name: InheritUsesAndEmpty
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            InheritWeight:
+              name: InheritWeight
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsBlunt:
+              name: IsBlunt
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsCookedFoodItem:
+              name: IsCookedFoodItem
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsDamaged:
+              name: IsDamaged
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsEmpty:
+              name: IsEmpty
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsEmptyContainer:
+              name: IsEmptyContainer
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsExclusive:
+              name: IsExclusive
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsFull:
+              name: IsFull
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsHeadPart:
+              name: IsHeadPart
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsNotDull:
+              name: IsNotDull
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsNotSealed:
+              name: IsNotSealed
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsNotWorn:
+              name: IsNotWorn
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsSealed:
+              name: IsSealed
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsSharpenable:
+              name: IsSharpenable
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsUncookedFoodItem:
+              name: IsUncookedFoodItem
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsUndamaged:
+              name: IsUndamaged
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsWholeFoodItem:
+              name: IsWholeFoodItem
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            IsWorn:
+              name: IsWorn
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            ItemCount:
+              name: ItemCount
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            ItemIsEnergy:
+              name: ItemIsEnergy
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            ItemIsFluid:
+              name: ItemIsFluid
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            ItemIsUses:
+              name: ItemIsUses
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            MayDegrade:
+              name: MayDegrade
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            MayDegradeHeavy:
+              name: MayDegradeHeavy
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            MayDegradeLight:
+              name: MayDegradeLight
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            MayDegradeVeryLight:
+              name: MayDegradeVeryLight
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            NoBrokenItems:
+              name: NoBrokenItems
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            NotEmpty:
+              name: NotEmpty
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            NotFull:
+              name: NotFull
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            Prop1:
+              name: Prop1
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            Prop2:
+              name: Prop2
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            RecordInput:
+              name: RecordInput
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            ResearchInput:
+              name: ResearchInput
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            SharpnessCheck:
+              name: SharpnessCheck
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            ToolLeft:
+              name: ToolLeft
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+            ToolRight:
+              name: ToolRight
+              modifiers:
+              - public
+              - static
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: InputFlag
+                full: zombie.entity.components.crafting.InputFlag[]

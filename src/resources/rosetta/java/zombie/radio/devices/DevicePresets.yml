@@ -1,0 +1,229 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.radio.devices:
+        DevicePresets:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          notes: Turrubo
+          fields:
+            maxPresets:
+              name: maxPresets
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            presets:
+              name: presets
+              modifiers:
+              - protected
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.radio.devices.PresetEntry>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: addPreset
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: frequency
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearPresets
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clone
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getMaxPresets
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getPresetFreq
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getPresetName
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPresets
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.radio.devices.PresetEntry>
+          - name: getPresetsLua
+            modifiers:
+            - public
+            return:
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: input
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            - name: net
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removePreset
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: output
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: net
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxPresets
+            modifiers:
+            - public
+            parameters:
+            - name: m
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPreset
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: frequency
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPresetFreq
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            - name: frequency
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPresetName
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPresets
+            modifiers:
+            - public
+            parameters:
+            - name: p
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.radio.devices.PresetEntry>
+            return:
+              type:
+                basic: void
+                full: void

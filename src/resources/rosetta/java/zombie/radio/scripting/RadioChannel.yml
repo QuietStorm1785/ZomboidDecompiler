@@ -1,0 +1,493 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.radio.scripting:
+        RadioChannel:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: Turbo
+          fields:
+            GUID:
+              name: GUID
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            airCounter:
+              name: airCounter
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            airCounterMultiplier:
+              name: airCounterMultiplier
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            airingBroadcast:
+              name: airingBroadcast
+              modifiers:
+              - private
+              type:
+                basic: RadioBroadCast
+                full: zombie.radio.scripting.RadioBroadCast
+            category:
+              name: category
+              modifiers:
+              - private
+              type:
+                basic: ChannelCategory
+                full: zombie.radio.ChannelCategory
+            currentScript:
+              name: currentScript
+              modifiers:
+              - private
+              type:
+                basic: RadioScript
+                full: zombie.radio.scripting.RadioScript
+            currentScriptLoop:
+              name: currentScriptLoop
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            currentScriptMaxLoops:
+              name: currentScriptMaxLoops
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            frequency:
+              name: frequency
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            isTimeSynced:
+              name: isTimeSynced
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isTv:
+              name: isTv
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            lastAiredLine:
+              name: lastAiredLine
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            lastBroadcastID:
+              name: lastBroadcastID
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            louisvilleObfuscate:
+              name: louisvilleObfuscate
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            maxmod:
+              name: maxmod
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            minmod:
+              name: minmod
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            name:
+              name: name
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            playerIsListening:
+              name: playerIsListening
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            radioData:
+              name: radioData
+              modifiers:
+              - private
+              type:
+                basic: RadioData
+                full: zombie.radio.RadioData
+            scripts:
+              name: scripts
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.radio.scripting.RadioScript>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: n
+              type:
+                basic: String
+                full: java.lang.String
+            - name: freq
+              type:
+                basic: int
+                full: int
+            - name: c
+              type:
+                basic: ChannelCategory
+                full: zombie.radio.ChannelCategory
+          - modifiers:
+            - public
+            parameters:
+            - name: n
+              type:
+                basic: String
+                full: java.lang.String
+            - name: freq
+              type:
+                basic: int
+                full: int
+            - name: c
+              type:
+                basic: ChannelCategory
+                full: zombie.radio.ChannelCategory
+            - name: guid
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: AddRadioScript
+            modifiers:
+            - public
+            parameters:
+            - name: script
+              type:
+                basic: RadioScript
+                full: zombie.radio.scripting.RadioScript
+            return:
+              type:
+                basic: void
+                full: void
+          - name: GetCategory
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ChannelCategory
+                full: zombie.radio.ChannelCategory
+          - name: GetFrequency
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GetName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: GetPlayerIsListening
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsTv
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: LoadAiringBroadcast
+            modifiers:
+            - public
+            parameters:
+            - name: guid
+              type:
+                basic: String
+                full: java.lang.String
+            - name: line
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetPlayerIsListening
+            modifiers:
+            - public
+            parameters:
+            - name: isListening
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UpdateScripts
+            modifiers:
+            - public
+            parameters:
+            - name: timestamp
+              type:
+                basic: int
+                full: int
+            - name: day
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAirCounterMultiplier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAiringBroadcast
+            modifiers:
+            - public
+            return:
+              type:
+                basic: RadioBroadCast
+                full: zombie.radio.scripting.RadioBroadCast
+          - name: getCurrentScript
+            modifiers:
+            - public
+            return:
+              type:
+                basic: RadioScript
+                full: zombie.radio.scripting.RadioScript
+          - name: getCurrentScriptLoop
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getCurrentScriptMaxLoops
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getGUID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getLastAiredLine
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getLastBroadcastID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getNextScript
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getRadioData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: RadioData
+                full: zombie.radio.RadioData
+          - name: getRadioScript
+            modifiers:
+            - public
+            parameters:
+            - name: script
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: RadioScript
+                full: zombie.radio.scripting.RadioScript
+          - name: isTimeSynced
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isVanilla
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setActiveScript
+            modifiers:
+            - public
+            parameters:
+            - name: scriptName
+              type:
+                basic: String
+                full: java.lang.String
+            - name: day
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setActiveScript
+            modifiers:
+            - public
+            parameters:
+            - name: scriptName
+              type:
+                basic: String
+                full: java.lang.String
+            - name: day
+              type:
+                basic: int
+                full: int
+            - name: loop
+              type:
+                basic: int
+                full: int
+            - name: maxloops
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setActiveScriptNull
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAirCounterMultiplier
+            modifiers:
+            - public
+            parameters:
+            - name: airCounterMultiplier
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAiringBroadcast
+            modifiers:
+            - public
+            parameters:
+            - name: bc
+              type:
+                basic: RadioBroadCast
+                full: zombie.radio.scripting.RadioBroadCast
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLouisvilleObfuscate
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRadioData
+            modifiers:
+            - public
+            parameters:
+            - name: radioData
+              type:
+                basic: RadioData
+                full: zombie.radio.RadioData
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTimeSynced
+            modifiers:
+            - public
+            parameters:
+            - name: isTimeSynced
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,65 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.audio.parameters:
+        ParameterEquippedBaggageContainer:
+          extends: zombie.audio.FMODLocalParameter
+          modifiers:
+          - public
+          - final
+          fields:
+            character:
+              name: character
+              modifiers:
+              - private
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            containerType:
+              name: containerType
+              modifiers:
+              - private
+              type:
+                basic: ParameterEquippedBaggageContainer.ContainerType
+                full: zombie.audio.parameters.ParameterEquippedBaggageContainer$ContainerType
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: character
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          methods:
+          - name: calculateCurrentValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: setContainerType
+            modifiers:
+            - public
+            parameters:
+            - name: containerType
+              type:
+                basic: ParameterEquippedBaggageContainer.ContainerType
+                full: zombie.audio.parameters.ParameterEquippedBaggageContainer$ContainerType
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setContainerType
+            modifiers:
+            - public
+            parameters:
+            - name: containerType
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void

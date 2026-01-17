@@ -1,0 +1,130 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.audio:
+        FMODParameter:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          fields:
+            m_currentValue:
+              name: m_currentValue
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            m_name:
+              name: m_name
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            m_parameterDescription:
+              name: m_parameterDescription
+              modifiers:
+              - private
+              type:
+                basic: FMOD_STUDIO_PARAMETER_DESCRIPTION
+                full: fmod.fmod.FMOD_STUDIO_PARAMETER_DESCRIPTION
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: calculateCurrentValue
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCurrentValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getParameterDescription
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FMOD_STUDIO_PARAMETER_DESCRIPTION
+                full: fmod.fmod.FMOD_STUDIO_PARAMETER_DESCRIPTION
+          - name: getParameterID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FMOD_STUDIO_PARAMETER_ID
+                full: fmod.fmod.FMOD_STUDIO_PARAMETER_ID
+          - name: resetToDefault
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCurrentValue
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: value
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: startEventInstance
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: eventInstance
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stopEventInstance
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: eventInstance
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

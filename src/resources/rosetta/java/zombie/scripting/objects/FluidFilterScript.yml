@@ -1,0 +1,266 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.objects:
+        FluidFilterScript:
+          extends: zombie.scripting.objects.BaseScriptObject
+          modifiers:
+          - public
+          fields:
+            anonymous:
+              name: anonymous
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            categories:
+              name: categories
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            filter:
+              name: filter
+              modifiers:
+              - private
+              type:
+                basic: FluidFilter
+                full: zombie.entity.components.fluids.FluidFilter
+            fluids:
+              name: fluids
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            isWhitelist:
+              name: isWhitelist
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            name:
+              name: name
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+          methods:
+          - name: Load
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LoadAnonymousFromBlock
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptParser.Block
+                full: zombie.scripting.ScriptParser$Block
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LoadAnonymousSingleFluid
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnLoadedAfterLua
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnPostWorldDictionaryInit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnScriptsLoaded
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptLoadMode
+                full: zombie.scripting.ScriptLoadMode
+            return:
+              type:
+                basic: void
+                full: void
+          - name: PreReload
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addCategory
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addFluid
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FluidFilterScript
+                full: zombie.scripting.objects.FluidFilterScript
+          - name: createFilter
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FluidFilter
+                full: zombie.entity.components.fluids.FluidFilter
+          - name: getFilter
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FluidFilter
+                full: zombie.entity.components.fluids.FluidFilter
+          - name: getVersion
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IVersionHash
+                full: zombie.world.scripts.IVersionHash
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isSingleFluid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: parseInputString
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: readBlock
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptParser.Block
+                full: zombie.scripting.ScriptParser$Block
+            return:
+              type:
+                basic: void
+                full: void
+          - name: readFilterBlock
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptParser.Block
+                full: zombie.scripting.ScriptParser$Block
+            - name: arg1
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: GetAnonymous
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: FluidFilterScript
+                full: zombie.scripting.objects.FluidFilterScript
+          - name: GetAnonymous
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: FluidFilterScript
+                full: zombie.scripting.objects.FluidFilterScript

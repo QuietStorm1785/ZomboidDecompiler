@@ -1,0 +1,512 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.objects:
+        EvolvedRecipe:
+          extends: zombie.scripting.objects.BaseScriptObject
+          modifiers:
+          - public
+          - final
+          fields:
+            DisplayName:
+              name: DisplayName
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            addIngredientIfCooked:
+              name: addIngredientIfCooked
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            addIngredientSound:
+              name: addIngredientSound
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            allowFrozenItem:
+              name: allowFrozenItem
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            baseItem:
+              name: baseItem
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            canAddSpicesEmpty:
+              name: canAddSpicesEmpty
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            cookable:
+              name: cookable
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            hidden:
+              name: hidden
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            itemsList:
+              name: itemsList
+              modifiers:
+              - public
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.scripting.objects.ItemRecipe>
+            maxItems:
+              name: maxItems
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            minimumWater:
+              name: minimumWater
+              modifiers:
+              - public
+              type:
+                basic: Float
+                full: java.lang.Float
+            name:
+              name: name
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            originalname:
+              name: originalname
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            resultItem:
+              name: resultItem
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            template:
+              name: template
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+          staticFields:
+            DECIMAL_FORMAT:
+              name: DECIMAL_FORMAT
+              modifiers:
+              - private
+              - static
+              type:
+                basic: DecimalFormat
+                full: java.text.DecimalFormat
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: Load
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Load
+            modifiers:
+            - private
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: strArray
+              type:
+                basic: String
+                full: java.lang.String[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addItem
+            modifiers:
+            - public
+            parameters:
+            - name: baseItem
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: usedItem
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: addPoison
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg2
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkItemCanBeUse
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+            - name: arg5
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkUniqueRecipe
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAddIngredientSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getBaseItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFullResultItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getItemRecipe
+            modifiers:
+            - public
+            parameters:
+            - name: usedItem
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: ItemRecipe
+                full: zombie.scripting.objects.ItemRecipe
+          - name: getItemsCanBeUse
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: baseItem
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: containers
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.ItemContainer>
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+          - name: getItemsList
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.scripting.objects.ItemRecipe>
+          - name: getMaxItems
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMinimumWater
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getOriginalname
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPossibleItems
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.ItemRecipe>
+          - name: getResultItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getUntranslatedName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: hasMinimumWater
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAllowFrozenItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCookable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isHidden
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isResultItem
+            modifiers:
+            - public
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSpiceAdded
+            modifiers:
+            - public
+            parameters:
+            - name: baseItem
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: spiceItem
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: needToBeCooked
+            modifiers:
+            - public
+            parameters:
+            - name: itemTest
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setAllowFrozenItem
+            modifiers:
+            - public
+            parameters:
+            - name: allow
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsHidden
+            modifiers:
+            - public
+            parameters:
+            - name: hide
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: useSpice
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Food
+                full: zombie.inventory.types.Food
+            - name: arg1
+              type:
+                basic: Food
+                full: zombie.inventory.types.Food
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: useSpice
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: Food
+                full: zombie.inventory.types.Food
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void

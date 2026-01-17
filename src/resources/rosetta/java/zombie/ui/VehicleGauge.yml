@@ -1,0 +1,128 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ui:
+        VehicleGauge:
+          extends: zombie.ui.UIElement
+          modifiers:
+          - public
+          - final
+          fields:
+            maxAngle:
+              name: maxAngle
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            minAngle:
+              name: minAngle
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            needleWidth:
+              name: needleWidth
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            needleX:
+              name: needleX
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            needleY:
+              name: needleY
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            texture:
+              name: texture
+              modifiers:
+              - protected
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            value:
+              name: value
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: texture
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: needleX
+              type:
+                basic: int
+                full: int
+            - name: needleY
+              type:
+                basic: int
+                full: int
+            - name: minAngle
+              type:
+                basic: float
+                full: float
+            - name: maxAngle
+              type:
+                basic: float
+                full: float
+          methods:
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNeedleWidth
+            modifiers:
+            - public
+            parameters:
+            - name: newSize
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTexture
+            modifiers:
+            - public
+            parameters:
+            - name: newText
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValue
+            modifiers:
+            - public
+            parameters:
+            - name: value
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,137 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.model:
+        WorldItemAtlas.Atlas:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          - final
+          fields:
+            ENTRY_HGT:
+              name: ENTRY_HGT
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            ENTRY_WID:
+              name: ENTRY_WID
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            EntryList:
+              name: EntryList
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.skinnedmodel.model.WorldItemAtlas$AtlasEntry>
+            clear:
+              name: clear
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            depth:
+              name: depth
+              modifiers:
+              - public
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            tex:
+              name: tex
+              modifiers:
+              - public
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            this$0:
+              name: this$0
+              modifiers:
+              - package
+              type:
+                basic: WorldItemAtlas
+                full: zombie.core.skinnedmodel.model.WorldItemAtlas
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WorldItemAtlas
+                full: zombie.core.skinnedmodel.model.WorldItemAtlas
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: Reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addEntry
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WorldItemAtlas.AtlasEntry
+                full: zombie.core.skinnedmodel.model.WorldItemAtlas$AtlasEntry
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: WorldItemAtlas.AtlasEntry
+                full: zombie.core.skinnedmodel.model.WorldItemAtlas$AtlasEntry
+          - name: isFull
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: lambda$Reset$0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: lambda$Reset$1
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void

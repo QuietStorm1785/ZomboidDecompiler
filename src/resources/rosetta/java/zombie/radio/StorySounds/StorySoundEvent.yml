@@ -1,0 +1,75 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.radio.StorySounds:
+        StorySoundEvent:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          notes: Turbo
+          fields:
+            eventSounds:
+              name: eventSounds
+              modifiers:
+              - protected
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.radio.StorySounds.EventSound>
+            name:
+              name: name
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: getEventSounds
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.radio.StorySounds.EventSound>
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: setEventSounds
+            modifiers:
+            - public
+            parameters:
+            - name: eventSounds
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.radio.StorySounds.EventSound>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setName
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void

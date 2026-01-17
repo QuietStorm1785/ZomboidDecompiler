@@ -1,0 +1,56 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Character.DebugOG.AnimateOG:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          - final
+          fields:
+            AlwaysAimTwist:
+              name: AlwaysAimTwist
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            DeferredRotationOnly:
+              name: DeferredRotationOnly
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            KeepAtOrigin:
+              name: KeepAtOrigin
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            NoBoneMasks:
+              name: NoBoneMasks
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            NoBoneTwists:
+              name: NoBoneTwists
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            ZeroCounterRotationBone:
+              name: ZeroCounterRotationBone
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+          constructors:
+          - modifiers:
+            - public

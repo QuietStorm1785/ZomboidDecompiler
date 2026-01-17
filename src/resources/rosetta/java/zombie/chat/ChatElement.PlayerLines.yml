@@ -1,0 +1,98 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.chat:
+        ChatElement.PlayerLines:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            chatLines:
+              name: chatLines
+              modifiers:
+              - protected
+              type:
+                basic: TextDrawObject
+                full: zombie.ui.TextDrawObject[]
+            ignoreRadioLines:
+              name: ignoreRadioLines
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            lineDisplayTime:
+              name: lineDisplayTime
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            renderX:
+              name: renderX
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            renderY:
+              name: renderY
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            this$0:
+              name: this$0
+              modifiers:
+              - package
+              type:
+                basic: ChatElement
+                full: zombie.chat.ChatElement
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ChatElement
+                full: zombie.chat.ChatElement
+            - name: arg1
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: clear
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getNewLineObject
+            modifiers:
+            - public
+            return:
+              type:
+                basic: TextDrawObject
+                full: zombie.ui.TextDrawObject
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxCharsPerLine
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void

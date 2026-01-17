@@ -1,0 +1,36 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      fmod.fmod:
+        FMODVoice:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            priority:
+              name: priority
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            sound:
+              name: sound
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: float
+                full: float

@@ -1,0 +1,51 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt.peer:
+        ContainerPeer:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: beginLayout
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: beginValidate
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: endLayout
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: endValidate
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getInsets
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Insets
+                full: java.awt.Insets

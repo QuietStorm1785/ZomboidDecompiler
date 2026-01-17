@@ -1,0 +1,124 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.weather:
+        WeatherPeriod.StrLerpVal:
+          extends: java.lang.Enum<zombie.iso.weather.WeatherPeriod$StrLerpVal>
+          modifiers:
+          - public
+          - final
+          fields:
+            value:
+              name: value
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: WeatherPeriod.StrLerpVal
+                full: zombie.iso.weather.WeatherPeriod$StrLerpVal[]
+            Entry:
+              name: Entry
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeatherPeriod.StrLerpVal
+                full: zombie.iso.weather.WeatherPeriod$StrLerpVal
+            NextTarget:
+              name: NextTarget
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeatherPeriod.StrLerpVal
+                full: zombie.iso.weather.WeatherPeriod$StrLerpVal
+            None:
+              name: None
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeatherPeriod.StrLerpVal
+                full: zombie.iso.weather.WeatherPeriod$StrLerpVal
+            Target:
+              name: Target
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeatherPeriod.StrLerpVal
+                full: zombie.iso.weather.WeatherPeriod$StrLerpVal
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: getValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: WeatherPeriod.StrLerpVal
+                full: zombie.iso.weather.WeatherPeriod$StrLerpVal[]
+          - name: fromValue
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: WeatherPeriod.StrLerpVal
+                full: zombie.iso.weather.WeatherPeriod$StrLerpVal
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: WeatherPeriod.StrLerpVal
+                full: zombie.iso.weather.WeatherPeriod$StrLerpVal
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: WeatherPeriod.StrLerpVal
+                full: zombie.iso.weather.WeatherPeriod$StrLerpVal[]
+              notes: an array containing the constants of this enum class, in the
+                order they are declared
+            notes: 'Returns an array containing the constants of this enum class,
+              in
+
+              the order they are declared.'

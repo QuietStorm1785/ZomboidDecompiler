@@ -1,0 +1,183 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.network.fields.hit:
+        AttackVars:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            bAimAtFloor:
+              name: bAimAtFloor
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bCloseKill:
+              name: bCloseKill
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bDoGrapple:
+              name: bDoGrapple
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bDoShove:
+              name: bDoShove
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            isBareHeadsWeapon:
+              name: isBareHeadsWeapon
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isProcessed:
+              name: isProcessed
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            recoilDelay:
+              name: recoilDelay
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            targetDistance:
+              name: targetDistance
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            targetOnGround:
+              name: targetOnGround
+              modifiers:
+              - public
+              type:
+                basic: MovingObject
+                full: zombie.network.fields.MovingObject
+            targetStanding:
+              name: targetStanding
+              modifiers:
+              - public
+              type:
+                basic: MovingObject
+                full: zombie.network.fields.MovingObject
+            targetsProne:
+              name: targetsProne
+              modifiers:
+              - public
+              type:
+                basic: PZArrayList
+                full: zombie.util.list.PZArrayList<zombie.network.fields.hit.HitInfo>
+            targetsStanding:
+              name: targetsStanding
+              modifiers:
+              - public
+              type:
+                basic: PZArrayList
+                full: zombie.util.list.PZArrayList<zombie.network.fields.hit.HitInfo>
+            useChargeDelta:
+              name: useChargeDelta
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copy
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AttackVars
+                full: zombie.network.fields.hit.AttackVars
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getPacketSizeBytes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getWeapon
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoLivingCharacter
+                full: zombie.characters.IsoLivingCharacter
+            return:
+              type:
+                basic: HandWeapon
+                full: zombie.inventory.types.HandWeapon
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWeapon
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: HandWeapon
+                full: zombie.inventory.types.HandWeapon
+            return:
+              type:
+                basic: void
+                full: void
+          - name: write
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void

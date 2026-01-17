@@ -1,0 +1,4052 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.inventory.types:
+        HandWeapon:
+          extends: zombie.inventory.InventoryItem
+          modifiers:
+          - public
+          - final
+          fields:
+            AimingPerkCritModifier:
+              name: AimingPerkCritModifier
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            AimingPerkHitChanceModifier:
+              name: AimingPerkHitChanceModifier
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            AimingPerkMinAngleModifier:
+              name: AimingPerkMinAngleModifier
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            AimingPerkRangeModifier:
+              name: AimingPerkRangeModifier
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            AlwaysKnockdown:
+              name: AlwaysKnockdown
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            CantAttackWithLowestEndurance:
+              name: CantAttackWithLowestEndurance
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            ClipSize:
+              name: ClipSize
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            ConditionLowerChance:
+              name: ConditionLowerChance
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            CriticalChance:
+              name: CriticalChance
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            DoorDamage:
+              name: DoorDamage
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            EnduranceMod:
+              name: EnduranceMod
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            HitAngleMod:
+              name: HitAngleMod
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            HitChance:
+              name: HitChance
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            IdleAnim:
+              name: IdleAnim
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            KnockdownMod:
+              name: KnockdownMod
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            MultipleHitConditionAffected:
+              name: MultipleHitConditionAffected
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            PiercingBullets:
+              name: PiercingBullets
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            ProjectileCount:
+              name: ProjectileCount
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            RecoilDelay:
+              name: RecoilDelay
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            RunAnim:
+              name: RunAnim
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            SplatSize:
+              name: SplatSize
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            SubCategory:
+              name: SubCategory
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            WeaponLength:
+              name: WeaponLength
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            activeLight:
+              name: activeLight
+              modifiers:
+              - private
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            activeSight:
+              name: activeSight
+              modifiers:
+              - public
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            aimingMod:
+              name: aimingMod
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            aimingTime:
+              name: aimingTime
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            ammoBox:
+              name: ammoBox
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            ammoPerShoot:
+              name: ammoPerShoot
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            angleFalloff:
+              name: angleFalloff
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            attachmentList:
+              name: attachmentList
+              modifiers:
+              - private
+              type:
+                basic: List
+                full: java.util.List<zombie.inventory.types.WeaponPart>
+            attachments:
+              name: attachments
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.inventory.types.WeaponPart>
+            attackTargetSquare:
+              name: attackTargetSquare
+              modifiers:
+              - private
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            bCanBarricade:
+              name: bCanBarricade
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            bIsAimedFirearm:
+              name: bIsAimedFirearm
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bIsAimedHandWeapon:
+              name: bIsAimedHandWeapon
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bSpentRoundChambered:
+              name: bSpentRoundChambered
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            baseSpeed:
+              name: baseSpeed
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            bloodLevel:
+              name: bloodLevel
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            bulletName:
+              name: bulletName
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            bulletOutSound:
+              name: bulletOutSound
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            canBePlaced:
+              name: canBePlaced
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            canBeReused:
+              name: canBeReused
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            clickSound:
+              name: clickSound
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            containsClip:
+              name: containsClip
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            criticalDamageMultiplier:
+              name: criticalDamageMultiplier
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            cyclicRateMultiplier:
+              name: cyclicRateMultiplier
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            damageCategory:
+              name: damageCategory
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            damageMakeHole:
+              name: damageMakeHole
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            doSwingBeforeImpact:
+              name: doSwingBeforeImpact
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            doorHitSound:
+              name: doorHitSound
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            explosionDuration:
+              name: explosionDuration
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            explosionPower:
+              name: explosionPower
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            explosionRange:
+              name: explosionRange
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            explosionTimer:
+              name: explosionTimer
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            extraDamage:
+              name: extraDamage
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            fireMode:
+              name: fireMode
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            fireModePossibilities:
+              name: fireModePossibilities
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            fireRange:
+              name: fireRange
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            fireStartingChance:
+              name: fireStartingChance
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            fireStartingEnergy:
+              name: fireStartingEnergy
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            haveChamber:
+              name: haveChamber
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            hitFloorSound:
+              name: hitFloorSound
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            hitSound:
+              name: hitSound
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            impactSound:
+              name: impactSound
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            insertAllBulletsReload:
+              name: insertAllBulletsReload
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isExplosive:
+              name: isExplosive
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isJammed:
+              name: isJammed
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isMelee:
+              name: isMelee
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            jamGunChance:
+              name: jamGunChance
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            knockBackOnNoDeath:
+              name: knockBackOnNoDeath
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            magazineType:
+              name: magazineType
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            maxAngle:
+              name: maxAngle
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            maxDamage:
+              name: maxDamage
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            maxHitCount:
+              name: maxHitCount
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            maxRange:
+              name: maxRange
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            maxSightRange:
+              name: maxSightRange
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            minAngle:
+              name: minAngle
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            minDamage:
+              name: minDamage
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            minRange:
+              name: minRange
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            minRangeRanged:
+              name: minRangeRanged
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            minSightRange:
+              name: minSightRange
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            minimumSwingTime:
+              name: minimumSwingTime
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            modelWeaponPart:
+              name: modelWeaponPart
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.ModelWeaponPart>
+            muzzleFlashModelKey:
+              name: muzzleFlashModelKey
+              modifiers:
+              - private
+              type:
+                basic: ModelKey
+                full: zombie.scripting.objects.ModelKey
+            noiseFactor:
+              name: noiseFactor
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            noiseRange:
+              name: noiseRange
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            originalWeaponSprite:
+              name: originalWeaponSprite
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            otherBoost:
+              name: otherBoost
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            otherHandRequire:
+              name: otherHandRequire
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            otherHandUse:
+              name: otherHandUse
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            physicsObject:
+              name: physicsObject
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            placedSprite:
+              name: placedSprite
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            projectileSpread:
+              name: projectileSpread
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            projectileWeightCenter:
+              name: projectileWeightCenter
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            pushBackMod:
+              name: pushBackMod
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            rackAfterShoot:
+              name: rackAfterShoot
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            rackSound:
+              name: rackSound
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            rangeFalloff:
+              name: rangeFalloff
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            ranged:
+              name: ranged
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            reloadTime:
+              name: reloadTime
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            roundChambered:
+              name: roundChambered
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            sensorRange:
+              name: sensorRange
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            shareEndurance:
+              name: shareEndurance
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            shellFallSound:
+              name: shellFallSound
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            smokeRange:
+              name: smokeRange
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            soundGain:
+              name: soundGain
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            soundRadius:
+              name: soundRadius
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            soundVolume:
+              name: soundVolume
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            spentRoundCount:
+              name: spentRoundCount
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            splatBloodOnNoDeath:
+              name: splatBloodOnNoDeath
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            splatNumber:
+              name: splatNumber
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            swingSound:
+              name: swingSound
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            swingTime:
+              name: swingTime
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            toHitModifier:
+              name: toHitModifier
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            treeDamage:
+              name: treeDamage
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            triggerExplosionTimer:
+              name: triggerExplosionTimer
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            useEndurance:
+              name: useEndurance
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            useSelf:
+              name: useSelf
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            weaponCategories:
+              name: weaponCategories
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.WeaponCategory>
+            weaponReloadType:
+              name: weaponReloadType
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            weaponSprite:
+              name: weaponSprite
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            weaponSpritesByIndex:
+              name: weaponSpritesByIndex
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          staticFields:
+            MAX_ATTACHMENT_COUNT:
+              name: MAX_ATTACHMENT_COUNT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            magazineComparator:
+              name: magazineComparator
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Comparator
+                full: java.util.Comparator<zombie.inventory.InventoryItem>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: module
+              type:
+                basic: String
+                full: java.lang.String
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: itemType
+              type:
+                basic: String
+                full: java.lang.String
+            - name: texName
+              type:
+                basic: String
+                full: java.lang.String
+          - modifiers:
+            - public
+            parameters:
+            - name: module
+              type:
+                basic: String
+                full: java.lang.String
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: itemType
+              type:
+                basic: String
+                full: java.lang.String
+            - name: item
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+          methods:
+          - name: DoTooltip
+            modifiers:
+            - public
+            parameters:
+            - name: tooltipUI
+              type:
+                basic: ObjectTooltip
+                full: zombie.ui.ObjectTooltip
+            - name: layout
+              type:
+                basic: ObjectTooltip.Layout
+                full: zombie.ui.ObjectTooltip$Layout
+            return:
+              type:
+                basic: void
+                full: void
+          - name: IsWeapon
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addPartToList
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.types.WeaponPart>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: attachWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: part
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            return:
+              type:
+                basic: void
+                full: void
+          - name: attachWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: part
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            - name: doChange
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: attachWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            return:
+              type:
+                basic: void
+                full: void
+          - name: attachWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: canAttackPierceTransparentWall
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: HandWeapon
+                full: zombie.inventory.types.HandWeapon
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canBeActivated
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canBePlaced
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canBeReused
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canEmitLight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: checkJam
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: checkUnJam
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: clearAllWeaponParts
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cycleFireMode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: detachAllWeaponParts
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: detachWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: part
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            return:
+              type:
+                basic: void
+                full: void
+          - name: detachWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: detachWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            return:
+              type:
+                basic: void
+                full: void
+          - name: detachWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getActiveLight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+          - name: getActiveSight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+          - name: getActualWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the ActualWeight
+          - name: getAimingMod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAimingPerkCritModifier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getAimingPerkHitChanceModifier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAimingPerkMinAngleModifier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAimingPerkRangeModifier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAimingTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getAllWeaponParts
+            modifiers:
+            - public
+            return:
+              type:
+                basic: List
+                full: java.util.List<zombie.inventory.types.WeaponPart>
+          - name: getAllWeaponParts
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: List
+                full: java.util.List<zombie.inventory.types.WeaponPart>
+            return:
+              type:
+                basic: List
+                full: java.util.List<zombie.inventory.types.WeaponPart>
+          - name: getAmmoBox
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAmmoPerShoot
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getAttackTargetSquare
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: getBaseSpeed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBestMagazine
+            modifiers:
+            - public
+            parameters:
+            - name: owner
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            notes: Get the magazine with the most bullets in it
+          - name: getBloodLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBulletOutSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getCategory
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getClickSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getClipSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getConditionLowerChance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the ConditionLowerChance
+          - name: getContentsWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCriticalChance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCriticalDamageMultiplier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCyclicRateMultiplier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDamageCategory
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDamageMod
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDetachableWeaponParts
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: List
+                full: java.util.List<zombie.inventory.types.WeaponPart>
+          - name: getDoSwingBeforeImpact
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the doSwingBeforeImpact
+          - name: getDoorDamage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the DoorDamage
+          - name: getDoorHitSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the doorHitSound
+          - name: getEffectiveWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getEjectAmmoSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getEjectAmmoStartSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getEjectAmmoStopSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getEnduranceMod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the EnduranceMod
+          - name: getExplosionDuration
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getExplosionPower
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getExplosionRange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getExplosionTimer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getExtraDamage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFatigueMod
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFireMode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFireModePossibilities
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getFireRange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getFireStartingChance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getFireStartingEnergy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getHitChance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getHitFloorSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getImpactSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the impactSound
+          - name: getInsertAmmoSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getInsertAmmoStartSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getInsertAmmoStopSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getJamGunChance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getKnockbackMod
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getKnockdownMod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the KnockdownMod
+          - name: getLightDistance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getLightStrength
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getLowLightBonus
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMagazineType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getMaxAngle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the maxAngle
+          - name: getMaxDamage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the maxDamage
+          - name: getMaxHitCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the maxHitCount
+          - name: getMaxRange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the maxRange
+          - name: getMaxRange
+            modifiers:
+            - public
+            parameters:
+            - name: owner
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaxSightRange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaxSightRange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMinAngle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the minAngle
+          - name: getMinDamage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the minDamage
+          - name: getMinRange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the minRange
+          - name: getMinRangeRanged
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMinSightRange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMinSightRange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMinimumSwingTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the minimumSwingTime
+          - name: getModelWeaponPart
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.ModelWeaponPart>
+          - name: getMuzzleFlashModelKey
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ModelKey
+                full: zombie.scripting.objects.ModelKey
+          - name: getNoiseDuration
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getNoiseFactor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the noiseFactor
+          - name: getNoiseRange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getOriginalWeaponSprite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getOtherBoost
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the otherBoost
+          - name: getOtherHandRequire
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the otherHandRequire
+          - name: getPerk
+            modifiers:
+            - public
+            return:
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+          - name: getPhysicsObject
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the physicsObject
+          - name: getPlacedSprite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getProjectileCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getProjectileSpread
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getProjectileWeightCenter
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getPushBackMod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the pushBackMod
+          - name: getRackSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRangeMod
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getRecoilDelay
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getRecoilDelay
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getReloadTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getRunAnim
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSaveType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getScore
+            modifiers:
+            - public
+            parameters:
+            - name: desc
+              type:
+                basic: SurvivorDesc
+                full: zombie.characters.SurvivorDesc
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSensorRange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getShellFallSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSmokeRange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSoundGain
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSoundRadius
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the soundRadius
+          - name: getSoundVolume
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the soundVolume
+          - name: getSpeedMod
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSpentRoundCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSplatNumber
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the splatNumber
+          - name: getSplatSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getStaggerBackTimeMod
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getStaticModel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getStaticModelException
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getStopPower
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSubCategory
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSwingSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the swingSound
+          - name: getSwingTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the swingTime
+          - name: getToHitMod
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getToHitModifier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the toHitModifier
+          - name: getTorchDot
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTreeDamage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getTriggerExplosionTimer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getWeaponCategories
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.WeaponCategory>
+          - name: getWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            return:
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+          - name: getWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+          - name: getWeaponPartWeightModifier
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWeaponPartWeightModifier
+            modifiers:
+            - public
+            parameters:
+            - name: part
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWeaponReloadType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getWeaponSkill
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getWeaponSprite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the weaponSprite
+          - name: getWeaponSpritesByIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the Weight
+          - name: getZombieHitSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: haveChamber
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: inheritAmmunition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: HandWeapon
+                full: zombie.inventory.types.HandWeapon
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isAimed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAimedFirearm
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAimedHandWeapon
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAlwaysKnockdown
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the AlwaysKnockdown
+          - name: isAngleFalloff
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the angleFalloff
+          - name: isBareHands
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCanBarracade
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the bCanBarracade
+          - name: isCantAttackWithLowestEndurance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the CantAttackWithLowestEndurance
+          - name: isContainsClip
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDamageMakeHole
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isExplosive
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInsertAllBulletsReload
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInstantExplosion
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isJammed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isKnockBackOnNoDeath
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the knockBackOnNoDeath
+          - name: isManuallyRemoveSpentRounds
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMelee
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMultipleHitConditionAffected
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the MultipleHitConditionAffected
+          - name: isOtherHandUse
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the otherHandUse
+          - name: isPiercingBullets
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRackAfterShoot
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRangeFalloff
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the rangeFalloff
+          - name: isRanged
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the ranged
+          - name: isReloadable
+            modifiers:
+            - public
+            parameters:
+            - name: owner
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRoundChambered
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSelectFire
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isShareEndurance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the shareEndurance
+          - name: isSpentRoundChambered
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSplatBloodOnNoDeath
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the splatBloodOnNoDeath
+          - name: isTorchCone
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUseEndurance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the useEndurance
+          - name: isUseSelf
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the useSelf
+          - name: lambda$getDetachableWeaponParts$0
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: input
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: muscleStrainMod
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: float
+                full: float
+          - name: needToBeClosedOnceReload
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: randomizeBullets
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: randomizeFirearmAsLoot
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: output
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: net
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setActivated
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setActiveLight
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setActiveSight
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAimingPerkCritModifier
+            modifiers:
+            - public
+            parameters:
+            - name: aimingPerkCritModifier
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAimingPerkHitChanceModifier
+            modifiers:
+            - public
+            parameters:
+            - name: aimingPerkHitChanceModifier
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAimingPerkMinAngleModifier
+            modifiers:
+            - public
+            parameters:
+            - name: aimingPerkMinAngleModifier
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAimingPerkRangeModifier
+            modifiers:
+            - public
+            parameters:
+            - name: aimingPerkRangeModifier
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAimingTime
+            modifiers:
+            - public
+            parameters:
+            - name: aimingTime
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAlwaysKnockdown
+            modifiers:
+            - public
+            parameters:
+            - name: AlwaysKnockdown
+              type:
+                basic: boolean
+                full: boolean
+              notes: the AlwaysKnockdown to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAmmoBox
+            modifiers:
+            - public
+            parameters:
+            - name: ammoBox
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAmmoPerShoot
+            modifiers:
+            - public
+            parameters:
+            - name: ammoPerShoot
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAngleFalloff
+            modifiers:
+            - public
+            parameters:
+            - name: angleFalloff
+              type:
+                basic: boolean
+                full: boolean
+              notes: the angleFalloff to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAttackTargetSquare
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBaseSpeed
+            modifiers:
+            - public
+            parameters:
+            - name: baseSpeed
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBloodLevel
+            modifiers:
+            - public
+            parameters:
+            - name: level
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBulletOutSound
+            modifiers:
+            - public
+            parameters:
+            - name: bulletOutSound
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCanBarracade
+            modifiers:
+            - public
+            parameters:
+            - name: bCanBarracade
+              type:
+                basic: boolean
+                full: boolean
+              notes: the bCanBarracade to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCanBePlaced
+            modifiers:
+            - public
+            parameters:
+            - name: canBePlaced
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCanBeReused
+            modifiers:
+            - public
+            parameters:
+            - name: canBeReused
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCantAttackWithLowestEndurance
+            modifiers:
+            - public
+            parameters:
+            - name: CantAttackWithLowestEndurance
+              type:
+                basic: boolean
+                full: boolean
+              notes: the CantAttackWithLowestEndurance to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setClickSound
+            modifiers:
+            - public
+            parameters:
+            - name: clickSound
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setClipSize
+            modifiers:
+            - public
+            parameters:
+            - name: capacity
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setConditionLowerChance
+            modifiers:
+            - public
+            parameters:
+            - name: ConditionLowerChance
+              type:
+                basic: int
+                full: int
+              notes: the ConditionLowerChance to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setContainsClip
+            modifiers:
+            - public
+            parameters:
+            - name: containsClip
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCriticalChance
+            modifiers:
+            - public
+            parameters:
+            - name: criticalChance
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCriticalDamageMultiplier
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCyclicRateMultiplier
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDamageCategory
+            modifiers:
+            - public
+            parameters:
+            - name: damageCategory
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDamageMakeHole
+            modifiers:
+            - public
+            parameters:
+            - name: damageMakeHole
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDoSwingBeforeImpact
+            modifiers:
+            - public
+            parameters:
+            - name: doSwingBeforeImpact
+              type:
+                basic: float
+                full: float
+              notes: the doSwingBeforeImpact to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDoorDamage
+            modifiers:
+            - public
+            parameters:
+            - name: DoorDamage
+              type:
+                basic: int
+                full: int
+              notes: the DoorDamage to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDoorHitSound
+            modifiers:
+            - public
+            parameters:
+            - name: doorHitSound
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the doorHitSound to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEnduranceMod
+            modifiers:
+            - public
+            parameters:
+            - name: EnduranceMod
+              type:
+                basic: float
+                full: float
+              notes: the EnduranceMod to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setExplosionDuration
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setExplosionPower
+            modifiers:
+            - public
+            parameters:
+            - name: explosionPower
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setExplosionRange
+            modifiers:
+            - public
+            parameters:
+            - name: explosionRange
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setExplosionTimer
+            modifiers:
+            - public
+            parameters:
+            - name: explosionTimer
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setExtraDamage
+            modifiers:
+            - public
+            parameters:
+            - name: extraDamage
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFireMode
+            modifiers:
+            - public
+            parameters:
+            - name: fireMode
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFireModePossibilities
+            modifiers:
+            - public
+            parameters:
+            - name: fireModePossibilities
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFireRange
+            modifiers:
+            - public
+            parameters:
+            - name: fireRange
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFireStartingChance
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFireStartingEnergy
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHaveChamber
+            modifiers:
+            - public
+            parameters:
+            - name: haveChamber
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHitChance
+            modifiers:
+            - public
+            parameters:
+            - name: hitChance
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHitFloorSound
+            modifiers:
+            - public
+            parameters:
+            - name: hitFloorSound
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setImpactSound
+            modifiers:
+            - public
+            parameters:
+            - name: impactSound
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the impactSound to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInsertAllBulletsReload
+            modifiers:
+            - public
+            parameters:
+            - name: insertAllBulletsReload
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setJamGunChance
+            modifiers:
+            - public
+            parameters:
+            - name: jamGunChance
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setJammed
+            modifiers:
+            - public
+            parameters:
+            - name: isJammed
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setKnockBackOnNoDeath
+            modifiers:
+            - public
+            parameters:
+            - name: knockBackOnNoDeath
+              type:
+                basic: boolean
+                full: boolean
+              notes: the knockBackOnNoDeath to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setKnockdownMod
+            modifiers:
+            - public
+            parameters:
+            - name: KnockdownMod
+              type:
+                basic: float
+                full: float
+              notes: the KnockdownMod to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMagazineType
+            modifiers:
+            - public
+            parameters:
+            - name: magazineType
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxAngle
+            modifiers:
+            - public
+            parameters:
+            - name: maxAngle
+              type:
+                basic: float
+                full: float
+              notes: the maxAngle to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxDamage
+            modifiers:
+            - public
+            parameters:
+            - name: maxDamage
+              type:
+                basic: float
+                full: float
+              notes: the maxDamage to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxHitCount
+            modifiers:
+            - public
+            parameters:
+            - name: maxHitCount
+              type:
+                basic: int
+                full: int
+              notes: the maxHitCount to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxRange
+            modifiers:
+            - public
+            parameters:
+            - name: maxRange
+              type:
+                basic: float
+                full: float
+              notes: the maxRange to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxSightRange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMinAngle
+            modifiers:
+            - public
+            parameters:
+            - name: minAngle
+              type:
+                basic: float
+                full: float
+              notes: the minAngle to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMinDamage
+            modifiers:
+            - public
+            parameters:
+            - name: minDamage
+              type:
+                basic: float
+                full: float
+              notes: the minDamage to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMinRange
+            modifiers:
+            - public
+            parameters:
+            - name: minRange
+              type:
+                basic: float
+                full: float
+              notes: the minRange to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMinRangeRanged
+            modifiers:
+            - public
+            parameters:
+            - name: minRangeRanged
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMinSightRange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMinimumSwingTime
+            modifiers:
+            - public
+            parameters:
+            - name: minimumSwingTime
+              type:
+                basic: float
+                full: float
+              notes: the minimumSwingTime to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setModelWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: modelWeaponPart
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.ModelWeaponPart>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMultipleHitConditionAffected
+            modifiers:
+            - public
+            parameters:
+            - name: MultipleHitConditionAffected
+              type:
+                basic: boolean
+                full: boolean
+              notes: the MultipleHitConditionAffected to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMuzzleFlashModelKey
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ModelKey
+                full: zombie.scripting.objects.ModelKey
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNoiseFactor
+            modifiers:
+            - public
+            parameters:
+            - name: noiseFactor
+              type:
+                basic: float
+                full: float
+              notes: the noiseFactor to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNoiseRange
+            modifiers:
+            - public
+            parameters:
+            - name: noiseRange
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOriginalWeaponSprite
+            modifiers:
+            - public
+            parameters:
+            - name: originalWeaponSprite
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOtherBoost
+            modifiers:
+            - public
+            parameters:
+            - name: otherBoost
+              type:
+                basic: float
+                full: float
+              notes: the otherBoost to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOtherHandRequire
+            modifiers:
+            - public
+            parameters:
+            - name: otherHandRequire
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the otherHandRequire to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOtherHandUse
+            modifiers:
+            - public
+            parameters:
+            - name: otherHandUse
+              type:
+                basic: boolean
+                full: boolean
+              notes: the otherHandUse to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPhysicsObject
+            modifiers:
+            - public
+            parameters:
+            - name: physicsObject
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the physicsObject to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPiercingBullets
+            modifiers:
+            - public
+            parameters:
+            - name: piercingBullets
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPlacedSprite
+            modifiers:
+            - public
+            parameters:
+            - name: placedSprite
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setProjectileCount
+            modifiers:
+            - public
+            parameters:
+            - name: count
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setProjectileSpread
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setProjectileWeightCenter
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPushBackMod
+            modifiers:
+            - public
+            parameters:
+            - name: pushBackMod
+              type:
+                basic: float
+                full: float
+              notes: the pushBackMod to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRackAfterShoot
+            modifiers:
+            - public
+            parameters:
+            - name: rackAfterShoot
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRackSound
+            modifiers:
+            - public
+            parameters:
+            - name: rackSound
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRangeFalloff
+            modifiers:
+            - public
+            parameters:
+            - name: rangeFalloff
+              type:
+                basic: boolean
+                full: boolean
+              notes: the rangeFalloff to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRanged
+            modifiers:
+            - public
+            parameters:
+            - name: ranged
+              type:
+                basic: boolean
+                full: boolean
+              notes: the ranged to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRecoilDelay
+            modifiers:
+            - public
+            parameters:
+            - name: recoilDelay
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setReloadTime
+            modifiers:
+            - public
+            parameters:
+            - name: reloadTime
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRoundChambered
+            modifiers:
+            - public
+            parameters:
+            - name: roundChambered
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setScriptItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSensorRange
+            modifiers:
+            - public
+            parameters:
+            - name: sensorRange
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setShareEndurance
+            modifiers:
+            - public
+            parameters:
+            - name: shareEndurance
+              type:
+                basic: boolean
+                full: boolean
+              notes: the shareEndurance to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setShellFallSound
+            modifiers:
+            - public
+            parameters:
+            - name: shellFallSound
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSmokeRange
+            modifiers:
+            - public
+            parameters:
+            - name: smokeRange
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSoundGain
+            modifiers:
+            - public
+            parameters:
+            - name: soundGain
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSoundRadius
+            modifiers:
+            - public
+            parameters:
+            - name: soundRadius
+              type:
+                basic: int
+                full: int
+              notes: the soundRadius to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSoundVolume
+            modifiers:
+            - public
+            parameters:
+            - name: soundVolume
+              type:
+                basic: int
+                full: int
+              notes: the soundVolume to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSpentRoundChambered
+            modifiers:
+            - public
+            parameters:
+            - name: roundChambered
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSpentRoundCount
+            modifiers:
+            - public
+            parameters:
+            - name: count
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSplatBloodOnNoDeath
+            modifiers:
+            - public
+            parameters:
+            - name: splatBloodOnNoDeath
+              type:
+                basic: boolean
+                full: boolean
+              notes: the splatBloodOnNoDeath to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSplatNumber
+            modifiers:
+            - public
+            parameters:
+            - name: splatNumber
+              type:
+                basic: int
+                full: int
+              notes: the splatNumber to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSubCategory
+            modifiers:
+            - public
+            parameters:
+            - name: subcategory
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSwingSound
+            modifiers:
+            - public
+            parameters:
+            - name: swingSound
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the swingSound to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSwingTime
+            modifiers:
+            - public
+            parameters:
+            - name: swingTime
+              type:
+                basic: float
+                full: float
+              notes: the swingTime to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setToHitModifier
+            modifiers:
+            - public
+            parameters:
+            - name: toHitModifier
+              type:
+                basic: float
+                full: float
+              notes: the toHitModifier to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTreeDamage
+            modifiers:
+            - public
+            parameters:
+            - name: treeDamage
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTriggerExplosionTimer
+            modifiers:
+            - public
+            parameters:
+            - name: triggerExplosionTimer
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUseEndurance
+            modifiers:
+            - public
+            parameters:
+            - name: useEndurance
+              type:
+                basic: boolean
+                full: boolean
+              notes: the useEndurance to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUseSelf
+            modifiers:
+            - public
+            parameters:
+            - name: useSelf
+              type:
+                basic: boolean
+                full: boolean
+              notes: the useSelf to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWeaponCategories
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.WeaponCategory>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWeaponLength
+            modifiers:
+            - public
+            parameters:
+            - name: weaponLength
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWeaponPart
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            - name: part
+              type:
+                basic: WeaponPart
+                full: zombie.inventory.types.WeaponPart
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWeaponReloadType
+            modifiers:
+            - public
+            parameters:
+            - name: weaponReloadType
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWeaponSprite
+            modifiers:
+            - public
+            parameters:
+            - name: weaponSprite
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the weaponSprite to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWeaponSpritesByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setZombieHitSound
+            modifiers:
+            - public
+            parameters:
+            - name: hitSound
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: usesExternalMagazine
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean

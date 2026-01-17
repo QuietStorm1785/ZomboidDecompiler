@@ -1,0 +1,35 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Network:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          - final
+          fields:
+            Client:
+              name: Client
+              modifiers:
+              - public
+              type:
+                basic: Network.Client
+                full: zombie.debug.options.Network$Client
+            PublicServerUtil:
+              name: PublicServerUtil
+              modifiers:
+              - public
+              type:
+                basic: Network.PublicServerUtil
+                full: zombie.debug.options.Network$PublicServerUtil
+            Server:
+              name: Server
+              modifiers:
+              - public
+              type:
+                basic: Network.Server
+                full: zombie.debug.options.Network$Server
+          constructors:
+          - modifiers:
+            - public

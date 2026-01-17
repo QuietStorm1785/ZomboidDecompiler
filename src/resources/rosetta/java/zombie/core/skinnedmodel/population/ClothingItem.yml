@@ -1,0 +1,357 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.population:
+        ClothingItem:
+          extends: zombie.asset.Asset
+          modifiers:
+          - public
+          - final
+          fields:
+            m_AllowRandomHue:
+              name: m_AllowRandomHue
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            m_AllowRandomTint:
+              name: m_AllowRandomTint
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            m_AltFemaleModel:
+              name: m_AltFemaleModel
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_AltMaleModel:
+              name: m_AltMaleModel
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_AttachBone:
+              name: m_AttachBone
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_BaseTextures:
+              name: m_BaseTextures
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            m_DecalGroup:
+              name: m_DecalGroup
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_FemaleModel:
+              name: m_FemaleModel
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_GUID:
+              name: m_GUID
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_HatCategory:
+              name: m_HatCategory
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_MaleModel:
+              name: m_MaleModel
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_Masks:
+              name: m_Masks
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.Integer>
+            m_MasksFolder:
+              name: m_MasksFolder
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_Name:
+              name: m_Name
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_Shader:
+              name: m_Shader
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_SpawnWith:
+              name: m_SpawnWith
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            m_Static:
+              name: m_Static
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            m_UnderlayMasksFolder:
+              name: m_UnderlayMasksFolder
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            textureChoices:
+              name: textureChoices
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          staticFields:
+            ASSET_TYPE:
+              name: ASSET_TYPE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AssetType
+                full: zombie.asset.AssetType
+            s_masksFolderDefault:
+              name: s_masksFolderDefault
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: path
+              type:
+                basic: AssetPath
+                full: zombie.asset.AssetPath
+            - name: assetManager
+              type:
+                basic: AssetManager
+                full: zombie.asset.AssetManager
+          methods:
+          - name: GetATexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAllowRandomHue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getAllowRandomTint
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getAltFemaleModel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAltMaleModel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAltModel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getBaseTextures
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getCombinedMask
+            modifiers:
+            - public
+            parameters:
+            - name: in_out_mask
+              type:
+                basic: CharacterMask
+                full: zombie.core.skinnedmodel.model.CharacterMask
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getDecalGroup
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFemaleModel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getMaleModel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getModel
+            modifiers:
+            - public
+            parameters:
+            - name: female
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSpawnWith
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getTextureChoices
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AssetType
+                full: zombie.asset.AssetType
+          - name: hasModel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isHat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMask
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: tryGetCombinedMask
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: itemRef
+              type:
+                basic: ClothingItemReference
+                full: zombie.core.skinnedmodel.population.ClothingItemReference
+            - name: in_out_mask
+              type:
+                basic: CharacterMask
+                full: zombie.core.skinnedmodel.model.CharacterMask
+            return:
+              type:
+                basic: void
+                full: void
+          - name: tryGetCombinedMask
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: item
+              type:
+                basic: ClothingItem
+                full: zombie.core.skinnedmodel.population.ClothingItem
+            - name: in_out_mask
+              type:
+                basic: CharacterMask
+                full: zombie.core.skinnedmodel.model.CharacterMask
+            return:
+              type:
+                basic: void
+                full: void

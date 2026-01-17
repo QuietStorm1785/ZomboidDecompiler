@@ -1,0 +1,339 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.worldgen.biomes:
+        IBiome:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: bush
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.iso.worldgen.biomes.BiomeType$Bush>
+          - name: bush
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: BiomeType.Bush
+                full: zombie.iso.worldgen.biomes.BiomeType$Bush
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: bush
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.iso.worldgen.biomes.BiomeType$Bush>
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: generate
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getFeatures
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<zombie.iso.worldgen.biomes.FeatureType, java.util.List<zombie.iso.worldgen.biomes.Feature>>
+          - name: getReplacements
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, java.util.List<zombie.iso.worldgen.biomes.Feature>>
+          - name: grass
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Grass
+                full: zombie.iso.worldgen.biomes.Grass
+          - name: grass
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Grass
+                full: zombie.iso.worldgen.biomes.Grass
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: hygrometry
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.iso.worldgen.biomes.BiomeType$Hygrometry>
+          - name: hygrometry
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: BiomeType.Hygrometry
+                full: zombie.iso.worldgen.biomes.BiomeType$Hygrometry
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: hygrometry
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.iso.worldgen.biomes.BiomeType$Hygrometry>
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: landscape
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.iso.worldgen.biomes.BiomeType$Landscape>
+          - name: landscape
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: BiomeType.Landscape
+                full: zombie.iso.worldgen.biomes.BiomeType$Landscape
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: landscape
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.iso.worldgen.biomes.BiomeType$Landscape>
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: name
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: oreLevel
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.iso.worldgen.biomes.BiomeType$OreLevel>
+          - name: oreLevel
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: BiomeType.OreLevel
+                full: zombie.iso.worldgen.biomes.BiomeType$OreLevel
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: oreLevel
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.iso.worldgen.biomes.BiomeType$OreLevel>
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: parent
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: placements
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<zombie.iso.worldgen.biomes.FeatureType, java.util.List<java.lang.String>>
+          - name: placements
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Map
+                full: java.util.Map<zombie.iso.worldgen.biomes.FeatureType, java.util.List<java.lang.String>>
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: plant
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.iso.worldgen.biomes.BiomeType$Plant>
+          - name: plant
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: BiomeType.Plant
+                full: zombie.iso.worldgen.biomes.BiomeType$Plant
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: plant
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.iso.worldgen.biomes.BiomeType$Plant>
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: protected_
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+          - name: protected_
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: temperature
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.iso.worldgen.biomes.BiomeType$Temperature>
+          - name: temperature
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: BiomeType.Temperature
+                full: zombie.iso.worldgen.biomes.BiomeType$Temperature
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: temperature
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.iso.worldgen.biomes.BiomeType$Temperature>
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome
+          - name: zombies
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: zombies
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: IBiome
+                full: zombie.iso.worldgen.biomes.IBiome

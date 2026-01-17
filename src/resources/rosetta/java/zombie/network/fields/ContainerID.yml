@@ -1,0 +1,331 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.network.fields:
+        ContainerID:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            container:
+              name: container
+              modifiers:
+              - package
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            containerIndex:
+              name: containerIndex
+              modifiers:
+              - package
+              type:
+                basic: short
+                full: short
+            containerType:
+              name: containerType
+              modifiers:
+              - public
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType
+            index:
+              name: index
+              modifiers:
+              - package
+              type:
+                basic: short
+                full: short
+            object:
+              name: object
+              modifiers:
+              - package
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            playerID:
+              name: playerID
+              modifiers:
+              - public
+              type:
+                basic: PlayerID
+                full: zombie.network.fields.character.PlayerID
+            vid:
+              name: vid
+              modifiers:
+              - package
+              type:
+                basic: short
+                full: short
+            worldItemID:
+              name: worldItemID
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            z:
+              name: z
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: copy
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ContainerID
+                full: zombie.network.fields.ContainerID
+            return:
+              type:
+                basic: void
+                full: void
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: findObject
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getContainer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+          - name: getContainerType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType
+          - name: getObject
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: getPart
+            modifiers:
+            - public
+            return:
+              type:
+                basic: VehiclePart
+                full: zombie.vehicles.VehiclePart
+          - name: getVehicle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: BaseVehicle
+                full: zombie.vehicles.BaseVehicle
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isContainerTheSame
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            - name: arg1
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFloor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            - name: arg1
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInventoryContainer
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            - name: arg1
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setObject
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            - name: arg1
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            - name: arg2
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setObjectInVehicle
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            - name: arg1
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            - name: arg2
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: arg3
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: write
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: write
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void

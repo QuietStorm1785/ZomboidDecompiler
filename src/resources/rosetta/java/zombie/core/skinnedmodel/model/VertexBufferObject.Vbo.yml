@@ -1,0 +1,56 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.model:
+        VertexBufferObject.Vbo:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            EboID:
+              name: EboID
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            FaceDataOnly:
+              name: FaceDataOnly
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            NumElements:
+              name: NumElements
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            VboID:
+              name: VboID
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            VertexStride:
+              name: VertexStride
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            b:
+              name: b
+              modifiers:
+              - public
+              type:
+                basic: IntBuffer
+                full: java.nio.IntBuffer
+          constructors:
+          - modifiers:
+            - public

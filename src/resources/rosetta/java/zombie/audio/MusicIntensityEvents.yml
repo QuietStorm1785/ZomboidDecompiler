@@ -1,0 +1,119 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.audio:
+        MusicIntensityEvents:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            m_events:
+              name: m_events
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.audio.MusicIntensityEvent>
+            m_intensity:
+              name: m_intensity
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            m_updateTimeMS:
+              name: m_updateTimeMS
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: addEvent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: long
+                full: long
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: MusicIntensityEvent
+                full: zombie.audio.MusicIntensityEvent
+          - name: calculateIntensity
+            modifiers:
+            - private
+            return:
+              type:
+                basic: float
+                full: float
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: findEventById
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: MusicIntensityEvent
+                full: zombie.audio.MusicIntensityEvent
+          - name: getEventByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: MusicIntensityEvent
+                full: zombie.audio.MusicIntensityEvent
+          - name: getEventCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getIntensity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

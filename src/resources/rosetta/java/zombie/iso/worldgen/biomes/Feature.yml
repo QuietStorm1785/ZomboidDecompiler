@@ -1,0 +1,117 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.worldgen.biomes:
+        Feature:
+          extends: java.lang.Record
+          modifiers:
+          - public
+          - final
+          fields:
+            maxSize:
+              name: maxSize
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            minSize:
+              name: minSize
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            probability:
+              name: probability
+              modifiers:
+              - private
+              type:
+                basic: Probability
+                full: zombie.iso.worldgen.utils.probabilities.Probability
+            tileGroups:
+              name: tileGroups
+              modifiers:
+              - private
+              type:
+                basic: List
+                full: java.util.List<zombie.iso.worldgen.biomes.TileGroup>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: List
+                full: java.util.List<zombie.iso.worldgen.biomes.TileGroup>
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: Probability
+                full: zombie.iso.worldgen.utils.probabilities.Probability
+          methods:
+          - name: equals
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hashCode
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: int
+                full: int
+          - name: maxSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: minSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: probability
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Probability
+                full: zombie.iso.worldgen.utils.probabilities.Probability
+          - name: tileGroups
+            modifiers:
+            - public
+            return:
+              type:
+                basic: List
+                full: java.util.List<zombie.iso.worldgen.biomes.TileGroup>
+          - name: toString
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: String
+                full: java.lang.String

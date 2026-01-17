@@ -1,0 +1,219 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.crafting.recipe:
+        CraftRecipeData.InputScriptData:
+          extends: zombie.entity.components.crafting.recipe.CraftRecipeData$CacheData
+          modifiers:
+          - public
+          fields:
+            inputItems:
+              name: inputItems
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+            inputScript:
+              name: inputScript
+              modifiers:
+              - private
+              type:
+                basic: InputScript
+                full: zombie.scripting.entity.components.crafting.InputScript
+            recipeData:
+              name: recipeData
+              modifiers:
+              - private
+              type:
+                basic: CraftRecipeData
+                full: zombie.entity.components.crafting.recipe.CraftRecipeData
+          staticFields:
+            pool:
+              name: pool
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayDeque
+                full: java.util.ArrayDeque<zombie.entity.components.crafting.recipe.CraftRecipeData$InputScriptData>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: acceptsInputItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addInputItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getFirstInputItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: getInputItemCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getInputItemFluidUses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getInputItemUses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getInputScript
+            modifiers:
+            - public
+            return:
+              type:
+                basic: InputScript
+                full: zombie.scripting.entity.components.crafting.InputScript
+          - name: getLastInputItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: getManualInputItems
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getRecipeData
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: CraftRecipeData
+                full: zombie.entity.components.crafting.recipe.CraftRecipeData
+          - name: isCachedCanConsume
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDestroy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInputItemsSatisfied
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInputItemsSatisifiedToMaximum
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: removeInputItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: reset
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: verifyInputItems
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: Alloc
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipeData
+                full: zombie.entity.components.crafting.recipe.CraftRecipeData
+            - name: arg1
+              type:
+                basic: InputScript
+                full: zombie.scripting.entity.components.crafting.InputScript
+            return:
+              type:
+                basic: CraftRecipeData.InputScriptData
+                full: zombie.entity.components.crafting.recipe.CraftRecipeData$InputScriptData
+          - name: Release
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipeData.InputScriptData
+                full: zombie.entity.components.crafting.recipe.CraftRecipeData$InputScriptData
+            return:
+              type:
+                basic: void
+                full: void

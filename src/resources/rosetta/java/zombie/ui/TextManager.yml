@@ -1,0 +1,943 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ui:
+        TextManager:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            codeLarge:
+              name: codeLarge
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            codeMedium:
+              name: codeMedium
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            codeSmall:
+              name: codeSmall
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            codetext:
+              name: codetext
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            currentCodeFont:
+              name: currentCodeFont
+              modifiers:
+              - public
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            debugConsole:
+              name: debugConsole
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            enumToFont:
+              name: enumToFont
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont[]
+            font:
+              name: font
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            font2:
+              name: font2
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            font3:
+              name: font3
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            font4:
+              name: font4
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            handwritten:
+              name: handwritten
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            intro:
+              name: intro
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            main1:
+              name: main1
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            main2:
+              name: main2
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            normal:
+              name: normal
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont[]
+            todoTextList:
+              name: todoTextList
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.ui.TextManager$DeferedTextDraw>
+            zombiefontcredits1:
+              name: zombiefontcredits1
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            zombiefontcredits2:
+              name: zombiefontcredits2
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            zombienew1:
+              name: zombienew1
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            zombienew2:
+              name: zombienew2
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            zombienew3:
+              name: zombienew3
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            zomboidDialogue:
+              name: zomboidDialogue
+              modifiers:
+              - public
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+          staticFields:
+            instance:
+              name: instance
+              modifiers:
+              - public
+              - static
+              type:
+                basic: TextManager
+                full: zombie.ui.TextManager
+            sdfShader:
+              name: sdfShader
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SDFShader
+                full: zombie.core.opengl.SDFShader
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: CentreStringYOffset
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: DrawString
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawString
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawString
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: zoom
+              type:
+                basic: double
+                full: double
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawString
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawStringBBcode
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawStringCentre
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawStringCentre
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawStringCentreDefered
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawStringRight
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawStringRight
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawStringUntrimmed
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextFromGameWorld
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextObject
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: td
+              type:
+                basic: TextDrawObject
+                full: zombie.ui.TextDrawObject
+            return:
+              type:
+                basic: void
+                full: void
+          - name: GetDrawTextObject
+            modifiers:
+            - public
+            parameters:
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            - name: maxLineWidth
+              type:
+                basic: int
+                full: int
+            - name: restrictImages
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: TextDrawObject
+                full: zombie.ui.TextDrawObject
+          - name: Init
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: MeasureFont
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            return:
+              type:
+                basic: int
+                full: int
+          - name: MeasureStringX
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: MeasureStringY
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: MeasureStringY
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: int
+                full: int
+          - name: MeasureStringYOffset
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: MeasureStringYReal
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: WrapText
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: WrapText
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAllFonts
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.ui.UIFont>
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.ui.UIFont>
+          - name: getCurrentCodeFont
+            modifiers:
+            - public
+            return:
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+          - name: getFontFilePath
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFontFromEnum
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            return:
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+          - name: getFontHeight
+            modifiers:
+            - public
+            parameters:
+            - name: fontID
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getNormalFromFontSize
+            modifiers:
+            - public
+            parameters:
+            - name: points
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+          - name: isSdf
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUsingNonEnglishFonts
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          staticMethods:
+          - name: lambda$Init$1
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: lambda$getAllFonts$0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: arg1
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            return:
+              type:
+                basic: int
+                full: int

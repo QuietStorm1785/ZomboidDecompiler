@@ -1,0 +1,56 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        ILuaVariableSource:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "ILuaVariableSource\n  Provides the functions expected by LUA when\
+            \ dealing with objects of this type."
+          methods:
+          - name: ClearVariable
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: key
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: GetVariable
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: key
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: SetVariable
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: key
+              type:
+                basic: String
+                full: java.lang.String
+            - name: value
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void

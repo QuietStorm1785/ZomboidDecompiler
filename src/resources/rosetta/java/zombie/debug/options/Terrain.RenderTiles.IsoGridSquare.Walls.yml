@@ -1,0 +1,70 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Terrain.RenderTiles.IsoGridSquare.Walls:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          - final
+          fields:
+            AttachedSprites:
+              name: AttachedSprites
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            Lighting:
+              name: Lighting
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            LightingDebug:
+              name: LightingDebug
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            LightingOldDebug:
+              name: LightingOldDebug
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            N:
+              name: N
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            NW:
+              name: NW
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            Render:
+              name: Render
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            W:
+              name: W
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+          constructors:
+          - modifiers:
+            - public

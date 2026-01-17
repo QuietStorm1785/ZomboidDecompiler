@@ -1,0 +1,117 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util:
+        HashMap.Node:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            hash:
+              name: hash
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            key:
+              name: key
+              modifiers:
+              - package
+              type:
+                basic: K
+                full: K
+            next:
+              name: next
+              modifiers:
+              - package
+              type:
+                basic: HashMap.Node
+                full: java.util.HashMap$Node<K, V>
+            value:
+              name: value
+              modifiers:
+              - package
+              type:
+                basic: V
+                full: V
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: K
+                full: K
+            - name: arg2
+              type:
+                basic: V
+                full: V
+            - name: arg3
+              type:
+                basic: HashMap.Node
+                full: java.util.HashMap$Node<K, V>
+          methods:
+          - name: equals
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getKey
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: K
+                full: K
+          - name: getValue
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: V
+                full: V
+          - name: hashCode
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: int
+                full: int
+          - name: setValue
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: V
+                full: V
+            return:
+              type:
+                basic: V
+                full: V
+          - name: toString
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: String
+                full: java.lang.String

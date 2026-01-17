@@ -1,0 +1,378 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.network.packets:
+        BodyPartSyncPacket:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          staticFields:
+            BD_BodyDamage:
+              name: BD_BodyDamage
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_Health:
+              name: BD_Health
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_IsBleedingStemmed:
+              name: BD_IsBleedingStemmed
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_IsCauterized:
+              name: BD_IsCauterized
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_IsFakeInfected:
+              name: BD_IsFakeInfected
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_IsInfected:
+              name: BD_IsInfected
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_additionalPain:
+              name: BD_additionalPain
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_alcoholLevel:
+              name: BD_alcoholLevel
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_alcoholicBandage:
+              name: BD_alcoholicBandage
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_bandageLife:
+              name: BD_bandageLife
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_bandageType:
+              name: BD_bandageType
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_bandaged:
+              name: BD_bandaged
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_biteTime:
+              name: BD_biteTime
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_bitten:
+              name: BD_bitten
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_bleeding:
+              name: BD_bleeding
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_bleedingTime:
+              name: BD_bleedingTime
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_burnTime:
+              name: BD_burnTime
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_comfreyFactor:
+              name: BD_comfreyFactor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_cut:
+              name: BD_cut
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_cutTime:
+              name: BD_cutTime
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_deepWoundTime:
+              name: BD_deepWoundTime
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_deepWounded:
+              name: BD_deepWounded
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_fractureTime:
+              name: BD_fractureTime
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_garlicFactor:
+              name: BD_garlicFactor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_getBandageXp:
+              name: BD_getBandageXp
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_getSplintXp:
+              name: BD_getSplintXp
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_getStitchXp:
+              name: BD_getStitchXp
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_haveBullet:
+              name: BD_haveBullet
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_haveGlass:
+              name: BD_haveGlass
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_infectedWound:
+              name: BD_infectedWound
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_lastTimeBurnWash:
+              name: BD_lastTimeBurnWash
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_needBurnWash:
+              name: BD_needBurnWash
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_plantainFactor:
+              name: BD_plantainFactor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_scratchTime:
+              name: BD_scratchTime
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_scratched:
+              name: BD_scratched
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_splint:
+              name: BD_splint
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_splintFactor:
+              name: BD_splintFactor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_splintItem:
+              name: BD_splintItem
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_stiffness:
+              name: BD_stiffness
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_stitchTime:
+              name: BD_stitchTime
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_stitched:
+              name: BD_stitched
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            BD_woundInfectionLevel:
+              name: BD_woundInfectionLevel
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: write
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void

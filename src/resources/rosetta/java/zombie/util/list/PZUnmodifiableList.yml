@@ -1,0 +1,214 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.util.list:
+        PZUnmodifiableList:
+          extends: zombie.util.list.PZUnmodifiableCollection<E>
+          modifiers:
+          - public
+          fields:
+            list:
+              name: list
+              modifiers:
+              - package
+              type:
+                basic: List
+                full: java.util.List<? extends E>
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: List
+                full: java.util.List<? extends E>
+          methods:
+          - name: add
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Collection
+                full: java.util.Collection<? extends E>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: E
+                full: E
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: indexOf
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: int
+                full: int
+          - name: lastIndexOf
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: int
+                full: int
+          - name: listIterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ListIterator
+                full: java.util.ListIterator<E>
+          - name: listIterator
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ListIterator
+                full: java.util.ListIterator<E>
+          - name: remove
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: E
+                full: E
+          - name: replaceAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UnaryOperator
+                full: java.util.function.UnaryOperator<E>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: E
+                full: E
+          - name: sort
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Comparator
+                full: java.util.Comparator<? super E>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: subList
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: List
+                full: java.util.List<E>
+          staticMethods:
+          - name: wrap
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: List
+                full: java.util.List<? extends T>
+            return:
+              type:
+                basic: List
+                full: java.util.List<T>

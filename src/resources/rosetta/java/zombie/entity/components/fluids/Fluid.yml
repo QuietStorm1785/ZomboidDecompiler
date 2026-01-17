@@ -1,0 +1,624 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.fluids:
+        Fluid:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            blendBlacklist:
+              name: blendBlacklist
+              modifiers:
+              - private
+              type:
+                basic: FluidFilter
+                full: zombie.entity.components.fluids.FluidFilter
+            blendWhitelist:
+              name: blendWhitelist
+              modifiers:
+              - private
+              type:
+                basic: FluidFilter
+                full: zombie.entity.components.fluids.FluidFilter
+            categories:
+              name: categories
+              modifiers:
+              - private
+              type:
+                basic: ImmutableSet
+                full: com.google.common.collect.ImmutableSet<zombie.entity.components.fluids.FluidCategory>
+            categoriesCacheStr:
+              name: categoriesCacheStr
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            color:
+              name: color
+              modifiers:
+              - private
+              type:
+                basic: Color
+                full: zombie.core.Color
+            fluidType:
+              name: fluidType
+              modifiers:
+              - private
+              type:
+                basic: FluidType
+                full: zombie.entity.components.fluids.FluidType
+            fluidTypeStr:
+              name: fluidTypeStr
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            poisonInfo:
+              name: poisonInfo
+              modifiers:
+              - private
+              type:
+                basic: PoisonInfo
+                full: zombie.entity.components.fluids.PoisonInfo
+            properties:
+              name: properties
+              modifiers:
+              - private
+              type:
+                basic: SealedFluidProperties
+                full: zombie.entity.components.fluids.SealedFluidProperties
+            script:
+              name: script
+              modifiers:
+              - private
+              type:
+                basic: FluidDefinitionScript
+                full: zombie.scripting.objects.FluidDefinitionScript
+          staticFields:
+            Acid:
+              name: Acid
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            Alcohol:
+              name: Alcohol
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            AnimalBlood:
+              name: AnimalBlood
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            AnimalGrease:
+              name: AnimalGrease
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            AnimalMilk:
+              name: AnimalMilk
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            Beer:
+              name: Beer
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            Bleach:
+              name: Bleach
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            Blood:
+              name: Blood
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            CarbonatedWater:
+              name: CarbonatedWater
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            CleaningLiquid:
+              name: CleaningLiquid
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            Coffee:
+              name: Coffee
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            CowMilk:
+              name: CowMilk
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            Dye:
+              name: Dye
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            HAS_INITIALIZED:
+              name: HAS_INITIALIZED
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            HairDye:
+              name: HairDye
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            Honey:
+              name: Honey
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            Mead:
+              name: Mead
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            Petrol:
+              name: Petrol
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            PoisonPotent:
+              name: PoisonPotent
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            SecretFlavoring:
+              name: SecretFlavoring
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            SheepMilk:
+              name: SheepMilk
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            SodaPop:
+              name: SodaPop
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            SpiffoJuice:
+              name: SpiffoJuice
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            TaintedWater:
+              name: TaintedWater
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            Tea:
+              name: Tea
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            Water:
+              name: Water
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            Whiskey:
+              name: Whiskey
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            Wine:
+              name: Wine
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            allFluids:
+              name: allFluids
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.components.fluids.Fluid>
+            cacheStringMap:
+              name: cacheStringMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.entity.components.fluids.Fluid>
+            fluidEnumMap:
+              name: fluidEnumMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<zombie.entity.components.fluids.FluidType,
+                  zombie.entity.components.fluids.Fluid>
+            fluidStringMap:
+              name: fluidStringMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.entity.components.fluids.Fluid>
+            scriptToFluidMap:
+              name: scriptToFluidMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<zombie.scripting.objects.FluidDefinitionScript,
+                  zombie.entity.components.fluids.Fluid>
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidType
+                full: zombie.entity.components.fluids.FluidType
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: canBlendWith
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getCategories
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ImmutableSet
+                full: com.google.common.collect.ImmutableSet<zombie.entity.components.fluids.FluidCategory>
+          - name: getColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Color
+                full: zombie.core.Color
+          - name: getDisplayName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFluidType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FluidType
+                full: zombie.entity.components.fluids.FluidType
+          - name: getFluidTypeString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getInstance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FluidInstance
+                full: zombie.entity.components.fluids.FluidInstance
+          - name: getPoisonInfo
+            modifiers:
+            - public
+            return:
+              type:
+                basic: PoisonInfo
+                full: zombie.entity.components.fluids.PoisonInfo
+          - name: getProperties
+            modifiers:
+            - public
+            return:
+              type:
+                basic: SealedFluidProperties
+                full: zombie.entity.components.fluids.SealedFluidProperties
+          - name: getScript
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FluidDefinitionScript
+                full: zombie.scripting.objects.FluidDefinitionScript
+          - name: getTranslatedName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getTranslatedNameLower
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isCategory
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPoisonous
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isVanilla
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setScript
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidDefinitionScript
+                full: zombie.scripting.objects.FluidDefinitionScript
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: FluidsInitialized
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: Get
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidType
+                full: zombie.entity.components.fluids.FluidType
+            return:
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+          - name: Get
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+          - name: Init
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptLoadMode
+                full: zombie.scripting.ScriptLoadMode
+            return:
+              type:
+                basic: void
+                full: void
+          - name: PreReloadScripts
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addFluid
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidType
+                full: zombie.entity.components.fluids.FluidType
+            return:
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+          - name: getAllFluidItemsDebug
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.Item>
+          - name: getAllFluids
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.components.fluids.Fluid>
+          - name: loadFluid
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+          - name: saveFluid
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            - name: arg1
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void

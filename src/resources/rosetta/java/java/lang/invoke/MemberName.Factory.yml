@@ -1,0 +1,292 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.lang.invoke:
+        MemberName.Factory:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            ALLOWED_FLAGS:
+              name: ALLOWED_FLAGS
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            INSTANCE:
+              name: INSTANCE
+              modifiers:
+              - package
+              - static
+              type:
+                basic: MemberName.Factory
+                full: java.lang.invoke.MemberName$Factory
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: getConstructors
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: List
+                full: java.util.List<java.lang.invoke.MemberName>
+          - name: getFields
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: List
+                full: java.util.List<java.lang.invoke.MemberName>
+          - name: getFields
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg3
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg4
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: List
+                full: java.util.List<java.lang.invoke.MemberName>
+          - name: getMembers
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: List
+                full: java.util.List<java.lang.invoke.MemberName>
+          - name: getMethods
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: List
+                full: java.util.List<java.lang.invoke.MemberName>
+          - name: getMethods
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg3
+              type:
+                basic: MethodType
+                full: java.lang.invoke.MethodType
+            - name: arg4
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: List
+                full: java.util.List<java.lang.invoke.MemberName>
+          - name: getNestedTypes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: List
+                full: java.util.List<java.lang.invoke.MemberName>
+          - name: resolve
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            - name: arg1
+              type:
+                basic: MemberName
+                full: java.lang.invoke.MemberName
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: MemberName
+                full: java.lang.invoke.MemberName
+          - name: resolveOrFail
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            - name: arg1
+              type:
+                basic: MemberName
+                full: java.lang.invoke.MemberName
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: Class
+                full: java.lang.Class<NoSuchMemberException>
+            return:
+              type:
+                basic: MemberName
+                full: java.lang.invoke.MemberName
+          - name: resolveOrNull
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            - name: arg1
+              type:
+                basic: MemberName
+                full: java.lang.invoke.MemberName
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: MemberName
+                full: java.lang.invoke.MemberName
+          staticMethods:
+          - name: newMemberBuffer
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: MemberName
+                full: java.lang.invoke.MemberName[]

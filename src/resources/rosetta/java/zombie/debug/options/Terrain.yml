@@ -1,0 +1,21 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Terrain:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          - final
+          fields:
+            RenderTiles:
+              name: RenderTiles
+              modifiers:
+              - public
+              type:
+                basic: Terrain.RenderTiles
+                full: zombie.debug.options.Terrain$RenderTiles
+          constructors:
+          - modifiers:
+            - public

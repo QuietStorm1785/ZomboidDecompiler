@@ -1,0 +1,817 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ui:
+        AtomUITextEntry:
+          extends: zombie.ui.AtomUI
+          modifiers:
+          - public
+          fields:
+            BlinkFrame:
+              name: BlinkFrame
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            BlinkFramesOff:
+              name: BlinkFramesOff
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            BlinkFramesOn:
+              name: BlinkFramesOn
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            BlinkState:
+              name: BlinkState
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            DoingTextEntry:
+              name: DoingTextEntry
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            IsEditable:
+              name: IsEditable
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            IsSelectable:
+              name: IsSelectable
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            SelectingRange:
+              name: SelectingRange
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            TextEntryCursorPos:
+              name: TextEntryCursorPos
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            TextEntryMaxLength:
+              name: TextEntryMaxLength
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            ToSelectionIndex:
+              name: ToSelectionIndex
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            bMask:
+              name: bMask
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            bMultiline:
+              name: bMultiline
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            charNum:
+              name: charNum
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            cursorDef:
+              name: cursorDef
+              modifiers:
+              - package
+              type:
+                basic: AngelCodeFont.CharDef
+                full: zombie.core.fonts.AngelCodeFont$CharDef
+            fontToUse:
+              name: fontToUse
+              modifiers:
+              - package
+              type:
+                basic: AngelCodeFont
+                full: zombie.core.fonts.AngelCodeFont
+            forceUpperCase:
+              name: forceUpperCase
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            luaOnTextChange:
+              name: luaOnTextChange
+              modifiers:
+              - package
+              type:
+                basic: Object
+                full: java.lang.Object
+            maskDef:
+              name: maskDef
+              modifiers:
+              - package
+              type:
+                basic: AngelCodeFont.CharDef
+                full: zombie.core.fonts.AngelCodeFont$CharDef
+            maxTextLength:
+              name: maxTextLength
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            onlyNumbers:
+              name: onlyNumbers
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            onlyText:
+              name: onlyText
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            text:
+              name: text
+              modifiers:
+              - package
+              type:
+                basic: String
+                full: java.lang.String
+            textData:
+              name: textData
+              modifiers:
+              - package
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.ui.AtomUITextEntry$CharData>
+            textHeight:
+              name: textHeight
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            textLeading:
+              name: textLeading
+              modifiers:
+              - package
+              type:
+                basic: double
+                full: double
+            textTracking:
+              name: textTracking
+              modifiers:
+              - package
+              type:
+                basic: double
+                full: double
+            textWidth:
+              name: textWidth
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          staticFields:
+            data:
+              name: data
+              modifiers:
+              - private
+              - static
+              type:
+                basic: char
+                full: char[]
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+          methods:
+          - name: copyToClipboard
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cutToClipboard
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawCursor
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawSelection
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawText
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: focus
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getCursorPos
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getForceUpperCase
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getFrame
+            modifiers:
+            - public
+            return:
+              type:
+                basic: UINineGrid
+                full: zombie.ui.UINineGrid
+          - name: getMaxTextLength
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSdfThreshold
+            modifiers:
+            - package
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getStandardFrameColour
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Color
+                full: zombie.core.Color
+          - name: getText
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: init
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isDoingTextEntry
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEditable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isIgnoreFirst
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMask
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMultiline
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOnlyNumbers
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOnlyText
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTextLimit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: loadFromTable
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onConsumeMouseButtonDown
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: onConsumeMouseButtonUp
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: onConsumeMouseMove
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: onExtendMouseMoveOutside
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onKeyBack
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onKeyDelete
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onKeyDown
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onKeyEnd
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onKeyEnter
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onKeyHome
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onKeyLeft
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onKeyRight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onKeyUp
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onMouseButtonUpOutside
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onOtherKey
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onTextDelete
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: pasteFromClipboard
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putCharacter
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: char
+                full: char
+            return:
+              type:
+                basic: void
+                full: void
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: resetBlink
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: selectAll
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDoingTextEntry
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFont
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setForceUpperCase
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIgnoreFirst
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMask
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxTextLength
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMultiline
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOnlyNumbers
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOnlyText
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSelectingRange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setText
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: tryGetFont
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            return:
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+          - name: unfocus
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateCharData
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: AngelCodeFont.CharDef
+                full: zombie.core.fonts.AngelCodeFont$CharDef
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateInternalValues
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void

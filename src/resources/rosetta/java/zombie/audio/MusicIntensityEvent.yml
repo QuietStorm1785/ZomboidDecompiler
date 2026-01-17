@@ -1,0 +1,96 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.audio:
+        MusicIntensityEvent:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            m_durationMS:
+              name: m_durationMS
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            m_elapsedTimeMS:
+              name: m_elapsedTimeMS
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            m_id:
+              name: m_id
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            m_intensity:
+              name: m_intensity
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: long
+                full: long
+          methods:
+          - name: getDuration
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getElapsedTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getId
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getIntensity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: setElapsedTime
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,35 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.util:
+        ObjectMap.Entry:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            key:
+              name: key
+              modifiers:
+              - public
+              type:
+                basic: K
+                full: K
+            value:
+              name: value
+              modifiers:
+              - public
+              type:
+                basic: V
+                full: V
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

@@ -1,0 +1,91 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        Position3D:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            z:
+              name: z
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+          methods:
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: Position3D
+                full: zombie.characters.Position3D
+          - name: x
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: y
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: z
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float

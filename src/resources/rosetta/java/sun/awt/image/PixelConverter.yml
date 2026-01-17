@@ -1,0 +1,70 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.awt.image:
+        PixelConverter:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            alphaMask:
+              name: alphaMask
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+          staticFields:
+            instance:
+              name: instance
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PixelConverter
+                full: sun.awt.image.PixelConverter
+          constructors:
+          - modifiers:
+            - protected
+          methods:
+          - name: getAlphaMask
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: int
+                full: int
+          - name: pixelToRgb
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ColorModel
+                full: java.awt.image.ColorModel
+            return:
+              type:
+                basic: int
+                full: int
+          - name: rgbToPixel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ColorModel
+                full: java.awt.image.ColorModel
+            return:
+              type:
+                basic: int
+                full: int

@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        IsoGameCharacter.Recoil:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            m_recoilVarX:
+              name: m_recoilVarX
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            m_recoilVarY:
+              name: m_recoilVarY
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - private

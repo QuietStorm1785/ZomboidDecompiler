@@ -1,0 +1,96 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ai.states:
+        PlayerOnGroundState:
+          extends: zombie.ai.State
+          modifiers:
+          - public
+          - final
+          staticFields:
+            _instance:
+              name: _instance
+              modifiers:
+              - private
+              - static
+              type:
+                basic: PlayerOnGroundState
+                full: zombie.ai.states.PlayerOnGroundState
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: enter
+            modifiers:
+            - public
+            parameters:
+            - name: owner
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: execute
+            modifiers:
+            - public
+            parameters:
+            - name: owner
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: exit
+            modifiers:
+            - public
+            parameters:
+            - name: owner
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isSyncInIdle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSyncOnEnter
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSyncOnExit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSyncOnSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          staticMethods:
+          - name: instance
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: PlayerOnGroundState
+                full: zombie.ai.states.PlayerOnGroundState

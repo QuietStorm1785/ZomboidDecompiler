@@ -1,0 +1,616 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util.stream:
+        LongStream:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "A sequence of primitive long-valued elements supporting sequential\
+            \ and parallel\n aggregate operations.  This is the long primitive specialization\
+            \ of\n Stream.\n\n The following example illustrates an aggregate operation\
+            \ using\n Stream and LongStream, computing the sum of the weights of the\n\
+            \ red widgets:\n\n <code>\n     long sum = widgets.stream()\n        \
+            \               .filter(w -> w.getColor() == RED)\n                  \
+            \     .mapToLong(w -> w.getWeight())\n                       .sum();\n\
+            \ </code>\n\n See the class documentation for Stream and the package documentation\n\
+            \ for java.util.stream for additional\n specification of streams, stream\
+            \ operations, stream pipelines, and\n parallelism."
+          methods:
+          - name: allMatch
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LongPredicate
+                full: java.util.function.LongPredicate
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: anyMatch
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LongPredicate
+                full: java.util.function.LongPredicate
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: asDoubleStream
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: DoubleStream
+                full: java.util.stream.DoubleStream
+          - name: average
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: OptionalDouble
+                full: java.util.OptionalDouble
+          - name: boxed
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Stream
+                full: java.util.stream.Stream<java.lang.Long>
+          - name: collect
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Supplier
+                full: java.util.function.Supplier<R>
+            - name: arg1
+              type:
+                basic: ObjLongConsumer
+                full: java.util.function.ObjLongConsumer<R>
+            - name: arg2
+              type:
+                basic: BiConsumer
+                full: java.util.function.BiConsumer<R, R>
+            return:
+              type:
+                basic: R
+                full: R
+          - name: count
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: long
+                full: long
+          - name: distinct
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: dropWhile
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: LongPredicate
+                full: java.util.function.LongPredicate
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: filter
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LongPredicate
+                full: java.util.function.LongPredicate
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: findAny
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: OptionalLong
+                full: java.util.OptionalLong
+          - name: findFirst
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: OptionalLong
+                full: java.util.OptionalLong
+          - name: flatMap
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LongFunction
+                full: java.util.function.LongFunction<? extends java.util.stream.LongStream>
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: forEach
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LongConsumer
+                full: java.util.function.LongConsumer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forEachOrdered
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LongConsumer
+                full: java.util.function.LongConsumer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: iterator
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: PrimitiveIterator.OfLong
+                full: java.util.PrimitiveIterator$OfLong
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Iterator
+                full: java.util.Iterator
+          - name: limit
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: map
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LongUnaryOperator
+                full: java.util.function.LongUnaryOperator
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: mapMulti
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: LongStream.LongMapMultiConsumer
+                full: java.util.stream.LongStream$LongMapMultiConsumer
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: mapToDouble
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LongToDoubleFunction
+                full: java.util.function.LongToDoubleFunction
+            return:
+              type:
+                basic: DoubleStream
+                full: java.util.stream.DoubleStream
+          - name: mapToInt
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LongToIntFunction
+                full: java.util.function.LongToIntFunction
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: mapToObj
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LongFunction
+                full: java.util.function.LongFunction<? extends U>
+            return:
+              type:
+                basic: Stream
+                full: java.util.stream.Stream<U>
+          - name: max
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: OptionalLong
+                full: java.util.OptionalLong
+          - name: min
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: OptionalLong
+                full: java.util.OptionalLong
+          - name: noneMatch
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LongPredicate
+                full: java.util.function.LongPredicate
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: parallel
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: parallel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: BaseStream
+                full: java.util.stream.BaseStream
+          - name: peek
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LongConsumer
+                full: java.util.function.LongConsumer
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: reduce
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: LongBinaryOperator
+                full: java.util.function.LongBinaryOperator
+            return:
+              type:
+                basic: long
+                full: long
+          - name: reduce
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LongBinaryOperator
+                full: java.util.function.LongBinaryOperator
+            return:
+              type:
+                basic: OptionalLong
+                full: java.util.OptionalLong
+          - name: sequential
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: sequential
+            modifiers:
+            - public
+            return:
+              type:
+                basic: BaseStream
+                full: java.util.stream.BaseStream
+          - name: skip
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: sorted
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: spliterator
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Spliterator.OfLong
+                full: java.util.Spliterator$OfLong
+          - name: spliterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Spliterator
+                full: java.util.Spliterator
+          - name: sum
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: long
+                full: long
+          - name: summaryStatistics
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: LongSummaryStatistics
+                full: java.util.LongSummaryStatistics
+          - name: takeWhile
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: LongPredicate
+                full: java.util.function.LongPredicate
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: toArray
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: long
+                full: long[]
+          staticMethods:
+          - name: builder
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: LongStream.Builder
+                full: java.util.stream.LongStream$Builder
+          - name: concat
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+            - name: arg1
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: empty
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: generate
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: LongSupplier
+                full: java.util.function.LongSupplier
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: iterate
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: LongUnaryOperator
+                full: java.util.function.LongUnaryOperator
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: iterate
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: LongPredicate
+                full: java.util.function.LongPredicate
+            - name: arg2
+              type:
+                basic: LongUnaryOperator
+                full: java.util.function.LongUnaryOperator
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: lambda$mapMulti$0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: LongStream.LongMapMultiConsumer
+                full: java.util.stream.LongStream$LongMapMultiConsumer
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long[]
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: range
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: rangeClosed
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream

@@ -1,0 +1,86 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.AttachedItems:
+        AttachedModelNames:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            group:
+              name: group
+              modifiers:
+              - protected
+              type:
+                basic: AttachedLocationGroup
+                full: zombie.characters.AttachedItems.AttachedLocationGroup
+            models:
+              name: models
+              modifiers:
+              - protected
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.AttachedItems.AttachedModelName>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyFrom
+            modifiers:
+            - public
+            parameters:
+            - name: other
+              type:
+                basic: AttachedModelNames
+                full: zombie.characters.AttachedItems.AttachedModelNames
+            return:
+              type:
+                basic: void
+                full: void
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: AttachedModelName
+                full: zombie.characters.AttachedItems.AttachedModelName
+          - name: getGroup
+            modifiers:
+            - package
+            return:
+              type:
+                basic: AttachedLocationGroup
+                full: zombie.characters.AttachedItems.AttachedLocationGroup
+          - name: initFrom
+            modifiers:
+            - public
+            parameters:
+            - name: attachedItems
+              type:
+                basic: AttachedItems
+                full: zombie.characters.AttachedItems.AttachedItems
+            return:
+              type:
+                basic: void
+                full: void
+          - name: size
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int

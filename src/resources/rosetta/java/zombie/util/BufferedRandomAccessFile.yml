@@ -1,0 +1,159 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.util:
+        BufferedRandomAccessFile:
+          extends: java.io.RandomAccessFile
+          modifiers:
+          - public
+          - final
+          fields:
+            BUF_SIZE:
+              name: BUF_SIZE
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            buf_end:
+              name: buf_end
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            buf_pos:
+              name: buf_pos
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            buffer:
+              name: buffer
+              modifiers:
+              - private
+              type:
+                basic: byte
+                full: byte[]
+            real_pos:
+              name: real_pos
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: filename
+              type:
+                basic: String
+                full: java.lang.String
+            - name: mode
+              type:
+                basic: String
+                full: java.lang.String
+            - name: bufsize
+              type:
+                basic: int
+                full: int
+          - modifiers:
+            - public
+            parameters:
+            - name: file
+              type:
+                basic: File
+                full: java.io.File
+            - name: mode
+              type:
+                basic: String
+                full: java.lang.String
+            - name: bufsize
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: fillBuffer
+            modifiers:
+            - private
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getFilePointer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getNextLine
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: invalidate
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: read
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: int
+                full: int
+          - name: read
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: int
+                full: int
+          - name: read
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: byte
+                full: byte[]
+            - name: off
+              type:
+                basic: int
+                full: int
+            - name: len
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: seek
+            modifiers:
+            - public
+            parameters:
+            - name: pos
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void

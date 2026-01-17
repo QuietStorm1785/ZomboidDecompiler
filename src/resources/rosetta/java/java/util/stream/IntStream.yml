@@ -1,0 +1,624 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util.stream:
+        IntStream:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "A sequence of primitive int-valued elements supporting sequential\
+            \ and parallel\n aggregate operations.  This is the int primitive specialization\
+            \ of\n Stream.\n\n The following example illustrates an aggregate operation\
+            \ using\n Stream and IntStream, computing the sum of the weights of the\n\
+            \ red widgets:\n\n <code>\n     int sum = widgets.stream()\n         \
+            \             .filter(w -> w.getColor() == RED)\n                    \
+            \  .mapToInt(w -> w.getWeight())\n                      .sum();\n </code>\n\
+            \n See the class documentation for Stream and the package documentation\n\
+            \ for java.util.stream for additional\n specification of streams, stream\
+            \ operations, stream pipelines, and\n parallelism."
+          methods:
+          - name: allMatch
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntPredicate
+                full: java.util.function.IntPredicate
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: anyMatch
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntPredicate
+                full: java.util.function.IntPredicate
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: asDoubleStream
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: DoubleStream
+                full: java.util.stream.DoubleStream
+          - name: asLongStream
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: average
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: OptionalDouble
+                full: java.util.OptionalDouble
+          - name: boxed
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Stream
+                full: java.util.stream.Stream<java.lang.Integer>
+          - name: collect
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Supplier
+                full: java.util.function.Supplier<R>
+            - name: arg1
+              type:
+                basic: ObjIntConsumer
+                full: java.util.function.ObjIntConsumer<R>
+            - name: arg2
+              type:
+                basic: BiConsumer
+                full: java.util.function.BiConsumer<R, R>
+            return:
+              type:
+                basic: R
+                full: R
+          - name: count
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: long
+                full: long
+          - name: distinct
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: dropWhile
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IntPredicate
+                full: java.util.function.IntPredicate
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: filter
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntPredicate
+                full: java.util.function.IntPredicate
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: findAny
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: OptionalInt
+                full: java.util.OptionalInt
+          - name: findFirst
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: OptionalInt
+                full: java.util.OptionalInt
+          - name: flatMap
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntFunction
+                full: java.util.function.IntFunction<? extends java.util.stream.IntStream>
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: forEach
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntConsumer
+                full: java.util.function.IntConsumer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forEachOrdered
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntConsumer
+                full: java.util.function.IntConsumer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: iterator
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: PrimitiveIterator.OfInt
+                full: java.util.PrimitiveIterator$OfInt
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Iterator
+                full: java.util.Iterator
+          - name: limit
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: map
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntUnaryOperator
+                full: java.util.function.IntUnaryOperator
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: mapMulti
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IntStream.IntMapMultiConsumer
+                full: java.util.stream.IntStream$IntMapMultiConsumer
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: mapToDouble
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntToDoubleFunction
+                full: java.util.function.IntToDoubleFunction
+            return:
+              type:
+                basic: DoubleStream
+                full: java.util.stream.DoubleStream
+          - name: mapToLong
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntToLongFunction
+                full: java.util.function.IntToLongFunction
+            return:
+              type:
+                basic: LongStream
+                full: java.util.stream.LongStream
+          - name: mapToObj
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntFunction
+                full: java.util.function.IntFunction<? extends U>
+            return:
+              type:
+                basic: Stream
+                full: java.util.stream.Stream<U>
+          - name: max
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: OptionalInt
+                full: java.util.OptionalInt
+          - name: min
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: OptionalInt
+                full: java.util.OptionalInt
+          - name: noneMatch
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntPredicate
+                full: java.util.function.IntPredicate
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: parallel
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: parallel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: BaseStream
+                full: java.util.stream.BaseStream
+          - name: peek
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntConsumer
+                full: java.util.function.IntConsumer
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: reduce
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: IntBinaryOperator
+                full: java.util.function.IntBinaryOperator
+            return:
+              type:
+                basic: int
+                full: int
+          - name: reduce
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IntBinaryOperator
+                full: java.util.function.IntBinaryOperator
+            return:
+              type:
+                basic: OptionalInt
+                full: java.util.OptionalInt
+          - name: sequential
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: sequential
+            modifiers:
+            - public
+            return:
+              type:
+                basic: BaseStream
+                full: java.util.stream.BaseStream
+          - name: skip
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: sorted
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: spliterator
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Spliterator.OfInt
+                full: java.util.Spliterator$OfInt
+          - name: spliterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Spliterator
+                full: java.util.Spliterator
+          - name: sum
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: summaryStatistics
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: IntSummaryStatistics
+                full: java.util.IntSummaryStatistics
+          - name: takeWhile
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IntPredicate
+                full: java.util.function.IntPredicate
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: toArray
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int[]
+          staticMethods:
+          - name: builder
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: IntStream.Builder
+                full: java.util.stream.IntStream$Builder
+          - name: concat
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+            - name: arg1
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: empty
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: generate
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IntSupplier
+                full: java.util.function.IntSupplier
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: iterate
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: IntUnaryOperator
+                full: java.util.function.IntUnaryOperator
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: iterate
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: IntPredicate
+                full: java.util.function.IntPredicate
+            - name: arg2
+              type:
+                basic: IntUnaryOperator
+                full: java.util.function.IntUnaryOperator
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: lambda$mapMulti$0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IntStream.IntMapMultiConsumer
+                full: java.util.stream.IntStream$IntMapMultiConsumer
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int[]
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: range
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream
+          - name: rangeClosed
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IntStream
+                full: java.util.stream.IntStream

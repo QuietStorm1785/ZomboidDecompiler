@@ -1,0 +1,53 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt:
+        MenuContainer:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: The super class of all menu related containers.
+          methods:
+          - name: getFont
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Font
+                full: java.awt.Font
+              notes: the menu font
+            notes: Returns the font in use by this container.
+          - name: postEvent
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: evt
+              type:
+                basic: Event
+                full: java.awt.Event
+              notes: the event to dispatch
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the results of posting the event
+            notes: Posts an event to the listeners.
+          - name: remove
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: comp
+              type:
+                basic: MenuComponent
+                full: java.awt.MenuComponent
+              notes: the menu component to remove
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Removes the specified menu component from the menu.

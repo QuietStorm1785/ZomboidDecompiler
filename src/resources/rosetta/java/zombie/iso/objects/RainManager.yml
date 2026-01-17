@@ -1,0 +1,566 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.objects:
+        RainManager:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          staticFields:
+            AddNewSplashesDelay:
+              name: AddNewSplashesDelay
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            AddNewSplashesTimer:
+              name: AddNewSplashesTimer
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            AdjustedRainSplashTintMod:
+              name: AdjustedRainSplashTintMod
+              modifiers:
+              - package
+              - static
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            DarkRaindropTintMod:
+              name: DarkRaindropTintMod
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            GravModMax:
+              name: GravModMax
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            GravModMin:
+              name: GravModMin
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            IsRaining:
+              name: IsRaining
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            MaxRainSplashObjects:
+              name: MaxRainSplashObjects
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            MaxRaindropObjects:
+              name: MaxRaindropObjects
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            NumActiveRainSplashes:
+              name: NumActiveRainSplashes
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            NumActiveRaindrops:
+              name: NumActiveRaindrops
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            OutsideAmbient:
+              name: OutsideAmbient
+              modifiers:
+              - package
+              - static
+              type:
+                basic: Audio
+                full: fmod.fmod.Audio
+            OutsideNightAmbient:
+              name: OutsideNightAmbient
+              modifiers:
+              - package
+              - static
+              type:
+                basic: Audio
+                full: fmod.fmod.Audio
+            PlayerLocation:
+              name: PlayerLocation
+              modifiers:
+              - public
+              - static
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare[]
+            PlayerMoved:
+              name: PlayerMoved
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            PlayerOldLocation:
+              name: PlayerOldLocation
+              modifiers:
+              - public
+              - static
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare[]
+            RainAmbient:
+              name: RainAmbient
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Audio
+                full: fmod.fmod.Audio
+            RainChangeRate:
+              name: RainChangeRate
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+            RainChangeRateMax:
+              name: RainChangeRateMax
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+            RainChangeRateMin:
+              name: RainChangeRateMin
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+            RainChangeTimer:
+              name: RainChangeTimer
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+            RainDesiredIntensity:
+              name: RainDesiredIntensity
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            RainIntensity:
+              name: RainIntensity
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            RainRadius:
+              name: RainRadius
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            RainSplashAnimDelay:
+              name: RainSplashAnimDelay
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            RainSplashReuseStack:
+              name: RainSplashReuseStack
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Stack
+                full: java.util.Stack<zombie.iso.objects.IsoRainSplash>
+            RainSplashStack:
+              name: RainSplashStack
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.objects.IsoRainSplash>
+            RainSplashTintMod:
+              name: RainSplashTintMod
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            RaindropGravity:
+              name: RaindropGravity
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            RaindropReuseStack:
+              name: RaindropReuseStack
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Stack
+                full: java.util.Stack<zombie.iso.objects.IsoRaindrop>
+            RaindropStack:
+              name: RaindropStack
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.objects.IsoRaindrop>
+            RaindropStartDistance:
+              name: RaindropStartDistance
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            RaindropTintMod:
+              name: RaindropTintMod
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            ThunderAmbient:
+              name: ThunderAmbient
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Audio
+                full: fmod.fmod.Audio
+            randRain:
+              name: randRain
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            randRainMax:
+              name: randRainMax
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            randRainMin:
+              name: randRainMin
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            stopRain:
+              name: stopRain
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: AddRainSplash
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: NewRainSplash
+              type:
+                basic: IsoRainSplash
+                full: zombie.iso.objects.IsoRainSplash
+            return:
+              type:
+                basic: void
+                full: void
+          - name: AddRaindrop
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: NewRaindrop
+              type:
+                basic: IsoRaindrop
+                full: zombie.iso.objects.IsoRaindrop
+            return:
+              type:
+                basic: void
+                full: void
+          - name: AddSplashes
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RemoveAllOn
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: sq
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RemoveRainSplash
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: DyingRainSplash
+              type:
+                basic: IsoRainSplash
+                full: zombie.iso.objects.IsoRainSplash
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RemoveRaindrop
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: DyingRaindrop
+              type:
+                basic: IsoRaindrop
+                full: zombie.iso.objects.IsoRaindrop
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetPlayerLocation
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            - name: PlayerCurrentSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: StartRainSplash
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: gridSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: CanSee
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: StartRaindrop
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: gridSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: CanSee
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Update
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UpdateServer
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getRainIntensity
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: float
+                full: float
+          - name: inBounds
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: sq
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: interruptSleep
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRaining
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: removeAll
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRandRainMax
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: pRandRainMax
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRandRainMin
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: pRandRainMin
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: startRaining
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stopRaining
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void

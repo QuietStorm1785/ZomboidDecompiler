@@ -1,0 +1,13 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.nio.channels:
+        ByteChannel:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "A channel that can read and write bytes.  This interface simply\
+            \ unifies\n ReadableByteChannel and WritableByteChannel; it does not\n\
+            \ specify any new operations."

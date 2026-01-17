@@ -1,0 +1,45 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.randomizedWorld.randomizedDeadSurvivor:
+        RDSFootballNight:
+          extends: zombie.randomizedWorld.randomizedDeadSurvivor.RandomizedDeadSurvivorBase
+          modifiers:
+          - public
+          - final
+          notes: Create some zombies in sports outfits with crisps, alcohol & cigarettes
+            lying around
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: isValid
+            modifiers:
+            - public
+            parameters:
+            - name: def
+              type:
+                basic: BuildingDef
+                full: zombie.iso.BuildingDef
+            - name: force
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: 'Description copied from class: RandomizedBuildingBase'
+          - name: randomizeDeadSurvivor
+            modifiers:
+            - public
+            parameters:
+            - name: def
+              type:
+                basic: BuildingDef
+                full: zombie.iso.BuildingDef
+            return:
+              type:
+                basic: void
+                full: void

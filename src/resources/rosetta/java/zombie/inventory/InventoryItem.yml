@@ -1,0 +1,7191 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.inventory:
+        InventoryItem:
+          extends: zombie.entity.GameEntity
+          modifiers:
+          - public
+          fields:
+            ActualWeight:
+              name: ActualWeight
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            Age:
+              name: Age
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            Burnt:
+              name: Burnt
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            BurntString:
+              name: BurntString
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            CanStack:
+              name: CanStack
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            CloseKillMove:
+              name: CloseKillMove
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            Condition:
+              name: Condition
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            ConditionMax:
+              name: ConditionMax
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            Cooked:
+              name: Cooked
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            CookedString:
+              name: CookedString
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            CookingTime:
+              name: CookingTime
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            Count:
+              name: Count
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            Description:
+              name: Description
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            EmptyString:
+              name: EmptyString
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            FreshString:
+              name: FreshString
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            FrozenString:
+              name: FrozenString
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            GrilledString:
+              name: GrilledString
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            IsCookable:
+              name: IsCookable
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            LastAged:
+              name: LastAged
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            MinutesToBurn:
+              name: MinutesToBurn
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            MinutesToCook:
+              name: MinutesToCook
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            OffAge:
+              name: OffAge
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            OffAgeMax:
+              name: OffAgeMax
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            OffString:
+              name: OffString
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            ReduceInfectionPower:
+              name: ReduceInfectionPower
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            ReplaceOnUseOn:
+              name: ReplaceOnUseOn
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            RequiresEquippedBothHands:
+              name: RequiresEquippedBothHands
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            ScriptItem:
+              name: ScriptItem
+              modifiers:
+              - protected
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+            StaleString:
+              name: StaleString
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            Taken:
+              name: Taken
+              modifiers:
+              - protected
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoObject>
+            ToastedString:
+              name: ToastedString
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            UnCookedString:
+              name: UnCookedString
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            Weight:
+              name: Weight
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            WorldTexture:
+              name: WorldTexture
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            activated:
+              name: activated
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            alcoholPower:
+              name: alcoholPower
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            alcoholic:
+              name: alcoholic
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            ammoType:
+              name: ammoType
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            animalTracks:
+              name: animalTracks
+              modifiers:
+              - private
+              type:
+                basic: AnimalTracks
+                full: zombie.characters.animals.AnimalTracks
+            atlasTexture:
+              name: atlasTexture
+              modifiers:
+              - public
+              type:
+                basic: WorldItemAtlas.ItemTexture
+                full: zombie.core.skinnedmodel.model.WorldItemAtlas$ItemTexture
+            attachedSlot:
+              name: attachedSlot
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            attachedSlotType:
+              name: attachedSlotType
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            attachedToModel:
+              name: attachedToModel
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            attachmentReplacement:
+              name: attachmentReplacement
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            attachmentType:
+              name: attachmentType
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            attachmentsProvided:
+              name: attachmentsProvided
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            bDoingExtendedPlacement:
+              name: bDoingExtendedPlacement
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            bandagePower:
+              name: bandagePower
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            beingFilled:
+              name: beingFilled
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            bloodClothingType:
+              name: bloodClothingType
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characterTextures.BloodClothingType>
+            bloodyString:
+              name: bloodyString
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            bluntString:
+              name: bluntString
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            boredomChange:
+              name: boredomChange
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            brakeForce:
+              name: brakeForce
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            breakSound:
+              name: breakSound
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            broken:
+              name: broken
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            brokenString:
+              name: brokenString
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            byteData:
+              name: byteData
+              modifiers:
+              - public
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            canBeActivated:
+              name: canBeActivated
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            canBeRemote:
+              name: canBeRemote
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            cat:
+              name: cat
+              modifiers:
+              - protected
+              type:
+                basic: ItemType
+                full: zombie.inventory.ItemType
+            chanceToSpawnDamaged:
+              name: chanceToSpawnDamaged
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            col:
+              name: col
+              modifiers:
+              - public
+              type:
+                basic: Color
+                full: zombie.core.Color
+            colorBlue:
+              name: colorBlue
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            colorGreen:
+              name: colorGreen
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            colorRed:
+              name: colorRed
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            conditionLowerNormal:
+              name: conditionLowerNormal
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            conditionLowerOffroad:
+              name: conditionLowerOffroad
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            container:
+              name: container
+              modifiers:
+              - protected
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            containerX:
+              name: containerX
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            containerY:
+              name: containerY
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            countDownSound:
+              name: countDownSound
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            currentAmmoCount:
+              name: currentAmmoCount
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            customColor:
+              name: customColor
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            customMenuOption:
+              name: customMenuOption
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            customName:
+              name: customName
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            customWeight:
+              name: customWeight
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            deadBodyObject:
+              name: deadBodyObject
+              modifiers:
+              - public
+              type:
+                basic: IsoDeadBody
+                full: zombie.iso.objects.IsoDeadBody
+            displayCategory:
+              name: displayCategory
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            dullString:
+              name: dullString
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            durability:
+              name: durability
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            engineLoudness:
+              name: engineLoudness
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            equipParent:
+              name: equipParent
+              modifiers:
+              - private
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            equippedAndActivatedPlayer:
+              name: equippedAndActivatedPlayer
+              modifiers:
+              - private
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            equippedAndActivatedSound:
+              name: equippedAndActivatedSound
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            evolvedRecipeName:
+              name: evolvedRecipeName
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            explosionSound:
+              name: explosionSound
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            extraItems:
+              name: extraItems
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            fatigueChange:
+              name: fatigueChange
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            favorite:
+              name: favorite
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            fullType:
+              name: fullType
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            gunType:
+              name: gunType
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            haveBeenRepaired:
+              name: haveBeenRepaired
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            iconsForTexture:
+              name: iconsForTexture
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            id:
+              name: id
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            isCraftingConsumed:
+              name: isCraftingConsumed
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isInitialised:
+              name: isInitialised
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isTorchCone:
+              name: isTorchCone
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isWet:
+              name: isWet
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            itemCapacity:
+              name: itemCapacity
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            itemHeat:
+              name: itemHeat
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            itemWhenDry:
+              name: itemWhenDry
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            jobDelta:
+              name: jobDelta
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            jobType:
+              name: jobType
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            keyId:
+              name: keyId
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            lightDistance:
+              name: lightDistance
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            lightStrength:
+              name: lightStrength
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            m_alternateModelName:
+              name: m_alternateModelName
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            mainCategory:
+              name: mainCategory
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            maxAmmo:
+              name: maxAmmo
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            maxCapacity:
+              name: maxCapacity
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            maxTextLength:
+              name: maxTextLength
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            mediaType:
+              name: mediaType
+              modifiers:
+              - private
+              type:
+                basic: byte
+                full: byte
+            meltingTime:
+              name: meltingTime
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            metalValue:
+              name: metalValue
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            modelIndex:
+              name: modelIndex
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            module:
+              name: module
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            name:
+              name: name
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            newPlaceDir:
+              name: newPlaceDir
+              modifiers:
+              - protected
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            originalName:
+              name: originalName
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            placeDir:
+              name: placeDir
+              modifiers:
+              - protected
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            previousOwner:
+              name: previousOwner
+              modifiers:
+              - protected
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            recordedMediaIndex:
+              name: recordedMediaIndex
+              modifiers:
+              - private
+              type:
+                basic: short
+                full: short
+            registry_id:
+              name: registry_id
+              modifiers:
+              - private
+              type:
+                basic: short
+                full: short
+            remoteControlID:
+              name: remoteControlID
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            remoteController:
+              name: remoteController
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            remoteRange:
+              name: remoteRange
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            replaceOnUse:
+              name: replaceOnUse
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            replaceOnUseFullType:
+              name: replaceOnUseFullType
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            requireInHandOrInventory:
+              name: requireInHandOrInventory
+              modifiers:
+              - protected
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            rightClickContainer:
+              name: rightClickContainer
+              modifiers:
+              - protected
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            stashChance:
+              name: stashChance
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            stashMap:
+              name: stashMap
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            staticModel:
+              name: staticModel
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            staticModelsByIndex:
+              name: staticModelsByIndex
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            stressChange:
+              name: stressChange
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            suspensionCompression:
+              name: suspensionCompression
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            suspensionDamping:
+              name: suspensionDamping
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            table:
+              name: table
+              modifiers:
+              - private
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            texture:
+              name: texture
+              modifiers:
+              - protected
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            textureBurnt:
+              name: textureBurnt
+              modifiers:
+              - protected
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            textureColorMask:
+              name: textureColorMask
+              modifiers:
+              - protected
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            textureCooked:
+              name: textureCooked
+              modifiers:
+              - protected
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            textureFluidMask:
+              name: textureFluidMask
+              modifiers:
+              - protected
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            texturerotten:
+              name: texturerotten
+              modifiers:
+              - protected
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            tooltip:
+              name: tooltip
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            type:
+              name: type
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            unhappyChange:
+              name: unhappyChange
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            uses:
+              name: uses
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            visual:
+              name: visual
+              modifiers:
+              - protected
+              type:
+                basic: ItemVisual
+                full: zombie.core.skinnedmodel.visual.ItemVisual
+            wetCooldown:
+              name: wetCooldown
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            wheelFriction:
+              name: wheelFriction
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            worker:
+              name: worker
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            worldAlpha:
+              name: worldAlpha
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            worldItem:
+              name: worldItem
+              modifiers:
+              - public
+              type:
+                basic: IsoWorldInventoryObject
+                full: zombie.iso.objects.IsoWorldInventoryObject
+            worldScale:
+              name: worldScale
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            worldStaticModelsByIndex:
+              name: worldStaticModelsByIndex
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            worldXRotation:
+              name: worldXRotation
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            worldYRotation:
+              name: worldYRotation
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            worldZRotation:
+              name: worldZRotation
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            wornString:
+              name: wornString
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            zombieInfected:
+              name: zombieInfected
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            DEFAULT_USES:
+              name: DEFAULT_USES
+              modifiers:
+              - protected
+              - static
+              type:
+                basic: int
+                full: int
+            tempBuffer:
+              name: tempBuffer
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: module
+              type:
+                basic: String
+                full: java.lang.String
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+          - modifiers:
+            - public
+            parameters:
+            - name: module
+              type:
+                basic: String
+                full: java.lang.String
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            - name: item
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+          methods:
+          - name: CanStack
+            modifiers:
+            - public
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: CanStackNoTemp
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: CopyModData
+            modifiers:
+            - public
+            parameters:
+            - name: DefaultModData
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DoTooltip
+            modifiers:
+            - public
+            parameters:
+            - name: tooltipUI
+              type:
+                basic: ObjectTooltip
+                full: zombie.ui.ObjectTooltip
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DoTooltip
+            modifiers:
+            - public
+            parameters:
+            - name: tooltipUI
+              type:
+                basic: ObjectTooltip
+                full: zombie.ui.ObjectTooltip
+            - name: layout
+              type:
+                basic: ObjectTooltip.Layout
+                full: zombie.ui.ObjectTooltip$Layout
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DoTooltipEmbedded
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectTooltip
+                full: zombie.ui.ObjectTooltip
+            - name: arg1
+              type:
+                basic: ObjectTooltip.Layout
+                full: zombie.ui.ObjectTooltip$Layout
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: HowRotten
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: IsClothing
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsDrainable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsFood
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsInventoryContainer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsLiterature
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsMap
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsRotten
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsWeapon
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: ModDataMatches
+            modifiers:
+            - public
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: OnAddedToContainer
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnBeforeRemoveFromContainer
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Remove
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetContainerPosition
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SynchSpawn
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Use
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Use
+            modifiers:
+            - public
+            parameters:
+            - name: bCrafting
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Use
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UseAndSync
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UseForCrafting
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: UseItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addExtraItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemKey
+                full: zombie.scripting.objects.ItemKey
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addExtraItem
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: allowRandomTint
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: applyMaxSharpness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: canBeActivated
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canBeEquipped
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: canBeRemote
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canEmitLight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canHaveOrigin
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canStoreWater
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: copyBloodLevelFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyClothing
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyConditionModData
+            modifiers:
+            - public
+            parameters:
+            - name: other
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyConditionStatesFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyModData
+            modifiers:
+            - public
+            parameters:
+            - name: modData
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyTimesHeadRepairedFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyTimesHeadRepairedTo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyTimesRepairedFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyTimesRepairedTo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createAndStoreDefaultDeadBody
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: IsoDeadBody
+                full: zombie.iso.objects.IsoDeadBody
+          - name: createCloneItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: createDefaultDeadBody
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: IsoDeadBody
+                full: zombie.iso.objects.IsoDeadBody
+          - name: damageCheck
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: damageCheck
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: damageCheck
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: damageCheck
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: damageCheck
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: damageCheck
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg4
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: doBreakSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: doBuildingStash
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: doDamagedSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawTooltipItemTexture
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectTooltip
+                full: zombie.ui.ObjectTooltip
+            - name: arg1
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: emptyLiquid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: finishupdate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getA
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getActualWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the ActualWeight
+          - name: getAge
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the Age
+          - name: getAimReleaseSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAlcoholPower
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAlternateModelName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAmmoType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAnimalFeedType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAnimalTracks
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AnimalTracks
+                full: zombie.characters.animals.AnimalTracks
+          - name: getAttachedSlot
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getAttachedSlotType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAttachedToModel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAttachmentReplacement
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAttachmentType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAttachmentsProvided
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getB
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBandagePower
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBlood
+            modifiers:
+            - public
+            parameters:
+            - name: bodyPartType
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBloodClothingType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characterTextures.BloodClothingType>
+          - name: getBloodLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBloodLevelAdjustedHigh
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBloodLevelAdjustedLow
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBodyLocation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getBoredomChange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the boredomChange
+          - name: getBrakeForce
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBreakSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getBringToBearSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getBulletHitArmourSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getBurntString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the BurntString
+          - name: getByteData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: getCat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ItemType
+                full: zombie.inventory.ItemType
+              notes: the cat
+          - name: getCategory
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getChanceToSpawnDamaged
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getCleanString
+            modifiers:
+            - public
+            parameters:
+            - name: weight
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getClothingItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClothingItem
+                full: zombie.core.skinnedmodel.population.ClothingItem
+          - name: getClothingItemExtra
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getClothingItemExtraOption
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getClothingItemName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Color
+                full: zombie.core.Color
+          - name: getColorBlue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getColorGreen
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getColorInfo
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+          - name: getColorRed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCondition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the Condition
+          - name: getConditionLowerChance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getConditionLowerNormal
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getConditionLowerOffroad
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getConditionMax
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the ConditionMax
+          - name: getConsolidateOption
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getContainer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+              notes: the container
+          - name: getContainerX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the containerX
+          - name: getContainerY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the containerY
+          - name: getContentsWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCookedString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the CookedString
+          - name: getCookingTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the CookingTime
+          - name: getCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getCountDownSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getCurrentAmmoCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getCurrentCondition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: float
+            notes: "Return the real condition of the weapon, based on this calcul\
+              \ :\n Condition/ConditionMax * 100"
+          - name: getCurrentUses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getCurrentUsesFloat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCustomMenuOption
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDamagedSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDeadBodyObject
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoDeadBody
+                full: zombie.iso.objects.IsoDeadBody
+          - name: getDescription
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the Description
+          - name: getDigType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDirt
+            modifiers:
+            - public
+            parameters:
+            - name: bodyPartType
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDiscomfortModifier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDisplayCategory
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDisplayName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDropSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDurability
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getEatTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getEatType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getEngineLoudness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getEntityNetID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getEquipParent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          - name: getEquipSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getEquippedWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getEvolvedRecipeName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getExplosionSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getExtraItems
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getExtraItemsWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFabricType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFatigueChange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFileName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFillFromDispenserSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFillFromLakeSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFillFromTapSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFillFromToiletSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFireFuelRatio
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFluidContainerFromSelfOrWorldItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FluidContainer
+                full: zombie.entity.components.fluids.FluidContainer
+          - name: getFullType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getG
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getGameEntityType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: GameEntityType
+                full: zombie.entity.GameEntityType
+          - name: getGunType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getHaveBeenRepaired
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getHeadCondition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getHeadConditionLowerChance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getHeadConditionLowerChanceMultiplier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getHeadConditionMax
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getHearingModifier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getHotbarEquippedWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getIcon
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+          - name: getIconsForTexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getInvHeat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getIsCraftingConsumed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getItemAfterCleaning
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getItemCapacity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getItemHeat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getItemReplacementPrimaryHand
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ItemReplacement
+                full: zombie.scripting.objects.ItemReplacement
+          - name: getItemReplacementSecondHand
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ItemReplacement
+                full: zombie.scripting.objects.ItemReplacement
+          - name: getItemWhenDry
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getJobDelta
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getJobType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getKeyId
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getLastAged
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getLightDistance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getLightStrength
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getLootType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getLuaCreate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getMaintenanceMod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMaintenanceMod
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMaintenanceMod
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMaintenanceMod
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMakeUpType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getMaxAmmo
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMaxCapacity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMaxMilk
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMaxSharpness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaxUses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMechanicType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMediaData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: MediaData
+                full: zombie.radio.media.MediaData
+          - name: getMediaType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: getMeltingTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMetalValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMilkReplaceItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getMinutesToBurn
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the MinutesToBurn
+          - name: getMinutesToCook
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the MinutesToCook
+          - name: getModData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+          - name: getModID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getModName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getModelIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getModule
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the module
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the name
+          - name: getName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getNewPlaceDir
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+              notes: the newPlaceDir
+          - name: getOffAge
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the OffAge
+          - name: getOffAgeMax
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the OffAgeMax
+          - name: getOffString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the OffString
+          - name: getOnBreak
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getOpeningRecipe
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getOriginX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getOriginY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getOriginZ
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getOutermostContainer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+          - name: getOwner
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          - name: getOwnerPlayer
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            return:
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+          - name: getPlaceDir
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+              notes: the placeDir
+          - name: getPlaceMultipleSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPlaceOneSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPlayer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+          - name: getPourLiquidOnGroundSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPourType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPreviousOwner
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+              notes: the previousOwner
+          - name: getQuality
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getR
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getRecordedMediaIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: short
+                full: short
+          - name: getReduceInfectionPower
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getRegistry_id
+            modifiers:
+            - public
+            return:
+              type:
+                basic: short
+                full: short
+          - name: getRemoteControlID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getRemoteRange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getReplaceOnUse
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the replaceOnUse
+          - name: getReplaceOnUseFullType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getReplaceOnUseOn
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getReplaceOnUseOnString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getReplaceType
+            modifiers:
+            - public
+            parameters:
+            - name: key
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getReplaceTypes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getReplaceTypesMap
+            modifiers:
+            - public
+            return:
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.lang.String>
+          - name: getRequireInHandOrInventory
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getResearchableRecipes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getResearchableRecipes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getRightClickContainer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+              notes: the rightClickContainer
+          - name: getSaveType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getScore
+            modifiers:
+            - public
+            parameters:
+            - name: desc
+              type:
+                basic: SurvivorDesc
+                full: zombie.characters.SurvivorDesc
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getScriptItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+              notes: the ScriptItem
+          - name: getSharpness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSharpnessIncrement
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSharpnessMultiplier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getShoutMultiplier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getShoutType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSoundByID
+            modifiers:
+            - public
+            parameters:
+            - name: ID
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSoundParameter
+            modifiers:
+            - public
+            parameters:
+            - name: parameterName
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: getStashChance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getStashMap
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getStaticModel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getStaticModelException
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getStaticModelsByIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getStrainModifier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getStressChange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the stressChange
+          - name: getStringItemType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSuspensionCompression
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSuspensionDamping
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSwingAnim
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the swingAnim
+          - name: getTags
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getTaken
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoObject>
+              notes: the Taken
+          - name: getTex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+          - name: getTexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+              notes: the texture
+          - name: getTextureBurnt
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+              notes: the textureBurnt
+          - name: getTextureColorMask
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+          - name: getTextureCooked
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+              notes: the textureCooked
+          - name: getTextureFluidMask
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+          - name: getTexturerotten
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+              notes: the texturerotten
+          - name: getTimesHeadRepaired
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getTimesRepaired
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getTooltip
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getTorchDot
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getUnCookedString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the UnCookedString
+          - name: getUnequipSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getUnequippedWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getUnhappyChange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the unhappyChange
+          - name: getUser
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          - name: getUses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the uses
+          - name: getVisionModifier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getVisual
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ItemVisual
+                full: zombie.core.skinnedmodel.visual.ItemVisual
+          - name: getWeaponHitArmourSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getWeaponLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the Weight
+          - name: getWetCooldown
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWetness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWheelFriction
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWithDrainable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getWithoutDrainable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getWorker
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getWorldAlpha
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWorldItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoWorldInventoryObject
+                full: zombie.iso.objects.IsoWorldInventoryObject
+          - name: getWorldObjectSprite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getWorldStaticItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getWorldStaticModel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getWorldStaticModelsByIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getWorldTexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the WorldTexture
+          - name: getWorldXRotation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWorldYRotation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWorldZRotation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getZ
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: hasBeenHeard
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasBeenSeen
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasBlood
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasDirt
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasHeadCondition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasMetal
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasModData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasOrigin
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasQuality
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasReplaceType
+            modifiers:
+            - public
+            parameters:
+            - name: key
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasResearchableRecipes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasSharpness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasTag
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemTag
+                full: zombie.scripting.objects.ItemTag[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasTag
+            modifiers:
+            - public
+            parameters:
+            - name: tag
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasTimesHeadRepaired
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: haveExtraItems
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: headConditionCheck
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: headConditionCheck
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: headConditionCheck
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: headConditionCheck
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: headConditionCheck
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: headConditionCheck
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg4
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: incrementCondition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: inheritFoodAgeFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: inheritOlderFoodAge
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: initialiseItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: is
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemKey
+                full: zombie.scripting.objects.ItemKey[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isActivated
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAlcoholic
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAlwaysWelcomeGift
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the AlwaysWelcomeGift
+          - name: isAnimalCorpse
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAnimalFeed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isBeingFilled
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isBloody
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isBroken
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isBurnt
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the Burnt
+          - name: isCanBandage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the CanBandage
+          - name: isConditionAffectsCapacity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCookable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the IsCookable
+          - name: isCooked
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the Cooked
+          - name: isCustomColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCustomName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCustomWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDamaged
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDisappearOnUse
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the DisappearOnUse
+          - name: isDoingExtendedPlacement
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDull
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEmittingLight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEmptyOfFluid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEntityValid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEquipped
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEquippedNoSprint
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFakeEquipped
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFakeEquipped
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFavorite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFavouriteRecipeInput
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFishingLure
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFluidContainer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFood
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isForceDropHeavyItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFullOfFluid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isHidden
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isHumanCorpse
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInLocalPlayerInventory
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInPlayerInventory
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInfected
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInitialised
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isIsCookable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the IsCookable
+          - name: isKeepOnDeplete
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isKeyRing
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMemento
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isNoRecipes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isProtectFromRainWhileEquipped
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPureWater
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRecordedMedia
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRemoteController
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRequiresEquippedBothHands
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSealed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSpice
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTorchCone
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTrap
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTwoHandWeapon
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUnwanted
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUseWorldItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isVanilla
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isVisualAid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isWaterSource
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the IsWaterSource
+          - name: isWet
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isWorn
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: input
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadCorpseFromByteData
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: IsoDeadBody
+                full: zombie.iso.objects.IsoDeadBody
+          - name: monogramAfterDescriptor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: SurvivorDesc
+                full: zombie.characters.SurvivorDesc
+            return:
+              type:
+                basic: void
+                full: void
+          - name: nameAfterDescriptor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: SurvivorDesc
+                full: zombie.characters.SurvivorDesc
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onBreak
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: playActivateDeactivateSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: playActivateSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: playDeactivateSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: playSoundOnPlayer
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: randomizeCondition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: randomizeGeneralCondition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: randomizeHeadCondition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: randomizeSharpness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: randomizeWorldZRotation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reduceCondition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reduceHeadCondition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reduceSharpness
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: researchRecipes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: output
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: net
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: saveWithSize
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: output
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: net
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setActivated
+            modifiers:
+            - public
+            parameters:
+            - name: activated
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setActivatedRemote
+            modifiers:
+            - public
+            parameters:
+            - name: activated
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setActualWeight
+            modifiers:
+            - public
+            parameters:
+            - name: ActualWeight
+              type:
+                basic: float
+                full: float
+              notes: the ActualWeight to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAge
+            modifiers:
+            - public
+            parameters:
+            - name: Age
+              type:
+                basic: float
+                full: float
+              notes: the Age to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAlcoholPower
+            modifiers:
+            - public
+            parameters:
+            - name: alcoholPower
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAlcoholic
+            modifiers:
+            - public
+            parameters:
+            - name: alcoholic
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAmmoType
+            modifiers:
+            - public
+            parameters:
+            - name: ammoType
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAnimalTracks
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AnimalTracks
+                full: zombie.characters.animals.AnimalTracks
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAttachedSlot
+            modifiers:
+            - public
+            parameters:
+            - name: attachedSlot
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAttachedSlotType
+            modifiers:
+            - public
+            parameters:
+            - name: attachedSlotType
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAttachedToModel
+            modifiers:
+            - public
+            parameters:
+            - name: attachedToModel
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAttachmentReplacement
+            modifiers:
+            - public
+            parameters:
+            - name: attachementReplacement
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAttachmentType
+            modifiers:
+            - public
+            parameters:
+            - name: attachmentType
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAttachmentsProvided
+            modifiers:
+            - public
+            parameters:
+            - name: attachmentsProvided
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAutoAge
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBandagePower
+            modifiers:
+            - public
+            parameters:
+            - name: bandagePower
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBeingFilled
+            modifiers:
+            - public
+            parameters:
+            - name: v
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBlood
+            modifiers:
+            - public
+            parameters:
+            - name: bodyPartType
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            - name: amount
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBloodClothingType
+            modifiers:
+            - public
+            parameters:
+            - name: bloodClothingType
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characterTextures.BloodClothingType>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBloodLevel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBoredomChange
+            modifiers:
+            - public
+            parameters:
+            - name: boredomChange
+              type:
+                basic: float
+                full: float
+              notes: the boredomChange to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBrakeForce
+            modifiers:
+            - public
+            parameters:
+            - name: brakeForce
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBreakSound
+            modifiers:
+            - public
+            parameters:
+            - name: breakSound
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBroken
+            modifiers:
+            - public
+            parameters:
+            - name: broken
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBurnt
+            modifiers:
+            - public
+            parameters:
+            - name: Burnt
+              type:
+                basic: boolean
+                full: boolean
+              notes: the Burnt to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBurntString
+            modifiers:
+            - public
+            parameters:
+            - name: BurntString
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the BurntString to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCanBeActivated
+            modifiers:
+            - public
+            parameters:
+            - name: activatedItem
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCanBeRemote
+            modifiers:
+            - public
+            parameters:
+            - name: canBeRemote
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCat
+            modifiers:
+            - public
+            parameters:
+            - name: cat
+              type:
+                basic: ItemType
+                full: zombie.inventory.ItemType
+              notes: the cat to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setChanceToSpawnDamaged
+            modifiers:
+            - public
+            parameters:
+            - name: chanceToSpawnDamaged
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setColor
+            modifiers:
+            - public
+            parameters:
+            - name: color
+              type:
+                basic: Color
+                full: zombie.core.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setColorBlue
+            modifiers:
+            - public
+            parameters:
+            - name: colorBlue
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setColorGreen
+            modifiers:
+            - public
+            parameters:
+            - name: colorGreen
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setColorRed
+            modifiers:
+            - public
+            parameters:
+            - name: colorRed
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCondition
+            modifiers:
+            - public
+            parameters:
+            - name: Condition
+              type:
+                basic: int
+                full: int
+            - name: doSound
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCondition
+            modifiers:
+            - public
+            parameters:
+            - name: Condition
+              type:
+                basic: int
+                full: int
+              notes: the Condition to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setConditionFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setConditionFromHeadCondition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setConditionFromModData
+            modifiers:
+            - public
+            parameters:
+            - name: other
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setConditionLowerNormal
+            modifiers:
+            - public
+            parameters:
+            - name: conditionLowerNormal
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setConditionLowerOffroad
+            modifiers:
+            - public
+            parameters:
+            - name: conditionLowerOffroad
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setConditionMax
+            modifiers:
+            - public
+            parameters:
+            - name: ConditionMax
+              type:
+                basic: int
+                full: int
+              notes: the ConditionMax to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setConditionNoSound
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setConditionTo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setConditionWhileLoading
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setContainer
+            modifiers:
+            - public
+            parameters:
+            - name: container
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+              notes: the container to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setContainerX
+            modifiers:
+            - public
+            parameters:
+            - name: containerX
+              type:
+                basic: int
+                full: int
+              notes: the containerX to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setContainerY
+            modifiers:
+            - public
+            parameters:
+            - name: containerY
+              type:
+                basic: int
+                full: int
+              notes: the containerY to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCooked
+            modifiers:
+            - public
+            parameters:
+            - name: Cooked
+              type:
+                basic: boolean
+                full: boolean
+              notes: the Cooked to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCookedString
+            modifiers:
+            - public
+            parameters:
+            - name: CookedString
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the CookedString to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCookingTime
+            modifiers:
+            - public
+            parameters:
+            - name: CookingTime
+              type:
+                basic: float
+                full: float
+              notes: the CookingTime to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCount
+            modifiers:
+            - public
+            parameters:
+            - name: count
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCountDownSound
+            modifiers:
+            - public
+            parameters:
+            - name: sound
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCurrentAmmoCount
+            modifiers:
+            - public
+            parameters:
+            - name: ammo
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCurrentUses
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCurrentUsesFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCustomColor
+            modifiers:
+            - public
+            parameters:
+            - name: customColor
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCustomMenuOption
+            modifiers:
+            - public
+            parameters:
+            - name: customMenuOption
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCustomName
+            modifiers:
+            - public
+            parameters:
+            - name: customName
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCustomWeight
+            modifiers:
+            - public
+            parameters:
+            - name: custom
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDescription
+            modifiers:
+            - public
+            parameters:
+            - name: Description
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the Description to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDirt
+            modifiers:
+            - public
+            parameters:
+            - name: bodyPartType
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            - name: amount
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDisplayCategory
+            modifiers:
+            - public
+            parameters:
+            - name: displayCategory
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDoingExtendedPlacement
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDurability
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEngineLoudness
+            modifiers:
+            - public
+            parameters:
+            - name: engineLoudness
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEquipParent
+            modifiers:
+            - public
+            parameters:
+            - name: parent
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEquipParent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEvolvedRecipeName
+            modifiers:
+            - public
+            parameters:
+            - name: evolvedRecipeName
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setExplosionSound
+            modifiers:
+            - public
+            parameters:
+            - name: explosionSound
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFatigueChange
+            modifiers:
+            - public
+            parameters:
+            - name: fatigueChange
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFavorite
+            modifiers:
+            - public
+            parameters:
+            - name: favorite
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setGunType
+            modifiers:
+            - public
+            parameters:
+            - name: gunType
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHaveBeenRepaired
+            modifiers:
+            - public
+            parameters:
+            - name: haveBeenRepaired
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHeadCondition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHeadConditionFromCondition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setID
+            modifiers:
+            - public
+            parameters:
+            - name: itemId
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIcon
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIconsForTexture
+            modifiers:
+            - public
+            parameters:
+            - name: iconsForTexture
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInfected
+            modifiers:
+            - public
+            parameters:
+            - name: infected
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInitialised
+            modifiers:
+            - public
+            parameters:
+            - name: initialised
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsCookable
+            modifiers:
+            - public
+            parameters:
+            - name: IsCookable
+              type:
+                basic: boolean
+                full: boolean
+              notes: the IsCookable to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsCraftingConsumed
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setItemCapacity
+            modifiers:
+            - public
+            parameters:
+            - name: capacity
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setItemHeat
+            modifiers:
+            - public
+            parameters:
+            - name: itemHeat
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setItemWhenDry
+            modifiers:
+            - public
+            parameters:
+            - name: itemWhenDry
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setJobDelta
+            modifiers:
+            - public
+            parameters:
+            - name: delta
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setJobType
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setKeyId
+            modifiers:
+            - public
+            parameters:
+            - name: keyId
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLastAged
+            modifiers:
+            - public
+            parameters:
+            - name: time
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLightDistance
+            modifiers:
+            - public
+            parameters:
+            - name: lightDistance
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLightStrength
+            modifiers:
+            - public
+            parameters:
+            - name: lightStrength
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxAmmo
+            modifiers:
+            - public
+            parameters:
+            - name: maxAmmoCount
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxCapacity
+            modifiers:
+            - public
+            parameters:
+            - name: maxCapacity
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMediaType
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMeltingTime
+            modifiers:
+            - public
+            parameters:
+            - name: meltingTime
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMetalValue
+            modifiers:
+            - public
+            parameters:
+            - name: metalValue
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMinutesToBurn
+            modifiers:
+            - public
+            parameters:
+            - name: MinutesToBurn
+              type:
+                basic: float
+                full: float
+              notes: the MinutesToBurn to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMinutesToCook
+            modifiers:
+            - public
+            parameters:
+            - name: MinutesToCook
+              type:
+                basic: float
+                full: float
+              notes: the MinutesToCook to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setModelIndex
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setModule
+            modifiers:
+            - public
+            parameters:
+            - name: module
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the module to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setName
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the name to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNewPlaceDir
+            modifiers:
+            - public
+            parameters:
+            - name: newPlaceDir
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+              notes: the newPlaceDir to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNoRecipes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: arg1
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOffAge
+            modifiers:
+            - public
+            parameters:
+            - name: OffAge
+              type:
+                basic: int
+                full: int
+              notes: the OffAge to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOffAgeMax
+            modifiers:
+            - public
+            parameters:
+            - name: OffAgeMax
+              type:
+                basic: int
+                full: int
+              notes: the OffAgeMax to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOffString
+            modifiers:
+            - public
+            parameters:
+            - name: OffString
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the OffString to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOrigin
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setOrigin
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setOrigin
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setOriginX
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOriginY
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOriginZ
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPlaceDir
+            modifiers:
+            - public
+            parameters:
+            - name: placeDir
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+              notes: the placeDir to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPreviousOwner
+            modifiers:
+            - public
+            parameters:
+            - name: previousOwner
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+              notes: the previousOwner to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setQuality
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRecordedMediaData
+            modifiers:
+            - public
+            parameters:
+            - name: data
+              type:
+                basic: MediaData
+                full: zombie.radio.media.MediaData
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRecordedMediaIndex
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: short
+                full: short
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRecordedMediaIndexInteger
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setReduceInfectionPower
+            modifiers:
+            - public
+            parameters:
+            - name: reduceInfectionPower
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRegistry_id
+            modifiers:
+            - public
+            parameters:
+            - name: itemscript
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRemoteControlID
+            modifiers:
+            - public
+            parameters:
+            - name: remoteControlID
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRemoteController
+            modifiers:
+            - public
+            parameters:
+            - name: remoteController
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRemoteRange
+            modifiers:
+            - public
+            parameters:
+            - name: remoteRange
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setReplaceOnUse
+            modifiers:
+            - public
+            parameters:
+            - name: replaceOnUse
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the replaceOnUse to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setReplaceOnUseOn
+            modifiers:
+            - public
+            parameters:
+            - name: ReplaceOnUseOn
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRequireInHandOrInventory
+            modifiers:
+            - public
+            parameters:
+            - name: requireInHandOrInventory
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRightClickContainer
+            modifiers:
+            - public
+            parameters:
+            - name: rightClickContainer
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+              notes: the rightClickContainer to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setScriptItem
+            modifiers:
+            - public
+            parameters:
+            - name: ScriptItem
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+              notes: the ScriptItem to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSharpness
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSharpnessFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStashChance
+            modifiers:
+            - public
+            parameters:
+            - name: stashChance
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStashMap
+            modifiers:
+            - public
+            parameters:
+            - name: stashMap
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStaticModel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStaticModel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ModelKey
+                full: zombie.scripting.objects.ModelKey
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStaticModelsByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStressChange
+            modifiers:
+            - public
+            parameters:
+            - name: stressChange
+              type:
+                basic: float
+                full: float
+              notes: the stressChange to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSuspensionCompression
+            modifiers:
+            - public
+            parameters:
+            - name: suspensionCompression
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSuspensionDamping
+            modifiers:
+            - public
+            parameters:
+            - name: suspensionDamping
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTaken
+            modifiers:
+            - public
+            parameters:
+            - name: Taken
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoObject>
+              notes: the Taken to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTexture
+            modifiers:
+            - public
+            parameters:
+            - name: texture
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+              notes: the texture to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTextureBurnt
+            modifiers:
+            - public
+            parameters:
+            - name: textureBurnt
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+              notes: the textureBurnt to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTextureColorMask
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTextureCooked
+            modifiers:
+            - public
+            parameters:
+            - name: textureCooked
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+              notes: the textureCooked to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTextureFluidMask
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTexturerotten
+            modifiers:
+            - public
+            parameters:
+            - name: texturerotten
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+              notes: the texturerotten to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTimesHeadRepaired
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTimesRepaired
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTooltip
+            modifiers:
+            - public
+            parameters:
+            - name: tooltip
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTorchCone
+            modifiers:
+            - public
+            parameters:
+            - name: isTorchCone
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setType
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the type to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUnCookedString
+            modifiers:
+            - public
+            parameters:
+            - name: UnCookedString
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the UnCookedString to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUnhappyChange
+            modifiers:
+            - public
+            parameters:
+            - name: unhappyChange
+              type:
+                basic: float
+                full: float
+              notes: the unhappyChange to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUnwanted
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUses
+            modifiers:
+            - public
+            parameters:
+            - name: uses
+              type:
+                basic: int
+                full: int
+              notes: the uses to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUsesFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWeight
+            modifiers:
+            - public
+            parameters:
+            - name: Weight
+              type:
+                basic: float
+                full: float
+              notes: the Weight to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWet
+            modifiers:
+            - public
+            parameters:
+            - name: isWet
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWetCooldown
+            modifiers:
+            - public
+            parameters:
+            - name: wetCooldown
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWheelFriction
+            modifiers:
+            - public
+            parameters:
+            - name: wheelFriction
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorker
+            modifiers:
+            - public
+            parameters:
+            - name: worker
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorldAlpha
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorldItem
+            modifiers:
+            - public
+            parameters:
+            - name: w
+              type:
+                basic: IsoWorldInventoryObject
+                full: zombie.iso.objects.IsoWorldInventoryObject
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorldScale
+            modifiers:
+            - public
+            parameters:
+            - name: scale
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorldStaticItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorldStaticModel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorldStaticModel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ModelKey
+                full: zombie.scripting.objects.ModelKey
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorldStaticModelsByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorldTexture
+            modifiers:
+            - public
+            parameters:
+            - name: WorldTexture
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the WorldTexture to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorldXRotation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorldYRotation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorldZRotation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sharpnessCheck
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: sharpnessCheck
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: sharpnessCheck
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: sharpnessCheck
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: sharpnessCheck
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: sharpnessCheck
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg4
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: shouldUpdateInWorld
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: stopEquippedAndActivatedSound
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: storeInByteData
+            modifiers:
+            - public
+            parameters:
+            - name: o
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: void
+                full: void
+          - name: syncItemFields
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: synchWithVisual
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: tryGetWorldStaticModelByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: tryLoadCorpseFromByteData
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: IsoDeadBody
+                full: zombie.iso.objects.IsoDeadBody
+          - name: unsealIfNotFull
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateAge
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateEquippedAndActivatedSound
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: BaseSoundEmitter
+                full: zombie.audio.BaseSoundEmitter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateEquippedAndActivatedSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateSound
+            modifiers:
+            - public
+            parameters:
+            - name: emitter
+              type:
+                basic: BaseSoundEmitter
+                full: zombie.audio.BaseSoundEmitter
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: LoadFromFile
+            modifiers:
+            - package
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: DataInputStream
+                full: java.io.DataInputStream
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: RemoveFromContainer
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getNoRecipesModDataString
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: loadItem
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: input
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: loadItem
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: input
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            - name: doSaveTypeCheck
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+              notes: InventoryItem, or null if the item failed loading or if Creating
+                the item failed due to being obsolete etc.
+            notes: "Attempts loading the item including creation, uppon failure bytes\
+              \ might be skipped or the buffer position may be set to end item position.\n\
+              \ Item needs to be saved with size."
+          - name: loadItem
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem

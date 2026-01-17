@@ -1,0 +1,220 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie:
+        SandboxOptions.EnumSandboxOption:
+          extends: zombie.config.EnumConfigOption
+          modifiers:
+          - public
+          fields:
+            bCustom:
+              name: bCustom
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            pageName:
+              name: pageName
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            shortName:
+              name: shortName
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            tableName:
+              name: tableName
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            translation:
+              name: translation
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            valueTranslation:
+              name: valueTranslation
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: owner
+              type:
+                basic: SandboxOptions
+                full: zombie.SandboxOptions
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: numValues
+              type:
+                basic: int
+                full: int
+            - name: defaultValue
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: asConfigOption
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ConfigOption
+                full: zombie.config.ConfigOption
+          - name: fromTable
+            modifiers:
+            - public
+            parameters:
+            - name: table
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getPageName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getShortName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getTableName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getTooltip
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getTranslatedName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getValueTranslation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getValueTranslationByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getValueTranslationByIndexOrNull
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isCustom
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setCustom
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPageName
+            modifiers:
+            - public
+            parameters:
+            - name: pageName
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: SandboxOptions.SandboxOption
+                full: zombie.SandboxOptions$SandboxOption
+          - name: setTranslation
+            modifiers:
+            - public
+            parameters:
+            - name: translation
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: SandboxOptions.SandboxOption
+                full: zombie.SandboxOptions$SandboxOption
+          - name: setValueTranslation
+            modifiers:
+            - public
+            parameters:
+            - name: translation
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: SandboxOptions.EnumSandboxOption
+                full: zombie.SandboxOptions$EnumSandboxOption
+          - name: toTable
+            modifiers:
+            - public
+            parameters:
+            - name: table
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            return:
+              type:
+                basic: void
+                full: void

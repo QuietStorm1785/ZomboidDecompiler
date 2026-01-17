@@ -1,0 +1,38 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.animation.debug:
+        AnimationTrackRecordingFrame:
+          extends: zombie.core.skinnedmodel.animation.debug.GenericNameWeightRecordingFrame
+          modifiers:
+          - public
+          - final
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: fileKey
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: logAnimWeights
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: LiveAnimationTrackEntries
+                full: zombie.core.skinnedmodel.animation.LiveAnimationTrackEntries
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity:
+        EntityBucket.BucketListenerData:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            listener:
+              name: listener
+              modifiers:
+              - public
+              type:
+                basic: IBucketListener
+                full: zombie.entity.IBucketListener
+            priority:
+              name: priority
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - private

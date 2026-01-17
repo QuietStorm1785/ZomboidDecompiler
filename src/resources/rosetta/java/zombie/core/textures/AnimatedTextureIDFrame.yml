@@ -1,0 +1,28 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.textures:
+        AnimatedTextureIDFrame:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            apngFrame:
+              name: apngFrame
+              modifiers:
+              - public
+              type:
+                basic: APNGFrame
+                full: zombie.core.textures.APNGFrame
+            textureID:
+              name: textureID
+              modifiers:
+              - public
+              type:
+                basic: TextureID
+                full: zombie.core.textures.TextureID
+          constructors:
+          - modifiers:
+            - public

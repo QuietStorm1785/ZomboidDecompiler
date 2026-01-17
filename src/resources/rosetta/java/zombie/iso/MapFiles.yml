@@ -1,0 +1,340 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        MapFiles:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            InfoFileModded:
+              name: InfoFileModded
+              modifiers:
+              - public
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.iso.enums.ChunkGenerationStatus>
+            InfoFileNames:
+              name: InfoFileNames
+              modifiers:
+              - public
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.lang.String>
+            InfoHeaderNames:
+              name: InfoHeaderNames
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            InfoHeaders:
+              name: InfoHeaders
+              modifiers:
+              - public
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.iso.LotHeader>
+            bgHasCell:
+              name: bgHasCell
+              modifiers:
+              - public
+              type:
+                basic: BooleanGrid
+                full: zombie.core.utils.BooleanGrid
+            bgHasCell300:
+              name: bgHasCell300
+              modifiers:
+              - public
+              type:
+                basic: BooleanGrid
+                full: zombie.core.utils.BooleanGrid
+            mapDirectoryAbsolutePath:
+              name: mapDirectoryAbsolutePath
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            mapDirectoryName:
+              name: mapDirectoryName
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            mapDirectoryZFSPath:
+              name: mapDirectoryZFSPath
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            maxCell300X:
+              name: maxCell300X
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            maxCell300Y:
+              name: maxCell300Y
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            maxX:
+              name: maxX
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            maxY:
+              name: maxY
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            minCell300X:
+              name: minCell300X
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            minCell300Y:
+              name: minCell300Y
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            minX:
+              name: minX
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            minY:
+              name: minY
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            priority:
+              name: priority
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          staticFields:
+            LotHeaderFileNameCache:
+              name: LotHeaderFileNameCache
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ThreadLocal
+                full: java.lang.ThreadLocal<gnu.trove.map.hash.TLongObjectHashMap<java.lang.String>>
+            currentMap:
+              name: currentMap
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            currentMapFiles:
+              name: currentMapFiles
+              modifiers:
+              - package
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.MapFiles>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg3
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: Dispose
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createLotHeader
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ChooseGameInfo.Map
+                full: zombie.gameStates.ChooseGameInfo$Map
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: LotHeader
+                full: zombie.iso.LotHeader
+          - name: getHeightInCells
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getLotHeader
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: LotHeader
+                full: zombie.iso.LotHeader
+          - name: getWidthInCells
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: hasCell
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasCell300
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isValidCellPos
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: postLoad
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getCurrentMapFiles
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.MapFiles>
+          - name: getLotDirectories
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getLotDirectories
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>

@@ -1,0 +1,70 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util:
+        PrimitiveIterator.OfInt:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: An Iterator specialized for int values.
+          methods:
+          - name: forEachRemaining
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IntConsumer
+                full: java.util.function.IntConsumer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forEachRemaining
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<? super java.lang.Integer>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forEachRemaining
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void
+          - name: next
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Integer
+                full: java.lang.Integer
+          - name: next
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: nextInt
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int

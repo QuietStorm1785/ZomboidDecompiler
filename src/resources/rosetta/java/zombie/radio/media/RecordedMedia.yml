@@ -1,0 +1,371 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.radio.media:
+        RecordedMedia:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: TurboTuTone.
+          fields:
+            REQUIRES_SAVING:
+              name: REQUIRES_SAVING
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            categories:
+              name: categories
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            categorizedMap:
+              name: categorizedMap
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, java.util.ArrayList<zombie.radio.media.MediaData>>
+            homeVhsSpawned:
+              name: homeVhsSpawned
+              modifiers:
+              - private
+              type:
+                basic: HashSet
+                full: java.util.HashSet<java.lang.Short>
+            indexes:
+              name: indexes
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            legacyListenedLines:
+              name: legacyListenedLines
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            mediaDataMap:
+              name: mediaDataMap
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.radio.media.MediaData>
+            retailCdSpawnTable:
+              name: retailCdSpawnTable
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Integer, java.util.ArrayList<zombie.radio.media.MediaData>>
+            retailVhsSpawnTable:
+              name: retailVhsSpawnTable
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Integer, java.util.ArrayList<zombie.radio.media.MediaData>>
+          staticFields:
+            DISABLE_LINE_LEARNING:
+              name: DISABLE_LINE_LEARNING
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            SAVE_FILE:
+              name: SAVE_FILE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            SPAWN_COMMON:
+              name: SPAWN_COMMON
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            SPAWN_EXCEPTIONAL:
+              name: SPAWN_EXCEPTIONAL
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            SPAWN_RARE:
+              name: SPAWN_RARE
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            VERSION:
+              name: VERSION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            VERSION1:
+              name: VERSION1
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            VERSION2:
+              name: VERSION2
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            indexesFromServer:
+              name: indexesFromServer
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getAllMediaForCategory
+            modifiers:
+            - public
+            parameters:
+            - name: category
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.radio.media.MediaData>
+          - name: getAllMediaForType
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.radio.media.MediaData>
+          - name: getCategories
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getIndexForMediaData
+            modifiers:
+            - public
+            parameters:
+            - name: data
+              type:
+                basic: MediaData
+                full: zombie.radio.media.MediaData
+            return:
+              type:
+                basic: short
+                full: short
+          - name: getMediaData
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: MediaData
+                full: zombie.radio.media.MediaData
+          - name: getMediaDataFromIndex
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: short
+                full: short
+            return:
+              type:
+                basic: MediaData
+                full: zombie.radio.media.MediaData
+          - name: getRandomFromCategory
+            modifiers:
+            - public
+            parameters:
+            - name: cat
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: MediaData
+                full: zombie.radio.media.MediaData
+          - name: handleLegacyListenedLines
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: hasListenedToAll
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: mediaData
+              type:
+                basic: MediaData
+                full: zombie.radio.media.MediaData
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasListenedToLine
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: guid
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: init
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: load
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: register
+            modifiers:
+            - public
+            parameters:
+            - name: category
+              type:
+                basic: String
+                full: java.lang.String
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+            - name: itemDisplayName
+              type:
+                basic: String
+                full: java.lang.String
+            - name: spawning
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: MediaData
+                full: zombie.radio.media.MediaData
+          - name: save
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendRequestData
+            modifiers:
+            - public
+            parameters:
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: getMediaTypeForCategory
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: category
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: receiveRequestData
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toAscii
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: string
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String

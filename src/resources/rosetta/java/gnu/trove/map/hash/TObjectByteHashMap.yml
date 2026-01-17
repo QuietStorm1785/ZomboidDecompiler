@@ -1,0 +1,498 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      gnu.trove.map.hash:
+        TObjectByteHashMap:
+          extends: gnu.trove.impl.hash.TObjectHash<K>
+          modifiers:
+          - public
+          fields:
+            PUT_ALL_PROC:
+              name: PUT_ALL_PROC
+              modifiers:
+              - private
+              type:
+                basic: TObjectByteProcedure
+                full: gnu.trove.procedure.TObjectByteProcedure<K>
+            _values:
+              name: _values
+              modifiers:
+              - protected
+              type:
+                basic: byte
+                full: byte[]
+            no_entry_value:
+              name: no_entry_value
+              modifiers:
+              - protected
+              type:
+                basic: byte
+                full: byte
+          staticFields:
+            serialVersionUID:
+              name: serialVersionUID
+              modifiers:
+              - package
+              - static
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: byte
+                full: byte
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TObjectByteMap
+                full: gnu.trove.map.TObjectByteMap<? extends K>
+          methods:
+          - name: adjustOrPutValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            - name: arg2
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: adjustValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: containsKey
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: doPut
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: forEachEntry
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TObjectByteProcedure
+                full: gnu.trove.procedure.TObjectByteProcedure<? super K>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: forEachKey
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TObjectProcedure
+                full: gnu.trove.procedure.TObjectProcedure<? super K>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: forEachValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TByteProcedure
+                full: gnu.trove.procedure.TByteProcedure
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: getNoEntryValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: increment
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: TObjectByteIterator
+                full: gnu.trove.iterator.TObjectByteIterator<K>
+          - name: keySet
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Set
+                full: java.util.Set<K>
+          - name: keys
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object[]
+          - name: keys
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K[]
+            return:
+              type:
+                basic: K
+                full: K[]
+          - name: put
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: putAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Map
+                full: java.util.Map<? extends K, ? extends java.lang.Byte>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TObjectByteMap
+                full: gnu.trove.map.TObjectByteMap<? extends K>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putIfAbsent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: readExternal
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectInput
+                full: java.io.ObjectInput
+            return:
+              type:
+                basic: void
+                full: void
+          - name: rehash
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: remove
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: removeAt
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: retainEntries
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TObjectByteProcedure
+                full: gnu.trove.procedure.TObjectByteProcedure<? super K>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setUp
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: transformValues
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TByteFunction
+                full: gnu.trove.function.TByteFunction
+            return:
+              type:
+                basic: void
+                full: void
+          - name: valueCollection
+            modifiers:
+            - public
+            return:
+              type:
+                basic: TByteCollection
+                full: gnu.trove.TByteCollection
+          - name: values
+            modifiers:
+            - public
+            return:
+              type:
+                basic: byte
+                full: byte[]
+          - name: values
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: byte
+                full: byte[]
+          - name: writeExternal
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectOutput
+                full: java.io.ObjectOutput
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: access$100
+            modifiers:
+            - package
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: TObjectByteHashMap
+                full: gnu.trove.map.hash.TObjectByteHashMap
+            return:
+              type:
+                basic: int
+                full: int
+          - name: access$200
+            modifiers:
+            - package
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: TObjectByteHashMap
+                full: gnu.trove.map.hash.TObjectByteHashMap
+            return:
+              type:
+                basic: int
+                full: int

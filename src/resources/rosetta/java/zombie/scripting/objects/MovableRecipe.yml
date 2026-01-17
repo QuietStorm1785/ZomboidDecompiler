@@ -1,0 +1,212 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.objects:
+        MovableRecipe:
+          extends: zombie.scripting.objects.Recipe
+          modifiers:
+          - public
+          notes: TurboTuTone.
+          fields:
+            isValid:
+              name: isValid
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            primaryTools:
+              name: primaryTools
+              modifiers:
+              - private
+              type:
+                basic: Recipe.Source
+                full: zombie.scripting.objects.Recipe$Source
+            secondaryTools:
+              name: secondaryTools
+              modifiers:
+              - private
+              type:
+                basic: Recipe.Source
+                full: zombie.scripting.objects.Recipe$Source
+            worldSprite:
+              name: worldSprite
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            xpPerk:
+              name: xpPerk
+              modifiers:
+              - private
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getPrimaryTools
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Recipe.Source
+                full: zombie.scripting.objects.Recipe$Source
+          - name: getSecondaryTools
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Recipe.Source
+                full: zombie.scripting.objects.Recipe$Source
+          - name: getWorldSprite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getXpPerk
+            modifiers:
+            - public
+            return:
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+          - name: hasXpPerk
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isValid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setName
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRequiredSkill
+            modifiers:
+            - public
+            parameters:
+            - name: perk
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+            - name: level
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setResult
+            modifiers:
+            - public
+            parameters:
+            - name: resultItem
+              type:
+                basic: String
+                full: java.lang.String
+            - name: count
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSource
+            modifiers:
+            - public
+            parameters:
+            - name: sourceItem
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTime
+            modifiers:
+            - public
+            parameters:
+            - name: time
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTool
+            modifiers:
+            - public
+            parameters:
+            - name: tools
+              type:
+                basic: String
+                full: java.lang.String
+            - name: isPrimary
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValid
+            modifiers:
+            - public
+            parameters:
+            - name: valid
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorldSprite
+            modifiers:
+            - public
+            parameters:
+            - name: worldSprite
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setXpPerk
+            modifiers:
+            - public
+            parameters:
+            - name: perk
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,591 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.chat:
+        ChatElement:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: "Turbo\n shared display of chat lines functionallity for iso objects\
+            \ & players (characters)"
+          fields:
+            Speaking:
+              name: Speaking
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            SpeakingNPC:
+              name: SpeakingNPC
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            bufferX:
+              name: bufferX
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            bufferY:
+              name: bufferY
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            hasChatToDisplay:
+              name: hasChatToDisplay
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            historyInRange:
+              name: historyInRange
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            historyRange:
+              name: historyRange
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            historyVal:
+              name: historyVal
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            maxCharsPerLine:
+              name: maxCharsPerLine
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            maxChatLines:
+              name: maxChatLines
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            owner:
+              name: owner
+              modifiers:
+              - protected
+              type:
+                basic: ChatElementOwner
+                full: zombie.chat.ChatElementOwner
+            playerLines:
+              name: playerLines
+              modifiers:
+              - protected
+              type:
+                basic: ChatElement.PlayerLines
+                full: zombie.chat.ChatElement$PlayerLines[]
+            sayLine:
+              name: sayLine
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            sayLineObject:
+              name: sayLineObject
+              modifiers:
+              - protected
+              type:
+                basic: TextDrawObject
+                full: zombie.ui.TextDrawObject
+            sayLineTag:
+              name: sayLineTag
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            talkerType:
+              name: talkerType
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            useEuclidean:
+              name: useEuclidean
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+          staticFields:
+            backdropTexture:
+              name: backdropTexture
+              modifiers:
+              - public
+              - static
+              type:
+                basic: NineGridTexture
+                full: zombie.chat.NineGridTexture
+            doBackDrop:
+              name: doBackDrop
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            noLogText:
+              name: noLogText
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashSet
+                full: java.util.HashSet<java.lang.String>
+            renderBatch:
+              name: renderBatch
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ChatElement.PlayerLinesList
+                full: zombie.chat.ChatElement$PlayerLinesList[]
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: chatowner
+              type:
+                basic: ChatElementOwner
+                full: zombie.chat.ChatElementOwner
+            - name: numberoflines
+              type:
+                basic: int
+                full: int
+            - name: talkertype
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: IsSpeaking
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsSpeakingNPC
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: Say
+            modifiers:
+            - public
+            parameters:
+            - name: line
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SayDebug
+            modifiers:
+            - public
+            parameters:
+            - name: n
+              type:
+                basic: int
+                full: int
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addChatLine
+            modifiers:
+            - public
+            parameters:
+            - name: msg
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: baseRange
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addChatLine
+            modifiers:
+            - public
+            parameters:
+            - name: msg
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addChatLine
+            modifiers:
+            - public
+            parameters:
+            - name: msg
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: baseRange
+              type:
+                basic: float
+                full: float
+            - name: customTag
+              type:
+                basic: String
+                full: java.lang.String
+            - name: bbcode
+              type:
+                basic: boolean
+                full: boolean
+            - name: img
+              type:
+                basic: boolean
+                full: boolean
+            - name: icons
+              type:
+                basic: boolean
+                full: boolean
+            - name: colors
+              type:
+                basic: boolean
+                full: boolean
+            - name: fonts
+              type:
+                basic: boolean
+                full: boolean
+            - name: equalizeHeights
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clear
+            modifiers:
+            - public
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getDistance
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getHasChatToDisplay
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getMaxChatLines
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSayLine
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSayLineTag
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getScrambleValue
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTalkerType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: playerWithinBounds
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: renderBatched
+            modifiers:
+            - public
+            parameters:
+            - name: playerNum
+              type:
+                basic: int
+                full: int
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderBatched
+            modifiers:
+            - public
+            parameters:
+            - name: playerNum
+              type:
+                basic: int
+                full: int
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: ignoreRadioLines
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHistoryRange
+            modifiers:
+            - public
+            parameters:
+            - name: range
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxCharsPerLine
+            modifiers:
+            - public
+            parameters:
+            - name: maxChars
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxChatLines
+            modifiers:
+            - public
+            parameters:
+            - name: num
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTalkerType
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUseEuclidean
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateChatLines
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateHistory
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: NoRender
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: playerNum
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RenderBatch
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: playerNum
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addNoLogText
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void

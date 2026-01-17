@@ -1,0 +1,132 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.reflect.annotation:
+        AnnotationType:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            inherited:
+              name: inherited
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            memberDefaults:
+              name: memberDefaults
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, java.lang.Object>
+            memberTypes:
+              name: memberTypes
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, java.lang.Class<?>>
+            members:
+              name: members
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, java.lang.reflect.Method>
+            retention:
+              name: retention
+              modifiers:
+              - private
+              type:
+                basic: RetentionPolicy
+                full: java.lang.annotation.RetentionPolicy
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<? extends java.lang.annotation.Annotation>
+          methods:
+          - name: isInherited
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: memberDefaults
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, java.lang.Object>
+          - name: memberTypes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, java.lang.Class<?>>
+          - name: members
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, java.lang.reflect.Method>
+          - name: retention
+            modifiers:
+            - public
+            return:
+              type:
+                basic: RetentionPolicy
+                full: java.lang.annotation.RetentionPolicy
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: getInstance
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<? extends java.lang.annotation.Annotation>
+            return:
+              type:
+                basic: AnnotationType
+                full: sun.reflect.annotation.AnnotationType
+          - name: invocationHandlerReturnType
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>

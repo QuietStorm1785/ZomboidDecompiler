@@ -1,0 +1,37 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ai.permission:
+        IStatePermissions:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: isDeferredMovementAllowed
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPlayerInputAllowed
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: boolean
+                full: boolean

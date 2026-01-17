@@ -1,0 +1,67 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.util:
+        Predicate.PredicateIterable:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            iterable:
+              name: iterable
+              modifiers:
+              - public
+              type:
+                basic: Iterable
+                full: java.lang.Iterable<T>
+            iterator:
+              name: iterator
+              modifiers:
+              - public
+              type:
+                basic: Predicate.PredicateIterator
+                full: zombie.entity.util.Predicate$PredicateIterator<T>
+            predicate:
+              name: predicate
+              modifiers:
+              - public
+              type:
+                basic: Predicate
+                full: zombie.entity.util.Predicate<T>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Iterable
+                full: java.lang.Iterable<T>
+            - name: arg1
+              type:
+                basic: Predicate
+                full: zombie.entity.util.Predicate<T>
+          methods:
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Iterator
+                full: java.util.Iterator<T>
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Iterable
+                full: java.lang.Iterable<T>
+            - name: arg1
+              type:
+                basic: Predicate
+                full: zombie.entity.util.Predicate<T>
+            return:
+              type:
+                basic: void
+                full: void

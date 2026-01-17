@@ -1,0 +1,37 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt.dnd.peer:
+        DropTargetPeer:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: addDropTarget
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: DropTarget
+                full: java.awt.dnd.DropTarget
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeDropTarget
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: DropTarget
+                full: java.awt.dnd.DropTarget
+            return:
+              type:
+                basic: void
+                full: void

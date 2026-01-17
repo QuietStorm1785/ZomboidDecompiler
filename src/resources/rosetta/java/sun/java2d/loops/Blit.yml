@@ -1,0 +1,188 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.java2d.loops:
+        Blit:
+          extends: sun.java2d.loops.GraphicsPrimitive
+          modifiers:
+          - public
+          staticFields:
+            blitcache:
+              name: blitcache
+              modifiers:
+              - private
+              - static
+              type:
+                basic: RenderCache
+                full: sun.java2d.loops.RenderCache
+            methodSignature:
+              name: methodSignature
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            primTypeID:
+              name: primTypeID
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            - name: arg1
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            - name: arg2
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            - name: arg2
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            - name: arg3
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+          methods:
+          - name: Blit
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: SurfaceData
+                full: sun.java2d.SurfaceData
+            - name: arg1
+              type:
+                basic: SurfaceData
+                full: sun.java2d.SurfaceData
+            - name: arg2
+              type:
+                basic: Composite
+                full: java.awt.Composite
+            - name: arg3
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: int
+                full: int
+            - name: arg7
+              type:
+                basic: int
+                full: int
+            - name: arg8
+              type:
+                basic: int
+                full: int
+            - name: arg9
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: makePrimitive
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            - name: arg1
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            - name: arg2
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            return:
+              type:
+                basic: GraphicsPrimitive
+                full: sun.java2d.loops.GraphicsPrimitive
+          - name: traceWrap
+            modifiers:
+            - public
+            return:
+              type:
+                basic: GraphicsPrimitive
+                full: sun.java2d.loops.GraphicsPrimitive
+          staticMethods:
+          - name: getFromCache
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            - name: arg1
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            - name: arg2
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            return:
+              type:
+                basic: Blit
+                full: sun.java2d.loops.Blit
+          - name: locate
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            - name: arg1
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            - name: arg2
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            return:
+              type:
+                basic: Blit
+                full: sun.java2d.loops.Blit

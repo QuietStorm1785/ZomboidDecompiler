@@ -1,0 +1,1810 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.lang:
+        Class:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          notes: "Instances of the class Class represent classes and\n interfaces\
+            \ in a running Java application. An enum class and a record\n class are\
+            \ kinds of class; an annotation interface is a kind of\n interface. Every\
+            \ array also belongs to a class that is reflected as\n a Class object\
+            \ that is shared by all arrays with the same\n element type and number\
+            \ of dimensions.  The primitive Java types\n (boolean, byte, char, short,\
+            \ \n int, long, float, and double), and the\n keyword void are also represented\
+            \ as Class objects.\n\n  Class has no public constructor. Instead a Class\n\
+            \ object is constructed automatically by the Java Virtual Machine when\n\
+            \ a class is derived from the bytes of a class file through\n the invocation\
+            \ of one of the following methods:\n \n  ClassLoader::defineClass\n  java.lang.invoke.MethodHandles.Lookup::defineClass\n\
+            \  java.lang.invoke.MethodHandles.Lookup::defineHiddenClass\n \n\n  The\
+            \ methods of class Class expose many characteristics of a\n class or interface.\
+            \ Most characteristics are derived from the class\n file that the class\
+            \ loader passed to the Java Virtual Machine or\n from the class file passed\
+            \ to Lookup::defineClass\n or Lookup::defineHiddenClass.\n A few characteristics\
+            \ are determined by the class loading environment\n at run time, such\
+            \ as the module returned by getModule().\n\n  The following example uses\
+            \ a Class object to print the\n class name of an object:\n\n \n     void\
+            \ printClassName(Object obj) {\n         System.out.println(\"The class\
+            \ of \" + obj +\n                            \" is \" + obj.getClass().getName());\n\
+            \     }\n \n\n It is also possible to get the Class object for a named\n\
+            \ class or interface (or for void) using a class literal.\n For example:\n\
+            \n \n     System.out.println(\"The name of class Foo is: \"+Foo.class.getName());\n\
+            \ \n\n  Some methods of class Class expose whether the declaration of\n\
+            \ a class or interface in Java source code was enclosed within\n another\
+            \ declaration. Other methods describe how a class or interface\n is situated\
+            \ in a nest. A nest is a set of\n classes and interfaces, in the same\
+            \ run-time package, that\n allow mutual access to their private members.\n\
+            \ The classes and interfaces are known as nestmates.\n One nestmate acts\
+            \ as the\n nest host, and enumerates the other nestmates which\n belong\
+            \ to the nest; each of them in turn records it as the nest host.\n The\
+            \ classes and interfaces which belong to a nest, including its host, are\n\
+            \ determined when\n class files are generated, for example, a Java compiler\n\
+            \ will typically record a top-level class as the host of a nest where\
+            \ the\n other members are the classes and interfaces whose declarations\
+            \ are\n enclosed within the top-level class declaration.\n\n  A class\
+            \ or interface created by the invocation of\n Lookup::defineHiddenClass\
+            \ is a hidden\n class or interface.\n All kinds of class, including enum\
+            \ classes and record classes, may be\n hidden classes; all kinds of interface,\
+            \ including annotation interfaces,\n may be hidden interfaces.\n\n The\
+            \ name of a hidden class or interface is\n not a binary name,\n which\
+            \ means the following:\n \n A hidden class or interface cannot be referenced\
+            \ by the constant pools\n     of other classes and interfaces.\n A hidden\
+            \ class or interface cannot be described in\n     nominal form by\n  \
+            \   Class::describeConstable,\n     ClassDesc::of, or\n     ClassDesc::ofDescriptor.\n\
+            \ A hidden class or interface cannot be discovered by Class::forName\n\
+            \     or ClassLoader::loadClass.\n \n\n A hidden class or interface is\
+            \ never an array class, but may be\n the element type of an array. In\
+            \ all other respects, the fact that\n a class or interface is hidden has\
+            \ no bearing on the characteristics\n exposed by the methods of class\
+            \ Class."
+          fields:
+            annotationData:
+              name: annotationData
+              modifiers:
+              - private
+              type:
+                basic: Class.AnnotationData
+                full: java.lang.Class$AnnotationData
+            annotationType:
+              name: annotationType
+              modifiers:
+              - private
+              type:
+                basic: AnnotationType
+                full: sun.reflect.annotation.AnnotationType
+            cachedConstructor:
+              name: cachedConstructor
+              modifiers:
+              - private
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<T>
+            classData:
+              name: classData
+              modifiers:
+              - private
+              type:
+                basic: Object
+                full: java.lang.Object
+            classLoader:
+              name: classLoader
+              modifiers:
+              - private
+              type:
+                basic: ClassLoader
+                full: java.lang.ClassLoader
+            classRedefinedCount:
+              name: classRedefinedCount
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            classValueMap:
+              name: classValueMap
+              modifiers:
+              - package
+              type:
+                basic: ClassValue.ClassValueMap
+                full: java.lang.ClassValue$ClassValueMap
+            componentType:
+              name: componentType
+              modifiers:
+              - private
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            enumConstantDirectory:
+              name: enumConstantDirectory
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, T>
+            enumConstants:
+              name: enumConstants
+              modifiers:
+              - private
+              type:
+                basic: T
+                full: T[]
+            genericInfo:
+              name: genericInfo
+              modifiers:
+              - private
+              type:
+                basic: ClassRepository
+                full: sun.reflect.generics.repository.ClassRepository
+            module:
+              name: module
+              modifiers:
+              - private
+              type:
+                basic: Module
+                full: java.lang.Module
+            name:
+              name: name
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            packageName:
+              name: packageName
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            reflectionData:
+              name: reflectionData
+              modifiers:
+              - private
+              type:
+                basic: SoftReference
+                full: java.lang.ref.SoftReference<java.lang.Class$ReflectionData<T>>
+          staticFields:
+            ANNOTATION:
+              name: ANNOTATION
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            EMPTY_CLASS_ARRAY:
+              name: EMPTY_CLASS_ARRAY
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            ENUM:
+              name: ENUM
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            SYNTHETIC:
+              name: SYNTHETIC
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            allPermDomain:
+              name: allPermDomain
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ProtectionDomain
+                full: java.security.ProtectionDomain
+            reflectionFactory:
+              name: reflectionFactory
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ReflectionFactory
+                full: jdk.internal.reflect.ReflectionFactory
+            serialPersistentFields:
+              name: serialPersistentFields
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ObjectStreamField
+                full: java.io.ObjectStreamField[]
+            serialVersionUID:
+              name: serialVersionUID
+              modifiers:
+              - private
+              - static
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ClassLoader
+                full: java.lang.ClassLoader
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          methods:
+          - name: annotationData
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Class.AnnotationData
+                full: java.lang.Class$AnnotationData
+          - name: arrayType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: arrayType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: TypeDescriptor.OfField
+                full: java.lang.invoke.TypeDescriptor$OfField
+          - name: asSubclass
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<U>
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<? extends U>
+          - name: cannotCastMsg
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: casAnnotationType
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: AnnotationType
+                full: sun.reflect.annotation.AnnotationType
+            - name: arg1
+              type:
+                basic: AnnotationType
+                full: sun.reflect.annotation.AnnotationType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: cast
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: T
+                full: T
+          - name: checkMemberAccess
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: SecurityManager
+                full: java.lang.SecurityManager
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkPackageAccess
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: SecurityManager
+                full: java.lang.SecurityManager
+            - name: arg1
+              type:
+                basic: ClassLoader
+                full: java.lang.ClassLoader
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: componentType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: componentType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: TypeDescriptor.OfField
+                full: java.lang.invoke.TypeDescriptor$OfField
+          - name: createAnnotationData
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Class.AnnotationData
+                full: java.lang.Class$AnnotationData
+          - name: describeConstable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Optional
+                full: java.util.Optional<java.lang.constant.ClassDesc>
+          - name: descriptorString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: desiredAssertionStatus
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: elementType
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: enumConstantDirectory
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, T>
+          - name: getAnnotatedInterfaces
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AnnotatedType
+                full: java.lang.reflect.AnnotatedType[]
+          - name: getAnnotatedSuperclass
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AnnotatedType
+                full: java.lang.reflect.AnnotatedType
+          - name: getAnnotation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<A>
+            return:
+              type:
+                basic: A
+                full: A
+          - name: getAnnotationType
+            modifiers:
+            - package
+            return:
+              type:
+                basic: AnnotationType
+                full: sun.reflect.annotation.AnnotationType
+          - name: getAnnotations
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Annotation
+                full: java.lang.annotation.Annotation[]
+          - name: getAnnotationsByType
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<A>
+            return:
+              type:
+                basic: A
+                full: A[]
+          - name: getCanonicalName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getCanonicalName0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getClassData
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getClassLoader
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClassLoader
+                full: java.lang.ClassLoader
+          - name: getClassLoader0
+            modifiers:
+            - package
+            return:
+              type:
+                basic: ClassLoader
+                full: java.lang.ClassLoader
+          - name: getClasses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getComponentType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: getConstantPool
+            modifiers:
+            - package
+            return:
+              type:
+                basic: ConstantPool
+                full: jdk.internal.reflect.ConstantPool
+          - name: getConstructor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<T>
+          - name: getConstructor0
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<T>
+          - name: getConstructors
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<?>[]
+          - name: getDeclaredAnnotation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<A>
+            return:
+              type:
+                basic: A
+                full: A
+          - name: getDeclaredAnnotationMap
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Class<? extends java.lang.annotation.Annotation>,
+                  java.lang.annotation.Annotation>
+          - name: getDeclaredAnnotations
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Annotation
+                full: java.lang.annotation.Annotation[]
+          - name: getDeclaredAnnotationsByType
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<A>
+            return:
+              type:
+                basic: A
+                full: A[]
+          - name: getDeclaredClasses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getDeclaredClasses0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getDeclaredConstructor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<T>
+          - name: getDeclaredConstructors
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<?>[]
+          - name: getDeclaredConstructors0
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<T>[]
+          - name: getDeclaredField
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Field
+                full: java.lang.reflect.Field
+          - name: getDeclaredFields
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Field
+                full: java.lang.reflect.Field[]
+          - name: getDeclaredFields0
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: Field
+                full: java.lang.reflect.Field[]
+          - name: getDeclaredMethod
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+          - name: getDeclaredMethods
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method[]
+          - name: getDeclaredMethods0
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method[]
+          - name: getDeclaredPublicMethods
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            return:
+              type:
+                basic: List
+                full: java.util.List<java.lang.reflect.Method>
+          - name: getDeclaringClass
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: getDeclaringClass0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: getEnclosingClass
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: getEnclosingConstructor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<?>
+          - name: getEnclosingMethod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+          - name: getEnclosingMethod0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object[]
+          - name: getEnclosingMethodInfo
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Class.EnclosingMethodInfo
+                full: java.lang.Class$EnclosingMethodInfo
+          - name: getEnumConstants
+            modifiers:
+            - public
+            return:
+              type:
+                basic: T
+                full: T[]
+          - name: getEnumConstantsShared
+            modifiers:
+            - package
+            return:
+              type:
+                basic: T
+                full: T[]
+          - name: getFactory
+            modifiers:
+            - private
+            return:
+              type:
+                basic: GenericsFactory
+                full: sun.reflect.generics.factory.GenericsFactory
+          - name: getField
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Field
+                full: java.lang.reflect.Field
+          - name: getField0
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Field
+                full: java.lang.reflect.Field
+          - name: getFields
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Field
+                full: java.lang.reflect.Field[]
+          - name: getGenericInfo
+            modifiers:
+            - private
+            return:
+              type:
+                basic: ClassRepository
+                full: sun.reflect.generics.repository.ClassRepository
+          - name: getGenericInterfaces
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Type
+                full: java.lang.reflect.Type[]
+          - name: getGenericSignature0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getGenericSuperclass
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Type
+                full: java.lang.reflect.Type
+          - name: getInterfaces
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getInterfaces
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getInterfaces0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getMethod
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+          - name: getMethod0
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+          - name: getMethods
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method[]
+          - name: getMethodsRecursive
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: PublicMethods.MethodList
+                full: java.lang.PublicMethods$MethodList
+          - name: getModifiers
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getModule
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Module
+                full: java.lang.Module
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getNestHost
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: getNestHost0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: getNestMembers
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getNestMembers0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getPackage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Package
+                full: java.lang.Package
+          - name: getPackageName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPermittedSubclasses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getPermittedSubclasses0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getProtectionDomain
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ProtectionDomain
+                full: java.security.ProtectionDomain
+          - name: getProtectionDomain0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: ProtectionDomain
+                full: java.security.ProtectionDomain
+          - name: getRawAnnotations
+            modifiers:
+            - package
+            return:
+              type:
+                basic: byte
+                full: byte[]
+          - name: getRawTypeAnnotations
+            modifiers:
+            - package
+            return:
+              type:
+                basic: byte
+                full: byte[]
+          - name: getRecordComponents
+            modifiers:
+            - public
+            return:
+              type:
+                basic: RecordComponent
+                full: java.lang.reflect.RecordComponent[]
+          - name: getRecordComponents0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: RecordComponent
+                full: java.lang.reflect.RecordComponent[]
+          - name: getResource
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: URL
+                full: java.net.URL
+          - name: getResourceAsStream
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: InputStream
+                full: java.io.InputStream
+          - name: getSigners
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object[]
+          - name: getSimpleBinaryName
+            modifiers:
+            - private
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSimpleBinaryName0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSimpleName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSimpleName0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSuperclass
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<? super T>
+          - name: getTypeName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getTypeParameters
+            modifiers:
+            - public
+            return:
+              type:
+                basic: TypeVariable
+                full: java.lang.reflect.TypeVariable<java.lang.Class<T>>[]
+          - name: hasEnclosingMethodInfo
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: initClassName
+            modifiers:
+            - private
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isAnnotation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAnnotationPresent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<? extends java.lang.annotation.Annotation>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAnonymousClass
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isArray
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAssignableFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDirectSubType
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEnum
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isHidden
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInstance
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInterface
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLocalClass
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLocalOrAnonymousClass
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMemberClass
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isNestmateOf
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOpenToCaller
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPrimitive
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRecord
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRecord0
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSealed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSynthetic
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTopLevelClass
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: lambda$getPermittedSubclasses$1
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: methodToString
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: newInstance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: T
+                full: T
+          - name: newReflectionData
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: SoftReference
+                full: java.lang.ref.SoftReference<java.lang.Class$ReflectionData<T>>
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Class.ReflectionData
+                full: java.lang.Class$ReflectionData<T>
+          - name: privateGetDeclaredConstructors
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<T>[]
+          - name: privateGetDeclaredFields
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: Field
+                full: java.lang.reflect.Field[]
+          - name: privateGetDeclaredMethods
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method[]
+          - name: privateGetPublicFields
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Field
+                full: java.lang.reflect.Field[]
+          - name: privateGetPublicMethods
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method[]
+          - name: protectionDomain
+            modifiers:
+            - package
+            return:
+              type:
+                basic: ProtectionDomain
+                full: java.security.ProtectionDomain
+          - name: reflectionData
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Class.ReflectionData
+                full: java.lang.Class$ReflectionData<T>
+          - name: resolveName
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: setSigners
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toGenericString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: addAll
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Collection
+                full: java.util.Collection<java.lang.reflect.Field>
+            - name: arg1
+              type:
+                basic: Field
+                full: java.lang.reflect.Field[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: arrayContentsEq
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: checkPackageAccessForPermittedSubclasses
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: SecurityManager
+                full: java.lang.SecurityManager
+            - name: arg1
+              type:
+                basic: ClassLoader
+                full: java.lang.ClassLoader
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyConstructors
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<U>[]
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<U>[]
+          - name: copyFields
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Field
+                full: java.lang.reflect.Field[]
+            return:
+              type:
+                basic: Field
+                full: java.lang.reflect.Field[]
+          - name: copyMethods
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Method
+                full: java.lang.reflect.Method[]
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method[]
+          - name: desiredAssertionStatus0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: forName
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: forName
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: ClassLoader
+                full: java.lang.ClassLoader
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: forName
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Module
+                full: java.lang.Module
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: forName0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: ClassLoader
+                full: java.lang.ClassLoader
+            - name: arg3
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: getExecutableTypeAnnotationBytes
+            modifiers:
+            - package
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Executable
+                full: java.lang.reflect.Executable
+            return:
+              type:
+                basic: byte
+                full: byte[]
+          - name: getPrimitiveClass
+            modifiers:
+            - package
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: getReflectionFactory
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ReflectionFactory
+                full: jdk.internal.reflect.ReflectionFactory
+          - name: lambda$getPermittedSubclasses$2
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class[]
+          - name: lambda$methodToString$0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: registerNatives
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: searchFields
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Field
+                full: java.lang.reflect.Field[]
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Field
+                full: java.lang.reflect.Field
+          - name: searchMethods
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Method
+                full: java.lang.reflect.Method[]
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+          - name: toClass
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Type
+                full: java.lang.reflect.Type
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: typeVarBounds
+            modifiers:
+            - package
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: TypeVariable
+                full: java.lang.reflect.TypeVariable<?>
+            return:
+              type:
+                basic: String
+                full: java.lang.String

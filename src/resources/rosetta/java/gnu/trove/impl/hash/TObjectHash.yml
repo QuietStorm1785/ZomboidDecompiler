@@ -1,0 +1,466 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      gnu.trove.impl.hash:
+        TObjectHash:
+          extends: gnu.trove.impl.hash.THash
+          modifiers:
+          - public
+          - abstract
+          fields:
+            _set:
+              name: _set
+              modifiers:
+              - public
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            consumeFreeSlot:
+              name: consumeFreeSlot
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+          staticFields:
+            FREE:
+              name: FREE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Object
+                full: java.lang.Object
+            REMOVED:
+              name: REMOVED
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Object
+                full: java.lang.Object
+            serialVersionUID:
+              name: serialVersionUID
+              modifiers:
+              - package
+              - static
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+          methods:
+          - name: buildObjectContractViolation
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: IllegalArgumentException
+                full: java.lang.IllegalArgumentException
+          - name: capacity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: contains
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: dumpExtraInfo
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: dumpKeyTypes
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: equals
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: forEach
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TObjectProcedure
+                full: gnu.trove.procedure.TObjectProcedure<? super T>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hash
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: int
+                full: int
+          - name: index
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: int
+                full: int
+          - name: indexForNull
+            modifiers:
+            - private
+            return:
+              type:
+                basic: int
+                full: int
+          - name: indexRehashed
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: int
+                full: int
+          - name: insertKey
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: int
+                full: int
+          - name: insertKeyForNull
+            modifiers:
+            - private
+            return:
+              type:
+                basic: int
+                full: int
+          - name: insertKeyRehash
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: int
+                full: int
+          - name: insertionIndex
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: int
+                full: int
+          - name: readExternal
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectInput
+                full: java.io.ObjectInput
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeAt
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUp
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: throwObjectContractViolation
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void
+          - name: throwObjectContractViolation
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: writeExternal
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectOutput
+                full: java.io.ObjectOutput
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: detectKeyLoss
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: equalsSymmetryInfo
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: makeKeySet
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            return:
+              type:
+                basic: Set
+                full: java.util.Set<java.lang.Object>
+          - name: objectInfo
+            modifiers:
+            - protected
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: reportPotentialConcurrentMod
+            modifiers:
+            - protected
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String

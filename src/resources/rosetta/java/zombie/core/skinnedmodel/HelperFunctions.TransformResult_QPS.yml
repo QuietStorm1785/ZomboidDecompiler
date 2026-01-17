@@ -1,0 +1,41 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel:
+        HelperFunctions.TransformResult_QPS:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            result:
+              name: result
+              modifiers:
+              - public
+              type:
+                basic: Matrix4f
+                full: org.lwjgl.util.vector.Matrix4f
+            rot:
+              name: rot
+              modifiers:
+              - package
+              type:
+                basic: Matrix4f
+                full: org.lwjgl.util.vector.Matrix4f
+            scl:
+              name: scl
+              modifiers:
+              - package
+              type:
+                basic: Matrix4f
+                full: org.lwjgl.util.vector.Matrix4f
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: result
+              type:
+                basic: Matrix4f
+                full: org.lwjgl.util.vector.Matrix4f

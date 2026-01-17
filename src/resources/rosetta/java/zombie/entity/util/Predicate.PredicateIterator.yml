@@ -1,0 +1,122 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.util:
+        Predicate.PredicateIterator:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            end:
+              name: end
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            iterator:
+              name: iterator
+              modifiers:
+              - public
+              type:
+                basic: Iterator
+                full: java.util.Iterator<T>
+            next:
+              name: next
+              modifiers:
+              - public
+              type:
+                basic: T
+                full: T
+            peeked:
+              name: peeked
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            predicate:
+              name: predicate
+              modifiers:
+              - public
+              type:
+                basic: Predicate
+                full: zombie.entity.util.Predicate<T>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Iterable
+                full: java.lang.Iterable<T>
+            - name: arg1
+              type:
+                basic: Predicate
+                full: zombie.entity.util.Predicate<T>
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Iterator
+                full: java.util.Iterator<T>
+            - name: arg1
+              type:
+                basic: Predicate
+                full: zombie.entity.util.Predicate<T>
+          methods:
+          - name: hasNext
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: next
+            modifiers:
+            - public
+            return:
+              type:
+                basic: T
+                full: T
+          - name: remove
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Iterable
+                full: java.lang.Iterable<T>
+            - name: arg1
+              type:
+                basic: Predicate
+                full: zombie.entity.util.Predicate<T>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Iterator
+                full: java.util.Iterator<T>
+            - name: arg1
+              type:
+                basic: Predicate
+                full: zombie.entity.util.Predicate<T>
+            return:
+              type:
+                basic: void
+                full: void

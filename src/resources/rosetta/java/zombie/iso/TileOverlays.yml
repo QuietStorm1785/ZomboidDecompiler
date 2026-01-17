@@ -1,0 +1,151 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        TileOverlays:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            overlayMap:
+              name: overlayMap
+              modifiers:
+              - private
+              type:
+                basic: THashMap
+                full: gnu.trove.map.hash.THashMap<java.lang.String, zombie.iso.TileOverlays$TileOverlay>
+            overlayNameToUnderlyingName:
+              name: overlayNameToUnderlyingName
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.util.ArrayList<java.lang.String>>
+            tempEntries:
+              name: tempEntries
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.TileOverlays$TileOverlayEntry>
+          staticFields:
+            instance:
+              name: instance
+              modifiers:
+              - public
+              - static
+              type:
+                basic: TileOverlays
+                full: zombie.iso.TileOverlays
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: Reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addOverlays
+            modifiers:
+            - public
+            parameters:
+            - name: overlayMap
+              type:
+                basic: KahluaTableImpl
+                full: se.krka.kahlua.j2se.KahluaTableImpl
+            return:
+              type:
+                basic: void
+                full: void
+          - name: fixTableTopOverlays
+            modifiers:
+            - public
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getUnderlyingSpriteNames
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: hasObjectOnTop
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasOverlays
+            modifiers:
+            - public
+            parameters:
+            - name: obj
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: removeTableTopOverlays
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: void
+                full: void
+          - name: tryRemoveAttachedSprite
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.sprite.IsoSpriteInstance>
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateTileOverlaySprite
+            modifiers:
+            - public
+            parameters:
+            - name: obj
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: void
+                full: void

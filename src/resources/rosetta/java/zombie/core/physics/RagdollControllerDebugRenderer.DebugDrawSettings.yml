@@ -1,0 +1,41 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.physics:
+        RagdollControllerDebugRenderer.DebugDrawSettings:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            drawRagdollBody:
+              name: drawRagdollBody
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            drawRagdollBodySinglePart:
+              name: drawRagdollBodySinglePart
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            drawRagdollSkeleton:
+              name: drawRagdollSkeleton
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            drawRagdollSkeletonSinglePart:
+              name: drawRagdollSkeletonSinglePart
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+          constructors:
+          - modifiers:
+            - public

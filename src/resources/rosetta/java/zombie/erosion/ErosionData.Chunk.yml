@@ -1,0 +1,110 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.erosion:
+        ErosionData.Chunk:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            eTickStamp:
+              name: eTickStamp
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            epoch:
+              name: epoch
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            init:
+              name: init
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            minerals:
+              name: minerals
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            moisture:
+              name: moisture
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            soil:
+              name: soil
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: input
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: output
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: chunk
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            return:
+              type:
+                basic: void
+                full: void

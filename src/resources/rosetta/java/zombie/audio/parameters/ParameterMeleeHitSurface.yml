@@ -1,0 +1,60 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.audio.parameters:
+        ParameterMeleeHitSurface:
+          extends: zombie.audio.FMODLocalParameter
+          modifiers:
+          - public
+          - final
+          fields:
+            character:
+              name: character
+              modifiers:
+              - private
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            material:
+              name: material
+              modifiers:
+              - private
+              type:
+                basic: ParameterMeleeHitSurface.Material
+                full: zombie.audio.parameters.ParameterMeleeHitSurface$Material
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: character
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          methods:
+          - name: calculateCurrentValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaterial
+            modifiers:
+            - private
+            return:
+              type:
+                basic: ParameterMeleeHitSurface.Material
+                full: zombie.audio.parameters.ParameterMeleeHitSurface$Material
+          - name: setMaterial
+            modifiers:
+            - public
+            parameters:
+            - name: material
+              type:
+                basic: ParameterMeleeHitSurface.Material
+                full: zombie.audio.parameters.ParameterMeleeHitSurface$Material
+            return:
+              type:
+                basic: void
+                full: void

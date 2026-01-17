@@ -1,0 +1,173 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.fboRenderChunk:
+        FBORenderCutaways.ChunkLevelData:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            bHasCutawayNorthWallsOnEastEdge:
+              name: bHasCutawayNorthWallsOnEastEdge
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bHasCutawayNorthWallsOnWestEdge:
+              name: bHasCutawayNorthWallsOnWestEdge
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bHasCutawayWestWallsOnNorthEdge:
+              name: bHasCutawayWestWallsOnNorthEdge
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bHasCutawayWestWallsOnSouthEdge:
+              name: bHasCutawayWestWallsOnSouthEdge
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            m_adjacentChunkLoadedCounter:
+              name: m_adjacentChunkLoadedCounter
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            m_allWalls:
+              name: m_allWalls
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.fboRenderChunk.FBORenderCutaways$CutawayWall>
+            m_exteriorWalls:
+              name: m_exteriorWalls
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.fboRenderChunk.FBORenderCutaways$CutawayWall>
+            m_level:
+              name: m_level
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            m_levelsData:
+              name: m_levelsData
+              modifiers:
+              - public
+              type:
+                basic: FBORenderCutaways.ChunkLevelsData
+                full: zombie.iso.fboRenderChunk.FBORenderCutaways$ChunkLevelsData
+            m_occludingSquares:
+              name: m_occludingSquares
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long[]
+            m_orphanStructures:
+              name: m_orphanStructures
+              modifiers:
+              - public
+              type:
+                basic: FBORenderCutaways.OrphanStructures
+                full: zombie.iso.fboRenderChunk.FBORenderCutaways$OrphanStructures
+            m_slopedSurfaces:
+              name: m_slopedSurfaces
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.fboRenderChunk.FBORenderCutaways$SlopedSurface>
+            m_squareFlags:
+              name: m_squareFlags
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte[][]
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: calculateOccludingSquares
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: debugRender
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeFromWorld
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: shouldRenderSquare
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean

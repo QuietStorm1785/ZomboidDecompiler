@@ -1,0 +1,78 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.objects:
+        VehicleScript.Position:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            area:
+              name: area
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            id:
+              name: id
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            offset:
+              name: offset
+              modifiers:
+              - public
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            rotate:
+              name: rotate
+              modifiers:
+              - public
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getArea
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getId
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getOffset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+          - name: getRotate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+          - name: makeCopy
+            modifiers:
+            - package
+            return:
+              type:
+                basic: VehicleScript.Position
+                full: zombie.scripting.objects.VehicleScript$Position

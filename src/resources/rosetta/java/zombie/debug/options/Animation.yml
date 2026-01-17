@@ -1,0 +1,77 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Animation:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          - final
+          fields:
+            AllowEarlyTransitionOut:
+              name: AllowEarlyTransitionOut
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            AnimLayer:
+              name: AnimLayer
+              modifiers:
+              - public
+              type:
+                basic: Animation.AnimLayerOG
+                full: zombie.debug.options.Animation$AnimLayerOG
+            AnimRenderPicker:
+              name: AnimRenderPicker
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            BlendUseFbx:
+              name: BlendUseFbx
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            DancingDoors:
+              name: DancingDoors
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            Debug:
+              name: Debug
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            DisableAnimationBlends:
+              name: DisableAnimationBlends
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            DisableRagdolls:
+              name: DisableRagdolls
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            SharedSkeles:
+              name: SharedSkeles
+              modifiers:
+              - public
+              type:
+                basic: Animation.SharedSkelesOG
+                full: zombie.debug.options.Animation$SharedSkelesOG
+          constructors:
+          - modifiers:
+            - public

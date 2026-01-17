@@ -1,0 +1,60 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ai.states:
+        PathFindState:
+          extends: zombie.ai.State
+          modifiers:
+          - public
+          - final
+          staticFields:
+            _instance:
+              name: _instance
+              modifiers:
+              - private
+              - static
+              type:
+                basic: PathFindState2
+                full: zombie.pathfind.PathFindState2
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: isSyncInIdle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSyncOnEnter
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSyncOnExit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSyncOnSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          staticMethods:
+          - name: instance
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: PathFindState2
+                full: zombie.pathfind.PathFindState2

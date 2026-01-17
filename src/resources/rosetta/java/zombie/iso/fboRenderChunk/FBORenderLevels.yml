@@ -1,0 +1,782 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.fboRenderChunk:
+        FBORenderLevels:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            m_FBOs:
+              name: m_FBOs
+              modifiers:
+              - private
+              type:
+                basic: FBORenderLevels.NLevels
+                full: zombie.iso.fboRenderChunk.FBORenderLevels$NLevels[]
+            m_adjacentChunkLoadedCounter:
+              name: m_adjacentChunkLoadedCounter
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            m_bInStencilRect:
+              name: m_bInStencilRect
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            m_chunk:
+              name: m_chunk
+              modifiers:
+              - private
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            m_playerIndex:
+              name: m_playerIndex
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            m_prevMaxZ:
+              name: m_prevMaxZ
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            m_prevMinZ:
+              name: m_prevMinZ
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            m_renderH:
+              name: m_renderH
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            m_renderW:
+              name: m_renderW
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            m_renderX:
+              name: m_renderX
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            m_renderY:
+              name: m_renderY
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            m_seamChunkE:
+              name: m_seamChunkE
+              modifiers:
+              - public
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            m_seamChunkS:
+              name: m_seamChunkS
+              modifiers:
+              - public
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            m_seamChunkSE:
+              name: m_seamChunkSE
+              modifiers:
+              - public
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            m_snowLevelNotZero:
+              name: m_snowLevelNotZero
+              modifiers:
+              - public
+              type:
+                basic: FBORenderSnow.ChunkLevel
+                full: zombie.iso.fboRenderChunk.FBORenderSnow$ChunkLevel
+            m_snowLevelZero:
+              name: m_snowLevelZero
+              modifiers:
+              - public
+              type:
+                basic: FBORenderSnow.ChunkLevel
+                full: zombie.iso.fboRenderChunk.FBORenderSnow$ChunkLevel
+            m_treeSquares:
+              name: m_treeSquares
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoGridSquare>
+            m_waterAttachSquares:
+              name: m_waterAttachSquares
+              modifiers:
+              - package
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoGridSquare>
+            m_waterShoreSquares:
+              name: m_waterShoreSquares
+              modifiers:
+              - package
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoGridSquare>
+            m_waterSquares:
+              name: m_waterSquares
+              modifiers:
+              - package
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoGridSquare>
+          staticFields:
+            bClearCachedSquares:
+              name: bClearCachedSquares
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+          methods:
+          - name: calculateInStencilRect
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: calculateOnScreen
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: calculateRenderBounds
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: calculateRenderBounds
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearCache
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearCache
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: FBORenderChunk
+                full: zombie.iso.fboRenderChunk.FBORenderChunk
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearCachedSquares
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearDelayedLoading
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearDirty
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearDirty
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createFBOForLevel
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: FBORenderChunk
+                full: zombie.iso.fboRenderChunk.FBORenderChunk
+          - name: freeChunk
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: freeFBO
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FBORenderChunk
+                full: zombie.iso.fboRenderChunk.FBORenderChunk
+            return:
+              type:
+                basic: void
+                full: void
+          - name: freeFBOsForLevel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getCachedSquares_AnimatedAttachments
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoGridSquare>
+          - name: getCachedSquares_Corpses
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoGridSquare>
+          - name: getCachedSquares_Flies
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoGridSquare>
+          - name: getCachedSquares_Items
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoGridSquare>
+          - name: getCachedSquares_Puddles
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoGridSquare>
+          - name: getCachedSquares_TranslucentFloor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoGridSquare>
+          - name: getCachedSquares_TranslucentNonFloor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoGridSquare>
+          - name: getChunk
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+          - name: getFBOForLevel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: FBORenderChunk
+                full: zombie.iso.fboRenderChunk.FBORenderChunk
+          - name: getMaxLevel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMinLevel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getNLevels
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: FBORenderLevels.NLevels
+                full: zombie.iso.fboRenderChunk.FBORenderLevels$NLevels
+          - name: getOrCreateFBOForLevel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: FBORenderChunk
+                full: zombie.iso.fboRenderChunk.FBORenderChunk
+          - name: getPlayerIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getRenderedSquaresCount
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: handleDelayedLoading
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: void
+                full: void
+          - name: hasNoRenderChunks
+            modifiers:
+            - package
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: indexForLevel
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: invalidateAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: invalidateLevel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isDelayedLoading
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDirty
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDirty
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOnScreen
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTextureSizeValid
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: FBORenderChunk
+                full: zombie.iso.fboRenderChunk.FBORenderChunk
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setOnScreen
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRenderedSquaresCount
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: calculateMinLevel
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: calculateTextureHeightForLevels
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: int
+                full: int
+          - name: calculateTextureWidthForLevels
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: int
+                full: int
+          - name: extraHeightForJumboTrees
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getTextureScale
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: int
+                full: int

@@ -1,0 +1,25 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.worldMap.markers:
+        WorldMapMarkersV1.WorldMapMarkerV1:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            m_marker:
+              name: m_marker
+              modifiers:
+              - package
+              type:
+                basic: WorldMapMarker
+                full: zombie.worldMap.markers.WorldMapMarker
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: WorldMapMarker
+                full: zombie.worldMap.markers.WorldMapMarker

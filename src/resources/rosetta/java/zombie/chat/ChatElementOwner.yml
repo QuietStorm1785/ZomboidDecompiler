@@ -1,0 +1,44 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.chat:
+        ChatElementOwner:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: Turbo
+          methods:
+          - name: getSquare
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: getX
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getY
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getZ
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float

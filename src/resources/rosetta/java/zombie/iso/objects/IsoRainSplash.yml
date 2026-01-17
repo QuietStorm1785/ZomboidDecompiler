@@ -1,0 +1,114 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.objects:
+        IsoRainSplash:
+          extends: zombie.iso.IsoObject
+          modifiers:
+          - public
+          fields:
+            Age:
+              name: Age
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: gridSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          methods:
+          - name: ChangeTintMod
+            modifiers:
+            - public
+            parameters:
+            - name: NewTintMod
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: HasTooltip
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: Reset
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Serialize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: TestCollide
+            modifiers:
+            - public
+            parameters:
+            - name: obj
+              type:
+                basic: IsoMovingObject
+                full: zombie.iso.IsoMovingObject
+            - name: PassedObjectSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: TestVision
+            modifiers:
+            - public
+            parameters:
+            - name: from
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: to
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: IsoObject.VisionResult
+                full: zombie.iso.IsoObject$VisionResult
+          - name: getObjectName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

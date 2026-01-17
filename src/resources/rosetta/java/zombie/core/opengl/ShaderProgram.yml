@@ -1,0 +1,864 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.opengl:
+        ShaderProgram:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            ModelView:
+              name: ModelView
+              modifiers:
+              - public
+              type:
+                basic: Matrix4f
+                full: org.joml.Matrix4f
+            Projection:
+              name: Projection
+              modifiers:
+              - public
+              type:
+                basic: Matrix4f
+                full: org.joml.Matrix4f
+            m_compileFailed:
+              name: m_compileFailed
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            m_fileWatchers:
+              name: m_fileWatchers
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.PredicatedFileWatcher>
+            m_fragmentUnits:
+              name: m_fragmentUnits
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.opengl.ShaderUnit>
+            m_isInstanced:
+              name: m_isInstanced
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            m_isStatic:
+              name: m_isStatic
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            m_name:
+              name: m_name
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            m_onCompiledListeners:
+              name: m_onCompiledListeners
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.opengl.IShaderProgramListener>
+            m_shaderID:
+              name: m_shaderID
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            m_sourceFilesChanged:
+              name: m_sourceFilesChanged
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            m_uvScaleUniforms:
+              name: m_uvScaleUniforms
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int[]
+            m_vertexUnits:
+              name: m_vertexUnits
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.opengl.ShaderUnit>
+            uniformsByName:
+              name: uniformsByName
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.core.opengl.ShaderProgram$Uniform>
+          staticFields:
+            floatBuffer:
+              name: floatBuffer
+              modifiers:
+              - private
+              - static
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+          methods:
+          - name: End
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Start
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addCombinedFragmentSource
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addCombinedVertexSource
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addCompileListener
+            modifiers:
+            - public
+            parameters:
+            - name: listener
+              type:
+                basic: IShaderProgramListener
+                full: zombie.core.opengl.IShaderProgramListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addShader
+            modifiers:
+            - public
+            parameters:
+            - name: fileName
+              type:
+                basic: String
+                full: java.lang.String
+            - name: unitType
+              type:
+                basic: ShaderUnit.Type
+                full: zombie.core.opengl.ShaderUnit$Type
+            return:
+              type:
+                basic: ShaderUnit
+                full: zombie.core.opengl.ShaderUnit
+          - name: attachAllShaderUnits
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: compile
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Compiles or re-compiles this program.
+          - name: compileAllShaderUnits
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: destroy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: findShader
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: ShaderUnit.Type
+                full: zombie.core.opengl.ShaderUnit$Type
+            return:
+              type:
+                basic: ShaderUnit
+                full: zombie.core.opengl.ShaderUnit
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRootFragFileName
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRootVertFileName
+            modifiers:
+            - private
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getShaderID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getShaderList
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ShaderUnit.Type
+                full: zombie.core.opengl.ShaderUnit$Type
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.opengl.ShaderUnit>
+          - name: getShaderUnits
+            modifiers:
+            - private
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.opengl.ShaderUnit>
+          - name: getUniform
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: type
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ShaderProgram.Uniform
+                full: zombie.core.opengl.ShaderProgram$Uniform
+          - name: getUniform
+            modifiers:
+            - public
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: type
+              type:
+                basic: int
+                full: int
+            - name: bWarn
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: ShaderProgram.Uniform
+                full: zombie.core.opengl.ShaderProgram$Uniform
+          - name: invokeProgramCompiledEvent
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isCompiled
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFirstUnit
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: ShaderUnit
+                full: zombie.core.opengl.ShaderUnit
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: lambda$registerFileWatchers$0
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onCompileSuccess
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onShaderFileChanged
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: registerFileWatcherInternal
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: PredicatedFileWatcher.IPredicatedFileWatcherCallback
+                full: zombie.PredicatedFileWatcher$IPredicatedFileWatcherCallback
+            return:
+              type:
+                basic: void
+                full: void
+          - name: registerFileWatchers
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeCompileListener
+            modifiers:
+            - public
+            parameters:
+            - name: listener
+              type:
+                basic: IShaderProgramListener
+                full: zombie.core.opengl.IShaderProgramListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSamplerUnit
+            modifiers:
+            - public
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: textureUnit
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTransformMatrix
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Matrix4f
+                full: org.lwjgl.util.vector.Matrix4f
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTransformMatrix
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Matrix4f
+                full: org.joml.Matrix4f
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUVScale
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValue
+            modifiers:
+            - public
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: val
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValue
+            modifiers:
+            - public
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: val
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValue
+            modifiers:
+            - public
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: val
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValue
+            modifiers:
+            - public
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: val
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValue
+            modifiers:
+            - public
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: matrix4f
+              type:
+                basic: Matrix4f
+                full: org.lwjgl.util.vector.Matrix4f
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: Matrix4f
+                full: org.joml.Matrix4f
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValue
+            modifiers:
+            - public
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: samplerUnit
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValueColor
+            modifiers:
+            - public
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: rgba
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValueColorRGB
+            modifiers:
+            - public
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: rgb
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVector2
+            modifiers:
+            - public
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: val_x
+              type:
+                basic: float
+                full: float
+            - name: val_y
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVector2
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVector3
+            modifiers:
+            - public
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: val_x
+              type:
+                basic: float
+                full: float
+            - name: val_y
+              type:
+                basic: float
+                full: float
+            - name: val_z
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVector3
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVector4
+            modifiers:
+            - public
+            parameters:
+            - name: loc
+              type:
+                basic: String
+                full: java.lang.String
+            - name: val_x
+              type:
+                basic: float
+                full: float
+            - name: val_y
+              type:
+                basic: float
+                full: float
+            - name: val_z
+              type:
+                basic: float
+                full: float
+            - name: val_w
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVector4
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            - name: w
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: createFragShader
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: fileName
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+            notes: "Creates a fragment shader unit.\n Deprecated: Use ShaderProgram.createShaderProgram\
+              \ instead."
+          - name: createShaderProgram
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+          - name: createVertShader
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: fileName
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+            notes: "Creates a vertex shader unit.\n Deprecated: Use ShaderProgram.createShaderProgram\
+              \ instead."
+          - name: getLogInfo
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: obj
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: printLogInfo
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: obj
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void

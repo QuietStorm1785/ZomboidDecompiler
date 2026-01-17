@@ -1,0 +1,147 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Terrain.RenderTiles:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          - final
+          fields:
+            AttachedAnimSprites:
+              name: AttachedAnimSprites
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            AttachedChildren:
+              name: AttachedChildren
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            AttachedWallBloodSplats:
+              name: AttachedWallBloodSplats
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            BloodDecals:
+              name: BloodDecals
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            Enable:
+              name: Enable
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            HighContrastBg:
+              name: HighContrastBg
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            IsoGridSquare:
+              name: IsoGridSquare
+              modifiers:
+              - public
+              type:
+                basic: Terrain.RenderTiles.IsoGridSquare
+                full: zombie.debug.options.Terrain$RenderTiles$IsoGridSquare
+            Lua:
+              name: Lua
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            MinusFloorCharacters:
+              name: MinusFloorCharacters
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            NewRender:
+              name: NewRender
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            OverlaySprites:
+              name: OverlaySprites
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            RenderGridSquares:
+              name: RenderGridSquares
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            RenderSprites:
+              name: RenderSprites
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            Shadows:
+              name: Shadows
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            UseShaders:
+              name: UseShaders
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            VegetationCorpses:
+              name: VegetationCorpses
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            Water:
+              name: Water
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            WaterBody:
+              name: WaterBody
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            WaterShore:
+              name: WaterShore
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+          constructors:
+          - modifiers:
+            - public

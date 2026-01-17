@@ -1,0 +1,76 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        NetworkUser.AuthType:
+          extends: java.lang.Enum<zombie.characters.NetworkUser$AuthType>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: NetworkUser.AuthType
+                full: zombie.characters.NetworkUser$AuthType[]
+            google_auth:
+              name: google_auth
+              modifiers:
+              - public
+              - static
+              type:
+                basic: NetworkUser.AuthType
+                full: zombie.characters.NetworkUser$AuthType
+            password:
+              name: password
+              modifiers:
+              - public
+              - static
+              type:
+                basic: NetworkUser.AuthType
+                full: zombie.characters.NetworkUser$AuthType
+            two_factor:
+              name: two_factor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: NetworkUser.AuthType
+                full: zombie.characters.NetworkUser$AuthType
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: NetworkUser.AuthType
+                full: zombie.characters.NetworkUser$AuthType[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: NetworkUser.AuthType
+                full: zombie.characters.NetworkUser$AuthType
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: NetworkUser.AuthType
+                full: zombie.characters.NetworkUser$AuthType[]

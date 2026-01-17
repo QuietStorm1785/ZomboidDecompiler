@@ -1,0 +1,804 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        Capability:
+          extends: java.lang.Enum<zombie.characters.Capability>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability[]
+            AddItem:
+              name: AddItem
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            AddUserlog:
+              name: AddUserlog
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            AddXP:
+              name: AddXP
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            AdminChat:
+              name: AdminChat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            AnimalCheats:
+              name: AnimalCheats
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            AnswerTickets:
+              name: AnswerTickets
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            BanUnbanUser:
+              name: BanUnbanUser
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            BypassLuaChecksum:
+              name: BypassLuaChecksum
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CanAlwaysJoinServer:
+              name: CanAlwaysJoinServer
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CanGoInsideSafehouses:
+              name: CanGoInsideSafehouses
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CanHearAll:
+              name: CanHearAll
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CanMedicalCheat:
+              name: CanMedicalCheat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CanModifyPlayerStatsInThePlayerStatsUI:
+              name: CanModifyPlayerStatsInThePlayerStatsUI
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CanOpenLockedDoors:
+              name: CanOpenLockedDoors
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CanSeeAll:
+              name: CanSeeAll
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CanSeeMessageForAdmin:
+              name: CanSeeMessageForAdmin
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CanSeePlayersStats:
+              name: CanSeePlayersStats
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CanSetupNonPVPZone:
+              name: CanSetupNonPVPZone
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CanSetupSafehouses:
+              name: CanSetupSafehouses
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CantBeBannedByAnticheat:
+              name: CantBeBannedByAnticheat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CantBeBannedByUser:
+              name: CantBeBannedByUser
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CantBeKickedByAnticheat:
+              name: CantBeKickedByAnticheat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CantBeKickedByUser:
+              name: CantBeKickedByUser
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CantBeKickedIfTooLaggy:
+              name: CantBeKickedIfTooLaggy
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ChangeAccessLevel:
+              name: ChangeAccessLevel
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ChangeAndReloadServerOptions:
+              name: ChangeAndReloadServerOptions
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ClimateManager:
+              name: ClimateManager
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ConnectWithDebug:
+              name: ConnectWithDebug
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CreateHorde:
+              name: CreateHorde
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            CreateStory:
+              name: CreateStory
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            DebugConsole:
+              name: DebugConsole
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            DisplayServerMessage:
+              name: DisplayServerMessage
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            EditItem:
+              name: EditItem
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            EmptyLinesInChat:
+              name: EmptyLinesInChat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            FactionCheat:
+              name: FactionCheat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            GeneralCheats:
+              name: GeneralCheats
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            GetStatistic:
+              name: GetStatistic
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            GetSteamScoreboard:
+              name: GetSteamScoreboard
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            HideFromSteamUserList:
+              name: HideFromSteamUserList
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            IgnoreChatSlowMode:
+              name: IgnoreChatSlowMode
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            InspectPlayerInventory:
+              name: InspectPlayerInventory
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            KickUser:
+              name: KickUser
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            LoginOnServer:
+              name: LoginOnServer
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            MakeEventsAlarmGunshot:
+              name: MakeEventsAlarmGunshot
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ManipulateMods:
+              name: ManipulateMods
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ManipulateVehicle:
+              name: ManipulateVehicle
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ManipulateWhitelist:
+              name: ManipulateWhitelist
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ManipulateZombie:
+              name: ManipulateZombie
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ModifyNetworkUsers:
+              name: ModifyNetworkUsers
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            None:
+              name: None
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            PVPLogTool:
+              name: PVPLogTool
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            PopmanManage:
+              name: PopmanManage
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            PriorityLogin:
+              name: PriorityLogin
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            QuitWorld:
+              name: QuitWorld
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ReadUserLog:
+              name: ReadUserLog
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ReloadLuaFiles:
+              name: ReloadLuaFiles
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            RolesRead:
+              name: RolesRead
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            RolesWrite:
+              name: RolesWrite
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            SandboxOptions:
+              name: SandboxOptions
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            SaveWorld:
+              name: SaveWorld
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            SeeNetworkUsers:
+              name: SeeNetworkUsers
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            SeePlayersConnected:
+              name: SeePlayersConnected
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            SeePublicServerOptions:
+              name: SeePublicServerOptions
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            SeeWorldMap:
+              name: SeeWorldMap
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            SeesInvisiblePlayers:
+              name: SeesInvisiblePlayers
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            StartStopRain:
+              name: StartStopRain
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            TeleportPlayerToAnotherPlayer:
+              name: TeleportPlayerToAnotherPlayer
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            TeleportToCoordinates:
+              name: TeleportToCoordinates
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            TeleportToPlayer:
+              name: TeleportToPlayer
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ToggleGodModEveryone:
+              name: ToggleGodModEveryone
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ToggleGodModHimself:
+              name: ToggleGodModHimself
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ToggleInvincibleHimself:
+              name: ToggleInvincibleHimself
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ToggleInvisibleEveryone:
+              name: ToggleInvisibleEveryone
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ToggleInvisibleHimself:
+              name: ToggleInvisibleHimself
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ToggleKnowAllRecipes:
+              name: ToggleKnowAllRecipes
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ToggleNoclipEveryone:
+              name: ToggleNoclipEveryone
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ToggleNoclipHimself:
+              name: ToggleNoclipHimself
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ToggleUnlimitedAmmo:
+              name: ToggleUnlimitedAmmo
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ToggleUnlimitedCarry:
+              name: ToggleUnlimitedCarry
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ToggleUnlimitedEndurance:
+              name: ToggleUnlimitedEndurance
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            ToggleWriteRoleNameAbove:
+              name: ToggleWriteRoleNameAbove
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            UIManagerProcessCommands:
+              name: UIManagerProcessCommands
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            UseBrushToolManager:
+              name: UseBrushToolManager
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            UseBuildCheat:
+              name: UseBuildCheat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            UseFarmingCheat:
+              name: UseFarmingCheat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            UseFastMoveCheat:
+              name: UseFastMoveCheat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            UseFishingCheat:
+              name: UseFishingCheat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            UseHealthCheat:
+              name: UseHealthCheat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            UseLootTool:
+              name: UseLootTool
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            UseMechanicsCheat:
+              name: UseMechanicsCheat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            UseMovablesCheat:
+              name: UseMovablesCheat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            UseTimedActionInstantCheat:
+              name: UseTimedActionInstantCheat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            UseZombieDontAttackCheat:
+              name: UseZombieDontAttackCheat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            WorkWithUserlog:
+              name: WorkWithUserlog
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: Capability
+                full: zombie.characters.Capability[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: Capability
+                full: zombie.characters.Capability[]

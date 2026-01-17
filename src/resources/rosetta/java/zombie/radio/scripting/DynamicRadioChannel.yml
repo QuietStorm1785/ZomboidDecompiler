@@ -1,0 +1,63 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.radio.scripting:
+        DynamicRadioChannel:
+          extends: zombie.radio.scripting.RadioChannel
+          modifiers:
+          - public
+          - final
+          notes: TurboTuTone.
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: n
+              type:
+                basic: String
+                full: java.lang.String
+            - name: freq
+              type:
+                basic: int
+                full: int
+            - name: c
+              type:
+                basic: ChannelCategory
+                full: zombie.radio.ChannelCategory
+          - modifiers:
+            - public
+            parameters:
+            - name: n
+              type:
+                basic: String
+                full: java.lang.String
+            - name: freq
+              type:
+                basic: int
+                full: int
+            - name: c
+              type:
+                basic: ChannelCategory
+                full: zombie.radio.ChannelCategory
+            - name: guid
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: LoadAiringBroadcast
+            modifiers:
+            - public
+            parameters:
+            - name: guid
+              type:
+                basic: String
+                full: java.lang.String
+            - name: line
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void

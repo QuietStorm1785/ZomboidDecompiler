@@ -1,0 +1,101 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.inventory:
+        ItemPickerJava.KeyNamer:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          staticFields:
+            BigBuildingRooms:
+              name: BigBuildingRooms
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            RestaurantSubstrings:
+              name: RestaurantSubstrings
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            Restaurants:
+              name: Restaurants
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            RoomSubstrings:
+              name: RoomSubstrings
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            Rooms:
+              name: Rooms
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            badZones:
+              name: badZones
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: clear
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getName
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: nameKey
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void

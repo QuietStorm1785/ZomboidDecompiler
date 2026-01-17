@@ -1,0 +1,185 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.advancedanimation:
+        IAnimationVariableSource:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: containsVariable
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getGameVariables
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Iterable
+                full: java.lang.Iterable<zombie.core.skinnedmodel.advancedanimation.IAnimationVariableSlot>
+            notes: Returns all Game variables.
+          - name: getSubVariableSource
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: IAnimationVariableSource
+                full: zombie.core.skinnedmodel.advancedanimation.IAnimationVariableSource
+          - name: getVariable
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: handle
+              type:
+                basic: AnimationVariableHandle
+                full: zombie.core.skinnedmodel.advancedanimation.AnimationVariableHandle
+            return:
+              type:
+                basic: IAnimationVariableSlot
+                full: zombie.core.skinnedmodel.advancedanimation.IAnimationVariableSlot
+            notes: Returns the specified variable slot. Or NULL if not found.
+          - name: getVariable
+            modifiers:
+            - public
+            parameters:
+            - name: key
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: IAnimationVariableSlot
+                full: zombie.core.skinnedmodel.advancedanimation.IAnimationVariableSlot
+            notes: Returns the specified variable slot. Or NULL if not found.
+          - name: getVariableBoolean
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: "Returns the specified variable, as a boolean.\n  Attempts to convert\
+              \ the string variable to a boolean.\n  If that fails, or if variable\
+              \ not found, returns FALSE"
+          - name: getVariableBoolean
+            modifiers:
+            - public
+            parameters:
+            - name: key
+              type:
+                basic: String
+                full: java.lang.String
+            - name: defaultVal
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: "Returns the specified variable, as a boolean.\n Attempts to convert\
+              \ the string variable to a boolean.\n If that fails, or if variable\
+              \ not found, returns defaultVal"
+          - name: getVariableBoolean
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AnimationVariableHandle
+                full: zombie.core.skinnedmodel.advancedanimation.AnimationVariableHandle
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getVariableEnum
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: EnumType
+                full: EnumType
+            return:
+              type:
+                basic: EnumType
+                full: EnumType
+          - name: getVariableFloat
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: defaultVal
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+            notes: "Returns the specified variable, as a float.\n  Attempts to convert\
+              \ the string variable to a float.\n  If that fails, or if variable not\
+              \ found, returns the defaultValue"
+          - name: getVariableString
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+            notes: Returns the specified variable. Or an empty string "" if not found.
+          - name: isVariable
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: val
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: "Compares (ignoring case) the value of the specified variable.\n\
+              \ Returns TRUE if they match."

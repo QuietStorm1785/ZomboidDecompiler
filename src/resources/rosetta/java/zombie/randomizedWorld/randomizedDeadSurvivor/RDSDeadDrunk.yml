@@ -1,0 +1,35 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.randomizedWorld.randomizedDeadSurvivor:
+        RDSDeadDrunk:
+          extends: zombie.randomizedWorld.randomizedDeadSurvivor.RandomizedDeadSurvivorBase
+          modifiers:
+          - public
+          - final
+          notes: Create a dead survivor with alcohol bottles around him
+          fields:
+            alcoholList:
+              name: alcoholList
+              modifiers:
+              - package
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: randomizeDeadSurvivor
+            modifiers:
+            - public
+            parameters:
+            - name: def
+              type:
+                basic: BuildingDef
+                full: zombie.iso.BuildingDef
+            return:
+              type:
+                basic: void
+                full: void

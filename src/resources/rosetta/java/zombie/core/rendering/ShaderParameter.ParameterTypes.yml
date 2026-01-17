@@ -1,0 +1,188 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.rendering:
+        ShaderParameter.ParameterTypes:
+          extends: java.lang.Enum<zombie.core.rendering.ShaderParameter$ParameterTypes>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes[]
+            Bool:
+              name: Bool
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            Float:
+              name: Float
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            FloatArray:
+              name: FloatArray
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            Int:
+              name: Int
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            IntArray:
+              name: IntArray
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            Matrix3:
+              name: Matrix3
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            Matrix3Array:
+              name: Matrix3Array
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            Matrix4:
+              name: Matrix4
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            Matrix4Array:
+              name: Matrix4Array
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            Texture:
+              name: Texture
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            TextureArray:
+              name: TextureArray
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            Vector2:
+              name: Vector2
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            Vector2Array:
+              name: Vector2Array
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            Vector3:
+              name: Vector3
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            Vector3Array:
+              name: Vector3Array
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            Vector4:
+              name: Vector4
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+            Vector4Array:
+              name: Vector4Array
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ShaderParameter.ParameterTypes
+                full: zombie.core.rendering.ShaderParameter$ParameterTypes[]

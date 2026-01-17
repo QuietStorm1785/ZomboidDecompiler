@@ -1,0 +1,85 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.professions:
+        ProfessionFactory:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          staticFields:
+            ProfessionMap:
+              name: ProfessionMap
+              modifiers:
+              - public
+              - static
+              type:
+                basic: LinkedHashMap
+                full: java.util.LinkedHashMap<java.lang.String, zombie.characters.professions.ProfessionFactory$Profession>
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addProfession
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: IconPath
+              type:
+                basic: String
+                full: java.lang.String
+            - name: points
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ProfessionFactory.Profession
+                full: zombie.characters.professions.ProfessionFactory$Profession
+          - name: getProfession
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ProfessionFactory.Profession
+                full: zombie.characters.professions.ProfessionFactory$Profession
+          - name: getProfessions
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.professions.ProfessionFactory$Profession>
+          - name: init
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void

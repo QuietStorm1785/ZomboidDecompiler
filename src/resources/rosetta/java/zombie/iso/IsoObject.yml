@@ -1,0 +1,5822 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        IsoObject:
+          extends: zombie.entity.GameEntity
+          modifiers:
+          - public
+          fields:
+            AttachedAnimSprite:
+              name: AttachedAnimSprite
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.sprite.IsoSpriteInstance>
+            Children:
+              name: Children
+              modifiers:
+              - protected
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoObject>
+            Damage:
+              name: Damage
+              modifiers:
+              - public
+              type:
+                basic: short
+                full: short
+            NoPicking:
+              name: NoPicking
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            OutlineOnMouseover:
+              name: OutlineOnMouseover
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            alpha:
+              name: alpha
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float[]
+            bAlphaForced:
+              name: bAlphaForced
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bAnimating:
+              name: bAnimating
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            bHasPower:
+              name: bHasPower
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            bMovedThumpable:
+              name: bMovedThumpable
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            bNeverDoneAlpha:
+              name: bNeverDoneAlpha
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bRemoveFromWorldToMeta:
+              name: bRemoveFromWorldToMeta
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            bSatChair:
+              name: bSatChair
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            clockScript:
+              name: clockScript
+              modifiers:
+              - private
+              type:
+                basic: ClockScript
+                full: zombie.scripting.objects.ClockScript
+            clockScriptInit:
+              name: clockScriptInit
+              modifiers:
+              - private
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+            container:
+              name: container
+              modifiers:
+              - public
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            customColor:
+              name: customColor
+              modifiers:
+              - private
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            dir:
+              name: dir
+              modifiers:
+              - public
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            doNotSync:
+              name: doNotSync
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            doRender:
+              name: doRender
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            emitter:
+              name: emitter
+              modifiers:
+              - public
+              type:
+                basic: BaseSoundEmitter
+                full: zombie.audio.BaseSoundEmitter
+            externalWaterSource:
+              name: externalWaterSource
+              modifiers:
+              - protected
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            hasPowerTick:
+              name: hasPowerTick
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            highlightColor:
+              name: highlightColor
+              modifiers:
+              - private
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo[]
+            isOutlineHighlight:
+              name: isOutlineHighlight
+              modifiers:
+              - protected
+              type:
+                basic: byte
+                full: byte
+            isOutlineHlAttached:
+              name: isOutlineHlAttached
+              modifiers:
+              - protected
+              type:
+                basic: byte
+                full: byte
+            isOutlineHlBlink:
+              name: isOutlineHlBlink
+              modifiers:
+              - protected
+              type:
+                basic: byte
+                full: byte
+            isSceneCulled:
+              name: isSceneCulled
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isoEntityNetID:
+              name: isoEntityNetID
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            keyId:
+              name: keyId
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            lastObjectIndex:
+              name: lastObjectIndex
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            lightSource:
+              name: lightSource
+              modifiers:
+              - private
+              type:
+                basic: IsoLightSource
+                full: zombie.iso.IsoLightSource
+            name:
+              name: name
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            objectRenderEffects:
+              name: objectRenderEffects
+              modifiers:
+              - protected
+              type:
+                basic: ObjectRenderEffects
+                full: zombie.iso.objects.ObjectRenderEffects
+            offsetX:
+              name: offsetX
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            offsetY:
+              name: offsetY
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            onOverlay:
+              name: onOverlay
+              modifiers:
+              - private
+              type:
+                basic: IsoSpriteInstance
+                full: zombie.iso.sprite.IsoSpriteInstance
+            outlineHighlightCol:
+              name: outlineHighlightCol
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int[]
+            outlineThickness:
+              name: outlineThickness
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            overlaySprite:
+              name: overlaySprite
+              modifiers:
+              - public
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+            overlaySpriteColor:
+              name: overlaySpriteColor
+              modifiers:
+              - public
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            partialThumpDmg:
+              name: partialThumpDmg
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            ppfBlink:
+              name: ppfBlink
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+            ppfHighlightRenderOnce:
+              name: ppfHighlightRenderOnce
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+            ppfHighlighted:
+              name: ppfHighlighted
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+            renderDepthAdjust:
+              name: renderDepthAdjust
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            renderInfo:
+              name: renderInfo
+              modifiers:
+              - protected
+              type:
+                basic: ObjectRenderInfo
+                full: zombie.iso.fboRenderChunk.ObjectRenderInfo[]
+            renderSquareOverride:
+              name: renderSquareOverride
+              modifiers:
+              - public
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            renderSquareOverride2:
+              name: renderSquareOverride2
+              modifiers:
+              - public
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            renderYOffset:
+              name: renderYOffset
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            rerouteCollide:
+              name: rerouteCollide
+              modifiers:
+              - public
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            rerouteMask:
+              name: rerouteMask
+              modifiers:
+              - public
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            secondaryContainers:
+              name: secondaryContainers
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.ItemContainer>
+            sheetRope:
+              name: sheetRope
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            sheetRopeHealth:
+              name: sheetRopeHealth
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            specialTooltip:
+              name: specialTooltip
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            sprite:
+              name: sprite
+              modifiers:
+              - public
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+            spriteModel:
+              name: spriteModel
+              modifiers:
+              - protected
+              type:
+                basic: SpriteModel
+                full: zombie.iso.SpriteModel
+            spriteModelInit:
+              name: spriteModelInit
+              modifiers:
+              - protected
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+            spriteModelName:
+              name: spriteModelName
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            spriteName:
+              name: spriteName
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            square:
+              name: square
+              modifiers:
+              - public
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            sx:
+              name: sx
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            sy:
+              name: sy
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            table:
+              name: table
+              modifiers:
+              - public
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            targetAlpha:
+              name: targetAlpha
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float[]
+            tile:
+              name: tile
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            tintb:
+              name: tintb
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            tintg:
+              name: tintg
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            tintr:
+              name: tintr
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            usesExternalWaterSource:
+              name: usesExternalWaterSource
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            wallBloodSplats:
+              name: wallBloodSplats
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoWallBloodSplat>
+            windRenderEffects:
+              name: windRenderEffects
+              modifiers:
+              - protected
+              type:
+                basic: ObjectRenderEffects
+                full: zombie.iso.objects.ObjectRenderEffects
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            LowLightingQualityHack:
+              name: LowLightingQualityHack
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            MAX_WALL_SPLATS:
+              name: MAX_WALL_SPLATS
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            bmod:
+              name: bmod
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            byteToObjectMap:
+              name: byteToObjectMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Byte, zombie.iso.IsoObject$IsoObjectFactory>
+            colFxMask:
+              name: colFxMask
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            factoryIsoObject:
+              name: factoryIsoObject
+              modifiers:
+              - private
+              - static
+              type:
+                basic: IsoObject.IsoObjectFactory
+                full: zombie.iso.IsoObject$IsoObjectFactory
+            factoryVehicle:
+              name: factoryVehicle
+              modifiers:
+              - private
+              - static
+              type:
+                basic: IsoObject.IsoObjectFactory
+                full: zombie.iso.IsoObject$IsoObjectFactory
+            fireColor:
+              name: fireColor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            gmod:
+              name: gmod
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            hashCodeToObjectMap:
+              name: hashCodeToObjectMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Integer, zombie.iso.IsoObject$IsoObjectFactory>
+            lastRendered:
+              name: lastRendered
+              modifiers:
+              - public
+              - static
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            lastRenderedRendered:
+              name: lastRenderedRendered
+              modifiers:
+              - public
+              - static
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            nameToObjectMap:
+              name: nameToObjectMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.iso.IsoObject$IsoObjectFactory>
+            rmod:
+              name: rmod
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            stCol:
+              name: stCol
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            stCol2:
+              name: stCol2
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: spr
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+          - modifiers:
+            - public
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: gid
+              type:
+                basic: String
+                full: java.lang.String
+          - modifiers:
+            - public
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: tile
+              type:
+                basic: String
+                full: java.lang.String
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+          - modifiers:
+            - public
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: tile
+              type:
+                basic: String
+                full: java.lang.String
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: bShareTilesWithMap
+              type:
+                basic: boolean
+                full: boolean
+          - modifiers:
+            - public
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: tile
+              type:
+                basic: String
+                full: java.lang.String
+            - name: bShareTilesWithMap
+              type:
+                basic: boolean
+                full: boolean
+          - modifiers:
+            - public
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: tile
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: AttachAnim
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg7
+              type:
+                basic: int
+                full: int
+            - name: arg8
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: IsoSpriteInstance
+                full: zombie.iso.sprite.IsoSpriteInstance
+          - name: AttachAnim
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg7
+              type:
+                basic: int
+                full: int
+            - name: arg8
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: arg11
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: IsoSpriteInstance
+                full: zombie.iso.sprite.IsoSpriteInstance
+          - name: AttachExistingAnim
+            modifiers:
+            - public
+            parameters:
+            - name: spr
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+            - name: OffsetX
+              type:
+                basic: int
+                full: int
+            - name: OffsetY
+              type:
+                basic: int
+                full: int
+            - name: Looping
+              type:
+                basic: boolean
+                full: boolean
+            - name: FinishHoldFrameIndex
+              type:
+                basic: int
+                full: int
+            - name: DeleteWhenFinished
+              type:
+                basic: boolean
+                full: boolean
+            - name: zBias
+              type:
+                basic: float
+                full: float
+            - name: TintMod
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: AttachExistingAnim
+            modifiers:
+            - public
+            parameters:
+            - name: spr
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+            - name: OffsetX
+              type:
+                basic: int
+                full: int
+            - name: OffsetY
+              type:
+                basic: int
+                full: int
+            - name: Looping
+              type:
+                basic: boolean
+                full: boolean
+            - name: FinishHoldFrameIndex
+              type:
+                basic: int
+                full: int
+            - name: DeleteWhenFinished
+              type:
+                basic: boolean
+                full: boolean
+            - name: zBias
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: AttackObject
+            modifiers:
+            - public
+            parameters:
+            - name: owner
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Collision
+            modifiers:
+            - public
+            parameters:
+            - name: collision
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+            - name: object
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Damage
+            modifiers:
+            - public
+            parameters:
+            - name: amount
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DirtySlice
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DoSpecialTooltip
+            modifiers:
+            - public
+            parameters:
+            - name: tooltipUI
+              type:
+                basic: ObjectTooltip
+                full: zombie.ui.ObjectTooltip
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DoTooltip
+            modifiers:
+            - public
+            parameters:
+            - name: tooltipUI
+              type:
+                basic: ObjectTooltip
+                full: zombie.ui.ObjectTooltip
+            return:
+              type:
+                basic: void
+                full: void
+          - name: FindExternalWaterSource
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: GetVehicleSlowFactor
+            modifiers:
+            - public
+            parameters:
+            - name: vehicle
+              type:
+                basic: BaseVehicle
+                full: zombie.vehicles.BaseVehicle
+            return:
+              type:
+                basic: float
+                full: float
+          - name: HasTooltip
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: Hit
+            modifiers:
+            - public
+            parameters:
+            - name: collision
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+            - name: obj
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            - name: damage
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: HitByVehicle
+            modifiers:
+            - public
+            parameters:
+            - name: vehicle
+              type:
+                basic: BaseVehicle
+                full: zombie.vehicles.BaseVehicle
+            - name: amount
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RemoveAttachedAnim
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RemoveAttachedAnims
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Serialize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: SetName
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: TestCollide
+            modifiers:
+            - public
+            parameters:
+            - name: obj
+              type:
+                basic: IsoMovingObject
+                full: zombie.iso.IsoMovingObject
+            - name: from
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: to
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: TestPathfindCollide
+            modifiers:
+            - public
+            parameters:
+            - name: obj
+              type:
+                basic: IsoMovingObject
+                full: zombie.iso.IsoMovingObject
+            - name: from
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: to
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: TestVision
+            modifiers:
+            - public
+            parameters:
+            - name: from
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: to
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: IsoObject.VisionResult
+                full: zombie.iso.IsoObject$VisionResult
+          - name: Thump
+            modifiers:
+            - public
+            parameters:
+            - name: thumper
+              type:
+                basic: IsoMovingObject
+                full: zombie.iso.IsoMovingObject
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UnCollision
+            modifiers:
+            - public
+            parameters:
+            - name: object
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: void
+                full: void
+          - name: WeaponHit
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: weapon
+              type:
+                basic: HandWeapon
+                full: zombie.inventory.types.HandWeapon
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addAttachedAnimSprite
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addAttachedAnimSpriteByName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addAttachedAnimSpriteInstance
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoSpriteInstance
+                full: zombie.iso.sprite.IsoSpriteInstance
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addChild
+            modifiers:
+            - public
+            parameters:
+            - name: child
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addFluid
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidType
+                full: zombie.entity.components.fluids.FluidType
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addItemToObjectSurface
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: addItemToObjectSurface
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: addItemToObjectSurface
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: addItemsFromProperties
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addLightSourceToWorld
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addObjectAmbientEmitter
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectAmbientEmitters.PerObjectLogic
+                full: zombie.audio.ObjectAmbientEmitters$PerObjectLogic
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addSecondaryContainer
+            modifiers:
+            - public
+            parameters:
+            - name: container
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addSheetRope
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: itemType
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addToWorld
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: afterRotated
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: canAddSheetRope
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canTransferFluidFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidContainer
+                full: zombie.entity.components.fluids.FluidContainer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canTransferFluidTo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidContainer
+                full: zombie.entity.components.fluids.FluidContainer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: checkAmbientSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkClockTexture
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+          - name: checkExternalFluidSource
+            modifiers:
+            - private
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: checkHaveElectricity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkLightSourceActive
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkMoveWithWind
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkMoveWithWind
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkObjectPowered
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: cleanWallBlood
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearAttachedAnimSprite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearOnOverlay
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: countAddSheetRope
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: createContainersFromSpriteProperties
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createFluidContainersFromSpriteProperties
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createSampleAndPurifyWater
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidContainer
+                full: zombie.entity.components.fluids.FluidContainer
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: FluidContainer
+                full: zombie.entity.components.fluids.FluidContainer
+          - name: customHashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: debugPrintout
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: debugRenderItemHeight
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: debugRenderSurface
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: destroyFence
+            modifiers:
+            - public
+            parameters:
+            - name: dir
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            return:
+              type:
+                basic: void
+                full: void
+          - name: doFindExternalWaterSource
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: dumpContentsInSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: emptyFluid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: flagForHotSave
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAlpha
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the alpha
+          - name: getAlpha
+            modifiers:
+            - public
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAlphaUpdateRateDiv
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAlphaUpdateRateMul
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAttachedAnimSprite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.sprite.IsoSpriteInstance>
+              notes: the AttachedAnimSprite
+          - name: getAttachedAnimSpriteCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getCell
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+              notes: the cell
+          - name: getChildSprites
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.sprite.IsoSpriteInstance>
+              notes: the AttachedAnimSprite
+          - name: getChunk
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+          - name: getClockScript
+            modifiers:
+            - private
+            return:
+              type:
+                basic: ClockScript
+                full: zombie.scripting.objects.ClockScript
+          - name: getContainer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+              notes: the container
+          - name: getContainerByEitherType
+            modifiers:
+            - public
+            parameters:
+            - name: type1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: type2
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+          - name: getContainerByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+          - name: getContainerByType
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+          - name: getContainerClickedOn
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+          - name: getContainerCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getContainerIndex
+            modifiers:
+            - public
+            parameters:
+            - name: container
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getContainers
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            - name: arg1
+              type:
+                basic: Invokers.Params2.Boolean.ICallback
+                full: zombie.util.lambda.Invokers$Params2$Boolean$ICallback<T, zombie.inventory.ItemContainer>
+            - name: arg2
+              type:
+                basic: PZArrayList
+                full: zombie.util.list.PZArrayList<zombie.inventory.ItemContainer>
+            return:
+              type:
+                basic: PZArrayList
+                full: zombie.util.list.PZArrayList<zombie.inventory.ItemContainer>
+          - name: getCurrentFrameTex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+          - name: getCustomColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+          - name: getDamage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: short
+                full: short
+              notes: the Damage
+          - name: getDir
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+              notes: the dir
+          - name: getDoRender
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getEntityNetID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getFacing
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+          - name: getFacingPosition
+            modifiers:
+            - public
+            parameters:
+            - name: pos
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+            return:
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+          - name: getFacingPositionAlt
+            modifiers:
+            - public
+            parameters:
+            - name: pos
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+            return:
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+          - name: getFasciaAttachedSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: getFluidAmount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFluidCapacity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFluidUiName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getForwardIsoDirection
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+          - name: getForwardMovementIsoDirection
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+          - name: getGameEntityType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: GameEntityType
+                full: zombie.entity.GameEntityType
+          - name: getHighlightColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+          - name: getHighlightColor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+          - name: getInfiniteWaterType
+            modifiers:
+            - private
+            return:
+              type:
+                basic: FluidType
+                full: zombie.entity.components.fluids.FluidType
+          - name: getIsSurfaceNormalOffset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getItemContainer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+          - name: getKeyId
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getLightSource
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoLightSource
+                full: zombie.iso.IsoLightSource
+          - name: getMaskClickedY
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: flip
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMasterObject
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: getModData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+          - name: getMovingObjectIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getObjectIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getObjectName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getObjectRenderEffects
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ObjectRenderEffects
+                full: zombie.iso.objects.ObjectRenderEffects
+          - name: getObjectRenderEffectsToApply
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ObjectRenderEffects
+                full: zombie.iso.objects.ObjectRenderEffects
+          - name: getOffsetX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getOffsetY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getOnOverlay
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoSpriteInstance
+                full: zombie.iso.sprite.IsoSpriteInstance
+          - name: getOutlineHighlightCol
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getOutlineThickness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getOverlaySprite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+          - name: getOverlaySpriteColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+          - name: getPipedFuelAmount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getPosition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            return:
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+          - name: getPosition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3f
+                full: org.lwjgl.util.vector.Vector3f
+            return:
+              type:
+                basic: Vector3f
+                full: org.lwjgl.util.vector.Vector3f
+          - name: getProperties
+            modifiers:
+            - public
+            return:
+              type:
+                basic: PropertyContainer
+                full: zombie.core.properties.PropertyContainer
+          - name: getRenderEffectMaster
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: getRenderEffectObjectByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: getRenderEffectObjectCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getRenderInfo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ObjectRenderInfo
+                full: zombie.iso.fboRenderChunk.ObjectRenderInfo
+          - name: getRenderSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: getRenderYOffset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getRerouteCollide
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+              notes: the rerouteCollide
+          - name: getRerouteMask
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+              notes: the rerouteMask
+          - name: getRerouteMaskObject
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: getReserveWaterAmount
+            modifiers:
+            - private
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getReserveWaterMax
+            modifiers:
+            - private
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getScriptName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSpecialObjectIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSprite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+              notes: the sprite
+          - name: getSpriteGrid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoSpriteGrid
+                full: zombie.iso.sprite.IsoSpriteGrid
+          - name: getSpriteGridObjects
+            modifiers:
+            - public
+            parameters:
+            - name: result
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoObject>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getSpriteGridObjects
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoObject>
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getSpriteGridObjectsExcludingSelf
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoObject>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getSpriteGridObjectsIncludingSelf
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoObject>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getSpriteModel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: SpriteModel
+                full: zombie.iso.SpriteModel
+          - name: getSpriteName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: getStaticMovingObjectIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSurfaceNormalOffset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSurfaceOffset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSurfaceOffsetNoTable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+              notes: the table
+          - name: getTargetAlpha
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the targetAlpha
+          - name: getTargetAlpha
+            modifiers:
+            - public
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTextureName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getThumpCondition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getThumpableFor
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: Thumpable
+                full: zombie.iso.objects.interfaces.Thumpable
+          - name: getTile
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getTileName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoObjectType
+                full: zombie.iso.SpriteDetails.IsoObjectType
+              notes: the type
+          - name: getUsesExternalWaterSource
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getWindRenderEffects
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ObjectRenderEffects
+                full: zombie.iso.objects.ObjectRenderEffects
+          - name: getWorldObjectIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getZ
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: hasAnimatedAttachments
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasAnimatedClockHands
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasAttachedAnimSprites
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasExternalWaterSource
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasFluid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasGridPower
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasModData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasObjectAmbientEmitter
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasOverlaySprite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasPropaneTank
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasReserveWater
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasSpriteGrid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasWater
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: haveSheetRope
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: haveSpecialTooltip
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: invalidateRenderChunkLevel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: invalidateVispolyChunkLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isAlphaAndTargetZero
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: Returns TRUE if both Alpha nad TargetAlpha are transparent, or
+              near-zero.
+          - name: isAlphaAndTargetZero
+            modifiers:
+            - public
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAlphaZero
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: Returns TRUE if Alpha is transparent, or near-zero.
+          - name: isAlphaZero
+            modifiers:
+            - public
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAnimating
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isBlink
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isBlink
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isBush
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCanPath
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCharacter
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isConnectedSpriteGridObject
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDestroyed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEntityValid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isExistInTheWorld
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFascia
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFireInteractionObject
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFloor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFluidInputLocked
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isGenericCraftingSurface
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isGrave
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isHighlightRenderOnce
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isHighlightRenderOnce
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isHighlighted
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isHighlighted
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isHoppable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isItemAllowedInContainer
+            modifiers:
+            - public
+            parameters:
+            - name: container
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMaskClicked
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMaskClicked
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: flip
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMovedThumpable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isNoPicking
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the NoPicking
+          - name: isNorthHoppable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isObjectNoContainerOrEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOnScreen
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOutlineHighlight
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOutlineHighlight
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOutlineHlAttached
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOutlineHlAttached
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOutlineHlBlink
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOutlineHlBlink
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOutlineOnMouseover
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the OutlineOnMouseover
+          - name: isPropaneBBQ
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRemoveItemAllowedFromContainer
+            modifiers:
+            - public
+            parameters:
+            - name: container
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSatChair
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSceneCulled
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSpriteInvisible
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isStairsNorth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isStairsObject
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isStairsWest
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isStump
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTableSurface
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTableTopObject
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTaintedWater
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTallHoppable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTargetAlphaZero
+            modifiers:
+            - public
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUnmovedPipedWaterSource
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUpdateAlphaDuringRender
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUpdateAlphaEnabled
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isWall
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isWallN
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isWallW
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isWaterInfinite
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isZombie
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: input
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: input
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            - name: IS_DEBUG_SAVE
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadChange
+            modifiers:
+            - public
+            parameters:
+            - name: change
+              type:
+                basic: String
+                full: java.lang.String
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadFromRemoteBuffer
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadFromRemoteBuffer
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: addToObjects
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadState
+            modifiers:
+            - public
+            parameters:
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: moveFluidToTemporaryContainer
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: FluidContainer
+                full: zombie.entity.components.fluids.FluidContainer
+          - name: onAnimationFinished
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onMouseLeftClick
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: onMouseRightClick
+            modifiers:
+            - public
+            parameters:
+            - name: lx
+              type:
+                basic: int
+                full: int
+            - name: ly
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onMouseRightReleased
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: prepareToRender
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeAllContainers
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeFromSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeFromWorld
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeFromWorldToMeta
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeLightSourceFromWorld
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeRenderEffect
+            modifiers:
+            - public
+            parameters:
+            - name: o
+              type:
+                basic: ObjectRenderEffects
+                full: zombie.iso.objects.ObjectRenderEffects
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeSheetRope
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: render
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            - name: col
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: bDoAttached
+              type:
+                basic: boolean
+                full: boolean
+            - name: bWallLightingPass
+              type:
+                basic: boolean
+                full: boolean
+            - name: shader
+              type:
+                basic: Shader
+                full: zombie.core.opengl.Shader
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderAnimatedAttachments
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderAttachedAndOverlaySprites
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: arg5
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg6
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg7
+              type:
+                basic: Shader
+                full: zombie.core.opengl.Shader
+            - name: arg8
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<zombie.core.textures.TextureDraw>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderAttachedAndOverlaySpritesInternal
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: arg5
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg6
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg7
+              type:
+                basic: Shader
+                full: zombie.core.opengl.Shader
+            - name: arg8
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<zombie.core.textures.TextureDraw>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderAttachedSprites
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: arg5
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg6
+              type:
+                basic: Shader
+                full: zombie.core.opengl.Shader
+            - name: arg7
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<zombie.core.textures.TextureDraw>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderClockHand
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: arg4
+              type:
+                basic: ClockScript
+                full: zombie.scripting.objects.ClockScript
+            - name: arg5
+              type:
+                basic: ClockScript.HandScript
+                full: zombie.scripting.objects.ClockScript$HandScript
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderClockHands
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderFloorTile
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            - name: col
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: bDoAttached
+              type:
+                basic: boolean
+                full: boolean
+            - name: bWallLightingPass
+              type:
+                basic: boolean
+                full: boolean
+            - name: shader
+              type:
+                basic: Shader
+                full: zombie.core.opengl.Shader
+            - name: texdModifier
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<zombie.core.textures.TextureDraw>
+            - name: attachedAndOverlayModifier
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<zombie.core.textures.TextureDraw>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderFxMask
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            - name: bDoAttached
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderModel
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: renderObjectPicker
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            - name: lightInfo
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderOverlaySprites
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: arg4
+              type:
+                basic: Shader
+                full: zombie.core.opengl.Shader
+            - name: arg5
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<zombie.core.textures.TextureDraw>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderWallTile
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: arg5
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg6
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg7
+              type:
+                basic: Shader
+                full: zombie.core.opengl.Shader
+            - name: arg8
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<zombie.core.textures.TextureDraw>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderWallTileDepth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: arg9
+              type:
+                basic: Shader
+                full: zombie.core.opengl.Shader
+            - name: arg10
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<zombie.core.textures.TextureDraw>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderWallTileOnly
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: arg5
+              type:
+                basic: Shader
+                full: zombie.core.opengl.Shader
+            - name: arg6
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<zombie.core.textures.TextureDraw>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderlast
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: replaceItem
+            modifiers:
+            - public
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reuseGridSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: output
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: output
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: IS_DEBUG_SAVE
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: saveChange
+            modifiers:
+            - public
+            parameters:
+            - name: change
+              type:
+                basic: String
+                full: java.lang.String
+            - name: tbl
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: saveState
+            modifiers:
+            - public
+            parameters:
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendObjectChange
+            modifiers:
+            - public
+            parameters:
+            - name: change
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendObjectChange
+            modifiers:
+            - public
+            parameters:
+            - name: change
+              type:
+                basic: String
+                full: java.lang.String
+            - name: tbl
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendObjectChange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAlpha
+            modifiers:
+            - public
+            parameters:
+            - name: alpha
+              type:
+                basic: float
+                full: float
+              notes: the alpha to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAlpha
+            modifiers:
+            - public
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            - name: alpha
+              type:
+                basic: float
+                full: float
+              notes: the alpha to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAlphaAndTarget
+            modifiers:
+            - public
+            parameters:
+            - name: alpha
+              type:
+                basic: float
+                full: float
+              notes: the alpha to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAlphaAndTarget
+            modifiers:
+            - public
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+              notes: The playerIndex to use
+            - name: alpha
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAlphaToTarget
+            modifiers:
+            - public
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+              notes: The playerIndex to use
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAnimating
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAttachedAnimSprite
+            modifiers:
+            - public
+            parameters:
+            - name: AttachedAnimSprite
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.sprite.IsoSpriteInstance>
+              notes: the AttachedAnimSprite to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBlink
+            modifiers:
+            - public
+            parameters:
+            - name: blink
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBlink
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setChildSprites
+            modifiers:
+            - public
+            parameters:
+            - name: AttachedAnimSprite
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.sprite.IsoSpriteInstance>
+              notes: the AttachedAnimSprite to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setContainer
+            modifiers:
+            - public
+            parameters:
+            - name: container
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+              notes: the container to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCustomColor
+            modifiers:
+            - public
+            parameters:
+            - name: col
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCustomColor
+            modifiers:
+            - public
+            parameters:
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: a
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDamage
+            modifiers:
+            - public
+            parameters:
+            - name: Damage
+              type:
+                basic: short
+                full: short
+              notes: the Damage to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDir
+            modifiers:
+            - public
+            parameters:
+            - name: dir
+              type:
+                basic: int
+                full: int
+              notes: the dir to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDoRender
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setExplored
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setForwardIsoDirection
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setForwardIsoDirection
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHighlightColor
+            modifiers:
+            - public
+            parameters:
+            - name: highlightColor
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHighlightColor
+            modifiers:
+            - public
+            parameters:
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: a
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHighlightColor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHighlightColor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHighlightRenderOnce
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHighlightRenderOnce
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHighlighted
+            modifiers:
+            - public
+            parameters:
+            - name: highlight
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHighlighted
+            modifiers:
+            - public
+            parameters:
+            - name: highlight
+              type:
+                basic: boolean
+                full: boolean
+            - name: renderOnce
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHighlighted
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHighlighted
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setKeyId
+            modifiers:
+            - public
+            parameters:
+            - name: keyId
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLightSource
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoLightSource
+                full: zombie.iso.IsoLightSource
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLit
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setModData
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMovedThumpable
+            modifiers:
+            - public
+            parameters:
+            - name: movedThumpable
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setName
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the name to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNoPicking
+            modifiers:
+            - public
+            parameters:
+            - name: NoPicking
+              type:
+                basic: boolean
+                full: boolean
+              notes: the NoPicking to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOffsetX
+            modifiers:
+            - public
+            parameters:
+            - name: offsetX
+              type:
+                basic: float
+                full: float
+              notes: the offsetX to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOffsetY
+            modifiers:
+            - public
+            parameters:
+            - name: offsetY
+              type:
+                basic: float
+                full: float
+              notes: the offsetY to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOnOverlay
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoSpriteInstance
+                full: zombie.iso.sprite.IsoSpriteInstance
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOutlineHighlight
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: isOutlineHighlight
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOutlineHighlight
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            - name: isOutlineHighlight
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOutlineHighlightCol
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: outlineHighlightCol
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOutlineHighlightCol
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            - name: outlineHighlightCol
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOutlineHighlightCol
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: a
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOutlineHighlightCol
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: a
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOutlineHlAttached
+            modifiers:
+            - public
+            parameters:
+            - name: isOutlineHlAttached
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOutlineHlAttached
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            - name: isOutlineHlAttached
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOutlineHlBlink
+            modifiers:
+            - public
+            parameters:
+            - name: isOutlineHlBlink
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOutlineHlBlink
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            - name: isOutlineHlBlink
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOutlineOnMouseover
+            modifiers:
+            - public
+            parameters:
+            - name: OutlineOnMouseover
+              type:
+                basic: boolean
+                full: boolean
+              notes: the OutlineOnMouseover to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOutlineThickness
+            modifiers:
+            - public
+            parameters:
+            - name: outlineThickness
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOverlaySprite
+            modifiers:
+            - public
+            parameters:
+            - name: spriteName
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOverlaySprite
+            modifiers:
+            - public
+            parameters:
+            - name: spriteName
+              type:
+                basic: String
+                full: java.lang.String
+            - name: bTransmit
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOverlaySprite
+            modifiers:
+            - public
+            parameters:
+            - name: spriteName
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: a
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOverlaySprite
+            modifiers:
+            - public
+            parameters:
+            - name: spriteName
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: a
+              type:
+                basic: float
+                full: float
+            - name: bTransmit
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setOverlaySpriteColor
+            modifiers:
+            - public
+            parameters:
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: a
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPipedFuelAmount
+            modifiers:
+            - public
+            parameters:
+            - name: units
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRenderEffect
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: RenderEffectType
+                full: zombie.iso.objects.RenderEffectType
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRenderEffect
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: RenderEffectType
+                full: zombie.iso.objects.RenderEffectType
+            - name: reuseEqualType
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRenderYOffset
+            modifiers:
+            - public
+            parameters:
+            - name: f
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRerouteCollide
+            modifiers:
+            - public
+            parameters:
+            - name: rerouteCollide
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+              notes: the rerouteCollide to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRerouteMask
+            modifiers:
+            - public
+            parameters:
+            - name: rerouteMask
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+              notes: the rerouteMask to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setReserveWaterAmount
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSatChair
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSceneCulled
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSpecialTooltip
+            modifiers:
+            - public
+            parameters:
+            - name: specialTooltip
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSprite
+            modifiers:
+            - public
+            parameters:
+            - name: sprite
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+              notes: the sprite to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSprite
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSpriteFromName
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSpriteModelName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSquare
+            modifiers:
+            - public
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+              notes: the square to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTable
+            modifiers:
+            - public
+            parameters:
+            - name: table
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+              notes: the table to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTargetAlpha
+            modifiers:
+            - public
+            parameters:
+            - name: targetAlpha
+              type:
+                basic: float
+                full: float
+              notes: the targetAlpha to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTargetAlpha
+            modifiers:
+            - public
+            parameters:
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            - name: targetAlpha
+              type:
+                basic: float
+                full: float
+              notes: the targetAlpha to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTile
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setType
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: IsoObjectType
+                full: zombie.iso.SpriteDetails.IsoObjectType
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUsesExternalWaterSource
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: shouldDrawMainSprite
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: shouldLightSourceBeActive
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: shouldShowOnOverlay
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: softReset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: spawnItemToObjectSurface
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: spawnItemToObjectSurface
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: sync
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: syncFluidContainerReceive
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: syncFluidContainerSend
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: syncIsoObject
+            modifiers:
+            - public
+            parameters:
+            - name: bRemote
+              type:
+                basic: boolean
+                full: boolean
+            - name: val
+              type:
+                basic: byte
+                full: byte
+            - name: source
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: syncIsoObjectReceive
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: syncIsoObjectSend
+            modifiers:
+            - public
+            parameters:
+            - name: bb
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: transferFluidFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidContainer
+                full: zombie.entity.components.fluids.FluidContainer
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: transferFluidTo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidContainer
+                full: zombie.entity.components.fluids.FluidContainer
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: transmitCompleteItemToClients
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitCompleteItemToServer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitCustomColorToClients
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitModData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitUpdatedSprite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitUpdatedSpriteToClients
+            modifiers:
+            - public
+            parameters:
+            - name: connection
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitUpdatedSpriteToClients
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitUpdatedSpriteToServer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: turnOn
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: unsetOutlineHighlight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateAlpha
+            modifiers:
+            - protected
+            - final
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateAlpha
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateAlpha
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateRenderInfoForObjectPicker
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: useFluid
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: useItemOn
+            modifiers:
+            - public
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: writeToRemoteBuffer
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: FindExternalWaterSource
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: FindExternalWaterSource
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: FindWaterSourceOnSquare
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: addIsoObjectFactory
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoObject.IsoObjectFactory
+                full: zombie.iso.IsoObject$IsoObjectFactory
+            return:
+              type:
+                basic: IsoObject.IsoObjectFactory
+                full: zombie.iso.IsoObject$IsoObjectFactory
+          - name: factoryClassFromFileInput
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: classID
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class
+          - name: factoryFromFileInput
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: classID
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: factoryFromFileInput
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: arg1
+              type:
+                basic: DataInputStream
+                full: java.io.DataInputStream
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: factoryFromFileInput
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: b
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: factoryFromFileInput_OLD
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: classID
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: factoryGetClassID
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: getFactoryVehicle
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: IsoObject.IsoObjectFactory
+                full: zombie.iso.IsoObject$IsoObjectFactory
+          - name: getLastRendered
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+              notes: the lastRendered
+          - name: getLastRenderedRendered
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+              notes: the lastRenderedRendered
+          - name: getNew
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: sq
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: spriteName
+              type:
+                basic: String
+                full: java.lang.String
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: bShareTilesWithMap
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: getNew
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: initFactory
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLastRendered
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: aLastRendered
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+              notes: the lastRendered to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLastRenderedRendered
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: aLastRenderedRendered
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+              notes: the lastRenderedRendered to set
+            return:
+              type:
+                basic: void
+                full: void

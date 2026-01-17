@@ -1,0 +1,26 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.awt.image:
+        BufImgSurfaceData.ICMColorData:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            pData:
+              name: pData
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long

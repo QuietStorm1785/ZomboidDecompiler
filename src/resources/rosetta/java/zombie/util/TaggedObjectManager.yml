@@ -1,0 +1,528 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.util:
+        TaggedObjectManager:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            _emptyTagObjects:
+              name: _emptyTagObjects
+              modifiers:
+              - private
+              type:
+                basic: List
+                full: java.util.List<T>
+            _tempStringList:
+              name: _tempStringList
+              modifiers:
+              - private
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+            backingListProvider:
+              name: backingListProvider
+              modifiers:
+              - private
+              type:
+                basic: TaggedObjectManager.BackingListProvider
+                full: zombie.util.TaggedObjectManager$BackingListProvider<T>
+            registeredTags:
+              name: registeredTags
+              modifiers:
+              - private
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+            registeredTagsView:
+              name: registeredTagsView
+              modifiers:
+              - private
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+            tagGroupMap:
+              name: tagGroupMap
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.util.TaggedObjectManager$TagGroup<T>>
+            tagGroups:
+              name: tagGroups
+              modifiers:
+              - private
+              type:
+                basic: List
+                full: java.util.List<zombie.util.TaggedObjectManager$TagGroup<T>>
+            tagIndexToStringMap:
+              name: tagIndexToStringMap
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.Integer, java.lang.String>
+            tagStringToIndexMap:
+              name: tagStringToIndexMap
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.lang.Integer>
+            tagToObjectListMap:
+              name: tagToObjectListMap
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.util.List<T>>
+            tagsStringAliasMap:
+              name: tagsStringAliasMap
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.lang.String>
+            verbose:
+              name: verbose
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            warnNonPreprocessedNewTag:
+              name: warnNonPreprocessedNewTag
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+          staticFields:
+            defaultTag:
+              name: defaultTag
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TaggedObjectManager.BackingListProvider
+                full: zombie.util.TaggedObjectManager$BackingListProvider<T>
+          methods:
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createTagBits
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String[]
+            return:
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+          - name: createTagBits
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String[]
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+          - name: debugLog
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: debugPrint
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: debugPrint
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: filterList
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: List
+                full: java.util.List<T>
+            - name: arg2
+              type:
+                basic: List
+                full: java.util.List<T>
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: List
+                full: java.util.List<T>
+          - name: formatAndRegisterQueryString
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: formatQueryString
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getBitSetString
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getListForTag
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: List
+                full: java.util.List<T>
+          - name: getListForTag
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: List
+                full: java.util.List<T>
+          - name: getRegisteredTagGroups
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getRegisteredTags
+            modifiers:
+            - public
+            return:
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+          - name: isVerbose
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isWarnNonPreprocessedNewTag
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: populateList
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: List
+                full: java.util.List<T>
+            - name: arg2
+              type:
+                basic: List
+                full: java.util.List<T>
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: List
+                full: java.util.List<T>
+          - name: populateTagGroupList
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: TaggedObjectManager.TagGroup
+                full: zombie.util.TaggedObjectManager$TagGroup<T>
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: List
+                full: java.util.List<T>
+          - name: populateTaggedObjectList
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+            - name: arg1
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+            - name: arg2
+              type:
+                basic: List
+                full: java.util.List<T>
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: List
+                full: java.util.List<T>
+          - name: populateTaggedObjectList
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+            - name: arg1
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+            - name: arg2
+              type:
+                basic: List
+                full: java.util.List<T>
+            - name: arg3
+              type:
+                basic: List
+                full: java.util.List<T>
+            - name: arg4
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: List
+                full: java.util.List<T>
+          - name: queryTaggedObjects
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: List
+                full: java.util.List<T>
+          - name: readBlackList
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String[]
+          - name: readWhitelist
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String[]
+          - name: registerObject
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: registerObjectsFromBackingList
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: registerObjectsFromBackingList
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: registerTag
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: int
+                full: int
+          - name: sanitizeTag
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: setDirty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVerbose
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWarnNonPreprocessedNewTag
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void

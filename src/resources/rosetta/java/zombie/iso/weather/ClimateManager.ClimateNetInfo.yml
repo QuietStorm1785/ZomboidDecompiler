@@ -1,0 +1,84 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.weather:
+        ClimateManager.ClimateNetInfo:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            GenerateFront:
+              name: GenerateFront
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            GenerateStrength:
+              name: GenerateStrength
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            IsGenerate:
+              name: IsGenerate
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            IsStopWeather:
+              name: IsStopWeather
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            IsTrigger:
+              name: IsTrigger
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            TriggerBlizzard:
+              name: TriggerBlizzard
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            TriggerDuration:
+              name: TriggerDuration
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            TriggerStorm:
+              name: TriggerStorm
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            TriggerTropical:
+              name: TriggerTropical
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: reset
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void

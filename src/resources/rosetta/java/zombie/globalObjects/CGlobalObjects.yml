@@ -1,0 +1,154 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.globalObjects:
+        CGlobalObjects:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          staticFields:
+            initialState:
+              name: initialState
+              modifiers:
+              - protected
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, se.krka.kahlua.vm.KahluaTable>
+            systems:
+              name: systems
+              modifiers:
+              - protected
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.globalObjects.CGlobalObjectSystem>
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getSystemByIndex
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CGlobalObjectSystem
+                full: zombie.globalObjects.CGlobalObjectSystem
+          - name: getSystemByName
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: CGlobalObjectSystem
+                full: zombie.globalObjects.CGlobalObjectSystem
+          - name: getSystemCount
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: int
+                full: int
+          - name: initSystems
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadInitialState
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: newSystem
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: CGlobalObjectSystem
+                full: zombie.globalObjects.CGlobalObjectSystem
+          - name: noise
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: message
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: receiveServerCommand
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: systemName
+              type:
+                basic: String
+                full: java.lang.String
+            - name: command
+              type:
+                basic: String
+                full: java.lang.String
+            - name: args
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: registerSystem
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: CGlobalObjectSystem
+                full: zombie.globalObjects.CGlobalObjectSystem

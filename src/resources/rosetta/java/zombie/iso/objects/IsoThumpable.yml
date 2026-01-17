@@ -1,0 +1,2236 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.objects:
+        IsoThumpable:
+          extends: zombie.iso.IsoObject
+          modifiers:
+          - public
+          fields:
+            Health:
+              name: Health
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            Locked:
+              name: Locked
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            MaxHealth:
+              name: MaxHealth
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            OldNumPlanks:
+              name: OldNumPlanks
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            PushedMaxStrength:
+              name: PushedMaxStrength
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            PushedStrength:
+              name: PushedStrength
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            blockAllTheSquare:
+              name: blockAllTheSquare
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            breakSound:
+              name: breakSound
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            canBarricade:
+              name: canBarricade
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            canBeLockByPadlock:
+              name: canBeLockByPadlock
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            canBePlastered:
+              name: canBePlastered
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            canPassThrough:
+              name: canPassThrough
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            closedSprite:
+              name: closedSprite
+              modifiers:
+              - protected
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+            crossSpeed:
+              name: crossSpeed
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            destroyed:
+              name: destroyed
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            dismantable:
+              name: dismantable
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            haveFuel:
+              name: haveFuel
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isContainer:
+              name: isContainer
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isCorner:
+              name: isCorner
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isDoor:
+              name: isDoor
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isDoorFrame:
+              name: isDoorFrame
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isFloor:
+              name: isFloor
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isHoppable:
+              name: isHoppable
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isStairs:
+              name: isStairs
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isThumpable:
+              name: isThumpable
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            keyId:
+              name: keyId
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            lastPlayerOnlineId:
+              name: lastPlayerOnlineId
+              modifiers:
+              - private
+              type:
+                basic: short
+                full: short
+            lastUpdateHours:
+              name: lastUpdateHours
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            lifeDelta:
+              name: lifeDelta
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            lifeLeft:
+              name: lifeLeft
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            lightSource:
+              name: lightSource
+              modifiers:
+              - private
+              type:
+                basic: IsoLightSource
+                full: zombie.iso.IsoLightSource
+            lightSourceFuel:
+              name: lightSourceFuel
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            lightSourceLife:
+              name: lightSourceLife
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            lightSourceOn:
+              name: lightSourceOn
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            lightSourceRadius:
+              name: lightSourceRadius
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            lightSourceXOffset:
+              name: lightSourceXOffset
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            lightSourceYOffset:
+              name: lightSourceYOffset
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            lockedByCode:
+              name: lockedByCode
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            lockedByKey:
+              name: lockedByKey
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            lockedByPadlock:
+              name: lockedByPadlock
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            modData:
+              name: modData
+              modifiers:
+              - private
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            north:
+              name: north
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            open:
+              name: open
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            openSprite:
+              name: openSprite
+              modifiers:
+              - public
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+            paintable:
+              name: paintable
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            table:
+              name: table
+              modifiers:
+              - private
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            thumpDmg:
+              name: thumpDmg
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            thumpSound:
+              name: thumpSound
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            updateAccumulator:
+              name: updateAccumulator
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            wasTryingToggleBarricadedDoor:
+              name: wasTryingToggleBarricadedDoor
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            wasTryingToggleLockedDoor:
+              name: wasTryingToggleLockedDoor
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+          staticFields:
+            tempo:
+              name: tempo
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+          - modifiers:
+            - public
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: gridSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: closedSprite
+              type:
+                basic: String
+                full: java.lang.String
+            - name: openSprite
+              type:
+                basic: String
+                full: java.lang.String
+            - name: north
+              type:
+                basic: boolean
+                full: boolean
+            - name: table
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            notes: "Create an object than can be interacted by you, survivor or zombie\
+              \ (destroy, barricade, etc.) This one have a closed/openSprite so it\
+              \ can be a\n door for example"
+          - modifiers:
+            - public
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: gridSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: sprite
+              type:
+                basic: String
+                full: java.lang.String
+            - name: north
+              type:
+                basic: boolean
+                full: boolean
+            - name: table
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            notes: Create an object than can be interacted by you, survivor or zombie
+              (destroy, barricade, etc.) This one can be a wall, a fence, etc.
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: arg1
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+          methods:
+          - name: Damage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: HasCurtains
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoCurtain
+                full: zombie.iso.objects.IsoCurtain
+          - name: HasCurtains
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ICurtain
+                full: zombie.iso.ICurtain
+          - name: IsOpen
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsStrengthenedByPushedItems
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: PlayAnimation
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: TestCollide
+            modifiers:
+            - public
+            parameters:
+            - name: obj
+              type:
+                basic: IsoMovingObject
+                full: zombie.iso.IsoMovingObject
+            - name: from
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: to
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: TestPathfindCollide
+            modifiers:
+            - public
+            parameters:
+            - name: obj
+              type:
+                basic: IsoMovingObject
+                full: zombie.iso.IsoMovingObject
+            - name: from
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: to
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: TestVision
+            modifiers:
+            - public
+            parameters:
+            - name: from
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: to
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: IsoObject.VisionResult
+                full: zombie.iso.IsoObject$VisionResult
+          - name: Thump
+            modifiers:
+            - public
+            parameters:
+            - name: thumper
+              type:
+                basic: IsoMovingObject
+                full: zombie.iso.IsoMovingObject
+            return:
+              type:
+                basic: void
+                full: void
+          - name: ToggleDoor
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: ToggleDoorActual
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: ToggleDoorSilent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: TriggerBarricadedDoor
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: TriggerLockedDoor
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: WeaponHit
+            modifiers:
+            - public
+            parameters:
+            - name: owner
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: weapon
+              type:
+                basic: HandWeapon
+                full: zombie.inventory.types.HandWeapon
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addSheet
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addSheetRope
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: itemType
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addToWorld
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: afterRotated
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: animalHit
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoAnimal
+                full: zombie.characters.animals.IsoAnimal
+            return:
+              type:
+                basic: void
+                full: void
+          - name: calcLightSourceX
+            modifiers:
+            - private
+            return:
+              type:
+                basic: int
+                full: int
+          - name: calcLightSourceY
+            modifiers:
+            - private
+            return:
+              type:
+                basic: int
+                full: int
+          - name: canAddCurtain
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canAddSheetRope
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canBeLockByPadlock
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canBePlastered
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canClimbOver
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canClimbThrough
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: changeSprite
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoThumpable
+                full: zombie.iso.objects.IsoThumpable
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkKeyHighlight
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: couldBeOpen
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: countAddSheetRope
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: createLightSource
+            modifiers:
+            - public
+            parameters:
+            - name: radius
+              type:
+                basic: int
+                full: int
+            - name: offsetX
+              type:
+                basic: int
+                full: int
+            - name: offsetY
+              type:
+                basic: int
+                full: int
+            - name: offsetZ
+              type:
+                basic: int
+                full: int
+            - name: life
+              type:
+                basic: int
+                full: int
+            - name: lightSourceFuel
+              type:
+                basic: String
+                full: java.lang.String
+            - name: baseItem
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: destroy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAddSheetSquare
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: getBarricadeForCharacter
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: IsoBarricade
+                full: zombie.iso.objects.IsoBarricade
+          - name: getBarricadeOnOppositeSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoBarricade
+                full: zombie.iso.objects.IsoBarricade
+          - name: getBarricadeOnSameSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoBarricade
+                full: zombie.iso.objects.IsoBarricade
+          - name: getBarricadeOppositeCharacter
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: IsoBarricade
+                full: zombie.iso.objects.IsoBarricade
+          - name: getBreakSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getCanBarricade
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: Can you barricade/unbarricade the item
+          - name: getClosedSpriteTextureName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getCrossSpeed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFacingPosition
+            modifiers:
+            - public
+            parameters:
+            - name: pos
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+            return:
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+          - name: getHealth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getIndoorSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: getInsideSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: getKeyId
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getLifeDelta
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getLifeLeft
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getLightSource
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoLightSource
+                full: zombie.iso.IsoLightSource
+          - name: getLightSourceFuel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getLightSourceLife
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getLightSourceRadius
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getLightSourceXOffset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getLightSourceYOffset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getLockedByCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMaxHealth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMeleeHitSurface
+            modifiers:
+            - private
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getModData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+          - name: getNorth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getObjectName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getOpenSprite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+          - name: getOppositeSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: getOtherSideOfDoor
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: getRenderEffectMaster
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: getSoundPrefix
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSpriteEdge
+            modifiers:
+            - public
+            parameters:
+            - name: ignoreOpen
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+          - name: getSpriteModel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: SpriteModel
+                full: zombie.iso.SpriteModel
+          - name: getTable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+              notes: the table
+          - name: getThumpCondition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getThumpDmg
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getThumpSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getThumpableFor
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: Thumpable
+                full: zombie.iso.objects.interfaces.Thumpable
+          - name: hasModData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: haveFuel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: haveSheetRope
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: insertNewFuel
+            modifiers:
+            - public
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: isAdjacentToSquare
+            modifiers:
+            - public
+            parameters:
+            - name: square2
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isBarricadeAllowed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isBarricaded
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isBlockAllTheSquare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCanPassThrough
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: Can you pass through the item, if false we gonna test the collide
+              default to false (so it collide)
+          - name: isCorner
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDestroyed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDismantable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDoor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDoorFrame
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFloor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isHoppable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLightSourceOn
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLocked
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLockedByKey
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLockedByPadlock
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLockedToCharacter
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isObstructed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPaintable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isStairs
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTallHoppable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isThumpable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isWindow
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isWindowN
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isWindowW
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: input
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            - name: IS_DEBUG_SAVE
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadChange
+            modifiers:
+            - public
+            parameters:
+            - name: change
+              type:
+                basic: String
+                full: java.lang.String
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onMouseLeftClick
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: playDoorSound
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: BaseCharacterSoundEmitter
+                full: zombie.characters.BaseCharacterSoundEmitter
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeCurrentFuel
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: removeFromWorld
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeSheetRope
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: render
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: arg4
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg5
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg6
+              type:
+                basic: Shader
+                full: zombie.core.opengl.Shader
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderWallTile
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            - name: arg5
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg6
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg7
+              type:
+                basic: Shader
+                full: zombie.core.opengl.Shader
+            - name: arg8
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<zombie.core.textures.TextureDraw>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: output
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: IS_DEBUG_SAVE
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: saveChange
+            modifiers:
+            - public
+            parameters:
+            - name: change
+              type:
+                basic: String
+                full: java.lang.String
+            - name: tbl
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBlockAllTheSquare
+            modifiers:
+            - public
+            parameters:
+            - name: blockAllTheSquare
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBreakSound
+            modifiers:
+            - public
+            parameters:
+            - name: pBreakSound
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+            notes: The sound that be played if this object is broken default "BreakDoor"
+          - name: setCanBarricade
+            modifiers:
+            - public
+            parameters:
+            - name: pCanBarricade
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Can you barricade/unbarricade the item default true
+          - name: setCanBeLockByPadlock
+            modifiers:
+            - public
+            parameters:
+            - name: canBeLockByPadlock
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCanBePlastered
+            modifiers:
+            - public
+            parameters:
+            - name: canBePlastered
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCanPassThrough
+            modifiers:
+            - public
+            parameters:
+            - name: pCanPassThrough
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setClosedSprite
+            modifiers:
+            - public
+            parameters:
+            - name: sprite
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCorner
+            modifiers:
+            - public
+            parameters:
+            - name: pCorner
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCrossSpeed
+            modifiers:
+            - public
+            parameters:
+            - name: pCrossSpeed
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHaveFuel
+            modifiers:
+            - public
+            parameters:
+            - name: haveFuel
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHealth
+            modifiers:
+            - public
+            parameters:
+            - name: health
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHoppable
+            modifiers:
+            - public
+            parameters:
+            - name: isHoppable
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsContainer
+            modifiers:
+            - public
+            parameters:
+            - name: pIsContainer
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsDismantable
+            modifiers:
+            - public
+            parameters:
+            - name: dismantable
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsDoor
+            modifiers:
+            - public
+            parameters:
+            - name: pIsDoor
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsDoor
+            modifiers:
+            - public
+            parameters:
+            - name: pIsDoor
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsDoorFrame
+            modifiers:
+            - public
+            parameters:
+            - name: pIsDoorFrame
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsFloor
+            modifiers:
+            - public
+            parameters:
+            - name: pIsFloor
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsHoppable
+            modifiers:
+            - public
+            parameters:
+            - name: isHoppable
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsLocked
+            modifiers:
+            - public
+            parameters:
+            - name: lock
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsStairs
+            modifiers:
+            - public
+            parameters:
+            - name: pStairs
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsThumpable
+            modifiers:
+            - public
+            parameters:
+            - name: thumpable
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setKeyId
+            modifiers:
+            - public
+            parameters:
+            - name: keyId
+              type:
+                basic: int
+                full: int
+            - name: doNetwork
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setKeyId
+            modifiers:
+            - public
+            parameters:
+            - name: keyId
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLifeDelta
+            modifiers:
+            - public
+            parameters:
+            - name: lifeDelta
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLifeLeft
+            modifiers:
+            - public
+            parameters:
+            - name: lifeLeft
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLightSource
+            modifiers:
+            - public
+            parameters:
+            - name: lightSource
+              type:
+                basic: IsoLightSource
+                full: zombie.iso.IsoLightSource
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLightSourceFuel
+            modifiers:
+            - public
+            parameters:
+            - name: lightSourceFuel
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLightSourceLife
+            modifiers:
+            - public
+            parameters:
+            - name: lightSourceLife
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLightSourceOn
+            modifiers:
+            - public
+            parameters:
+            - name: lightSourceOn
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLightSourceRadius
+            modifiers:
+            - public
+            parameters:
+            - name: lightSourceRadius
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLightSourceXOffset
+            modifiers:
+            - public
+            parameters:
+            - name: lightSourceXOffset
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLightSourceYOffset
+            modifiers:
+            - public
+            parameters:
+            - name: lightSourceYOffset
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLockedByCode
+            modifiers:
+            - public
+            parameters:
+            - name: lockedByCode
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLockedByKey
+            modifiers:
+            - public
+            parameters:
+            - name: lockedByKey
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLockedByPadlock
+            modifiers:
+            - public
+            parameters:
+            - name: lockedByPadlock
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaxHealth
+            modifiers:
+            - public
+            parameters:
+            - name: maxHealth
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setModData
+            modifiers:
+            - public
+            parameters:
+            - name: modData
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOpenSprite
+            modifiers:
+            - public
+            parameters:
+            - name: sprite
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPaintable
+            modifiers:
+            - public
+            parameters:
+            - name: paintable
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSprite
+            modifiers:
+            - public
+            parameters:
+            - name: sprite
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSpriteFromName
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTable
+            modifiers:
+            - public
+            parameters:
+            - name: table
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+              notes: the table to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setThumpDmg
+            modifiers:
+            - public
+            parameters:
+            - name: pThumpDmg
+              type:
+                basic: Integer
+                full: java.lang.Integer
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Numbers of zeds need to hurt the object default 8
+          - name: setThumpSound
+            modifiers:
+            - public
+            parameters:
+            - name: thumpSound
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: syncIsoObjectReceive
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: syncIsoObjectSend
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: syncIsoThumpable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toggleLightSource
+            modifiers:
+            - public
+            parameters:
+            - name: toggle
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: GetBreakFurnitureSound
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: GetBreakFurnitureSound
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String

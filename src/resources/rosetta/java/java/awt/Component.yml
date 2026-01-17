@@ -1,0 +1,4510 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt:
+        Component:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "A component is an object having a graphical representation\n that\
+            \ can be displayed on the screen and that can interact with the\n user.\
+            \ Examples of components are the buttons, checkboxes, and scrollbars\n\
+            \ of a typical graphical user interface. \n The Component class is the\
+            \ abstract superclass of\n the nonmenu-related Abstract Window Toolkit\
+            \ components. Class\n Component can also be extended directly to create\
+            \ a\n lightweight component. A lightweight component is a component that\
+            \ is\n not associated with a native window. On the contrary, a heavyweight\n\
+            \ component is associated with a native window. The isLightweight()\n\
+            \ method may be used to distinguish between the two kinds of the components.\n\
+            \ \n Lightweight and heavyweight components may be mixed in a single component\n\
+            \ hierarchy. However, for correct operating of such a mixed hierarchy\
+            \ of\n components, the whole hierarchy must be valid. When the hierarchy\
+            \ gets\n invalidated, like after changing the bounds of components, or\n\
+            \ adding/removing components to/from containers, the whole hierarchy must\
+            \ be\n validated afterwards by means of the Container.validate() method\n\
+            \ invoked on the top-most invalid container of the hierarchy.\n\n Serialization\n\
+            \ It is important to note that only AWT listeners which conform\n to the\
+            \ Serializable protocol will be saved when\n the object is stored.  If\
+            \ an AWT object has listeners that\n aren't marked serializable, they\
+            \ will be dropped at\n writeObject time.  Developers will need, as always,\n\
+            \ to consider the implications of making an object serializable.\n One\
+            \ situation to watch out for is this:\n \n    import java.awt.*;\n   \
+            \ import java.awt.event.*;\n    import java.io.Serializable;\n\n    class\
+            \ MyApp implements ActionListener, Serializable\n    {\n        BigObjectThatShouldNotBeSerializedWithAButton\
+            \ bigOne;\n        Button aButton = new Button();\n\n        MyApp()\n\
+            \        {\n            // Oops, now aButton has a listener with a reference\n\
+            \            // to bigOne!\n            aButton.addActionListener(this);\n\
+            \        }\n\n        public void actionPerformed(ActionEvent e)\n   \
+            \     {\n            System.out.println(\"Hello There\");\n        }\n\
+            \    }\n \n In this example, serializing aButton by itself\n will cause\
+            \ MyApp and everything it refers to\n to be serialized as well.  The problem\
+            \ is that the listener\n is serializable by coincidence, not by design.\
+            \  To separate\n the decisions about MyApp and the\n ActionListener being\
+            \ serializable one can use a\n nested class, as in the following example:\n\
+            \ \n    import java.awt.*;\n    import java.awt.event.*;\n    import java.io.Serializable;\n\
+            \n    class MyApp implements java.io.Serializable\n    {\n         BigObjectThatShouldNotBeSerializedWithAButton\
+            \ bigOne;\n         Button aButton = new Button();\n\n         static\
+            \ class MyActionListener implements ActionListener\n         {\n     \
+            \        public void actionPerformed(ActionEvent e)\n             {\n\
+            \                 System.out.println(\"Hello There\");\n             }\n\
+            \         }\n\n         MyApp()\n         {\n             aButton.addActionListener(new\
+            \ MyActionListener());\n         }\n    }\n \n \n Note: For more information\
+            \ on the paint mechanisms utilized\n by AWT and Swing, including information\
+            \ on how to write the most\n efficient painting code, see\n Painting in\
+            \ AWT and Swing.\n \n For details on the focus subsystem, see\n \n How\
+            \ to Use the Focus Subsystem,\n a section in The Java Tutorial, and the\n\
+            \ Focus Specification\n for more information."
+          fields:
+            acc:
+              name: acc
+              modifiers:
+              - private
+              type:
+                basic: AccessControlContext
+                full: java.security.AccessControlContext
+            accessibleContext:
+              name: accessibleContext
+              modifiers:
+              - protected
+              type:
+                basic: AccessibleContext
+                full: javax.accessibility.AccessibleContext
+              notes: The AccessibleContext associated with this Component.
+            appContext:
+              name: appContext
+              modifiers:
+              - package
+              type:
+                basic: AppContext
+                full: sun.awt.AppContext
+            autoFocusTransferOnDisposal:
+              name: autoFocusTransferOnDisposal
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            background:
+              name: background
+              modifiers:
+              - package
+              type:
+                basic: Color
+                full: java.awt.Color
+            backgroundEraseDisabled:
+              name: backgroundEraseDisabled
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            boundsOp:
+              name: boundsOp
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            bufferStrategy:
+              name: bufferStrategy
+              modifiers:
+              - private
+              type:
+                basic: BufferStrategy
+                full: java.awt.image.BufferStrategy
+            changeSupport:
+              name: changeSupport
+              modifiers:
+              - private
+              type:
+                basic: PropertyChangeSupport
+                full: java.beans.PropertyChangeSupport
+            coalescingEnabled:
+              name: coalescingEnabled
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            componentListener:
+              name: componentListener
+              modifiers:
+              - package
+              type:
+                basic: ComponentListener
+                full: java.awt.event.ComponentListener
+            componentOrientation:
+              name: componentOrientation
+              modifiers:
+              - package
+              type:
+                basic: ComponentOrientation
+                full: java.awt.ComponentOrientation
+            componentSerializedDataVersion:
+              name: componentSerializedDataVersion
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            compoundShape:
+              name: compoundShape
+              modifiers:
+              - private
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+            cursor:
+              name: cursor
+              modifiers:
+              - package
+              type:
+                basic: Cursor
+                full: java.awt.Cursor
+            dropTarget:
+              name: dropTarget
+              modifiers:
+              - package
+              type:
+                basic: DropTarget
+                full: java.awt.dnd.DropTarget
+            enabled:
+              name: enabled
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            eventCache:
+              name: eventCache
+              modifiers:
+              - package
+              type:
+                basic: EventQueueItem
+                full: sun.awt.EventQueueItem[]
+            eventMask:
+              name: eventMask
+              modifiers:
+              - package
+              type:
+                basic: long
+                full: long
+            focusListener:
+              name: focusListener
+              modifiers:
+              - package
+              type:
+                basic: FocusListener
+                full: java.awt.event.FocusListener
+            focusTraversalKeys:
+              name: focusTraversalKeys
+              modifiers:
+              - package
+              type:
+                basic: Set
+                full: java.util.Set<java.awt.AWTKeyStroke>[]
+            focusTraversalKeysEnabled:
+              name: focusTraversalKeysEnabled
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            focusable:
+              name: focusable
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            font:
+              name: font
+              modifiers:
+              - package
+              type:
+                basic: Font
+                full: java.awt.Font
+            foreground:
+              name: foreground
+              modifiers:
+              - package
+              type:
+                basic: Color
+                full: java.awt.Color
+            graphicsConfig:
+              name: graphicsConfig
+              modifiers:
+              - private
+              type:
+                basic: GraphicsConfiguration
+                full: java.awt.GraphicsConfiguration
+            height:
+              name: height
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            hierarchyBoundsListener:
+              name: hierarchyBoundsListener
+              modifiers:
+              - package
+              type:
+                basic: HierarchyBoundsListener
+                full: java.awt.event.HierarchyBoundsListener
+            hierarchyListener:
+              name: hierarchyListener
+              modifiers:
+              - package
+              type:
+                basic: HierarchyListener
+                full: java.awt.event.HierarchyListener
+            ignoreRepaint:
+              name: ignoreRepaint
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            inputMethodListener:
+              name: inputMethodListener
+              modifiers:
+              - package
+              type:
+                basic: InputMethodListener
+                full: java.awt.event.InputMethodListener
+            isAddNotifyComplete:
+              name: isAddNotifyComplete
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isFocusTraversableOverridden:
+              name: isFocusTraversableOverridden
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            isPacked:
+              name: isPacked
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            keyListener:
+              name: keyListener
+              modifiers:
+              - package
+              type:
+                basic: KeyListener
+                full: java.awt.event.KeyListener
+            locale:
+              name: locale
+              modifiers:
+              - package
+              type:
+                basic: Locale
+                full: java.util.Locale
+            maxSize:
+              name: maxSize
+              modifiers:
+              - package
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+            maxSizeSet:
+              name: maxSizeSet
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            minSize:
+              name: minSize
+              modifiers:
+              - package
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+            minSizeSet:
+              name: minSizeSet
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            mixingCutoutRegion:
+              name: mixingCutoutRegion
+              modifiers:
+              - private
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+            mouseListener:
+              name: mouseListener
+              modifiers:
+              - package
+              type:
+                basic: MouseListener
+                full: java.awt.event.MouseListener
+            mouseMotionListener:
+              name: mouseMotionListener
+              modifiers:
+              - package
+              type:
+                basic: MouseMotionListener
+                full: java.awt.event.MouseMotionListener
+            mouseWheelListener:
+              name: mouseWheelListener
+              modifiers:
+              - package
+              type:
+                basic: MouseWheelListener
+                full: java.awt.event.MouseWheelListener
+            name:
+              name: name
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            nameExplicitlySet:
+              name: nameExplicitlySet
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            newEventsOnly:
+              name: newEventsOnly
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            objectLock:
+              name: objectLock
+              modifiers:
+              - private
+              type:
+                basic: Object
+                full: java.lang.Object
+            parent:
+              name: parent
+              modifiers:
+              - package
+              type:
+                basic: Container
+                full: java.awt.Container
+            peer:
+              name: peer
+              modifiers:
+              - package
+              type:
+                basic: ComponentPeer
+                full: java.awt.peer.ComponentPeer
+            peerFont:
+              name: peerFont
+              modifiers:
+              - package
+              type:
+                basic: Font
+                full: java.awt.Font
+            popups:
+              name: popups
+              modifiers:
+              - package
+              type:
+                basic: Vector
+                full: java.util.Vector<java.awt.PopupMenu>
+            prefSize:
+              name: prefSize
+              modifiers:
+              - package
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+            prefSizeSet:
+              name: prefSizeSet
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            valid:
+              name: valid
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            visible:
+              name: visible
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            width:
+              name: width
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            x:
+              name: x
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            y:
+              name: y
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            BOTTOM_ALIGNMENT:
+              name: BOTTOM_ALIGNMENT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+              notes: "Ease-of-use constant for getAlignmentY.\n Specifies an alignment\
+                \ to the bottom of the component."
+            CENTER_ALIGNMENT:
+              name: CENTER_ALIGNMENT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+              notes: "Ease-of-use constant for getAlignmentY and\n getAlignmentX.\
+                \ Specifies an alignment to\n the center of the component"
+            FOCUS_TRAVERSABLE_DEFAULT:
+              name: FOCUS_TRAVERSABLE_DEFAULT
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            FOCUS_TRAVERSABLE_SET:
+              name: FOCUS_TRAVERSABLE_SET
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            FOCUS_TRAVERSABLE_UNKNOWN:
+              name: FOCUS_TRAVERSABLE_UNKNOWN
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            LEFT_ALIGNMENT:
+              name: LEFT_ALIGNMENT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+              notes: "Ease-of-use constant for getAlignmentX.\n Specifies an alignment\
+                \ to the left side of the component."
+            LOCK:
+              name: LOCK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: Object
+                full: java.lang.Object
+            RIGHT_ALIGNMENT:
+              name: RIGHT_ALIGNMENT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+              notes: "Ease-of-use constant for getAlignmentX.\n Specifies an alignment\
+                \ to the right side of the component."
+            TOP_ALIGNMENT:
+              name: TOP_ALIGNMENT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+              notes: "Ease-of-use constant for getAlignmentY().\n Specifies an alignment\
+                \ to the top of the component."
+            actionListenerK:
+              name: actionListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            adjustmentListenerK:
+              name: adjustmentListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            coalesceEventsParams:
+              name: coalesceEventsParams
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            coalesceMap:
+              name: coalesceMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Class<?>, java.lang.Boolean>
+            componentListenerK:
+              name: componentListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            containerListenerK:
+              name: containerListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            eventLog:
+              name: eventLog
+              modifiers:
+              - private
+              - static
+              type:
+                basic: PlatformLogger
+                full: sun.util.logging.PlatformLogger
+            focusListenerK:
+              name: focusListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            focusLog:
+              name: focusLog
+              modifiers:
+              - private
+              - static
+              type:
+                basic: PlatformLogger
+                full: sun.util.logging.PlatformLogger
+            focusTraversalKeyPropertyNames:
+              name: focusTraversalKeyPropertyNames
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String[]
+            hierarchyBoundsListenerK:
+              name: hierarchyBoundsListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            hierarchyListenerK:
+              name: hierarchyListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            incRate:
+              name: incRate
+              modifiers:
+              - package
+              - static
+              type:
+                basic: int
+                full: int
+            inputMethodListenerK:
+              name: inputMethodListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            isInc:
+              name: isInc
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            itemListenerK:
+              name: itemListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            keyListenerK:
+              name: keyListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            log:
+              name: log
+              modifiers:
+              - private
+              - static
+              type:
+                basic: PlatformLogger
+                full: sun.util.logging.PlatformLogger
+            mixingLog:
+              name: mixingLog
+              modifiers:
+              - private
+              - static
+              type:
+                basic: PlatformLogger
+                full: sun.util.logging.PlatformLogger
+            mouseListenerK:
+              name: mouseListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            mouseMotionListenerK:
+              name: mouseMotionListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            mouseWheelListenerK:
+              name: mouseWheelListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            ownedWindowK:
+              name: ownedWindowK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            requestFocusController:
+              name: requestFocusController
+              modifiers:
+              - private
+              - static
+              type:
+                basic: RequestFocusController
+                full: sun.awt.RequestFocusController
+            serialVersionUID:
+              name: serialVersionUID
+              modifiers:
+              - private
+              - static
+              type:
+                basic: long
+                full: long
+            textListenerK:
+              name: textListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            windowFocusListenerK:
+              name: windowFocusListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            windowListenerK:
+              name: windowListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            windowStateListenerK:
+              name: windowStateListenerK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - protected
+            notes: "Constructs a new component. Class Component can be\n extended\
+              \ directly to create a lightweight component that does not\n utilize\
+              \ an opaque native window. A lightweight component must be\n hosted\
+              \ by a native container somewhere higher up in the component\n tree\
+              \ (for example, by a Frame object)."
+          methods:
+          - name: action
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: add
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PopupMenu
+                full: java.awt.PopupMenu
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addComponentListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentListener
+                full: java.awt.event.ComponentListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addFocusListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FocusListener
+                full: java.awt.event.FocusListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addHierarchyBoundsListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: HierarchyBoundsListener
+                full: java.awt.event.HierarchyBoundsListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addHierarchyListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: HierarchyListener
+                full: java.awt.event.HierarchyListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addInputMethodListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InputMethodListener
+                full: java.awt.event.InputMethodListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addKeyListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: KeyListener
+                full: java.awt.event.KeyListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addMouseListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: MouseListener
+                full: java.awt.event.MouseListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addMouseMotionListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: MouseMotionListener
+                full: java.awt.event.MouseMotionListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addMouseWheelListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: MouseWheelListener
+                full: java.awt.event.MouseWheelListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addNotify
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addPropertyChangeListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PropertyChangeListener
+                full: java.beans.PropertyChangeListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addPropertyChangeListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: PropertyChangeListener
+                full: java.beans.PropertyChangeListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: adjustListeningChildrenOnParent
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: applyComponentOrientation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentOrientation
+                full: java.awt.ComponentOrientation
+            return:
+              type:
+                basic: void
+                full: void
+          - name: applyCompoundShape
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+            return:
+              type:
+                basic: void
+                full: void
+          - name: applyCurrentShape
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: applyCurrentShapeBelowMe
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: areBoundsValid
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: areFocusTraversalKeysSet
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: areInputMethodsEnabled
+            modifiers:
+            - package
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: autoProcessMouseWheel
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: MouseWheelEvent
+                full: java.awt.event.MouseWheelEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: bounds
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+          - name: calculateCurrentShape
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+          - name: canBeFocusOwner
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canBeFocusOwnerRecursively
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: checkCoalescing
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: checkGD
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: int
+                full: int
+          - name: checkImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: int
+                full: int
+          - name: checkTreeLock
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearCurrentFocusCycleRootOnHide
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearMostRecentFocusOwnerOnHide
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: coalesceEvents
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: AWTEvent
+                full: java.awt.AWTEvent
+            - name: arg1
+              type:
+                basic: AWTEvent
+                full: java.awt.AWTEvent
+            return:
+              type:
+                basic: AWTEvent
+                full: java.awt.AWTEvent
+          - name: constructComponentName
+            modifiers:
+            - package
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: contains
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: contains
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Point
+                full: java.awt.Point
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsFocus
+            modifiers:
+            - package
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: countHierarchyMembers
+            modifiers:
+            - package
+            return:
+              type:
+                basic: int
+                full: int
+          - name: createBufferStrategy
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createBufferStrategy
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: BufferCapabilities
+                full: java.awt.BufferCapabilities
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createHierarchyEvents
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Component
+                full: java.awt.Component
+            - name: arg2
+              type:
+                basic: Container
+                full: java.awt.Container
+            - name: arg3
+              type:
+                basic: long
+                full: long
+            - name: arg4
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: int
+                full: int
+          - name: createImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ImageProducer
+                full: java.awt.image.ImageProducer
+            return:
+              type:
+                basic: Image
+                full: java.awt.Image
+          - name: createImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Image
+                full: java.awt.Image
+          - name: createVolatileImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: VolatileImage
+                full: java.awt.image.VolatileImage
+          - name: createVolatileImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: ImageCapabilities
+                full: java.awt.ImageCapabilities
+            return:
+              type:
+                basic: VolatileImage
+                full: java.awt.image.VolatileImage
+          - name: deliverEvent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            return:
+              type:
+                basic: void
+                full: void
+          - name: disable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: disableEvents
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: dispatchEvent
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: AWTEvent
+                full: java.awt.AWTEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: dispatchEventImpl
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: AWTEvent
+                full: java.awt.AWTEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: dispatchMouseWheelToAncestor
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: MouseWheelEvent
+                full: java.awt.event.MouseWheelEvent
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: doLayout
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: doSwingSerialization
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: enable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: enable
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: enableEvents
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: enableInputMethods
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: eventEnabled
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: AWTEvent
+                full: java.awt.AWTEvent
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: eventTypeEnabled
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: findUnderMouseInWindow
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: PointerInfo
+                full: java.awt.PointerInfo
+            return:
+              type:
+                basic: Component
+                full: java.awt.Component
+          - name: firePropertyChange
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg2
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void
+          - name: firePropertyChange
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: firePropertyChange
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: firePropertyChange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            - name: arg2
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: void
+                full: void
+          - name: firePropertyChange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: char
+                full: char
+            - name: arg2
+              type:
+                basic: char
+                full: char
+            return:
+              type:
+                basic: void
+                full: void
+          - name: firePropertyChange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: short
+                full: short
+            - name: arg2
+              type:
+                basic: short
+                full: short
+            return:
+              type:
+                basic: void
+                full: void
+          - name: firePropertyChange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            - name: arg2
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: firePropertyChange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: firePropertyChange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAccessControlContext
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: AccessControlContext
+                full: java.security.AccessControlContext
+          - name: getAccessibleContext
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AccessibleContext
+                full: javax.accessibility.AccessibleContext
+          - name: getAccessibleIndexInParent
+            modifiers:
+            - package
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getAccessibleStateSet
+            modifiers:
+            - package
+            return:
+              type:
+                basic: AccessibleStateSet
+                full: javax.accessibility.AccessibleStateSet
+          - name: getAlignmentX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAlignmentY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAppliedShape
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+          - name: getBackBuffer
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Image
+                full: java.awt.Image
+          - name: getBackground
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Color
+                full: java.awt.Color
+          - name: getBaseline
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getBaselineResizeBehavior
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Component.BaselineResizeBehavior
+                full: java.awt.Component$BaselineResizeBehavior
+          - name: getBounds
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+          - name: getBounds
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+            return:
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+          - name: getBoundsOp
+            modifiers:
+            - package
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getBufferStrategy
+            modifiers:
+            - package
+            return:
+              type:
+                basic: BufferStrategy
+                full: java.awt.image.BufferStrategy
+          - name: getColorModel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ColorModel
+                full: java.awt.image.ColorModel
+          - name: getComponentAt
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Component
+                full: java.awt.Component
+          - name: getComponentAt
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Point
+                full: java.awt.Point
+            return:
+              type:
+                basic: Component
+                full: java.awt.Component
+          - name: getComponentFactory
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: ComponentFactory
+                full: sun.awt.ComponentFactory
+          - name: getComponentListeners
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ComponentListener
+                full: java.awt.event.ComponentListener[]
+          - name: getComponentOrientation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ComponentOrientation
+                full: java.awt.ComponentOrientation
+          - name: getContainer
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Container
+                full: java.awt.Container
+          - name: getContainingWindow
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Window
+                full: java.awt.Window
+          - name: getCursor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Cursor
+                full: java.awt.Cursor
+          - name: getCursor_NoClientCode
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: Cursor
+                full: java.awt.Cursor
+          - name: getDropTarget
+            modifiers:
+            - public
+            return:
+              type:
+                basic: DropTarget
+                full: java.awt.dnd.DropTarget
+          - name: getFocusCycleRootAncestor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Container
+                full: java.awt.Container
+          - name: getFocusListeners
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FocusListener
+                full: java.awt.event.FocusListener[]
+          - name: getFocusTraversalKeys
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Set
+                full: java.util.Set<java.awt.AWTKeyStroke>
+          - name: getFocusTraversalKeysEnabled
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getFocusTraversalKeys_NoIDCheck
+            modifiers:
+            - package
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Set
+                full: java.util.Set<java.awt.AWTKeyStroke>
+          - name: getFont
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Font
+                full: java.awt.Font
+          - name: getFontMetrics
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Font
+                full: java.awt.Font
+            return:
+              type:
+                basic: FontMetrics
+                full: java.awt.FontMetrics
+          - name: getFont_NoClientCode
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: Font
+                full: java.awt.Font
+          - name: getForeground
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Color
+                full: java.awt.Color
+          - name: getGraphics
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+          - name: getGraphicsConfiguration
+            modifiers:
+            - public
+            return:
+              type:
+                basic: GraphicsConfiguration
+                full: java.awt.GraphicsConfiguration
+          - name: getGraphicsConfiguration_NoClientCode
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: GraphicsConfiguration
+                full: java.awt.GraphicsConfiguration
+          - name: getGraphics_NoClientCode
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+          - name: getHWPeerAboveMe
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: ComponentPeer
+                full: java.awt.peer.ComponentPeer
+          - name: getHeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getHierarchyBoundsListeners
+            modifiers:
+            - public
+            return:
+              type:
+                basic: HierarchyBoundsListener
+                full: java.awt.event.HierarchyBoundsListener[]
+          - name: getHierarchyListeners
+            modifiers:
+            - public
+            return:
+              type:
+                basic: HierarchyListener
+                full: java.awt.event.HierarchyListener[]
+          - name: getIgnoreRepaint
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getInputContext
+            modifiers:
+            - public
+            return:
+              type:
+                basic: InputContext
+                full: java.awt.im.InputContext
+          - name: getInputMethodListeners
+            modifiers:
+            - public
+            return:
+              type:
+                basic: InputMethodListener
+                full: java.awt.event.InputMethodListener[]
+          - name: getInputMethodRequests
+            modifiers:
+            - public
+            return:
+              type:
+                basic: InputMethodRequests
+                full: java.awt.im.InputMethodRequests
+          - name: getInsets_NoClientCode
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Insets
+                full: java.awt.Insets
+          - name: getKeyListeners
+            modifiers:
+            - public
+            return:
+              type:
+                basic: KeyListener
+                full: java.awt.event.KeyListener[]
+          - name: getListeners
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<T>
+            return:
+              type:
+                basic: T
+                full: T[]
+          - name: getLocale
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Locale
+                full: java.util.Locale
+          - name: getLocation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Point
+                full: java.awt.Point
+          - name: getLocation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Point
+                full: java.awt.Point
+            return:
+              type:
+                basic: Point
+                full: java.awt.Point
+          - name: getLocationOnScreen
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Point
+                full: java.awt.Point
+          - name: getLocationOnScreen_NoTreeLock
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: Point
+                full: java.awt.Point
+          - name: getLocationOnWindow
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Point
+                full: java.awt.Point
+          - name: getMaximumSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+          - name: getMinimumSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+          - name: getMouseListeners
+            modifiers:
+            - public
+            return:
+              type:
+                basic: MouseListener
+                full: java.awt.event.MouseListener[]
+          - name: getMouseMotionListeners
+            modifiers:
+            - public
+            return:
+              type:
+                basic: MouseMotionListener
+                full: java.awt.event.MouseMotionListener[]
+          - name: getMousePosition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Point
+                full: java.awt.Point
+          - name: getMouseWheelListeners
+            modifiers:
+            - public
+            return:
+              type:
+                basic: MouseWheelListener
+                full: java.awt.event.MouseWheelListener[]
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getNativeContainer
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: Container
+                full: java.awt.Container
+          - name: getNextFocusCandidate
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: Component
+                full: java.awt.Component
+          - name: getNormalShape
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+          - name: getObjectLock
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getOpaqueShape
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+          - name: getParent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Container
+                full: java.awt.Container
+          - name: getParent_NoClientCode
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: Container
+                full: java.awt.Container
+          - name: getPreferredSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+          - name: getPropertyChangeListeners
+            modifiers:
+            - public
+            return:
+              type:
+                basic: PropertyChangeListener
+                full: java.beans.PropertyChangeListener[]
+          - name: getPropertyChangeListeners
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: PropertyChangeListener
+                full: java.beans.PropertyChangeListener[]
+          - name: getRecursivelyVisibleBounds
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+          - name: getSiblingIndexAbove
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSiblingIndexBelow
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+          - name: getSize
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+            return:
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+          - name: getToolkit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Toolkit
+                full: java.awt.Toolkit
+          - name: getToolkitImpl
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: Toolkit
+                full: java.awt.Toolkit
+          - name: getTraversalRoot
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Container
+                full: java.awt.Container
+          - name: getTreeLock
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getWidth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: gotFocus
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: handleEvent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasFocus
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hide
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: imageUpdate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: initializeFocusTraversalKeys
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: inside
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: invalidate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: invalidateIfValid
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: void
+                full: void
+          - name: invalidateParent
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isAutoFocusTransferOnDisposal
+            modifiers:
+            - package
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isBackgroundSet
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCoalescingEnabled
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCursorSet
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDisplayable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDoubleBuffered
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEnabled
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEnabledImpl
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFocusCycleRoot
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Container
+                full: java.awt.Container
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFocusOwner
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFocusTraversable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFocusTraversableOverridden
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFocusable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFontSet
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isForegroundSet
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLightweight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMaximumSizeSet
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMinimumSizeSet
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMixingNeeded
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isNonOpaqueForMixing
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOpaque
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPreferredSizeSet
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRecursivelyVisible
+            modifiers:
+            - package
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRequestFocusAccepted
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: FocusEvent.Cause
+                full: java.awt.event.FocusEvent$Cause
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSameOrAncestorOf
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Component
+                full: java.awt.Component
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isShowing
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isValid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isVisible
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isVisible_NoClientCode
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: keyDown
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: keyUp
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: layout
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: lightweightPaint
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+            return:
+              type:
+                basic: void
+                full: void
+          - name: lightweightPrint
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+            return:
+              type:
+                basic: void
+                full: void
+          - name: list
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: list
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PrintStream
+                full: java.io.PrintStream
+            return:
+              type:
+                basic: void
+                full: void
+          - name: list
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PrintStream
+                full: java.io.PrintStream
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: list
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PrintWriter
+                full: java.io.PrintWriter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: list
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PrintWriter
+                full: java.io.PrintWriter
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: locate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Component
+                full: java.awt.Component
+          - name: location
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Point
+                full: java.awt.Point
+          - name: location_NoClientCode
+            modifiers:
+            - private
+            return:
+              type:
+                basic: Point
+                full: java.awt.Point
+          - name: lostFocus
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: minimumSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+          - name: mixOnHiding
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: mixOnReshaping
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: mixOnShowing
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: mixOnValidating
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: mixOnZOrderChanging
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: mouseDown
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: mouseDrag
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: mouseEnter
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: mouseExit
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: mouseMove
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: mouseUp
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: move
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: nextFocus
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: notifyNewBounds
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: numListening
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: int
+                full: int
+          - name: paint
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+            return:
+              type:
+                basic: void
+                full: void
+          - name: paintAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+            return:
+              type:
+                basic: void
+                full: void
+          - name: paintHeavyweightComponents
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+            return:
+              type:
+                basic: void
+                full: void
+          - name: paramString
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: pointRelativeToComponent
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Point
+                full: java.awt.Point
+            return:
+              type:
+                basic: Point
+                full: java.awt.Point
+          - name: postEvent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Event
+                full: java.awt.Event
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: postsOldMouseEvents
+            modifiers:
+            - package
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: preferredSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+          - name: prepareImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: prepareImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: print
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+            return:
+              type:
+                basic: void
+                full: void
+          - name: printAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+            return:
+              type:
+                basic: void
+                full: void
+          - name: printHeavyweightComponents
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+            return:
+              type:
+                basic: void
+                full: void
+          - name: processComponentEvent
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentEvent
+                full: java.awt.event.ComponentEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: processEvent
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: AWTEvent
+                full: java.awt.AWTEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: processFocusEvent
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: FocusEvent
+                full: java.awt.event.FocusEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: processHierarchyBoundsEvent
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: HierarchyEvent
+                full: java.awt.event.HierarchyEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: processHierarchyEvent
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: HierarchyEvent
+                full: java.awt.event.HierarchyEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: processInputMethodEvent
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: InputMethodEvent
+                full: java.awt.event.InputMethodEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: processKeyEvent
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: KeyEvent
+                full: java.awt.event.KeyEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: processMouseEvent
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: MouseEvent
+                full: java.awt.event.MouseEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: processMouseMotionEvent
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: MouseEvent
+                full: java.awt.event.MouseEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: processMouseWheelEvent
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: MouseWheelEvent
+                full: java.awt.event.MouseWheelEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: readObject
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectInputStream
+                full: java.io.ObjectInputStream
+            return:
+              type:
+                basic: void
+                full: void
+          - name: relocateComponent
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: void
+                full: void
+          - name: remove
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: MenuComponent
+                full: java.awt.MenuComponent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeComponentListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentListener
+                full: java.awt.event.ComponentListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeFocusListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FocusListener
+                full: java.awt.event.FocusListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeHierarchyBoundsListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: HierarchyBoundsListener
+                full: java.awt.event.HierarchyBoundsListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeHierarchyListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: HierarchyListener
+                full: java.awt.event.HierarchyListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeInputMethodListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InputMethodListener
+                full: java.awt.event.InputMethodListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeKeyListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: KeyListener
+                full: java.awt.event.KeyListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeMouseListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: MouseListener
+                full: java.awt.event.MouseListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeMouseMotionListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: MouseMotionListener
+                full: java.awt.event.MouseMotionListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeMouseWheelListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: MouseWheelListener
+                full: java.awt.event.MouseWheelListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeNotify
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removePropertyChangeListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PropertyChangeListener
+                full: java.beans.PropertyChangeListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removePropertyChangeListener
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: PropertyChangeListener
+                full: java.beans.PropertyChangeListener
+            return:
+              type:
+                basic: void
+                full: void
+          - name: repaint
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: repaint
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: repaint
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: repaint
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: repaintParentIfNeeded
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: requestFocus
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: requestFocus
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FocusEvent.Cause
+                full: java.awt.event.FocusEvent$Cause
+            return:
+              type:
+                basic: void
+                full: void
+          - name: requestFocus
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: requestFocus
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: FocusEvent.Cause
+                full: java.awt.event.FocusEvent$Cause
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: requestFocusHelper
+            modifiers:
+            - package
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: requestFocusHelper
+            modifiers:
+            - package
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: FocusEvent.Cause
+                full: java.awt.event.FocusEvent$Cause
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: requestFocusInWindow
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: requestFocusInWindow
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FocusEvent.Cause
+                full: java.awt.event.FocusEvent$Cause
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: requestFocusInWindow
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: requestFocusInWindow
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: FocusEvent.Cause
+                full: java.awt.event.FocusEvent$Cause
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: reshape
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reshapeNativePeer
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: resize
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: resize
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+            return:
+              type:
+                basic: void
+                full: void
+          - name: revalidate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: revalidateSynchronously
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAutoFocusTransferOnDisposal
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBackground
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Color
+                full: java.awt.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBounds
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBounds
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBoundsOp
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setComponentOrientation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentOrientation
+                full: java.awt.ComponentOrientation
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCursor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Cursor
+                full: java.awt.Cursor
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDropTarget
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: DropTarget
+                full: java.awt.dnd.DropTarget
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEnabled
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFocusTraversalKeys
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Set
+                full: java.util.Set<? extends java.awt.AWTKeyStroke>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFocusTraversalKeysEnabled
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFocusTraversalKeys_NoIDCheck
+            modifiers:
+            - package
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Set
+                full: java.util.Set<? extends java.awt.AWTKeyStroke>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFocusable
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFont
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Font
+                full: java.awt.Font
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setForeground
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Color
+                full: java.awt.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setGraphicsConfiguration
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: GraphicsConfiguration
+                full: java.awt.GraphicsConfiguration
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIgnoreRepaint
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLocale
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Locale
+                full: java.util.Locale
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLocation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLocation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Point
+                full: java.awt.Point
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaximumSize
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMinimumSize
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMixingCutoutShape
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPreferredSize
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSize
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSize
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVisible
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: show
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: show
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: size
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+          - name: subtractAndApplyShape
+            modifiers:
+            - package
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+            return:
+              type:
+                basic: void
+                full: void
+          - name: subtractAndApplyShapeBelowMe
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: transferFocus
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transferFocus
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: transferFocusBackward
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transferFocusBackward
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: transferFocusUpCycle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateChildGraphicsData
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: GraphicsConfiguration
+                full: java.awt.GraphicsConfiguration
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: updateCursorImmediately
+            modifiers:
+            - package
+            - final
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateGraphicsData
+            modifiers:
+            - package
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: GraphicsConfiguration
+                full: java.awt.GraphicsConfiguration
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: updateSelfGraphicsData
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: GraphicsConfiguration
+                full: java.awt.GraphicsConfiguration
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: updateZOrder
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: validate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: writeObject
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectOutputStream
+                full: java.io.ObjectOutputStream
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: initIDs
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isCoalesceEventsOverriden
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInstanceOf
+            modifiers:
+            - package
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setRequestFocusController
+            modifiers:
+            - package
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: RequestFocusController
+                full: sun.awt.RequestFocusController
+            return:
+              type:
+                basic: void
+                full: void

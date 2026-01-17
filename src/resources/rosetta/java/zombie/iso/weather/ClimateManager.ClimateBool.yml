@@ -1,0 +1,299 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.weather:
+        ClimateManager.ClimateBool:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            ID:
+              name: ID
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            adminValue:
+              name: adminValue
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            finalValue:
+              name: finalValue
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            internalValue:
+              name: internalValue
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            isAdminOverride:
+              name: isAdminOverride
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isModded:
+              name: isModded
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isOverride:
+              name: isOverride
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            moddedValue:
+              name: moddedValue
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            name:
+              name: name
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            override:
+              name: override
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: calculate
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAdminValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getInternalValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getModdedValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getOverride
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: init
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ClimateManager.ClimateBool
+                full: zombie.iso.weather.ClimateManager$ClimateBool
+          - name: isEnableAdmin
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEnableOverride
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: loadAdmin
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: DataInputStream
+                full: java.io.DataInputStream
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: readAdmin
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: saveAdmin
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: DataOutputStream
+                full: java.io.DataOutputStream
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAdminValue
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEnableAdmin
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEnableModded
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEnableOverride
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFinalValue
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setModdedValue
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOverride
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: writeAdmin
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void

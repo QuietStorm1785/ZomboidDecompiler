@@ -1,0 +1,124 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting:
+        ScriptType.Flags:
+          extends: java.lang.Enum<zombie.scripting.ScriptType$Flags>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags[]
+            AllowNewScriptDiscoveryOnReload:
+              name: AllowNewScriptDiscoveryOnReload
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags
+            CacheFullType:
+              name: CacheFullType
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags
+            Clear:
+              name: Clear
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags
+            FromList:
+              name: FromList
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags
+            NewInstanceOnReload:
+              name: NewInstanceOnReload
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags
+            RemoveLoadError:
+              name: RemoveLoadError
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags
+            ResetExisting:
+              name: ResetExisting
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags
+            ResetOnceOnReload:
+              name: ResetOnceOnReload
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags
+            SeekImports:
+              name: SeekImports
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags[]

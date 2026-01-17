@@ -1,0 +1,35 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.interfaces:
+        IListBoxItem:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: getLabel
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getLeftLabel
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRightLabel
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String

@@ -1,0 +1,32 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      se.krka.kahlua.converter:
+        JavaToLuaConverter:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: fromJavaToLua
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: JavaType
+                full: JavaType
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getJavaType
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<JavaType>

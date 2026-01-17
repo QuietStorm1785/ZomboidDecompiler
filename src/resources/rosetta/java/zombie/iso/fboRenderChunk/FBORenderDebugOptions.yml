@@ -1,0 +1,168 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.fboRenderChunk:
+        FBORenderDebugOptions:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          - final
+          fields:
+            BulletTracers:
+              name: BulletTracers
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            CombinedFBO:
+              name: CombinedFBO
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            CorpsesInChunkTexture:
+              name: CorpsesInChunkTexture
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            DepthTestAll:
+              name: DepthTestAll
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            FixJigglyModels:
+              name: FixJigglyModels
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            ForceAlphaAndTargetOne:
+              name: ForceAlphaAndTargetOne
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            ForceAlphaToTarget:
+              name: ForceAlphaToTarget
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            ForceSkyLightLevel:
+              name: ForceSkyLightLevel
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            HighResChunkTextures:
+              name: HighResChunkTextures
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            ItemsInChunkTexture:
+              name: ItemsInChunkTexture
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            MipMaps:
+              name: MipMaps
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            NoLighting:
+              name: NoLighting
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            RenderChunkTextures:
+              name: RenderChunkTextures
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            RenderMustSeeSquares:
+              name: RenderMustSeeSquares
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            RenderTranslucentFloor:
+              name: RenderTranslucentFloor
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            RenderTranslucentNonFloor:
+              name: RenderTranslucentNonFloor
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            RenderVisionPolygon:
+              name: RenderVisionPolygon
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            RenderWallLines:
+              name: RenderWallLines
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            SeamFix1:
+              name: SeamFix1
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            SeamFix2:
+              name: SeamFix2
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            UpdateSquareLightInfo:
+              name: UpdateSquareLightInfo
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            UseWeatherShader:
+              name: UseWeatherShader
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+          constructors:
+          - modifiers:
+            - public

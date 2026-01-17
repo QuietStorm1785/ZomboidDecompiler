@@ -1,0 +1,28 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.worldMap.styles:
+        WorldMapStyleLayer.IWorldMapStyleFilter:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: filter
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: feature
+              type:
+                basic: WorldMapFeature
+                full: zombie.worldMap.WorldMapFeature
+            - name: args
+              type:
+                basic: WorldMapStyleLayer.FilterArgs
+                full: zombie.worldMap.styles.WorldMapStyleLayer$FilterArgs
+            return:
+              type:
+                basic: boolean
+                full: boolean

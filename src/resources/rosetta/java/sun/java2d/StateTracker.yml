@@ -1,0 +1,36 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.java2d:
+        StateTracker:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          staticFields:
+            ALWAYS_CURRENT:
+              name: ALWAYS_CURRENT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: StateTracker
+                full: sun.java2d.StateTracker
+            NEVER_CURRENT:
+              name: NEVER_CURRENT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: StateTracker
+                full: sun.java2d.StateTracker
+          methods:
+          - name: isCurrent
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean

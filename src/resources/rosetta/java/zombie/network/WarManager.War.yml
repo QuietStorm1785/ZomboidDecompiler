@@ -1,0 +1,158 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.network:
+        WarManager.War:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            attacker:
+              name: attacker
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            onlineID:
+              name: onlineID
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            state:
+              name: state
+              modifiers:
+              - private
+              type:
+                basic: WarManager.State
+                full: zombie.network.WarManager$State
+            timestamp:
+              name: timestamp
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+          staticFields:
+            transitions:
+              name: transitions
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<zombie.network.WarManager$State, zombie.network.WarManager$State>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: WarManager.State
+                full: zombie.network.WarManager$State
+            - name: arg3
+              type:
+                basic: long
+                full: long
+          methods:
+          - name: getAttacker
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDefender
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getOnlineID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getState
+            modifiers:
+            - public
+            return:
+              type:
+                basic: WarManager.State
+                full: zombie.network.WarManager$State
+          - name: getTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getTimestamp
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: isRelevant
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isValidState
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WarManager.State
+                full: zombie.network.WarManager$State
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setState
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WarManager.State
+                full: zombie.network.WarManager$State
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTimestamp
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void

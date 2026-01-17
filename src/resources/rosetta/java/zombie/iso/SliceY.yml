@@ -1,0 +1,30 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        SliceY:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          staticFields:
+            SliceBuffer:
+              name: SliceBuffer
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            SliceBufferLock:
+              name: SliceBufferLock
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Object
+                full: java.lang.Object
+          constructors:
+          - modifiers:
+            - public

@@ -1,0 +1,35 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.vehicles:
+        UI3DScene.Circle:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            center:
+              name: center
+              modifiers:
+              - public
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            orientation:
+              name: orientation
+              modifiers:
+              - public
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            radius:
+              name: radius
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public

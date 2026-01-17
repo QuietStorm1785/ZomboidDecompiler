@@ -1,0 +1,174 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.population:
+        HairStyles:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            m_FemaleStyles:
+              name: m_FemaleStyles
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.skinnedmodel.population.HairStyle>
+            m_MaleStyles:
+              name: m_MaleStyles
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.skinnedmodel.population.HairStyle>
+          staticFields:
+            instance:
+              name: instance
+              modifiers:
+              - public
+              - static
+              type:
+                basic: HairStyles
+                full: zombie.core.skinnedmodel.population.HairStyles
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: FindFemaleStyle
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: HairStyle
+                full: zombie.core.skinnedmodel.population.HairStyle
+          - name: FindMaleStyle
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: HairStyle
+                full: zombie.core.skinnedmodel.population.HairStyle
+          - name: FindStyle
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.skinnedmodel.population.HairStyle>
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: HairStyle
+                full: zombie.core.skinnedmodel.population.HairStyle
+          - name: getAllFemaleStyles
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.skinnedmodel.population.HairStyle>
+          - name: getAllMaleStyles
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.skinnedmodel.population.HairStyle>
+          - name: getAlternateForHat
+            modifiers:
+            - public
+            parameters:
+            - name: style
+              type:
+                basic: HairStyle
+                full: zombie.core.skinnedmodel.population.HairStyle
+            - name: category
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: HairStyle
+                full: zombie.core.skinnedmodel.population.HairStyle
+          - name: getRandomFemaleStyle
+            modifiers:
+            - public
+            parameters:
+            - name: outfitName
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRandomMaleStyle
+            modifiers:
+            - public
+            parameters:
+            - name: outfitName
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: Parse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: filename
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: HairStyles
+                full: zombie.core.skinnedmodel.population.HairStyles
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: init
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: parse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: filename
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: HairStyles
+                full: zombie.core.skinnedmodel.population.HairStyles

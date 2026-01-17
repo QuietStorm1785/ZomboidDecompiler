@@ -1,0 +1,12 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.advancedanimation:
+        AnimationVariableSlotCallbackBool.CallbackGetStrongTyped:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: Strong-typed utility type. Useful for auto-typed function overrides,
+            such as AnimationVariableSource setVariable

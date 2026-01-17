@@ -1,0 +1,127 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel:
+        DeadBodyAtlas.Checksummer:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          - final
+          fields:
+            md:
+              name: md
+              modifiers:
+              - private
+              type:
+                basic: MessageDigest
+                full: java.security.MessageDigest
+            sb:
+              name: sb
+              modifiers:
+              - private
+              type:
+                basic: StringBuilder
+                full: java.lang.StringBuilder
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: checksumToString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ImmutableColor
+                full: zombie.core.ImmutableColor
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare.ResultLight
+                full: zombie.iso.IsoGridSquare$ResultLight
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

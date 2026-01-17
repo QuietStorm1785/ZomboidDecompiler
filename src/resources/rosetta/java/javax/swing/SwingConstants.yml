@@ -1,0 +1,188 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      javax.swing:
+        SwingConstants:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "A collection of constants generally used for positioning and orienting\n\
+            \ components on the screen."
+          staticFields:
+            BOTTOM:
+              name: BOTTOM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Box-orientation constant used to specify the bottom of a box.
+            CENTER:
+              name: CENTER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: "The central position in an area. Used for\n both compass-direction\
+                \ constants (NORTH, etc.)\n and box-orientation constants (TOP, etc.)."
+            EAST:
+              name: EAST
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Compass-direction east (right).
+            HORIZONTAL:
+              name: HORIZONTAL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Horizontal orientation. Used for scrollbars and sliders.
+            LEADING:
+              name: LEADING
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: "Identifies the leading edge of text for use with left-to-right\n\
+                \ and right-to-left languages. Used by buttons and labels."
+            LEFT:
+              name: LEFT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Box-orientation constant used to specify the left side of a box.
+            NEXT:
+              name: NEXT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Identifies the next direction in a sequence.
+            NORTH:
+              name: NORTH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Compass-direction North (up).
+            NORTH_EAST:
+              name: NORTH_EAST
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Compass-direction north-east (upper right).
+            NORTH_WEST:
+              name: NORTH_WEST
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Compass-direction north west (upper left).
+            PREVIOUS:
+              name: PREVIOUS
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Identifies the previous direction in a sequence.
+            RIGHT:
+              name: RIGHT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Box-orientation constant used to specify the right side of a
+                box.
+            SOUTH:
+              name: SOUTH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Compass-direction south (down).
+            SOUTH_EAST:
+              name: SOUTH_EAST
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Compass-direction south-east (lower right).
+            SOUTH_WEST:
+              name: SOUTH_WEST
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Compass-direction south-west (lower left).
+            TOP:
+              name: TOP
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Box-orientation constant used to specify the top of a box.
+            TRAILING:
+              name: TRAILING
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: "Identifies the trailing edge of text for use with left-to-right\n\
+                \ and right-to-left languages. Used by buttons and labels."
+            VERTICAL:
+              name: VERTICAL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Vertical orientation. Used for scrollbars and sliders.
+            WEST:
+              name: WEST
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: Compass-direction west (left).

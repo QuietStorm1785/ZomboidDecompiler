@@ -1,0 +1,526 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity:
+        ComponentType:
+          extends: java.lang.Enum<zombie.entity.ComponentType>
+          modifiers:
+          - public
+          - final
+          fields:
+            componentClass:
+              name: componentClass
+              modifiers:
+              - private
+              type:
+                basic: Class
+                full: java.lang.Class<? extends zombie.entity.Component>
+            componentScriptClass:
+              name: componentScriptClass
+              modifiers:
+              - private
+              type:
+                basic: Class
+                full: java.lang.Class<? extends zombie.scripting.entity.ComponentScript>
+            flags:
+              name: flags
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            id:
+              name: id
+              modifiers:
+              - package
+              type:
+                basic: short
+                full: short
+            validEntityTypes:
+              name: validEntityTypes
+              modifiers:
+              - private
+              type:
+                basic: EnumBitStore
+                full: zombie.entity.util.enums.EnumBitStore<zombie.entity.GameEntityType>
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType[]
+            Attributes:
+              name: Attributes
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            ContextMenuConfig:
+              name: ContextMenuConfig
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            CraftBench:
+              name: CraftBench
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            CraftBenchSounds:
+              name: CraftBenchSounds
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            CraftLogic:
+              name: CraftLogic
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            CraftRecipe:
+              name: CraftRecipe
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            DryingCraftLogic:
+              name: DryingCraftLogic
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            DryingLogic:
+              name: DryingLogic
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            Durability:
+              name: Durability
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            FluidContainer:
+              name: FluidContainer
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            FurnaceLogic:
+              name: FurnaceLogic
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            Lua:
+              name: Lua
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            MAX_ID_INDEX:
+              name: MAX_ID_INDEX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            MashingLogic:
+              name: MashingLogic
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            MetaTag:
+              name: MetaTag
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            Parts:
+              name: Parts
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            Resources:
+              name: Resources
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            Script:
+              name: Script
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            Signals:
+              name: Signals
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            SpriteConfig:
+              name: SpriteConfig
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            SpriteOverlayConfig:
+              name: SpriteOverlayConfig
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            TestComponent:
+              name: TestComponent
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            UiConfig:
+              name: UiConfig
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            Undefined:
+              name: Undefined
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            array:
+              name: array
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType[]
+            bitsAddToEngine:
+              name: bitsAddToEngine
+              modifiers:
+              - package
+              - static
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+            bitsRenderLast:
+              name: bitsRenderLast
+              modifiers:
+              - package
+              - static
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+            bitsRunInMeta:
+              name: bitsRunInMeta
+              modifiers:
+              - package
+              - static
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+            classMap:
+              name: classMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Class, zombie.entity.ComponentType>
+            componentFactory:
+              name: componentFactory
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ComponentFactory
+                full: zombie.entity.ComponentFactory
+            idMap:
+              name: idMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Short, zombie.entity.ComponentType>
+            list:
+              name: list
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.ComponentType>
+            scriptFactory:
+              name: scriptFactory
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ComponentScriptFactory
+                full: zombie.entity.ComponentScriptFactory
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: short
+                full: short
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<T>
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<E>
+            - name: arg3
+              type:
+                basic: int
+                full: int
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: short
+                full: short
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<T>
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<E>
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: EnumBitStore
+                full: zombie.entity.util.enums.EnumBitStore<zombie.entity.GameEntityType>
+          methods:
+          - name: CreateComponent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Component
+                full: zombie.entity.Component
+          - name: CreateComponentFromScript
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentScript
+                full: zombie.scripting.entity.ComponentScript
+            return:
+              type:
+                basic: Component
+                full: zombie.entity.Component
+          - name: CreateComponentScript
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ComponentScript
+                full: zombie.scripting.entity.ComponentScript
+          - name: GetComponentClass
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<? extends zombie.entity.Component>
+          - name: GetID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: short
+                full: short
+          - name: isAddToEngine
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRenderLast
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRunInMeta
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isValidGameEntityType
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: GameEntityType
+                full: zombie.entity.GameEntityType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType[]
+          - name: FromClass
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<? extends zombie.entity.Component>
+            return:
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+          - name: FromId
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: short
+                full: short
+            return:
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+          - name: GetList
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.ComponentType>
+          - name: ReleaseComponent
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Component
+                full: zombie.entity.Component
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getBitsFor
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType[]
+            return:
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType[]

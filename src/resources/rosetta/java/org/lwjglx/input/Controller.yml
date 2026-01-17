@@ -1,0 +1,314 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      org.lwjglx.input:
+        Controller:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            axisCount:
+              name: axisCount
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            buttonsCount:
+              name: buttonsCount
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            deadZone:
+              name: deadZone
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float[]
+            gamepadName:
+              name: gamepadName
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            gamepadState:
+              name: gamepadState
+              modifiers:
+              - public
+              type:
+                basic: GamepadState
+                full: org.lwjglx.input.GamepadState
+            guid:
+              name: guid
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            hatCount:
+              name: hatCount
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            id:
+              name: id
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            isGamepad:
+              name: isGamepad
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            joystickName:
+              name: joystickName
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+          staticFields:
+            axisNames:
+              name: axisNames
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String[]
+            buttonNames:
+              name: buttonNames
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String[]
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: getAxisCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getAxisName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAxisValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getButtonCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getButtonName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDeadZone
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getGUID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getGamepadName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getHatCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getHatState
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getJoystickHats
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: getJoystickName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPovX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getPovY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getXAxisValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getYAxisValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: isButtonPressed
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isButtonRelease
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isGamepad
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: poll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: GamepadState
+                full: org.lwjglx.input.GamepadState
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDeadZone
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

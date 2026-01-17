@@ -1,0 +1,132 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.network.fields:
+        ContainerID.ContainerType:
+          extends: java.lang.Enum<zombie.network.fields.ContainerID$ContainerType>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType[]
+            DeadBody:
+              name: DeadBody
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType
+            Floor:
+              name: Floor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType
+            InventoryContainer:
+              name: InventoryContainer
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType
+            IsoObject:
+              name: IsoObject
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType
+            ObjectContainer:
+              name: ObjectContainer
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType
+            ObjectInVehicle:
+              name: ObjectInVehicle
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType
+            PlayerInventory:
+              name: PlayerInventory
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType
+            Undefined:
+              name: Undefined
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType
+            Vehicle:
+              name: Vehicle
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType
+            WorldObject:
+              name: WorldObject
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ContainerID.ContainerType
+                full: zombie.network.fields.ContainerID$ContainerType[]

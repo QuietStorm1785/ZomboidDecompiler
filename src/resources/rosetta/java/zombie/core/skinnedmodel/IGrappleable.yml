@@ -1,0 +1,850 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel:
+        IGrappleable:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: AcceptGrapple
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IGrappleable
+                full: zombie.core.skinnedmodel.IGrappleable
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Grappled
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IGrappleable
+                full: zombie.core.skinnedmodel.IGrappleable
+            - name: arg1
+              type:
+                basic: HandWeapon
+                full: zombie.inventory.types.HandWeapon
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: GrapplerLetGo
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IGrappleable
+                full: zombie.core.skinnedmodel.IGrappleable
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LetGoOfGrappled
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RejectGrapple
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IGrappleable
+                full: zombie.core.skinnedmodel.IGrappleable
+            return:
+              type:
+                basic: void
+                full: void
+          - name: canBeGrappled
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getAnimForwardDirection
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+            return:
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+          - name: getAnimatable
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: IAnimatable
+                full: zombie.core.skinnedmodel.advancedanimation.IAnimatable
+          - name: getBearingFromGrappledTarget
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBearingToGrappledTarget
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getGrappleOffset
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            return:
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+          - name: getGrappleOffset
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            return:
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+          - name: getGrappleOffsetBehaviour
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: GrappleOffsetBehaviour
+                full: zombie.core.skinnedmodel.advancedanimation.GrappleOffsetBehaviour
+          - name: getGrapplePosOffsetForward
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getGrappleResult
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getGrappleRotOffsetYaw
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getGrappledBy
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: IGrappleable
+                full: zombie.core.skinnedmodel.IGrappleable
+          - name: getGrappledByString
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getGrappledByType
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getGrapplingTarget
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: IGrappleable
+                full: zombie.core.skinnedmodel.IGrappleable
+          - name: getID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getPosition
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            return:
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+          - name: getPosition
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3f
+                full: org.lwjgl.util.vector.Vector3f
+            return:
+              type:
+                basic: Vector3f
+                full: org.lwjgl.util.vector.Vector3f
+          - name: getSharedGrappleAnimFraction
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSharedGrappleAnimNode
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSharedGrappleAnimTime
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSharedGrappleType
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getTargetGrapplePos
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            return:
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+          - name: getTargetGrapplePos
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            return:
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+          - name: getTargetGrappleRotation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+            return:
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+          - name: isBeingGrappled
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isBeingGrappledBy
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IGrappleable
+                full: zombie.core.skinnedmodel.IGrappleable
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDoContinueGrapple
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDoGrapple
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFallOnFront
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isGrappling
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isGrapplingTarget
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: IGrappleable
+                full: zombie.core.skinnedmodel.IGrappleable
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isKilledByFall
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMoving
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOnFloor
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPerformingAnyGrappleAnimation
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPerformingGrappleAnimation
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPerformingGrappleGrabAnimation
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: resetGrappleStateToDefault
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDoContinueGrapple
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDoGrapple
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDoGrappleLetGo
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFallOnFront
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setForwardDirection
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setGrappleDeferredOffset
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setGrappleDeferredOffset
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setGrappleDeferredOffset
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setGrapplePosOffsetForward
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setGrappleResult
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setGrappleRotOffsetYaw
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setGrappleoffsetBehaviour
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: GrappleOffsetBehaviour
+                full: zombie.core.skinnedmodel.advancedanimation.GrappleOffsetBehaviour
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setKilledByFall
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOnFloor
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPerformingGrappleGrabAnimation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPosition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPosition
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSharedGrappleAnimFraction
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSharedGrappleAnimNode
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSharedGrappleAnimTime
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSharedGrappleType
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTargetAndCurrentDirection
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTargetGrapplePos
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTargetGrapplePos
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTargetGrapplePos
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTargetGrappleRotation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTargetGrappleRotation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: getAnimatable
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IGrappleable
+                full: zombie.core.skinnedmodel.IGrappleable
+            return:
+              type:
+                basic: IAnimatable
+                full: zombie.core.skinnedmodel.advancedanimation.IAnimatable

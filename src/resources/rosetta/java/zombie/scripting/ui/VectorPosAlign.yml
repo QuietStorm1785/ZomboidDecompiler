@@ -1,0 +1,195 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.ui:
+        VectorPosAlign:
+          extends: java.lang.Enum<zombie.scripting.ui.VectorPosAlign>
+          modifiers:
+          - public
+          - final
+          fields:
+            xmod:
+              name: xmod
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            ymod:
+              name: ymod
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign[]
+            BottomLeft:
+              name: BottomLeft
+              modifiers:
+              - public
+              - static
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign
+            BottomMiddle:
+              name: BottomMiddle
+              modifiers:
+              - public
+              - static
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign
+            BottomRight:
+              name: BottomRight
+              modifiers:
+              - public
+              - static
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign
+            CenterLeft:
+              name: CenterLeft
+              modifiers:
+              - public
+              - static
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign
+            CenterMiddle:
+              name: CenterMiddle
+              modifiers:
+              - public
+              - static
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign
+            CenterRight:
+              name: CenterRight
+              modifiers:
+              - public
+              - static
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign
+            None:
+              name: None
+              modifiers:
+              - public
+              - static
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign
+            TopLeft:
+              name: TopLeft
+              modifiers:
+              - public
+              - static
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign
+            TopMiddle:
+              name: TopMiddle
+              modifiers:
+              - public
+              - static
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign
+            TopRight:
+              name: TopRight
+              modifiers:
+              - public
+              - static
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+          methods:
+          - name: getX
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: XuiScript.XuiVector
+                full: zombie.scripting.ui.XuiScript$XuiVector
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getXmod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getY
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: XuiScript.XuiVector
+                full: zombie.scripting.ui.XuiScript$XuiVector
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getYmod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: VectorPosAlign
+                full: zombie.scripting.ui.VectorPosAlign[]

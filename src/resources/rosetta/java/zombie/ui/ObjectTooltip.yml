@@ -1,0 +1,705 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ui:
+        ObjectTooltip:
+          extends: zombie.ui.UIElement
+          modifiers:
+          - public
+          - final
+          fields:
+            Item:
+              name: Item
+              modifiers:
+              - public
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            Object:
+              name: Object
+              modifiers:
+              - public
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            alpha:
+              name: alpha
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            bIsItem:
+              name: bIsItem
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            character:
+              name: character
+              modifiers:
+              - private
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            measureOnly:
+              name: measureOnly
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            padBottom:
+              name: padBottom
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            padLeft:
+              name: padLeft
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            padRight:
+              name: padRight
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            padTop:
+              name: padTop
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            showDelay:
+              name: showDelay
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            targetAlpha:
+              name: targetAlpha
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            texture:
+              name: texture
+              modifiers:
+              - package
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            weightOfStack:
+              name: weightOfStack
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          staticFields:
+            PAD_BOTTOM:
+              name: PAD_BOTTOM
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            PAD_LEFT:
+              name: PAD_LEFT
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            PAD_RIGHT:
+              name: PAD_RIGHT
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            PAD_TOP:
+              name: PAD_TOP
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            alphaStep:
+              name: alphaStep
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            font:
+              name: font
+              modifiers:
+              - private
+              - static
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            fontSize:
+              name: fontSize
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            freeLayouts:
+              name: freeLayouts
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Stack
+                full: java.util.Stack<zombie.ui.ObjectTooltip$Layout>
+            lineSpacing:
+              name: lineSpacing
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: DrawProgressBar
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: w
+              type:
+                basic: int
+                full: int
+            - name: h
+              type:
+                basic: int
+                full: int
+            - name: f
+              type:
+                basic: float
+                full: float
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: a
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawText
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextCentre
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextRight
+            modifiers:
+            - public
+            parameters:
+            - name: font
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureScaled
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: double
+                full: double
+            - name: height
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawTextureScaledAspect
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            - name: width
+              type:
+                basic: double
+                full: double
+            - name: height
+              type:
+                basic: double
+                full: double
+            - name: r
+              type:
+                basic: double
+                full: double
+            - name: g
+              type:
+                basic: double
+                full: double
+            - name: b
+              type:
+                basic: double
+                full: double
+            - name: alpha
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawValueRight
+            modifiers:
+            - public
+            parameters:
+            - name: value
+              type:
+                basic: int
+                full: int
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: highGood
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawValueRightNoPlus
+            modifiers:
+            - public
+            parameters:
+            - name: value
+              type:
+                basic: int
+                full: int
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawValueRightNoPlus
+            modifiers:
+            - public
+            parameters:
+            - name: value
+              type:
+                basic: float
+                full: float
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: adjustWidth
+            modifiers:
+            - public
+            parameters:
+            - name: textX
+              type:
+                basic: int
+                full: int
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: beginLayout
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ObjectTooltip.Layout
+                full: zombie.ui.ObjectTooltip$Layout
+          - name: endLayout
+            modifiers:
+            - public
+            parameters:
+            - name: layout
+              type:
+                basic: ObjectTooltip.Layout
+                full: zombie.ui.ObjectTooltip$Layout
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getCharacter
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          - name: getFont
+            modifiers:
+            - public
+            return:
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+          - name: getLineSpacing
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getTexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+          - name: getWeightOfStack
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: hide
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isMeasureOnly
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: onMouseMove
+            modifiers:
+            - public
+            parameters:
+            - name: dx
+              type:
+                basic: double
+                full: double
+            - name: dy
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: onMouseMoveOutside
+            modifiers:
+            - public
+            parameters:
+            - name: dx
+              type:
+                basic: double
+                full: double
+            - name: dy
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCharacter
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMeasureOnly
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWeightOfStack
+            modifiers:
+            - public
+            parameters:
+            - name: weight
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: show
+            modifiers:
+            - public
+            parameters:
+            - name: obj
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            - name: x
+              type:
+                basic: double
+                full: double
+            - name: y
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: show
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: checkFont
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,249 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.weather:
+        WorldFlares:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: TurboTuTone.
+          staticFields:
+            DEBUG_DRAW:
+              name: DEBUG_DRAW
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            ENABLED:
+              name: ENABLED
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            NEXT_ID:
+              name: NEXT_ID
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            flares:
+              name: flares
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.weather.WorldFlares$Flare>
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: Clear
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawIsoLine
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: applyFlaresForPlayer
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: renderSettings
+              type:
+                basic: RenderSettings.PlayerRenderSettings
+                full: zombie.core.opengl.RenderSettings$PlayerRenderSettings
+            - name: plrIndex
+              type:
+                basic: int
+                full: int
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: debugRender
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getDebugDraw
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getFlare
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: WorldFlares.Flare
+                full: zombie.iso.weather.WorldFlares$Flare
+          - name: getFlareCount
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getFlareID
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: WorldFlares.Flare
+                full: zombie.iso.weather.WorldFlares$Flare
+          - name: launchFlare
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: lifetime
+              type:
+                basic: float
+                full: float
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: range
+              type:
+                basic: int
+                full: int
+            - name: windSpeed
+              type:
+                basic: float
+                full: float
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: ri
+              type:
+                basic: float
+                full: float
+            - name: gi
+              type:
+                basic: float
+                full: float
+            - name: bi
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDebugDraw
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void

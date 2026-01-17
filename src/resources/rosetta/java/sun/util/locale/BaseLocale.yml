@@ -1,0 +1,366 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.util.locale:
+        BaseLocale:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            hash:
+              name: hash
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            language:
+              name: language
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            region:
+              name: region
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            script:
+              name: script
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            variant:
+              name: variant
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+          staticFields:
+            CANADA:
+              name: CANADA
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            CANADA_FRENCH:
+              name: CANADA_FRENCH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            CHINESE:
+              name: CHINESE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            ENGLISH:
+              name: ENGLISH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            FRANCE:
+              name: FRANCE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            FRENCH:
+              name: FRENCH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            GERMAN:
+              name: GERMAN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            GERMANY:
+              name: GERMANY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            ITALIAN:
+              name: ITALIAN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            ITALY:
+              name: ITALY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            JAPAN:
+              name: JAPAN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            JAPANESE:
+              name: JAPANESE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            KOREA:
+              name: KOREA
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            KOREAN:
+              name: KOREAN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            NUM_CONSTANTS:
+              name: NUM_CONSTANTS
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            OLD_ISO_CODES:
+              name: OLD_ISO_CODES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            ROOT:
+              name: ROOT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            SEP:
+              name: SEP
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            SIMPLIFIED_CHINESE:
+              name: SIMPLIFIED_CHINESE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            TRADITIONAL_CHINESE:
+              name: TRADITIONAL_CHINESE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            UK:
+              name: UK
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            US:
+              name: US
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            constantBaseLocales:
+              name: constantBaseLocales
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BaseLocale
+                full: sun.util.locale.BaseLocale[]
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg3
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg4
+              type:
+                basic: boolean
+                full: boolean
+          methods:
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getLanguage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRegion
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getScript
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getVariant
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: convertOldISOCodes
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: createInstance
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: BaseLocale
+                full: sun.util.locale.BaseLocale
+          - name: getInstance
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg3
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: BaseLocale
+                full: sun.util.locale.BaseLocale

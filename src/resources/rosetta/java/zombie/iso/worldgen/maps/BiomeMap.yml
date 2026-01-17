@@ -1,0 +1,129 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.worldgen.maps:
+        BiomeMap:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            cache:
+              name: cache
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<zombie.iso.worldgen.utils.CellCoord, zombie.iso.worldgen.maps.BiomeRaster>
+            foragingZones:
+              name: foragingZones
+              modifiers:
+              - private
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+            zoneMap:
+              name: zoneMap
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Integer, zombie.iso.worldgen.maps.BiomeMapEntry>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: Dispose
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getBiomeName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getEntry
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: BiomeMapEntry
+                full: zombie.iso.worldgen.maps.BiomeMapEntry
+          - name: getForagingZones
+            modifiers:
+            - public
+            return:
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+          - name: getOreName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRaster
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: CellCoord
+                full: zombie.iso.worldgen.utils.CellCoord
+            return:
+              type:
+                basic: BiomeRaster
+                full: zombie.iso.worldgen.maps.BiomeRaster
+          - name: getZoneName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getZones
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: BiomeMap.Type
+                full: zombie.iso.worldgen.maps.BiomeMap$Type
+            return:
+              type:
+                basic: int
+                full: int[]

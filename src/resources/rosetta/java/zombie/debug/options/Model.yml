@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Model:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          fields:
+            ForceSkeleton:
+              name: ForceSkeleton
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            Render:
+              name: Render
+              modifiers:
+              - public
+              type:
+                basic: Model.RenderOG
+                full: zombie.debug.options.Model$RenderOG
+          constructors:
+          - modifiers:
+            - public

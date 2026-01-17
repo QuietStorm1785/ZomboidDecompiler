@@ -1,0 +1,92 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ai.states:
+        ClimbSheetRopeState.ClimbStatus:
+          extends: java.lang.Enum<zombie.ai.states.ClimbSheetRopeState$ClimbStatus>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ClimbSheetRopeState.ClimbStatus
+                full: zombie.ai.states.ClimbSheetRopeState$ClimbStatus[]
+            Blocked:
+              name: Blocked
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ClimbSheetRopeState.ClimbStatus
+                full: zombie.ai.states.ClimbSheetRopeState$ClimbStatus
+            Fence:
+              name: Fence
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ClimbSheetRopeState.ClimbStatus
+                full: zombie.ai.states.ClimbSheetRopeState$ClimbStatus
+            OpenWindow:
+              name: OpenWindow
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ClimbSheetRopeState.ClimbStatus
+                full: zombie.ai.states.ClimbSheetRopeState$ClimbStatus
+            Undefined:
+              name: Undefined
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ClimbSheetRopeState.ClimbStatus
+                full: zombie.ai.states.ClimbSheetRopeState$ClimbStatus
+            WindowFrame:
+              name: WindowFrame
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ClimbSheetRopeState.ClimbStatus
+                full: zombie.ai.states.ClimbSheetRopeState$ClimbStatus
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ClimbSheetRopeState.ClimbStatus
+                full: zombie.ai.states.ClimbSheetRopeState$ClimbStatus[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ClimbSheetRopeState.ClimbStatus
+                full: zombie.ai.states.ClimbSheetRopeState$ClimbStatus
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ClimbSheetRopeState.ClimbStatus
+                full: zombie.ai.states.ClimbSheetRopeState$ClimbStatus[]

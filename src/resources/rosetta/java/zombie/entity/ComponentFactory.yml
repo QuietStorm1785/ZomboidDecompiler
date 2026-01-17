@@ -1,0 +1,79 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity:
+        ComponentFactory:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            initialSize:
+              name: initialSize
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            maxSize:
+              name: maxSize
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            pools:
+              name: pools
+              modifiers:
+              - private
+              type:
+                basic: ObjectMap
+                full: zombie.entity.util.ObjectMap<java.lang.Class<?>, zombie.entity.ComponentFactory$ComponentPool>
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: alloc
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<T>
+            return:
+              type:
+                basic: T
+                full: T
+          - name: release
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: void
+                full: void

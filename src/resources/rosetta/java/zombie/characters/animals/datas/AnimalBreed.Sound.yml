@@ -1,0 +1,64 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.animals.datas:
+        AnimalBreed.Sound:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            id:
+              name: id
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            intervalMax:
+              name: intervalMax
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            intervalMin:
+              name: intervalMin
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            priority:
+              name: priority
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            slot:
+              name: slot
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            soundName:
+              name: soundName
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: isIntervalValid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean

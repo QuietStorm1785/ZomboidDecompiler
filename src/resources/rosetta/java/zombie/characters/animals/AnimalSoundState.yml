@@ -1,0 +1,231 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.animals:
+        AnimalSoundState:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            animal:
+              name: animal
+              modifiers:
+              - private
+              type:
+                basic: IsoAnimal
+                full: zombie.characters.animals.IsoAnimal
+            desiredSoundName:
+              name: desiredSoundName
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            desiredSoundPriority:
+              name: desiredSoundPriority
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            eventInstance:
+              name: eventInstance
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            intervalExpireTime:
+              name: intervalExpireTime
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.lang.Long>
+            lastPlayedTimeMS:
+              name: lastPlayedTimeMS
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.lang.Long>
+            playingSoundName:
+              name: playingSoundName
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            priority:
+              name: priority
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoAnimal
+                full: zombie.characters.animals.IsoAnimal
+          methods:
+          - name: getAnimal
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoAnimal
+                full: zombie.characters.animals.IsoAnimal
+          - name: getDesiredSoundName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDesiredSoundPriority
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getEventInstance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getIntervalExpireTime
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getLastPlayedTimeMS
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getPriority
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isPlaying
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPlaying
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPlayingDesiredSound
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setDesiredSoundName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDesiredSoundPriority
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIntervalExpireTime
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: shouldPlay
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: start
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: long
+                full: long
+          - name: stop
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

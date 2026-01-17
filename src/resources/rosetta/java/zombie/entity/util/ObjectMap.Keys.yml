@@ -1,0 +1,79 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.util:
+        ObjectMap.Keys:
+          extends: zombie.entity.util.ObjectMap$MapIterator<K, java.lang.Object, K>
+          modifiers:
+          - public
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectMap
+                full: zombie.entity.util.ObjectMap<K, ?>
+          methods:
+          - name: hasNext
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ObjectMap.Keys
+                full: zombie.entity.util.ObjectMap$Keys<K>
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Iterator
+                full: java.util.Iterator
+          - name: next
+            modifiers:
+            - public
+            return:
+              type:
+                basic: K
+                full: K
+          - name: remove
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toArray
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Array
+                full: zombie.entity.util.Array<K>
+          - name: toArray
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Array
+                full: zombie.entity.util.Array<K>
+            return:
+              type:
+                basic: Array
+                full: zombie.entity.util.Array<K>

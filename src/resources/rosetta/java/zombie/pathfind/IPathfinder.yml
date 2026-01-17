@@ -1,0 +1,41 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.pathfind:
+        IPathfinder:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: Failed
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Mover
+                full: zombie.ai.astar.Mover
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Succeeded
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Path
+                full: zombie.pathfind.Path
+            - name: arg1
+              type:
+                basic: Mover
+                full: zombie.ai.astar.Mover
+            return:
+              type:
+                basic: void
+                full: void

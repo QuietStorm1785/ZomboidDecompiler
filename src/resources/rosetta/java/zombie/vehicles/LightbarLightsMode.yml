@@ -1,0 +1,91 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.vehicles:
+        LightbarLightsMode:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          notes: Created by kroto on 9/20/2017.
+          fields:
+            light:
+              name: light
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            mode:
+              name: mode
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            modeMax:
+              name: modeMax
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            startTime:
+              name: startTime
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: get
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getLightTexIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isEnable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: v
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: start
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

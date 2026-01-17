@@ -1,0 +1,166 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt:
+        Insets:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: "An Insets object is a representation of the borders\n of a container.\
+            \ It specifies the space that a container must leave\n at each of its\
+            \ edges. The space can be a border, a blank space, or\n a title."
+          fields:
+            bottom:
+              name: bottom
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+              notes: "The inset from the bottom.\n This value is subtracted from the\
+                \ Bottom of the rectangle\n to yield a new location for the Bottom."
+            left:
+              name: left
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+              notes: "The inset from the left.\n This value is added to the Left of\
+                \ the rectangle\n to yield a new location for the Left edge."
+            right:
+              name: right
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+              notes: "The inset from the right.\n This value is subtracted from the\
+                \ Right of the rectangle\n to yield a new location for the Right edge."
+            top:
+              name: top
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+              notes: "The inset from the top.\n This value is added to the Top of\
+                \ the rectangle\n to yield a new location for the Top."
+          staticFields:
+            serialVersionUID:
+              name: serialVersionUID
+              modifiers:
+              - private
+              - static
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: top
+              type:
+                basic: int
+                full: int
+              notes: the inset from the top.
+            - name: left
+              type:
+                basic: int
+                full: int
+              notes: the inset from the left.
+            - name: bottom
+              type:
+                basic: int
+                full: int
+              notes: the inset from the bottom.
+            - name: right
+              type:
+                basic: int
+                full: int
+              notes: the inset from the right.
+            notes: "Creates and initializes a new Insets object with the\n specified\
+              \ top, left, bottom, and right insets."
+          methods:
+          - name: clone
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+              notes: a copy of this Insets object.
+            notes: Create a copy of this object.
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: obj
+              type:
+                basic: Object
+                full: java.lang.Object
+              notes: the reference object with which to compare.
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: "true if the two insets are equal;\n                        \
+                \  otherwise false."
+            notes: "Checks whether two insets objects are equal. Two instances\n of\
+              \ Insets are equal if the four integer values\n of the fields top, left,\n\
+              \ bottom, and right are all equal."
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: a hash code for this Insets.
+            notes: Returns the hash code for this Insets.
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: top
+              type:
+                basic: int
+                full: int
+              notes: the inset from the top.
+            - name: left
+              type:
+                basic: int
+                full: int
+              notes: the inset from the left.
+            - name: bottom
+              type:
+                basic: int
+                full: int
+              notes: the inset from the bottom.
+            - name: right
+              type:
+                basic: int
+                full: int
+              notes: the inset from the right.
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Set top, left, bottom, and right to the specified values
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: initIDs
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: void
+                full: void

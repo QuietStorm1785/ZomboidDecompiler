@@ -1,0 +1,2917 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.weather:
+        ClimateManager:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: TurboTuTone.
+          fields:
+            DISABLE_FX_UPDATE:
+              name: DISABLE_FX_UPDATE
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            DISABLE_SIMULATION:
+              name: DISABLE_SIMULATION
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            DISABLE_WEATHER_GENERATION:
+              name: DISABLE_WEATHER_GENERATION
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            airMass:
+              name: airMass
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            airMassDaily:
+              name: airMassDaily
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            airMassTemperature:
+              name: airMassTemperature
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            ambient:
+              name: ambient
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+            bWasForceSnow:
+              name: bWasForceSnow
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            baseTemperature:
+              name: baseTemperature
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            canDoWinterSprites:
+              name: canDoWinterSprites
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            climateBooleans:
+              name: climateBooleans
+              modifiers:
+              - private
+              type:
+                basic: ClimateManager.ClimateBool
+                full: zombie.iso.weather.ClimateManager$ClimateBool[]
+            climateColors:
+              name: climateColors
+              modifiers:
+              - private
+              type:
+                basic: ClimateManager.ClimateColor
+                full: zombie.iso.weather.ClimateManager$ClimateColor[]
+            climateFloats:
+              name: climateFloats
+              modifiers:
+              - private
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat[]
+            climateForecaster:
+              name: climateForecaster
+              modifiers:
+              - private
+              type:
+                basic: ClimateForecaster
+                full: zombie.iso.weather.ClimateForecaster
+            climateHistory:
+              name: climateHistory
+              modifiers:
+              - private
+              type:
+                basic: ClimateHistory
+                full: zombie.iso.weather.ClimateHistory
+            climateValues:
+              name: climateValues
+              modifiers:
+              - private
+              type:
+                basic: ClimateValues
+                full: zombie.iso.weather.ClimateValues
+            climateValuesFronts:
+              name: climateValuesFronts
+              modifiers:
+              - private
+              type:
+                basic: ClimateValues
+                full: zombie.iso.weather.ClimateValues
+            cloudIntensity:
+              name: cloudIntensity
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+            colDawn:
+              name: colDawn
+              modifiers:
+              - private
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            colDay:
+              name: colDay
+              modifiers:
+              - private
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            colDusk:
+              name: colDusk
+              modifiers:
+              - private
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            colFlare:
+              name: colFlare
+              modifiers:
+              - private
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            colFog:
+              name: colFog
+              modifiers:
+              - private
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            colFogLegacy:
+              name: colFogLegacy
+              modifiers:
+              - private
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            colFogNew:
+              name: colFogNew
+              modifiers:
+              - private
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            colNight:
+              name: colNight
+              modifiers:
+              - private
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            colNightMoon:
+              name: colNightMoon
+              modifiers:
+              - private
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            colNightNoMoon:
+              name: colNightNoMoon
+              modifiers:
+              - private
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            colTemp:
+              name: colTemp
+              modifiers:
+              - private
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            colorNewFog:
+              name: colorNewFog
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateColor
+                full: zombie.iso.weather.ClimateManager$ClimateColor
+            currentDay:
+              name: currentDay
+              modifiers:
+              - private
+              type:
+                basic: ClimateManager.DayInfo
+                full: zombie.iso.weather.ClimateManager$DayInfo
+            currentFront:
+              name: currentFront
+              modifiers:
+              - private
+              type:
+                basic: ClimateManager.AirFront
+                full: zombie.iso.weather.ClimateManager$AirFront
+            dayDoFog:
+              name: dayDoFog
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            dayFogStrength:
+              name: dayFogStrength
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            dayLightLagged:
+              name: dayLightLagged
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            dayLightStrength:
+              name: dayLightStrength
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+            desaturation:
+              name: desaturation
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+            flareIntens:
+              name: flareIntens
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            flareIntensity:
+              name: flareIntensity
+              modifiers:
+              - private
+              type:
+                basic: SteppedUpdateFloat
+                full: zombie.iso.weather.fx.SteppedUpdateFloat
+            flareLaunched:
+              name: flareLaunched
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            flareLifeTime:
+              name: flareLifeTime
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            flareMaxLifeTime:
+              name: flareMaxLifeTime
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            fogIntensity:
+              name: fogIntensity
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+            fogLerpValue:
+              name: fogLerpValue
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            fogOverride:
+              name: fogOverride
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            fogTintStorm:
+              name: fogTintStorm
+              modifiers:
+              - private
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            fogTintTropical:
+              name: fogTintTropical
+              modifiers:
+              - private
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            globalLight:
+              name: globalLight
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateColor
+                full: zombie.iso.weather.ClimateManager$ClimateColor
+            globalLightIntensity:
+              name: globalLightIntensity
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+            gt:
+              name: gt
+              modifiers:
+              - private
+              type:
+                basic: GameTime
+                full: zombie.GameTime
+            humidity:
+              name: humidity
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+            lastHourStamp:
+              name: lastHourStamp
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            lastMinuteStamp:
+              name: lastMinuteStamp
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            modDataTable:
+              name: modDataTable
+              modifiers:
+              - private
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            netInfo:
+              name: netInfo
+              modifiers:
+              - private
+              type:
+                basic: ClimateManager.ClimateNetInfo
+                full: zombie.iso.weather.ClimateManager$ClimateNetInfo
+            networkAdjustVal:
+              name: networkAdjustVal
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            networkLerp:
+              name: networkLerp
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            networkLerpTime:
+              name: networkLerpTime
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            networkLerpTimeBase:
+              name: networkLerpTimeBase
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            networkPrint:
+              name: networkPrint
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            networkUpdateStamp:
+              name: networkUpdateStamp
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            nextDay:
+              name: nextDay
+              modifiers:
+              - private
+              type:
+                basic: ClimateManager.DayInfo
+                full: zombie.iso.weather.ClimateManager$DayInfo
+            nextRandomTargetIntens:
+              name: nextRandomTargetIntens
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            nightLagged:
+              name: nightLagged
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            nightStrength:
+              name: nightStrength
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+            precipitationIntensity:
+              name: precipitationIntensity
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+            precipitationIsSnow:
+              name: precipitationIsSnow
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateBool
+                full: zombie.iso.weather.ClimateManager$ClimateBool
+            previousDay:
+              name: previousDay
+              modifiers:
+              - private
+              type:
+                basic: ClimateManager.DayInfo
+                full: zombie.iso.weather.ClimateManager$DayInfo
+            season:
+              name: season
+              modifiers:
+              - private
+              type:
+                basic: ErosionSeason
+                full: zombie.erosion.season.ErosionSeason
+            seasonColorDawn:
+              name: seasonColorDawn
+              modifiers:
+              - private
+              type:
+                basic: ClimateManager.SeasonColor
+                full: zombie.iso.weather.ClimateManager$SeasonColor
+            seasonColorDay:
+              name: seasonColorDay
+              modifiers:
+              - private
+              type:
+                basic: ClimateManager.SeasonColor
+                full: zombie.iso.weather.ClimateManager$SeasonColor
+            seasonColorDusk:
+              name: seasonColorDusk
+              modifiers:
+              - private
+              type:
+                basic: ClimateManager.SeasonColor
+                full: zombie.iso.weather.ClimateManager$SeasonColor
+            simplexOffsetA:
+              name: simplexOffsetA
+              modifiers:
+              - private
+              type:
+                basic: double
+                full: double
+            simplexOffsetB:
+              name: simplexOffsetB
+              modifiers:
+              - private
+              type:
+                basic: double
+                full: double
+            simplexOffsetC:
+              name: simplexOffsetC
+              modifiers:
+              - private
+              type:
+                basic: double
+                full: double
+            simplexOffsetD:
+              name: simplexOffsetD
+              modifiers:
+              - private
+              type:
+                basic: double
+                full: double
+            snowFall:
+              name: snowFall
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            snowFracNow:
+              name: snowFracNow
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            snowMeltStrength:
+              name: snowMeltStrength
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            snowStrength:
+              name: snowStrength
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            temperature:
+              name: temperature
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+            thunderStorm:
+              name: thunderStorm
+              modifiers:
+              - private
+              type:
+                basic: ThunderStorm
+                full: zombie.iso.weather.ThunderStorm
+            tickIsClimateTick:
+              name: tickIsClimateTick
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            tickIsDayChange:
+              name: tickIsDayChange
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            tickIsHourChange:
+              name: tickIsHourChange
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            tickIsTenMins:
+              name: tickIsTenMins
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            viewDistance:
+              name: viewDistance
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+            weatherOverride:
+              name: weatherOverride
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            weatherPeriod:
+              name: weatherPeriod
+              modifiers:
+              - private
+              type:
+                basic: WeatherPeriod
+                full: zombie.iso.weather.WeatherPeriod
+            windAngleIntensity:
+              name: windAngleIntensity
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+            windIntensity:
+              name: windIntensity
+              modifiers:
+              - protected
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+            windPower:
+              name: windPower
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            worldAgeHours:
+              name: worldAgeHours
+              modifiers:
+              - private
+              type:
+                basic: double
+                full: double
+          staticFields:
+            AVG_FAV_AIR_TEMPERATURE:
+              name: AVG_FAV_AIR_TEMPERATURE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            A_STORM_IS_COMING:
+              name: A_STORM_IS_COMING
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            BOOL_IS_SNOW:
+              name: BOOL_IS_SNOW
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            BOOL_MAX:
+              name: BOOL_MAX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            COLOR_GLOBAL_LIGHT:
+              name: COLOR_GLOBAL_LIGHT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            COLOR_MAX:
+              name: COLOR_MAX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            COLOR_NEW_FOG:
+              name: COLOR_NEW_FOG
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_AMBIENT:
+              name: FLOAT_AMBIENT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_CLOUD_INTENSITY:
+              name: FLOAT_CLOUD_INTENSITY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_DAYLIGHT_STRENGTH:
+              name: FLOAT_DAYLIGHT_STRENGTH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_DESATURATION:
+              name: FLOAT_DESATURATION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_FOG_INTENSITY:
+              name: FLOAT_FOG_INTENSITY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_GLOBAL_LIGHT_INTENSITY:
+              name: FLOAT_GLOBAL_LIGHT_INTENSITY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_HUMIDITY:
+              name: FLOAT_HUMIDITY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_MAX:
+              name: FLOAT_MAX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_NIGHT_STRENGTH:
+              name: FLOAT_NIGHT_STRENGTH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_PRECIPITATION_INTENSITY:
+              name: FLOAT_PRECIPITATION_INTENSITY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_TEMPERATURE:
+              name: FLOAT_TEMPERATURE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_VIEW_DISTANCE:
+              name: FLOAT_VIEW_DISTANCE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_WIND_ANGLE_INTENSITY:
+              name: FLOAT_WIND_ANGLE_INTENSITY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FLOAT_WIND_INTENSITY:
+              name: FLOAT_WIND_INTENSITY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FRONT_COLD:
+              name: FRONT_COLD
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FRONT_STATIONARY:
+              name: FRONT_STATIONARY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FRONT_WARM:
+              name: FRONT_WARM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            MAX_WINDSPEED_KPH:
+              name: MAX_WINDSPEED_KPH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            MAX_WINDSPEED_MPH:
+              name: MAX_WINDSPEED_MPH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            PacketAdminVarsUpdate:
+              name: PacketAdminVarsUpdate
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            PacketClientChangedAdminVars:
+              name: PacketClientChangedAdminVars
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            PacketClientChangedWeather:
+              name: PacketClientChangedWeather
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            PacketFlare:
+              name: PacketFlare
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            PacketRequestAdminVars:
+              name: PacketRequestAdminVars
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            PacketThunderEvent:
+              name: PacketThunderEvent
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            PacketUpdateClimateVars:
+              name: PacketUpdateClimateVars
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            PacketWeatherUpdate:
+              name: PacketWeatherUpdate
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            THE_DESCENDING_FOG:
+              name: THE_DESCENDING_FOG
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            WINTER_IS_COMING:
+              name: WINTER_IS_COMING
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            instance:
+              name: instance
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ClimateManager
+                full: zombie.iso.weather.ClimateManager
+            windAngleStr:
+              name: windAngleStr
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String[]
+            windAngles:
+              name: windAngles
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float[]
+            windNoiseBase:
+              name: windNoiseBase
+              modifiers:
+              - private
+              - static
+              type:
+                basic: double
+                full: double
+            windNoiseFinal:
+              name: windNoiseFinal
+              modifiers:
+              - private
+              - static
+              type:
+                basic: double
+                full: double
+            windNoiseOffset:
+              name: windNoiseOffset
+              modifiers:
+              - private
+              - static
+              type:
+                basic: double
+                full: double
+            windTickFinal:
+              name: windTickFinal
+              modifiers:
+              - private
+              - static
+              type:
+                basic: double
+                full: double
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: CalculateWeatherFrontStrength
+            modifiers:
+            - public
+            parameters:
+            - name: year
+              type:
+                basic: int
+                full: int
+            - name: month
+              type:
+                basic: int
+                full: int
+            - name: day
+              type:
+                basic: int
+                full: int
+            - name: front
+              type:
+                basic: ClimateManager.AirFront
+                full: zombie.iso.weather.ClimateManager$AirFront
+            return:
+              type:
+                basic: void
+                full: void
+          - name: CopyClimateValues
+            modifiers:
+            - public
+            parameters:
+            - name: copy
+              type:
+                basic: ClimateValues
+                full: zombie.iso.weather.ClimateValues
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: execute_Simulation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: execute_Simulation
+            modifiers:
+            - public
+            parameters:
+            - name: RainModOverride
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forceDayInfoUpdate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAirMass
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAirMassDaily
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAirMassNoiseFrequencyMod
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: double
+                full: double
+          - name: getAirMassTemperature
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAirTemperatureForCharacter
+            modifiers:
+            - public
+            parameters:
+            - name: plr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAirTemperatureForCharacter
+            modifiers:
+            - public
+            parameters:
+            - name: plr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: doWindChill
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAirTemperatureForSquare
+            modifiers:
+            - public
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAirTemperatureForSquare
+            modifiers:
+            - public
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: vehicle
+              type:
+                basic: BaseVehicle
+                full: zombie.vehicles.BaseVehicle
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAirTemperatureForSquare
+            modifiers:
+            - public
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: vehicle
+              type:
+                basic: BaseVehicle
+                full: zombie.vehicles.BaseVehicle
+            - name: doWindChill
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAmbient
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBaseTemperature
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBoolMax
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getClimateBool
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ClimateManager.ClimateBool
+                full: zombie.iso.weather.ClimateManager$ClimateBool
+          - name: getClimateColor
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ClimateManager.ClimateColor
+                full: zombie.iso.weather.ClimateManager$ClimateColor
+          - name: getClimateFloat
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+          - name: getClimateForecaster
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateForecaster
+                full: zombie.iso.weather.ClimateForecaster
+          - name: getClimateHistory
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateHistory
+                full: zombie.iso.weather.ClimateHistory
+          - name: getClimateValuesCopy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateValues
+                full: zombie.iso.weather.ClimateValues
+          - name: getCloudIntensity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getColFog
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+          - name: getColFogLegacy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+          - name: getColFogNew
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+          - name: getColNight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+          - name: getColNightMoon
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+          - name: getColNightNoMoon
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+          - name: getColorMax
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getColorNewFog
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+          - name: getCorrectedWindAngleIntensity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCurrentDay
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateManager.DayInfo
+                full: zombie.iso.weather.ClimateManager$DayInfo
+          - name: getDayLightStrength
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDayMeanTemperature
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDesaturation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getEnabledFxUpdate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getEnabledSimulation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getEnabledWeatherGeneration
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getFloatMax
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getFogIntensity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFogTintStorm
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+          - name: getFogTintTropical
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+          - name: getFrontStrength
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getGlobalLight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+          - name: getGlobalLightIntensity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getGlobalLightInternal
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Color
+                full: zombie.core.Color
+          - name: getHumidity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getIsThunderStorming
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getMaxWindspeedKph
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaxWindspeedMph
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getModData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+          - name: getNextDay
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateManager.DayInfo
+                full: zombie.iso.weather.ClimateManager$DayInfo
+          - name: getNightStrength
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getPrecipitationIntensity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getPrecipitationIsSnow
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getPreviousDay
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClimateManager.DayInfo
+                full: zombie.iso.weather.ClimateManager$DayInfo
+          - name: getRainIntensity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getRainTimeMultiplierMod
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSeason
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ErosionSeason
+                full: zombie.erosion.season.ErosionSeason
+          - name: getSeasonColor
+            modifiers:
+            - public
+            parameters:
+            - name: segment
+              type:
+                basic: int
+                full: int
+            - name: temperature
+              type:
+                basic: int
+                full: int
+            - name: season
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+          - name: getSeasonId
+            modifiers:
+            - public
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: getSeasonName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSeasonNameTranslated
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSeasonProgression
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSeasonStrength
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSimplexOffsetA
+            modifiers:
+            - public
+            return:
+              type:
+                basic: double
+                full: double
+          - name: getSimplexOffsetB
+            modifiers:
+            - public
+            return:
+              type:
+                basic: double
+                full: double
+          - name: getSimplexOffsetC
+            modifiers:
+            - public
+            return:
+              type:
+                basic: double
+                full: double
+          - name: getSimplexOffsetD
+            modifiers:
+            - public
+            return:
+              type:
+                basic: double
+                full: double
+          - name: getSnowFracNow
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSnowIntensity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSnowStrength
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTemperature
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getThunderStorm
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ThunderStorm
+                full: zombie.iso.weather.ThunderStorm
+          - name: getTimeLerp
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTimeLerp
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTimeLerpHours
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTimeLerpHours
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getViewDistance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWeatherInterference
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWeatherPeriod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: WeatherPeriod
+                full: zombie.iso.weather.WeatherPeriod
+          - name: getWindAngleDegrees
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWindAngleIntensity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWindAngleRadians
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWindForceMovement
+            modifiers:
+            - public
+            parameters:
+            - name: character
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: angle
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWindIntensity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWindPower
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWindSpeedMovement
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWindspeedKph
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWorldAgeHours
+            modifiers:
+            - public
+            return:
+              type:
+                basic: double
+                full: double
+          - name: init
+            modifiers:
+            - public
+            parameters:
+            - name: metaGrid
+              type:
+                basic: IsoMetaGrid
+                full: zombie.iso.IsoMetaGrid
+            return:
+              type:
+                basic: void
+                full: void
+          - name: initClimateBool
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ClimateManager.ClimateBool
+                full: zombie.iso.weather.ClimateManager$ClimateBool
+          - name: initClimateColor
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ClimateManager.ClimateColor
+                full: zombie.iso.weather.ClimateManager$ClimateColor
+          - name: initClimateFloat
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ClimateManager.ClimateFloat
+                full: zombie.iso.weather.ClimateManager$ClimateFloat
+          - name: initSeasonColors
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isRaining
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSnowing
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUpdated
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: launchFlare
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: input
+              type:
+                basic: DataInputStream
+                full: java.io.DataInputStream
+            - name: worldVersion
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: postCellLoadSetSnow
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: readPacketContents
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            - name: arg2
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: receiveClimatePacket
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: ignoreConnection
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: resetAdmin
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: resetModded
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: resetOverrides
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: output
+              type:
+                basic: DataOutputStream
+                full: java.io.DataOutputStream
+            return:
+              type:
+                basic: void
+                full: void
+            notes: IO
+          - name: sendInitialState
+            modifiers:
+            - public
+            parameters:
+            - name: connection
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: serverReceiveClientChangeAdminVars
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: serverReceiveClientChangeWeather
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAmbient
+            modifiers:
+            - public
+            parameters:
+            - name: f
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDayInfo
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ClimateManager.DayInfo
+                full: zombie.iso.weather.ClimateManager$DayInfo
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDayLightStrength
+            modifiers:
+            - public
+            parameters:
+            - name: f
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDesaturation
+            modifiers:
+            - public
+            parameters:
+            - name: desaturation
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEnabledFxUpdate
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEnabledSimulation
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEnabledWeatherGeneration
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNightStrength
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPrecipitationIsSnow
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSeasonColorDawn
+            modifiers:
+            - public
+            parameters:
+            - name: temperature
+              type:
+                basic: int
+                full: int
+            - name: season
+              type:
+                basic: int
+                full: int
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: a
+              type:
+                basic: float
+                full: float
+            - name: exterior
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSeasonColorDay
+            modifiers:
+            - public
+            parameters:
+            - name: temperature
+              type:
+                basic: int
+                full: int
+            - name: season
+              type:
+                basic: int
+                full: int
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: a
+              type:
+                basic: float
+                full: float
+            - name: exterior
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSeasonColorDusk
+            modifiers:
+            - public
+            parameters:
+            - name: temperature
+              type:
+                basic: int
+                full: int
+            - name: season
+              type:
+                basic: int
+                full: int
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: a
+              type:
+                basic: float
+                full: float
+            - name: exterior
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setViewDistance
+            modifiers:
+            - public
+            parameters:
+            - name: f
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setup
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stopWeatherAndThunder
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitClientChangeAdminVars
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitClimatePacket
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: ClimateManager.ClimateNetAuth
+                full: zombie.iso.weather.ClimateManager$ClimateNetAuth
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            - name: arg2
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitGenerateWeather
+            modifiers:
+            - public
+            parameters:
+            - name: strength
+              type:
+                basic: float
+                full: float
+            - name: front
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitRequestAdminVars
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitServerStartRain
+            modifiers:
+            - public
+            parameters:
+            - name: intensity
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitServerStopRain
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitServerStopWeather
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitServerTriggerLightning
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: doStrike
+              type:
+                basic: boolean
+                full: boolean
+            - name: doLightning
+              type:
+                basic: boolean
+                full: boolean
+            - name: doRumble
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitServerTriggerStorm
+            modifiers:
+            - public
+            parameters:
+            - name: duration
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitStopWeather
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitTriggerBlizzard
+            modifiers:
+            - public
+            parameters:
+            - name: duration
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitTriggerStorm
+            modifiers:
+            - public
+            parameters:
+            - name: duration
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transmitTriggerTropical
+            modifiers:
+            - public
+            parameters:
+            - name: duration
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: triggerCustomWeather
+            modifiers:
+            - public
+            parameters:
+            - name: strength
+              type:
+                basic: float
+                full: float
+            - name: warmFront
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: triggerCustomWeatherStage
+            modifiers:
+            - public
+            parameters:
+            - name: stage
+              type:
+                basic: int
+                full: int
+            - name: duration
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: triggerKateBobIntroStorm
+            modifiers:
+            - public
+            parameters:
+            - name: centerX
+              type:
+                basic: int
+                full: int
+            - name: centerY
+              type:
+                basic: int
+                full: int
+            - name: duration
+              type:
+                basic: double
+                full: double
+            - name: strength
+              type:
+                basic: float
+                full: float
+            - name: initialProgress
+              type:
+                basic: float
+                full: float
+            - name: angle
+              type:
+                basic: float
+                full: float
+            - name: initialPuddles
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: triggerKateBobIntroStorm
+            modifiers:
+            - public
+            parameters:
+            - name: centerX
+              type:
+                basic: int
+                full: int
+            - name: centerY
+              type:
+                basic: int
+                full: int
+            - name: duration
+              type:
+                basic: double
+                full: double
+            - name: strength
+              type:
+                basic: float
+                full: float
+            - name: initialProgress
+              type:
+                basic: float
+                full: float
+            - name: angle
+              type:
+                basic: float
+                full: float
+            - name: initialPuddles
+              type:
+                basic: float
+                full: float
+            - name: cloudcolor
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: triggerWinterIsComingStorm
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateDayInfo
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateEveryTenMins
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateFx
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateOLD
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateOnTick
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateSandboxOverrides
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateSnow
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateSnowOLD
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateTestFlare
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateValues
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateViewDistance
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateWindTick
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: writePacketContents
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          staticMethods:
+          - name: ToKph
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: val
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: ToMph
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: val
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: clamp
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: min
+              type:
+                basic: float
+                full: float
+            - name: max
+              type:
+                basic: float
+                full: float
+            - name: val
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: clamp
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: min
+              type:
+                basic: int
+                full: int
+            - name: max
+              type:
+                basic: int
+                full: int
+            - name: val
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: clamp01
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: val
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: clerp
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: t
+              type:
+                basic: float
+                full: float
+            - name: a
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getInstance
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ClimateManager
+                full: zombie.iso.weather.ClimateManager
+          - name: getWindAngleString
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: angle
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getWindNoiseBase
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: double
+                full: double
+          - name: getWindNoiseFinal
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: double
+                full: double
+          - name: getWindTickFinal
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: double
+                full: double
+          - name: lerp
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: t
+              type:
+                basic: float
+                full: float
+            - name: a
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: normalizeRange
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: v
+              type:
+                basic: float
+                full: float
+            - name: n
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: posToPosNegRange
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: v
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: setInstance
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: inst
+              type:
+                basic: ClimateManager
+                full: zombie.iso.weather.ClimateManager
+            return:
+              type:
+                basic: void
+                full: void

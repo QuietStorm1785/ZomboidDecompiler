@@ -1,0 +1,80 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      jdk.internal.loader:
+        AbstractClassLoaderValue.Sub:
+          extends: jdk.internal.loader.AbstractClassLoaderValue<jdk.internal.loader.AbstractClassLoaderValue<CLV,
+            V>$Sub<K>, V>
+          modifiers:
+          - public
+          - final
+          fields:
+            key:
+              name: key
+              modifiers:
+              - private
+              type:
+                basic: K
+                full: K
+            this$0:
+              name: this$0
+              modifiers:
+              - package
+              type:
+                basic: AbstractClassLoaderValue
+                full: jdk.internal.loader.AbstractClassLoaderValue
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+          methods:
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isEqualOrDescendantOf
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AbstractClassLoaderValue
+                full: jdk.internal.loader.AbstractClassLoaderValue<?, V>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: key
+            modifiers:
+            - public
+            return:
+              type:
+                basic: K
+                full: K
+          - name: parent
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AbstractClassLoaderValue
+                full: jdk.internal.loader.AbstractClassLoaderValue<CLV, V>

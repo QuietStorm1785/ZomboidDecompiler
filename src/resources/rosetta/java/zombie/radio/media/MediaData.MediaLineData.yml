@@ -1,0 +1,106 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.radio.media:
+        MediaData.MediaLineData:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            codes:
+              name: codes
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            color:
+              name: color
+              modifiers:
+              - private
+              type:
+                basic: Color
+                full: zombie.core.Color
+            text:
+              name: text
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: text
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: codes
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: getB
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCodes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Color
+                full: zombie.core.Color
+          - name: getG
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getR
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTextGuid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getTranslatedText
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

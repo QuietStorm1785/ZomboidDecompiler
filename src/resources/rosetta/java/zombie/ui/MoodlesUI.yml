@@ -1,0 +1,377 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ui:
+        MoodlesUI:
+          extends: zombie.ui.UIElement
+          modifiers:
+          - public
+          - final
+          fields:
+            BackgroundColour:
+              name: BackgroundColour
+              modifiers:
+              - private
+              type:
+                basic: Color
+                full: zombie.core.Color
+            alpha:
+              name: alpha
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            alphaIncrease:
+              name: alphaIncrease
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            clientH:
+              name: clientH
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            clientW:
+              name: clientW
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            currentTextureSet:
+              name: currentTextureSet
+              modifiers:
+              - private
+              type:
+                basic: MoodleTextureSet
+                full: zombie.ui.MoodleTextureSet
+            debugKeyDelay:
+              name: debugKeyDelay
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            goodBadNeutral:
+              name: goodBadNeutral
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int[]
+            isoGameCharacter:
+              name: isoGameCharacter
+              modifiers:
+              - private
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            moodleDistY:
+              name: moodleDistY
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            moodleLevel:
+              name: moodleLevel
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int[]
+            moodleOscillationLevel:
+              name: moodleOscillationLevel
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float[]
+            moodleSlotsDesiredPos:
+              name: moodleSlotsDesiredPos
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float[]
+            moodleSlotsPos:
+              name: moodleSlotsPos
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float[]
+            mouseOver:
+              name: mouseOver
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            mouseOverSlot:
+              name: mouseOverSlot
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            numUsedSlots:
+              name: numUsedSlots
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            oscillatorStep:
+              name: oscillatorStep
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            textureSets:
+              name: textureSets
+              modifiers:
+              - private
+              type:
+                basic: MoodleTextureSet
+                full: zombie.ui.MoodleTextureSet[]
+            textureSizes:
+              name: textureSizes
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int[]
+          staticFields:
+            DefaultMoodleDistY:
+              name: DefaultMoodleDistY
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+            DistFromRightEdge:
+              name: DistFromRightEdge
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            MaxMouseOverSlot:
+              name: MaxMouseOverSlot
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            OFFSCREEN_Y:
+              name: OFFSCREEN_Y
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+            OscillatorDecelerator:
+              name: OscillatorDecelerator
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+            OscillatorRate:
+              name: OscillatorRate
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+            OscillatorScalar:
+              name: OscillatorScalar
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+            OscillatorStartLevel:
+              name: OscillatorStartLevel
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+            instance:
+              name: instance
+              modifiers:
+              - private
+              - static
+              type:
+                basic: MoodlesUI
+                full: zombie.ui.MoodlesUI
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: drawPercentageBackground
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: MoodleType
+                full: zombie.characters.Moodles.MoodleType
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getBackgroundPercentage
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: MoodleType
+                full: zombie.characters.Moodles.MoodleType
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTextureSetIndexForSize
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getTextureSizeForOption
+            modifiers:
+            - private
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isCurrentlyAnimating
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPercentageBackground
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: MoodleType
+                full: zombie.characters.Moodles.MoodleType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: onMouseMove
+            modifiers:
+            - public
+            parameters:
+            - name: dx
+              type:
+                basic: double
+                full: double
+            - name: dy
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: onMouseMoveOutside
+            modifiers:
+            - public
+            parameters:
+            - name: dx
+              type:
+                basic: double
+                full: double
+            - name: dy
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCharacter
+            modifiers:
+            - public
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: wiggle
+            modifiers:
+            - public
+            parameters:
+            - name: Moodle
+              type:
+                basic: MoodleType
+                full: zombie.characters.Moodles.MoodleType
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: getInstance
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: MoodlesUI
+                full: zombie.ui.MoodlesUI

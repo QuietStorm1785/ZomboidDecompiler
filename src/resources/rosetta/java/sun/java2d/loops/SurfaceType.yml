@@ -1,0 +1,947 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.java2d.loops:
+        SurfaceType:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            desc:
+              name: desc
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            next:
+              name: next
+              modifiers:
+              - private
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            pixelConverter:
+              name: pixelConverter
+              modifiers:
+              - protected
+              type:
+                basic: PixelConverter
+                full: sun.awt.image.PixelConverter
+            uniqueID:
+              name: uniqueID
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          staticFields:
+            Any:
+              name: Any
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            Any3Byte:
+              name: Any3Byte
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            Any4Byte:
+              name: Any4Byte
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            AnyByte:
+              name: AnyByte
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            AnyByteBinary:
+              name: AnyByteBinary
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            AnyColor:
+              name: AnyColor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            AnyDcm:
+              name: AnyDcm
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            AnyInt:
+              name: AnyInt
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            AnyPaint:
+              name: AnyPaint
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            AnyShort:
+              name: AnyShort
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            ByteBinary1Bit:
+              name: ByteBinary1Bit
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            ByteBinary2Bit:
+              name: ByteBinary2Bit
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            ByteBinary4Bit:
+              name: ByteBinary4Bit
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            ByteGray:
+              name: ByteGray
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            ByteIndexed:
+              name: ByteIndexed
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            ByteIndexedBm:
+              name: ByteIndexedBm
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            ByteIndexedOpaque:
+              name: ByteIndexedOpaque
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            Custom:
+              name: Custom
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            DESC_3BYTE_BGR:
+              name: DESC_3BYTE_BGR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_3BYTE_RGB:
+              name: DESC_3BYTE_RGB
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_4BYTE_ABGR:
+              name: DESC_4BYTE_ABGR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_4BYTE_ABGR_PRE:
+              name: DESC_4BYTE_ABGR_PRE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_ANY:
+              name: DESC_ANY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_ANY_3BYTE:
+              name: DESC_ANY_3BYTE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_ANY_4BYTE:
+              name: DESC_ANY_4BYTE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_ANY_BYTE:
+              name: DESC_ANY_BYTE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_ANY_COLOR:
+              name: DESC_ANY_COLOR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_ANY_INT:
+              name: DESC_ANY_INT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_ANY_INT_DCM:
+              name: DESC_ANY_INT_DCM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_ANY_PAINT:
+              name: DESC_ANY_PAINT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_ANY_SHORT:
+              name: DESC_ANY_SHORT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_BYTE_BINARY:
+              name: DESC_BYTE_BINARY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_BYTE_BINARY_1BIT:
+              name: DESC_BYTE_BINARY_1BIT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_BYTE_BINARY_2BIT:
+              name: DESC_BYTE_BINARY_2BIT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_BYTE_BINARY_4BIT:
+              name: DESC_BYTE_BINARY_4BIT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_BYTE_GRAY:
+              name: DESC_BYTE_GRAY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_BYTE_INDEXED:
+              name: DESC_BYTE_INDEXED
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_BYTE_INDEXED_BM:
+              name: DESC_BYTE_INDEXED_BM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_BYTE_INDEXED_OPAQUE:
+              name: DESC_BYTE_INDEXED_OPAQUE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_GRADIENT_PAINT:
+              name: DESC_GRADIENT_PAINT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_INDEX12_GRAY:
+              name: DESC_INDEX12_GRAY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_INDEX8_GRAY:
+              name: DESC_INDEX8_GRAY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_INT_ARGB:
+              name: DESC_INT_ARGB
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_INT_ARGB_BM:
+              name: DESC_INT_ARGB_BM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_INT_ARGB_PRE:
+              name: DESC_INT_ARGB_PRE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_INT_BGR:
+              name: DESC_INT_BGR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_INT_BGRx:
+              name: DESC_INT_BGRx
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_INT_RGB:
+              name: DESC_INT_RGB
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_INT_RGBx:
+              name: DESC_INT_RGBx
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_LINEAR_GRADIENT_PAINT:
+              name: DESC_LINEAR_GRADIENT_PAINT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_OPAQUE_COLOR:
+              name: DESC_OPAQUE_COLOR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_OPAQUE_GRADIENT_PAINT:
+              name: DESC_OPAQUE_GRADIENT_PAINT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_OPAQUE_LINEAR_GRADIENT_PAINT:
+              name: DESC_OPAQUE_LINEAR_GRADIENT_PAINT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_OPAQUE_RADIAL_GRADIENT_PAINT:
+              name: DESC_OPAQUE_RADIAL_GRADIENT_PAINT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_OPAQUE_TEXTURE_PAINT:
+              name: DESC_OPAQUE_TEXTURE_PAINT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_RADIAL_GRADIENT_PAINT:
+              name: DESC_RADIAL_GRADIENT_PAINT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_TEXTURE_PAINT:
+              name: DESC_TEXTURE_PAINT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_USHORT_4444_ARGB:
+              name: DESC_USHORT_4444_ARGB
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_USHORT_555_RGB:
+              name: DESC_USHORT_555_RGB
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_USHORT_555_RGBx:
+              name: DESC_USHORT_555_RGBx
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_USHORT_565_RGB:
+              name: DESC_USHORT_565_RGB
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_USHORT_GRAY:
+              name: DESC_USHORT_GRAY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_USHORT_INDEXED:
+              name: DESC_USHORT_INDEXED
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            FourByteAbgr:
+              name: FourByteAbgr
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            FourByteAbgrPre:
+              name: FourByteAbgrPre
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            GradientPaint:
+              name: GradientPaint
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            Index12Gray:
+              name: Index12Gray
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            Index8Gray:
+              name: Index8Gray
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            IntArgb:
+              name: IntArgb
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            IntArgbBm:
+              name: IntArgbBm
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            IntArgbPre:
+              name: IntArgbPre
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            IntBgr:
+              name: IntBgr
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            IntBgrx:
+              name: IntBgrx
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            IntRgb:
+              name: IntRgb
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            IntRgbx:
+              name: IntRgbx
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            LinearGradientPaint:
+              name: LinearGradientPaint
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            OpaqueColor:
+              name: OpaqueColor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            OpaqueGradientPaint:
+              name: OpaqueGradientPaint
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            OpaqueLinearGradientPaint:
+              name: OpaqueLinearGradientPaint
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            OpaqueRadialGradientPaint:
+              name: OpaqueRadialGradientPaint
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            OpaqueTexturePaint:
+              name: OpaqueTexturePaint
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            RadialGradientPaint:
+              name: RadialGradientPaint
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            TexturePaint:
+              name: TexturePaint
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            ThreeByteBgr:
+              name: ThreeByteBgr
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            ThreeByteRgb:
+              name: ThreeByteRgb
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            Ushort4444Argb:
+              name: Ushort4444Argb
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            Ushort555Rgb:
+              name: Ushort555Rgb
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            Ushort555Rgbx:
+              name: Ushort555Rgbx
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            Ushort565Rgb:
+              name: Ushort565Rgb
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            UshortGray:
+              name: UshortGray
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            UshortIndexed:
+              name: UshortIndexed
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            surfaceUIDMap:
+              name: surfaceUIDMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.lang.Integer>
+            unusedUID:
+              name: unusedUID
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: PixelConverter
+                full: sun.awt.image.PixelConverter
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: deriveSubType
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+          - name: deriveSubType
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: PixelConverter
+                full: sun.awt.image.PixelConverter
+            return:
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getAlphaMask
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getDescriptor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPixelConverter
+            modifiers:
+            - public
+            return:
+              type:
+                basic: PixelConverter
+                full: sun.awt.image.PixelConverter
+          - name: getSuperType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+          - name: getUniqueID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: pixelFor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ColorModel
+                full: java.awt.image.ColorModel
+            return:
+              type:
+                basic: int
+                full: int
+          - name: rgbFor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ColorModel
+                full: java.awt.image.ColorModel
+            return:
+              type:
+                basic: int
+                full: int
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: makeUniqueID
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int

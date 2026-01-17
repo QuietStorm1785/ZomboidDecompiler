@@ -1,0 +1,164 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.network.fields.character:
+        PlayerVariables.NetworkPlayerVariableIDs:
+          extends: java.lang.Enum<zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs>
+          modifiers:
+          - package
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs[]
+            AttackVariationX:
+              name: AttackVariationX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+            AttackVariationY:
+              name: AttackVariationY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+            DeltaX:
+              name: DeltaX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+            DeltaY:
+              name: DeltaY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+            IdleSpeed:
+              name: IdleSpeed
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+            ShoveAimX:
+              name: ShoveAimX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+            ShoveAimY:
+              name: ShoveAimY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+            WalkInjury:
+              name: WalkInjury
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+            WalkSpeed:
+              name: WalkSpeed
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+            autoShootVarX:
+              name: autoShootVarX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+            autoShootVarY:
+              name: autoShootVarY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+            recoilVarX:
+              name: recoilVarX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+            recoilVarY:
+              name: recoilVarY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+            targetDist:
+              name: targetDist
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: PlayerVariables.NetworkPlayerVariableIDs
+                full: zombie.network.fields.character.PlayerVariables$NetworkPlayerVariableIDs[]

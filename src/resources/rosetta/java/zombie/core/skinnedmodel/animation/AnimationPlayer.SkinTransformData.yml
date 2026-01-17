@@ -1,0 +1,103 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.animation:
+        AnimationPlayer.SkinTransformData:
+          extends: zombie.util.PooledObject
+          modifiers:
+          - package
+          fields:
+            dirty:
+              name: dirty
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            m_animPlayerSkinningData:
+              name: m_animPlayerSkinningData
+              modifiers:
+              - private
+              type:
+                basic: SkinningData
+                full: zombie.core.skinnedmodel.model.SkinningData
+            m_boneMap:
+              name: m_boneMap
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int[]
+            m_next:
+              name: m_next
+              modifiers:
+              - private
+              type:
+                basic: AnimationPlayer.SkinTransformData
+                full: zombie.core.skinnedmodel.animation.AnimationPlayer$SkinTransformData
+            m_skinnedTo:
+              name: m_skinnedTo
+              modifiers:
+              - private
+              type:
+                basic: SkinningData
+                full: zombie.core.skinnedmodel.model.SkinningData
+            transforms:
+              name: transforms
+              modifiers:
+              - public
+              type:
+                basic: Matrix4f
+                full: org.lwjgl.util.vector.Matrix4f[]
+          staticFields:
+            s_pool:
+              name: s_pool
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Pool
+                full: zombie.util.Pool<zombie.core.skinnedmodel.animation.AnimationPlayer$SkinTransformData>
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: checkBoneMap
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: SkinningData
+                full: zombie.core.skinnedmodel.model.SkinningData
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSkinnedTo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: SkinningData
+                full: zombie.core.skinnedmodel.model.SkinningData
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: alloc
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: SkinningData
+                full: zombie.core.skinnedmodel.model.SkinningData
+            return:
+              type:
+                basic: AnimationPlayer.SkinTransformData
+                full: zombie.core.skinnedmodel.animation.AnimationPlayer$SkinTransformData

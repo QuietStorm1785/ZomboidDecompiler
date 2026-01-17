@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt:
+        Queue:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            head:
+              name: head
+              modifiers:
+              - package
+              type:
+                basic: EventQueueItem
+                full: sun.awt.EventQueueItem
+            tail:
+              name: tail
+              modifiers:
+              - package
+              type:
+                basic: EventQueueItem
+                full: sun.awt.EventQueueItem
+          constructors:
+          - modifiers:
+            - package

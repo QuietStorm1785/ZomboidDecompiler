@@ -1,0 +1,125 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt:
+        BufferCapabilities:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: Capabilities and properties of buffers.
+          fields:
+            backCaps:
+              name: backCaps
+              modifiers:
+              - private
+              type:
+                basic: ImageCapabilities
+                full: java.awt.ImageCapabilities
+            flipContents:
+              name: flipContents
+              modifiers:
+              - private
+              type:
+                basic: BufferCapabilities.FlipContents
+                full: java.awt.BufferCapabilities$FlipContents
+            frontCaps:
+              name: frontCaps
+              modifiers:
+              - private
+              type:
+                basic: ImageCapabilities
+                full: java.awt.ImageCapabilities
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: frontCaps
+              type:
+                basic: ImageCapabilities
+                full: java.awt.ImageCapabilities
+              notes: "the capabilities of the front buffer; cannot be\n null"
+            - name: backCaps
+              type:
+                basic: ImageCapabilities
+                full: java.awt.ImageCapabilities
+              notes: "the capabilities of the back and intermediate buffers;\n cannot\
+                \ be null"
+            - name: flipContents
+              type:
+                basic: BufferCapabilities.FlipContents
+                full: java.awt.BufferCapabilities$FlipContents
+              notes: "the contents of the back buffer after page-flipping,\n null\
+                \ if page flipping is not used (implies blitting)"
+            notes: Creates a new object for specifying buffering capabilities
+          methods:
+          - name: clone
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+              notes: a copy of this BufferCapabilities object.
+            notes: 'Description copied from class: Object'
+          - name: getBackBufferCapabilities
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ImageCapabilities
+                full: java.awt.ImageCapabilities
+              notes: "the image capabilities of all back buffers (intermediate buffers\n\
+                \ are considered back buffers)"
+          - name: getFlipContents
+            modifiers:
+            - public
+            return:
+              type:
+                basic: BufferCapabilities.FlipContents
+                full: java.awt.BufferCapabilities$FlipContents
+              notes: "the resulting contents of the back buffer after page-flipping.\n\
+                \ This value is null when the isPageFlipping\n returns false, implying\
+                \ blitting.  It can be one of\n FlipContents.UNDEFINED\n (the assumed\
+                \ default), FlipContents.BACKGROUND,\n FlipContents.PRIOR, or\n FlipContents.COPIED."
+          - name: getFrontBufferCapabilities
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ImageCapabilities
+                full: java.awt.ImageCapabilities
+              notes: the image capabilities of the front (displayed) buffer
+          - name: isFullScreenRequired
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: "whether page flipping is only available in full-screen mode.\
+                \  If this\n is true, full-screen exclusive mode is required for\n\
+                \ page-flipping."
+          - name: isMultiBufferAvailable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: "whether or not\n page flipping can be performed using more than\
+                \ two buffers (one or more\n intermediate buffers as well as the front\
+                \ and back buffer)."
+          - name: isPageFlipping
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: "whether or not the buffer strategy uses page flipping; a set\
+                \ of\n buffers that uses page flipping\n can swap the contents internally\
+                \ between the front buffer and one or\n more back buffers by switching\
+                \ the video pointer (or by copying memory\n internally).  A non-flipping\
+                \ set of\n buffers uses blitting to copy the contents from one buffer\
+                \ to\n another; when this is the case, getFlipContents returns\n null"

@@ -1,0 +1,150 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.globalObjects:
+        CGlobalObjectSystem:
+          extends: zombie.globalObjects.GlobalObjectSystem
+          modifiers:
+          - public
+          - final
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: Reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: makeObject
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: GlobalObject
+                full: zombie.globalObjects.GlobalObject
+          - name: receiveNewLuaObjectAt
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            - name: args
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            return:
+              type:
+                basic: void
+                full: void
+          - name: receiveRemoveLuaObjectAt
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: receiveServerCommand
+            modifiers:
+            - public
+            parameters:
+            - name: command
+              type:
+                basic: String
+                full: java.lang.String
+            - name: args
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            return:
+              type:
+                basic: void
+                full: void
+          - name: receiveUpdateLuaObjectAt
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            - name: args
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendCommand
+            modifiers:
+            - public
+            parameters:
+            - name: command
+              type:
+                basic: String
+                full: java.lang.String
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: args
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            return:
+              type:
+                basic: void
+                full: void

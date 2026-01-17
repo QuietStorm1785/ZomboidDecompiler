@@ -1,0 +1,32 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.nio.file:
+        WatchEvent.Kind:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: An event kind, for the purposes of identification.
+          methods:
+          - name: name
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the name of the event kind
+            notes: Returns the name of the event kind.
+          - name: type
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<T>
+              notes: the type of the context value
+            notes: Returns the type of the context value.

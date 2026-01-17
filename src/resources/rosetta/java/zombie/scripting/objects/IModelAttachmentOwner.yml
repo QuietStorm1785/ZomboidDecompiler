@@ -1,0 +1,37 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.objects:
+        IModelAttachmentOwner:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: afterRenameAttachment
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ModelAttachment
+                full: zombie.scripting.objects.ModelAttachment
+            return:
+              type:
+                basic: void
+                full: void
+          - name: beforeRenameAttachment
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ModelAttachment
+                full: zombie.scripting.objects.ModelAttachment
+            return:
+              type:
+                basic: void
+                full: void

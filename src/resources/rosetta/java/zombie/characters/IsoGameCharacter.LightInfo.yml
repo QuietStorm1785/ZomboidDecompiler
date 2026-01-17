@@ -1,0 +1,110 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        IsoGameCharacter.LightInfo:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            angleX:
+              name: angleX
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            angleY:
+              name: angleY
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            bmod:
+              name: bmod
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            gmod:
+              name: gmod
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            night:
+              name: night
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            rmod:
+              name: rmod
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            square:
+              name: square
+              modifiers:
+              - public
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            time:
+              name: time
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            torches:
+              name: torches
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.IsoGameCharacter$TorchInfo>
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            z:
+              name: z
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: initFrom
+            modifiers:
+            - public
+            parameters:
+            - name: other
+              type:
+                basic: IsoGameCharacter.LightInfo
+                full: zombie.characters.IsoGameCharacter$LightInfo
+            return:
+              type:
+                basic: void
+                full: void

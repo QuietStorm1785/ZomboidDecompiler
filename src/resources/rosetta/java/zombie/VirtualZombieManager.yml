@@ -1,0 +1,833 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie:
+        VirtualZombieManager:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            BLOCKED_E:
+              name: BLOCKED_E
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            BLOCKED_N:
+              name: BLOCKED_N
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            BLOCKED_S:
+              name: BLOCKED_S
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            BLOCKED_W:
+              name: BLOCKED_W
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            MaxRealZombies:
+              name: MaxRealZombies
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            NO_SQUARE_E:
+              name: NO_SQUARE_E
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            NO_SQUARE_N:
+              name: NO_SQUARE_N
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            NO_SQUARE_S:
+              name: NO_SQUARE_S
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            NO_SQUARE_W:
+              name: NO_SQUARE_W
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            RecentlyRemoved:
+              name: RecentlyRemoved
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.IsoZombie>
+            ReusableZombieSet:
+              name: ReusableZombieSet
+              modifiers:
+              - private
+              type:
+                basic: HashSet
+                full: java.util.HashSet<zombie.characters.IsoZombie>
+            ReusableZombies:
+              name: ReusableZombies
+              modifiers:
+              - private
+              type:
+                basic: ArrayDeque
+                full: java.util.ArrayDeque<zombie.characters.IsoZombie>
+            ReusedThisFrame:
+              name: ReusedThisFrame
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.IsoZombie>
+            bestchoices:
+              name: bestchoices
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoGridSquare>
+            choices:
+              name: choices
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoGridSquare>
+            m_tempZombies:
+              name: m_tempZombies
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.IsoZombie>
+            w:
+              name: w
+              modifiers:
+              - package
+              type:
+                basic: HandWeapon
+                full: zombie.inventory.types.HandWeapon
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            instance:
+              name: instance
+              modifiers:
+              - public
+              - static
+              type:
+                basic: VirtualZombieManager
+                full: zombie.VirtualZombieManager
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: AddBloodToMap
+            modifiers:
+            - public
+            parameters:
+            - name: nSize
+              type:
+                basic: int
+                full: int
+            - name: chk
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RemoveZombie
+            modifiers:
+            - public
+            parameters:
+            - name: obj
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addDeadZombiesToMap
+            modifiers:
+            - public
+            parameters:
+            - name: nSize
+              type:
+                basic: int
+                full: int
+            - name: room
+              type:
+                basic: RoomDef
+                full: zombie.iso.RoomDef
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addIndoorZombies
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: RoomDef
+                full: zombie.iso.RoomDef
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addIndoorZombiesToChunk
+            modifiers:
+            - public
+            parameters:
+            - name: chunk
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            - name: room
+              type:
+                basic: IsoRoom
+                full: zombie.iso.areas.IsoRoom
+            - name: zombieCountForRoom
+              type:
+                basic: int
+                full: int
+            - name: zombies
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.IsoZombie>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addIndoorZombiesToChunk
+            modifiers:
+            - public
+            parameters:
+            - name: chunk
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            - name: room
+              type:
+                basic: IsoRoom
+                full: zombie.iso.areas.IsoRoom
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addToReusable
+            modifiers:
+            - public
+            parameters:
+            - name: z
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addZombiesToMap
+            modifiers:
+            - public
+            parameters:
+            - name: nSize
+              type:
+                basic: int
+                full: int
+            - name: room
+              type:
+                basic: RoomDef
+                full: zombie.iso.RoomDef
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.IsoZombie>
+          - name: addZombiesToMap
+            modifiers:
+            - public
+            parameters:
+            - name: nSize
+              type:
+                basic: int
+                full: int
+            - name: room
+              type:
+                basic: RoomDef
+                full: zombie.iso.RoomDef
+            - name: bAllowDead
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.IsoZombie>
+          - name: canPathOnlyE
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canPathOnlyN
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canPathOnlyS
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canPathOnlyW
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canSpawnAt
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: checkAndSpawnZombieForBuildingKey
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: checkAndSpawnZombieForBuildingKey
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: checkZombieKeyForBuilding
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: createEatingZombies
+            modifiers:
+            - public
+            parameters:
+            - name: target
+              type:
+                basic: IsoDeadBody
+                full: zombie.iso.objects.IsoDeadBody
+            - name: nb
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createHordeFromTo
+            modifiers:
+            - public
+            parameters:
+            - name: spawnX
+              type:
+                basic: float
+                full: float
+            - name: spawnY
+              type:
+                basic: float
+                full: float
+            - name: targetX
+              type:
+                basic: float
+                full: float
+            - name: targetY
+              type:
+                basic: float
+                full: float
+            - name: count
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createRealZombie
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+          - name: createRealZombie
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+          - name: createRealZombieAlways
+            modifiers:
+            - public
+            parameters:
+            - name: ZombieDir
+              type:
+                basic: int
+                full: int
+            - name: bDead
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+          - name: createRealZombieAlways
+            modifiers:
+            - public
+            parameters:
+            - name: descriptorID
+              type:
+                basic: int
+                full: int
+            - name: ZombieDir
+              type:
+                basic: int
+                full: int
+            - name: bDead
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+          - name: createRealZombieAlways
+            modifiers:
+            - public
+            parameters:
+            - name: ZombieDir
+              type:
+                basic: int
+                full: int
+            - name: bDead
+              type:
+                basic: boolean
+                full: boolean
+            - name: outfitID
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+          - name: createRealZombieNow
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+          - name: getBlockedBits
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getKeySpawnChanceD100
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getZombieCountForRoom
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoRoom
+                full: zombie.iso.areas.IsoRoom
+            return:
+              type:
+                basic: int
+                full: int
+          - name: init
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isBlockedInAllDirections
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isReused
+            modifiers:
+            - public
+            parameters:
+            - name: z
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: lambda$roomSpotted$1
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoRoom
+                full: zombie.iso.areas.IsoRoom
+            - name: arg1
+              type:
+                basic: RoomDef
+                full: zombie.iso.RoomDef
+            - name: arg2
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            return:
+              type:
+                basic: void
+                full: void
+          - name: pickEatingZombieSquare
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: removeZombieFromWorld
+            modifiers:
+            - public
+            parameters:
+            - name: z
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: reusableZombiesSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: reuseZombie
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            return:
+              type:
+                basic: void
+                full: void
+          - name: roomSpotted
+            modifiers:
+            - public
+            parameters:
+            - name: room
+              type:
+                basic: IsoRoom
+                full: zombie.iso.areas.IsoRoom
+            return:
+              type:
+                basic: void
+                full: void
+          - name: shouldSpawnZombiesOnLevel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: spawnBuildingKeyOnZombie
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: spawnBuildingKeyOnZombie
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            - name: arg1
+              type:
+                basic: BuildingDef
+                full: zombie.iso.BuildingDef
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: tryAddIndoorZombies
+            modifiers:
+            - public
+            parameters:
+            - name: room
+              type:
+                basic: RoomDef
+                full: zombie.iso.RoomDef
+            - name: bAllowDead
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: doKeySandboxSettings
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: lambda$roomSpotted$0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: RoomDef
+                full: zombie.iso.RoomDef
+            - name: arg1
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            return:
+              type:
+                basic: void
+                full: void

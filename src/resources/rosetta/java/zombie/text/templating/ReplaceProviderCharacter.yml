@@ -1,0 +1,19 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.text.templating:
+        ReplaceProviderCharacter:
+          extends: zombie.text.templating.ReplaceProvider
+          modifiers:
+          - public
+          notes: "TurboTuTone.\n Example of ReplaceProvider that registers firstname\
+            \ and lastname keys for the supplied character."
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: character
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter

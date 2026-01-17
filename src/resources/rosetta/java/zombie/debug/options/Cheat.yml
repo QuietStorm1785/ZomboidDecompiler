@@ -1,0 +1,69 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Cheat:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          fields:
+            Clock:
+              name: Clock
+              modifiers:
+              - public
+              type:
+                basic: Cheat.ClockOG
+                full: zombie.debug.options.Cheat$ClockOG
+            Door:
+              name: Door
+              modifiers:
+              - public
+              type:
+                basic: Cheat.DoorOG
+                full: zombie.debug.options.Cheat$DoorOG
+            Farming:
+              name: Farming
+              modifiers:
+              - public
+              type:
+                basic: Cheat.FarmingOG
+                full: zombie.debug.options.Cheat$FarmingOG
+            Player:
+              name: Player
+              modifiers:
+              - public
+              type:
+                basic: Cheat.PlayerOG
+                full: zombie.debug.options.Cheat$PlayerOG
+            Recipe:
+              name: Recipe
+              modifiers:
+              - public
+              type:
+                basic: Cheat.RecipeOG
+                full: zombie.debug.options.Cheat$RecipeOG
+            TimedAction:
+              name: TimedAction
+              modifiers:
+              - public
+              type:
+                basic: Cheat.TimedActionOG
+                full: zombie.debug.options.Cheat$TimedActionOG
+            Vehicle:
+              name: Vehicle
+              modifiers:
+              - public
+              type:
+                basic: Cheat.VehicleOG
+                full: zombie.debug.options.Cheat$VehicleOG
+            Window:
+              name: Window
+              modifiers:
+              - public
+              type:
+                basic: Cheat.WindowOG
+                full: zombie.debug.options.Cheat$WindowOG
+          constructors:
+          - modifiers:
+            - public

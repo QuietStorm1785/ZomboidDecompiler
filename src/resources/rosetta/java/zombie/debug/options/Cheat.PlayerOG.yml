@@ -1,0 +1,49 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Cheat.PlayerOG:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          - final
+          fields:
+            FastMovement:
+              name: FastMovement
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            InvisibleSprint:
+              name: InvisibleSprint
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            SeeEveryone:
+              name: SeeEveryone
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            StartInvisible:
+              name: StartInvisible
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            UnlimitedCondition:
+              name: UnlimitedCondition
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+          constructors:
+          - modifiers:
+            - public

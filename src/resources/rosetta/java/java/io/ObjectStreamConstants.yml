@@ -1,0 +1,296 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.io:
+        ObjectStreamConstants:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: Constants written into the Object Serialization Stream.
+          staticFields:
+            PROTOCOL_VERSION_1:
+              name: PROTOCOL_VERSION_1
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: "A Stream Protocol Version. \n\n All externalizable data is written\
+                \ in JDK 1.1 external data\n format after calling this method. This\
+                \ version is needed to write\n streams containing Externalizable data\
+                \ that can be read by\n pre-JDK 1.1.6 JVMs."
+            PROTOCOL_VERSION_2:
+              name: PROTOCOL_VERSION_2
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: "A Stream Protocol Version. \n\n This protocol is written by\
+                \ JVM 1.2.\n\n Externalizable data is written in block data mode and\
+                \ is\n terminated with TC_ENDBLOCKDATA. Externalizable class descriptor\n\
+                \ flags has SC_BLOCK_DATA enabled. JVM 1.1.6 and greater can\n read\
+                \ this format change.\n\n Enables writing a nonSerializable class\
+                \ descriptor into the\n stream. The serialVersionUID of a nonSerializable\
+                \ class is\n set to 0L."
+            SC_BLOCK_DATA:
+              name: SC_BLOCK_DATA
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: "Bit mask for ObjectStreamClass flag. Indicates Externalizable\
+                \ data\n written in Block Data mode.\n Added for PROTOCOL_VERSION_2."
+            SC_ENUM:
+              name: SC_ENUM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: Bit mask for ObjectStreamClass flag. Indicates class is an enum
+                type.
+            SC_EXTERNALIZABLE:
+              name: SC_EXTERNALIZABLE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: Bit mask for ObjectStreamClass flag. Indicates class is Externalizable.
+            SC_SERIALIZABLE:
+              name: SC_SERIALIZABLE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: Bit mask for ObjectStreamClass flag. Indicates class is Serializable.
+            SC_WRITE_METHOD:
+              name: SC_WRITE_METHOD
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: "Bit mask for ObjectStreamClass flag. Indicates a Serializable\
+                \ class\n defines its own writeObject method."
+            SERIAL_FILTER_PERMISSION:
+              name: SERIAL_FILTER_PERMISSION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SerializablePermission
+                full: java.io.SerializablePermission
+              notes: Enable setting the system-wide serial filter.
+            STREAM_MAGIC:
+              name: STREAM_MAGIC
+              modifiers:
+              - public
+              - static
+              type:
+                basic: short
+                full: short
+              notes: Magic number that is written to the stream header.
+            STREAM_VERSION:
+              name: STREAM_VERSION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: short
+                full: short
+              notes: Version number that is written to the stream header.
+            SUBCLASS_IMPLEMENTATION_PERMISSION:
+              name: SUBCLASS_IMPLEMENTATION_PERMISSION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SerializablePermission
+                full: java.io.SerializablePermission
+              notes: Enable overriding of readObject and writeObject.
+            SUBSTITUTION_PERMISSION:
+              name: SUBSTITUTION_PERMISSION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: SerializablePermission
+                full: java.io.SerializablePermission
+              notes: "Enable substitution of one object for another during\n serialization/deserialization."
+            TC_ARRAY:
+              name: TC_ARRAY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: new Array.
+            TC_BASE:
+              name: TC_BASE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: First tag value.
+            TC_BLOCKDATA:
+              name: TC_BLOCKDATA
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: "Block of optional data. Byte following tag indicates number\n\
+                \ of bytes in this block data."
+            TC_BLOCKDATALONG:
+              name: TC_BLOCKDATALONG
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: "long Block data. The long following the tag indicates the\n\
+                \ number of bytes in this block data."
+            TC_CLASS:
+              name: TC_CLASS
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: Reference to Class.
+            TC_CLASSDESC:
+              name: TC_CLASSDESC
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: new Class Descriptor.
+            TC_ENDBLOCKDATA:
+              name: TC_ENDBLOCKDATA
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: End of optional block data blocks for an object.
+            TC_ENUM:
+              name: TC_ENUM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: new Enum constant.
+            TC_EXCEPTION:
+              name: TC_EXCEPTION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: Exception during write.
+            TC_LONGSTRING:
+              name: TC_LONGSTRING
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: Long string.
+            TC_MAX:
+              name: TC_MAX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: Last tag value.
+            TC_NULL:
+              name: TC_NULL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: Null object reference.
+            TC_OBJECT:
+              name: TC_OBJECT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: new Object.
+            TC_PROXYCLASSDESC:
+              name: TC_PROXYCLASSDESC
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: new Proxy Class Descriptor.
+            TC_REFERENCE:
+              name: TC_REFERENCE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: Reference to an object already written into the stream.
+            TC_RESET:
+              name: TC_RESET
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: Reset stream context. All handles written into stream are reset.
+            TC_STRING:
+              name: TC_STRING
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+              notes: new String.
+            baseWireHandle:
+              name: baseWireHandle
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+              notes: First wire handle to be assigned.

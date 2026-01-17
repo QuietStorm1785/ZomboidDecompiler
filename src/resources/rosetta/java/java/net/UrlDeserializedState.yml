@@ -1,0 +1,149 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.net:
+        UrlDeserializedState:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          - final
+          fields:
+            authority:
+              name: authority
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            file:
+              name: file
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            hashCode:
+              name: hashCode
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            host:
+              name: host
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            port:
+              name: port
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            protocol:
+              name: protocol
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            ref:
+              name: ref
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg4
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg5
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg6
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: getAuthority
+            modifiers:
+            - package
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFile
+            modifiers:
+            - package
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getHashCode
+            modifiers:
+            - package
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getHost
+            modifiers:
+            - package
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPort
+            modifiers:
+            - package
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getProtocol
+            modifiers:
+            - package
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRef
+            modifiers:
+            - package
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: reconstituteUrlString
+            modifiers:
+            - package
+            return:
+              type:
+                basic: String
+                full: java.lang.String

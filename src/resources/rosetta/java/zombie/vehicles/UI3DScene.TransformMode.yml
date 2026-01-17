@@ -1,0 +1,68 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.vehicles:
+        UI3DScene.TransformMode:
+          extends: java.lang.Enum<zombie.vehicles.UI3DScene$TransformMode>
+          modifiers:
+          - package
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: UI3DScene.TransformMode
+                full: zombie.vehicles.UI3DScene$TransformMode[]
+            Global:
+              name: Global
+              modifiers:
+              - public
+              - static
+              type:
+                basic: UI3DScene.TransformMode
+                full: zombie.vehicles.UI3DScene$TransformMode
+            Local:
+              name: Local
+              modifiers:
+              - public
+              - static
+              type:
+                basic: UI3DScene.TransformMode
+                full: zombie.vehicles.UI3DScene$TransformMode
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: UI3DScene.TransformMode
+                full: zombie.vehicles.UI3DScene$TransformMode[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: UI3DScene.TransformMode
+                full: zombie.vehicles.UI3DScene$TransformMode
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: UI3DScene.TransformMode
+                full: zombie.vehicles.UI3DScene$TransformMode[]

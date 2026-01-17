@@ -1,0 +1,138 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.advancedanimation:
+        AnimatedModel.AnimatedModelInstanceRenderData:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            bIgnoreLighting:
+              name: bIgnoreLighting
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bMatrixPaletteValid:
+              name: bMatrixPaletteValid
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            m_animPlayerAngle:
+              name: m_animPlayerAngle
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            matrixPalette:
+              name: matrixPalette
+              modifiers:
+              - public
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+            model:
+              name: model
+              modifiers:
+              - public
+              type:
+                basic: Model
+                full: zombie.core.skinnedmodel.model.Model
+            modelInstance:
+              name: modelInstance
+              modifiers:
+              - public
+              type:
+                basic: ModelInstance
+                full: zombie.core.skinnedmodel.model.ModelInstance
+            parent:
+              name: parent
+              modifiers:
+              - public
+              type:
+                basic: AnimatedModel.AnimatedModelInstanceRenderData
+                full: zombie.core.skinnedmodel.advancedanimation.AnimatedModel$AnimatedModelInstanceRenderData
+            properties:
+              name: properties
+              modifiers:
+              - public
+              type:
+                basic: ShaderPropertyBlock
+                full: zombie.core.rendering.ShaderPropertyBlock
+            tex:
+              name: tex
+              modifiers:
+              - public
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            xfrm:
+              name: xfrm
+              modifiers:
+              - public
+              type:
+                basic: Matrix4f
+                full: org.joml.Matrix4f
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: UpdateCharacter
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Shader
+                full: zombie.core.skinnedmodel.shader.Shader
+            return:
+              type:
+                basic: void
+                full: void
+          - name: init
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AnimatedModel.AnimatedModelInstanceRenderData
+                full: zombie.core.skinnedmodel.advancedanimation.AnimatedModel$AnimatedModelInstanceRenderData
+          - name: initMatrixPalette
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: initModel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ModelInstance
+                full: zombie.core.skinnedmodel.model.ModelInstance
+            - name: arg1
+              type:
+                basic: AnimatedModel.AnimatedModelInstanceRenderData
+                full: zombie.core.skinnedmodel.advancedanimation.AnimatedModel$AnimatedModelInstanceRenderData
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transformToParent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AnimatedModel.AnimatedModelInstanceRenderData
+                full: zombie.core.skinnedmodel.advancedanimation.AnimatedModel$AnimatedModelInstanceRenderData
+            return:
+              type:
+                basic: AnimatedModel.AnimatedModelInstanceRenderData
+                full: zombie.core.skinnedmodel.advancedanimation.AnimatedModel$AnimatedModelInstanceRenderData

@@ -1,0 +1,47 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        IsoPlayer.GrapplerGruntChance:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          - final
+          fields:
+            baseChance:
+              name: baseChance
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            chanceIncrement:
+              name: chanceIncrement
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            gruntChance:
+              name: gruntChance
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            this$0:
+              name: this$0
+              modifiers:
+              - package
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer

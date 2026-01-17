@@ -1,0 +1,37 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting:
+        IScriptObjectStore:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: getItem
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+          - name: getRecipe
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Recipe
+                full: zombie.scripting.objects.Recipe

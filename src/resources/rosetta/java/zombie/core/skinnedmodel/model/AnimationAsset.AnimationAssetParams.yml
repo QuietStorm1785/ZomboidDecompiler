@@ -1,0 +1,21 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.model:
+        AnimationAsset.AnimationAssetParams:
+          extends: zombie.asset.AssetManager$AssetParams
+          modifiers:
+          - public
+          - final
+          fields:
+            animationsMesh:
+              name: animationsMesh
+              modifiers:
+              - public
+              type:
+                basic: ModelMesh
+                full: zombie.core.skinnedmodel.model.ModelMesh
+          constructors:
+          - modifiers:
+            - public

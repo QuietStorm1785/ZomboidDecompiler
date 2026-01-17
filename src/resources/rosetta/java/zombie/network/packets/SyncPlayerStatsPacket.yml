@@ -1,0 +1,170 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.network.packets:
+        SyncPlayerStatsPacket:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          staticFields:
+            Stat_Anger:
+              name: Stat_Anger
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Boredom:
+              name: Stat_Boredom
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Drunkennes:
+              name: Stat_Drunkennes
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Endurance:
+              name: Stat_Endurance
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Fatigue:
+              name: Stat_Fatigue
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Fear:
+              name: Stat_Fear
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Fitness:
+              name: Stat_Fitness
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Hunger:
+              name: Stat_Hunger
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Morale:
+              name: Stat_Morale
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Pain:
+              name: Stat_Pain
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Panic:
+              name: Stat_Panic
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Sanity:
+              name: Stat_Sanity
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Sickness:
+              name: Stat_Sickness
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Stress:
+              name: Stat_Stress
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_StressFromCigarettes:
+              name: Stat_StressFromCigarettes
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            Stat_Thirst:
+              name: Stat_Thirst
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: write
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void

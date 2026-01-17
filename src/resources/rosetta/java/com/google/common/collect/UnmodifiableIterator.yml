@@ -1,0 +1,22 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      com.google.common.collect:
+        UnmodifiableIterator:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          constructors:
+          - modifiers:
+            - protected
+          methods:
+          - name: remove
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: void
+                full: void

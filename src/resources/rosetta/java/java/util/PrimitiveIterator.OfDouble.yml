@@ -1,0 +1,70 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util:
+        PrimitiveIterator.OfDouble:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: An Iterator specialized for double values.
+          methods:
+          - name: forEachRemaining
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: DoubleConsumer
+                full: java.util.function.DoubleConsumer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forEachRemaining
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<? super java.lang.Double>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forEachRemaining
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void
+          - name: next
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Double
+                full: java.lang.Double
+          - name: next
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: nextDouble
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double

@@ -1,0 +1,185 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.util:
+        ImmutableArray:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            array:
+              name: array
+              modifiers:
+              - private
+              type:
+                basic: Array
+                full: zombie.entity.util.Array<T>
+            iterable:
+              name: iterable
+              modifiers:
+              - private
+              type:
+                basic: Array.ArrayIterable
+                full: zombie.entity.util.Array$ArrayIterable<T>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Array
+                full: zombie.entity.util.Array<T>
+          methods:
+          - name: contains
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: first
+            modifiers:
+            - public
+            return:
+              type:
+                basic: T
+                full: T
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: T
+                full: T
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: indexOf
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: int
+                full: int
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Iterator
+                full: java.util.Iterator<T>
+          - name: lastIndexOf
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: int
+                full: int
+          - name: peek
+            modifiers:
+            - public
+            return:
+              type:
+                basic: T
+                full: T
+          - name: random
+            modifiers:
+            - public
+            return:
+              type:
+                basic: T
+                full: T
+          - name: size
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: toArray
+            modifiers:
+            - public
+            return:
+              type:
+                basic: T
+                full: T[]
+          - name: toArray
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<V>
+            return:
+              type:
+                basic: V
+                full: V[]
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: toString
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String

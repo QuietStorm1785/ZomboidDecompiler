@@ -1,0 +1,65 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.erosion:
+        ErosionWorld:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: init
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: update
+            modifiers:
+            - public
+            parameters:
+            - name: _sq
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: _sqErosionData
+              type:
+                basic: ErosionData.Square
+                full: zombie.erosion.ErosionData$Square
+            - name: _chunkData
+              type:
+                basic: ErosionData.Chunk
+                full: zombie.erosion.ErosionData$Chunk
+            - name: _eTick
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: validateSpawn
+            modifiers:
+            - public
+            parameters:
+            - name: _sq
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: _sqErosionData
+              type:
+                basic: ErosionData.Square
+                full: zombie.erosion.ErosionData$Square
+            - name: _chunkData
+              type:
+                basic: ErosionData.Chunk
+                full: zombie.erosion.ErosionData$Chunk
+            return:
+              type:
+                basic: void
+                full: void

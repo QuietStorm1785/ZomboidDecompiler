@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity:
+        ComponentOperationHandler.ComponentOperationPool:
+          extends: zombie.entity.util.SingleThreadPool<zombie.entity.ComponentOperationHandler$ComponentOperation>
+          modifiers:
+          - package
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: newObject
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: ComponentOperationHandler.ComponentOperation
+                full: zombie.entity.ComponentOperationHandler$ComponentOperation
+          - name: newObject
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object

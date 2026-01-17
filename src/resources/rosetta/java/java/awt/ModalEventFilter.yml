@@ -1,0 +1,99 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt:
+        ModalEventFilter:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          - abstract
+          fields:
+            disabled:
+              name: disabled
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            modalDialog:
+              name: modalDialog
+              modifiers:
+              - protected
+              type:
+                basic: Dialog
+                full: java.awt.Dialog
+          constructors:
+          - modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: Dialog
+                full: java.awt.Dialog
+          methods:
+          - name: acceptEvent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AWTEvent
+                full: java.awt.AWTEvent
+            return:
+              type:
+                basic: EventFilter.FilterAction
+                full: java.awt.EventFilter$FilterAction
+          - name: acceptWindow
+            modifiers:
+            - protected
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Window
+                full: java.awt.Window
+            return:
+              type:
+                basic: EventFilter.FilterAction
+                full: java.awt.EventFilter$FilterAction
+          - name: compareTo
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: ModalEventFilter
+                full: java.awt.ModalEventFilter
+            return:
+              type:
+                basic: int
+                full: int
+          - name: disable
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getModalDialog
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Dialog
+                full: java.awt.Dialog
+          staticMethods:
+          - name: createFilterForDialog
+            modifiers:
+            - package
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Dialog
+                full: java.awt.Dialog
+            return:
+              type:
+                basic: ModalEventFilter
+                full: java.awt.ModalEventFilter

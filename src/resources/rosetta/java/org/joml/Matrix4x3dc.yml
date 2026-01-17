@@ -1,0 +1,3067 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      org.joml:
+        Matrix4x3dc:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          staticFields:
+            PLANE_NX:
+              name: PLANE_NX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            PLANE_NY:
+              name: PLANE_NY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            PLANE_NZ:
+              name: PLANE_NZ
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            PLANE_PX:
+              name: PLANE_PX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            PLANE_PY:
+              name: PLANE_PY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            PLANE_PZ:
+              name: PLANE_PZ
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            PROPERTY_IDENTITY:
+              name: PROPERTY_IDENTITY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            PROPERTY_ORTHONORMAL:
+              name: PROPERTY_ORTHONORMAL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            PROPERTY_TRANSLATION:
+              name: PROPERTY_TRANSLATION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+          methods:
+          - name: add
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3dc
+                full: org.joml.Matrix4x3dc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: add
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3fc
+                full: org.joml.Matrix4x3fc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: arcball
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: arcball
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: cofactor3x3
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix3d
+                full: org.joml.Matrix3d
+            return:
+              type:
+                basic: Matrix3d
+                full: org.joml.Matrix3d
+          - name: cofactor3x3
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: determinant
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+          - name: equals
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3dc
+                full: org.joml.Matrix4x3dc
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: fma
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3dc
+                full: org.joml.Matrix4x3dc
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: fma
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3fc
+                full: org.joml.Matrix4x3fc
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: frustumPlane
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Vector4d
+                full: org.joml.Vector4d
+            return:
+              type:
+                basic: Vector4d
+                full: org.joml.Vector4d
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4d
+                full: org.joml.Matrix4d
+            return:
+              type:
+                basic: Matrix4d
+                full: org.joml.Matrix4d
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: DoubleBuffer
+                full: java.nio.DoubleBuffer
+            return:
+              type:
+                basic: DoubleBuffer
+                full: java.nio.DoubleBuffer
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: DoubleBuffer
+                full: java.nio.DoubleBuffer
+            return:
+              type:
+                basic: DoubleBuffer
+                full: java.nio.DoubleBuffer
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+            return:
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+            return:
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: double
+                full: double[]
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double[]
+            return:
+              type:
+                basic: double
+                full: double[]
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float[]
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float[]
+            return:
+              type:
+                basic: float
+                full: float[]
+          - name: get4x4
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: double
+                full: double[]
+          - name: get4x4
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double[]
+            return:
+              type:
+                basic: double
+                full: double[]
+          - name: get4x4
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float[]
+          - name: get4x4
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float[]
+            return:
+              type:
+                basic: float
+                full: float[]
+          - name: get4x4
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: DoubleBuffer
+                full: java.nio.DoubleBuffer
+            return:
+              type:
+                basic: DoubleBuffer
+                full: java.nio.DoubleBuffer
+          - name: get4x4
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: DoubleBuffer
+                full: java.nio.DoubleBuffer
+            return:
+              type:
+                basic: DoubleBuffer
+                full: java.nio.DoubleBuffer
+          - name: get4x4
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: get4x4
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: getColumn
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: getEulerAnglesZYX
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: getFloats
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: getFloats
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: getNormalizedRotation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Quaternionf
+                full: org.joml.Quaternionf
+            return:
+              type:
+                basic: Quaternionf
+                full: org.joml.Quaternionf
+          - name: getNormalizedRotation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Quaterniond
+                full: org.joml.Quaterniond
+            return:
+              type:
+                basic: Quaterniond
+                full: org.joml.Quaterniond
+          - name: getRow
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Vector4d
+                full: org.joml.Vector4d
+            return:
+              type:
+                basic: Vector4d
+                full: org.joml.Vector4d
+          - name: getScale
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: getToAddress
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: Matrix4x3dc
+                full: org.joml.Matrix4x3dc
+          - name: getTranslation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: getTransposed
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: DoubleBuffer
+                full: java.nio.DoubleBuffer
+            return:
+              type:
+                basic: DoubleBuffer
+                full: java.nio.DoubleBuffer
+          - name: getTransposed
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: DoubleBuffer
+                full: java.nio.DoubleBuffer
+            return:
+              type:
+                basic: DoubleBuffer
+                full: java.nio.DoubleBuffer
+          - name: getTransposed
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: getTransposed
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: getTransposed
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+            return:
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+          - name: getTransposed
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+            return:
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+          - name: getTransposed
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: double
+                full: double[]
+          - name: getTransposed
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double[]
+            return:
+              type:
+                basic: double
+                full: double[]
+          - name: getTransposedFloats
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: getTransposedFloats
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: getUnnormalizedRotation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Quaternionf
+                full: org.joml.Quaternionf
+            return:
+              type:
+                basic: Quaternionf
+                full: org.joml.Quaternionf
+          - name: getUnnormalizedRotation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Quaterniond
+                full: org.joml.Quaterniond
+            return:
+              type:
+                basic: Quaterniond
+                full: org.joml.Quaterniond
+          - name: invert
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: invertOrtho
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: isFinite
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: lerp
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3dc
+                full: org.joml.Matrix4x3dc
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: lookAlong
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg1
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg2
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: lookAlong
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: lookAt
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg1
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg2
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg3
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: lookAt
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: double
+                full: double
+            - name: arg7
+              type:
+                basic: double
+                full: double
+            - name: arg8
+              type:
+                basic: double
+                full: double
+            - name: arg9
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: lookAtLH
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg1
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg2
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg3
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: lookAtLH
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: double
+                full: double
+            - name: arg7
+              type:
+                basic: double
+                full: double
+            - name: arg8
+              type:
+                basic: double
+                full: double
+            - name: arg9
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: m00
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+          - name: m01
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+          - name: m02
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+          - name: m10
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+          - name: m11
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+          - name: m12
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+          - name: m20
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+          - name: m21
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+          - name: m22
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+          - name: m30
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+          - name: m31
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+          - name: m32
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+          - name: mul
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3dc
+                full: org.joml.Matrix4x3dc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: mul
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3fc
+                full: org.joml.Matrix4x3fc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: mulComponentWise
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3dc
+                full: org.joml.Matrix4x3dc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: mulOrtho
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3dc
+                full: org.joml.Matrix4x3dc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: mulTranslation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3dc
+                full: org.joml.Matrix4x3dc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: mulTranslation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3fc
+                full: org.joml.Matrix4x3fc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: normal
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: normal
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix3d
+                full: org.joml.Matrix3d
+            return:
+              type:
+                basic: Matrix3d
+                full: org.joml.Matrix3d
+          - name: normalize3x3
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: normalize3x3
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix3d
+                full: org.joml.Matrix3d
+            return:
+              type:
+                basic: Matrix3d
+                full: org.joml.Matrix3d
+          - name: normalizedPositiveX
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: normalizedPositiveY
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: normalizedPositiveZ
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: obliqueZ
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: origin
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: ortho
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg7
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: ortho
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: ortho2D
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: ortho2DLH
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: orthoLH
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg7
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: orthoLH
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: orthoSymmetric
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg5
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: orthoSymmetric
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: orthoSymmetricLH
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg5
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: orthoSymmetricLH
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: pick
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: int
+                full: int[]
+            - name: arg5
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: positiveX
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: positiveY
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: positiveZ
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: properties
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: reflect
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: reflect
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: reflect
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Quaterniondc
+                full: org.joml.Quaterniondc
+            - name: arg1
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg2
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: reflect
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg1
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg2
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotate
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotate
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Quaterniondc
+                full: org.joml.Quaterniondc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotate
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Quaternionfc
+                full: org.joml.Quaternionfc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotate
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: AxisAngle4f
+                full: org.joml.AxisAngle4f
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotate
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: AxisAngle4d
+                full: org.joml.AxisAngle4d
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotate
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg2
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotate
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: Vector3fc
+                full: org.joml.Vector3fc
+            - name: arg2
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateAround
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Quaterniondc
+                full: org.joml.Quaterniondc
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateLocal
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateLocal
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Quaterniondc
+                full: org.joml.Quaterniondc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateLocal
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Quaternionfc
+                full: org.joml.Quaternionfc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateTowards
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg1
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg2
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateTowards
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateTranslation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateTranslation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Quaterniondc
+                full: org.joml.Quaterniondc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateTranslation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Quaternionfc
+                full: org.joml.Quaternionfc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateX
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateXYZ
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateY
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateYXZ
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateZ
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: rotateZYX
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: scale
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: scale
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: scale
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: scaleLocal
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: scaleXY
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: shadow
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector4dc
+                full: org.joml.Vector4dc
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: shadow
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: double
+                full: double
+            - name: arg7
+              type:
+                basic: double
+                full: double
+            - name: arg8
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: shadow
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector4dc
+                full: org.joml.Vector4dc
+            - name: arg1
+              type:
+                basic: Matrix4x3dc
+                full: org.joml.Matrix4x3dc
+            - name: arg2
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: shadow
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: Matrix4x3dc
+                full: org.joml.Matrix4x3dc
+            - name: arg5
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: sub
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3dc
+                full: org.joml.Matrix4x3dc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: sub
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3fc
+                full: org.joml.Matrix4x3fc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: transform
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector4d
+                full: org.joml.Vector4d
+            return:
+              type:
+                basic: Vector4d
+                full: org.joml.Vector4d
+          - name: transform
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector4dc
+                full: org.joml.Vector4dc
+            - name: arg1
+              type:
+                basic: Vector4d
+                full: org.joml.Vector4d
+            return:
+              type:
+                basic: Vector4d
+                full: org.joml.Vector4d
+          - name: transformAab
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: double
+                full: double
+            - name: arg4
+              type:
+                basic: double
+                full: double
+            - name: arg5
+              type:
+                basic: double
+                full: double
+            - name: arg6
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            - name: arg7
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: transformAab
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg1
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg2
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            - name: arg3
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: transformDirection
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: transformDirection
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg1
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: transformPosition
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: transformPosition
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg1
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+            return:
+              type:
+                basic: Vector3d
+                full: org.joml.Vector3d
+          - name: translate
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: translate
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3fc
+                full: org.joml.Vector3fc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: translate
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: translateLocal
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3fc
+                full: org.joml.Vector3fc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: translateLocal
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3dc
+                full: org.joml.Vector3dc
+            - name: arg1
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: translateLocal
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            - name: arg3
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: transpose3x3
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+            return:
+              type:
+                basic: Matrix4x3d
+                full: org.joml.Matrix4x3d
+          - name: transpose3x3
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix3d
+                full: org.joml.Matrix3d
+            return:
+              type:
+                basic: Matrix3d
+                full: org.joml.Matrix3d

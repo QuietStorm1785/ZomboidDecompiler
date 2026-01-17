@@ -1,0 +1,204 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.text.templating:
+        TemplateText:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: TurboTuTone.
+          staticFields:
+            builder:
+              name: builder
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ITemplateBuilder
+                full: zombie.text.templating.ITemplateBuilder
+            m_random:
+              name: m_random
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Random
+                full: java.util.Random
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: Build
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: input
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: Build
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: input
+              type:
+                basic: String
+                full: java.lang.String
+            - name: replaceProvider
+              type:
+                basic: IReplaceProvider
+                full: zombie.text.templating.IReplaceProvider
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: Build
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: input
+              type:
+                basic: String
+                full: java.lang.String
+            - name: table
+              type:
+                basic: KahluaTableImpl
+                full: se.krka.kahlua.j2se.KahluaTableImpl
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: CreateBlanc
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ITemplateBuilder
+                full: zombie.text.templating.ITemplateBuilder
+          - name: CreateCopy
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ITemplateBuilder
+                full: zombie.text.templating.ITemplateBuilder
+          - name: Initialize
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RandNext
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: min
+              type:
+                basic: float
+                full: float
+            - name: max
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: RandNext
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bound
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: RandNext
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: min
+              type:
+                basic: int
+                full: int
+            - name: max
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: RandNext
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bound
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: RegisterKey
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: key
+              type:
+                basic: String
+                full: java.lang.String
+            - name: table
+              type:
+                basic: KahluaTableImpl
+                full: se.krka.kahlua.j2se.KahluaTableImpl
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RegisterKey
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: key
+              type:
+                basic: String
+                full: java.lang.String
+            - name: replace
+              type:
+                basic: IReplace
+                full: zombie.text.templating.IReplace
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void

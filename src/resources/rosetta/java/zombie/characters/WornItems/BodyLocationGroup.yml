@@ -1,0 +1,256 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.WornItems:
+        BodyLocationGroup:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            id:
+              name: id
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            locations:
+              name: locations
+              modifiers:
+              - protected
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.WornItems.BodyLocation>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: checkValid
+            modifiers:
+            - public
+            parameters:
+            - name: locationId
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAllLocations
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.WornItems.BodyLocation>
+          - name: getLocation
+            modifiers:
+            - public
+            parameters:
+            - name: locationId
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: BodyLocation
+                full: zombie.characters.WornItems.BodyLocation
+          - name: getLocationByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: BodyLocation
+                full: zombie.characters.WornItems.BodyLocation
+          - name: getLocationNotNull
+            modifiers:
+            - public
+            parameters:
+            - name: locationId
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: BodyLocation
+                full: zombie.characters.WornItems.BodyLocation
+          - name: getOrCreateLocation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemBodyLocation
+                full: zombie.scripting.objects.ItemBodyLocation
+            return:
+              type:
+                basic: BodyLocation
+                full: zombie.characters.WornItems.BodyLocation
+          - name: getOrCreateLocation
+            modifiers:
+            - public
+            parameters:
+            - name: locationId
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: BodyLocation
+                full: zombie.characters.WornItems.BodyLocation
+          - name: indexOf
+            modifiers:
+            - public
+            parameters:
+            - name: locationId
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isAltModel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isExclusive
+            modifiers:
+            - public
+            parameters:
+            - name: firstId
+              type:
+                basic: String
+                full: java.lang.String
+            - name: secondId
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isHideModel
+            modifiers:
+            - public
+            parameters:
+            - name: firstId
+              type:
+                basic: String
+                full: java.lang.String
+            - name: secondId
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMultiItem
+            modifiers:
+            - public
+            parameters:
+            - name: locationId
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setAltModel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setExclusive
+            modifiers:
+            - public
+            parameters:
+            - name: firstId
+              type:
+                basic: String
+                full: java.lang.String
+            - name: secondId
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHideModel
+            modifiers:
+            - public
+            parameters:
+            - name: firstId
+              type:
+                basic: String
+                full: java.lang.String
+            - name: secondId
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMultiItem
+            modifiers:
+            - public
+            parameters:
+            - name: locationId
+              type:
+                basic: String
+                full: java.lang.String
+            - name: bMultiItem
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: size
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int

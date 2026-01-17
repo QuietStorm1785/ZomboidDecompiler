@@ -1,0 +1,462 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.util:
+        ObjectMap:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            entries1:
+              name: entries1
+              modifiers:
+              - package
+              type:
+                basic: ObjectMap.Entries
+                full: zombie.entity.util.ObjectMap$Entries
+            entries2:
+              name: entries2
+              modifiers:
+              - package
+              type:
+                basic: ObjectMap.Entries
+                full: zombie.entity.util.ObjectMap$Entries
+            keyTable:
+              name: keyTable
+              modifiers:
+              - package
+              type:
+                basic: K
+                full: K[]
+            keys1:
+              name: keys1
+              modifiers:
+              - package
+              type:
+                basic: ObjectMap.Keys
+                full: zombie.entity.util.ObjectMap$Keys
+            keys2:
+              name: keys2
+              modifiers:
+              - package
+              type:
+                basic: ObjectMap.Keys
+                full: zombie.entity.util.ObjectMap$Keys
+            loadFactor:
+              name: loadFactor
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            mask:
+              name: mask
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            shift:
+              name: shift
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            size:
+              name: size
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            threshold:
+              name: threshold
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            valueTable:
+              name: valueTable
+              modifiers:
+              - package
+              type:
+                basic: V
+                full: V[]
+            values1:
+              name: values1
+              modifiers:
+              - package
+              type:
+                basic: ObjectMap.Values
+                full: zombie.entity.util.ObjectMap$Values
+            values2:
+              name: values2
+              modifiers:
+              - package
+              type:
+                basic: ObjectMap.Values
+                full: zombie.entity.util.ObjectMap$Values
+          staticFields:
+            dummy:
+              name: dummy
+              modifiers:
+              - package
+              - static
+              type:
+                basic: Object
+                full: java.lang.Object
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectMap
+                full: zombie.entity.util.ObjectMap<? extends K, ? extends V>
+          methods:
+          - name: clear
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: containsKey
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: ensureCapacity
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: entries
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ObjectMap.Entries
+                full: zombie.entity.util.ObjectMap$Entries<K, V>
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: equalsIdentity
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: findKey
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: K
+                full: K
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: V
+                full: V
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: V
+                full: V
+            return:
+              type:
+                basic: V
+                full: V
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ObjectMap.Entries
+                full: zombie.entity.util.ObjectMap$Entries<K, V>
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Iterator
+                full: java.util.Iterator
+          - name: keys
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ObjectMap.Keys
+                full: zombie.entity.util.ObjectMap$Keys<K>
+          - name: locateKey
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            return:
+              type:
+                basic: int
+                full: int
+          - name: notEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: place
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            return:
+              type:
+                basic: int
+                full: int
+          - name: put
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: V
+                full: V
+            return:
+              type:
+                basic: V
+                full: V
+          - name: putAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectMap
+                full: zombie.entity.util.ObjectMap<? extends K, ? extends V>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putResize
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: V
+                full: V
+            return:
+              type:
+                basic: void
+                full: void
+          - name: remove
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            return:
+              type:
+                basic: V
+                full: V
+          - name: resize
+            modifiers:
+            - package
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: shrink
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toString
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: toString
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: values
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ObjectMap.Values
+                full: zombie.entity.util.ObjectMap$Values<V>

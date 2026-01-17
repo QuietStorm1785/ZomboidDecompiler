@@ -1,0 +1,446 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.crafting.recipe:
+        HandcraftLogic:
+          extends: zombie.entity.components.crafting.BaseCraftingLogic
+          modifiers:
+          - public
+          fields:
+            cachedRecipeInfoMap:
+              name: cachedRecipeInfoMap
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<zombie.scripting.entity.components.crafting.CraftRecipe,
+                  zombie.entity.components.crafting.recipe.HandcraftLogic$CachedRecipeInfo>
+            cachedRecipeInfos:
+              name: cachedRecipeInfos
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.components.crafting.recipe.HandcraftLogic$CachedRecipeInfo>
+            craftActionInProgress:
+              name: craftActionInProgress
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            craftActionTable:
+              name: craftActionTable
+              modifiers:
+              - private
+              type:
+                basic: KahluaTableImpl
+                full: se.krka.kahlua.j2se.KahluaTableImpl
+            numCraftActionInProgress:
+              name: numCraftActionInProgress
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          staticFields:
+            EXCLUDE_TAG:
+              name: EXCLUDE_TAG
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            workstationInteractDistance:
+              name: workstationInteractDistance
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: CraftBench
+                full: zombie.entity.components.crafting.CraftBench
+            - name: arg2
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          methods:
+          - name: canCharacterPerformRecipe
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: checkValidRecipeSelected
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createCachedRecipeInfo
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            - name: arg1
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.ItemContainer>
+            return:
+              type:
+                basic: BaseCraftingLogic.CachedRecipeInfo
+                full: zombie.entity.components.crafting.BaseCraftingLogic$CachedRecipeInfo
+          - name: filterRecipeList
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAllItems
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+          - name: getCraftActionTable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: KahluaTableImpl
+                full: se.krka.kahlua.j2se.KahluaTableImpl
+          - name: getCraftBench
+            modifiers:
+            - public
+            return:
+              type:
+                basic: CraftBench
+                full: zombie.entity.components.crafting.CraftBench
+          - name: getCreatedOutputItems
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getIsoObject
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+          - name: getLastManualInputMode
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getLastSelectedRecipe
+            modifiers:
+            - public
+            return:
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+          - name: getPlayer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          - name: getRecipeData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: CraftRecipeData
+                full: zombie.entity.components.crafting.recipe.CraftRecipeData
+          - name: getRecipeList
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.entity.components.crafting.CraftRecipe>
+          - name: getRecipeSortMode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getResidualFluidFromInput
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InputScript
+                full: zombie.scripting.entity.components.crafting.InputScript
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getResultTexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+          - name: getSelectedRecipeStyle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSourceResources
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.components.resources.Resource>
+          - name: getUsingRecipeAtHandItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: isCharacterInRangeOfWorkbench
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCraftActionInProgress
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRecipeAtHand
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRecipeAvailableForCharacter
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUsingRecipeAtHandBenefit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isValidRecipeForCharacter
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: performCurrentRecipe
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: rebuildCachedRecipeInfo
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsoObject
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLastManualInputMode
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLastSelectedRecipe
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRecipe
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRecipeFromContextClick
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            - name: arg1
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRecipeSortMode
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRecipes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: List
+                full: java.util.List<zombie.scripting.entity.components.crafting.CraftRecipe>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSelectedRecipeStyle
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: startCraftAction
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: KahluaTableImpl
+                full: se.krka.kahlua.j2se.KahluaTableImpl
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stopCraftAction
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

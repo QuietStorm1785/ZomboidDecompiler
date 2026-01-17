@@ -1,0 +1,42 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.randomizedWorld.randomizedZoneStory:
+        RZSFishingTrip:
+          extends: zombie.randomizedWorld.randomizedZoneStory.RandomizedZoneStoryBase
+          modifiers:
+          - public
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: randomizeZoneStory
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Zone
+                full: zombie.iso.zones.Zone
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: getFishes
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getFishingTools
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>

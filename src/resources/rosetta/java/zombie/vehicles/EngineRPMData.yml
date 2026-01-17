@@ -1,0 +1,47 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.vehicles:
+        EngineRPMData:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            afterGearChange:
+              name: afterGearChange
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            gearChange:
+              name: gearChange
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: gearChange
+              type:
+                basic: float
+                full: float
+            - name: afterGearChange
+              type:
+                basic: float
+                full: float
+          methods:
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

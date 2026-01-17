@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.lang.reflect:
+        GenericDeclaration:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: A common interface for all entities that declare type variables.
+          methods:
+          - name: getTypeParameters
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: TypeVariable
+                full: java.lang.reflect.TypeVariable<?>[]
+              notes: "an array of TypeVariable objects that represent\n     the type\
+                \ variables declared by this generic declaration"
+            notes: "Returns an array of TypeVariable objects that\n represent the\
+              \ type variables declared by the generic\n declaration represented by\
+              \ this GenericDeclaration\n object, in declaration order.  Returns an\
+              \ array of length 0 if\n the underlying generic declaration declares\
+              \ no type variables."

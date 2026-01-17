@@ -1,0 +1,34 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        IsoDummyCameraCharacter:
+          extends: zombie.characters.IsoGameCharacter
+          modifiers:
+          - public
+          - final
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: float
+                full: float
+            - name: y
+              type:
+                basic: float
+                full: float
+            - name: z
+              type:
+                basic: float
+                full: float
+          methods:
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

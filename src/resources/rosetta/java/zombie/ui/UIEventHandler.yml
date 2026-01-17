@@ -1,0 +1,70 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ui:
+        UIEventHandler:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: DoubleClick
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: ModalClick
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: chosen
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Selected
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: Selected
+              type:
+                basic: int
+                full: int
+            - name: LastSelected
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void

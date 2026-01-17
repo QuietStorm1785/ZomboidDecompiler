@@ -1,0 +1,67 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.network.characters:
+        AttackRateChecker:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            count:
+              name: count
+              modifiers:
+              - public
+              type:
+                basic: short
+                full: short
+            timestamp:
+              name: timestamp
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: check
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: short
+                full: short
+            return:
+              type:
+                basic: void
+                full: void

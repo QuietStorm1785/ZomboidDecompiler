@@ -1,0 +1,42 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.vehicles:
+        BaseVehicle.MinMaxPosition:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            maxX:
+              name: maxX
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            maxY:
+              name: maxY
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            minX:
+              name: minX
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            minY:
+              name: minY
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public

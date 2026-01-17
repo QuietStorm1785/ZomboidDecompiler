@@ -1,0 +1,40 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      com.google.common.collect:
+        UnmodifiableListIterator:
+          extends: com.google.common.collect.UnmodifiableIterator<E>
+          modifiers:
+          - public
+          - abstract
+          constructors:
+          - modifiers:
+            - protected
+          methods:
+          - name: add
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,106 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.lang.reflect:
+        AnnotatedElement:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: getAnnotation
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<T>
+            return:
+              type:
+                basic: T
+                full: T
+          - name: getAnnotations
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Annotation
+                full: java.lang.annotation.Annotation[]
+          - name: getAnnotationsByType
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<T>
+            return:
+              type:
+                basic: T
+                full: T[]
+          - name: getDeclaredAnnotation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<T>
+            return:
+              type:
+                basic: T
+                full: T
+          - name: getDeclaredAnnotations
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Annotation
+                full: java.lang.annotation.Annotation[]
+          - name: getDeclaredAnnotationsByType
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<T>
+            return:
+              type:
+                basic: T
+                full: T[]
+          - name: isAnnotationPresent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<? extends java.lang.annotation.Annotation>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          staticMethods:
+          - name: lambda$getDeclaredAnnotationsByType$0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Annotation
+                full: java.lang.annotation.Annotation
+            - name: arg1
+              type:
+                basic: Annotation
+                full: java.lang.annotation.Annotation
+            return:
+              type:
+                basic: Annotation
+                full: java.lang.annotation.Annotation

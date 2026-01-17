@@ -1,0 +1,64 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel:
+        DeadBodyAtlas.DebugDrawInWorld:
+          extends: zombie.core.textures.TextureDraw$GenericDrawer
+          modifiers:
+          - package
+          - final
+          fields:
+            bRendered:
+              name: bRendered
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            job:
+              name: job
+              modifiers:
+              - package
+              type:
+                basic: DeadBodyAtlas.RenderJob
+                full: zombie.core.skinnedmodel.DeadBodyAtlas$RenderJob
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: init
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: DeadBodyAtlas.RenderJob
+                full: zombie.core.skinnedmodel.DeadBodyAtlas$RenderJob
+            return:
+              type:
+                basic: void
+                full: void
+          - name: postRender
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

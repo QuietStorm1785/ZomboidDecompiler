@@ -1,0 +1,33 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.gameStates:
+        TileGeometryState.BooleanDebugOption:
+          extends: zombie.config.BooleanConfigOption
+          modifiers:
+          - public
+          fields:
+            this$0:
+              name: this$0
+              modifiers:
+              - package
+              type:
+                basic: TileGeometryState
+                full: zombie.gameStates.TileGeometryState
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TileGeometryState
+                full: zombie.gameStates.TileGeometryState
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean

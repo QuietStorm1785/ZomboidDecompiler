@@ -1,0 +1,245 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ai.states:
+        ClimbThroughWindowPositioningParams:
+          extends: zombie.util.PooledObject
+          modifiers:
+          - public
+          - final
+          fields:
+            canClimb:
+              name: canClimb
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            climbDir:
+              name: climbDir
+              modifiers:
+              - public
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            climbingCharacter:
+              name: climbingCharacter
+              modifiers:
+              - public
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            endX:
+              name: endX
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            endY:
+              name: endY
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            isCounter:
+              name: isCounter
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            isFloor:
+              name: isFloor
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            isSheetRope:
+              name: isSheetRope
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            oppositeX:
+              name: oppositeX
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            oppositeY:
+              name: oppositeY
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            scratch:
+              name: scratch
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            startX:
+              name: startX
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            startY:
+              name: startY
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            windowObject:
+              name: windowObject
+              modifiers:
+              - public
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            z:
+              name: z
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          staticFields:
+            FLAG_CAN_CLIMB:
+              name: FLAG_CAN_CLIMB
+              modifiers:
+              - private
+              - static
+              type:
+                basic: byte
+                full: byte
+            FLAG_COUNTER:
+              name: FLAG_COUNTER
+              modifiers:
+              - private
+              - static
+              type:
+                basic: byte
+                full: byte
+            FLAG_FLOOR:
+              name: FLAG_FLOOR
+              modifiers:
+              - private
+              - static
+              type:
+                basic: byte
+                full: byte
+            FLAG_SCRATCH:
+              name: FLAG_SCRATCH
+              modifiers:
+              - private
+              - static
+              type:
+                basic: byte
+                full: byte
+            FLAG_SHEET_ROPE:
+              name: FLAG_SHEET_ROPE
+              modifiers:
+              - private
+              - static
+              type:
+                basic: byte
+                full: byte
+            s_pool:
+              name: s_pool
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Pool
+                full: zombie.util.Pool<zombie.ai.states.ClimbThroughWindowPositioningParams>
+          constructors:
+          - modifiers:
+            - protected
+          methods:
+          - name: onReleased
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: write
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: write
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: alloc
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ClimbThroughWindowPositioningParams
+                full: zombie.ai.states.ClimbThroughWindowPositioningParams
+          - name: release
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ClimbThroughWindowPositioningParams
+                full: zombie.ai.states.ClimbThroughWindowPositioningParams
+            return:
+              type:
+                basic: void
+                full: void

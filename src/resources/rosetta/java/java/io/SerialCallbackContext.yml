@@ -1,0 +1,80 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.io:
+        SerialCallbackContext:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          - final
+          fields:
+            desc:
+              name: desc
+              modifiers:
+              - private
+              type:
+                basic: ObjectStreamClass
+                full: java.io.ObjectStreamClass
+            obj:
+              name: obj
+              modifiers:
+              - private
+              type:
+                basic: Object
+                full: java.lang.Object
+            thread:
+              name: thread
+              modifiers:
+              - private
+              type:
+                basic: Thread
+                full: java.lang.Thread
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: ObjectStreamClass
+                full: java.io.ObjectStreamClass
+          methods:
+          - name: check
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkAndSetUsed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getDesc
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ObjectStreamClass
+                full: java.io.ObjectStreamClass
+          - name: getObj
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: setUsed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

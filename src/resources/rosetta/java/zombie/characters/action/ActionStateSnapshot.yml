@@ -1,0 +1,30 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.action:
+        ActionStateSnapshot:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          notes: "Used for Playback\n  Holds the current ActionContext state, and\
+            \ any sub-states"
+          fields:
+            childStateNames:
+              name: childStateNames
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String[]
+            stateName:
+              name: stateName
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public

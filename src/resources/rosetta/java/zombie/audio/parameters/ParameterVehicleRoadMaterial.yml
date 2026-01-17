@@ -1,0 +1,41 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.audio.parameters:
+        ParameterVehicleRoadMaterial:
+          extends: zombie.audio.FMODLocalParameter
+          modifiers:
+          - public
+          - final
+          fields:
+            vehicle:
+              name: vehicle
+              modifiers:
+              - private
+              type:
+                basic: BaseVehicle
+                full: zombie.vehicles.BaseVehicle
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: vehicle
+              type:
+                basic: BaseVehicle
+                full: zombie.vehicles.BaseVehicle
+          methods:
+          - name: calculateCurrentValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaterial
+            modifiers:
+            - private
+            return:
+              type:
+                basic: ParameterVehicleRoadMaterial.Material
+                full: zombie.audio.parameters.ParameterVehicleRoadMaterial$Material

@@ -1,0 +1,111 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.audio.parameters:
+        ParameterMusicState.State:
+          extends: java.lang.Enum<zombie.audio.parameters.ParameterMusicState$State>
+          modifiers:
+          - public
+          - final
+          fields:
+            label:
+              name: label
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ParameterMusicState.State
+                full: zombie.audio.parameters.ParameterMusicState$State[]
+            InGame:
+              name: InGame
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterMusicState.State
+                full: zombie.audio.parameters.ParameterMusicState$State
+            Loading:
+              name: Loading
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterMusicState.State
+                full: zombie.audio.parameters.ParameterMusicState$State
+            MainMenu:
+              name: MainMenu
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterMusicState.State
+                full: zombie.audio.parameters.ParameterMusicState$State
+            PauseMenu:
+              name: PauseMenu
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterMusicState.State
+                full: zombie.audio.parameters.ParameterMusicState$State
+            Tutorial:
+              name: Tutorial
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterMusicState.State
+                full: zombie.audio.parameters.ParameterMusicState$State
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ParameterMusicState.State
+                full: zombie.audio.parameters.ParameterMusicState$State[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ParameterMusicState.State
+                full: zombie.audio.parameters.ParameterMusicState$State
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ParameterMusicState.State
+                full: zombie.audio.parameters.ParameterMusicState$State[]
+              notes: an array containing the constants of this enum class, in the
+                order they are declared
+            notes: 'Returns an array containing the constants of this enum class,
+              in
+
+              the order they are declared.'

@@ -1,0 +1,41 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.ui:
+        XuiTableScript.XuiTableCellScript:
+          extends: zombie.scripting.ui.XuiScript
+          modifiers:
+          - public
+          fields:
+            cellHasLoaded:
+              name: cellHasLoaded
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+          methods:
+          - name: isCellHasLoaded
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean

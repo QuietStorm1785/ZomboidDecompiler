@@ -1,0 +1,25 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.chat:
+        ChatElement.PlayerLinesList:
+          extends: java.util.ArrayList<zombie.chat.ChatElement$PlayerLines>
+          modifiers:
+          - package
+          fields:
+            this$0:
+              name: this$0
+              modifiers:
+              - package
+              type:
+                basic: ChatElement
+                full: zombie.chat.ChatElement
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: ChatElement
+                full: zombie.chat.ChatElement

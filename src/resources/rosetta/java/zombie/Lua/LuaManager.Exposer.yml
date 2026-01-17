@@ -1,0 +1,66 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.Lua:
+        LuaManager.Exposer:
+          extends: se.krka.kahlua.integration.expose.LuaJavaClassExposer
+          modifiers:
+          - public
+          - final
+          fields:
+            exposed:
+              name: exposed
+              modifiers:
+              - private
+              type:
+                basic: HashSet
+                full: java.util.HashSet<java.lang.Class<?>>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: manager
+              type:
+                basic: KahluaConverterManager
+                full: se.krka.kahlua.converter.KahluaConverterManager
+            - name: platform
+              type:
+                basic: Platform
+                full: se.krka.kahlua.vm.Platform
+            - name: environment
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+          methods:
+          - name: exposeAll
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setExposed
+            modifiers:
+            - public
+            parameters:
+            - name: clazz
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: shouldExpose
+            modifiers:
+            - public
+            parameters:
+            - name: clazz
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean

@@ -1,0 +1,516 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt.peer:
+        ComponentPeer:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          staticFields:
+            DEFAULT_OPERATION:
+              name: DEFAULT_OPERATION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            NO_EMBEDDED_CHECK:
+              name: NO_EMBEDDED_CHECK
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            RESET_OPERATION:
+              name: RESET_OPERATION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            SET_BOUNDS:
+              name: SET_BOUNDS
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            SET_CLIENT_SIZE:
+              name: SET_CLIENT_SIZE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            SET_LOCATION:
+              name: SET_LOCATION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            SET_SIZE:
+              name: SET_SIZE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: applyShape
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+            return:
+              type:
+                basic: void
+                full: void
+          - name: canDetermineObscurity
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: coalescePaintEvent
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: PaintEvent
+                full: java.awt.event.PaintEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createBuffers
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: BufferCapabilities
+                full: java.awt.BufferCapabilities
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createImage
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Image
+                full: java.awt.Image
+          - name: createVolatileImage
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: VolatileImage
+                full: java.awt.image.VolatileImage
+          - name: destroyBuffers
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: dispose
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: flip
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: BufferCapabilities.FlipContents
+                full: java.awt.BufferCapabilities$FlipContents
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getBackBuffer
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Image
+                full: java.awt.Image
+          - name: getColorModel
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: ColorModel
+                full: java.awt.image.ColorModel
+          - name: getFontMetrics
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Font
+                full: java.awt.Font
+            return:
+              type:
+                basic: FontMetrics
+                full: java.awt.FontMetrics
+          - name: getGraphics
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+          - name: getGraphicsConfiguration
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: GraphicsConfiguration
+                full: java.awt.GraphicsConfiguration
+          - name: getLocationOnScreen
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Point
+                full: java.awt.Point
+          - name: getMinimumSize
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+          - name: getPreferredSize
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Dimension
+                full: java.awt.Dimension
+          - name: handleEvent
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: AWTEvent
+                full: java.awt.AWTEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: handlesWheelScrolling
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFocusable
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isObscured
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isReparentSupported
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: layout
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: paint
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+            return:
+              type:
+                basic: void
+                full: void
+          - name: print
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reparent
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ContainerPeer
+                full: java.awt.peer.ContainerPeer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: requestFocus
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Component
+                full: java.awt.Component
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: long
+                full: long
+            - name: arg4
+              type:
+                basic: FocusEvent.Cause
+                full: java.awt.event.FocusEvent$Cause
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setBackground
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Color
+                full: java.awt.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBounds
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEnabled
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFont
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Font
+                full: java.awt.Font
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setForeground
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Color
+                full: java.awt.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVisible
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setZOrder
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentPeer
+                full: java.awt.peer.ComponentPeer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateCursorImmediately
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateGraphicsData
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: GraphicsConfiguration
+                full: java.awt.GraphicsConfiguration
+            return:
+              type:
+                basic: boolean
+                full: boolean

@@ -1,0 +1,691 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.crafting:
+        MashingLogic:
+          extends: zombie.entity.Component
+          modifiers:
+          - public
+          fields:
+            barrelConsumedAmount:
+              name: barrelConsumedAmount
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            craftData:
+              name: craftData
+              modifiers:
+              - private
+              type:
+                basic: CraftRecipeData
+                full: zombie.entity.components.crafting.recipe.CraftRecipeData
+            craftTestData:
+              name: craftTestData
+              modifiers:
+              - private
+              type:
+                basic: CraftRecipeData
+                full: zombie.entity.components.crafting.recipe.CraftRecipeData
+            currentRecipe:
+              name: currentRecipe
+              modifiers:
+              - private
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            elapsedTime:
+              name: elapsedTime
+              modifiers:
+              - private
+              type:
+                basic: double
+                full: double
+            inputsGroupName:
+              name: inputsGroupName
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            internalResourceList:
+              name: internalResourceList
+              modifiers:
+              - private
+              type:
+                basic: List
+                full: java.util.List<zombie.entity.components.resources.Resource>
+            lastWorldAge:
+              name: lastWorldAge
+              modifiers:
+              - private
+              type:
+                basic: double
+                full: double
+            recipeTagQuery:
+              name: recipeTagQuery
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            recipes:
+              name: recipes
+              modifiers:
+              - private
+              type:
+                basic: List
+                full: java.util.List<zombie.scripting.entity.components.crafting.CraftRecipe>
+            requestingPlayer:
+              name: requestingPlayer
+              modifiers:
+              - private
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            resourceFluidID:
+              name: resourceFluidID
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            startRequested:
+              name: startRequested
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            stopRequested:
+              name: stopRequested
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+          staticFields:
+            _emptyRecipeList:
+              name: _emptyRecipeList
+              modifiers:
+              - private
+              - static
+              type:
+                basic: List
+                full: java.util.List<zombie.scripting.entity.components.crafting.CraftRecipe>
+            _emptyResourceList:
+              name: _emptyResourceList
+              modifiers:
+              - private
+              - static
+              type:
+                basic: List
+                full: java.util.List<zombie.entity.components.resources.Resource>
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: DoTooltip
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectTooltip
+                full: zombie.ui.ObjectTooltip
+            - name: arg1
+              type:
+                basic: ObjectTooltip.Layout
+                full: zombie.ui.ObjectTooltip$Layout
+            return:
+              type:
+                basic: void
+                full: void
+          - name: canStart
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canStart
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: StartMode
+                full: zombie.entity.components.crafting.StartMode
+            - name: arg1
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: clearRecipe
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: debugCanStart
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: CraftRecipeMonitor
+                full: zombie.entity.components.crafting.CraftRecipeMonitor
+          - name: getBarrelConsumedAmount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCraftData
+            modifiers:
+            - package
+            return:
+              type:
+                basic: CraftRecipeData
+                full: zombie.entity.components.crafting.recipe.CraftRecipeData
+          - name: getCraftTestData
+            modifiers:
+            - package
+            return:
+              type:
+                basic: CraftRecipeData
+                full: zombie.entity.components.crafting.recipe.CraftRecipeData
+          - name: getCurrentRecipe
+            modifiers:
+            - public
+            return:
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+          - name: getElapsedTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: double
+                full: double
+          - name: getFluidBarrel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ResourceFluid
+                full: zombie.entity.components.resources.ResourceFluid
+          - name: getInputResources
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: List
+                full: java.util.List<zombie.entity.components.resources.Resource>
+            return:
+              type:
+                basic: List
+                full: java.util.List<zombie.entity.components.resources.Resource>
+          - name: getInputsGroupName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getLastWorldAge
+            modifiers:
+            - public
+            return:
+              type:
+                basic: double
+                full: double
+          - name: getPossibleRecipe
+            modifiers:
+            - public
+            return:
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+          - name: getProgress
+            modifiers:
+            - public
+            return:
+              type:
+                basic: double
+                full: double
+          - name: getRecipeTagQuery
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRecipes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: List
+                full: java.util.List<zombie.scripting.entity.components.crafting.CraftRecipe>
+            return:
+              type:
+                basic: List
+                full: java.util.List<zombie.scripting.entity.components.crafting.CraftRecipe>
+          - name: getRecipes
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: List
+                full: java.util.List<zombie.scripting.entity.components.crafting.CraftRecipe>
+          - name: getRequestingPlayer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+          - name: getResourceFluidID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isFinished
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRunning
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isStartRequested
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isStopRequested
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isValid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadSyncData
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onAddedToOwner
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onComponentEvent
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentEvent
+                full: zombie.entity.events.ComponentEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onConnectComponents
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onEntityEvent
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: EntityEvent
+                full: zombie.entity.events.EntityEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onFirstCreation
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onReceivePacket
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            - name: arg2
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: onRemovedFromOwner
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: readFromScript
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentScript
+                full: zombie.scripting.entity.ComponentScript
+            return:
+              type:
+                basic: void
+                full: void
+          - name: receiveStartRequest
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: receiveStopRequest
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderlast
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: saveSyncData
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendStartRequest
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendStopRequest
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBarrelConsumedAmount
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setElapsedTime
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLastWorldAge
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRecipe
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRecipeTagQuery
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRequestingPlayer
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStartRequested
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStopRequested
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: start
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stop
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stop
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void

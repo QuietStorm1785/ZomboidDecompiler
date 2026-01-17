@@ -1,0 +1,458 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.animals:
+        VirtualAnimal:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            brokenTwigsChance:
+              name: brokenTwigsChance
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            debugForceEat:
+              name: debugForceEat
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            debugForceSleep:
+              name: debugForceSleep
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            eatPeriodEnd:
+              name: eatPeriodEnd
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.Integer>
+            eatPeriodStart:
+              name: eatPeriodStart
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.Integer>
+            flatHerbChance:
+              name: flatHerbChance
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            furChance:
+              name: furChance
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            herbGrazeChance:
+              name: herbGrazeChance
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            id:
+              name: id
+              modifiers:
+              - public
+              type:
+                basic: double
+                full: double
+            m_animals:
+              name: m_animals
+              modifiers:
+              - package
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.animals.IsoAnimal>
+            m_bMoveForwardOnZone:
+              name: m_bMoveForwardOnZone
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            m_bRemoved:
+              name: m_bRemoved
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            m_currentZoneAction:
+              name: m_currentZoneAction
+              modifiers:
+              - package
+              type:
+                basic: String
+                full: java.lang.String
+            m_eatStartTime:
+              name: m_eatStartTime
+              modifiers:
+              - public
+              type:
+                basic: double
+                full: double
+            m_forwardDirection:
+              name: m_forwardDirection
+              modifiers:
+              - package
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            m_nextEatTime:
+              name: m_nextEatTime
+              modifiers:
+              - public
+              type:
+                basic: double
+                full: double
+            m_nextRestTime:
+              name: m_nextRestTime
+              modifiers:
+              - public
+              type:
+                basic: double
+                full: double
+            m_state:
+              name: m_state
+              modifiers:
+              - package
+              type:
+                basic: VirtualAnimalState
+                full: zombie.characters.animals.VirtualAnimalState
+            m_wakeTime:
+              name: m_wakeTime
+              modifiers:
+              - public
+              type:
+                basic: double
+                full: double
+            m_x:
+              name: m_x
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            m_y:
+              name: m_y
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            m_z:
+              name: m_z
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            migrationGroup:
+              name: migrationGroup
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            poopChance:
+              name: poopChance
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            sleepPeriodEnd:
+              name: sleepPeriodEnd
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.Integer>
+            sleepPeriodStart:
+              name: sleepPeriodStart
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.Integer>
+            speed:
+              name: speed
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            timeToEat:
+              name: timeToEat
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            timeToSleep:
+              name: timeToSleep
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            trackChance:
+              name: trackChance
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            zone:
+              name: zone
+              modifiers:
+              - public
+              type:
+                basic: AnimalZone
+                full: zombie.characters.animals.AnimalZone
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: findAnimalById
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoAnimal
+                full: zombie.characters.animals.IsoAnimal
+          - name: forceEat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forceRest
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forceStopEat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forceWakeUp
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getEndEatPeriod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getEndSleepPeriod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getNextEatPeriod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getNextSleepPeriod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getState
+            modifiers:
+            - public
+            return:
+              type:
+                basic: VirtualAnimalState
+                full: zombie.characters.animals.VirtualAnimalState
+          - name: getX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getZ
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: isEating
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRemoved
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSleeping
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTimeToEat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTimeToSleep
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRemoved
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setState
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: VirtualAnimalState
+                full: zombie.characters.animals.VirtualAnimalState
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setX
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setY
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setZ
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,338 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.util:
+        SnapshotArray:
+          extends: zombie.entity.util.Array<T>
+          modifiers:
+          - public
+          fields:
+            recycled:
+              name: recycled
+              modifiers:
+              - private
+              type:
+                basic: T
+                full: T[]
+            snapshot:
+              name: snapshot
+              modifiers:
+              - private
+              type:
+                basic: T
+                full: T[]
+            snapshots:
+              name: snapshots
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Array
+                full: zombie.entity.util.Array
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: int
+                full: int
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: T
+                full: T[]
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T[]
+          methods:
+          - name: begin
+            modifiers:
+            - public
+            return:
+              type:
+                basic: T
+                full: T[]
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: end
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: insert
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: void
+                full: void
+          - name: insertRange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: modified
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: pop
+            modifiers:
+            - public
+            return:
+              type:
+                basic: T
+                full: T
+          - name: removeAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Array
+                full: zombie.entity.util.Array<? extends T>
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: removeIndex
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: T
+                full: T
+          - name: removeRange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: reverse
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSize
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: T
+                full: T[]
+          - name: shuffle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sort
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sort
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Comparator
+                full: java.util.Comparator<? super T>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: swap
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: truncate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: with
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T[]
+            return:
+              type:
+                basic: SnapshotArray
+                full: zombie.entity.util.SnapshotArray<T>

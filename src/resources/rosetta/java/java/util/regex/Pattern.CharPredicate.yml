@@ -1,0 +1,135 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util.regex:
+        Pattern.CharPredicate:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          - abstract
+          methods:
+          - name: and
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Pattern.CharPredicate
+                full: java.util.regex.Pattern$CharPredicate
+            return:
+              type:
+                basic: Pattern.CharPredicate
+                full: java.util.regex.Pattern$CharPredicate
+          - name: is
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: lambda$and$0
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Pattern.CharPredicate
+                full: java.util.regex.Pattern$CharPredicate
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: lambda$negate$3
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: lambda$union$1
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Pattern.CharPredicate
+                full: java.util.regex.Pattern$CharPredicate
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: lambda$union$2
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Pattern.CharPredicate
+                full: java.util.regex.Pattern$CharPredicate
+            - name: arg1
+              type:
+                basic: Pattern.CharPredicate
+                full: java.util.regex.Pattern$CharPredicate
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: negate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Pattern.CharPredicate
+                full: java.util.regex.Pattern$CharPredicate
+          - name: union
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Pattern.CharPredicate
+                full: java.util.regex.Pattern$CharPredicate
+            return:
+              type:
+                basic: Pattern.CharPredicate
+                full: java.util.regex.Pattern$CharPredicate
+          - name: union
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Pattern.CharPredicate
+                full: java.util.regex.Pattern$CharPredicate
+            - name: arg1
+              type:
+                basic: Pattern.CharPredicate
+                full: java.util.regex.Pattern$CharPredicate
+            return:
+              type:
+                basic: Pattern.CharPredicate
+                full: java.util.regex.Pattern$CharPredicate

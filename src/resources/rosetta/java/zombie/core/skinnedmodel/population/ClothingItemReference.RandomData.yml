@@ -1,0 +1,70 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.population:
+        ClothingItemReference.RandomData:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            m_Active:
+              name: m_Active
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            m_BaseTexture:
+              name: m_BaseTexture
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_Decal:
+              name: m_Decal
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_Hue:
+              name: m_Hue
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            m_PickedItemRef:
+              name: m_PickedItemRef
+              modifiers:
+              - public
+              type:
+                basic: ClothingItemReference
+                full: zombie.core.skinnedmodel.population.ClothingItemReference
+            m_TextureChoice:
+              name: m_TextureChoice
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_Tint:
+              name: m_Tint
+              modifiers:
+              - public
+              type:
+                basic: ImmutableColor
+                full: zombie.core.ImmutableColor
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

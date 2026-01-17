@@ -1,0 +1,40 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.awt:
+        RequestFocusController:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: acceptRequestFocus
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Component
+                full: java.awt.Component
+            - name: arg1
+              type:
+                basic: Component
+                full: java.awt.Component
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg4
+              type:
+                basic: FocusEvent.Cause
+                full: java.awt.event.FocusEvent$Cause
+            return:
+              type:
+                basic: boolean
+                full: boolean

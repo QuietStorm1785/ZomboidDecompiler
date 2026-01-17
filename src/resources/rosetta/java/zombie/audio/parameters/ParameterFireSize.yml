@@ -1,0 +1,41 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.audio.parameters:
+        ParameterFireSize:
+          extends: zombie.audio.FMODLocalParameter
+          modifiers:
+          - public
+          - final
+          fields:
+            size:
+              name: size
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: calculateCurrentValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: setSize
+            modifiers:
+            - public
+            parameters:
+            - name: size
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void

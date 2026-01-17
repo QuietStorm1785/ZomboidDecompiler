@@ -1,0 +1,140 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.inventory:
+        FixingManager:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: addXp
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: Fixing.Fixer
+                full: zombie.scripting.objects.Fixing$Fixer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: fixItem
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: brokenItem
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: fixing
+              type:
+                basic: Fixing
+                full: zombie.scripting.objects.Fixing
+            - name: fixer
+              type:
+                basic: Fixing.Fixer
+                full: zombie.scripting.objects.Fixing$Fixer
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: getChanceOfFail
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: brokenItem
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: fixing
+              type:
+                basic: Fixing
+                full: zombie.scripting.objects.Fixing
+            - name: fixer
+              type:
+                basic: Fixing.Fixer
+                full: zombie.scripting.objects.Fixing$Fixer
+            return:
+              type:
+                basic: double
+                full: double
+          - name: getCondRepaired
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: brokenItem
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: fixing
+              type:
+                basic: Fixing
+                full: zombie.scripting.objects.Fixing
+            - name: fixer
+              type:
+                basic: Fixing.Fixer
+                full: zombie.scripting.objects.Fixing$Fixer
+            return:
+              type:
+                basic: double
+                full: double
+          - name: getFixes
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.Fixing>
+          - name: useFixer
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: fixer
+              type:
+                basic: Fixing.Fixer
+                full: zombie.scripting.objects.Fixing$Fixer
+            - name: brokenItem
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void

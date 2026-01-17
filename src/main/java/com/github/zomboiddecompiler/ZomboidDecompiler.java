@@ -34,6 +34,10 @@ public class ZomboidDecompiler {
     private boolean addDocstrings = true;
     /// Whether to change the line mappings in the original source files to align with the decompiled source.
     private boolean remapLineNumbers = false;
+    /// If true, write a .backup copy before overwriting remapped classes.
+    private boolean remapWriteBackup = true;
+    /// If true, ask ASM to compute frames/maxs when writing remapped classes (more resilient, slightly slower).
+    private boolean remapComputeFrames = false;
 
     private String classPatterns = "";
 
@@ -51,6 +55,14 @@ public class ZomboidDecompiler {
 
     public void setRemapLineNumbers(boolean remapLineNumbers) {
         this.remapLineNumbers = remapLineNumbers;
+    }
+
+    public void setRemapWriteBackup(boolean remapWriteBackup) {
+        this.remapWriteBackup = remapWriteBackup;
+    }
+
+    public void setRemapComputeFrames(boolean remapComputeFrames) {
+        this.remapComputeFrames = remapComputeFrames;
     }
 
     /**
@@ -97,6 +109,9 @@ public class ZomboidDecompiler {
         }
 
         ZomboidResultSaver resultSaver = new ZomboidResultSaver(outputPath.resolve("source"), gamePath);
+        resultSaver.setRemapLineNumbers(remapLineNumbers);
+        resultSaver.setRemapWriteBackup(remapWriteBackup);
+        resultSaver.setRemapComputeFrames(remapComputeFrames);
 
         ZomboidContextSource gameSource;
         ZomboidContextSource dependencySource;
@@ -112,22 +127,41 @@ public class ZomboidDecompiler {
         Decompiler.Builder builder = Decompiler.builder()
                 .inputs(gameSource)
                 .output(resultSaver)
+                // === OUTPUT QUALITY OPTIONS ===
+                // Core formatting for readability
                 .option(IFernflowerPreferences.ASCII_STRING_CHARACTERS, true)
+                .option(IFernflowerPreferences.INDENT_STRING, "    ")
+                // String literal formatting - escape special characters properly
+                .option("string_concat_same_class", true)
+                // === MEMBER VISIBILITY & COMPLETENESS ===
+                // Ensure all members are visible and properly decompiled
+                .option("synthetic_not_set", false)
+                // Remove bridge method markers for cleaner code
+                .option("remove_bridge", false)
+                // === SOURCE CODE ACCURACY ===
+                // Preserve debug information where possible
+                .option("verify_anonymous_classes", true)
+                // Better handling of lambdas and functional interfaces
+                .option("lambda_to_anonymous_class", false)
+                // === TYPE RESOLUTION & CLARITY ===
+                // Include Java runtime for better type inference
+                .option(IFernflowerPreferences.INCLUDE_JAVA_RUNTIME,
+                        gamePath.resolve("jre64").toAbsolutePath().toString())
+                // Library context for proper dependency resolution
+                .libraries(dependencySource)
+                // === LOGGING & DIAGNOSTICS ===
+                .logger(vineflowerLog instanceof StreamLogger fileLogger
+                        ? new PrintStreamLogger(fileLogger.getStream())
+                        : null)
+                // === BANNER & ERROR HANDLING ===
                 .option(IFernflowerPreferences.BANNER,
                         String.format("// Decompiled with Zomboid Decompiler v%d.%d.%d using Vineflower.\n",
                                       VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH))
                 .option(IFernflowerPreferences.ERROR_MESSAGE, "Please report this to the Zomboid Decompiler issue tracker at https://github.com/demiurgeQuantified/ZomboidDecompiler/issues with the file name and game version.")
-                //.option("log-level", "warn")
-                .libraries(dependencySource)
-                .logger(vineflowerLog instanceof StreamLogger fileLogger
-                        ? new PrintStreamLogger(fileLogger.getStream())
-                        : null)
-                .option(
-                        IFernflowerPreferences.INCLUDE_JAVA_RUNTIME,
-                        gamePath.resolve("jre64").toAbsolutePath().toString()
-                )
-                .option(IFernflowerPreferences.INDENT_STRING, "    ")
+                // === ROSETTA INTEGRATION ===
+                // Parameter naming from Rosetta data
                 .option(RosettaPlugin.NAMESPACE_PROPERTY_NAME, getResourceNamespaces())
+                // Custom type naming for better readability
                 .option(RosettaPlugin.TYPE_NAMER_PROPERTY_NAME, new ZomboidTypeNameProvider());
 
         if (addDocstrings) {

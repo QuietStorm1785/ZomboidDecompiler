@@ -1,0 +1,86 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.net:
+        Proxy.Type:
+          extends: java.lang.Enum<java.net.Proxy$Type>
+          modifiers:
+          - public
+          - final
+          notes: Represents the proxy type.
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Proxy.Type
+                full: java.net.Proxy$Type[]
+            DIRECT:
+              name: DIRECT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Proxy.Type
+                full: java.net.Proxy$Type
+              notes: Represents a direct connection, or the absence of a proxy.
+            HTTP:
+              name: HTTP
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Proxy.Type
+                full: java.net.Proxy$Type
+              notes: Represents proxy for high level protocols such as HTTP or FTP.
+            SOCKS:
+              name: SOCKS
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Proxy.Type
+                full: java.net.Proxy$Type
+              notes: Represents a SOCKS (V4 or V5) proxy.
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: Proxy.Type
+                full: java.net.Proxy$Type[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Proxy.Type
+                full: java.net.Proxy$Type
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: Proxy.Type
+                full: java.net.Proxy$Type[]
+              notes: an array containing the constants of this enum class, in the
+                order they are declared
+            notes: 'Returns an array containing the constants of this enum class,
+              in
+
+              the order they are declared.'

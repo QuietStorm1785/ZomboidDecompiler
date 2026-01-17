@@ -1,0 +1,63 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.security:
+        Principal:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "This interface represents the abstract notion of a principal, which\n\
+            \ can be used to represent any entity, such as an individual, a\n corporation,\
+            \ and a login id."
+          methods:
+          - name: equals
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getName
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: hashCode
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: implies
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Subject
+                full: javax.security.auth.Subject
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: toString
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String

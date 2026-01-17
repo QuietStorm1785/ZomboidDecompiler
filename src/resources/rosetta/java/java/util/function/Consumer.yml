@@ -1,0 +1,66 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util.function:
+        Consumer:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "Represents an operation that accepts a single input argument and\
+            \ returns no\n result. Unlike most other functional interfaces, Consumer\
+            \ is expected\n to operate via side-effects.\n\n This is a functional\
+            \ interface\n whose functional method is accept(Object)."
+          methods:
+          - name: accept
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: t
+              type:
+                basic: T
+                full: T
+              notes: the input argument
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Performs this operation on the given argument.
+          - name: andThen
+            modifiers:
+            - public
+            parameters:
+            - name: after
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<? super T>
+              notes: the operation to perform after this operation
+            return:
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<T>
+              notes: "a composed Consumer that performs in sequence this\n operation\
+                \ followed by the after operation"
+            notes: "Returns a composed Consumer that performs, in sequence, this\n\
+              \ operation followed by the after operation. If performing either\n\
+              \ operation throws an exception, it is relayed to the caller of the\n\
+              \ composed operation.  If performing this operation throws an exception,\n\
+              \ the after operation will not be performed."
+          - name: lambda$andThen$0
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void

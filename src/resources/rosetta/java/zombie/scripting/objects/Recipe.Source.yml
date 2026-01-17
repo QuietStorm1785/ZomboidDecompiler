@@ -1,0 +1,154 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.objects:
+        Recipe.Source:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            count:
+              name: count
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            destroy:
+              name: destroy
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            items:
+              name: items
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            keep:
+              name: keep
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            originalItems:
+              name: originalItems
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            use:
+              name: use
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getItems
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getOnlyItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getOriginalItems
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getUse
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: isDestroy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isKeep
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setCount
+            modifiers:
+            - public
+            parameters:
+            - name: count
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDestroy
+            modifiers:
+            - public
+            parameters:
+            - name: destroy
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setKeep
+            modifiers:
+            - public
+            parameters:
+            - name: keep
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUse
+            modifiers:
+            - public
+            parameters:
+            - name: use
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

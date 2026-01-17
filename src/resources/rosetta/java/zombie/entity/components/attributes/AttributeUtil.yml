@@ -1,0 +1,249 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.attributes:
+        AttributeUtil:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doubleListPool:
+              name: doubleListPool
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayDeque
+                full: java.util.ArrayDeque<java.util.ArrayList<java.lang.Double>>
+            enum_prefix:
+              name: enum_prefix
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            itemListPool:
+              name: itemListPool
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayDeque
+                full: java.util.ArrayDeque<java.util.ArrayList<zombie.inventory.InventoryItem>>
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: allocDoubleList
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.Double>
+          - name: allocItemList
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+          - name: convertAttribute
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: AttributeType
+                full: zombie.entity.components.attributes.AttributeType
+            - name: arg2
+              type:
+                basic: AttributeType
+                full: zombie.entity.components.attributes.AttributeType
+            return:
+              type:
+                basic: float
+                full: float
+          - name: convertAttributeToRange
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: AttributeType
+                full: zombie.entity.components.attributes.AttributeType
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: convertAttributeToUnit
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: AttributeType
+                full: zombie.entity.components.attributes.AttributeType
+            return:
+              type:
+                basic: float
+                full: float
+          - name: enumValueFromScriptString
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<E>
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: E
+                full: E
+          - name: getAttributeAverage
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+            - name: arg1
+              type:
+                basic: AttributeType
+                full: zombie.entity.components.attributes.AttributeType
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getItemsFromList
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+            - name: arg2
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+          - name: getSanitizedEnumString
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isEnumString
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: releaseDoubleList
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.Double>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: releaseItemList
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: tryEnumValueFromScriptString
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<E>
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: E
+                full: E

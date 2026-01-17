@@ -1,0 +1,32 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.asset:
+        AssetStateObserver:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: onStateChanged
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: oldState
+              type:
+                basic: Asset.State
+                full: zombie.asset.Asset$State
+            - name: newState
+              type:
+                basic: Asset.State
+                full: zombie.asset.Asset$State
+            - name: asset
+              type:
+                basic: Asset
+                full: zombie.asset.Asset
+            return:
+              type:
+                basic: void
+                full: void

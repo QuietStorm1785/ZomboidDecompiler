@@ -1,0 +1,62 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.model:
+        SoftwareModelMesh:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            Texture:
+              name: Texture
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            indicesUnskinned:
+              name: indicesUnskinned
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int[]
+            vb:
+              name: vb
+              modifiers:
+              - public
+              type:
+                basic: VertexBufferObject
+                full: zombie.core.skinnedmodel.model.VertexBufferObject
+            verticesUnskinned:
+              name: verticesUnskinned
+              modifiers:
+              - public
+              type:
+                basic: VertexPositionNormalTangentTextureSkin
+                full: zombie.core.skinnedmodel.model.VertexPositionNormalTangentTextureSkin[]
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: verticesUnskinned
+              type:
+                basic: VertexPositionNormalTangentTextureSkin
+                full: zombie.core.skinnedmodel.model.VertexPositionNormalTangentTextureSkin[]
+            - name: elements
+              type:
+                basic: int
+                full: int[]
+          - modifiers:
+            - public
+            parameters:
+            - name: verticesUnskinned
+              type:
+                basic: VertexPositionNormalTangentTexture
+                full: zombie.core.skinnedmodel.model.VertexPositionNormalTangentTexture[]
+            - name: elements
+              type:
+                basic: int
+                full: int[]

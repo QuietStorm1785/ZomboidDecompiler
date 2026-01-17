@@ -1,0 +1,82 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.traits:
+        TraitCollection.TraitSlot:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            Name:
+              name: Name
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            m_isSet:
+              name: m_isSet
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            this$0:
+              name: this$0
+              modifiers:
+              - package
+              type:
+                basic: TraitCollection
+                full: zombie.characters.traits.TraitCollection
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: TraitCollection
+                full: zombie.characters.traits.TraitCollection
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: isName
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSet
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: val
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

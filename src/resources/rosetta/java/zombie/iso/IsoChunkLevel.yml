@@ -1,0 +1,226 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        IsoChunkLevel:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            lightCheck:
+              name: lightCheck
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean[]
+            m_bRaining:
+              name: m_bRaining
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            m_chunk:
+              name: m_chunk
+              modifiers:
+              - public
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            m_fmodAmbientWallLevelData:
+              name: m_fmodAmbientWallLevelData
+              modifiers:
+              - public
+              type:
+                basic: FMODAmbientWallLevelData
+                full: zombie.audio.FMODAmbientWallLevelData
+            m_level:
+              name: m_level
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            m_rainFlags:
+              name: m_rainFlags
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte[]
+            m_rainSplashFrame:
+              name: m_rainSplashFrame
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float[]
+            m_rainSplashFrameNum:
+              name: m_rainSplashFrameNum
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            physicsCheck:
+              name: physicsCheck
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            squares:
+              name: squares
+              modifiers:
+              - public
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare[]
+          staticFields:
+            CLDSF_NONE:
+              name: CLDSF_NONE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            CLDSF_RAIN_RANDOM_XY:
+              name: CLDSF_RAIN_RANDOM_XY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            CLDSF_SHOULD_RENDER:
+              name: CLDSF_SHOULD_RENDER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            pool:
+              name: pool
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ConcurrentLinkedQueue
+                full: java.util.concurrent.ConcurrentLinkedQueue<zombie.iso.IsoChunkLevel>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: checkPhysicsLaterForActiveRagdoll
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: containsIsoGridSquare
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getChunk
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+          - name: getLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: init
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoChunkLevel
+                full: zombie.iso.IsoChunkLevel
+          - name: release
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderRainSplashes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateRainSplashes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: alloc
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: IsoChunkLevel
+                full: zombie.iso.IsoChunkLevel
+          - name: lambda$containsIsoGridSquare$0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: arg1
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean

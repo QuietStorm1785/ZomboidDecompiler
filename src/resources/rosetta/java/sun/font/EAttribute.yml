@@ -1,0 +1,293 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.font:
+        EAttribute:
+          extends: java.lang.Enum<sun.font.EAttribute>
+          modifiers:
+          - public
+          - final
+          fields:
+            att:
+              name: att
+              modifiers:
+              - package
+              type:
+                basic: TextAttribute
+                full: java.awt.font.TextAttribute
+            mask:
+              name: mask
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute[]
+            EBACKGROUND:
+              name: EBACKGROUND
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            EBASELINE_TRANSFORM:
+              name: EBASELINE_TRANSFORM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            EBIDI_EMBEDDING:
+              name: EBIDI_EMBEDDING
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            ECHAR_REPLACEMENT:
+              name: ECHAR_REPLACEMENT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            EFAMILY:
+              name: EFAMILY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            EFONT:
+              name: EFONT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            EFOREGROUND:
+              name: EFOREGROUND
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            EINPUT_METHOD_HIGHLIGHT:
+              name: EINPUT_METHOD_HIGHLIGHT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            EINPUT_METHOD_UNDERLINE:
+              name: EINPUT_METHOD_UNDERLINE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            EJUSTIFICATION:
+              name: EJUSTIFICATION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            EKERNING:
+              name: EKERNING
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            ELIGATURES:
+              name: ELIGATURES
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            ENUMERIC_SHAPING:
+              name: ENUMERIC_SHAPING
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            EPOSTURE:
+              name: EPOSTURE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            ERUN_DIRECTION:
+              name: ERUN_DIRECTION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            ESIZE:
+              name: ESIZE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            ESTRIKETHROUGH:
+              name: ESTRIKETHROUGH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            ESUPERSCRIPT:
+              name: ESUPERSCRIPT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            ESWAP_COLORS:
+              name: ESWAP_COLORS
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            ETRACKING:
+              name: ETRACKING
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            ETRANSFORM:
+              name: ETRANSFORM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            EUNDERLINE:
+              name: EUNDERLINE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            EWEIGHT:
+              name: EWEIGHT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            EWIDTH:
+              name: EWIDTH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+            atts:
+              name: atts
+              modifiers:
+              - package
+              - static
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute[]
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: TextAttribute
+                full: java.awt.font.TextAttribute
+          methods:
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute[]
+          - name: forAttribute
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: AttributedCharacterIterator.Attribute
+                full: java.text.AttributedCharacterIterator$Attribute
+            return:
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: EAttribute
+                full: sun.font.EAttribute[]

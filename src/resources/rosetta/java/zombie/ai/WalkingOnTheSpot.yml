@@ -1,0 +1,87 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ai:
+        WalkingOnTheSpot:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            seconds:
+              name: seconds
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            time:
+              name: time
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            x:
+              name: x
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            y:
+              name: y
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: check
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: check
+            modifiers:
+            - public
+            parameters:
+            - name: x1
+              type:
+                basic: float
+                full: float
+            - name: y1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: reset
+            modifiers:
+            - public
+            parameters:
+            - name: x1
+              type:
+                basic: float
+                full: float
+            - name: y1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

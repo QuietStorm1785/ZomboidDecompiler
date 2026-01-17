@@ -1,0 +1,88 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.weather:
+        ThunderStorm.PlayerLightningInfo:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            distance:
+              name: distance
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            lightningColor:
+              name: lightningColor
+              modifiers:
+              - public
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            lightningMod:
+              name: lightningMod
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            lightningState:
+              name: lightningState
+              modifiers:
+              - public
+              type:
+                basic: ThunderStorm.LightningState
+                full: zombie.iso.weather.ThunderStorm$LightningState
+            lightningStrength:
+              name: lightningStrength
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            outColor:
+              name: outColor
+              modifiers:
+              - public
+              type:
+                basic: ClimateColorInfo
+                full: zombie.iso.weather.ClimateColorInfo
+            this$0:
+              name: this$0
+              modifiers:
+              - package
+              type:
+                basic: ThunderStorm
+                full: zombie.iso.weather.ThunderStorm
+            timer:
+              name: timer
+              modifiers:
+              - public
+              type:
+                basic: GameTime.AnimTimer
+                full: zombie.GameTime$AnimTimer
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ThunderStorm
+                full: zombie.iso.weather.ThunderStorm

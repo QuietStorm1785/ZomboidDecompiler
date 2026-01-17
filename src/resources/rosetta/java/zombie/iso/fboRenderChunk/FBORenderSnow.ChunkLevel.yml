@@ -1,0 +1,40 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.fboRenderChunk:
+        FBORenderSnow.ChunkLevel:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            m_adjacentChunkLoadedCounter:
+              name: m_adjacentChunkLoadedCounter
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            m_chunk:
+              name: m_chunk
+              modifiers:
+              - public
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            m_snowGrid:
+              name: m_snowGrid
+              modifiers:
+              - private
+              type:
+                basic: FBORenderSnow.SnowGrid
+                full: zombie.iso.fboRenderChunk.FBORenderSnow$SnowGrid
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk

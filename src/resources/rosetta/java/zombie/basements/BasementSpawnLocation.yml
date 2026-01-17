@@ -1,0 +1,84 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.basements:
+        BasementSpawnLocation:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            access:
+              name: access
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            h:
+              name: h
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            north:
+              name: north
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            specificBasement:
+              name: specificBasement
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            stairX:
+              name: stairX
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            stairY:
+              name: stairY
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            w:
+              name: w
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            z:
+              name: z
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public

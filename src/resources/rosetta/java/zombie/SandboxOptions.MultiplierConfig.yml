@@ -1,0 +1,285 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie:
+        SandboxOptions.MultiplierConfig:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            XPMultiplierAiming:
+              name: XPMultiplierAiming
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierAxe:
+              name: XPMultiplierAxe
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierBlacksmith:
+              name: XPMultiplierBlacksmith
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierBlunt:
+              name: XPMultiplierBlunt
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierButchering:
+              name: XPMultiplierButchering
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierCarving:
+              name: XPMultiplierCarving
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierCooking:
+              name: XPMultiplierCooking
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierDoctor:
+              name: XPMultiplierDoctor
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierElectricity:
+              name: XPMultiplierElectricity
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierFarming:
+              name: XPMultiplierFarming
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierFishing:
+              name: XPMultiplierFishing
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierFitness:
+              name: XPMultiplierFitness
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierFlintKnapping:
+              name: XPMultiplierFlintKnapping
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierGlassmaking:
+              name: XPMultiplierGlassmaking
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierGlobal:
+              name: XPMultiplierGlobal
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierGlobalToggle:
+              name: XPMultiplierGlobalToggle
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.BooleanSandboxOption
+                full: zombie.SandboxOptions$BooleanSandboxOption
+            XPMultiplierHusbandry:
+              name: XPMultiplierHusbandry
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierLightfoot:
+              name: XPMultiplierLightfoot
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierLongBlade:
+              name: XPMultiplierLongBlade
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierMaintenance:
+              name: XPMultiplierMaintenance
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierMasonry:
+              name: XPMultiplierMasonry
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierMechanics:
+              name: XPMultiplierMechanics
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierMetalWelding:
+              name: XPMultiplierMetalWelding
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierNimble:
+              name: XPMultiplierNimble
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierPlantScavenging:
+              name: XPMultiplierPlantScavenging
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierPottery:
+              name: XPMultiplierPottery
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierReloading:
+              name: XPMultiplierReloading
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierSmallBlade:
+              name: XPMultiplierSmallBlade
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierSmallBlunt:
+              name: XPMultiplierSmallBlunt
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierSneak:
+              name: XPMultiplierSneak
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierSpear:
+              name: XPMultiplierSpear
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierSprinting:
+              name: XPMultiplierSprinting
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierStrength:
+              name: XPMultiplierStrength
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierTailoring:
+              name: XPMultiplierTailoring
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierTracking:
+              name: XPMultiplierTracking
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierTrapping:
+              name: XPMultiplierTrapping
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            XPMultiplierWoodwork:
+              name: XPMultiplierWoodwork
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            this$0:
+              name: this$0
+              modifiers:
+              - package
+              type:
+                basic: SandboxOptions
+                full: zombie.SandboxOptions
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: SandboxOptions
+                full: zombie.SandboxOptions

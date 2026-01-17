@@ -1,0 +1,24 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie:
+        PredicatedFileWatcher.IPredicatedFileWatcherCallback:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: call
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: entryKey
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void

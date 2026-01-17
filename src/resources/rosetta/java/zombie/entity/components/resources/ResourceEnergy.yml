@@ -1,0 +1,314 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.resources:
+        ResourceEnergy:
+          extends: zombie.entity.components.resources.Resource
+          modifiers:
+          - public
+          fields:
+            capacity:
+              name: capacity
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            energy:
+              name: energy
+              modifiers:
+              - private
+              type:
+                basic: Energy
+                full: zombie.entity.energy.Energy
+            storedEnergy:
+              name: storedEnergy
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - protected
+          methods:
+          - name: DoDebugTooltip
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectTooltip
+                full: zombie.ui.ObjectTooltip
+            - name: arg1
+              type:
+                basic: ObjectTooltip.Layout
+                full: zombie.ui.ObjectTooltip$Layout
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DoTooltip
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectTooltip
+                full: zombie.ui.ObjectTooltip
+            - name: arg1
+              type:
+                basic: ObjectTooltip.Layout
+                full: zombie.ui.ObjectTooltip$Layout
+            return:
+              type:
+                basic: void
+                full: void
+          - name: canDrainFromItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canDrainToItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drainFromItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: drainToItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getEnergy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Energy
+                full: zombie.entity.energy.Energy
+          - name: getEnergyAmount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getEnergyCapacity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getEnergyRatio
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFreeEnergyCapacity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: isEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFull
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadBlueprint
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: ResourceBlueprint
+                full: zombie.entity.components.resources.ResourceBlueprint
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadSync
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: saveSync
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEnergyAmount
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setEnergyType
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transferTo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ResourceEnergy
+                full: zombie.entity.components.resources.ResourceEnergy
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: tryTransferTo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Resource
+                full: zombie.entity.components.resources.Resource
+            return:
+              type:
+                basic: void
+                full: void
+          - name: tryTransferTo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Resource
+                full: zombie.entity.components.resources.Resource
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

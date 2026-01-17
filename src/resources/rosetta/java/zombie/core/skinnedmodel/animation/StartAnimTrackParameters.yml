@@ -1,0 +1,172 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.animation:
+        StartAnimTrackParameters:
+          extends: zombie.util.PooledObject
+          modifiers:
+          - public
+          fields:
+            animName:
+              name: animName
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            deferredBoneAxis:
+              name: deferredBoneAxis
+              modifiers:
+              - public
+              type:
+                basic: BoneAxis
+                full: zombie.core.skinnedmodel.animation.BoneAxis
+            deferredBoneName:
+              name: deferredBoneName
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            deferredRotationScale:
+              name: deferredRotationScale
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            initialWeight:
+              name: initialWeight
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            isLooped:
+              name: isLooped
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            isPrimary:
+              name: isPrimary
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            isRagdoll:
+              name: isRagdoll
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            isReversed:
+              name: isReversed
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            matchingGrappledAnimNode:
+              name: matchingGrappledAnimNode
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            priority:
+              name: priority
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            ragdollMaxTime:
+              name: ragdollMaxTime
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            ragdollStartTime:
+              name: ragdollStartTime
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            speedScale:
+              name: speedScale
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            subLayerBoneWeights:
+              name: subLayerBoneWeights
+              modifiers:
+              - public
+              type:
+                basic: List
+                full: java.util.List<zombie.core.skinnedmodel.advancedanimation.AnimBoneWeight>
+            syncTrackingEnabled:
+              name: syncTrackingEnabled
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            useDeferredMovement:
+              name: useDeferredMovement
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            useDeferredRotation:
+              name: useDeferredRotation
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+          staticFields:
+            s_pool:
+              name: s_pool
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Pool
+                full: zombie.util.Pool<zombie.core.skinnedmodel.animation.StartAnimTrackParameters>
+          constructors:
+          - modifiers:
+            - protected
+          methods:
+          - name: onReleased
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: alloc
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: StartAnimTrackParameters
+                full: zombie.core.skinnedmodel.animation.StartAnimTrackParameters

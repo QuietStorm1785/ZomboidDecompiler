@@ -1,0 +1,63 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.physics:
+        BallisticsController.AimingVectorParameters:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            inout_desiredForward2f:
+              name: inout_desiredForward2f
+              modifiers:
+              - public
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+            out_desiredForward:
+              name: out_desiredForward
+              modifiers:
+              - public
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            out_desiredForwardPitchRads:
+              name: out_desiredForwardPitchRads
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            out_muzzleDirection:
+              name: out_muzzleDirection
+              modifiers:
+              - public
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            out_muzzlePosition:
+              name: out_muzzlePosition
+              modifiers:
+              - public
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            out_targetPosition:
+              name: out_targetPosition
+              modifiers:
+              - public
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: resetOutputs
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

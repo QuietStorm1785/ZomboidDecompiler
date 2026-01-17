@@ -1,0 +1,67 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      fmod.fmod:
+        FMOD_STUDIO_PARAMETER_DESCRIPTION:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            flags:
+              name: flags
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            globalIndex:
+              name: globalIndex
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            id:
+              name: id
+              modifiers:
+              - public
+              type:
+                basic: FMOD_STUDIO_PARAMETER_ID
+                full: fmod.fmod.FMOD_STUDIO_PARAMETER_ID
+            name:
+              name: name
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: FMOD_STUDIO_PARAMETER_ID
+                full: fmod.fmod.FMOD_STUDIO_PARAMETER_ID
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: isGlobal
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean

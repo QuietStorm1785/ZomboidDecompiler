@@ -1,0 +1,1625 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.ui:
+        XuiScript:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            allowDropAlways:
+              name: allowDropAlways
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            anchorBottom:
+              name: anchorBottom
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            anchorLeft:
+              name: anchorLeft
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            anchorRight:
+              name: anchorRight
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            anchorTop:
+              name: anchorTop
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            animationList:
+              name: animationList
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiStringList
+                full: zombie.scripting.ui.XuiScript$XuiStringList
+            animationTime:
+              name: animationTime
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiFloat
+                full: zombie.scripting.ui.XuiScript$XuiFloat
+            backDropTexCol:
+              name: backDropTexCol
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            background:
+              name: background
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            backgroundColor:
+              name: backgroundColor
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            backgroundColorHL:
+              name: backgroundColorHL
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            backgroundColorHLInv:
+              name: backgroundColorHLInv
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            backgroundColorHLVal:
+              name: backgroundColorHLVal
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            backgroundColorMouseOver:
+              name: backgroundColorMouseOver
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            backgroundEmpty:
+              name: backgroundEmpty
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            backgroundHover:
+              name: backgroundHover
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            borderColor:
+              name: borderColor
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            borderColorHL:
+              name: borderColorHL
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            borderColorHLInv:
+              name: borderColorHLInv
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            borderColorHLVal:
+              name: borderColorHLVal
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            borderInput:
+              name: borderInput
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            borderInvalid:
+              name: borderInvalid
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            borderLocked:
+              name: borderLocked
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            borderOutput:
+              name: borderOutput
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            borderValid:
+              name: borderValid
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            children:
+              name: children
+              modifiers:
+              - protected
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ui.XuiScript>
+            choicesColor:
+              name: choicesColor
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            defaultStyle:
+              name: defaultStyle
+              modifiers:
+              - private
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+            displayBackground:
+              name: displayBackground
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            doBackDropTex:
+              name: doBackDropTex
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            doBorderLocked:
+              name: doBorderLocked
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            doHighlight:
+              name: doHighlight
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            doInvalidHighlight:
+              name: doInvalidHighlight
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            doToolTip:
+              name: doToolTip
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            doValidHighlight:
+              name: doValidHighlight
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            drawBackground:
+              name: drawBackground
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            drawBorder:
+              name: drawBorder
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            drawGrid:
+              name: drawGrid
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            enableHeader:
+              name: enableHeader
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            font:
+              name: font
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiFontType
+                full: zombie.scripting.ui.XuiScript$XuiFontType
+            font2:
+              name: font2
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiFontType
+                full: zombie.scripting.ui.XuiScript$XuiFontType
+            font3:
+              name: font3
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiFontType
+                full: zombie.scripting.ui.XuiScript$XuiFontType
+            gridColor:
+              name: gridColor
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            height:
+              name: height
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            hsbFactor:
+              name: hsbFactor
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            icon:
+              name: icon
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiTexture
+                full: zombie.scripting.ui.XuiScript$XuiTexture
+            icon_height:
+              name: icon_height
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            icon_vector:
+              name: icon_vector
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiVector
+                full: zombie.scripting.ui.XuiScript$XuiVector
+            icon_width:
+              name: icon_width
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            icon_x:
+              name: icon_x
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            icon_y:
+              name: icon_y
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            image:
+              name: image
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiTexture
+                full: zombie.scripting.ui.XuiScript$XuiTexture
+            image_height:
+              name: image_height
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            image_vector:
+              name: image_vector
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiVector
+                full: zombie.scripting.ui.XuiScript$XuiVector
+            image_width:
+              name: image_width
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            image_x:
+              name: image_x
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            image_y:
+              name: image_y
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            margin:
+              name: margin
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiSpacing
+                full: zombie.scripting.ui.XuiScript$XuiSpacing
+            marginBottom:
+              name: marginBottom
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            marginLeft:
+              name: marginLeft
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            marginRight:
+              name: marginRight
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            marginTop:
+              name: marginTop
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            maximumHeight:
+              name: maximumHeight
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiFloat
+                full: zombie.scripting.ui.XuiScript$XuiFloat
+            maximumWidth:
+              name: maximumWidth
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiFloat
+                full: zombie.scripting.ui.XuiScript$XuiFloat
+            minimumHeight:
+              name: minimumHeight
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiFloat
+                full: zombie.scripting.ui.XuiScript$XuiFloat
+            minimumWidth:
+              name: minimumWidth
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiFloat
+                full: zombie.scripting.ui.XuiScript$XuiFloat
+            mouseEnabled:
+              name: mouseEnabled
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            mouseOver:
+              name: mouseOver
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            mouseOverText:
+              name: mouseOverText
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiTranslateString
+                full: zombie.scripting.ui.XuiScript$XuiTranslateString
+            moveWithMouse:
+              name: moveWithMouse
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            name:
+              name: name
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiTranslateString
+                full: zombie.scripting.ui.XuiScript$XuiTranslateString
+            padding:
+              name: padding
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiSpacing
+                full: zombie.scripting.ui.XuiScript$XuiSpacing
+            paddingBottom:
+              name: paddingBottom
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            paddingLeft:
+              name: paddingLeft
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            paddingRight:
+              name: paddingRight
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            paddingTop:
+              name: paddingTop
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            pin:
+              name: pin
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            posAlign:
+              name: posAlign
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiVectorPosAlign
+                full: zombie.scripting.ui.XuiScript$XuiVectorPosAlign
+            readAltKeys:
+              name: readAltKeys
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            resizable:
+              name: resizable
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            scaledHeight:
+              name: scaledHeight
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiFloat
+                full: zombie.scripting.ui.XuiScript$XuiFloat
+            scaledWidth:
+              name: scaledWidth
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiFloat
+                full: zombie.scripting.ui.XuiScript$XuiFloat
+            scriptType:
+              name: scriptType
+              modifiers:
+              - protected
+              type:
+                basic: XuiScriptType
+                full: zombie.scripting.ui.XuiScriptType
+            storeItem:
+              name: storeItem
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+            style:
+              name: style
+              modifiers:
+              - private
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+            textAlign:
+              name: textAlign
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiTextAlign
+                full: zombie.scripting.ui.XuiScript$XuiTextAlign
+            textColor:
+              name: textColor
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            texture:
+              name: texture
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiTexture
+                full: zombie.scripting.ui.XuiScript$XuiTexture
+            textureBackground:
+              name: textureBackground
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiTexture
+                full: zombie.scripting.ui.XuiScript$XuiTexture
+            textureColor:
+              name: textureColor
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+            textureOverride:
+              name: textureOverride
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiTexture
+                full: zombie.scripting.ui.XuiScript$XuiTexture
+            tickTexture:
+              name: tickTexture
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiTexture
+                full: zombie.scripting.ui.XuiScript$XuiTexture
+            title:
+              name: title
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiTranslateString
+                full: zombie.scripting.ui.XuiScript$XuiTranslateString
+            toolTipTextItem:
+              name: toolTipTextItem
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiTranslateString
+                full: zombie.scripting.ui.XuiScript$XuiTranslateString
+            toolTipTextLocked:
+              name: toolTipTextLocked
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiTranslateString
+                full: zombie.scripting.ui.XuiScript$XuiTranslateString
+            tooltip:
+              name: tooltip
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiTranslateString
+                full: zombie.scripting.ui.XuiScript$XuiTranslateString
+            vars:
+              name: vars
+              modifiers:
+              - protected
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ui.XuiScript$XuiVar>
+            varsMap:
+              name: varsMap
+              modifiers:
+              - protected
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.scripting.ui.XuiScript$XuiVar>
+            vector:
+              name: vector
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiVector
+                full: zombie.scripting.ui.XuiScript$XuiVector
+            width:
+              name: width
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+            xuiCustomDebug:
+              name: xuiCustomDebug
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiString
+                full: zombie.scripting.ui.XuiScript$XuiString
+            xuiKey:
+              name: xuiKey
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiString
+                full: zombie.scripting.ui.XuiScript$XuiString
+            xuiLayoutName:
+              name: xuiLayoutName
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            xuiLuaClass:
+              name: xuiLuaClass
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiString
+                full: zombie.scripting.ui.XuiScript$XuiString
+            xuiSkin:
+              name: xuiSkin
+              modifiers:
+              - protected
+              type:
+                basic: XuiSkin
+                full: zombie.scripting.ui.XuiSkin
+            xuiStyle:
+              name: xuiStyle
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiString
+                full: zombie.scripting.ui.XuiScript$XuiString
+            xuiUUID:
+              name: xuiUUID
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: XuiScript.XuiUnit
+                full: zombie.scripting.ui.XuiScript$XuiUnit
+          staticFields:
+            xui_prefix:
+              name: xui_prefix
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg3
+              type:
+                basic: XuiScriptType
+                full: zombie.scripting.ui.XuiScriptType
+          methods:
+          - name: Load
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptParser.Block
+                full: zombie.scripting.ScriptParser$Block
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addChild
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addVar
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: T
+                full: T
+          - name: errorWithInfo
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAllowDropAlways
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getAnchorBottom
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getAnchorLeft
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getAnchorRight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getAnchorTop
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getAnimationList
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiStringList
+                full: zombie.scripting.ui.XuiScript$XuiStringList
+          - name: getAnimationTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiFloat
+                full: zombie.scripting.ui.XuiScript$XuiFloat
+          - name: getBackDropTexCol
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBackground
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getBackgroundColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBackgroundColorHL
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBackgroundColorHLInv
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBackgroundColorHLVal
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBackgroundColorMouseOver
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBackgroundEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBackgroundHover
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBorderColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBorderColorHL
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBorderColorHLInv
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBorderColorHLVal
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBorderInput
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBorderInvalid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBorderLocked
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBorderOutput
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getBorderValid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getChildren
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ui.XuiScript>
+          - name: getChoicesColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getDefaultStyle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+          - name: getDisplayBackground
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getDoBackDropTex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getDoBorderLocked
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getDoHighlight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getDoInvalidHighlight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getDoToolTip
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getDoValidHighlight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getDrawBackground
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getDrawBorder
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getDrawGrid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getFont
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiFontType
+                full: zombie.scripting.ui.XuiScript$XuiFontType
+          - name: getFont2
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiFontType
+                full: zombie.scripting.ui.XuiScript$XuiFontType
+          - name: getFont3
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiFontType
+                full: zombie.scripting.ui.XuiScript$XuiFontType
+          - name: getGridColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getHsbFactor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getIcon
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiTexture
+                full: zombie.scripting.ui.XuiScript$XuiTexture
+          - name: getIconVector
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiVector
+                full: zombie.scripting.ui.XuiScript$XuiVector
+          - name: getMargin
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiSpacing
+                full: zombie.scripting.ui.XuiScript$XuiSpacing
+          - name: getMinimumHeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiFloat
+                full: zombie.scripting.ui.XuiScript$XuiFloat
+          - name: getMinimumWidth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiFloat
+                full: zombie.scripting.ui.XuiScript$XuiFloat
+          - name: getMouseEnabled
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getMouseOverText
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiTranslateString
+                full: zombie.scripting.ui.XuiScript$XuiTranslateString
+          - name: getMoveWithMouse
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiTranslateString
+                full: zombie.scripting.ui.XuiScript$XuiTranslateString
+          - name: getPadding
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiSpacing
+                full: zombie.scripting.ui.XuiScript$XuiSpacing
+          - name: getPosAlign
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiVectorPosAlign
+                full: zombie.scripting.ui.XuiScript$XuiVectorPosAlign
+          - name: getScriptType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScriptType
+                full: zombie.scripting.ui.XuiScriptType
+          - name: getStoreItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiBoolean
+                full: zombie.scripting.ui.XuiScript$XuiBoolean
+          - name: getStyle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+          - name: getTextAlign
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiTextAlign
+                full: zombie.scripting.ui.XuiScript$XuiTextAlign
+          - name: getTextColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getTexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiTexture
+                full: zombie.scripting.ui.XuiScript$XuiTexture
+          - name: getTextureBackground
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiTexture
+                full: zombie.scripting.ui.XuiScript$XuiTexture
+          - name: getTextureColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiColor
+                full: zombie.scripting.ui.XuiScript$XuiColor
+          - name: getTextureOverride
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiTexture
+                full: zombie.scripting.ui.XuiScript$XuiTexture
+          - name: getTickTexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiTexture
+                full: zombie.scripting.ui.XuiScript$XuiTexture
+          - name: getTitle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiTranslateString
+                full: zombie.scripting.ui.XuiScript$XuiTranslateString
+          - name: getToolTipTextItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiTranslateString
+                full: zombie.scripting.ui.XuiScript$XuiTranslateString
+          - name: getToolTipTextLocked
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiTranslateString
+                full: zombie.scripting.ui.XuiScript$XuiTranslateString
+          - name: getTooltip
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiTranslateString
+                full: zombie.scripting.ui.XuiScript$XuiTranslateString
+          - name: getVar
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: XuiScript.XuiVar
+                full: zombie.scripting.ui.XuiScript$XuiVar
+          - name: getVars
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ui.XuiScript$XuiVar>
+          - name: getVector
+            modifiers:
+            - public
+            return:
+              type:
+                basic: XuiScript.XuiVector
+                full: zombie.scripting.ui.XuiScript$XuiVector
+          - name: getXuiCustomDebug
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getXuiKey
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getXuiLayoutName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getXuiLuaClass
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getXuiStyle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getXuiUUID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isAnyStyle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDefaultStyle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLayout
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isStyle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: loadVar
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: loadVar
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: logInfo
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: logWithInfo
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: postLoad
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDefaultStyle
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStyle
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setXuiKey
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+          - name: setXuiLuaClass
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+          - name: setXuiStyle
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: tryToSetDefaultStyle
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: warnWithInfo
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: CreateScriptForClass
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: XuiScriptType
+                full: zombie.scripting.ui.XuiScriptType
+            return:
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+          - name: ReadLuaClassValue
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptParser.Block
+                full: zombie.scripting.ScriptParser$Block
+            return:
+              type:
+                basic: String
+                full: java.lang.String

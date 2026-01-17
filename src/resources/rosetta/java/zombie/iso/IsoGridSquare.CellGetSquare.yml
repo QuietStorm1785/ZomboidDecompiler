@@ -1,0 +1,33 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        IsoGridSquare.CellGetSquare:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getGridSquare
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare

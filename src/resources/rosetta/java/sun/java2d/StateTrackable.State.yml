@@ -1,0 +1,84 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.java2d:
+        StateTrackable.State:
+          extends: java.lang.Enum<sun.java2d.StateTrackable$State>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: StateTrackable.State
+                full: sun.java2d.StateTrackable$State[]
+            DYNAMIC:
+              name: DYNAMIC
+              modifiers:
+              - public
+              - static
+              type:
+                basic: StateTrackable.State
+                full: sun.java2d.StateTrackable$State
+            IMMUTABLE:
+              name: IMMUTABLE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: StateTrackable.State
+                full: sun.java2d.StateTrackable$State
+            STABLE:
+              name: STABLE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: StateTrackable.State
+                full: sun.java2d.StateTrackable$State
+            UNTRACKABLE:
+              name: UNTRACKABLE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: StateTrackable.State
+                full: sun.java2d.StateTrackable$State
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: StateTrackable.State
+                full: sun.java2d.StateTrackable$State[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: StateTrackable.State
+                full: sun.java2d.StateTrackable$State
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: StateTrackable.State
+                full: sun.java2d.StateTrackable$State[]

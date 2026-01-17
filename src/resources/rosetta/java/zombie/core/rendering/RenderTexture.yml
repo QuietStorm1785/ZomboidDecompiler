@@ -1,0 +1,319 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.rendering:
+        RenderTexture:
+          extends: zombie.core.rendering.RenderTarget
+          modifiers:
+          - public
+          fields:
+            colour:
+              name: colour
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            colourFormat:
+              name: colourFormat
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            depth:
+              name: depth
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            depthAsTexture:
+              name: depthAsTexture
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            depthFormat:
+              name: depthFormat
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            descriptor:
+              name: descriptor
+              modifiers:
+              - private
+              type:
+                basic: RenderTexture.Descriptor
+                full: zombie.core.rendering.RenderTexture$Descriptor
+            height:
+              name: height
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            length:
+              name: length
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            stencil:
+              name: stencil
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            width:
+              name: width
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            wrappingMode:
+              name: wrappingMode
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            FullScreenTri:
+              name: FullScreenTri
+              modifiers:
+              - private
+              - static
+              type:
+                basic: VertexBufferObject
+                full: zombie.core.skinnedmodel.model.VertexBufferObject
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: RenderTexture.Descriptor
+                full: zombie.core.rendering.RenderTexture$Descriptor
+          methods:
+          - name: AttachTexture
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: BindDepth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: BindDraw
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: BindRead
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: BindStencil
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: BindTexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Copy
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: RenderTexture.Descriptor
+                full: zombie.core.rendering.RenderTexture$Descriptor
+            return:
+              type:
+                basic: void
+                full: void
+          - name: CopyTexture
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: RenderTarget
+                full: zombie.core.rendering.RenderTarget
+            return:
+              type:
+                basic: void
+                full: void
+          - name: CopyTexture
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: RenderTarget
+                full: zombie.core.rendering.RenderTarget
+            - name: arg1
+              type:
+                basic: Rectangle
+                full: org.lwjgl.util.Rectangle
+            - name: arg2
+              type:
+                basic: Rectangle
+                full: org.lwjgl.util.Rectangle
+            return:
+              type:
+                basic: void
+                full: void
+          - name: CreateColourTexture
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: CreateDepthTexture
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: CreateTextureOrBuffer
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GetHeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: GetWidth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: OnCreate
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnDestroy
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Recreate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: RenderTarget
+                full: zombie.core.rendering.RenderTarget
+          staticMethods:
+          - name: GetTarget
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: RenderTexture
+                full: zombie.core.rendering.RenderTexture
+          - name: GetTexture
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: RenderTexture.Descriptor
+                full: zombie.core.rendering.RenderTexture$Descriptor
+            return:
+              type:
+                basic: RenderTexture
+                full: zombie.core.rendering.RenderTexture

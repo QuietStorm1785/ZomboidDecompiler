@@ -1,0 +1,230 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.attributes:
+        Attribute:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          staticFields:
+            HeadCondition:
+              name: HeadCondition
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.Int
+                full: zombie.entity.components.attributes.AttributeType$Int
+            HeadConditionMax:
+              name: HeadConditionMax
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.Int
+                full: zombie.entity.components.attributes.AttributeType$Int
+            OriginX:
+              name: OriginX
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.Int
+                full: zombie.entity.components.attributes.AttributeType$Int
+            OriginY:
+              name: OriginY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.Int
+                full: zombie.entity.components.attributes.AttributeType$Int
+            OriginZ:
+              name: OriginZ
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.Int
+                full: zombie.entity.components.attributes.AttributeType$Int
+            Quality:
+              name: Quality
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.Int
+                full: zombie.entity.components.attributes.AttributeType$Int
+            Sharpness:
+              name: Sharpness
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.Float
+                full: zombie.entity.components.attributes.AttributeType$Float
+            TestBool:
+              name: TestBool
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.Bool
+                full: zombie.entity.components.attributes.AttributeType$Bool
+            TestCategories:
+              name: TestCategories
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.EnumSet
+                full: zombie.entity.components.attributes.AttributeType$EnumSet<zombie.entity.components.attributes.TestEnum>
+            TestCondition:
+              name: TestCondition
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.Float
+                full: zombie.entity.components.attributes.AttributeType$Float
+            TestItemType:
+              name: TestItemType
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.Enum
+                full: zombie.entity.components.attributes.AttributeType$Enum<zombie.entity.components.attributes.TestEnum>
+            TestQuality:
+              name: TestQuality
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.Float
+                full: zombie.entity.components.attributes.AttributeType$Float
+            TestString:
+              name: TestString
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.String
+                full: zombie.entity.components.attributes.AttributeType$String
+            TestString2:
+              name: TestString2
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.String
+                full: zombie.entity.components.attributes.AttributeType$String
+            TestTags:
+              name: TestTags
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.EnumStringSet
+                full: zombie.entity.components.attributes.AttributeType$EnumStringSet<zombie.entity.components.attributes.TestEnum>
+            TestUses:
+              name: TestUses
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.Int
+                full: zombie.entity.components.attributes.AttributeType$Int
+            TimesHeadRepaired:
+              name: TimesHeadRepaired
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AttributeType.Int
+                full: zombie.entity.components.attributes.AttributeType$Int
+            attributeTypeIdMap:
+              name: attributeTypeIdMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.Short, zombie.entity.components.attributes.AttributeType>
+            attributeTypeNameMap:
+              name: attributeTypeNameMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.entity.components.attributes.AttributeType>
+            attributeTypes:
+              name: attributeTypes
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.components.attributes.AttributeType>
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: GetAllTypes
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.components.attributes.AttributeType>
+          - name: TypeFromId
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: short
+                full: short
+            return:
+              type:
+                basic: AttributeType
+                full: zombie.entity.components.attributes.AttributeType
+          - name: TypeFromName
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: AttributeType
+                full: zombie.entity.components.attributes.AttributeType
+          - name: init
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: registerType
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: E
+                full: E

@@ -1,0 +1,34 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      fmod.fmod:
+        FMOD_GUID:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            address:
+              name: address
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+          methods:
+          - name: address
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long

@@ -1,0 +1,267 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.Lua:
+        MapObjects:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          staticFields:
+            onLoad:
+              name: onLoad
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.Lua.MapObjects$Callback>
+            onNew:
+              name: onNew
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.Lua.MapObjects$Callback>
+            params:
+              name: params
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            tempObjects:
+              name: tempObjects
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.IsoObject>
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: OnLoadWithSprite
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: spriteName
+              type:
+                basic: String
+                full: java.lang.String
+            - name: function
+              type:
+                basic: LuaClosure
+                full: se.krka.kahlua.vm.LuaClosure
+            - name: priority
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnLoadWithSprite
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: spriteNames
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            - name: function
+              type:
+                basic: LuaClosure
+                full: se.krka.kahlua.vm.LuaClosure
+            - name: priority
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnNewWithSprite
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: spriteName
+              type:
+                basic: String
+                full: java.lang.String
+            - name: function
+              type:
+                basic: LuaClosure
+                full: se.krka.kahlua.vm.LuaClosure
+            - name: priority
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnNewWithSprite
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: spriteNames
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            - name: function
+              type:
+                basic: LuaClosure
+                full: se.krka.kahlua.vm.LuaClosure
+            - name: priority
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: debugLoadChunk
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: wx
+              type:
+                basic: int
+                full: int
+            - name: wy
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: debugLoadSquare
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: debugNewSquare
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getOnLoad
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: MapObjects.Callback
+                full: zombie.Lua.MapObjects$Callback
+          - name: getOnNew
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: MapObjects.Callback
+                full: zombie.Lua.MapObjects$Callback
+          - name: loadGridSquare
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: newGridSquare
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: square
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reroute
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: prototype
+              type:
+                basic: Prototype
+                full: se.krka.kahlua.vm.Prototype
+            - name: luaClosure
+              type:
+                basic: LuaClosure
+                full: se.krka.kahlua.vm.LuaClosure
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,48 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.vehicles:
+        UI3DScene.Ray:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            direction:
+              name: direction
+              modifiers:
+              - public
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            origin:
+              name: origin
+              modifiers:
+              - public
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            t:
+              name: t
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UI3DScene.Ray
+                full: zombie.vehicles.UI3DScene$Ray
+            return:
+              type:
+                basic: UI3DScene.Ray
+                full: zombie.vehicles.UI3DScene$Ray

@@ -1,0 +1,77 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.population:
+        VoiceStyle:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            bodyTypeDefault:
+              name: bodyTypeDefault
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            name:
+              name: name
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            prefix:
+              name: prefix
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            voiceType:
+              name: voiceType
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getBodyTypeDefault
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPrefix
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getVoiceType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isValid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean

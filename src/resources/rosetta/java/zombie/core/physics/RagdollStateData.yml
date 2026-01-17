@@ -1,0 +1,91 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.physics:
+        RagdollStateData:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            isCalculated:
+              name: isCalculated
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            isContactingVehicle:
+              name: isContactingVehicle
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            isSimulating:
+              name: isSimulating
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            isSimulationMovement:
+              name: isSimulationMovement
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            lastCollidedVehicle:
+              name: lastCollidedVehicle
+              modifiers:
+              - public
+              type:
+                basic: BaseVehicle
+                full: zombie.vehicles.BaseVehicle
+            pelvisDirection:
+              name: pelvisDirection
+              modifiers:
+              - public
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            simulationCharacterForwardAngle:
+              name: simulationCharacterForwardAngle
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            simulationDirection:
+              name: simulationDirection
+              modifiers:
+              - public
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+            simulationRenderedAngle:
+              name: simulationRenderedAngle
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            simulationTimeout:
+              name: simulationTimeout
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,127 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      jdk.internal.access.foreign:
+        MemorySegmentProxy:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: checkAccess
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isSmall
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: scope
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: ScopedMemoryAccess.Scope
+                full: jdk.internal.misc.ScopedMemoryAccess$Scope
+          - name: unsafeGetBase
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: unsafeGetOffset
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: long
+                full: long
+          staticMethods:
+          - name: addOffsets
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            - name: arg2
+              type:
+                basic: MemorySegmentProxy
+                full: jdk.internal.access.foreign.MemorySegmentProxy
+            return:
+              type:
+                basic: long
+                full: long
+          - name: multiplyOffsets
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            - name: arg2
+              type:
+                basic: MemorySegmentProxy
+                full: jdk.internal.access.foreign.MemorySegmentProxy
+            return:
+              type:
+                basic: long
+                full: long
+          - name: overflowException
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: IndexOutOfBoundsException
+                full: java.lang.IndexOutOfBoundsException

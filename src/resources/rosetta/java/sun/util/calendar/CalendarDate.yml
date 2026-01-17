@@ -1,0 +1,698 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.util.calendar:
+        CalendarDate:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          fields:
+            dayOfMonth:
+              name: dayOfMonth
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            dayOfWeek:
+              name: dayOfWeek
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            daylightSaving:
+              name: daylightSaving
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            era:
+              name: era
+              modifiers:
+              - private
+              type:
+                basic: Era
+                full: sun.util.calendar.Era
+            forceStandardTime:
+              name: forceStandardTime
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            fraction:
+              name: fraction
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            hours:
+              name: hours
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            leapYear:
+              name: leapYear
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            locale:
+              name: locale
+              modifiers:
+              - private
+              type:
+                basic: Locale
+                full: java.util.Locale
+            millis:
+              name: millis
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            minutes:
+              name: minutes
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            month:
+              name: month
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            normalized:
+              name: normalized
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            seconds:
+              name: seconds
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            year:
+              name: year
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            zoneOffset:
+              name: zoneOffset
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            zoneinfo:
+              name: zoneinfo
+              modifiers:
+              - private
+              type:
+                basic: TimeZone
+                full: java.util.TimeZone
+          staticFields:
+            FIELD_UNDEFINED:
+              name: FIELD_UNDEFINED
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            TIME_UNDEFINED:
+              name: TIME_UNDEFINED
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - protected
+          - modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: TimeZone
+                full: java.util.TimeZone
+          methods:
+          - name: addDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: addDayOfMonth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: addHours
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: addMillis
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: addMinutes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: addMonth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: addSeconds
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: addTimeOfDay
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: addYear
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: clone
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getDayOfMonth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getDayOfWeek
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getDaylightSaving
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getEra
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Era
+                full: sun.util.calendar.Era
+          - name: getHours
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMillis
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMinutes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMonth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSeconds
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getTimeOfDay
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getYear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getZone
+            modifiers:
+            - public
+            return:
+              type:
+                basic: TimeZone
+                full: java.util.TimeZone
+          - name: getZoneOffset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isDaylightTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLeapYear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isNormalized
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSameDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isStandardTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setDate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: setDayOfMonth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: setDayOfWeek
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDaylightSaving
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEra
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Era
+                full: sun.util.calendar.Era
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: setHours
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: setLeapYear
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLocale
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: Locale
+                full: java.util.Locale
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMillis
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: setMinutes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: setMonth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: setNormalized
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSeconds
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: setStandardTime
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTimeOfDay
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: setTimeOfDay
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setYear
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: setZone
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TimeZone
+                full: java.util.TimeZone
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: setZoneOffset
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

@@ -1,0 +1,41 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.crafting.recipe:
+        ItemDataList.ItemData:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            existingItem:
+              name: existingItem
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            inventoryItem:
+              name: inventoryItem
+              modifiers:
+              - private
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            item:
+              name: item
+              modifiers:
+              - private
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+            processed:
+              name: processed
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+          constructors:
+          - modifiers:
+            - private

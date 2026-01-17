@@ -1,0 +1,41 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      jdk.internal.loader:
+        ClassLoaderValue:
+          extends: jdk.internal.loader.AbstractClassLoaderValue<jdk.internal.loader.ClassLoaderValue<V>,
+            V>
+          modifiers:
+          - public
+          - final
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: isEqualOrDescendantOf
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AbstractClassLoaderValue
+                full: jdk.internal.loader.AbstractClassLoaderValue<?, V>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: key
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ClassLoaderValue
+                full: jdk.internal.loader.ClassLoaderValue<V>
+          - name: key
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object

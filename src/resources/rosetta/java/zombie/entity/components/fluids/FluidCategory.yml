@@ -1,0 +1,206 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.fluids:
+        FluidCategory:
+          extends: java.lang.Enum<zombie.entity.components.fluids.FluidCategory>
+          modifiers:
+          - public
+          - final
+          fields:
+            id:
+              name: id
+              modifiers:
+              - private
+              type:
+                basic: byte
+                full: byte
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory[]
+            Alcoholic:
+              name: Alcoholic
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+            Beverage:
+              name: Beverage
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+            Colors:
+              name: Colors
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+            Dyes:
+              name: Dyes
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+            Fuel:
+              name: Fuel
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+            HairDyes:
+              name: HairDyes
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+            Hazardous:
+              name: Hazardous
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+            Industrial:
+              name: Industrial
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+            Medical:
+              name: Medical
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+            Paint:
+              name: Paint
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+            Poisons:
+              name: Poisons
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+            Water:
+              name: Water
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+            idMap:
+              name: idMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.Byte, zombie.entity.components.fluids.FluidCategory>
+            list:
+              name: list
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.components.fluids.FluidCategory>
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+          methods:
+          - name: getId
+            modifiers:
+            - public
+            return:
+              type:
+                basic: byte
+                full: byte
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory[]
+          - name: FromId
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+          - name: getList
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.components.fluids.FluidCategory>
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: FluidCategory
+                full: zombie.entity.components.fluids.FluidCategory[]

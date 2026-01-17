@@ -1,0 +1,24 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.opengl:
+        IShaderProgramListener:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: callback
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: sender
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+            return:
+              type:
+                basic: void
+                full: void

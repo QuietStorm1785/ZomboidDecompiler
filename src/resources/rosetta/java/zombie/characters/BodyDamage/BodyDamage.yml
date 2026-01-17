@@ -1,0 +1,3271 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.BodyDamage:
+        BodyDamage:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            BodyParts:
+              name: BodyParts
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.BodyDamage.BodyPart>
+            BodyPartsLastState:
+              name: BodyPartsLastState
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.BodyDamage.BodyPartLast>
+            BoredomDecreaseFromReading:
+              name: BoredomDecreaseFromReading
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            BoredomLevel:
+              name: BoredomLevel
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            BurntToDeath:
+              name: BurntToDeath
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            CatchACold:
+              name: CatchACold
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            ColdDamageStage:
+              name: ColdDamageStage
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            ColdProgressionRate:
+              name: ColdProgressionRate
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            ColdSneezeTimerMax:
+              name: ColdSneezeTimerMax
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            ColdSneezeTimerMin:
+              name: ColdSneezeTimerMin
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            ColdStrength:
+              name: ColdStrength
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            ContinualPainIncrease:
+              name: ContinualPainIncrease
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            CurrentNumZombiesVisible:
+              name: CurrentNumZombiesVisible
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            DamageModCount:
+              name: DamageModCount
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            DrunkIncreaseValue:
+              name: DrunkIncreaseValue
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            DrunkReductionValue:
+              name: DrunkReductionValue
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            FakeInfectionLevel:
+              name: FakeInfectionLevel
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            FoodSicknessLevel:
+              name: FoodSicknessLevel
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            HasACold:
+              name: HasACold
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            HealthFromFood:
+              name: HealthFromFood
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            HealthFromFoodTimer:
+              name: HealthFromFoodTimer
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            HealthReductionFromSevereBadMoodles:
+              name: HealthReductionFromSevereBadMoodles
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            InfectionGrowthRate:
+              name: InfectionGrowthRate
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            InfectionLevel:
+              name: InfectionLevel
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            InfectionMortalityDuration:
+              name: InfectionMortalityDuration
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            InfectionTime:
+              name: InfectionTime
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            InitialBitePain:
+              name: InitialBitePain
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            InitialScratchPain:
+              name: InitialScratchPain
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            InitialThumpPain:
+              name: InitialThumpPain
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            InitialWoundPain:
+              name: InitialWoundPain
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            IsFakeInfected:
+              name: IsFakeInfected
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            IsInfected:
+              name: IsInfected
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            IsOnFire:
+              name: IsOnFire
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            MildColdSneezeTimerMax:
+              name: MildColdSneezeTimerMax
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            MildColdSneezeTimerMin:
+              name: MildColdSneezeTimerMin
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            NastyColdSneezeTimerMax:
+              name: NastyColdSneezeTimerMax
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            NastyColdSneezeTimerMin:
+              name: NastyColdSneezeTimerMin
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            OldNumZombiesVisible:
+              name: OldNumZombiesVisible
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            OverallBodyHealth:
+              name: OverallBodyHealth
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            PainReductionFromMeds:
+              name: PainReductionFromMeds
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            PanicIncreaseValue:
+              name: PanicIncreaseValue
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            PanicIncreaseValueFrame:
+              name: PanicIncreaseValueFrame
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            PanicReductionValue:
+              name: PanicReductionValue
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            ParentChar:
+              name: ParentChar
+              modifiers:
+              - public
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            PoisonLevel:
+              name: PoisonLevel
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            ReducedHealthAddition:
+              name: ReducedHealthAddition
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            RemotePainLevel:
+              name: RemotePainLevel
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            SeverlyReducedHealthAddition:
+              name: SeverlyReducedHealthAddition
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            SleepingHealthAddition:
+              name: SleepingHealthAddition
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            SmokerSneezeTimerMax:
+              name: SmokerSneezeTimerMax
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            SmokerSneezeTimerMin:
+              name: SmokerSneezeTimerMin
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            SneezeCoughActive:
+              name: SneezeCoughActive
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            SneezeCoughDelay:
+              name: SneezeCoughDelay
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            SneezeCoughTime:
+              name: SneezeCoughTime
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            StandardHealthAddition:
+              name: StandardHealthAddition
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            StandardHealthFromFoodTime:
+              name: StandardHealthFromFoodTime
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            StandardPainReductionWhenWell:
+              name: StandardPainReductionWhenWell
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            StartedDraggingCorpse:
+              name: StartedDraggingCorpse
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            Temperature:
+              name: Temperature
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            TimeToSneezeOrCough:
+              name: TimeToSneezeOrCough
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            UnhappynessLevel:
+              name: UnhappynessLevel
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            WasDraggingCorpse:
+              name: WasDraggingCorpse
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            Wetness:
+              name: Wetness
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            coldReduction:
+              name: coldReduction
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            discomfortLevel:
+              name: discomfortLevel
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            lastTemperature:
+              name: lastTemperature
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            painReduction:
+              name: painReduction
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            reduceFakeInfection:
+              name: reduceFakeInfection
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            thermoregulator:
+              name: thermoregulator
+              modifiers:
+              - private
+              type:
+                basic: Thermoregulator
+                full: zombie.characters.BodyDamage.Thermoregulator
+          staticFields:
+            InfectionLevelToZombify:
+              name: InfectionLevelToZombify
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            behindStr:
+              name: behindStr
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            leftStr:
+              name: leftStr
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            rightStr:
+              name: rightStr
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: ParentCharacter
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          methods:
+          - name: AddDamage
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            - name: Val
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: AddDamage
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            - name: val
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: AddGeneralHealth
+            modifiers:
+            - public
+            parameters:
+            - name: Val
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: AddRandomDamage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: AddRandomDamageFromZombie
+            modifiers:
+            - public
+            parameters:
+            - name: zombie
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            - name: hitReaction
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: "This gonna decide the strength of the damage you'll get.\n Getting\
+              \ surrounded can also trigger an instant death animation."
+          - name: DamageFromAnimal
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoAnimal
+                full: zombie.characters.animals.IsoAnimal
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DamageFromWeapon
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: HandWeapon
+                full: zombie.inventory.types.HandWeapon
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DisableFakeInfection
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: DrawUntexturedQuad
+            modifiers:
+            - public
+            parameters:
+            - name: X
+              type:
+                basic: int
+                full: int
+            - name: Y
+              type:
+                basic: int
+                full: int
+            - name: Width
+              type:
+                basic: int
+                full: int
+            - name: Height
+              type:
+                basic: int
+                full: int
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: a
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: GetBaseCorpseSickness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: HasInjury
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IncreasePanic
+            modifiers:
+            - public
+            parameters:
+            - name: NumNewZombiesSeen
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: IncreasePanicFloat
+            modifiers:
+            - public
+            parameters:
+            - name: delta
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: IsBandaged
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsBandaged
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsBitten
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsBitten
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsBleeding
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsBleeding
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsBleedingStemmed
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsBleedingStemmed
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsCauterized
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsCauterized
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsCut
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsDeepWounded
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsFakeInfected
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsFakeInfected
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsInfected
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsInfected
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsInfected
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsOnFire
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsScratched
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsScratched
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsSneezingCoughing
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: IsStitched
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsStitched
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsWounded
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsWounded
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: JustAteFood
+            modifiers:
+            - public
+            parameters:
+            - name: NewFood
+              type:
+                basic: Food
+                full: zombie.inventory.types.Food
+            - name: percentage
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: JustAteFood
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Food
+                full: zombie.inventory.types.Food
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: JustAteFood
+            modifiers:
+            - public
+            parameters:
+            - name: NewFood
+              type:
+                basic: Food
+                full: zombie.inventory.types.Food
+            return:
+              type:
+                basic: void
+                full: void
+          - name: JustDrankBooze
+            modifiers:
+            - public
+            parameters:
+            - name: food
+              type:
+                basic: Food
+                full: zombie.inventory.types.Food
+            - name: percentage
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: JustDrankBoozeFluid
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: JustReadSomething
+            modifiers:
+            - public
+            parameters:
+            - name: lit
+              type:
+                basic: Literature
+                full: zombie.inventory.types.Literature
+            return:
+              type:
+                basic: void
+                full: void
+          - name: JustTookPainMeds
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: JustTookPill
+            modifiers:
+            - public
+            parameters:
+            - name: Pill
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnFire
+            modifiers:
+            - public
+            parameters:
+            - name: OnFire
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: ReduceGeneralHealth
+            modifiers:
+            - public
+            parameters:
+            - name: Val
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: ReducePanic
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RestoreToFullHealth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetBandaged
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            - name: Bandaged
+              type:
+                basic: boolean
+                full: boolean
+            - name: bandageLife
+              type:
+                basic: float
+                full: float
+            - name: isAlcoholic
+              type:
+                basic: boolean
+                full: boolean
+            - name: bandageType
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetBitten
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            - name: Bitten
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetBitten
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            - name: Bitten
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetBitten
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            - name: Bitten
+              type:
+                basic: boolean
+                full: boolean
+            - name: Infected
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetBleeding
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            - name: Bleeding
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetBleeding
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            - name: Bleeding
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetBleedingStemmed
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            - name: BleedingStemmed
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetBleedingStemmed
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            - name: BleedingStemmed
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetCauterized
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetCauterized
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetCut
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            - name: Cut
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetScratched
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            - name: Scratched
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetScratched
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            - name: Scratched
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetScratchedFromWeapon
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            - name: Scratched
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetWounded
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            - name: Wounded
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetWounded
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            - name: Wounded
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: ShowDebugInfo
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: TriggerSneezeCough
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UpdateBoredom
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UpdateCold
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UpdateDiscomfort
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UpdateDraggingCorpse
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UpdateIllness
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UpdatePanicState
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UpdateStrength
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UpdateTemperatureState
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UpdateWetness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: UseBandageOnMostNeededPart
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: WasBurntToDeath
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addStiffness
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: BodyPart
+                full: zombie.characters.BodyDamage.BodyPart
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addStiffness
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: applyDamageFromWeapon
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: areBodyPartsBleeding
+            modifiers:
+            - public
+            parameters:
+            - name: partA
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            - name: partB
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: Returns TRUE if either body part is bleeding. ie. A OR B
+          - name: calculateOverallHealth
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: decreaseBodyWetness
+            modifiers:
+            - public
+            parameters:
+            - name: amount
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: doBodyPartsHaveInjuries
+            modifiers:
+            - public
+            parameters:
+            - name: partA
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            - name: partB
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: Returns TRUE if either body part is injured. ie. A OR B
+          - name: doesBodyPartHaveInjury
+            modifiers:
+            - public
+            parameters:
+            - name: part
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getApparentInfectionLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBodyPart
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: BodyPart
+                full: zombie.characters.BodyDamage.BodyPart
+          - name: getBodyPartHealth
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBodyPartHealth
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBodyPartName
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPart
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getBodyPartName
+            modifiers:
+            - public
+            parameters:
+            - name: BodyPartIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getBodyParts
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.BodyDamage.BodyPart>
+              notes: the BodyParts
+          - name: getBodyPartsLastState
+            modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: BodyPartLast
+                full: zombie.characters.BodyDamage.BodyPartLast
+          - name: getBoredomDecreaseFromReading
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the BoredomDecreaseFromReading
+          - name: getBoredomLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCatchACold
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the CatchACold
+          - name: getColdDamageStage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getColdProgressionRate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the ColdProgressionRate
+          - name: getColdReduction
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getColdSneezeTimerMax
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the ColdSneezeTimerMax
+          - name: getColdSneezeTimerMin
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the ColdSneezeTimerMin
+          - name: getColdStrength
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getContinualPainIncrease
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the ContinualPainIncrease
+          - name: getCurrentNumZombiesVisible
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the CurrentNumZombiesVisible
+          - name: getCurrentTimeForInfection
+            modifiers:
+            - private
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDamageFromPills
+            modifiers:
+            - private
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDamageModCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the DamageModCount
+          - name: getDiscomfortLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDrunkIncreaseValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the DrunkIncreaseValue
+          - name: getDrunkReductionValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the DrunkReductionValue
+          - name: getFakeInfectionLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the FakeInfectionLevel
+          - name: getFoodSicknessLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getGeneralWoundInfectionLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getHealth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getHealthFromFood
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the HealthFromFood
+          - name: getHealthFromFoodTimeByHunger
+            modifiers:
+            - private
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getHealthFromFoodTimer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the HealthFromFoodTimer
+          - name: getHealthReductionFromSevereBadMoodles
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the HealthReductionFromSevereBadMoodles
+          - name: getInfectionGrowthRate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the InfectionGrowthRate
+          - name: getInfectionLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getInfectionMortalityDuration
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getInfectionTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getInitialBitePain
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the InitialBitePain
+          - name: getInitialScratchPain
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the InitialScratchPain
+          - name: getInitialThumpPain
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the InitialThumpPain
+          - name: getInitialWoundPain
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the InitialWoundPain
+          - name: getMildColdSneezeTimerMax
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the MildColdSneezeTimerMax
+          - name: getMildColdSneezeTimerMin
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the MildColdSneezeTimerMin
+          - name: getNastyColdSneezeTimerMax
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the NastyColdSneezeTimerMax
+          - name: getNastyColdSneezeTimerMin
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the NastyColdSneezeTimerMin
+          - name: getNumPartsBitten
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getNumPartsBleeding
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getNumPartsScratched
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getOldNumZombiesVisible
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the OldNumZombiesVisible
+          - name: getOverallBodyHealth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the OverallBodyHealth
+          - name: getPainReduction
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getPainReductionFromMeds
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the PainReductionFromMeds
+          - name: getPanicIncreaseValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the PanicIncreaseValue
+          - name: getPanicIncreaseValueFrame
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getPanicReductionValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the PanicReductionValue
+          - name: getParentChar
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+              notes: the ParentChar
+          - name: getPoisonLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getReducedHealthAddition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the ReducedHealthAddition
+          - name: getRemotePainLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSeverlyReducedHealthAddition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the SeverlyReducedHealthAddition
+          - name: getSleepingHealthAddition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the SleepingHealthAddition
+          - name: getSmokerSneezeTimerMax
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSmokerSneezeTimerMin
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getSneezeCoughActive
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the SneezeCoughActive
+          - name: getSneezeCoughDelay
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the SneezeCoughDelay
+          - name: getSneezeCoughTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the SneezeCoughTime
+          - name: getStandardHealthAddition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the StandardHealthAddition
+          - name: getStandardHealthFromFoodTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the StandardHealthFromFoodTime
+          - name: getStandardPainReductionWhenWell
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the StandardPainReductionWhenWell
+          - name: getTemperature
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the body temperature (updated by lua)
+          - name: getTemperatureChangeTick
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getThermoregulator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Thermoregulator
+                full: zombie.characters.BodyDamage.Thermoregulator
+          - name: getTimeToSneezeOrCough
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getUnhappynessLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWasDraggingCorpse
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getWetness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: increaseBodyWetness
+            modifiers:
+            - public
+            parameters:
+            - name: amount
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isBodyPartBleeding
+            modifiers:
+            - public
+            parameters:
+            - name: part
+              type:
+                basic: BodyPartType
+                full: zombie.characters.BodyDamage.BodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: Returns TRUE if the specified body part's bleeding time is greater
+              than 0.
+          - name: isBurntToDeath
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the BurntToDeath
+          - name: isHasACold
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the HasACold
+          - name: isInf
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the inf
+          - name: isInfected
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isIsFakeInfected
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the IsFakeInfected
+          - name: isIsOnFire
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the IsOnFire
+          - name: isNeckBleeding
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isReduceFakeInfection
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: input
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadMainFields
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: pickMortalityDuration
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: output
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: saveMainFields
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBodyPartsLastState
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBoredomDecreaseFromReading
+            modifiers:
+            - public
+            parameters:
+            - name: BoredomDecreaseFromReading
+              type:
+                basic: float
+                full: float
+              notes: the BoredomDecreaseFromReading to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBoredomLevel
+            modifiers:
+            - public
+            parameters:
+            - name: BoredomLevel
+              type:
+                basic: float
+                full: float
+              notes: the BoredomLevel to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBurntToDeath
+            modifiers:
+            - public
+            parameters:
+            - name: BurntToDeath
+              type:
+                basic: boolean
+                full: boolean
+              notes: the BurntToDeath to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCatchACold
+            modifiers:
+            - public
+            parameters:
+            - name: CatchACold
+              type:
+                basic: float
+                full: float
+              notes: the CatchACold to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setColdDamageStage
+            modifiers:
+            - public
+            parameters:
+            - name: coldDamageStage
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setColdProgressionRate
+            modifiers:
+            - public
+            parameters:
+            - name: ColdProgressionRate
+              type:
+                basic: float
+                full: float
+              notes: the ColdProgressionRate to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setColdReduction
+            modifiers:
+            - public
+            parameters:
+            - name: coldReduction
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setColdSneezeTimerMax
+            modifiers:
+            - public
+            parameters:
+            - name: ColdSneezeTimerMax
+              type:
+                basic: int
+                full: int
+              notes: the ColdSneezeTimerMax to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setColdSneezeTimerMin
+            modifiers:
+            - public
+            parameters:
+            - name: ColdSneezeTimerMin
+              type:
+                basic: int
+                full: int
+              notes: the ColdSneezeTimerMin to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setColdStrength
+            modifiers:
+            - public
+            parameters:
+            - name: ColdStrength
+              type:
+                basic: float
+                full: float
+              notes: the ColdStrength to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setContinualPainIncrease
+            modifiers:
+            - public
+            parameters:
+            - name: ContinualPainIncrease
+              type:
+                basic: float
+                full: float
+              notes: the ContinualPainIncrease to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCurrentNumZombiesVisible
+            modifiers:
+            - public
+            parameters:
+            - name: CurrentNumZombiesVisible
+              type:
+                basic: int
+                full: int
+              notes: the CurrentNumZombiesVisible to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDamageModCount
+            modifiers:
+            - public
+            parameters:
+            - name: DamageModCount
+              type:
+                basic: int
+                full: int
+              notes: the DamageModCount to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDiscomfortLevel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDrunkIncreaseValue
+            modifiers:
+            - public
+            parameters:
+            - name: DrunkIncreaseValue
+              type:
+                basic: float
+                full: float
+              notes: the DrunkIncreaseValue to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDrunkReductionValue
+            modifiers:
+            - public
+            parameters:
+            - name: DrunkReductionValue
+              type:
+                basic: float
+                full: float
+              notes: the DrunkReductionValue to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFakeInfectionLevel
+            modifiers:
+            - public
+            parameters:
+            - name: FakeInfectionLevel
+              type:
+                basic: float
+                full: float
+              notes: the FakeInfectionLevel to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFoodSicknessLevel
+            modifiers:
+            - public
+            parameters:
+            - name: foodSicknessLevel
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHasACold
+            modifiers:
+            - public
+            parameters:
+            - name: HasACold
+              type:
+                basic: boolean
+                full: boolean
+              notes: the HasACold to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHealthFromFood
+            modifiers:
+            - public
+            parameters:
+            - name: HealthFromFood
+              type:
+                basic: float
+                full: float
+              notes: the HealthFromFood to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHealthFromFoodTimer
+            modifiers:
+            - public
+            parameters:
+            - name: HealthFromFoodTimer
+              type:
+                basic: float
+                full: float
+              notes: the HealthFromFoodTimer to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHealthReductionFromSevereBadMoodles
+            modifiers:
+            - public
+            parameters:
+            - name: HealthReductionFromSevereBadMoodles
+              type:
+                basic: float
+                full: float
+              notes: the HealthReductionFromSevereBadMoodles to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInf
+            modifiers:
+            - public
+            parameters:
+            - name: inf
+              type:
+                basic: boolean
+                full: boolean
+              notes: the inf to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInfected
+            modifiers:
+            - public
+            parameters:
+            - name: infected
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInfectionGrowthRate
+            modifiers:
+            - public
+            parameters:
+            - name: InfectionGrowthRate
+              type:
+                basic: float
+                full: float
+              notes: the InfectionGrowthRate to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInfectionLevel
+            modifiers:
+            - public
+            parameters:
+            - name: InfectionLevel
+              type:
+                basic: float
+                full: float
+              notes: the InfectionLevel to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInfectionMortalityDuration
+            modifiers:
+            - public
+            parameters:
+            - name: worldHours
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInfectionTime
+            modifiers:
+            - public
+            parameters:
+            - name: worldHours
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInitialBitePain
+            modifiers:
+            - public
+            parameters:
+            - name: InitialBitePain
+              type:
+                basic: float
+                full: float
+              notes: the InitialBitePain to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInitialScratchPain
+            modifiers:
+            - public
+            parameters:
+            - name: InitialScratchPain
+              type:
+                basic: float
+                full: float
+              notes: the InitialScratchPain to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInitialThumpPain
+            modifiers:
+            - public
+            parameters:
+            - name: InitialThumpPain
+              type:
+                basic: float
+                full: float
+              notes: the InitialThumpPain to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setInitialWoundPain
+            modifiers:
+            - public
+            parameters:
+            - name: InitialWoundPain
+              type:
+                basic: float
+                full: float
+              notes: the InitialWoundPain to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsFakeInfected
+            modifiers:
+            - public
+            parameters:
+            - name: IsFakeInfected
+              type:
+                basic: boolean
+                full: boolean
+              notes: the IsFakeInfected to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsOnFire
+            modifiers:
+            - public
+            parameters:
+            - name: IsOnFire
+              type:
+                basic: boolean
+                full: boolean
+              notes: the IsOnFire to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMildColdSneezeTimerMax
+            modifiers:
+            - public
+            parameters:
+            - name: MildColdSneezeTimerMax
+              type:
+                basic: int
+                full: int
+              notes: the MildColdSneezeTimerMax to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMildColdSneezeTimerMin
+            modifiers:
+            - public
+            parameters:
+            - name: MildColdSneezeTimerMin
+              type:
+                basic: int
+                full: int
+              notes: the MildColdSneezeTimerMin to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNastyColdSneezeTimerMax
+            modifiers:
+            - public
+            parameters:
+            - name: NastyColdSneezeTimerMax
+              type:
+                basic: int
+                full: int
+              notes: the NastyColdSneezeTimerMax to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNastyColdSneezeTimerMin
+            modifiers:
+            - public
+            parameters:
+            - name: NastyColdSneezeTimerMin
+              type:
+                basic: int
+                full: int
+              notes: the NastyColdSneezeTimerMin to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOldNumZombiesVisible
+            modifiers:
+            - public
+            parameters:
+            - name: OldNumZombiesVisible
+              type:
+                basic: int
+                full: int
+              notes: the OldNumZombiesVisible to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOverallBodyHealth
+            modifiers:
+            - public
+            parameters:
+            - name: OverallBodyHealth
+              type:
+                basic: float
+                full: float
+              notes: the OverallBodyHealth to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPainReduction
+            modifiers:
+            - public
+            parameters:
+            - name: painReduction
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPainReductionFromMeds
+            modifiers:
+            - public
+            parameters:
+            - name: PainReductionFromMeds
+              type:
+                basic: float
+                full: float
+              notes: the PainReductionFromMeds to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPanicIncreaseValue
+            modifiers:
+            - public
+            parameters:
+            - name: PanicIncreaseValue
+              type:
+                basic: float
+                full: float
+              notes: the PanicIncreaseValue to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPanicReductionValue
+            modifiers:
+            - public
+            parameters:
+            - name: PanicReductionValue
+              type:
+                basic: float
+                full: float
+              notes: the PanicReductionValue to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setParentChar
+            modifiers:
+            - public
+            parameters:
+            - name: ParentChar
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+              notes: the ParentChar to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPoisonLevel
+            modifiers:
+            - public
+            parameters:
+            - name: poisonLevel
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setReduceFakeInfection
+            modifiers:
+            - public
+            parameters:
+            - name: reduceFakeInfection
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setReducedHealthAddition
+            modifiers:
+            - public
+            parameters:
+            - name: ReducedHealthAddition
+              type:
+                basic: float
+                full: float
+              notes: the ReducedHealthAddition to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRemotePainLevel
+            modifiers:
+            - public
+            parameters:
+            - name: painLevel
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setScratchedWindow
+            modifiers:
+            - public
+            return:
+              type:
+                basic: BodyPart
+                full: zombie.characters.BodyDamage.BodyPart
+          - name: setSeverlyReducedHealthAddition
+            modifiers:
+            - public
+            parameters:
+            - name: SeverlyReducedHealthAddition
+              type:
+                basic: float
+                full: float
+              notes: the SeverlyReducedHealthAddition to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSleepingHealthAddition
+            modifiers:
+            - public
+            parameters:
+            - name: SleepingHealthAddition
+              type:
+                basic: float
+                full: float
+              notes: the SleepingHealthAddition to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSneezeCoughActive
+            modifiers:
+            - public
+            parameters:
+            - name: SneezeCoughActive
+              type:
+                basic: int
+                full: int
+              notes: the SneezeCoughActive to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSneezeCoughDelay
+            modifiers:
+            - public
+            parameters:
+            - name: SneezeCoughDelay
+              type:
+                basic: int
+                full: int
+              notes: the SneezeCoughDelay to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSneezeCoughTime
+            modifiers:
+            - public
+            parameters:
+            - name: SneezeCoughTime
+              type:
+                basic: int
+                full: int
+              notes: the SneezeCoughTime to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStandardHealthAddition
+            modifiers:
+            - public
+            parameters:
+            - name: StandardHealthAddition
+              type:
+                basic: float
+                full: float
+              notes: the StandardHealthAddition to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStandardHealthFromFoodTime
+            modifiers:
+            - public
+            parameters:
+            - name: StandardHealthFromFoodTime
+              type:
+                basic: int
+                full: int
+              notes: the StandardHealthFromFoodTime to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStandardPainReductionWhenWell
+            modifiers:
+            - public
+            parameters:
+            - name: StandardPainReductionWhenWell
+              type:
+                basic: float
+                full: float
+              notes: the StandardPainReductionWhenWell to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTemperature
+            modifiers:
+            - public
+            parameters:
+            - name: t
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTimeToSneezeOrCough
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUnhappynessLevel
+            modifiers:
+            - public
+            parameters:
+            - name: UnhappynessLevel
+              type:
+                basic: float
+                full: float
+              notes: the UnhappynessLevel to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWasDraggingCorpse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWetness
+            modifiers:
+            - public
+            parameters:
+            - name: Wetness
+              type:
+                basic: float
+                full: float
+              notes: the Wetness to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: splatBloodFloor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: splatBloodFloorBig
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: damageFromSpikedArmor
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: HandWeapon
+                full: zombie.inventory.types.HandWeapon
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getSicknessFromCorpsesRate
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: corpseCount
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: isSpikedPart
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean

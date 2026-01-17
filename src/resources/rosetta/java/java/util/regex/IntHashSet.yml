@@ -1,0 +1,73 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util.regex:
+        IntHashSet:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            entries:
+              name: entries
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int[]
+            hashes:
+              name: hashes
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int[]
+            pos:
+              name: pos
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: add
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: contains
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: expand
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void

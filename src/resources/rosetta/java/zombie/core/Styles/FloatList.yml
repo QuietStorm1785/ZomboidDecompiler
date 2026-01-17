@@ -1,0 +1,207 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.Styles:
+        FloatList:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: Quickly hacked together expandable list of floats
+          fields:
+            count:
+              name: count
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            expandStyle:
+              name: expandStyle
+              modifiers:
+              - private
+              type:
+                basic: FloatList.ExpandStyle
+                full: zombie.core.Styles.FloatList$ExpandStyle
+            value:
+              name: value
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float[]
+          staticFields:
+            serialVersionUID:
+              name: serialVersionUID
+              modifiers:
+              - private
+              - static
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - public
+            notes: FloatList constructor comment.
+          - modifiers:
+            - public
+            parameters:
+            - name: size
+              type:
+                basic: int
+                full: int
+            notes: FloatList constructor comment.
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FloatList.ExpandStyle
+                full: zombie.core.Styles.FloatList$ExpandStyle
+            - name: arg1
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: add
+            modifiers:
+            - public
+            parameters:
+            - name: f
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+            notes: add method comment.
+          - name: addAll
+            modifiers:
+            - public
+            parameters:
+            - name: f
+              type:
+                basic: float
+                full: float[]
+            return:
+              type:
+                basic: void
+                full: void
+            notes: add method comment.
+          - name: addAll
+            modifiers:
+            - public
+            parameters:
+            - name: f
+              type:
+                basic: FloatList
+                full: zombie.core.Styles.FloatList
+            return:
+              type:
+                basic: void
+                full: void
+            notes: add method comment.
+          - name: array
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float[]
+            notes: toArray method comment.
+          - name: capacity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+            notes: "Insert the method's description here. Creation date: (11/03/2001\n\
+              \ 17:19:01)"
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+            notes: clear method comment.
+          - name: ensureCapacity
+            modifiers:
+            - public
+            parameters:
+            - name: size
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Ensure the list is at least 'size' elements big.
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+            notes: get method comment.
+          - name: isEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: isEmpty method comment.
+          - name: remove
+            modifiers:
+            - public
+            parameters:
+            - name: idx
+              type:
+                basic: int
+                full: int
+              notes: The index of the element to remove
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the removed value
+            notes: Remove an element and return it.
+          - name: size
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+            notes: size method comment.
+          - name: toArray
+            modifiers:
+            - public
+            parameters:
+            - name: dest
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Stash everything in an array.
+          - name: trimToSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Pack list to its minimum size.

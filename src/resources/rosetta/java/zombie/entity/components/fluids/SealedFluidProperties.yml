@@ -1,0 +1,659 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.fluids:
+        SealedFluidProperties:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            alcohol:
+              name: alcohol
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            calories:
+              name: calories
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            carbohydrates:
+              name: carbohydrates
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            enduranceChange:
+              name: enduranceChange
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            fatigueChange:
+              name: fatigueChange
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            fluReduction:
+              name: fluReduction
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            foodSicknessReduction:
+              name: foodSicknessReduction
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            hungerChange:
+              name: hungerChange
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            lipids:
+              name: lipids
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            painReduction:
+              name: painReduction
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            poison:
+              name: poison
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            proteins:
+              name: proteins
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            stressChange:
+              name: stressChange
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            thirstChange:
+              name: thirstChange
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            unhappyChange:
+              name: unhappyChange
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          staticFields:
+            Str_Alcohol:
+              name: Str_Alcohol
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Str_Calories:
+              name: Str_Calories
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Str_Carbohydrates:
+              name: Str_Carbohydrates
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Str_Endurance:
+              name: Str_Endurance
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Str_Fatigue:
+              name: Str_Fatigue
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Str_Flu:
+              name: Str_Flu
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Str_FoodSickness:
+              name: Str_FoodSickness
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Str_Hunger:
+              name: Str_Hunger
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Str_Lipids:
+              name: Str_Lipids
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Str_Pain:
+              name: Str_Pain
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Str_Proteins:
+              name: Str_Proteins
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Str_Stress:
+              name: Str_Stress
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Str_Thirst:
+              name: Str_Thirst
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Str_Unhappy:
+              name: Str_Unhappy
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: addFromMultiplied
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: SealedFluidProperties
+                full: zombie.entity.components.fluids.SealedFluidProperties
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clear
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAlcohol
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCalories
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCarbohydrates
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getEnduranceChange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFatigueChange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFluReduction
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFoodSicknessReduction
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getHungerChange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getLipids
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getPainReduction
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getPoison
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getProteins
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getStressChange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getThirstChange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getUnhappyChange
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: hasProperties
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAlcohol
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCalories
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCarbohydrates
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEffects
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEnduranceChange
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFatigueChange
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFluReduction
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFoodSicknessReduction
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHungerChange
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLipids
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNutrients
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPainReduction
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPoison
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setProteins
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setReductions
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStressChange
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setThirstChange
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUnhappyChange
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,111 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.net:
+        InetSocketAddress.InetSocketAddressHolder:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            addr:
+              name: addr
+              modifiers:
+              - private
+              type:
+                basic: InetAddress
+                full: java.net.InetAddress
+            hostname:
+              name: hostname
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            port:
+              name: port
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: InetAddress
+                full: java.net.InetAddress
+            - name: arg2
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: equals
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getAddress
+            modifiers:
+            - private
+            return:
+              type:
+                basic: InetAddress
+                full: java.net.InetAddress
+          - name: getHostName
+            modifiers:
+            - private
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getHostString
+            modifiers:
+            - private
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPort
+            modifiers:
+            - private
+            return:
+              type:
+                basic: int
+                full: int
+          - name: hashCode
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isUnresolved
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

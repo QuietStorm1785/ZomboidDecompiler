@@ -1,0 +1,70 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.attributes:
+        AttributeInstance.Numeric:
+          extends: zombie.entity.components.attributes.AttributeInstance<C, T>
+          modifiers:
+          - public
+          - abstract
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: floatValue
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: fromFloat
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getDisplayAsBarUnit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getFloatValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getIntValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isDisplayAsBar
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRequiresValidation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean

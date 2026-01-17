@@ -1,0 +1,96 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.objects:
+        IsoMannequin.Drawer:
+          extends: zombie.core.textures.TextureDraw$GenericDrawer
+          modifiers:
+          - package
+          - final
+          fields:
+            bRendered:
+              name: bRendered
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            m_animPlayerAngle:
+              name: m_animPlayerAngle
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            this$0:
+              name: this$0
+              modifiers:
+              - package
+              type:
+                basic: IsoMannequin
+                full: zombie.iso.objects.IsoMannequin
+            x:
+              name: x
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            y:
+              name: y
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            z:
+              name: z
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoMannequin
+                full: zombie.iso.objects.IsoMannequin
+          methods:
+          - name: init
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: postRender
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,113 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel:
+        DeadBodyAtlas.AtlasEntry:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          - final
+          fields:
+            atlas:
+              name: atlas
+              modifiers:
+              - public
+              type:
+                basic: DeadBodyAtlas.Atlas
+                full: zombie.core.skinnedmodel.DeadBodyAtlas$Atlas
+            h:
+              name: h
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            key:
+              name: key
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            lightKey:
+              name: lightKey
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            offsetX:
+              name: offsetX
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            offsetY:
+              name: offsetY
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            ready:
+              name: ready
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            shadowParams:
+              name: shadowParams
+              modifiers:
+              - public
+              type:
+                basic: ShadowParams
+                full: zombie.iso.objects.ShadowParams
+            tex:
+              name: tex
+              modifiers:
+              - public
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            updateCounter:
+              name: updateCounter
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            w:
+              name: w
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: Reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

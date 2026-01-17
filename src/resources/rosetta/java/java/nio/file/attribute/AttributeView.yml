@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.nio.file.attribute:
+        AttributeView:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "An object that provides a read-only or updatable view of non-opaque\n\
+            \ values associated with an object in a filesystem. This interface is\
+            \ extended\n or implemented by specific attribute views that define the\
+            \ attributes\n supported by the view. A specific attribute view will typically\
+            \ define\n type-safe methods to read or update the attributes that it\
+            \ supports."
+          methods:
+          - name: name
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the name of the attribute view
+            notes: Returns the name of the attribute view.

@@ -1,0 +1,149 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.model:
+        VertexBufferObject.VertexArray:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            m_buffer:
+              name: m_buffer
+              modifiers:
+              - public
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            m_format:
+              name: m_format
+              modifiers:
+              - public
+              type:
+                basic: VertexBufferObject.VertexFormat
+                full: zombie.core.skinnedmodel.model.VertexBufferObject$VertexFormat
+            m_numVertices:
+              name: m_numVertices
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: format
+              type:
+                basic: VertexBufferObject.VertexFormat
+                full: zombie.core.skinnedmodel.model.VertexBufferObject$VertexFormat
+            - name: numVertices
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: getElementFloat
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: setElement
+            modifiers:
+            - public
+            parameters:
+            - name: vertex
+              type:
+                basic: int
+                full: int
+            - name: element
+              type:
+                basic: int
+                full: int
+            - name: v1
+              type:
+                basic: float
+                full: float
+            - name: v2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setElement
+            modifiers:
+            - public
+            parameters:
+            - name: vertex
+              type:
+                basic: int
+                full: int
+            - name: element
+              type:
+                basic: int
+                full: int
+            - name: v1
+              type:
+                basic: float
+                full: float
+            - name: v2
+              type:
+                basic: float
+                full: float
+            - name: v3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setElement
+            modifiers:
+            - public
+            parameters:
+            - name: vertex
+              type:
+                basic: int
+                full: int
+            - name: element
+              type:
+                basic: int
+                full: int
+            - name: v1
+              type:
+                basic: float
+                full: float
+            - name: v2
+              type:
+                basic: float
+                full: float
+            - name: v3
+              type:
+                basic: float
+                full: float
+            - name: v4
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

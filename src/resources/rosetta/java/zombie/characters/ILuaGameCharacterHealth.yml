@@ -1,0 +1,258 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        ILuaGameCharacterHealth:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "ILuaGameCharacterHealth\n  Provides the functions expected by LUA\
+            \ when dealing with objects of this type."
+          methods:
+          - name: DrinkFluid
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: DrinkFluid
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: DrinkFluid
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: DrinkFluid
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidContainer
+                full: zombie.entity.components.fluids.FluidContainer
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: DrinkFluid
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidContainer
+                full: zombie.entity.components.fluids.FluidContainer
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: Eat
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: Eat
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: info
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: percentage
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: Eat
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: info
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getFatigueMod
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getLastHourSleeped
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getReduceInfectionPower
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSleepingTabletEffect
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTemperature
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: setLastHourSleeped
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: lastHourSleeped
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setReduceInfectionPower
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: reduceInfectionPower
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSleepingTabletEffect
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: SleepingTabletEffect
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTemperature
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: t
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTimeOfSleep
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: timeOfSleep
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

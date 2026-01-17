@@ -1,0 +1,57 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        IsoWorld.CompScoreToPlayer:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: compare
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            - name: arg1
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            return:
+              type:
+                basic: int
+                full: int
+          - name: compare
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getScore
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+            return:
+              type:
+                basic: float
+                full: float

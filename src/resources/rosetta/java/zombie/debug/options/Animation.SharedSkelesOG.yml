@@ -1,0 +1,28 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Animation.SharedSkelesOG:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          - final
+          fields:
+            AllowLerping:
+              name: AllowLerping
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            Enabled:
+              name: Enabled
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+          constructors:
+          - modifiers:
+            - public

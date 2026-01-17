@@ -1,0 +1,75 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie:
+        GameTime.AnimTimer:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            Duration:
+              name: Duration
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            Elapsed:
+              name: Elapsed
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            Finished:
+              name: Finished
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            Ticks:
+              name: Ticks
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: finished
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: init
+            modifiers:
+            - public
+            parameters:
+            - name: ticks
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: ratio
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

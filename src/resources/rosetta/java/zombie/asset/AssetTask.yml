@@ -1,0 +1,43 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.asset:
+        AssetTask:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          fields:
+            m_asset:
+              name: m_asset
+              modifiers:
+              - public
+              type:
+                basic: Asset
+                full: zombie.asset.Asset
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: asset
+              type:
+                basic: Asset
+                full: zombie.asset.Asset
+          methods:
+          - name: cancel
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: execute
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void

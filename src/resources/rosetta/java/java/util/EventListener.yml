@@ -1,0 +1,11 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util:
+        EventListener:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: A tagging interface that all event listener interfaces must extend.

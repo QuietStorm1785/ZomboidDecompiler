@@ -1,0 +1,316 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        ILuaGameCharacterDamage:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "ILuaGameCharacterDamage\n  Provides the functions expected by LUA\
+            \ when dealing with objects of this type."
+          methods:
+          - name: Hit
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: vehicle
+              type:
+                basic: BaseVehicle
+                full: zombie.vehicles.BaseVehicle
+            - name: speed
+              type:
+                basic: float
+                full: float
+            - name: isHitFromBehind
+              type:
+                basic: boolean
+                full: boolean
+            - name: hitDirX
+              type:
+                basic: float
+                full: float
+            - name: hitDirY
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: Hit
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: weapon
+              type:
+                basic: HandWeapon
+                full: zombie.inventory.types.HandWeapon
+            - name: wielder
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: damageSplit
+              type:
+                basic: float
+                full: float
+            - name: bIgnoreDamage
+              type:
+                basic: boolean
+                full: boolean
+            - name: modDelta
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: Hit
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: weapon
+              type:
+                basic: HandWeapon
+                full: zombie.inventory.types.HandWeapon
+            - name: wielder
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: damageSplit
+              type:
+                basic: float
+                full: float
+            - name: bIgnoreDamage
+              type:
+                basic: boolean
+                full: boolean
+            - name: modDelta
+              type:
+                basic: float
+                full: float
+            - name: bRemote
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: float
+                full: float
+          - name: StopBurning
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addBlood
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: part
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            - name: scratched
+              type:
+                basic: boolean
+                full: boolean
+            - name: bitten
+              type:
+                basic: boolean
+                full: boolean
+            - name: allLayers
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addHole
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: part
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getBodyDamage
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: BodyDamage
+                full: zombie.characters.BodyDamage.BodyDamage
+          - name: getBodyDamageRemote
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: BodyDamage
+                full: zombie.characters.BodyDamage.BodyDamage
+          - name: getBumpType
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getHealth
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getLastHitCount
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isBumped
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDeathDragDown
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOnDeathDone
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOnFire
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOnKillDone
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPlayingDeathSound
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setDeathDragDown
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: dragDown
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHealth
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: Health
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLastHitCount
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: hitCount
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOnDeathDone
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: done
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOnKillDone
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: done
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPlayingDeathSound
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: playing
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void

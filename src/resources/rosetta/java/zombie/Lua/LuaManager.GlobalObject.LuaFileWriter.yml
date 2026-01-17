@@ -1,0 +1,58 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.Lua:
+        LuaManager.GlobalObject.LuaFileWriter:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            writer:
+              name: writer
+              modifiers:
+              - private
+              type:
+                basic: PrintWriter
+                full: java.io.PrintWriter
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: writer
+              type:
+                basic: PrintWriter
+                full: java.io.PrintWriter
+          methods:
+          - name: close
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: write
+            modifiers:
+            - public
+            parameters:
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: writeln
+            modifiers:
+            - public
+            parameters:
+            - name: str
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void

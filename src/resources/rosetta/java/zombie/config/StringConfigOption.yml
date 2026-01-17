@@ -1,0 +1,195 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.config:
+        StringConfigOption:
+          extends: zombie.config.ConfigOption
+          modifiers:
+          - public
+          fields:
+            defaultValue:
+              name: defaultValue
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            maxLength:
+              name: maxLength
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            value:
+              name: value
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+            values:
+              name: values
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String[]
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: defaultValue
+              type:
+                basic: String
+                full: java.lang.String
+            - name: maxLength
+              type:
+                basic: int
+                full: int
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String[]
+          methods:
+          - name: getDefaultValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSplitCSVList
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getTooltip
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getValueAsLuaString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getValueAsObject
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getValueAsString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isValidString
+            modifiers:
+            - public
+            parameters:
+            - name: s
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: makeCopy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ConfigOption
+                full: zombie.config.ConfigOption
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: s
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: resetToDefault
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDefaultToCurrentValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValue
+            modifiers:
+            - public
+            parameters:
+            - name: value
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValueFromObject
+            modifiers:
+            - public
+            parameters:
+            - name: o
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void

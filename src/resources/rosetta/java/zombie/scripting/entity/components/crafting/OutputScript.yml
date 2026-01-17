@@ -1,0 +1,561 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.entity.components.crafting:
+        OutputScript:
+          extends: zombie.scripting.entity.components.crafting.CraftRecipe$IOScript
+          modifiers:
+          - public
+          fields:
+            amount:
+              name: amount
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            applyOnTick:
+              name: applyOnTick
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            chance:
+              name: chance
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            createToItemScript:
+              name: createToItemScript
+              modifiers:
+              - protected
+              type:
+                basic: OutputScript
+                full: zombie.scripting.entity.components.crafting.OutputScript
+            energy:
+              name: energy
+              modifiers:
+              - private
+              type:
+                basic: Energy
+                full: zombie.entity.energy.Energy
+            flags:
+              name: flags
+              modifiers:
+              - private
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.entity.components.crafting.OutputFlag>
+            fluid:
+              name: fluid
+              modifiers:
+              - private
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            fluidMatchMode:
+              name: fluidMatchMode
+              modifiers:
+              - private
+              type:
+                basic: FluidMatchMode
+                full: zombie.entity.components.crafting.FluidMatchMode
+            itemApplyMode:
+              name: itemApplyMode
+              modifiers:
+              - private
+              type:
+                basic: ItemApplyMode
+                full: zombie.entity.components.crafting.ItemApplyMode
+            loadedEnergy:
+              name: loadedEnergy
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            loadedFluid:
+              name: loadedFluid
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            maxamount:
+              name: maxamount
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            originalLine:
+              name: originalLine
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            outputMapper:
+              name: outputMapper
+              modifiers:
+              - private
+              type:
+                basic: OutputMapper
+                full: zombie.entity.components.crafting.recipe.OutputMapper
+            possibleFluids:
+              name: possibleFluids
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.components.fluids.Fluid>
+            possiblyEnergies:
+              name: possiblyEnergies
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.energy.Energy>
+            shapedIndex:
+              name: shapedIndex
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            type:
+              name: type
+              modifiers:
+              - private
+              type:
+                basic: ResourceType
+                full: zombie.entity.components.resources.ResourceType
+          staticFields:
+            _emptyItems:
+              name: _emptyItems
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.Item>
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            - name: arg1
+              type:
+                basic: ResourceType
+                full: zombie.entity.components.resources.ResourceType
+          methods:
+          - name: OnPostWorldDictionaryInit
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnScriptsLoaded
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptLoadMode
+                full: zombie.scripting.ScriptLoadMode
+            return:
+              type:
+                basic: void
+                full: void
+          - name: canOutputItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canOutputItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsEnergy
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Energy
+                full: zombie.entity.energy.Energy
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsFluid
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getAmount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getChance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getCreateToItemScript
+            modifiers:
+            - public
+            return:
+              type:
+                basic: OutputScript
+                full: zombie.scripting.entity.components.crafting.OutputScript
+          - name: getEnergy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Energy
+                full: zombie.entity.energy.Energy
+          - name: getFluid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Fluid
+                full: zombie.entity.components.fluids.Fluid
+          - name: getFluidMatchMode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FluidMatchMode
+                full: zombie.entity.components.crafting.FluidMatchMode
+          - name: getIntAmount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getIntMaxAmount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipeData
+                full: zombie.entity.components.crafting.recipe.CraftRecipeData
+            return:
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+          - name: getItemApplyMode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ItemApplyMode
+                full: zombie.entity.components.crafting.ItemApplyMode
+          - name: getMaxAmount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getOriginalLine
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getOutputMapper
+            modifiers:
+            - public
+            return:
+              type:
+                basic: OutputMapper
+                full: zombie.entity.components.crafting.recipe.OutputMapper
+          - name: getPossibleResultEnergies
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.energy.Energy>
+          - name: getPossibleResultFluids
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.entity.components.fluids.Fluid>
+          - name: getPossibleResultItems
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.objects.Item>
+          - name: getResourceType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ResourceType
+                full: zombie.entity.components.resources.ResourceType
+          - name: getShapedIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: hasCreateToItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasFlag
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isApplyOnTick
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAutomationOnly
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCreateUses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEnergyMatch
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: DrainableComboItem
+                full: zombie.inventory.types.DrainableComboItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEnergyMatch
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Energy
+                full: zombie.entity.energy.Energy
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFluidAnything
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFluidExact
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFluidMatch
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FluidContainer
+                full: zombie.entity.components.fluids.FluidContainer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFluidPrimary
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isHandcraftOnly
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isReplaceInput
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isValid
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isVariableAmount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: typeCheck
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ResourceType
+                full: zombie.entity.components.resources.ResourceType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          staticMethods:
+          - name: Load
+            modifiers:
+            - protected
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: OutputScript
+                full: zombie.scripting.entity.components.crafting.OutputScript
+          - name: Load
+            modifiers:
+            - protected
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: OutputScript
+                full: zombie.scripting.entity.components.crafting.OutputScript
+          - name: LoadBlock
+            modifiers:
+            - protected
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            - name: arg1
+              type:
+                basic: ScriptParser.Block
+                full: zombie.scripting.ScriptParser$Block
+            return:
+              type:
+                basic: OutputScript
+                full: zombie.scripting.entity.components.crafting.OutputScript

@@ -1,0 +1,65 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.audio.parameters:
+        ParameterZombieState:
+          extends: zombie.audio.FMODLocalParameter
+          modifiers:
+          - public
+          - final
+          fields:
+            state:
+              name: state
+              modifiers:
+              - private
+              type:
+                basic: ParameterZombieState.State
+                full: zombie.audio.parameters.ParameterZombieState$State
+            zombie:
+              name: zombie
+              modifiers:
+              - private
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: zombie
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+          methods:
+          - name: calculateCurrentValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: isState
+            modifiers:
+            - public
+            parameters:
+            - name: state
+              type:
+                basic: ParameterZombieState.State
+                full: zombie.audio.parameters.ParameterZombieState$State
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setState
+            modifiers:
+            - public
+            parameters:
+            - name: state
+              type:
+                basic: ParameterZombieState.State
+                full: zombie.audio.parameters.ParameterZombieState$State
+            return:
+              type:
+                basic: void
+                full: void

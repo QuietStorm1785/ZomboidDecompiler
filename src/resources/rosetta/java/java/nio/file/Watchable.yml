@@ -1,0 +1,55 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.nio.file:
+        Watchable:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "An object that may be registered with a watch service so that it\
+            \ can be\n watched for changes and events.\n\n  This interface defines\
+            \ the register method to register\n the object with a WatchService returning\
+            \ a WatchKey to\n represent the registration. An object may be registered\
+            \ with more than one\n watch service. Registration with a watch service\
+            \ is cancelled by invoking the\n key's cancel method."
+          methods:
+          - name: register
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: WatchService
+                full: java.nio.file.WatchService
+            - name: arg1
+              type:
+                basic: WatchEvent.Kind
+                full: java.nio.file.WatchEvent$Kind<?>[]
+            - name: arg2
+              type:
+                basic: WatchEvent.Modifier
+                full: java.nio.file.WatchEvent$Modifier[]
+            return:
+              type:
+                basic: WatchKey
+                full: java.nio.file.WatchKey
+          - name: register
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: WatchService
+                full: java.nio.file.WatchService
+            - name: arg1
+              type:
+                basic: WatchEvent.Kind
+                full: java.nio.file.WatchEvent$Kind<?>[]
+            return:
+              type:
+                basic: WatchKey
+                full: java.nio.file.WatchKey

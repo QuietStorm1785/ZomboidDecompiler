@@ -1,0 +1,47 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.BodyDamage:
+        Fitness.FitnessExercise:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            metabolics:
+              name: metabolics
+              modifiers:
+              - package
+              type:
+                basic: Metabolics
+                full: zombie.characters.BodyDamage.Metabolics
+            stiffnessInc:
+              name: stiffnessInc
+              modifiers:
+              - package
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            type:
+              name: type
+              modifiers:
+              - package
+              type:
+                basic: String
+                full: java.lang.String
+            xpModifier:
+              name: xpModifier
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: exeDatas
+              type:
+                basic: KahluaTableImpl
+                full: se.krka.kahlua.j2se.KahluaTableImpl

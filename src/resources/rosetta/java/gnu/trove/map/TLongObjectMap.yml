@@ -1,0 +1,307 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      gnu.trove.map:
+        TLongObjectMap:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: clear
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: containsKey
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsValue
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: equals
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: forEachEntry
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TLongObjectProcedure
+                full: gnu.trove.procedure.TLongObjectProcedure<? super V>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: forEachKey
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TLongProcedure
+                full: gnu.trove.procedure.TLongProcedure
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: forEachValue
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TObjectProcedure
+                full: gnu.trove.procedure.TObjectProcedure<? super V>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: V
+                full: V
+          - name: getNoEntryKey
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: long
+                full: long
+          - name: hashCode
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isEmpty
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: iterator
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: TLongObjectIterator
+                full: gnu.trove.iterator.TLongObjectIterator<V>
+          - name: keySet
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: TLongSet
+                full: gnu.trove.set.TLongSet
+          - name: keys
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: long
+                full: long[]
+          - name: keys
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long[]
+            return:
+              type:
+                basic: long
+                full: long[]
+          - name: put
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: V
+                full: V
+            return:
+              type:
+                basic: V
+                full: V
+          - name: putAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Map
+                full: java.util.Map<? extends java.lang.Long, ? extends V>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TLongObjectMap
+                full: gnu.trove.map.TLongObjectMap<? extends V>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putIfAbsent
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: V
+                full: V
+            return:
+              type:
+                basic: V
+                full: V
+          - name: remove
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: V
+                full: V
+          - name: retainEntries
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TLongObjectProcedure
+                full: gnu.trove.procedure.TLongObjectProcedure<? super V>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: size
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: transformValues
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TObjectFunction
+                full: gnu.trove.function.TObjectFunction<V, V>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: valueCollection
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Collection
+                full: java.util.Collection<V>
+          - name: values
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object[]
+          - name: values
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: V
+                full: V[]
+            return:
+              type:
+                basic: V
+                full: V[]

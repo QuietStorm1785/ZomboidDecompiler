@@ -1,0 +1,231 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.spriteconfig:
+        SpriteConfigManager.ObjectInfo:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            faces:
+              name: faces
+              modifiers:
+              - private
+              type:
+                basic: SpriteConfigManager.FaceInfo
+                full: zombie.entity.components.spriteconfig.SpriteConfigManager$FaceInfo[]
+            groupName:
+              name: groupName
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            iconTexture:
+              name: iconTexture
+              modifiers:
+              - private
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            isSingleFace:
+              name: isSingleFace
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            mainSpriteCache:
+              name: mainSpriteCache
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            script:
+              name: script
+              modifiers:
+              - private
+              type:
+                basic: SpriteConfigScript
+                full: zombie.scripting.entity.components.spriteconfig.SpriteConfigScript
+            version:
+              name: version
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: SpriteConfigScript
+                full: zombie.scripting.entity.components.spriteconfig.SpriteConfigScript
+          methods:
+          - name: CreateFace
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: SpriteConfigManager.FaceInfo
+                full: zombie.entity.components.spriteconfig.SpriteConfigManager$FaceInfo
+          - name: canRotate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getFace
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: SpriteConfigManager.FaceInfo
+                full: zombie.entity.components.spriteconfig.SpriteConfigManager$FaceInfo
+          - name: getFace
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: SpriteConfigManager.FaceInfo
+                full: zombie.entity.components.spriteconfig.SpriteConfigManager$FaceInfo
+          - name: getFaceForSprite
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: SpriteConfigManager.FaceInfo
+                full: zombie.entity.components.spriteconfig.SpriteConfigManager$FaceInfo
+          - name: getIconTexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+          - name: getMainSpriteNameUI
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRecipe
+            modifiers:
+            - public
+            return:
+              type:
+                basic: CraftRecipeComponentScript
+                full: zombie.scripting.entity.components.crafting.CraftRecipeComponentScript
+          - name: getRequiredSkillCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getScript
+            modifiers:
+            - public
+            return:
+              type:
+                basic: SpriteConfigScript
+                full: zombie.scripting.entity.components.spriteconfig.SpriteConfigScript
+          - name: getTags
+            modifiers:
+            - public
+            return:
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+          - name: getTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getVersion
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: isProp
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSingleFace
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: needToBeLearn
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setVersion
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void

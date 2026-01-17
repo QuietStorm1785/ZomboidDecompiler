@@ -1,0 +1,70 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        MultiStageBuilding:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          staticFields:
+            stages:
+              name: stages
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.MultiStageBuilding$Stage>
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: addStage
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: stage
+              type:
+                basic: MultiStageBuilding.Stage
+                full: zombie.iso.MultiStageBuilding$Stage
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getStage
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: MultiStageBuilding.Stage
+                full: zombie.iso.MultiStageBuilding$Stage
+          - name: getStages
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.MultiStageBuilding$Stage>

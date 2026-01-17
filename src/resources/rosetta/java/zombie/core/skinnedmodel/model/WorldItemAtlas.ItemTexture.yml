@@ -1,0 +1,155 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.model:
+        WorldItemAtlas.ItemTexture:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            entry:
+              name: entry
+              modifiers:
+              - package
+              type:
+                basic: WorldItemAtlas.AtlasEntry
+                full: zombie.core.skinnedmodel.model.WorldItemAtlas$AtlasEntry
+            itemParams:
+              name: itemParams
+              modifiers:
+              - package
+              type:
+                basic: WorldItemAtlas.ItemParams
+                full: zombie.core.skinnedmodel.model.WorldItemAtlas$ItemParams
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: Reset
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getRenderHeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getRenderWidth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getRenderX
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getRenderY
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+          - name: isRenderMainOK
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isStillValid
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTooBig
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: render
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,99 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt:
+        JobAttributes.DefaultSelectionType:
+          extends: java.awt.AttributeValue
+          modifiers:
+          - public
+          - final
+          notes: A type-safe enumeration of possible default selection states.
+          staticFields:
+            ALL:
+              name: ALL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: JobAttributes.DefaultSelectionType
+                full: java.awt.JobAttributes$DefaultSelectionType
+              notes: "The DefaultSelectionType instance to use for\n specifying that\
+                \ all pages of the job should be printed."
+            I_ALL:
+              name: I_ALL
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            I_RANGE:
+              name: I_RANGE
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            I_SELECTION:
+              name: I_SELECTION
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            NAMES:
+              name: NAMES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String[]
+            RANGE:
+              name: RANGE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: JobAttributes.DefaultSelectionType
+                full: java.awt.JobAttributes$DefaultSelectionType
+              notes: "The DefaultSelectionType instance to use for\n specifying that\
+                \ a range of pages of the job should be printed."
+            SELECTION:
+              name: SELECTION
+              modifiers:
+              - public
+              - static
+              type:
+                basic: JobAttributes.DefaultSelectionType
+                full: java.awt.JobAttributes$DefaultSelectionType
+              notes: "The DefaultSelectionType instance to use for\n specifying that\
+                \ the current selection should be printed."
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: a hash code value for this object.
+            notes: 'Description copied from class: Object'
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

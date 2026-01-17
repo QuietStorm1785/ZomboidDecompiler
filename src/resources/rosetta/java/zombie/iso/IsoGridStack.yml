@@ -1,0 +1,26 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        IsoGridStack:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: Created by ChrisWood (Tanglewood Games Limited) on 01/11/2017.
+          fields:
+            Squares:
+              name: Squares
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.util.ArrayList<zombie.iso.IsoGridSquare>>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: count
+              type:
+                basic: int
+                full: int

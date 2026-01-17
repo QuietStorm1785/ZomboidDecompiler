@@ -1,0 +1,33 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt.desktop:
+        QuitResponse:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: Used to respond to a request to quit the application.
+          methods:
+          - name: cancelQuit
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+            notes: "Notifies the external quit requester that the user has explicitly\n\
+              \ canceled the pending quit, and leaves the application running.\n \n\
+              \ Note: this will cancel a pending log-out, restart, or shutdown."
+          - name: performQuit
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+            notes: "Notifies the external quit requester that the quit will proceed,\
+              \ and\n performs the default QuitStrategy."

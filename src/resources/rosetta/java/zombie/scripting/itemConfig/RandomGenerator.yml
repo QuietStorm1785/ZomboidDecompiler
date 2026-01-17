@@ -1,0 +1,62 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.itemConfig:
+        RandomGenerator:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          fields:
+            chance:
+              name: chance
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: copy
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: T
+                full: T
+          - name: execute
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: GameEntity
+                full: zombie.entity.GameEntity
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getChance
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: float
+                full: float
+          - name: setChance
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

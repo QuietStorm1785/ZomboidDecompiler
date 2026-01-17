@@ -1,0 +1,675 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      gnu.trove.list:
+        TByteList:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: add
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: add
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: add
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: binarySearch
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: int
+                full: int
+          - name: binarySearch
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: clear
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: contains
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: fill
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: void
+                full: void
+          - name: fill
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forEach
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TByteProcedure
+                full: gnu.trove.procedure.TByteProcedure
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: forEachDescending
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TByteProcedure
+                full: gnu.trove.procedure.TByteProcedure
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: getNoEntryValue
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: grep
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TByteProcedure
+                full: gnu.trove.procedure.TByteProcedure
+            return:
+              type:
+                basic: TByteList
+                full: gnu.trove.list.TByteList
+          - name: indexOf
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: int
+                full: int
+          - name: indexOf
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: int
+                full: int
+          - name: insert
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: void
+                full: void
+          - name: insert
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: insert
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: byte
+                full: byte[]
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: inverseGrep
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TByteProcedure
+                full: gnu.trove.procedure.TByteProcedure
+            return:
+              type:
+                basic: TByteList
+                full: gnu.trove.list.TByteList
+          - name: isEmpty
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: lastIndexOf
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: int
+                full: int
+          - name: lastIndexOf
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: int
+                full: int
+          - name: max
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: min
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: remove
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: remove
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeAt
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: replace
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: reverse
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reverse
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: set
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: byte
+                full: byte[]
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: shuffle
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Random
+                full: java.util.Random
+            return:
+              type:
+                basic: void
+                full: void
+          - name: size
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: sort
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sort
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: subList
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: TByteList
+                full: gnu.trove.list.TByteList
+          - name: sum
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: toArray
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: byte
+                full: byte[]
+          - name: toArray
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: byte
+                full: byte[]
+          - name: toArray
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: byte
+                full: byte[]
+          - name: toArray
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: byte
+                full: byte[]
+          - name: toArray
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: byte
+                full: byte[]
+          - name: transformValues
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TByteFunction
+                full: gnu.trove.function.TByteFunction
+            return:
+              type:
+                basic: void
+                full: void

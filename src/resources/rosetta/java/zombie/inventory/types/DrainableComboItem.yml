@@ -1,0 +1,619 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.inventory.types:
+        DrainableComboItem:
+          extends: zombie.inventory.InventoryItem
+          modifiers:
+          - public
+          - final
+          fields:
+            Heat:
+              name: Heat
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            LastCookMinute:
+              name: LastCookMinute
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            OnCooked:
+              name: OnCooked
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            ReplaceOnCooked:
+              name: ReplaceOnCooked
+              modifiers:
+              - public
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+            ReplaceOnDeplete:
+              name: ReplaceOnDeplete
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            ReplaceOnDepleteFullType:
+              name: ReplaceOnDepleteFullType
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            WeightEmpty:
+              name: WeightEmpty
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            bUseWhileEquiped:
+              name: bUseWhileEquiped
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            bUseWhileUnequiped:
+              name: bUseWhileUnequiped
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            canConsolidate:
+              name: canConsolidate
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            lastUpdateMinutes:
+              name: lastUpdateMinutes
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            onEat:
+              name: onEat
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            ticks:
+              name: ticks
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            ticksPerEquipUse:
+              name: ticksPerEquipUse
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            useDelta:
+              name: useDelta
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          staticFields:
+            MAX_HEAT:
+              name: MAX_HEAT
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+            MIN_HEAT:
+              name: MIN_HEAT
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: module
+              type:
+                basic: String
+                full: java.lang.String
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: itemType
+              type:
+                basic: String
+                full: java.lang.String
+            - name: texName
+              type:
+                basic: String
+                full: java.lang.String
+          - modifiers:
+            - public
+            parameters:
+            - name: module
+              type:
+                basic: String
+                full: java.lang.String
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: itemType
+              type:
+                basic: String
+                full: java.lang.String
+            - name: item
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+          methods:
+          - name: CanStack
+            modifiers:
+            - public
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: IsDrainable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: Use
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Use
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: canConsolidate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: finishupdate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getCurrentUsesFloat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getEnergy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Energy
+                full: zombie.entity.energy.Energy
+          - name: getHeat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getInvHeat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaxUses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getOnCooked
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the OnCooked
+          - name: getOnEat
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getReplaceOnCooked
+            modifiers:
+            - public
+            return:
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+              notes: the ReplaceOnCooked
+          - name: getReplaceOnDeplete
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the ReplaceOnDeplete
+          - name: getReplaceOnDepleteFullType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSaveType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getTicks
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the ticks
+          - name: getTicksPerEquipUse
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the ticksPerEquipUse
+          - name: getUseDelta
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the useDelta
+          - name: getWeightEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the EmptyWeight
+          - name: isEmptyUses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEnergy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isFullUses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUseWhileEquiped
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the bUseWhileEquiped
+          - name: isUseWhileUnequiped
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the bUseWhileUnequiped
+          - name: randomizeUses
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderlast
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCanConsolidate
+            modifiers:
+            - public
+            parameters:
+            - name: canConsolidate
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCurrentUses
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCurrentUsesFloat
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHeat
+            modifiers:
+            - public
+            parameters:
+            - name: heat
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOnCooked
+            modifiers:
+            - public
+            parameters:
+            - name: onCooked
+              type:
+                basic: String
+                full: java.lang.String
+              notes: the onCooked to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOnEat
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setReplaceOnCooked
+            modifiers:
+            - public
+            parameters:
+            - name: replaceOnCooked
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+              notes: the ReplaceOnCooked to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setReplaceOnDeplete
+            modifiers:
+            - public
+            parameters:
+            - name: ReplaceOnDeplete
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTicks
+            modifiers:
+            - public
+            parameters:
+            - name: ticks
+              type:
+                basic: float
+                full: float
+              notes: the ticks to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTicksPerEquipUse
+            modifiers:
+            - public
+            parameters:
+            - name: ticksPerEquipUse
+              type:
+                basic: int
+                full: int
+              notes: the ticksPerEquipUse to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUseDelta
+            modifiers:
+            - public
+            parameters:
+            - name: useDelta
+              type:
+                basic: float
+                full: float
+              notes: the useDelta to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUseWhileEquiped
+            modifiers:
+            - public
+            parameters:
+            - name: bUseWhileEquiped
+              type:
+                basic: boolean
+                full: boolean
+              notes: the bUseWhileEquiped to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUseWhileUnequiped
+            modifiers:
+            - public
+            parameters:
+            - name: bUseWhileUnequiped
+              type:
+                basic: boolean
+                full: boolean
+              notes: the bUseWhileUnequiped to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUsedDelta
+            modifiers:
+            - public
+            parameters:
+            - name: usedDelta
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWeightEmpty
+            modifiers:
+            - public
+            parameters:
+            - name: weight
+              type:
+                basic: float
+                full: float
+              notes: the EmptyWeight to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: shouldUpdateInWorld
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: syncItemFields
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateWeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

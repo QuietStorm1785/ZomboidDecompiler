@@ -1,0 +1,76 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt:
+        EventFilter.FilterAction:
+          extends: java.lang.Enum<java.awt.EventFilter$FilterAction>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: EventFilter.FilterAction
+                full: java.awt.EventFilter$FilterAction[]
+            ACCEPT:
+              name: ACCEPT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EventFilter.FilterAction
+                full: java.awt.EventFilter$FilterAction
+            ACCEPT_IMMEDIATELY:
+              name: ACCEPT_IMMEDIATELY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EventFilter.FilterAction
+                full: java.awt.EventFilter$FilterAction
+            REJECT:
+              name: REJECT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EventFilter.FilterAction
+                full: java.awt.EventFilter$FilterAction
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: EventFilter.FilterAction
+                full: java.awt.EventFilter$FilterAction[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: EventFilter.FilterAction
+                full: java.awt.EventFilter$FilterAction
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: EventFilter.FilterAction
+                full: java.awt.EventFilter$FilterAction[]

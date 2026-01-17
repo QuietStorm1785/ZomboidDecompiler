@@ -1,0 +1,238 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.crafting.recipe:
+        ItemDataList:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            dataElements:
+              name: dataElements
+              modifiers:
+              - private
+              type:
+                basic: ItemDataList.ItemData
+                full: zombie.entity.components.crafting.recipe.ItemDataList$ItemData[]
+            peak:
+              name: peak
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            size:
+              name: size
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            unprocessed:
+              name: unprocessed
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: addItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkCapacity
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: get
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ItemDataList.ItemData
+                full: zombie.entity.components.crafting.recipe.ItemDataList$ItemData
+          - name: getInventoryItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: getItem
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+          - name: getNextElement
+            modifiers:
+            - private
+            return:
+              type:
+                basic: ItemDataList.ItemData
+                full: zombie.entity.components.crafting.recipe.ItemDataList$ItemData
+          - name: getUnprocessed
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getUnprocessed
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: hasUnprocessed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isProcessed
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setProcessed
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: size
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int

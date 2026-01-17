@@ -1,0 +1,29 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.security:
+        PrivilegedAction:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "A computation to be performed with privileges enabled.  The computation\
+            \ is\n performed by invoking AccessController.doPrivileged on the\n PrivilegedAction\
+            \ object.  This interface is used only for\n computations that do not\
+            \ throw checked exceptions; computations that\n throw checked exceptions\
+            \ must use PrivilegedExceptionAction\n instead."
+          methods:
+          - name: run
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: T
+                full: T
+              notes: "a class-dependent value that may represent the results of the\n\
+                \         computation. Each class that implements\n         PrivilegedAction\n\
+                \         should document what (if anything) this value represents."
+            notes: "Performs the computation.  This method will be called by\n AccessController.doPrivileged\
+              \ after enabling privileges."

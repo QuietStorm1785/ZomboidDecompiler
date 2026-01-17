@@ -43,13 +43,25 @@ public final class LineRemapper {
      * @param mappings Mappings of bytecode line numbers to source line numbers.
      */
     public static void remapClass(Path file, Path destination, Map<Integer, Integer> mappings) {
+        remapClass(file, destination, mappings, true, false);
+    }
+
+    /**
+     * Remaps a class file's line numbers with optional controls.
+     * @param file The path of the class file to remap.
+     * @param destination The path to write the remapped file to. It may be the same path as <code>file</code>.
+     * @param mappings Mappings of bytecode line numbers to source line numbers.
+     * @param writeBackup If true, writes a .backup copy before overwriting.
+     * @param computeFrames If true, asks ASM to compute frames/maxs for resilience.
+     */
+    public static void remapClass(Path file, Path destination, Map<Integer, Integer> mappings, boolean writeBackup, boolean computeFrames) {
         assert Files.exists(file) && Files.isRegularFile(file);
 
-        try {
-            ClassReader reader = new ClassReader(
-                    Files.newInputStream(file)
-            );
-            ClassWriter writer = new ClassWriter(0);
+        try (var in = Files.newInputStream(file)) {
+            // Read original bytecode
+            ClassReader reader = new ClassReader(in);
+            int writerFlags = computeFrames ? (ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS) : 0;
+            ClassWriter writer = new ClassWriter(writerFlags);
             reader.accept(
                     new ClassLineRemapper(
                             Opcodes.ASM9,
@@ -57,8 +69,12 @@ public final class LineRemapper {
                             new LineNumbers(mappings)),
                     Opcodes.ASM9);
 
-            Files.copy(file, destination.resolveSibling(file.getFileName().toString() + ".backup"), StandardCopyOption.REPLACE_EXISTING);
+            // Backup original before writing (optional)
+            if (writeBackup) {
+                Files.copy(file, destination.resolveSibling(file.getFileName().toString() + ".backup"), StandardCopyOption.REPLACE_EXISTING);
+            }
 
+            // Write remapped class
             Files.write(destination, writer.toByteArray());
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -67,7 +83,7 @@ public final class LineRemapper {
 
     public static class LineNumbers {
         private final Map<Integer, Integer> mappings;
-        /// Highest key.
+        /// Highest key; null indicates an empty mapping.
         private Integer max;
 
         /**
@@ -78,26 +94,35 @@ public final class LineRemapper {
         Integer getSourceLineNumber(Integer line) {
             if (line == 0) {
                 return 0;
-            } else if (line >= max) {
-                return mappings.get(max);
-            } else {
-                while (line < max) {
-                    Integer sourceLine = mappings.get(line);
-                    if (sourceLine != null) {
-                        return sourceLine;
-                    }
-                    line++;
-                }
-                // this probably isn't actually reachable
-                return mappings.get(max);
             }
+
+            // No mappings available: keep original line numbers to avoid NPEs.
+            if (max == null) {
+                return line;
+            }
+
+            if (line >= max) {
+                return mappings.getOrDefault(max, line);
+            }
+
+            int cursor = line;
+            while (cursor < max) {
+                Integer sourceLine = mappings.get(cursor);
+                if (sourceLine != null) {
+                    return sourceLine;
+                }
+                cursor++;
+            }
+
+            // Fallback: return the original line when no mapping was found
+            return line;
         }
 
         public LineNumbers(Map<Integer, Integer> mappings) {
             this.mappings = mappings;
-            max = 0;
+            max = null;
             for (Integer key: mappings.keySet()) {
-                if (key > max) {
+                if (max == null || key > max) {
                     max = key;
                 }
             }

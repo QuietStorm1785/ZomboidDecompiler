@@ -1,0 +1,48 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        NetworkCharacter.Point:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            px:
+              name: px
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            py:
+              name: py
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            rx:
+              name: rx
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            ry:
+              name: ry
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            t:
+              name: t
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - package

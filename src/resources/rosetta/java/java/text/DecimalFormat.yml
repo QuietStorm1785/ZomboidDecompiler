@@ -1,0 +1,1639 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.text:
+        DecimalFormat:
+          extends: java.text.NumberFormat
+          modifiers:
+          - public
+          fields:
+            bigDecimalMultiplier:
+              name: bigDecimalMultiplier
+              modifiers:
+              - private
+              type:
+                basic: BigDecimal
+                full: java.math.BigDecimal
+            bigIntegerMultiplier:
+              name: bigIntegerMultiplier
+              modifiers:
+              - private
+              type:
+                basic: BigInteger
+                full: java.math.BigInteger
+            decimalSeparatorAlwaysShown:
+              name: decimalSeparatorAlwaysShown
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            digitList:
+              name: digitList
+              modifiers:
+              - private
+              type:
+                basic: DigitList
+                full: java.text.DigitList
+            fastPathCheckNeeded:
+              name: fastPathCheckNeeded
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            fastPathData:
+              name: fastPathData
+              modifiers:
+              - private
+              type:
+                basic: DecimalFormat.FastPathData
+                full: java.text.DecimalFormat$FastPathData
+            groupingSize:
+              name: groupingSize
+              modifiers:
+              - private
+              type:
+                basic: byte
+                full: byte
+            isCurrencyFormat:
+              name: isCurrencyFormat
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isFastPath:
+              name: isFastPath
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            maximumFractionDigits:
+              name: maximumFractionDigits
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            maximumIntegerDigits:
+              name: maximumIntegerDigits
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            minExponentDigits:
+              name: minExponentDigits
+              modifiers:
+              - private
+              type:
+                basic: byte
+                full: byte
+            minimumFractionDigits:
+              name: minimumFractionDigits
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            minimumIntegerDigits:
+              name: minimumIntegerDigits
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            multiplier:
+              name: multiplier
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            negPrefixPattern:
+              name: negPrefixPattern
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            negSuffixPattern:
+              name: negSuffixPattern
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            negativePrefix:
+              name: negativePrefix
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            negativePrefixFieldPositions:
+              name: negativePrefixFieldPositions
+              modifiers:
+              - private
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition[]
+            negativeSuffix:
+              name: negativeSuffix
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            negativeSuffixFieldPositions:
+              name: negativeSuffixFieldPositions
+              modifiers:
+              - private
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition[]
+            parseBigDecimal:
+              name: parseBigDecimal
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            posPrefixPattern:
+              name: posPrefixPattern
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            posSuffixPattern:
+              name: posSuffixPattern
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            positivePrefix:
+              name: positivePrefix
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            positivePrefixFieldPositions:
+              name: positivePrefixFieldPositions
+              modifiers:
+              - private
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition[]
+            positiveSuffix:
+              name: positiveSuffix
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            positiveSuffixFieldPositions:
+              name: positiveSuffixFieldPositions
+              modifiers:
+              - private
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition[]
+            roundingMode:
+              name: roundingMode
+              modifiers:
+              - private
+              type:
+                basic: RoundingMode
+                full: java.math.RoundingMode
+            serialVersionOnStream:
+              name: serialVersionOnStream
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            symbols:
+              name: symbols
+              modifiers:
+              - private
+              type:
+                basic: DecimalFormatSymbols
+                full: java.text.DecimalFormatSymbols
+            useExponentialNotation:
+              name: useExponentialNotation
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            CURRENCY_SIGN:
+              name: CURRENCY_SIGN
+              modifiers:
+              - private
+              - static
+              type:
+                basic: char
+                full: char
+            DOUBLE_FRACTION_DIGITS:
+              name: DOUBLE_FRACTION_DIGITS
+              modifiers:
+              - package
+              - static
+              type:
+                basic: int
+                full: int
+            DOUBLE_INTEGER_DIGITS:
+              name: DOUBLE_INTEGER_DIGITS
+              modifiers:
+              - package
+              - static
+              type:
+                basic: int
+                full: int
+            EmptyFieldPositionArray:
+              name: EmptyFieldPositionArray
+              modifiers:
+              - private
+              - static
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition[]
+            MAXIMUM_FRACTION_DIGITS:
+              name: MAXIMUM_FRACTION_DIGITS
+              modifiers:
+              - package
+              - static
+              type:
+                basic: int
+                full: int
+            MAXIMUM_INTEGER_DIGITS:
+              name: MAXIMUM_INTEGER_DIGITS
+              modifiers:
+              - package
+              - static
+              type:
+                basic: int
+                full: int
+            MAX_INT_AS_DOUBLE:
+              name: MAX_INT_AS_DOUBLE
+              modifiers:
+              - private
+              - static
+              type:
+                basic: double
+                full: double
+            PATTERN_DECIMAL_SEPARATOR:
+              name: PATTERN_DECIMAL_SEPARATOR
+              modifiers:
+              - private
+              - static
+              type:
+                basic: char
+                full: char
+            PATTERN_DIGIT:
+              name: PATTERN_DIGIT
+              modifiers:
+              - private
+              - static
+              type:
+                basic: char
+                full: char
+            PATTERN_EXPONENT:
+              name: PATTERN_EXPONENT
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            PATTERN_GROUPING_SEPARATOR:
+              name: PATTERN_GROUPING_SEPARATOR
+              modifiers:
+              - private
+              - static
+              type:
+                basic: char
+                full: char
+            PATTERN_MINUS:
+              name: PATTERN_MINUS
+              modifiers:
+              - private
+              - static
+              type:
+                basic: char
+                full: char
+            PATTERN_PERCENT:
+              name: PATTERN_PERCENT
+              modifiers:
+              - private
+              - static
+              type:
+                basic: char
+                full: char
+            PATTERN_PER_MILLE:
+              name: PATTERN_PER_MILLE
+              modifiers:
+              - private
+              - static
+              type:
+                basic: char
+                full: char
+            PATTERN_SEPARATOR:
+              name: PATTERN_SEPARATOR
+              modifiers:
+              - private
+              - static
+              type:
+                basic: char
+                full: char
+            PATTERN_ZERO_DIGIT:
+              name: PATTERN_ZERO_DIGIT
+              modifiers:
+              - private
+              - static
+              type:
+                basic: char
+                full: char
+            QUOTE:
+              name: QUOTE
+              modifiers:
+              - private
+              - static
+              type:
+                basic: char
+                full: char
+            STATUS_INFINITE:
+              name: STATUS_INFINITE
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            STATUS_LENGTH:
+              name: STATUS_LENGTH
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            STATUS_POSITIVE:
+              name: STATUS_POSITIVE
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            currentSerialVersion:
+              name: currentSerialVersion
+              modifiers:
+              - package
+              - static
+              type:
+                basic: int
+                full: int
+            serialVersionUID:
+              name: serialVersionUID
+              modifiers:
+              - package
+              - static
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - public
+            notes: "Creates a DecimalFormat using the default pattern and symbols\n\
+              \ for the default FORMAT locale.\n This is a convenient way to obtain\
+              \ a\n DecimalFormat when internationalization is not the main concern.\n\
+              \ \n To obtain standard formats for a given locale, use the factory\
+              \ methods\n on NumberFormat such as getNumberInstance. These factories\
+              \ will\n return the most appropriate sub-class of NumberFormat for a\
+              \ given\n locale."
+          - modifiers:
+            - public
+            parameters:
+            - name: pattern
+              type:
+                basic: String
+                full: java.lang.String
+              notes: a non-localized pattern string.
+            notes: "Creates a DecimalFormat using the given pattern and the symbols\n\
+              \ for the default FORMAT locale.\n This is a convenient way to obtain\
+              \ a\n DecimalFormat when internationalization is not the main concern.\n\
+              \ \n To obtain standard formats for a given locale, use the factory\
+              \ methods\n on NumberFormat such as getNumberInstance. These factories\
+              \ will\n return the most appropriate sub-class of NumberFormat for a\
+              \ given\n locale."
+          - modifiers:
+            - public
+            parameters:
+            - name: pattern
+              type:
+                basic: String
+                full: java.lang.String
+              notes: a non-localized pattern string
+            - name: symbols
+              type:
+                basic: DecimalFormatSymbols
+                full: java.text.DecimalFormatSymbols
+              notes: the set of symbols to be used
+            notes: "Creates a DecimalFormat using the given pattern and symbols.\n\
+              \ Use this constructor when you need to completely customize the\n behavior\
+              \ of the format.\n \n To obtain standard formats for a given\n locale,\
+              \ use the factory methods on NumberFormat such as\n getInstance or getCurrencyInstance.\
+              \ If you need only minor adjustments\n to a standard format, you can\
+              \ modify the format returned by\n a NumberFormat factory method."
+          methods:
+          - name: addAffixes
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: char
+                full: char[]
+            - name: arg1
+              type:
+                basic: char
+                full: char[]
+            - name: arg2
+              type:
+                basic: char
+                full: char[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: append
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: Format.FieldDelegate
+                full: java.text.Format$FieldDelegate
+            - name: arg3
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition[]
+            - name: arg4
+              type:
+                basic: Format.Field
+                full: java.text.Format$Field
+            return:
+              type:
+                basic: void
+                full: void
+          - name: appendAffix
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: appendAffix
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: appendSuffix
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: char
+                full: char[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: char
+                full: char[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: applyLocalizedPattern
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: applyPattern
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: applyPattern
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkAndSetFastPathStatus
+            modifiers:
+            - private
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: clone
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: collectFractionalDigits
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: char
+                full: char[]
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: collectIntegralDigits
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: char
+                full: char[]
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: doubleSubformat
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg2
+              type:
+                basic: Format.FieldDelegate
+                full: java.text.Format$FieldDelegate
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: exactRoundUp
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: expandAffix
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: expandAffix
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition[]
+          - name: expandAffixes
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: fastDoubleFormat
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: fastFormat
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: format
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg2
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition
+            return:
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+          - name: format
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg2
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition
+            return:
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+          - name: format
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg2
+              type:
+                basic: Format.FieldDelegate
+                full: java.text.Format$FieldDelegate
+            return:
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+          - name: format
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg2
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition
+            return:
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+          - name: format
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg2
+              type:
+                basic: Format.FieldDelegate
+                full: java.text.Format$FieldDelegate
+            return:
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+          - name: format
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: BigDecimal
+                full: java.math.BigDecimal
+            - name: arg1
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg2
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition
+            return:
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+          - name: format
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: BigDecimal
+                full: java.math.BigDecimal
+            - name: arg1
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg2
+              type:
+                basic: Format.FieldDelegate
+                full: java.text.Format$FieldDelegate
+            return:
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+          - name: format
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: BigInteger
+                full: java.math.BigInteger
+            - name: arg1
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg2
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition
+            return:
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+          - name: format
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: BigInteger
+                full: java.math.BigInteger
+            - name: arg1
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg2
+              type:
+                basic: Format.FieldDelegate
+                full: java.text.Format$FieldDelegate
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+          - name: formatToCharacterIterator
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: AttributedCharacterIterator
+                full: java.text.AttributedCharacterIterator
+          - name: getBigDecimalMultiplier
+            modifiers:
+            - private
+            return:
+              type:
+                basic: BigDecimal
+                full: java.math.BigDecimal
+          - name: getBigIntegerMultiplier
+            modifiers:
+            - private
+            return:
+              type:
+                basic: BigInteger
+                full: java.math.BigInteger
+          - name: getCurrency
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Currency
+                full: java.util.Currency
+          - name: getDecimalFormatSymbols
+            modifiers:
+            - public
+            return:
+              type:
+                basic: DecimalFormatSymbols
+                full: java.text.DecimalFormatSymbols
+          - name: getGroupingSize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMaximumFractionDigits
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMaximumIntegerDigits
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMinimumFractionDigits
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMinimumIntegerDigits
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getMultiplier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getNegativePrefix
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getNegativePrefixFieldPositions
+            modifiers:
+            - private
+            return:
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition[]
+          - name: getNegativeSuffix
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getNegativeSuffixFieldPositions
+            modifiers:
+            - private
+            return:
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition[]
+          - name: getPositivePrefix
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPositivePrefixFieldPositions
+            modifiers:
+            - private
+            return:
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition[]
+          - name: getPositiveSuffix
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPositiveSuffixFieldPositions
+            modifiers:
+            - private
+            return:
+              type:
+                basic: FieldPosition
+                full: java.text.FieldPosition[]
+          - name: getRoundingMode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: RoundingMode
+                full: java.math.RoundingMode
+          - name: handleInfinity
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg2
+              type:
+                basic: Format.FieldDelegate
+                full: java.text.Format$FieldDelegate
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: handleNaN
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg2
+              type:
+                basic: Format.FieldDelegate
+                full: java.text.Format$FieldDelegate
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isDecimalSeparatorAlwaysShown
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isParseBigDecimal
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: localizeDigits
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: char
+                full: char[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: ParsePosition
+                full: java.text.ParsePosition
+            return:
+              type:
+                basic: Number
+                full: java.lang.Number
+          - name: prependPrefix
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: char
+                full: char[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: char
+                full: char[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: readObject
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectInputStream
+                full: java.io.ObjectInputStream
+            return:
+              type:
+                basic: void
+                full: void
+          - name: resetFastPathData
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCurrency
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Currency
+                full: java.util.Currency
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDecimalFormatSymbols
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: DecimalFormatSymbols
+                full: java.text.DecimalFormatSymbols
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDecimalSeparatorAlwaysShown
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDigitList
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Number
+                full: java.lang.Number
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setGroupingSize
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setGroupingUsed
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaximumFractionDigits
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMaximumIntegerDigits
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMinimumFractionDigits
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMinimumIntegerDigits
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMultiplier
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNegativePrefix
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNegativeSuffix
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setParseBigDecimal
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPositivePrefix
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPositiveSuffix
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRoundingMode
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: RoundingMode
+                full: java.math.RoundingMode
+            return:
+              type:
+                basic: void
+                full: void
+          - name: subformat
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg1
+              type:
+                basic: Format.FieldDelegate
+                full: java.text.Format$FieldDelegate
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: int
+                full: int
+            - name: arg7
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+          - name: subformatNumber
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: StringBuffer
+                full: java.lang.StringBuffer
+            - name: arg1
+              type:
+                basic: Format.FieldDelegate
+                full: java.text.Format$FieldDelegate
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: int
+                full: int
+            - name: arg7
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: subparse
+            modifiers:
+            - private
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: ParsePosition
+                full: java.text.ParsePosition
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg3
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg4
+              type:
+                basic: DigitList
+                full: java.text.DigitList
+            - name: arg5
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg6
+              type:
+                basic: boolean
+                full: boolean[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: subparseNumber
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: DigitList
+                full: java.text.DigitList
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg4
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg5
+              type:
+                basic: boolean
+                full: boolean[]
+            return:
+              type:
+                basic: int
+                full: int
+          - name: toLocalizedPattern
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: toPattern
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: toPattern
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: String
+                full: java.lang.String

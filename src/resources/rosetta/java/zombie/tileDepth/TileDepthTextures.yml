@@ -1,0 +1,221 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.tileDepth:
+        TileDepthTextures:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            m_mediaAbsPath:
+              name: m_mediaAbsPath
+              modifiers:
+              - package
+              type:
+                basic: String
+                full: java.lang.String
+            m_modID:
+              name: m_modID
+              modifiers:
+              - package
+              type:
+                basic: String
+                full: java.lang.String
+            m_nullTilesets:
+              name: m_nullTilesets
+              modifiers:
+              - private
+              type:
+                basic: HashSet
+                full: java.util.HashSet<java.lang.String>
+            m_tilesetRows:
+              name: m_tilesetRows
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.lang.Integer>
+            m_tilesets:
+              name: m_tilesets
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.tileDepth.TilesetDepthTexture>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: Reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createTileset
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: TilesetDepthTexture
+                full: zombie.tileDepth.TilesetDepthTexture
+          - name: getExistingTileset
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: TilesetDepthTexture
+                full: zombie.tileDepth.TilesetDepthTexture
+          - name: getTexture
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: TileDepthTexture
+                full: zombie.tileDepth.TileDepthTexture
+          - name: getTextureFromTileName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: TileDepthTexture
+                full: zombie.tileDepth.TileDepthTexture
+          - name: getTilesetRows
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: int
+                full: int
+          - name: hackAddPresetTilesetDepthTexture
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: initSprites
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: initSprites
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadDepthTextureImages
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: mergeTileset
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TilesetDepthTexture
+                full: zombie.tileDepth.TilesetDepthTexture
+            return:
+              type:
+                basic: void
+                full: void
+          - name: mergeTilesets
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TileDepthTextures
+                full: zombie.tileDepth.TileDepthTextures
+            return:
+              type:
+                basic: void
+                full: void
+          - name: saveTileset
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: lambda$loadDepthTextureImages$0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Path
+                full: java.nio.file.Path
+            return:
+              type:
+                basic: boolean
+                full: boolean

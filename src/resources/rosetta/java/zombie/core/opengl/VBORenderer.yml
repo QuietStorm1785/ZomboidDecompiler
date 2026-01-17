@@ -1,0 +1,2807 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.opengl:
+        VBORenderer:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            BUFFER_SIZE:
+              name: BUFFER_SIZE
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            COLOR_OFFSET:
+              name: COLOR_OFFSET
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            DEPTH_OFFSET:
+              name: DEPTH_OFFSET
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            ELEMENT_SIZE:
+              name: ELEMENT_SIZE
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            FORMAT_PositionColor:
+              name: FORMAT_PositionColor
+              modifiers:
+              - public
+              type:
+                basic: VertexBufferObject.VertexFormat
+                full: zombie.core.skinnedmodel.model.VertexBufferObject$VertexFormat
+            FORMAT_PositionColorUV:
+              name: FORMAT_PositionColorUV
+              modifiers:
+              - public
+              type:
+                basic: VertexBufferObject.VertexFormat
+                full: zombie.core.skinnedmodel.model.VertexBufferObject$VertexFormat
+            FORMAT_PositionColorUVDepth:
+              name: FORMAT_PositionColorUVDepth
+              modifiers:
+              - public
+              type:
+                basic: VertexBufferObject.VertexFormat
+                full: zombie.core.skinnedmodel.model.VertexBufferObject$VertexFormat
+            FORMAT_PositionNormalColor:
+              name: FORMAT_PositionNormalColor
+              modifiers:
+              - public
+              type:
+                basic: VertexBufferObject.VertexFormat
+                full: zombie.core.skinnedmodel.model.VertexBufferObject$VertexFormat
+            FORMAT_PositionNormalColorUV:
+              name: FORMAT_PositionNormalColorUV
+              modifiers:
+              - public
+              type:
+                basic: VertexBufferObject.VertexFormat
+                full: zombie.core.skinnedmodel.model.VertexBufferObject$VertexFormat
+            INDEX_SIZE:
+              name: INDEX_SIZE
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            NORMAL_OFFSET:
+              name: NORMAL_OFFSET
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            NUM_ELEMENTS:
+              name: NUM_ELEMENTS
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            UV1_OFFSET:
+              name: UV1_OFFSET
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            UV2_OFFSET:
+              name: UV2_OFFSET
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            VERTEX_OFFSET:
+              name: VERTEX_OFFSET
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            forceDepthTest:
+              name: forceDepthTest
+              modifiers:
+              - private
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+            forceUserDepth:
+              name: forceUserDepth
+              modifiers:
+              - private
+              type:
+                basic: Float
+                full: java.lang.Float
+            m_commands:
+              name: m_commands
+              modifiers:
+              - private
+              type:
+                basic: VBORendererCommands
+                full: zombie.core.opengl.VBORendererCommands
+            m_commandsReady:
+              name: m_commandsReady
+              modifiers:
+              - private
+              type:
+                basic: VBORendererCommands
+                full: zombie.core.opengl.VBORendererCommands
+            m_currentShaderProgram:
+              name: m_currentShaderProgram
+              modifiers:
+              - private
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+            m_dx:
+              name: m_dx
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            m_dy:
+              name: m_dy
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            m_dz:
+              name: m_dz
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            m_elements:
+              name: m_elements
+              modifiers:
+              - private
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            m_format:
+              name: m_format
+              modifiers:
+              - private
+              type:
+                basic: VertexBufferObject.VertexFormat
+                full: zombie.core.skinnedmodel.model.VertexBufferObject$VertexFormat
+            m_formatUsedByVertexAttribArray:
+              name: m_formatUsedByVertexAttribArray
+              modifiers:
+              - private
+              type:
+                basic: VertexBufferObject.VertexFormat
+                full: zombie.core.skinnedmodel.model.VertexBufferObject$VertexFormat
+            m_ibo:
+              name: m_ibo
+              modifiers:
+              - private
+              type:
+                basic: GLVertexBufferObject
+                full: zombie.core.VBO.GLVertexBufferObject
+            m_indices:
+              name: m_indices
+              modifiers:
+              - private
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            m_runInProgress:
+              name: m_runInProgress
+              modifiers:
+              - private
+              type:
+                basic: VBORenderer.Run
+                full: zombie.core.opengl.VBORenderer$Run
+            m_runPool:
+              name: m_runPool
+              modifiers:
+              - private
+              type:
+                basic: ObjectPool
+                full: zombie.popman.ObjectPool<zombie.core.opengl.VBORenderer$Run>
+            m_runs:
+              name: m_runs
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.opengl.VBORenderer$Run>
+            m_shader_PositionColor:
+              name: m_shader_PositionColor
+              modifiers:
+              - private
+              type:
+                basic: VBOLinesShader
+                full: zombie.core.opengl.VBOLinesShader
+            m_shader_PositionColorUV:
+              name: m_shader_PositionColorUV
+              modifiers:
+              - private
+              type:
+                basic: VBOLinesShader
+                full: zombie.core.opengl.VBOLinesShader
+            m_shader_PositionColorUVDepth:
+              name: m_shader_PositionColorUVDepth
+              modifiers:
+              - private
+              type:
+                basic: VBOLinesShader
+                full: zombie.core.opengl.VBOLinesShader
+            m_shader_PositionNormalColor:
+              name: m_shader_PositionNormalColor
+              modifiers:
+              - private
+              type:
+                basic: VBOLinesShader
+                full: zombie.core.opengl.VBOLinesShader
+            m_shader_PositionNormalColorUV:
+              name: m_shader_PositionNormalColorUV
+              modifiers:
+              - private
+              type:
+                basic: VBOLinesShader
+                full: zombie.core.opengl.VBOLinesShader
+            m_vbo:
+              name: m_vbo
+              modifiers:
+              - private
+              type:
+                basic: GLVertexBufferObject
+                full: zombie.core.VBO.GLVertexBufferObject
+          staticFields:
+            instance:
+              name: instance
+              modifiers:
+              - private
+              - static
+              type:
+                basic: VBORenderer
+                full: zombie.core.opengl.VBORenderer
+            tempVector3f_1:
+              name: tempVector3f_1
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            tempVector3f_2:
+              name: tempVector3f_2
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: addAABB
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: float
+                full: float
+            - name: arg11
+              type:
+                basic: float
+                full: float
+            - name: arg12
+              type:
+                basic: float
+                full: float
+            - name: arg13
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addAABB
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addAABB
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            - name: arg4
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addBox
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addCylinder
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: int
+                full: int
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: float
+                full: float
+            - name: arg11
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addCylinder_Fill
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addCylinder_Fill
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addCylinder_Line
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addCylinder_Line
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addDisk
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: TextureID
+                full: zombie.core.textures.TextureID
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addDisk_Fill
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: TextureID
+                full: zombie.core.textures.TextureID
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addElement
+            modifiers:
+            - public
+            return:
+              type:
+                basic: VBORenderer
+                full: zombie.core.opengl.VBORenderer
+          - name: addElement
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addElement
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addElementDepth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addLine
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addLine
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: float
+                full: float
+            - name: arg11
+              type:
+                basic: float
+                full: float
+            - name: arg12
+              type:
+                basic: float
+                full: float
+            - name: arg13
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addLineWithThickness
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addQuad
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addQuad
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: float
+                full: float
+            - name: arg11
+              type:
+                basic: float
+                full: float
+            - name: arg12
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addQuad
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: float
+                full: float
+            - name: arg11
+              type:
+                basic: float
+                full: float
+            - name: arg12
+              type:
+                basic: float
+                full: float
+            - name: arg13
+              type:
+                basic: float
+                full: float
+            - name: arg14
+              type:
+                basic: float
+                full: float
+            - name: arg15
+              type:
+                basic: float
+                full: float
+            - name: arg16
+              type:
+                basic: float
+                full: float
+            - name: arg17
+              type:
+                basic: float
+                full: float
+            - name: arg18
+              type:
+                basic: float
+                full: float
+            - name: arg19
+              type:
+                basic: float
+                full: float
+            - name: arg20
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addQuad
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: float
+                full: float
+            - name: arg11
+              type:
+                basic: float
+                full: float
+            - name: arg12
+              type:
+                basic: float
+                full: float
+            - name: arg13
+              type:
+                basic: float
+                full: float
+            - name: arg14
+              type:
+                basic: float
+                full: float
+            - name: arg15
+              type:
+                basic: float
+                full: float
+            - name: arg16
+              type:
+                basic: float
+                full: float
+            - name: arg17
+              type:
+                basic: float
+                full: float
+            - name: arg18
+              type:
+                basic: float
+                full: float
+            - name: arg19
+              type:
+                basic: float
+                full: float
+            - name: arg20
+              type:
+                basic: float
+                full: float
+            - name: arg21
+              type:
+                basic: float
+                full: float
+            - name: arg22
+              type:
+                basic: float
+                full: float
+            - name: arg23
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addQuadDepth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: float
+                full: float
+            - name: arg11
+              type:
+                basic: float
+                full: float
+            - name: arg12
+              type:
+                basic: float
+                full: float
+            - name: arg13
+              type:
+                basic: float
+                full: float
+            - name: arg14
+              type:
+                basic: float
+                full: float
+            - name: arg15
+              type:
+                basic: float
+                full: float
+            - name: arg16
+              type:
+                basic: float
+                full: float
+            - name: arg17
+              type:
+                basic: float
+                full: float
+            - name: arg18
+              type:
+                basic: float
+                full: float
+            - name: arg19
+              type:
+                basic: float
+                full: float
+            - name: arg20
+              type:
+                basic: float
+                full: float
+            - name: arg21
+              type:
+                basic: float
+                full: float
+            - name: arg22
+              type:
+                basic: float
+                full: float
+            - name: arg23
+              type:
+                basic: float
+                full: float
+            - name: arg24
+              type:
+                basic: float
+                full: float
+            - name: arg25
+              type:
+                basic: float
+                full: float
+            - name: arg26
+              type:
+                basic: float
+                full: float
+            - name: arg27
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addRectOutline
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addTorus
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: UI3DScene.Ray
+                full: zombie.vehicles.UI3DScene$Ray
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addTriangle
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: float
+                full: float
+            - name: arg11
+              type:
+                basic: float
+                full: float
+            - name: arg12
+              type:
+                basic: float
+                full: float
+            - name: arg13
+              type:
+                basic: float
+                full: float
+            - name: arg14
+              type:
+                basic: float
+                full: float
+            - name: arg15
+              type:
+                basic: float
+                full: float
+            - name: arg16
+              type:
+                basic: float
+                full: float
+            - name: arg17
+              type:
+                basic: float
+                full: float
+            - name: arg18
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addTriangle
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: float
+                full: float
+            - name: arg11
+              type:
+                basic: float
+                full: float
+            - name: arg12
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addTriangleDepth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: float
+                full: float
+            - name: arg11
+              type:
+                basic: float
+                full: float
+            - name: arg12
+              type:
+                basic: float
+                full: float
+            - name: arg13
+              type:
+                basic: float
+                full: float
+            - name: arg14
+              type:
+                basic: float
+                full: float
+            - name: arg15
+              type:
+                basic: float
+                full: float
+            - name: arg16
+              type:
+                basic: float
+                full: float
+            - name: arg17
+              type:
+                basic: float
+                full: float
+            - name: arg18
+              type:
+                basic: float
+                full: float
+            - name: arg19
+              type:
+                basic: float
+                full: float
+            - name: arg20
+              type:
+                basic: float
+                full: float
+            - name: arg21
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addTriangleDepth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            - name: arg7
+              type:
+                basic: float
+                full: float
+            - name: arg8
+              type:
+                basic: float
+                full: float
+            - name: arg9
+              type:
+                basic: float
+                full: float
+            - name: arg10
+              type:
+                basic: float
+                full: float
+            - name: arg11
+              type:
+                basic: float
+                full: float
+            - name: arg12
+              type:
+                basic: float
+                full: float
+            - name: arg13
+              type:
+                basic: float
+                full: float
+            - name: arg14
+              type:
+                basic: float
+                full: float
+            - name: arg15
+              type:
+                basic: float
+                full: float
+            - name: arg16
+              type:
+                basic: float
+                full: float
+            - name: arg17
+              type:
+                basic: float
+                full: float
+            - name: arg18
+              type:
+                basic: float
+                full: float
+            - name: arg19
+              type:
+                basic: float
+                full: float
+            - name: arg20
+              type:
+                basic: float
+                full: float
+            - name: arg21
+              type:
+                basic: float
+                full: float
+            - name: arg22
+              type:
+                basic: float
+                full: float
+            - name: arg23
+              type:
+                basic: float
+                full: float
+            - name: arg24
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkVertexBufferAlignment
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cmdPopMatrix
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cmdPushAndLoadMatrix
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Matrix4f
+                full: org.joml.Matrix4f
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cmdPushAndMultMatrix
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Matrix4f
+                full: org.joml.Matrix4f
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cmdShader1f
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cmdShader1f
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cmdShader2f
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cmdShader2f
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cmdShader3f
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cmdShader4f
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cmdShader4f
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cmdUseProgram
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+            return:
+              type:
+                basic: void
+                full: void
+          - name: cos
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: create
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: currentRun
+            modifiers:
+            - private
+            return:
+              type:
+                basic: VBORenderer.Run
+                full: zombie.core.opengl.VBORenderer$Run
+          - name: endRun
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: flush
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getShaderForFormat
+            modifiers:
+            - private
+            return:
+              type:
+                basic: VBOLinesShader
+                full: zombie.core.opengl.VBOLinesShader
+          - name: hasRoomFor
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: initShader
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: VBOLinesShader
+                full: zombie.core.opengl.VBOLinesShader
+            return:
+              type:
+                basic: VBOLinesShader
+                full: zombie.core.opengl.VBOLinesShader
+          - name: isFull
+            modifiers:
+            - package
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: normal3f
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putByte
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: VBORenderer
+                full: zombie.core.opengl.VBORenderer
+          - name: putFloat
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: VBORenderer
+                full: zombie.core.opengl.VBORenderer
+          - name: putInt
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: VBORenderer
+                full: zombie.core.opengl.VBORenderer
+          - name: putShort
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: short
+                full: short
+            return:
+              type:
+                basic: VBORenderer
+                full: zombie.core.opengl.VBORenderer
+          - name: renderNextRun
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderRun
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: VBORenderer.Run
+                full: zombie.core.opengl.VBORenderer$Run
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reserve
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setClampST
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setColor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDepth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDepthTest
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDepthTestForAllRuns
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFloats1
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFloats2
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFloats3
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFloats4
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFormat
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: VertexBufferObject.VertexFormat
+                full: zombie.core.skinnedmodel.model.VertexBufferObject$VertexFormat
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLineWidth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMinMagFilters
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMode
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNormal
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOffset
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setShaderProgram
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTextureID
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TextureID
+                full: zombie.core.textures.TextureID
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUV1
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUV2
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUserDepth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUserDepthForAllRuns
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Float
+                full: java.lang.Float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVertex
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVertexAttribArrays
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: VertexBufferObject.VertexFormat
+                full: zombie.core.skinnedmodel.model.VertexBufferObject$VertexFormat
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sin
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: startNextRun
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: startRun
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: VBORenderer.Run
+                full: zombie.core.opengl.VBORenderer$Run
+            return:
+              type:
+                basic: void
+                full: void
+          - name: startRun
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: VertexBufferObject.VertexFormat
+                full: zombie.core.skinnedmodel.model.VertexBufferObject$VertexFormat
+            return:
+              type:
+                basic: void
+                full: void
+          - name: useShaderProgram
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: getInstance
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: VBORenderer
+                full: zombie.core.opengl.VBORenderer

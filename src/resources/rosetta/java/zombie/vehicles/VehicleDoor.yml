@@ -1,0 +1,145 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.vehicles:
+        VehicleDoor:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            lockBroken:
+              name: lockBroken
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            locked:
+              name: locked
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            open:
+              name: open
+              modifiers:
+              - protected
+              type:
+                basic: boolean
+                full: boolean
+            part:
+              name: part
+              modifiers:
+              - protected
+              type:
+                basic: VehiclePart
+                full: zombie.vehicles.VehiclePart
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: part
+              type:
+                basic: VehiclePart
+                full: zombie.vehicles.VehiclePart
+          methods:
+          - name: init
+            modifiers:
+            - public
+            parameters:
+            - name: scriptDoor
+              type:
+                basic: VehicleScript.Door
+                full: zombie.scripting.objects.VehicleScript$Door
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isLockBroken
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLocked
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOpen
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: input
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: output
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLockBroken
+            modifiers:
+            - public
+            parameters:
+            - name: broken
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLocked
+            modifiers:
+            - public
+            parameters:
+            - name: locked
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOpen
+            modifiers:
+            - public
+            parameters:
+            - name: open
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void

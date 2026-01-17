@@ -1,0 +1,90 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      fmod.fmod:
+        FMOD_STUDIO_EVENT_DESCRIPTION:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            address:
+              name: address
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            bHasSustainPoints:
+              name: bHasSustainPoints
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            id:
+              name: id
+              modifiers:
+              - public
+              type:
+                basic: FMOD_GUID
+                full: fmod.fmod.FMOD_GUID
+            length:
+              name: length
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            parameters:
+              name: parameters
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<fmod.fmod.FMOD_STUDIO_PARAMETER_DESCRIPTION>
+            path:
+              name: path
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: FMOD_GUID
+                full: fmod.fmod.FMOD_GUID
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg4
+              type:
+                basic: long
+                full: long
+          methods:
+          - name: hasParameter
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FMOD_STUDIO_PARAMETER_DESCRIPTION
+                full: fmod.fmod.FMOD_STUDIO_PARAMETER_DESCRIPTION
+            return:
+              type:
+                basic: boolean
+                full: boolean

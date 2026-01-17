@@ -1,0 +1,858 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity:
+        GameEntity:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          fields:
+            addedToEngine:
+              name: addedToEngine
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            addedToEntityManager:
+              name: addedToEntityManager
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            addedToWorldOrEquipped:
+              name: addedToWorldOrEquipped
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            components:
+              name: components
+              modifiers:
+              - private
+              type:
+                basic: ComponentContainer
+                full: zombie.entity.ComponentContainer
+            removingFromEngine:
+              name: removingFromEngine
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            scheduledDelayedAddToEngine:
+              name: scheduledDelayedAddToEngine
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            scheduledForBucketUpdate:
+              name: scheduledForBucketUpdate
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            scheduledForEngineRemoval:
+              name: scheduledForEngineRemoval
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            usingPlayer:
+              name: usingPlayer
+              modifiers:
+              - private
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+          staticFields:
+            DEFAULT_ENTITY_DISPLAY_NAME:
+              name: DEFAULT_ENTITY_DISPLAY_NAME
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            IOverbose:
+              name: IOverbose
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            dummyBits:
+              name: dummyBits
+              modifiers:
+              - private
+              - static
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: addComponent
+            modifiers:
+            - package
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Component
+                full: zombie.entity.Component
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addToWorld
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: attrib
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: AttributeContainer
+                full: zombie.entity.components.attributes.AttributeContainer
+          - name: componentSize
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: int
+                full: int
+          - name: connectComponents
+            modifiers:
+            - protected
+            - final
+            return:
+              type:
+                basic: void
+                full: void
+          - name: containsComponent
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Component
+                full: zombie.entity.Component
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: ensureComponents
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getAttributes
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: AttributeContainer
+                full: zombie.entity.components.attributes.AttributeContainer
+          - name: getBucketBits
+            modifiers:
+            - package
+            return:
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+          - name: getComponent
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            return:
+              type:
+                basic: T
+                full: T
+          - name: getComponentAny
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType[]
+            return:
+              type:
+                basic: T
+                full: T
+          - name: getComponentBits
+            modifiers:
+            - package
+            return:
+              type:
+                basic: BitSet
+                full: zombie.entity.util.BitSet
+          - name: getComponentForIndex
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Component
+                full: zombie.entity.Component
+          - name: getComponentFromID
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: short
+                full: short
+            return:
+              type:
+                basic: Component
+                full: zombie.entity.Component
+          - name: getComponentOperationHandler
+            modifiers:
+            - package
+            return:
+              type:
+                basic: ComponentOperationHandler
+                full: zombie.entity.ComponentOperationHandler
+          - name: getDurabilityComponent
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: Durability
+                full: zombie.entity.components.combat.Durability
+          - name: getEntityDisplayName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getEntityFullTypeDebug
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getEntityNetID
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getEntityScript
+            modifiers:
+            - public
+            return:
+              type:
+                basic: GameEntityScript
+                full: zombie.scripting.entity.GameEntityScript
+          - name: getExceptionCompatibleString
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFluidContainer
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: FluidContainer
+                full: zombie.entity.components.fluids.FluidContainer
+          - name: getGameEntityType
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: GameEntityType
+                full: zombie.entity.GameEntityType
+          - name: getSpriteConfig
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: SpriteConfig
+                full: zombie.entity.components.spriteconfig.SpriteConfig
+          - name: getSquare
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: getUsingPlayer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+          - name: getX
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getY
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getZ
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: hasComponent
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasComponentAny
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasComponents
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasRenderers
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAddedToEngine
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEntityValid
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMeta
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isOutside
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRemovingFromEngine
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isScheduledForBucketUpdate
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isScheduledForEngineRemoval
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUsingPlayer
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isValidEngineEntity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: loadEntity
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onEquip
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onEquip
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onFirstCreation
+            modifiers:
+            - protected
+            - final
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onFluidContainerUpdate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onReceiveEntityPacket
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: EntityPacketType
+                full: zombie.entity.network.EntityPacketType
+            - name: arg2
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: onUnEquip
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: receiveSyncEntity
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: receiveUpdateUsingPlayer
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: releaseComponent
+            modifiers:
+            - package
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: releaseComponent
+            modifiers:
+            - package
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Component
+                full: zombie.entity.Component
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: removeComponent
+            modifiers:
+            - package
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            return:
+              type:
+                basic: Component
+                full: zombie.entity.Component
+          - name: removeComponent
+            modifiers:
+            - package
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Component
+                full: zombie.entity.Component
+            return:
+              type:
+                basic: Component
+                full: zombie.entity.Component
+          - name: removeFromWorld
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeFromWorld
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderlast
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderlastComponents
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: requiresEntitySave
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: saveEntity
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendClientEntityPacket
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: EntityPacketData
+                full: zombie.entity.network.EntityPacketData
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendComponentEvent
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Component
+                full: zombie.entity.Component
+            - name: arg1
+              type:
+                basic: ComponentEventType
+                full: zombie.entity.events.ComponentEventType
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendComponentEvent
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Component
+                full: zombie.entity.Component
+            - name: arg1
+              type:
+                basic: ComponentEvent
+                full: zombie.entity.events.ComponentEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendEntityEvent
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: EntityEventType
+                full: zombie.entity.events.EntityEventType
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendEntityEvent
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: EntityEvent
+                full: zombie.entity.events.EntityEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendServerEntityPacket
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: EntityPacketData
+                full: zombie.entity.network.EntityPacketData
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendServerEntityPacketTo
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: arg1
+              type:
+                basic: EntityPacketData
+                full: zombie.entity.network.EntityPacketData
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendSyncEntity
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendUpdateUsingPlayer
+            modifiers:
+            - protected
+            - final
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setComponentOperationHandler
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentOperationHandler
+                full: zombie.entity.ComponentOperationHandler
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUsingPlayer
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: getDefaultEntityDisplayName
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: String
+                full: java.lang.String

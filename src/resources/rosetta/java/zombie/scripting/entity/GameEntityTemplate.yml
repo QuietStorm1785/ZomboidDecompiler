@@ -1,0 +1,71 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.entity:
+        GameEntityTemplate:
+          extends: zombie.scripting.objects.BaseScriptObject
+          modifiers:
+          - public
+          fields:
+            body:
+              name: body
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            name:
+              name: name
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            script:
+              name: script
+              modifiers:
+              - public
+              type:
+                basic: GameEntityScript
+                full: zombie.scripting.entity.GameEntityScript
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptModule
+                full: zombie.scripting.objects.ScriptModule
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: Load
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getScript
+            modifiers:
+            - public
+            return:
+              type:
+                basic: GameEntityScript
+                full: zombie.scripting.entity.GameEntityScript

@@ -1,0 +1,92 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.network:
+        PacketGroup:
+          extends: java.lang.Enum<zombie.entity.network.PacketGroup>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: PacketGroup
+                full: zombie.entity.network.PacketGroup[]
+            CraftLogic:
+              name: CraftLogic
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PacketGroup
+                full: zombie.entity.network.PacketGroup
+            GameEntity:
+              name: GameEntity
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PacketGroup
+                full: zombie.entity.network.PacketGroup
+            Generic:
+              name: Generic
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PacketGroup
+                full: zombie.entity.network.PacketGroup
+            MashingLogic:
+              name: MashingLogic
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PacketGroup
+                full: zombie.entity.network.PacketGroup
+            Resources:
+              name: Resources
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PacketGroup
+                full: zombie.entity.network.PacketGroup
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: PacketGroup
+                full: zombie.entity.network.PacketGroup[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: PacketGroup
+                full: zombie.entity.network.PacketGroup
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: PacketGroup
+                full: zombie.entity.network.PacketGroup[]

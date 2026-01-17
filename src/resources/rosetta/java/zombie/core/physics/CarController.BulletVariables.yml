@@ -1,0 +1,67 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.physics:
+        CarController.BulletVariables:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            brakingForce:
+              name: brakingForce
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            engineForce:
+              name: engineForce
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            vehicle:
+              name: vehicle
+              modifiers:
+              - package
+              type:
+                basic: BaseVehicle
+                full: zombie.vehicles.BaseVehicle
+            vehicleSteering:
+              name: vehicleSteering
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: set
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: BaseVehicle
+                full: zombie.vehicles.BaseVehicle
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: CarController.BulletVariables
+                full: zombie.core.physics.CarController$BulletVariables

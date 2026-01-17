@@ -1,0 +1,170 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.radio.devices:
+        WaveSignalDevice:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: AddDeviceText
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: line
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: guid
+              type:
+                basic: String
+                full: java.lang.String
+            - name: codes
+              type:
+                basic: String
+                full: java.lang.String
+            - name: distance
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: AddDeviceText
+            modifiers:
+            - public
+            parameters:
+            - name: player
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            - name: line
+              type:
+                basic: String
+                full: java.lang.String
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: guid
+              type:
+                basic: String
+                full: java.lang.String
+            - name: codes
+              type:
+                basic: String
+                full: java.lang.String
+            - name: distance
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: HasPlayerInRange
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getDelta
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDeviceData
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: DeviceData
+                full: zombie.radio.devices.DeviceData
+          - name: getSquare
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+          - name: getX
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getY
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getZ
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: setDelta
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: d
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDeviceData
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: data
+              type:
+                basic: DeviceData
+                full: zombie.radio.devices.DeviceData
+            return:
+              type:
+                basic: void
+                full: void

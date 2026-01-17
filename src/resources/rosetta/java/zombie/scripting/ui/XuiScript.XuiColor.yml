@@ -1,0 +1,84 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.ui:
+        XuiScript.XuiColor:
+          extends: zombie.scripting.ui.XuiScript$XuiVar<zombie.core.Color, zombie.scripting.ui.XuiScript$XuiColor>
+          modifiers:
+          - public
+          constructors:
+          - modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+          - modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: Color
+                full: zombie.core.Color
+          methods:
+          - name: fromString
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getA
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getB
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getG
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getR
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getValueString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

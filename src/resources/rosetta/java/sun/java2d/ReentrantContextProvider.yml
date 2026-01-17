@@ -1,0 +1,118 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.java2d:
+        ReentrantContextProvider:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          fields:
+            refType:
+              name: refType
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          staticFields:
+            REF_HARD:
+              name: REF_HARD
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            REF_SOFT:
+              name: REF_SOFT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            REF_WEAK:
+              name: REF_WEAK
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            USAGE_CLQ:
+              name: USAGE_CLQ
+              modifiers:
+              - package
+              - static
+              type:
+                basic: byte
+                full: byte
+            USAGE_TL_INACTIVE:
+              name: USAGE_TL_INACTIVE
+              modifiers:
+              - package
+              - static
+              type:
+                basic: byte
+                full: byte
+            USAGE_TL_IN_USE:
+              name: USAGE_TL_IN_USE
+              modifiers:
+              - package
+              - static
+              type:
+                basic: byte
+                full: byte
+          constructors:
+          - modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: acquire
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: K
+                full: K
+          - name: getOrCreateReference
+            modifiers:
+            - protected
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            return:
+              type:
+                basic: Reference
+                full: java.lang.ref.Reference<K>
+          - name: newContext
+            modifiers:
+            - protected
+            - abstract
+            return:
+              type:
+                basic: K
+                full: K
+          - name: release
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            return:
+              type:
+                basic: void
+                full: void

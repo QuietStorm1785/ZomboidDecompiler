@@ -1,0 +1,47 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util:
+        LinkedList.Node:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            item:
+              name: item
+              modifiers:
+              - package
+              type:
+                basic: E
+                full: E
+            next:
+              name: next
+              modifiers:
+              - package
+              type:
+                basic: LinkedList.Node
+                full: java.util.LinkedList$Node<E>
+            prev:
+              name: prev
+              modifiers:
+              - package
+              type:
+                basic: LinkedList.Node
+                full: java.util.LinkedList$Node<E>
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: LinkedList.Node
+                full: java.util.LinkedList$Node<E>
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            - name: arg2
+              type:
+                basic: LinkedList.Node
+                full: java.util.LinkedList$Node<E>

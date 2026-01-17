@@ -1,0 +1,267 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.font:
+        CharToGlyphMapper:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          fields:
+            missingGlyph:
+              name: missingGlyph
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+          staticFields:
+            HI_SURROGATE_END:
+              name: HI_SURROGATE_END
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            HI_SURROGATE_START:
+              name: HI_SURROGATE_START
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            INVISIBLE_GLYPHS:
+              name: INVISIBLE_GLYPHS
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            INVISIBLE_GLYPH_ID:
+              name: INVISIBLE_GLYPH_ID
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            LO_SURROGATE_END:
+              name: LO_SURROGATE_END
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            LO_SURROGATE_START:
+              name: LO_SURROGATE_START
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            UNINITIALIZED_GLYPH:
+              name: UNINITIALIZED_GLYPH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            VSS_END:
+              name: VSS_END
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            VSS_START:
+              name: VSS_START
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            VS_END:
+              name: VS_END
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            VS_START:
+              name: VS_START
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: canDisplay
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: char
+                full: char
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: canDisplay
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: charToGlyph
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: char
+                full: char
+            return:
+              type:
+                basic: int
+                full: int
+          - name: charToGlyph
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: charToVariationGlyph
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: charsToGlyphs
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: char
+                full: char[]
+            - name: arg2
+              type:
+                basic: int
+                full: int[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: charsToGlyphs
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int[]
+            - name: arg2
+              type:
+                basic: int
+                full: int[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: charsToGlyphsNS
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: char
+                full: char[]
+            - name: arg2
+              type:
+                basic: int
+                full: int[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getMissingGlyphCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getNumGlyphs
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          staticMethods:
+          - name: isVariationSelector
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean

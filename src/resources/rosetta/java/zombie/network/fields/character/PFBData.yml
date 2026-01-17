@@ -1,0 +1,179 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.network.fields.character:
+        PFBData:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            realState:
+              name: realState
+              modifiers:
+              - public
+              type:
+                basic: NetworkVariables.ZombieState
+                full: zombie.network.NetworkVariables$ZombieState
+            targetPlayer:
+              name: targetPlayer
+              modifiers:
+              - public
+              type:
+                basic: PlayerID
+                full: zombie.network.fields.character.PlayerID
+            targetX:
+              name: targetX
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            targetY:
+              name: targetY
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            targetZ:
+              name: targetZ
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            type:
+              name: type
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+          staticFields:
+            goalCharacter:
+              name: goalCharacter
+              modifiers:
+              - private
+              - static
+              type:
+                basic: byte
+                full: byte
+            goalLocation:
+              name: goalLocation
+              modifiers:
+              - private
+              - static
+              type:
+                basic: byte
+                full: byte
+            goalNone:
+              name: goalNone
+              modifiers:
+              - private
+              - static
+              type:
+                basic: byte
+                full: byte
+            goalSound:
+              name: goalSound
+              modifiers:
+              - private
+              - static
+              type:
+                basic: byte
+                full: byte
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: copy
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PFBData
+                full: zombie.network.fields.character.PFBData
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isCanceled
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: restore
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: write
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: write
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void

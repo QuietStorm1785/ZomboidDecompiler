@@ -1,0 +1,113 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.java2d.loops:
+        RenderLoops:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            drawGlyphListAALoop:
+              name: drawGlyphListAALoop
+              modifiers:
+              - public
+              type:
+                basic: DrawGlyphListAA
+                full: sun.java2d.loops.DrawGlyphListAA
+            drawGlyphListColorLoop:
+              name: drawGlyphListColorLoop
+              modifiers:
+              - public
+              type:
+                basic: DrawGlyphListColor
+                full: sun.java2d.loops.DrawGlyphListColor
+            drawGlyphListLCDLoop:
+              name: drawGlyphListLCDLoop
+              modifiers:
+              - public
+              type:
+                basic: DrawGlyphListLCD
+                full: sun.java2d.loops.DrawGlyphListLCD
+            drawGlyphListLoop:
+              name: drawGlyphListLoop
+              modifiers:
+              - public
+              type:
+                basic: DrawGlyphList
+                full: sun.java2d.loops.DrawGlyphList
+            drawLineLoop:
+              name: drawLineLoop
+              modifiers:
+              - public
+              type:
+                basic: DrawLine
+                full: sun.java2d.loops.DrawLine
+            drawParallelogramLoop:
+              name: drawParallelogramLoop
+              modifiers:
+              - public
+              type:
+                basic: DrawParallelogram
+                full: sun.java2d.loops.DrawParallelogram
+            drawPathLoop:
+              name: drawPathLoop
+              modifiers:
+              - public
+              type:
+                basic: DrawPath
+                full: sun.java2d.loops.DrawPath
+            drawPolygonsLoop:
+              name: drawPolygonsLoop
+              modifiers:
+              - public
+              type:
+                basic: DrawPolygons
+                full: sun.java2d.loops.DrawPolygons
+            drawRectLoop:
+              name: drawRectLoop
+              modifiers:
+              - public
+              type:
+                basic: DrawRect
+                full: sun.java2d.loops.DrawRect
+            fillParallelogramLoop:
+              name: fillParallelogramLoop
+              modifiers:
+              - public
+              type:
+                basic: FillParallelogram
+                full: sun.java2d.loops.FillParallelogram
+            fillPathLoop:
+              name: fillPathLoop
+              modifiers:
+              - public
+              type:
+                basic: FillPath
+                full: sun.java2d.loops.FillPath
+            fillRectLoop:
+              name: fillRectLoop
+              modifiers:
+              - public
+              type:
+                basic: FillRect
+                full: sun.java2d.loops.FillRect
+            fillSpansLoop:
+              name: fillSpansLoop
+              modifiers:
+              - public
+              type:
+                basic: FillSpans
+                full: sun.java2d.loops.FillSpans
+          staticFields:
+            primTypeID:
+              name: primTypeID
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public

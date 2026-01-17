@@ -1,0 +1,51 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.lang:
+        Class.AnnotationData:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            annotations:
+              name: annotations
+              modifiers:
+              - package
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Class<? extends java.lang.annotation.Annotation>,
+                  java.lang.annotation.Annotation>
+            declaredAnnotations:
+              name: declaredAnnotations
+              modifiers:
+              - package
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Class<? extends java.lang.annotation.Annotation>,
+                  java.lang.annotation.Annotation>
+            redefinedCount:
+              name: redefinedCount
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Class<? extends java.lang.annotation.Annotation>,
+                  java.lang.annotation.Annotation>
+            - name: arg1
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.Class<? extends java.lang.annotation.Annotation>,
+                  java.lang.annotation.Annotation>
+            - name: arg2
+              type:
+                basic: int
+                full: int

@@ -1,0 +1,536 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.input:
+        Mouse:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          staticFields:
+            BTN_0:
+              name: BTN_0
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            BTN_1:
+              name: BTN_1
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            BTN_2:
+              name: BTN_2
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            BTN_3:
+              name: BTN_3
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            BTN_4:
+              name: BTN_4
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            BTN_5:
+              name: BTN_5
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            BTN_6:
+              name: BTN_6
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            BTN_7:
+              name: BTN_7
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            BTN_OFFSET:
+              name: BTN_OFFSET
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            LMB:
+              name: LMB
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            MMB:
+              name: MMB
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            RMB:
+              name: RMB
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            TIME_RIGHT_PRESSED_SECONDS:
+              name: TIME_RIGHT_PRESSED_SECONDS
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+            TimeRightPressed:
+              name: TimeRightPressed
+              modifiers:
+              - private
+              - static
+              type:
+                basic: float
+                full: float
+            UICaptured:
+              name: UICaptured
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean[]
+            blankCursor:
+              name: blankCursor
+              modifiers:
+              - package
+              - static
+              type:
+                basic: Cursor
+                full: org.lwjglx.input.Cursor
+            defaultCursor:
+              name: defaultCursor
+              modifiers:
+              - package
+              - static
+              type:
+                basic: Cursor
+                full: org.lwjglx.input.Cursor
+            isCursorVisible:
+              name: isCursorVisible
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            lastActivity:
+              name: lastActivity
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+            m_buttonDownStates:
+              name: m_buttonDownStates
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean[]
+            m_buttonPrevStates:
+              name: m_buttonPrevStates
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean[]
+            mouseCursorTexture:
+              name: mouseCursorTexture
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            s_mouseStateCache:
+              name: s_mouseStateCache
+              modifiers:
+              - private
+              - static
+              type:
+                basic: MouseStateCache
+                full: zombie.input.MouseStateCache
+            wheelDelta:
+              name: wheelDelta
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            x:
+              name: x
+              modifiers:
+              - protected
+              - static
+              type:
+                basic: int
+                full: int
+            y:
+              name: y
+              modifiers:
+              - protected
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: UIBlockButtonDown
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: number
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getButtonCount
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getWheelState
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getX
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getXA
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getY
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getYA
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: int
+                full: int
+          - name: initCustomCursor
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isButtonDown
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: number
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isButtonDownUICheck
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: number
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isButtonPressed
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isButtonReleased
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCursorVisible
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLeftDown
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLeftPressed
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLeftReleased
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isLeftUp
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMiddleDown
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMiddlePressed
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMiddleReleased
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isMiddleUp
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRightDelay
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRightDown
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRightPressed
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRightReleased
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRightUp
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: loadCursor
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: filename
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Cursor
+                full: org.lwjglx.input.Cursor
+          - name: poll
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderCursorTexture
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCursorVisible
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bVisible
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setXY
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: wasButtonDown
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean

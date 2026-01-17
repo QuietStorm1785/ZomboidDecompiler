@@ -1,0 +1,269 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.WornItems:
+        WornItems:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            group:
+              name: group
+              modifiers:
+              - protected
+              type:
+                basic: BodyLocationGroup
+                full: zombie.characters.WornItems.BodyLocationGroup
+            items:
+              name: items
+              modifiers:
+              - protected
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.WornItems.WornItem>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: group
+              type:
+                basic: BodyLocationGroup
+                full: zombie.characters.WornItems.BodyLocationGroup
+          - modifiers:
+            - public
+            parameters:
+            - name: other
+              type:
+                basic: WornItems
+                full: zombie.characters.WornItems.WornItems
+          methods:
+          - name: addItemsToItemContainer
+            modifiers:
+            - public
+            parameters:
+            - name: container
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: contains
+            modifiers:
+            - public
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: copyFrom
+            modifiers:
+            - public
+            parameters:
+            - name: other
+              type:
+                basic: WornItems
+                full: zombie.characters.WornItems.WornItems
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forEach
+            modifiers:
+            - public
+            parameters:
+            - name: c
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<zombie.characters.WornItems.WornItem>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: WornItem
+                full: zombie.characters.WornItems.WornItem
+          - name: getBodyLocationGroup
+            modifiers:
+            - public
+            return:
+              type:
+                basic: BodyLocationGroup
+                full: zombie.characters.WornItems.BodyLocationGroup
+          - name: getItem
+            modifiers:
+            - public
+            parameters:
+            - name: location
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: getItemByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+          - name: getItemVisuals
+            modifiers:
+            - public
+            parameters:
+            - name: itemVisuals
+              type:
+                basic: ItemVisuals
+                full: zombie.core.skinnedmodel.visual.ItemVisuals
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getLocation
+            modifiers:
+            - public
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: indexOf
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: indexOf
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: remove
+            modifiers:
+            - public
+            parameters:
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFromItemVisuals
+            modifiers:
+            - public
+            parameters:
+            - name: itemVisuals
+              type:
+                basic: ItemVisuals
+                full: zombie.core.skinnedmodel.visual.ItemVisuals
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setItem
+            modifiers:
+            - public
+            parameters:
+            - name: location
+              type:
+                basic: String
+                full: java.lang.String
+            - name: item
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: size
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int

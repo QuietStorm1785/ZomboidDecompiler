@@ -1,0 +1,31 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util.function:
+        DoubleFunction:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "Represents a function that accepts a double-valued argument and\
+            \ produces a\n result.  This is the double-consuming primitive specialization\
+            \ for\n Function.\n\n This is a functional interface\n whose functional\
+            \ method is apply(double)."
+          methods:
+          - name: apply
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: value
+              type:
+                basic: double
+                full: double
+              notes: the function argument
+            return:
+              type:
+                basic: R
+                full: R
+              notes: the function result
+            notes: Applies this function to the given argument.

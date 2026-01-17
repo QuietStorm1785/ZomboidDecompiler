@@ -1,0 +1,46 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.Lua:
+        Event.Remove:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            e:
+              name: e
+              modifiers:
+              - package
+              type:
+                basic: Event
+                full: zombie.Lua.Event
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: e
+              type:
+                basic: Event
+                full: zombie.Lua.Event
+          methods:
+          - name: call
+            modifiers:
+            - public
+            parameters:
+            - name: callFrame
+              type:
+                basic: LuaCallFrame
+                full: se.krka.kahlua.vm.LuaCallFrame
+            - name: nArguments
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+              notes: N, number of return values. The top N objects on the stack are
+                considered the return values.
+            notes: 'Description copied from interface: se.krka.kahlua.vm.JavaFunction'

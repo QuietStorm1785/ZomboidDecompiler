@@ -1,0 +1,528 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      jdk.internal.reflect:
+        ReflectionFactory:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            langReflectAccess:
+              name: langReflectAccess
+              modifiers:
+              - private
+              type:
+                basic: JavaLangReflectAccess
+                full: jdk.internal.access.JavaLangReflectAccess
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            disableSerialConstructorChecks:
+              name: disableSerialConstructorChecks
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            hasStaticInitializerMethod:
+              name: hasStaticInitializerMethod
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+            inflationThreshold:
+              name: inflationThreshold
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            initted:
+              name: initted
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            noInflation:
+              name: noInflation
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            soleInstance:
+              name: soleInstance
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ReflectionFactory
+                full: jdk.internal.reflect.ReflectionFactory
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: copyConstructor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<T>
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<T>
+          - name: copyField
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Field
+                full: java.lang.reflect.Field
+            return:
+              type:
+                basic: Field
+                full: java.lang.reflect.Field
+          - name: copyMethod
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+          - name: findReadWriteObjectForSerialization
+            modifiers:
+            - private
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: MethodHandle
+                full: java.lang.invoke.MethodHandle
+          - name: generateConstructor
+            modifiers:
+            - private
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<?>
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<?>
+          - name: getConstructorAccessor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<?>
+            return:
+              type:
+                basic: ConstructorAccessor
+                full: jdk.internal.reflect.ConstructorAccessor
+          - name: getExecutableSharedParameterTypes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Executable
+                full: java.lang.reflect.Executable
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getExecutableTypeAnnotationBytes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Executable
+                full: java.lang.reflect.Executable
+            return:
+              type:
+                basic: byte
+                full: byte[]
+          - name: getReplaceResolveForSerialization
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: MethodHandle
+                full: java.lang.invoke.MethodHandle
+          - name: hasStaticInitializerForSerialization
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: leafCopyMethod
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+          - name: newConstructor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg6
+              type:
+                basic: byte
+                full: byte[]
+            - name: arg7
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<?>
+          - name: newConstructorAccessor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<?>
+            return:
+              type:
+                basic: ConstructorAccessor
+                full: jdk.internal.reflect.ConstructorAccessor
+          - name: newConstructorForExternalization
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<?>
+          - name: newConstructorForSerialization
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<?>
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<?>
+          - name: newConstructorForSerialization
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<?>
+          - name: newFieldAccessor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Field
+                full: java.lang.reflect.Field
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: FieldAccessor
+                full: jdk.internal.reflect.FieldAccessor
+          - name: newInstance
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<T>
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: T
+                full: T
+          - name: newMethodAccessor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+            return:
+              type:
+                basic: MethodAccessor
+                full: jdk.internal.reflect.MethodAccessor
+          - name: newOptionalDataExceptionForSerialization
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<java.io.OptionalDataException>
+          - name: readObjectForSerialization
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: MethodHandle
+                full: java.lang.invoke.MethodHandle
+          - name: readObjectNoDataForSerialization
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: MethodHandle
+                full: java.lang.invoke.MethodHandle
+          - name: readResolveForSerialization
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: MethodHandle
+                full: java.lang.invoke.MethodHandle
+          - name: setConstructorAccessor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Constructor
+                full: java.lang.reflect.Constructor<?>
+            - name: arg1
+              type:
+                basic: ConstructorAccessor
+                full: jdk.internal.reflect.ConstructorAccessor
+            return:
+              type:
+                basic: void
+                full: void
+          - name: superHasAccessibleConstructor
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: writeObjectForSerialization
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: MethodHandle
+                full: java.lang.invoke.MethodHandle
+          - name: writeReplaceForSerialization
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: MethodHandle
+                full: java.lang.invoke.MethodHandle
+          staticMethods:
+          - name: checkInitted
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: findMethodForReflection
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+          - name: getReflectionFactory
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ReflectionFactory
+                full: jdk.internal.reflect.ReflectionFactory
+          - name: inflationThreshold
+            modifiers:
+            - package
+            - static
+            return:
+              type:
+                basic: int
+                full: int
+          - name: packageEquals
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean

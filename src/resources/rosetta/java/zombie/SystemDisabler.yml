@@ -1,0 +1,355 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie:
+        SystemDisabler:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          staticFields:
+            bEnableAdvancedSoundOptions:
+              name: bEnableAdvancedSoundOptions
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doCharacterStats:
+              name: doCharacterStats
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doEnableDetectOpenGLErrors:
+              name: doEnableDetectOpenGLErrors
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doEnableDetectOpenGLErrorsInTexture:
+              name: doEnableDetectOpenGLErrorsInTexture
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doHighFriction:
+              name: doHighFriction
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doKickInDebug:
+              name: doKickInDebug
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doMainLoopDealWithNetData:
+              name: doMainLoopDealWithNetData
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doOverridePOVCharacters:
+              name: doOverridePOVCharacters
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doOverrideServerConnectDebugCheck:
+              name: doOverrideServerConnectDebugCheck
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doPlayerCreation:
+              name: doPlayerCreation
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doPrintDetailedInfo:
+              name: doPrintDetailedInfo
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doSurvivorCreation:
+              name: doSurvivorCreation
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doVehicleLowRider:
+              name: doVehicleLowRider
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doVehiclesEverywhere:
+              name: doVehiclesEverywhere
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doVehiclesWithoutTextures:
+              name: doVehiclesWithoutTextures
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doWorldSyncEnable:
+              name: doWorldSyncEnable
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            doZombieCreation:
+              name: doZombieCreation
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            uncappedFPS:
+              name: uncappedFPS
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            zombiesDontAttack:
+              name: zombiesDontAttack
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getDoMainLoopDealWithNetData
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getEnableAdvancedSoundOptions
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getKickInDebug
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getOverrideServerConnectDebugCheck
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getUncappedFPS
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getdoHighFriction
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getdoVehicleLowRider
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: printDetailedInfo
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setDoCharacterStats
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bDo
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDoPlayerCreation
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bDo
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDoSurvivorCreation
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bDo
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDoZombieCreation
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bDo
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEnableAdvancedSoundOptions
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: enable
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOverridePOVCharacters
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bDo
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUncappedFPS
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVehiclesEverywhere
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bDo
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWorldSyncEnable
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: bDo
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void

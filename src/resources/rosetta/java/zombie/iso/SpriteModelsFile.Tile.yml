@@ -1,0 +1,43 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        SpriteModelsFile.Tile:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            col:
+              name: col
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            row:
+              name: row
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            spriteModel:
+              name: spriteModel
+              modifiers:
+              - public
+              type:
+                basic: SpriteModel
+                full: zombie.iso.SpriteModel
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getIndex
+            modifiers:
+            - package
+            return:
+              type:
+                basic: int
+                full: int

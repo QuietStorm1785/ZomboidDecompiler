@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Asset:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          fields:
+            CheckItemTexAndNames:
+              name: CheckItemTexAndNames
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+            SlowLoad:
+              name: SlowLoad
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+          constructors:
+          - modifiers:
+            - public

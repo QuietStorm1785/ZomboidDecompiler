@@ -1,0 +1,226 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util.concurrent:
+        ConcurrentMap:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "A Map providing thread safety and atomicity guarantees.\n\n To maintain\
+            \ the specified guarantees, default implementations of\n methods including\
+            \ putIfAbsent(K, V) inherited from Map\n must be overridden by implementations\
+            \ of this interface. Similarly,\n implementations of the collections returned\
+            \ by methods Map.keySet(), Map.values(), and Map.entrySet() must override\n\
+            \ methods such as removeIf when necessary to\n preserve atomicity guarantees.\n\
+            \n Memory consistency effects: As with other concurrent\n collections,\
+            \ actions in a thread prior to placing an object into a\n ConcurrentMap\
+            \ as a key or value\n happen-before\n actions subsequent to the access\
+            \ or removal of that object from\n the ConcurrentMap in another thread.\n\
+            \n This interface is a member of the\n \n Java Collections Framework."
+          methods:
+          - name: compute
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: BiFunction
+                full: java.util.function.BiFunction<? super K, ? super V, ? extends
+                  V>
+            return:
+              type:
+                basic: V
+                full: V
+          - name: computeIfAbsent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: Function
+                full: java.util.function.Function<? super K, ? extends V>
+            return:
+              type:
+                basic: V
+                full: V
+          - name: computeIfPresent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: BiFunction
+                full: java.util.function.BiFunction<? super K, ? super V, ? extends
+                  V>
+            return:
+              type:
+                basic: V
+                full: V
+          - name: forEach
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: BiConsumer
+                full: java.util.function.BiConsumer<? super K, ? super V>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getOrDefault
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: V
+                full: V
+            return:
+              type:
+                basic: V
+                full: V
+          - name: lambda$replaceAll$0
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: BiFunction
+                full: java.util.function.BiFunction
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg2
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void
+          - name: merge
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: V
+                full: V
+            - name: arg2
+              type:
+                basic: BiFunction
+                full: java.util.function.BiFunction<? super V, ? super V, ? extends
+                  V>
+            return:
+              type:
+                basic: V
+                full: V
+          - name: putIfAbsent
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: V
+                full: V
+            return:
+              type:
+                basic: V
+                full: V
+          - name: remove
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: replace
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: V
+                full: V
+            - name: arg2
+              type:
+                basic: V
+                full: V
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: replace
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: K
+                full: K
+            - name: arg1
+              type:
+                basic: V
+                full: V
+            return:
+              type:
+                basic: V
+                full: V
+          - name: replaceAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: BiFunction
+                full: java.util.function.BiFunction<? super K, ? super V, ? extends
+                  V>
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,310 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      gnu.trove:
+        TByteCollection:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          staticFields:
+            serialVersionUID:
+              name: serialVersionUID
+              modifiers:
+              - public
+              - static
+              type:
+                basic: long
+                full: long
+          methods:
+          - name: add
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Collection
+                full: java.util.Collection<? extends java.lang.Byte>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TByteCollection
+                full: gnu.trove.TByteCollection
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: clear
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: contains
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Collection
+                full: java.util.Collection<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TByteCollection
+                full: gnu.trove.TByteCollection
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: equals
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: forEach
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TByteProcedure
+                full: gnu.trove.procedure.TByteProcedure
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getNoEntryValue
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: hashCode
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isEmpty
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: iterator
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: TByteIterator
+                full: gnu.trove.iterator.TByteIterator
+          - name: remove
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: removeAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Collection
+                full: java.util.Collection<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: removeAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TByteCollection
+                full: gnu.trove.TByteCollection
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: removeAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: retainAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Collection
+                full: java.util.Collection<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: retainAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TByteCollection
+                full: gnu.trove.TByteCollection
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: retainAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: size
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: toArray
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: byte
+                full: byte[]
+          - name: toArray
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: byte
+                full: byte[]

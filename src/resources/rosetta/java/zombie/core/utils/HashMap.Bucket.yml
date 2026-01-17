@@ -1,0 +1,91 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.utils:
+        HashMap.Bucket:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            count:
+              name: count
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            keys:
+              name: keys
+              modifiers:
+              - public
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            nextIndex:
+              name: nextIndex
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            values:
+              name: values
+              modifiers:
+              - public
+              type:
+                basic: Object
+                full: java.lang.Object[]
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: grow
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: put
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void
+          - name: remove
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: size
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int

@@ -1,0 +1,136 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.config:
+        ConfigOption:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          fields:
+            name:
+              name: name
+              modifiers:
+              - protected
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getTooltip
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getType
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getValueAsLuaString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getValueAsObject
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getValueAsString
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isValidString
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: s
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: makeCopy
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: ConfigOption
+                full: zombie.config.ConfigOption
+          - name: parse
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: s
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: resetToDefault
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDefaultToCurrentValue
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setValueFromObject
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: o
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void

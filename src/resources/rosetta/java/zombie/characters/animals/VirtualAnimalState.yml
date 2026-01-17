@@ -1,0 +1,161 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.animals:
+        VirtualAnimalState:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          fields:
+            m_animal:
+              name: m_animal
+              modifiers:
+              - protected
+              type:
+                basic: VirtualAnimal
+                full: zombie.characters.animals.VirtualAnimal
+          staticFields:
+            distanceBoost:
+              name: distanceBoost
+              modifiers:
+              - package
+              - static
+              type:
+                basic: float
+                full: float
+            possibleJunctions:
+              name: possibleJunctions
+              modifiers:
+              - package
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.animals.AnimalZoneJunction>
+            tempJunctions:
+              name: tempJunctions
+              modifiers:
+              - package
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.animals.AnimalZoneJunction>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: VirtualAnimal
+                full: zombie.characters.animals.VirtualAnimal
+          methods:
+          - name: addAnimalTracks
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AnimalTracksDefinitions.AnimalTracksType
+                full: zombie.characters.animals.AnimalTracksDefinitions$AnimalTracksType
+            return:
+              type:
+                basic: void
+                full: void
+          - name: lambda$moveAlongPath$1
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: AnimalZone
+                full: zombie.characters.animals.AnimalZone
+            - name: arg1
+              type:
+                basic: IsoAnimal
+                full: zombie.characters.animals.IsoAnimal
+            return:
+              type:
+                basic: void
+                full: void
+          - name: moveAlongPath
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: moveAlongPath
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: AnimalZone
+                full: zombie.characters.animals.AnimalZone
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reachedEnd
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: visitJunction
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: AnimalZone
+                full: zombie.characters.animals.AnimalZone
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.animals.AnimalZoneJunction>
+            return:
+              type:
+                basic: AnimalZoneJunction
+                full: zombie.characters.animals.AnimalZoneJunction
+          staticMethods:
+          - name: lambda$moveAlongPath$0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoAnimal
+                full: zombie.characters.animals.IsoAnimal
+            return:
+              type:
+                basic: void
+                full: void

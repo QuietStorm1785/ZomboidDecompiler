@@ -1,0 +1,216 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        IsoMarkers:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            markers:
+              name: markers
+              modifiers:
+              - private
+              type:
+                basic: List
+                full: java.util.List<zombie.iso.IsoMarkers$IsoMarker>
+          staticFields:
+            NextIsoMarkerID:
+              name: NextIsoMarkerID
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            instance:
+              name: instance
+              modifiers:
+              - public
+              - static
+              type:
+                basic: IsoMarkers
+                full: zombie.iso.IsoMarkers
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: addIsoMarker
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: IsoMarkers.IsoMarker
+                full: zombie.iso.IsoMarkers$IsoMarker
+          - name: addIsoMarker
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            - name: arg1
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: IsoMarkers.IsoMarker
+                full: zombie.iso.IsoMarkers$IsoMarker
+          - name: addIsoMarker
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg1
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            - name: arg4
+              type:
+                basic: float
+                full: float
+            - name: arg5
+              type:
+                basic: float
+                full: float
+            - name: arg6
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: IsoMarkers.IsoMarker
+                full: zombie.iso.IsoMarkers$IsoMarker
+          - name: getIsoMarker
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoMarkers.IsoMarker
+                full: zombie.iso.IsoMarkers$IsoMarker
+          - name: removeIsoMarker
+            modifiers:
+            - public
+            parameters:
+            - name: marker
+              type:
+                basic: IsoMarkers.IsoMarker
+                full: zombie.iso.IsoMarkers$IsoMarker
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: removeIsoMarker
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: renderIsoMarkers
+            modifiers:
+            - public
+            parameters:
+            - name: perPlayerRender
+              type:
+                basic: IsoCell.PerPlayerRender
+                full: zombie.iso.IsoCell$PerPlayerRender
+            - name: zLayer
+              type:
+                basic: int
+                full: int
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

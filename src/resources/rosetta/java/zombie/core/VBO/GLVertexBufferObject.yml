@@ -1,0 +1,245 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.VBO:
+        GLVertexBufferObject:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: Vertex buffer object wrapper
+          fields:
+            buffer:
+              name: buffer
+              modifiers:
+              - private
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            cleared:
+              name: cleared
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            id:
+              name: id
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            m_vertexAttribArray:
+              name: m_vertexAttribArray
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            mapped:
+              name: mapped
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            size:
+              name: size
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            type:
+              name: type
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            usage:
+              name: usage
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            funcs:
+              name: funcs
+              modifiers:
+              - public
+              - static
+              type:
+                basic: IGLBufferObject
+                full: zombie.core.VBO.IGLBufferObject
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: size
+              type:
+                basic: long
+                full: long
+            - name: type
+              type:
+                basic: int
+                full: int
+            - name: usage
+              type:
+                basic: int
+                full: int
+            notes: C'tor
+          - modifiers:
+            - public
+            parameters:
+            - name: type
+              type:
+                basic: int
+                full: int
+            - name: usage
+              type:
+                basic: int
+                full: int
+            notes: C'tor
+          methods:
+          - name: bind
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: bindNone
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: bufferData
+            modifiers:
+            - public
+            parameters:
+            - name: data
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Tells the driver we don't care about the data in our buffer any
+              more (may improve performance before mapping)
+          - name: create
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: disableVertexAttribArray
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: doDestroy
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: enableVertexAttribArray
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isMapped
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: map
+            modifiers:
+            - public
+            parameters:
+            - name: size
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: map
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: orphan
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: unmap
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          staticMethods:
+          - name: init
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,45 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.vehicles:
+        UI3DScene.GridPlaneDrawer:
+          extends: zombie.core.textures.TextureDraw$GenericDrawer
+          modifiers:
+          - package
+          - final
+          fields:
+            m_scene:
+              name: m_scene
+              modifiers:
+              - package
+              type:
+                basic: UI3DScene
+                full: zombie.vehicles.UI3DScene
+            this$0:
+              name: this$0
+              modifiers:
+              - package
+              type:
+                basic: UI3DScene
+                full: zombie.vehicles.UI3DScene
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: UI3DScene
+                full: zombie.vehicles.UI3DScene
+            - name: arg1
+              type:
+                basic: UI3DScene
+                full: zombie.vehicles.UI3DScene
+          methods:
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

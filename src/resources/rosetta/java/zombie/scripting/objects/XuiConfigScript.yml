@@ -1,0 +1,128 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.objects:
+        XuiConfigScript:
+          extends: zombie.scripting.objects.BaseScriptObject
+          modifiers:
+          - public
+          fields:
+            varConfigs:
+              name: varConfigs
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<zombie.scripting.ui.XuiVarType, java.util.ArrayList<java.lang.String>>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: InitLoadPP
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Load
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LoadVarTypeBlock
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: XuiVarType
+                full: zombie.scripting.ui.XuiVarType
+            - name: arg1
+              type:
+                basic: ScriptParser.Block
+                full: zombie.scripting.ScriptParser$Block
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnLoadedAfterLua
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnPostWorldDictionaryInit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnScriptsLoaded
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptLoadMode
+                full: zombie.scripting.ScriptLoadMode
+            return:
+              type:
+                basic: void
+                full: void
+          - name: PreReload
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getVarConfigs
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<zombie.scripting.ui.XuiVarType, java.util.ArrayList<java.lang.String>>
+          - name: otherTypesContainsKey
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: XuiVarType
+                full: zombie.scripting.ui.XuiVarType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

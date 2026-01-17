@@ -1,0 +1,53 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.opengl:
+        Shader.Skinning.IDs:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            boneCount:
+              name: boneCount
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            boneIDs:
+              name: boneIDs
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            boneMatrices:
+              name: boneMatrices
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            boneWeights:
+              name: boneWeights
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            this$1:
+              name: this$1
+              modifiers:
+              - package
+              type:
+                basic: Shader.Skinning
+                full: zombie.core.opengl.Shader$Skinning
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Shader.Skinning
+                full: zombie.core.opengl.Shader$Skinning

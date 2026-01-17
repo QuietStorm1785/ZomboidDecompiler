@@ -1,0 +1,245 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.util.logging:
+        PlatformLogger.Level:
+          extends: java.lang.Enum<sun.util.logging.PlatformLogger$Level>
+          modifiers:
+          - public
+          - final
+          fields:
+            systemLevel:
+              name: systemLevel
+              modifiers:
+              - package
+              type:
+                basic: System.Logger.Level
+                full: java.lang.System$Logger$Level
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level[]
+            ALL:
+              name: ALL
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level
+            CONFIG:
+              name: CONFIG
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level
+            FINE:
+              name: FINE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level
+            FINER:
+              name: FINER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level
+            FINEST:
+              name: FINEST
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level
+            INFO:
+              name: INFO
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level
+            LEVEL_VALUES:
+              name: LEVEL_VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int[]
+            OFF:
+              name: OFF
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level
+            SEVERE:
+              name: SEVERE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level
+            SEVERITY_ALL:
+              name: SEVERITY_ALL
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            SEVERITY_CONFIG:
+              name: SEVERITY_CONFIG
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            SEVERITY_FINE:
+              name: SEVERITY_FINE
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            SEVERITY_FINER:
+              name: SEVERITY_FINER
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            SEVERITY_FINEST:
+              name: SEVERITY_FINEST
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            SEVERITY_INFO:
+              name: SEVERITY_INFO
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            SEVERITY_OFF:
+              name: SEVERITY_OFF
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            SEVERITY_SEVERE:
+              name: SEVERITY_SEVERE
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            SEVERITY_WARNING:
+              name: SEVERITY_WARNING
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            WARNING:
+              name: WARNING
+              modifiers:
+              - public
+              - static
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: System.Logger.Level
+                full: java.lang.System$Logger$Level
+          methods:
+          - name: intValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: systemLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: System.Logger.Level
+                full: java.lang.System$Logger$Level
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: PlatformLogger.Level
+                full: sun.util.logging.PlatformLogger$Level[]

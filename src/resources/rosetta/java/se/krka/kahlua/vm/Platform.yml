@@ -1,0 +1,57 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      se.krka.kahlua.vm:
+        Platform:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: newEnvironment
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+          - name: newTable
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+          - name: pow
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: double
+                full: double
+          - name: setupEnvironment
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            return:
+              type:
+                basic: void
+                full: void

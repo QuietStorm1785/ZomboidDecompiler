@@ -1,0 +1,35 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.visual:
+        IAnimalVisual:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: getAnimalSize
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getAnimalType
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getAnimalVisual
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: AnimalVisual
+                full: zombie.core.skinnedmodel.visual.AnimalVisual

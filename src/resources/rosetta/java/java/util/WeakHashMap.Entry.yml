@@ -1,0 +1,108 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util:
+        WeakHashMap.Entry:
+          extends: java.lang.ref.WeakReference<java.lang.Object>
+          modifiers:
+          - package
+          fields:
+            hash:
+              name: hash
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            next:
+              name: next
+              modifiers:
+              - package
+              type:
+                basic: WeakHashMap.Entry
+                full: java.util.WeakHashMap$Entry<K, V>
+            value:
+              name: value
+              modifiers:
+              - package
+              type:
+                basic: V
+                full: V
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: V
+                full: V
+            - name: arg2
+              type:
+                basic: ReferenceQueue
+                full: java.lang.ref.ReferenceQueue<java.lang.Object>
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: WeakHashMap.Entry
+                full: java.util.WeakHashMap$Entry<K, V>
+          methods:
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getKey
+            modifiers:
+            - public
+            return:
+              type:
+                basic: K
+                full: K
+          - name: getValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: V
+                full: V
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: setValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: V
+                full: V
+            return:
+              type:
+                basic: V
+                full: V
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

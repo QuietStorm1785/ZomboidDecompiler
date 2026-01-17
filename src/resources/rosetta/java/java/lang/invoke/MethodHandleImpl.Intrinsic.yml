@@ -1,0 +1,140 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.lang.invoke:
+        MethodHandleImpl.Intrinsic:
+          extends: java.lang.Enum<java.lang.invoke.MethodHandleImpl$Intrinsic>
+          modifiers:
+          - package
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic[]
+            ARRAY_LENGTH:
+              name: ARRAY_LENGTH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic
+            ARRAY_LOAD:
+              name: ARRAY_LOAD
+              modifiers:
+              - public
+              - static
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic
+            ARRAY_STORE:
+              name: ARRAY_STORE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic
+            GUARD_WITH_CATCH:
+              name: GUARD_WITH_CATCH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic
+            IDENTITY:
+              name: IDENTITY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic
+            LOOP:
+              name: LOOP
+              modifiers:
+              - public
+              - static
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic
+            NONE:
+              name: NONE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic
+            SELECT_ALTERNATIVE:
+              name: SELECT_ALTERNATIVE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic
+            TABLE_SWITCH:
+              name: TABLE_SWITCH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic
+            TRY_FINALLY:
+              name: TRY_FINALLY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic
+            ZERO:
+              name: ZERO
+              modifiers:
+              - public
+              - static
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: MethodHandleImpl.Intrinsic
+                full: java.lang.invoke.MethodHandleImpl$Intrinsic[]

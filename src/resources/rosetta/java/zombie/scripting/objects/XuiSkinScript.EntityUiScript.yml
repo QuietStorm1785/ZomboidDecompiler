@@ -1,0 +1,161 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.objects:
+        XuiSkinScript.EntityUiScript:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            buildDescription:
+              name: buildDescription
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            clearComponents:
+              name: clearComponents
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            componentUiScriptMap:
+              name: componentUiScriptMap
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<zombie.entity.ComponentType, zombie.scripting.objects.XuiSkinScript$ComponentUiScript>
+            description:
+              name: description
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            displayName:
+              name: displayName
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            iconPath:
+              name: iconPath
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            luaCanOpenWindow:
+              name: luaCanOpenWindow
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            luaOpenWindow:
+              name: luaOpenWindow
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            luaWindowClass:
+              name: luaWindowClass
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            xuiStyle:
+              name: xuiStyle
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getBuildDescription
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getComponentUiScriptMap
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<zombie.entity.ComponentType, zombie.scripting.objects.XuiSkinScript$ComponentUiScript>
+          - name: getDescription
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDisplayName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getIconPath
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getLuaCanOpenWindow
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getLuaOpenWindow
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getLuaWindowClass
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getXuiStyle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isClearComponents
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: reset
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void

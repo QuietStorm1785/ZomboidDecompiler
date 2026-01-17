@@ -1,0 +1,301 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      gnu.trove.set:
+        TLongSet:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: add
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Collection
+                full: java.util.Collection<? extends java.lang.Long>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TLongCollection
+                full: gnu.trove.TLongCollection
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: clear
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+          - name: contains
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Collection
+                full: java.util.Collection<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TLongCollection
+                full: gnu.trove.TLongCollection
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: containsAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: equals
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: forEach
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TLongProcedure
+                full: gnu.trove.procedure.TLongProcedure
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getNoEntryValue
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: long
+                full: long
+          - name: hashCode
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isEmpty
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: iterator
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: TLongIterator
+                full: gnu.trove.iterator.TLongIterator
+          - name: remove
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: removeAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Collection
+                full: java.util.Collection<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: removeAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TLongCollection
+                full: gnu.trove.TLongCollection
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: removeAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: retainAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Collection
+                full: java.util.Collection<?>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: retainAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TLongCollection
+                full: gnu.trove.TLongCollection
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: retainAll
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: size
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: toArray
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: long
+                full: long[]
+          - name: toArray
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long[]
+            return:
+              type:
+                basic: long
+                full: long[]

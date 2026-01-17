@@ -1,0 +1,71 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.java2d.loops:
+        RenderCache:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            entries:
+              name: entries
+              modifiers:
+              - private
+              type:
+                basic: RenderCache.Entry
+                full: sun.java2d.loops.RenderCache$Entry[]
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            - name: arg1
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            - name: arg2
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: put
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            - name: arg1
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            - name: arg2
+              type:
+                basic: SurfaceType
+                full: sun.java2d.loops.SurfaceType
+            - name: arg3
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,12 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.asset:
+        AssetManager.AssetParams:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          constructors:
+          - modifiers:
+            - public

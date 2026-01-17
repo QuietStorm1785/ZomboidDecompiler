@@ -1,0 +1,80 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.objects:
+        AnimationsMesh:
+          extends: zombie.scripting.objects.BaseScriptObject
+          modifiers:
+          - public
+          - final
+          fields:
+            animationDirectories:
+              name: animationDirectories
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            animationPrefixes:
+              name: animationPrefixes
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            bKeepMeshAnimations:
+              name: bKeepMeshAnimations
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            meshFile:
+              name: meshFile
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            modelMesh:
+              name: modelMesh
+              modifiers:
+              - public
+              type:
+                basic: ModelMesh
+                full: zombie.core.skinnedmodel.model.ModelMesh
+            postProcess:
+              name: postProcess
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: Load
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: totalFile
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

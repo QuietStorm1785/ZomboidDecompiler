@@ -1,0 +1,77 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.util:
+        FrameDelay:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            count:
+              name: count
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            delay:
+              name: delay
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            delta:
+              name: delta
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            multiplier:
+              name: multiplier
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: getDelta
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMultiplier
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean

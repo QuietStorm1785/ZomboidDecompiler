@@ -1,0 +1,299 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.opengl:
+        Shader:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            m_shaderMapID:
+              name: m_shaderMapID
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            m_shaderProgramInitialized:
+              name: m_shaderProgramInitialized
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            m_shaderProgramLock:
+              name: m_shaderProgramLock
+              modifiers:
+              - private
+              type:
+                basic: Object
+                full: java.lang.Object
+            m_shaderProgramSpecific:
+              name: m_shaderProgramSpecific
+              modifiers:
+              - private
+              type:
+                basic: Shader.ShaderProgramSpecific
+                full: zombie.core.opengl.Shader$ShaderProgramSpecific
+            name:
+              name: name
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+          staticFields:
+            ShaderMap:
+              name: ShaderMap
+              modifiers:
+              - public
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.Integer, zombie.core.opengl.Shader>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: Activate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: End
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: GetRequiresSkinning
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: Init
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetupBones
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ModelMesh
+                full: zombie.core.skinnedmodel.model.ModelMesh
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetupInstancedData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Start
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: callback
+            modifiers:
+            - public
+            parameters:
+            - name: sender
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+            return:
+              type:
+                basic: void
+                full: void
+          - name: destroy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getHeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getProgram
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+          - name: getRequiresSkinning
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getShaderProgram
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+          - name: getWidth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: initShaderProgram
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isCompiled
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: lambda$initShaderProgram$0
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Shader
+                full: zombie.core.opengl.Shader
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onCompileSuccess
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ShaderProgram
+                full: zombie.core.opengl.ShaderProgram
+            return:
+              type:
+                basic: void
+                full: void
+          - name: postRender
+            modifiers:
+            - public
+            parameters:
+            - name: texd
+              type:
+                basic: TextureDraw
+                full: zombie.core.textures.TextureDraw
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHeight
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTexture
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWidth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: startMainThread
+            modifiers:
+            - public
+            parameters:
+            - name: texd
+              type:
+                basic: TextureDraw
+                full: zombie.core.textures.TextureDraw
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: startRenderThread
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: TextureDraw
+                full: zombie.core.textures.TextureDraw
+            return:
+              type:
+                basic: void
+                full: void

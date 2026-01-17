@@ -1,0 +1,84 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.worldgen.biomes:
+        BiomeType.Hygrometry:
+          extends: java.lang.Enum<zombie.iso.worldgen.biomes.BiomeType$Hygrometry>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: BiomeType.Hygrometry
+                full: zombie.iso.worldgen.biomes.BiomeType$Hygrometry[]
+            DRY:
+              name: DRY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BiomeType.Hygrometry
+                full: zombie.iso.worldgen.biomes.BiomeType$Hygrometry
+            FLOODING:
+              name: FLOODING
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BiomeType.Hygrometry
+                full: zombie.iso.worldgen.biomes.BiomeType$Hygrometry
+            NONE:
+              name: NONE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BiomeType.Hygrometry
+                full: zombie.iso.worldgen.biomes.BiomeType$Hygrometry
+            RAIN:
+              name: RAIN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BiomeType.Hygrometry
+                full: zombie.iso.worldgen.biomes.BiomeType$Hygrometry
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: BiomeType.Hygrometry
+                full: zombie.iso.worldgen.biomes.BiomeType$Hygrometry[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: BiomeType.Hygrometry
+                full: zombie.iso.worldgen.biomes.BiomeType$Hygrometry
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: BiomeType.Hygrometry
+                full: zombie.iso.worldgen.biomes.BiomeType$Hygrometry[]

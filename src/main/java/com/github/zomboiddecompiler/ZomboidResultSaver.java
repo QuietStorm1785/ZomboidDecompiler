@@ -21,6 +21,10 @@ public final class ZomboidResultSaver implements IResultSaver {
 
     /// If true, when saving a decompiled source file, the corresponding .class file will be found and its line numbers will be remapped to the source file.
     private boolean remapLineNumbers = false;
+    /// If true, write a .backup copy before overwriting remapped classes.
+    private boolean remapWriteBackup = true;
+    /// If true, ask ASM to compute frames/maxs when writing remapped classes (more resilient, slightly slower).
+    private boolean remapComputeFrames = false;
     /// Root directory of the game (ProjectZomboid/).
     private final Path gameRoot;
 
@@ -31,6 +35,14 @@ public final class ZomboidResultSaver implements IResultSaver {
 
     public void setRemapLineNumbers(boolean remapLineNumbers) {
         this.remapLineNumbers = remapLineNumbers;
+    }
+
+    public void setRemapWriteBackup(boolean remapWriteBackup) {
+        this.remapWriteBackup = remapWriteBackup;
+    }
+
+    public void setRemapComputeFrames(boolean remapComputeFrames) {
+        this.remapComputeFrames = remapComputeFrames;
     }
 
     @Override
@@ -94,7 +106,7 @@ public final class ZomboidResultSaver implements IResultSaver {
 
         // i don't really like doing this here, but i can't find another place to extract the line mappings
         // mapping length is checked so that files with no code don't get remapped, as this fails
-        if (remapLineNumbers && mapping.length > 0) {
+        if (remapLineNumbers && mapping != null && mapping.length > 1) {
             assert this.gameRoot != null;
 
             Map<Integer, Integer> mappingMap = new LinkedHashMap<>();
@@ -110,21 +122,16 @@ public final class ZomboidResultSaver implements IResultSaver {
 
             ZomboidDecompiler.log.log("Remapping line numbers in " + className);
 
-            List<Path> files;
             try (Stream<Path> fileStream = Files.list(classDirectory)) {
                 String finalClassName = className;
-                files = fileStream.filter(
-                        (file) -> {
+                fileStream.filter(file -> {
                             String fileName = file.getFileName().toString();
                             return fileName.equals(finalClassName + ".class")
                                     || (fileName.startsWith(finalClassName + "$") && fileName.endsWith(".class"));
-                        }).toList();
+                        })
+                        .forEach(file -> LineRemapper.remapClass(file, file, mappingMap, remapWriteBackup, remapComputeFrames));
             } catch (IOException e) {
                 throw new RuntimeException(e);
-            }
-
-            for (Path file: files) {
-                LineRemapper.remapClass(file, file, mappingMap);
             }
         }
     }

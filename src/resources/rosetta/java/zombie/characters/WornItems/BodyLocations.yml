@@ -1,0 +1,44 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.WornItems:
+        BodyLocations:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          staticFields:
+            groups:
+              name: groups
+              modifiers:
+              - protected
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.WornItems.BodyLocationGroup>
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getGroup
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: BodyLocationGroup
+                full: zombie.characters.WornItems.BodyLocationGroup

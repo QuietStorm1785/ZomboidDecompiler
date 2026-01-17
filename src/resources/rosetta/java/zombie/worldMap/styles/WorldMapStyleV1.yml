@@ -1,0 +1,213 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.worldMap.styles:
+        WorldMapStyleV1:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            m_api:
+              name: m_api
+              modifiers:
+              - public
+              type:
+                basic: UIWorldMapV1
+                full: zombie.worldMap.UIWorldMapV1
+            m_layers:
+              name: m_layers
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.worldMap.styles.WorldMapStyleV1$WorldMapStyleLayerV1>
+            m_listener:
+              name: m_listener
+              modifiers:
+              - protected
+              type:
+                basic: IWorldMapStyleListener
+                full: zombie.worldMap.styles.IWorldMapStyleListener
+            m_style:
+              name: m_style
+              modifiers:
+              - public
+              type:
+                basic: WorldMapStyle
+                full: zombie.worldMap.styles.WorldMapStyle
+            m_ui:
+              name: m_ui
+              modifiers:
+              - public
+              type:
+                basic: UIWorldMap
+                full: zombie.worldMap.UIWorldMap
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: ui
+              type:
+                basic: UIWorldMap
+                full: zombie.worldMap.UIWorldMap
+          methods:
+          - name: _initListener
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getLayerByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: WorldMapStyleV1.WorldMapStyleLayerV1
+                full: zombie.worldMap.styles.WorldMapStyleV1$WorldMapStyleLayerV1
+          - name: getLayerByName
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: WorldMapStyleV1.WorldMapStyleLayerV1
+                full: zombie.worldMap.styles.WorldMapStyleV1$WorldMapStyleLayerV1
+          - name: getLayerCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: indexOfLayer
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: indexOfLayer
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: WorldMapStyleLayer
+                full: zombie.worldMap.styles.WorldMapStyleLayer
+            return:
+              type:
+                basic: int
+                full: int
+          - name: moveLayer
+            modifiers:
+            - public
+            parameters:
+            - name: indexFrom
+              type:
+                basic: int
+                full: int
+            - name: indexTo
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: newLineLayer
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: WorldMapStyleV1.WorldMapStyleLayerV1
+                full: zombie.worldMap.styles.WorldMapStyleV1$WorldMapStyleLayerV1
+          - name: newPolygonLayer
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: WorldMapStyleV1.WorldMapStyleLayerV1
+                full: zombie.worldMap.styles.WorldMapStyleV1$WorldMapStyleLayerV1
+          - name: newTextureLayer
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: WorldMapStyleV1.WorldMapStyleLayerV1
+                full: zombie.worldMap.styles.WorldMapStyleV1$WorldMapStyleLayerV1
+          - name: removeLayerById
+            modifiers:
+            - public
+            parameters:
+            - name: id
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeLayerByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: index
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: setExposed
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: exposer
+              type:
+                basic: LuaManager.Exposer
+                full: zombie.Lua.LuaManager$Exposer
+            return:
+              type:
+                basic: void
+                full: void

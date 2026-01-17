@@ -1,0 +1,68 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting:
+        ScriptLoadMode:
+          extends: java.lang.Enum<zombie.scripting.ScriptLoadMode>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ScriptLoadMode
+                full: zombie.scripting.ScriptLoadMode[]
+            Init:
+              name: Init
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptLoadMode
+                full: zombie.scripting.ScriptLoadMode
+            Reload:
+              name: Reload
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptLoadMode
+                full: zombie.scripting.ScriptLoadMode
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ScriptLoadMode
+                full: zombie.scripting.ScriptLoadMode[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ScriptLoadMode
+                full: zombie.scripting.ScriptLoadMode
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ScriptLoadMode
+                full: zombie.scripting.ScriptLoadMode[]

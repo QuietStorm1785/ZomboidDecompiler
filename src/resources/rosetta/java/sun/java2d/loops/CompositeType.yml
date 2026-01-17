@@ -1,0 +1,448 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.java2d.loops:
+        CompositeType:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            desc:
+              name: desc
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            next:
+              name: next
+              modifiers:
+              - private
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            uniqueID:
+              name: uniqueID
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          staticFields:
+            AlphaXor:
+              name: AlphaXor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            Any:
+              name: Any
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            AnyAlpha:
+              name: AnyAlpha
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            Clear:
+              name: Clear
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            DESC_ALPHA_XOR:
+              name: DESC_ALPHA_XOR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_ANY:
+              name: DESC_ANY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_ANY_ALPHA:
+              name: DESC_ANY_ALPHA
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_CLEAR:
+              name: DESC_CLEAR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_DST:
+              name: DESC_DST
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_DST_ATOP:
+              name: DESC_DST_ATOP
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_DST_IN:
+              name: DESC_DST_IN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_DST_OUT:
+              name: DESC_DST_OUT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_DST_OVER:
+              name: DESC_DST_OVER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_SRC:
+              name: DESC_SRC
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_SRC_ATOP:
+              name: DESC_SRC_ATOP
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_SRC_IN:
+              name: DESC_SRC_IN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_SRC_NO_EA:
+              name: DESC_SRC_NO_EA
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_SRC_OUT:
+              name: DESC_SRC_OUT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_SRC_OVER:
+              name: DESC_SRC_OVER
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_SRC_OVER_NO_EA:
+              name: DESC_SRC_OVER_NO_EA
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            DESC_XOR:
+              name: DESC_XOR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            Dst:
+              name: Dst
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            DstAtop:
+              name: DstAtop
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            DstIn:
+              name: DstIn
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            DstOut:
+              name: DstOut
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            DstOver:
+              name: DstOver
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            General:
+              name: General
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            OpaqueSrcOverNoEa:
+              name: OpaqueSrcOverNoEa
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            Src:
+              name: Src
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            SrcAtop:
+              name: SrcAtop
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            SrcIn:
+              name: SrcIn
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            SrcNoEa:
+              name: SrcNoEa
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            SrcOut:
+              name: SrcOut
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            SrcOver:
+              name: SrcOver
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            SrcOverNoEa:
+              name: SrcOverNoEa
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            Xor:
+              name: Xor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            compositeUIDMap:
+              name: compositeUIDMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.lang.Integer>
+            unusedUID:
+              name: unusedUID
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: deriveSubType
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getDescriptor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSuperType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+          - name: getUniqueID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isDerivedFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: forAlphaComposite
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: AlphaComposite
+                full: java.awt.AlphaComposite
+            return:
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+          - name: makeUniqueID
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int

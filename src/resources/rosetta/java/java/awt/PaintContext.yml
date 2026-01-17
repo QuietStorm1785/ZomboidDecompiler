@@ -1,0 +1,75 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.awt:
+        PaintContext:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "The PaintContext interface defines the encapsulated\n and optimized\
+            \ environment to generate color patterns in device\n space for fill or\
+            \ stroke operations on a\n Graphics2D.  The PaintContext provides\n the\
+            \ necessary colors for Graphics2D operations in the\n form of a Raster\
+            \ associated with a ColorModel.\n The PaintContext maintains state for\
+            \ a particular paint\n operation.  In a multi-threaded environment, several\n\
+            \ contexts can exist simultaneously for a single Paint object."
+          methods:
+          - name: dispose
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Releases the resources allocated for the operation.
+          - name: getColorModel
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: ColorModel
+                full: java.awt.image.ColorModel
+              notes: the ColorModel of the output.
+            notes: "Returns the ColorModel of the output.  Note that\n this ColorModel\
+              \ might be different from the hint\n specified in the\n createContext\
+              \ method of\n Paint.  Not all PaintContext objects are\n capable of\
+              \ generating color patterns in an arbitrary\n ColorModel."
+          - name: getRaster
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+              notes: "the x coordinate of the area in device space\n for which colors\
+                \ are generated."
+            - name: y
+              type:
+                basic: int
+                full: int
+              notes: "the y coordinate of the area in device space\n for which colors\
+                \ are generated."
+            - name: w
+              type:
+                basic: int
+                full: int
+              notes: the width of the area in device space
+            - name: h
+              type:
+                basic: int
+                full: int
+              notes: the height of the area in device space
+            return:
+              type:
+                basic: Raster
+                full: java.awt.image.Raster
+              notes: "a Raster representing the specified\n rectangular area and containing\
+                \ the colors generated for\n the graphics operation."
+            notes: "Returns a Raster containing the colors generated for\n the graphics\
+              \ operation."

@@ -1,0 +1,169 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.audio.parameters:
+        ParameterRoomType.RoomType:
+          extends: java.lang.Enum<zombie.audio.parameters.ParameterRoomType$RoomType>
+          modifiers:
+          - package
+          - final
+          fields:
+            label:
+              name: label
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType[]
+            Barn:
+              name: Barn
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+            Basement:
+              name: Basement
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+            Bunker:
+              name: Bunker
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+            Church:
+              name: Church
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+            Commercial:
+              name: Commercial
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+            Factory:
+              name: Factory
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+            Generic:
+              name: Generic
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+            House:
+              name: House
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+            Mall:
+              name: Mall
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+            MovieTheater:
+              name: MovieTheater
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+            Office:
+              name: Office
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+            Prison:
+              name: Prison
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+            Warehouse:
+              name: Warehouse
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ParameterRoomType.RoomType
+                full: zombie.audio.parameters.ParameterRoomType$RoomType[]

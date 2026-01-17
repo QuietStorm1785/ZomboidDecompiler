@@ -1,0 +1,99 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util.concurrent:
+        CompletableFuture.Completion:
+          extends: java.util.concurrent.ForkJoinTask<java.lang.Void>
+          modifiers:
+          - package
+          - abstract
+          fields:
+            next:
+              name: next
+              modifiers:
+              - package
+              type:
+                basic: CompletableFuture.Completion
+                full: java.util.concurrent.CompletableFuture$Completion
+          constructors:
+          - modifiers:
+            - package
+          methods:
+          - name: exec
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getRawResult
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: Void
+                full: java.lang.Void
+          - name: getRawResult
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: isLive
+            modifiers:
+            - package
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: run
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRawResult
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Void
+                full: java.lang.Void
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRawResult
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void
+          - name: tryFire
+            modifiers:
+            - package
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: CompletableFuture
+                full: java.util.concurrent.CompletableFuture<?>

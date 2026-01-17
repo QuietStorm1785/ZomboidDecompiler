@@ -1,0 +1,239 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.inventory.types:
+        WeaponType:
+          extends: java.lang.Enum<zombie.inventory.types.WeaponType>
+          modifiers:
+          - public
+          - final
+          fields:
+            canMiss:
+              name: canMiss
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            isRanged:
+              name: isRanged
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            possibleAttack:
+              name: possibleAttack
+              modifiers:
+              - public
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+            type:
+              name: type
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType[]
+            barehand:
+              name: barehand
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+            chainsaw:
+              name: chainsaw
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+            firearm:
+              name: firearm
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+            handgun:
+              name: handgun
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+            heavy:
+              name: heavy
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+            knife:
+              name: knife
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+            onehanded:
+              name: onehanded
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+            spear:
+              name: spear
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+            throwing:
+              name: throwing
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+            twohanded:
+              name: twohanded
+              modifiers:
+              - public
+              - static
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: List
+                full: java.util.List<java.lang.String>
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+          methods:
+          - name: getType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType[]
+          - name: getWeaponType
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: weapon
+              type:
+                basic: HandWeapon
+                full: zombie.inventory.types.HandWeapon
+            return:
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+          - name: getWeaponType
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: chr
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+          - name: getWeaponType
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg1
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg2
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: WeaponType
+                full: zombie.inventory.types.WeaponType[]
+              notes: an array containing the constants of this enum class, in the
+                order they are declared
+            notes: 'Returns an array containing the constants of this enum class,
+              in
+
+              the order they are declared.'

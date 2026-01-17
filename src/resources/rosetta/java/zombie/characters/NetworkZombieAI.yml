@@ -1,0 +1,235 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        NetworkZombieAI:
+          extends: zombie.characters.NetworkCharacterAI
+          modifiers:
+          - public
+          fields:
+            DebugInterfaceActive:
+              name: DebugInterfaceActive
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            flags:
+              name: flags
+              modifiers:
+              - private
+              type:
+                basic: byte
+                full: byte
+            isClimbing:
+              name: isClimbing
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            lastDirection:
+              name: lastDirection
+              modifiers:
+              - private
+              type:
+                basic: byte
+                full: byte
+            mindSync:
+              name: mindSync
+              modifiers:
+              - public
+              type:
+                basic: NetworkZombieMind
+                full: zombie.characters.NetworkZombieMind
+            pfb2:
+              name: pfb2
+              modifiers:
+              - private
+              type:
+                basic: PathFindBehavior2
+                full: zombie.pathfind.PathFindBehavior2
+            reanimatedBodyID:
+              name: reanimatedBodyID
+              modifiers:
+              - public
+              type:
+                basic: ObjectID
+                full: zombie.network.id.ObjectID
+            wasSeparated:
+              name: wasSeparated
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            zombie:
+              name: zombie
+              modifiers:
+              - public
+              type:
+                basic: IsoZombie
+                full: zombie.characters.IsoZombie
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: character
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          methods:
+          - name: extraUpdate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getBooleanDebugOptions
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Multiplayer.DebugFlagsOG.IsoGameCharacterOG
+                full: zombie.debug.options.Multiplayer$DebugFlagsOG$IsoGameCharacterOG
+          - name: getRelatedPlayer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+          - name: isRemote
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ZombiePacket
+                full: zombie.network.packets.character.ZombiePacket
+            return:
+              type:
+                basic: void
+                full: void
+          - name: preupdate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ZombiePacket
+                full: zombie.network.packets.character.ZombiePacket
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUsingClimb
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ZombiePacket
+                full: zombie.network.packets.character.ZombiePacket
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUsingExtrapolation
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ZombiePacket
+                full: zombie.network.packets.character.ZombiePacket
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUsingLungeState
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ZombiePacket
+                full: zombie.network.packets.character.ZombiePacket
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUsingPathFindState
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ZombiePacket
+                full: zombie.network.packets.character.ZombiePacket
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUsingThump
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ZombiePacket
+                full: zombie.network.packets.character.ZombiePacket
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUsingWalkTowardState
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ZombiePacket
+                full: zombie.network.packets.character.ZombiePacket
+            return:
+              type:
+                basic: void
+                full: void
+          - name: syncDamage
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,44 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.randomizedWorld.randomizedBuilding:
+        RBStripclub:
+          extends: zombie.randomizedWorld.randomizedBuilding.RandomizedBuildingBase
+          modifiers:
+          - public
+          - final
+          notes: "Add money/alcohol on table\n Can also generate a rare male venue"
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: isValid
+            modifiers:
+            - public
+            parameters:
+            - name: def
+              type:
+                basic: BuildingDef
+                full: zombie.iso.BuildingDef
+            - name: force
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: 'Description copied from class: RandomizedBuildingBase'
+          - name: randomizeBuilding
+            modifiers:
+            - public
+            parameters:
+            - name: def
+              type:
+                basic: BuildingDef
+                full: zombie.iso.BuildingDef
+            return:
+              type:
+                basic: void
+                full: void

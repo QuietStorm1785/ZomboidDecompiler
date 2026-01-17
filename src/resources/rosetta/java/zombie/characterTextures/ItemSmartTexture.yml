@@ -1,0 +1,320 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characterTextures:
+        ItemSmartTexture:
+          extends: zombie.core.textures.SmartTexture
+          modifiers:
+          - public
+          - final
+          fields:
+            m_texName:
+              name: m_texName
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+          staticFields:
+            DecalOverlayCategory:
+              name: DecalOverlayCategory
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FluidOverlayCategory:
+              name: FluidOverlayCategory
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+          - modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+            - name: hue
+              type:
+                basic: float
+                full: float
+          methods:
+          - name: addBlood
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+            - name: bodyPart
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            - name: intensity
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: addBlood
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+            - name: mask
+              type:
+                basic: String
+                full: java.lang.String
+            - name: intensity
+              type:
+                basic: float
+                full: float
+            - name: category
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: addDirt
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+            - name: bodyPart
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            - name: intensity
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: addDirt
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+            - name: mask
+              type:
+                basic: String
+                full: java.lang.String
+            - name: intensity
+              type:
+                basic: float
+                full: float
+            - name: category
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTexName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: removeBlood
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeBlood
+            modifiers:
+            - public
+            parameters:
+            - name: bodyPart
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeDirt
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeDirt
+            modifiers:
+            - public
+            parameters:
+            - name: bodyPart
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBasicPatches
+            modifiers:
+            - public
+            parameters:
+            - name: bodyPart
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBlood
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+            - name: bodyPart
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            - name: intensity
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBlood
+            modifiers:
+            - public
+            parameters:
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+            - name: mask
+              type:
+                basic: String
+                full: java.lang.String
+            - name: intensity
+              type:
+                basic: float
+                full: float
+            - name: category
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDenimPatches
+            modifiers:
+            - public
+            parameters:
+            - name: bodyPart
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFluid
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: Color
+                full: zombie.core.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setLeatherPatches
+            modifiers:
+            - public
+            parameters:
+            - name: bodyPart
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTintMask
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: Color
+                full: zombie.core.Color
+            return:
+              type:
+                basic: void
+                full: void

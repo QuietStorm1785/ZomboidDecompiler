@@ -1,0 +1,28 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.randomizedWorld.randomizedVehicleStory:
+        VehicleStorySpawner.IElementSpawner:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: spawn
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: spawner
+              type:
+                basic: VehicleStorySpawner
+                full: zombie.randomizedWorld.randomizedVehicleStory.VehicleStorySpawner
+            - name: element
+              type:
+                basic: VehicleStorySpawner.Element
+                full: zombie.randomizedWorld.randomizedVehicleStory.VehicleStorySpawner$Element
+            return:
+              type:
+                basic: void
+                full: void

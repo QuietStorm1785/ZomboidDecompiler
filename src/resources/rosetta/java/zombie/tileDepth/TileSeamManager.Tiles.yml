@@ -1,0 +1,116 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.tileDepth:
+        TileSeamManager.Tiles:
+          extends: java.lang.Enum<zombie.tileDepth.TileSeamManager$Tiles>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: TileSeamManager.Tiles
+                full: zombie.tileDepth.TileSeamManager$Tiles[]
+            FloorEast:
+              name: FloorEast
+              modifiers:
+              - public
+              - static
+              type:
+                basic: TileSeamManager.Tiles
+                full: zombie.tileDepth.TileSeamManager$Tiles
+            FloorEastOneThird:
+              name: FloorEastOneThird
+              modifiers:
+              - public
+              - static
+              type:
+                basic: TileSeamManager.Tiles
+                full: zombie.tileDepth.TileSeamManager$Tiles
+            FloorEastTwoThirds:
+              name: FloorEastTwoThirds
+              modifiers:
+              - public
+              - static
+              type:
+                basic: TileSeamManager.Tiles
+                full: zombie.tileDepth.TileSeamManager$Tiles
+            FloorSouth:
+              name: FloorSouth
+              modifiers:
+              - public
+              - static
+              type:
+                basic: TileSeamManager.Tiles
+                full: zombie.tileDepth.TileSeamManager$Tiles
+            FloorSouthOneThird:
+              name: FloorSouthOneThird
+              modifiers:
+              - public
+              - static
+              type:
+                basic: TileSeamManager.Tiles
+                full: zombie.tileDepth.TileSeamManager$Tiles
+            FloorSouthTwoThirds:
+              name: FloorSouthTwoThirds
+              modifiers:
+              - public
+              - static
+              type:
+                basic: TileSeamManager.Tiles
+                full: zombie.tileDepth.TileSeamManager$Tiles
+            WallEast:
+              name: WallEast
+              modifiers:
+              - public
+              - static
+              type:
+                basic: TileSeamManager.Tiles
+                full: zombie.tileDepth.TileSeamManager$Tiles
+            WallSouth:
+              name: WallSouth
+              modifiers:
+              - public
+              - static
+              type:
+                basic: TileSeamManager.Tiles
+                full: zombie.tileDepth.TileSeamManager$Tiles
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: TileSeamManager.Tiles
+                full: zombie.tileDepth.TileSeamManager$Tiles[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: TileSeamManager.Tiles
+                full: zombie.tileDepth.TileSeamManager$Tiles
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: TileSeamManager.Tiles
+                full: zombie.tileDepth.TileSeamManager$Tiles[]

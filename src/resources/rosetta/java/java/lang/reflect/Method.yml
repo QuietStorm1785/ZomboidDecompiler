@@ -1,0 +1,546 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.lang.reflect:
+        Method:
+          extends: java.lang.reflect.Executable
+          modifiers:
+          - public
+          - final
+          notes: "A Method provides information about, and access to, a single method\n\
+            \ on a class or interface.  The reflected method may be a class method\n\
+            \ or an instance method (including an abstract method).\n\n A Method permits\
+            \ widening conversions to occur when matching the\n actual parameters\
+            \ to invoke with the underlying method's formal\n parameters, but it throws\
+            \ an IllegalArgumentException if a\n narrowing conversion would occur."
+          fields:
+            annotationDefault:
+              name: annotationDefault
+              modifiers:
+              - private
+              type:
+                basic: byte
+                full: byte[]
+            annotations:
+              name: annotations
+              modifiers:
+              - private
+              type:
+                basic: byte
+                full: byte[]
+            clazz:
+              name: clazz
+              modifiers:
+              - private
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            exceptionTypes:
+              name: exceptionTypes
+              modifiers:
+              - private
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            genericInfo:
+              name: genericInfo
+              modifiers:
+              - private
+              type:
+                basic: MethodRepository
+                full: sun.reflect.generics.repository.MethodRepository
+            methodAccessor:
+              name: methodAccessor
+              modifiers:
+              - private
+              type:
+                basic: MethodAccessor
+                full: jdk.internal.reflect.MethodAccessor
+            modifiers:
+              name: modifiers
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            name:
+              name: name
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            parameterAnnotations:
+              name: parameterAnnotations
+              modifiers:
+              - private
+              type:
+                basic: byte
+                full: byte[]
+            parameterTypes:
+              name: parameterTypes
+              modifiers:
+              - private
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            returnType:
+              name: returnType
+              modifiers:
+              - private
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            root:
+              name: root
+              modifiers:
+              - private
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+            signature:
+              name: signature
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            slot:
+              name: slot
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            - name: arg3
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg4
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: int
+                full: int
+            - name: arg7
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg8
+              type:
+                basic: byte
+                full: byte[]
+            - name: arg9
+              type:
+                basic: byte
+                full: byte[]
+            - name: arg10
+              type:
+                basic: byte
+                full: byte[]
+          methods:
+          - name: acquireMethodAccessor
+            modifiers:
+            - private
+            return:
+              type:
+                basic: MethodAccessor
+                full: jdk.internal.reflect.MethodAccessor
+          - name: checkCanSetAccessible
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copy
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getAnnotatedReturnType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AnnotatedType
+                full: java.lang.reflect.AnnotatedType
+          - name: getAnnotation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Class
+                full: java.lang.Class<T>
+            return:
+              type:
+                basic: T
+                full: T
+          - name: getAnnotationBytes
+            modifiers:
+            - package
+            return:
+              type:
+                basic: byte
+                full: byte[]
+          - name: getDeclaredAnnotations
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Annotation
+                full: java.lang.annotation.Annotation[]
+          - name: getDeclaringClass
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: getDefaultValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getExceptionTypes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getFactory
+            modifiers:
+            - private
+            return:
+              type:
+                basic: GenericsFactory
+                full: sun.reflect.generics.factory.GenericsFactory
+          - name: getGenericExceptionTypes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Type
+                full: java.lang.reflect.Type[]
+          - name: getGenericInfo
+            modifiers:
+            - package
+            return:
+              type:
+                basic: MethodRepository
+                full: sun.reflect.generics.repository.MethodRepository
+          - name: getGenericInfo
+            modifiers:
+            - package
+            return:
+              type:
+                basic: ConstructorRepository
+                full: sun.reflect.generics.repository.ConstructorRepository
+          - name: getGenericParameterTypes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Type
+                full: java.lang.reflect.Type[]
+          - name: getGenericReturnType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Type
+                full: java.lang.reflect.Type
+          - name: getGenericSignature
+            modifiers:
+            - private
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getMethodAccessor
+            modifiers:
+            - package
+            return:
+              type:
+                basic: MethodAccessor
+                full: jdk.internal.reflect.MethodAccessor
+          - name: getModifiers
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getParameterAnnotations
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Annotation
+                full: java.lang.annotation.Annotation[][]
+          - name: getParameterCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getParameterTypes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getReturnType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+          - name: getRoot
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+          - name: getRoot
+            modifiers:
+            - package
+            return:
+              type:
+                basic: AccessibleObject
+                full: java.lang.reflect.AccessibleObject
+          - name: getSharedExceptionTypes
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getSharedParameterTypes
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+          - name: getTypeParameters
+            modifiers:
+            - public
+            return:
+              type:
+                basic: TypeVariable
+                full: java.lang.reflect.TypeVariable<java.lang.reflect.Method>[]
+          - name: handleParameterNumberMismatch
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<?>[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasGenericInformation
+            modifiers:
+            - package
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: invoke
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: isBridge
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isDefault
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSynthetic
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isVarArgs
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: leafCopy
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Method
+                full: java.lang.reflect.Method
+          - name: setAccessible
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMethodAccessor
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: MethodAccessor
+                full: jdk.internal.reflect.MethodAccessor
+            return:
+              type:
+                basic: void
+                full: void
+          - name: specificToGenericStringHeader
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: StringBuilder
+                full: java.lang.StringBuilder
+            return:
+              type:
+                basic: void
+                full: void
+          - name: specificToStringHeader
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: StringBuilder
+                full: java.lang.StringBuilder
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toGenericString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: toShortSignature
+            modifiers:
+            - package
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: toShortString
+            modifiers:
+            - package
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

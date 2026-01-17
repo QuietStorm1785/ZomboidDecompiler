@@ -1,0 +1,359 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ui:
+        UI3DModel:
+          extends: zombie.ui.UIElement
+          modifiers:
+          - public
+          - final
+          fields:
+            animatedModel:
+              name: animatedModel
+              modifiers:
+              - private
+              type:
+                basic: AnimatedModel
+                full: zombie.core.skinnedmodel.advancedanimation.AnimatedModel
+            bDoExt:
+              name: bDoExt
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            dir:
+              name: dir
+              modifiers:
+              - private
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            drawers:
+              name: drawers
+              modifiers:
+              - private
+              type:
+                basic: UI3DModel.Drawer
+                full: zombie.ui.UI3DModel$Drawer[]
+            nextExt:
+              name: nextExt
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            xOffset:
+              name: xOffset
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            yOffset:
+              name: yOffset
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            zoom:
+              name: zoom
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: table
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+          methods:
+          - name: clearVariable
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearVariables
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clothingItemChanged
+            modifiers:
+            - public
+            parameters:
+            - name: itemGuid
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getCharacter
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+          - name: getDirection
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+          - name: getState
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getVariable
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reportEvent
+            modifiers:
+            - public
+            parameters:
+            - name: event
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAnimSetName
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAnimate
+            modifiers:
+            - public
+            parameters:
+            - name: animate
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCharacter
+            modifiers:
+            - public
+            parameters:
+            - name: character
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDirection
+            modifiers:
+            - public
+            parameters:
+            - name: dir
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDoRandomExtAnimations
+            modifiers:
+            - public
+            parameters:
+            - name: doExt
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIsometric
+            modifiers:
+            - public
+            parameters:
+            - name: iso
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setOutfitName
+            modifiers:
+            - public
+            parameters:
+            - name: outfitName
+              type:
+                basic: String
+                full: java.lang.String
+            - name: female
+              type:
+                basic: boolean
+                full: boolean
+            - name: zombie
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setState
+            modifiers:
+            - public
+            parameters:
+            - name: state
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSurvivorDesc
+            modifiers:
+            - public
+            parameters:
+            - name: survivorDesc
+              type:
+                basic: SurvivorDesc
+                full: zombie.characters.SurvivorDesc
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVariable
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVariable
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVariable
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setXOffset
+            modifiers:
+            - public
+            parameters:
+            - name: newXOffset
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setYOffset
+            modifiers:
+            - public
+            parameters:
+            - name: newYOffset
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setZoom
+            modifiers:
+            - public
+            parameters:
+            - name: newZoom
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

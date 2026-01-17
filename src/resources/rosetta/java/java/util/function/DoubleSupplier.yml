@@ -1,0 +1,25 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util.function:
+        DoubleSupplier:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "Represents a supplier of double-valued results.  This is the\n double-producing\
+            \ primitive specialization of Supplier.\n\n There is no requirement that\
+            \ a distinct result be returned each\n time the supplier is invoked.\n\
+            \n This is a functional interface\n whose functional method is getAsDouble()."
+          methods:
+          - name: getAsDouble
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: double
+                full: double
+              notes: a result
+            notes: Gets a result.

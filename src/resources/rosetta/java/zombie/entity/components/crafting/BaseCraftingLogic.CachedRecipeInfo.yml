@@ -1,0 +1,133 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.crafting:
+        BaseCraftingLogic.CachedRecipeInfo:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            available:
+              name: available
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            canPerform:
+              name: canPerform
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isValid:
+              name: isValid
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            recipe:
+              name: recipe
+              modifiers:
+              - private
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            pool:
+              name: pool
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayDeque
+                full: java.util.ArrayDeque<zombie.entity.components.crafting.BaseCraftingLogic$CachedRecipeInfo>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getRecipe
+            modifiers:
+            - public
+            return:
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+          - name: isAvailable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCanPerform
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isValid
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: overrideCanPerform
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: Alloc
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: CraftRecipe
+                full: zombie.scripting.entity.components.crafting.CraftRecipe
+            return:
+              type:
+                basic: BaseCraftingLogic.CachedRecipeInfo
+                full: zombie.entity.components.crafting.BaseCraftingLogic$CachedRecipeInfo
+          - name: Release
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: BaseCraftingLogic.CachedRecipeInfo
+                full: zombie.entity.components.crafting.BaseCraftingLogic$CachedRecipeInfo
+            return:
+              type:
+                basic: void
+                full: void

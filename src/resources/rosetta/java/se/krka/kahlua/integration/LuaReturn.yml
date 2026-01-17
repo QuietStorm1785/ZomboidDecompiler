@@ -1,0 +1,121 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      se.krka.kahlua.integration:
+        LuaReturn:
+          extends: java.util.AbstractList<java.lang.Object>
+          modifiers:
+          - public
+          - abstract
+          fields:
+            returnValues:
+              name: returnValues
+              modifiers:
+              - protected
+              type:
+                basic: Object
+                full: java.lang.Object[]
+          constructors:
+          - modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object[]
+          methods:
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getErrorObject
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getErrorString
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFirst
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getJavaException
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: RuntimeException
+                full: java.lang.RuntimeException
+          - name: getLuaStackTrace
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSecond
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getThird
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: isSuccess
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: size
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          staticMethods:
+          - name: createReturn
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            return:
+              type:
+                basic: LuaReturn
+                full: se.krka.kahlua.integration.LuaReturn

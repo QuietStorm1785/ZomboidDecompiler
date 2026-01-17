@@ -1,0 +1,227 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.worldMap.symbols:
+        WorldMapSymbolsV1.WorldMapBaseSymbolV1:
+          extends: zombie.util.PooledObject
+          modifiers:
+          - public
+          fields:
+            m_owner:
+              name: m_owner
+              modifiers:
+              - package
+              type:
+                basic: WorldMapSymbolsV1
+                full: zombie.worldMap.symbols.WorldMapSymbolsV1
+            m_symbol:
+              name: m_symbol
+              modifiers:
+              - package
+              type:
+                basic: WorldMapBaseSymbol
+                full: zombie.worldMap.symbols.WorldMapBaseSymbol
+          constructors:
+          - modifiers:
+            - protected
+          methods:
+          - name: getAlpha
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBlue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDisplayHeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDisplayWidth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDisplayX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getDisplayY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getGreen
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getRed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWorldX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getWorldY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: init
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: WorldMapSymbolsV1
+                full: zombie.worldMap.symbols.WorldMapSymbolsV1
+            - name: arg1
+              type:
+                basic: WorldMapBaseSymbol
+                full: zombie.worldMap.symbols.WorldMapBaseSymbol
+            return:
+              type:
+                basic: WorldMapSymbolsV1.WorldMapBaseSymbolV1
+                full: zombie.worldMap.symbols.WorldMapSymbolsV1$WorldMapBaseSymbolV1
+          - name: isText
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isVisible
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setAnchor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setCollide
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPosition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRGBA
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setScale
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVisible
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,77 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.radio.StorySounds:
+        DataPoint:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          notes: Turbo
+          fields:
+            intensity:
+              name: intensity
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+            time:
+              name: time
+              modifiers:
+              - protected
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: time
+              type:
+                basic: float
+                full: float
+            - name: intensity
+              type:
+                basic: float
+                full: float
+          methods:
+          - name: getIntensity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: setIntensity
+            modifiers:
+            - public
+            parameters:
+            - name: intensity
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTime
+            modifiers:
+            - public
+            parameters:
+            - name: time
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,10 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.advancedanimation:
+        AnimationVariableSlotCallbackBool.CallbackSetStrongTyped:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract

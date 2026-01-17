@@ -1,0 +1,28 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      se.krka.kahlua.vm:
+        JavaFunction:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: call
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: LuaCallFrame
+                full: se.krka.kahlua.vm.LuaCallFrame
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int

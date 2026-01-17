@@ -1,0 +1,37 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.net:
+        InetAddress.NameService:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          - abstract
+          methods:
+          - name: getHostByAddr
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: lookupAllHostAddr
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: InetAddress
+                full: java.net.InetAddress[]

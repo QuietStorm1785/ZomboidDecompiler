@@ -1,0 +1,64 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      javax.swing:
+        Icon:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: A small fixed size picture, typically used to decorate components.
+          methods:
+          - name: getIconHeight
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+              notes: an int specifying the fixed height of the icon.
+            notes: Returns the icon's height.
+          - name: getIconWidth
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+              notes: an int specifying the fixed width of the icon.
+            notes: Returns the icon's width.
+          - name: paintIcon
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: c
+              type:
+                basic: Component
+                full: java.awt.Component
+              notes: a Component to get properties useful for painting
+            - name: g
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+              notes: the graphics context
+            - name: x
+              type:
+                basic: int
+                full: int
+              notes: the X coordinate of the icon's top-left corner
+            - name: y
+              type:
+                basic: int
+                full: int
+              notes: the Y coordinate of the icon's top-left corner
+            return:
+              type:
+                basic: void
+                full: void
+            notes: "Draw the icon at the specified location.  Icon implementations\n\
+              \ may use the Component argument to get properties useful for\n painting,\
+              \ e.g. the foreground or background color."

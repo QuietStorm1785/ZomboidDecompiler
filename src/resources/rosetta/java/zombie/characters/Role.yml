@@ -1,0 +1,315 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        Role:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            capabilities:
+              name: capabilities
+              modifiers:
+              - private
+              type:
+                basic: HashSet
+                full: java.util.HashSet<zombie.characters.Capability>
+            color:
+              name: color
+              modifiers:
+              - private
+              type:
+                basic: Color
+                full: zombie.core.Color
+            description:
+              name: description
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            id:
+              name: id
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            isReadOnly:
+              name: isReadOnly
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            name:
+              name: name
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            position:
+              name: position
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          staticFields:
+            maxDescription:
+              name: maxDescription
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            maxName:
+              name: maxName
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: addCapability
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: cleanCapability
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getCapabilities
+            modifiers:
+            - public
+            return:
+              type:
+                basic: HashSet
+                full: java.util.HashSet<zombie.characters.Capability>
+          - name: getColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Color
+                full: zombie.core.Color
+          - name: getDefaults
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getDescription
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getId
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getPosition
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: hasAdminPower
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasAdminTool
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasCapability
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isReadOnly
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeCapability
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: send
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setColor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Color
+                full: zombie.core.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDescription
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setId
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPosition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setReadOnly
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: hasCapability
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoMovingObject
+                full: zombie.iso.IsoMovingObject
+            - name: arg1
+              type:
+                basic: Capability
+                full: zombie.characters.Capability
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUsingDebugMode
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean

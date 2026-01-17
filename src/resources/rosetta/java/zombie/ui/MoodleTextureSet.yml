@@ -1,0 +1,72 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ui:
+        MoodleTextureSet:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            Background:
+              name: Background
+              modifiers:
+              - public
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            Border:
+              name: Border
+              modifiers:
+              - public
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+            MoodleTextures:
+              name: MoodleTextures
+              modifiers:
+              - private
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture[]
+            m_size:
+              name: m_size
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: getTexture
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture
+          - name: getTexture
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: MoodleType
+                full: zombie.characters.Moodles.MoodleType
+            return:
+              type:
+                basic: Texture
+                full: zombie.core.textures.Texture

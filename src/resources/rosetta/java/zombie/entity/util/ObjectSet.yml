@@ -1,0 +1,414 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.util:
+        ObjectSet:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            iterator1:
+              name: iterator1
+              modifiers:
+              - private
+              type:
+                basic: ObjectSet.ObjectSetIterator
+                full: zombie.entity.util.ObjectSet$ObjectSetIterator
+            iterator2:
+              name: iterator2
+              modifiers:
+              - private
+              type:
+                basic: ObjectSet.ObjectSetIterator
+                full: zombie.entity.util.ObjectSet$ObjectSetIterator
+            keyTable:
+              name: keyTable
+              modifiers:
+              - package
+              type:
+                basic: T
+                full: T[]
+            loadFactor:
+              name: loadFactor
+              modifiers:
+              - package
+              type:
+                basic: float
+                full: float
+            mask:
+              name: mask
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            shift:
+              name: shift
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            size:
+              name: size
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            threshold:
+              name: threshold
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectSet
+                full: zombie.entity.util.ObjectSet<? extends T>
+          methods:
+          - name: add
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Array
+                full: zombie.entity.util.Array<? extends T>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Array
+                full: zombie.entity.util.Array<? extends T>
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: addAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectSet
+                full: zombie.entity.util.ObjectSet<T>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addResize
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clear
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: contains
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: ensureCapacity
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: first
+            modifiers:
+            - public
+            return:
+              type:
+                basic: T
+                full: T
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: T
+                full: T
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ObjectSet.ObjectSetIterator
+                full: zombie.entity.util.ObjectSet$ObjectSetIterator<T>
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Iterator
+                full: java.util.Iterator
+          - name: locateKey
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: int
+                full: int
+          - name: notEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: place
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: int
+                full: int
+          - name: remove
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: resize
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: shrink
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: toString
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: tableSize
+            modifiers:
+            - package
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: int
+                full: int
+          - name: with
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: T
+                full: T[]
+            return:
+              type:
+                basic: ObjectSet
+                full: zombie.entity.util.ObjectSet<T>

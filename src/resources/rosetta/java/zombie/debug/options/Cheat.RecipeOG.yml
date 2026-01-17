@@ -1,0 +1,21 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.debug.options:
+        Cheat.RecipeOG:
+          extends: zombie.debug.options.OptionGroup
+          modifiers:
+          - public
+          - final
+          fields:
+            SeeAll:
+              name: SeeAll
+              modifiers:
+              - public
+              type:
+                basic: BooleanDebugOption
+                full: zombie.debug.BooleanDebugOption
+          constructors:
+          - modifiers:
+            - public

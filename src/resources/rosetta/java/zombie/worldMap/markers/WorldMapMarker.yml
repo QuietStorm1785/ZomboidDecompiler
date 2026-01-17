@@ -1,0 +1,27 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.worldMap.markers:
+        WorldMapMarker:
+          extends: zombie.util.PooledObject
+          modifiers:
+          - public
+          - abstract
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: render
+            modifiers:
+            - package
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: UIWorldMap
+                full: zombie.worldMap.UIWorldMap
+            return:
+              type:
+                basic: void
+                full: void

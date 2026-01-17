@@ -1,0 +1,164 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.util.calendar:
+        Era:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            abbr:
+              name: abbr
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            hash:
+              name: hash
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            localTime:
+              name: localTime
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            name:
+              name: name
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            since:
+              name: since
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            sinceDate:
+              name: sinceDate
+              modifiers:
+              - private
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: long
+                full: long
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+          methods:
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getAbbreviation
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDiaplayAbbreviation
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Locale
+                full: java.util.Locale
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDisplayName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Locale
+                full: java.util.Locale
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSince
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: TimeZone
+                full: java.util.TimeZone
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getSinceDate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: CalendarDate
+                full: sun.util.calendar.CalendarDate
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isLocalTime
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

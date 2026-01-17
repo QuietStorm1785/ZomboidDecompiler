@@ -1,0 +1,311 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.network.packets.character:
+        PlayerPacket:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            VehicleID:
+              name: VehicleID
+              modifiers:
+              - public
+              type:
+                basic: short
+                full: short
+            VehicleSeat:
+              name: VehicleSeat
+              modifiers:
+              - public
+              type:
+                basic: short
+                full: short
+            bleedingLevel:
+              name: bleedingLevel
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+            booleanVariables:
+              name: booleanVariables
+              modifiers:
+              - public
+              type:
+                basic: short
+                full: short
+            direction:
+              name: direction
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            disconnected:
+              name: disconnected
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            endurance:
+              name: endurance
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            footstepSoundRadius:
+              name: footstepSoundRadius
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+            id:
+              name: id
+              modifiers:
+              - public
+              type:
+                basic: PlayerID
+                full: zombie.network.fields.character.PlayerID
+            moveType:
+              name: moveType
+              modifiers:
+              - public
+              type:
+                basic: NetworkVariables.PredictionTypes
+                full: zombie.network.NetworkVariables$PredictionTypes
+            realdir:
+              name: realdir
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+            realt:
+              name: realt
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            realx:
+              name: realx
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            realy:
+              name: realy
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            realz:
+              name: realz
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+            roleId:
+              name: roleId
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            type:
+              name: type
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+            usePathFinder:
+              name: usePathFinder
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            variables:
+              name: variables
+              modifiers:
+              - public
+              type:
+                basic: PlayerVariables
+                full: zombie.network.fields.character.PlayerVariables
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            z:
+              name: z
+              modifiers:
+              - public
+              type:
+                basic: byte
+                full: byte
+          staticFields:
+            PACKET_SIZE_BYTES:
+              name: PACKET_SIZE_BYTES
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: copy
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PlayerPacket
+                full: zombie.network.packets.character.PlayerPacket
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getBooleanVariables
+            modifiers:
+            - public
+            return:
+              type:
+                basic: short
+                full: short
+          - name: getMovable
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IMovable
+                full: zombie.network.fields.IMovable
+          - name: getPacketSizeBytes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getPlayer
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+          - name: getPlayerIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: byte
+                full: byte
+          - name: getPosition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            return:
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+          - name: getRoleID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: processClient
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: processServer
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PacketTypes.PacketType
+                full: zombie.network.PacketTypes$PacketType
+            - name: arg1
+              type:
+                basic: UdpConnection
+                full: zombie.core.raknet.UdpConnection
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoPlayer
+                full: zombie.characters.IsoPlayer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: write
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBufferWriter
+                full: zombie.core.network.ByteBufferWriter
+            return:
+              type:
+                basic: void
+                full: void

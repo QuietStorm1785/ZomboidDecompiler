@@ -1,0 +1,77 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.advancedanimation:
+        AnimLayer.Reusables:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          - final
+          fields:
+            animForwardDirection:
+              name: animForwardDirection
+              modifiers:
+              - public
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+            animTargetForwardDirection:
+              name: animTargetForwardDirection
+              modifiers:
+              - public
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+            currentPos:
+              name: currentPos
+              modifiers:
+              - public
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            grappleTweenStartPos:
+              name: grappleTweenStartPos
+              modifiers:
+              - public
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            grappledByPos:
+              name: grappledByPos
+              modifiers:
+              - public
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            grappledPos:
+              name: grappledPos
+              modifiers:
+              - public
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            pickResults:
+              name: pickResults
+              modifiers:
+              - public
+              type:
+                basic: Anim2DBlendPicker.PickResults
+                full: zombie.core.skinnedmodel.advancedanimation.Anim2DBlendPicker$PickResults
+            tweenedPos:
+              name: tweenedPos
+              modifiers:
+              - public
+              type:
+                basic: Vector3
+                full: zombie.iso.Vector3
+            tweenedRot:
+              name: tweenedRot
+              modifiers:
+              - public
+              type:
+                basic: Vector2
+                full: zombie.iso.Vector2
+          constructors:
+          - modifiers:
+            - private

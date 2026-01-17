@@ -1,0 +1,196 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.fboRenderChunk:
+        FBORenderCutaways.ChunkLevelsData:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            m_chunk:
+              name: m_chunk
+              modifiers:
+              - public
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            m_levelData:
+              name: m_levelData
+              modifiers:
+              - public
+              type:
+                basic: TIntObjectHashMap
+                full: gnu.trove.map.hash.TIntObjectHashMap<zombie.iso.fboRenderChunk.FBORenderCutaways$ChunkLevelData>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+          methods:
+          - name: clearPlayerCutawayFlags
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.fboRenderChunk.FBORenderCutaways$CutawayWall>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearPlayerCutawayFlags2
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.fboRenderChunk.FBORenderCutaways$SlopedSurface>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: debugRender
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getDataForLevel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: FBORenderCutaways.ChunkLevelData
+                full: zombie.iso.fboRenderChunk.FBORenderCutaways$ChunkLevelData
+          - name: hasRoomBelow
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: invalidateAll
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: invalidateOccludedSquaresMaskForSeenRooms
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isAdjacentToRoom
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: arg1
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: recreateLevel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: recreateLevel_AllWalls
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: recreateLevel_ExteriorWalls
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: recreateLevel_SlopedSurfaces
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeFromWorld
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

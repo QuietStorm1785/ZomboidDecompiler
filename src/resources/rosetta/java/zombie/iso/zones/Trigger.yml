@@ -1,0 +1,81 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.zones:
+        Trigger:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            data:
+              name: data
+              modifiers:
+              - public
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+            def:
+              name: def
+              modifiers:
+              - public
+              type:
+                basic: BuildingDef
+                full: zombie.iso.BuildingDef
+            triggerRange:
+              name: triggerRange
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            triggered:
+              name: triggered
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            type:
+              name: type
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            zombieExclusionRange:
+              name: zombieExclusionRange
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: BuildingDef
+                full: zombie.iso.BuildingDef
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: getModData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable

@@ -35,6 +35,12 @@ public class Decompile implements Callable<Integer> {
             "execution, and in current versions of the game should not trigger anti-cheat.")
     private boolean remapLineNumbers = false;
 
+    @Option(names = {"--remap-backup"}, negatable = true, description = "Write a .backup copy before overwriting remapped class files (only when --remap-line-numbers is enabled).")
+    private boolean remapBackup = true;
+
+    @Option(names = {"--remap-compute-frames"}, description = "Ask ASM to compute frames/maxs when writing remapped classes; safer but slower (only when --remap-line-numbers is enabled).")
+    private boolean remapComputeFrames = false;
+
     @Parameters(index = "0", arity = "0..1")
     private Path inputPath = null;
     @Parameters(index = "1", arity = "0..1")
@@ -81,16 +87,17 @@ public class Decompile implements Callable<Integer> {
         try {
             Process process = Runtime.getRuntime().exec("reg query \"" + registryKey + "\" /v InstallPath");
 
-            InputStreamReader reader = new InputStreamReader(process.getInputStream());
-            process.waitFor();
-            StringBuilder result = new StringBuilder();
-            while(reader.ready()) {
-                result.append((char)reader.read());
-            }
+            try (InputStreamReader reader = new InputStreamReader(process.getInputStream())) {
+                process.waitFor();
+                StringBuilder result = new StringBuilder();
+                while(reader.ready()) {
+                    result.append((char)reader.read());
+                }
 
-            // FIXME: this would fail if the user (for some reason) had 4 spaces in their install path
-            steamDirectory = result.substring(result.lastIndexOf("    ") + 1);
-            steamDirectory = steamDirectory.trim();
+                // FIXME: this would fail if the user (for some reason) had 4 spaces in their install path
+                steamDirectory = result.substring(result.lastIndexOf("    ") + 1);
+                steamDirectory = steamDirectory.trim();
+            }
         } catch (InterruptedException | IOException e) {
             e.printStackTrace();
             return null;
@@ -196,6 +203,8 @@ public class Decompile implements Callable<Integer> {
         decompiler.setJarGame(jarGame);
         decompiler.setAddDocstrings(addDocstrings);
         decompiler.setRemapLineNumbers(remapLineNumbers);
+        decompiler.setRemapWriteBackup(remapBackup);
+        decompiler.setRemapComputeFrames(remapComputeFrames);
         decompiler.setClassPatterns(classPatterns);
 
         decompiler.decompile(inputPath, outputPath, argsList);

@@ -1,0 +1,10 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.inventory.types:
+        Drainable:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract

@@ -1,0 +1,35 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.model:
+        ModelInstanceTextureInitializer.RenderData:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          - final
+          fields:
+            m_bRendered:
+              name: m_bRendered
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            m_changeNumber:
+              name: m_changeNumber
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            m_textureCreator:
+              name: m_textureCreator
+              modifiers:
+              - package
+              type:
+                basic: EquippedTextureCreator
+                full: zombie.characters.EquippedTextureCreator
+          constructors:
+          - modifiers:
+            - private

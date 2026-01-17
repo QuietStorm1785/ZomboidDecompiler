@@ -1,0 +1,137 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.weather.fx:
+        SteppedUpdateFloat:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: TurboTuTone.
+          fields:
+            current:
+              name: current
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            max:
+              name: max
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            min:
+              name: min
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            step:
+              name: step
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+            target:
+              name: target
+              modifiers:
+              - private
+              type:
+                basic: float
+                full: float
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: current
+              type:
+                basic: float
+                full: float
+            - name: step
+              type:
+                basic: float
+                full: float
+            - name: min
+              type:
+                basic: float
+                full: float
+            - name: max
+              type:
+                basic: float
+                full: float
+          methods:
+          - name: clamp
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getTarget
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: overrideCurrentValue
+            modifiers:
+            - public
+            parameters:
+            - name: f
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTarget
+            modifiers:
+            - public
+            parameters:
+            - name: target
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            parameters:
+            - name: delta
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: value
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float

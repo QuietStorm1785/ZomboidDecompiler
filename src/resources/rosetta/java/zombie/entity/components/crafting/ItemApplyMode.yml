@@ -1,0 +1,76 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.crafting:
+        ItemApplyMode:
+          extends: java.lang.Enum<zombie.entity.components.crafting.ItemApplyMode>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ItemApplyMode
+                full: zombie.entity.components.crafting.ItemApplyMode[]
+            Destroy:
+              name: Destroy
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ItemApplyMode
+                full: zombie.entity.components.crafting.ItemApplyMode
+            Keep:
+              name: Keep
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ItemApplyMode
+                full: zombie.entity.components.crafting.ItemApplyMode
+            Normal:
+              name: Normal
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ItemApplyMode
+                full: zombie.entity.components.crafting.ItemApplyMode
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ItemApplyMode
+                full: zombie.entity.components.crafting.ItemApplyMode[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ItemApplyMode
+                full: zombie.entity.components.crafting.ItemApplyMode
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ItemApplyMode
+                full: zombie.entity.components.crafting.ItemApplyMode[]

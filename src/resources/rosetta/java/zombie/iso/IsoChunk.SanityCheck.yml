@@ -1,0 +1,191 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        IsoChunk.SanityCheck:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            loadChunk:
+              name: loadChunk
+              modifiers:
+              - public
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            loadFile:
+              name: loadFile
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            loadThread:
+              name: loadThread
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            saveChunk:
+              name: saveChunk
+              modifiers:
+              - public
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            saveFile:
+              name: saveFile
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            saveThread:
+              name: saveThread
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: beginLoad
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            return:
+              type:
+                basic: void
+                full: void
+          - name: beginLoadFile
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: beginSave
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            return:
+              type:
+                basic: void
+                full: void
+          - name: beginSaveFile
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkCRC
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkLength
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: endLoad
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            return:
+              type:
+                basic: void
+                full: void
+          - name: endLoadFile
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: endSave
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            return:
+              type:
+                basic: void
+                full: void
+          - name: endSaveFile
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: log
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,135 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.network:
+        ByteBufferWriter:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            bb:
+              name: bb
+              modifiers:
+              - public
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: bb
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          methods:
+          - name: putBoolean
+            modifiers:
+            - public
+            parameters:
+            - name: v
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putByte
+            modifiers:
+            - public
+            parameters:
+            - name: v
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putChar
+            modifiers:
+            - public
+            parameters:
+            - name: v
+              type:
+                basic: char
+                full: char
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putDouble
+            modifiers:
+            - public
+            parameters:
+            - name: v
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putFloat
+            modifiers:
+            - public
+            parameters:
+            - name: v
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putInt
+            modifiers:
+            - public
+            parameters:
+            - name: v
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putLong
+            modifiers:
+            - public
+            parameters:
+            - name: v
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putShort
+            modifiers:
+            - public
+            parameters:
+            - name: v
+              type:
+                basic: short
+                full: short
+            return:
+              type:
+                basic: void
+                full: void
+          - name: putUTF
+            modifiers:
+            - public
+            parameters:
+            - name: string
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void

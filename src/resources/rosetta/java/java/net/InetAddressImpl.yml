@@ -1,0 +1,86 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.net:
+        InetAddressImpl:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          - abstract
+          methods:
+          - name: anyLocalAddress
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: InetAddress
+                full: java.net.InetAddress
+          - name: getHostByAddr
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getLocalHostName
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isReachable
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: InetAddress
+                full: java.net.InetAddress
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: NetworkInterface
+                full: java.net.NetworkInterface
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: lookupAllHostAddr
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: InetAddress
+                full: java.net.InetAddress[]
+          - name: loopbackAddress
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: InetAddress
+                full: java.net.InetAddress

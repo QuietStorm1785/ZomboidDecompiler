@@ -1,0 +1,112 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.radio:
+        RadioAPI:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          staticFields:
+            instance:
+              name: instance
+              modifiers:
+              - private
+              - static
+              type:
+                basic: RadioAPI
+                full: zombie.radio.RadioAPI
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: getChannels
+            modifiers:
+            - public
+            parameters:
+            - name: category
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: KahluaTable
+                full: se.krka.kahlua.vm.KahluaTable
+          staticMethods:
+          - name: getInstance
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: RadioAPI
+                full: zombie.radio.RadioAPI
+          - name: hasInstance
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: timeStampToDays
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: stamp
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: timeStampToHours
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: stamp
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: timeStampToMinutes
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: stamp
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: timeToTimeStamp
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: days
+              type:
+                basic: int
+                full: int
+            - name: hours
+              type:
+                basic: int
+                full: int
+            - name: minutes
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int

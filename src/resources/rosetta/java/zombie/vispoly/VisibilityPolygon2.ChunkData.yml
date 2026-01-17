@@ -1,0 +1,53 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.vispoly:
+        VisibilityPolygon2.ChunkData:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            m_chunk:
+              name: m_chunk
+              modifiers:
+              - package
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            m_levelData:
+              name: m_levelData
+              modifiers:
+              - package
+              type:
+                basic: TIntObjectHashMap
+                full: gnu.trove.map.hash.TIntObjectHashMap<zombie.vispoly.VisibilityPolygon2$ChunkLevelData>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+          methods:
+          - name: getDataForLevel
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: VisibilityPolygon2.ChunkLevelData
+                full: zombie.vispoly.VisibilityPolygon2$ChunkLevelData
+          - name: removeFromWorld
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

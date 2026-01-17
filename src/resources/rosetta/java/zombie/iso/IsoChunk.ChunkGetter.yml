@@ -1,0 +1,41 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        IsoChunk.ChunkGetter:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            chunk:
+              name: chunk
+              modifiers:
+              - private
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: getGridSquare
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare

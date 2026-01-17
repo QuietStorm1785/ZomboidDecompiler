@@ -1,0 +1,575 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.inventory.recipemanager:
+        RecipeMonitor:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          staticFields:
+            colGray:
+              name: colGray
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Color
+                full: zombie.core.Color
+            colHeader:
+              name: colHeader
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Color
+                full: zombie.core.Color
+            colNeg:
+              name: colNeg
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Color
+                full: zombie.core.Color
+            colPos:
+              name: colPos
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Color
+                full: zombie.core.Color
+            colors:
+              name: colors
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.Color>
+            defColor:
+              name: defColor
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Color
+                full: zombie.core.Color
+            enabled:
+              name: enabled
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            lastRecipe:
+              name: lastRecipe
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Recipe
+                full: zombie.scripting.objects.Recipe
+            lines:
+              name: lines
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            monitorID:
+              name: monitorID
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            recipeLines:
+              name: recipeLines
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            recipeName:
+              name: recipeName
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            suspended:
+              name: suspended
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            tabSize:
+              name: tabSize
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            tabStr:
+              name: tabStr
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            tabs:
+              name: tabs
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: DecTab
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Enable
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: GetColorForLine
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Color
+                full: zombie.core.Color
+          - name: GetColors
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.Color>
+          - name: GetLines
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: GetSaveDir
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: IncTab
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: IsEnabled
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: Log
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Log
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: Color
+                full: zombie.core.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LogBlanc
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LogContainers
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.ItemContainer>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LogContainers
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.ItemContainer>
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LogInit
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Recipe
+                full: zombie.scripting.objects.Recipe
+            - name: arg1
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            - name: arg2
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.ItemContainer>
+            - name: arg3
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            - name: arg4
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.InventoryItem>
+            - name: arg5
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LogItem
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: InventoryItem
+                full: zombie.inventory.InventoryItem
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LogList
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<T>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LogSource
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: Recipe.Source
+                full: zombie.scripting.objects.Recipe$Source
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LogSources
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: List
+                full: java.util.List<zombie.scripting.objects.Recipe$Source>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: ResetTabs
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SaveToFile
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: SetTab
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: StartMonitor
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: canLog
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getColBlack
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: Color
+                full: zombie.core.Color
+          - name: getColGray
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: Color
+                full: zombie.core.Color
+          - name: getContainerString
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ItemContainer
+                full: zombie.inventory.ItemContainer
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getMonitorID
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getRecipe
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: Recipe
+                full: zombie.scripting.objects.Recipe
+          - name: getRecipeLines
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: getRecipeName
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getResultString
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Recipe.Result
+                full: zombie.scripting.objects.Recipe$Result
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: resume
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRecipe
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Recipe
+                full: zombie.scripting.objects.Recipe
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTabStr
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: suspend
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: w_blanc
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: BufferedWriter
+                full: java.io.BufferedWriter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: w_write
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: BufferedWriter
+                full: java.io.BufferedWriter
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void

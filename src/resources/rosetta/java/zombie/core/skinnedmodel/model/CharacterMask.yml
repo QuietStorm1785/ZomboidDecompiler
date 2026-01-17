@@ -1,0 +1,180 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.model:
+        CharacterMask:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            m_visibleFlags:
+              name: m_visibleFlags
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean[]
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: contentsToString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+            notes: Returns a list of all Visible components.
+          - name: copyFrom
+            modifiers:
+            - public
+            parameters:
+            - name: rhs
+              type:
+                basic: CharacterMask
+                full: zombie.core.skinnedmodel.model.CharacterMask
+            return:
+              type:
+                basic: void
+                full: void
+          - name: forEachVisible
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<zombie.core.skinnedmodel.model.CharacterMask$Part>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isAll
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isAllVisible
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isBloodBodyPartVisible
+            modifiers:
+            - public
+            parameters:
+            - name: bpt
+              type:
+                basic: BloodBodyPartType
+                full: zombie.characterTextures.BloodBodyPartType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isNothingVisible
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPartVisible
+            modifiers:
+            - public
+            parameters:
+            - name: part
+              type:
+                basic: CharacterMask.Part
+                full: zombie.core.skinnedmodel.model.CharacterMask$Part
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTorsoVisible
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setAllVisible
+            modifiers:
+            - public
+            parameters:
+            - name: isVisible
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPartVisible
+            modifiers:
+            - public
+            parameters:
+            - name: part
+              type:
+                basic: CharacterMask.Part
+                full: zombie.core.skinnedmodel.model.CharacterMask$Part
+            - name: isVisible
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPartsVisible
+            modifiers:
+            - public
+            parameters:
+            - name: parts
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.Integer>
+            - name: isVisible
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: createFlags
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean[]

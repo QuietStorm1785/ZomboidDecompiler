@@ -1,0 +1,86 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.util:
+        PooledArrayObject:
+          extends: zombie.util.PooledObject
+          modifiers:
+          - public
+          fields:
+            m_array:
+              name: m_array
+              modifiers:
+              - private
+              type:
+                basic: T
+                full: T[]
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: array
+            modifiers:
+            - public
+            return:
+              type:
+                basic: T
+                full: T[]
+          - name: get
+            modifiers:
+            - public
+            parameters:
+            - name: idx
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: T
+                full: T
+          - name: initCapacity
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Function
+                full: java.util.function.Function<java.lang.Integer, T[]>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: length
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: idx
+              type:
+                basic: int
+                full: int
+            - name: val
+              type:
+                basic: T
+                full: T
+            return:
+              type:
+                basic: void
+                full: void

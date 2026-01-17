@@ -1,0 +1,130 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.textures:
+        AnimatedTextureID:
+          extends: zombie.asset.Asset
+          modifiers:
+          - public
+          fields:
+            assetParams:
+              name: assetParams
+              modifiers:
+              - public
+              type:
+                basic: AnimatedTextureID.AnimatedTextureIDAssetParams
+                full: zombie.core.textures.AnimatedTextureID$AnimatedTextureIDAssetParams
+            frames:
+              name: frames
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.textures.AnimatedTextureIDFrame>
+            height:
+              name: height
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            width:
+              name: width
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          staticFields:
+            ASSET_TYPE:
+              name: ASSET_TYPE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AssetType
+                full: zombie.asset.AssetType
+          constructors:
+          - modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: AssetPath
+                full: zombie.asset.AssetPath
+            - name: arg1
+              type:
+                basic: AssetManager
+                full: zombie.asset.AssetManager
+            - name: arg2
+              type:
+                basic: AnimatedTextureID.AnimatedTextureIDAssetParams
+                full: zombie.core.textures.AnimatedTextureID$AnimatedTextureIDAssetParams
+          methods:
+          - name: destroy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getFrame
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: AnimatedTextureIDFrame
+                full: zombie.core.textures.AnimatedTextureIDFrame
+          - name: getFrameCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getHeight
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AssetType
+                full: zombie.asset.AssetType
+          - name: getWidth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isDestroyed
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setImageData
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ImageData
+                full: zombie.core.textures.ImageData
+            return:
+              type:
+                basic: void
+                full: void

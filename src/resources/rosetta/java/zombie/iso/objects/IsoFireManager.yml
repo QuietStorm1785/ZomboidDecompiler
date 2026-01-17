@@ -1,0 +1,510 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.objects:
+        IsoFireManager:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          staticFields:
+            Blue_Oscilator:
+              name: Blue_Oscilator
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            Blue_Oscilator_Rate:
+              name: Blue_Oscilator_Rate
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            Blue_Oscilator_Val:
+              name: Blue_Oscilator_Val
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            CharactersOnFire_Stack:
+              name: CharactersOnFire_Stack
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.characters.IsoGameCharacter>
+            FireAlpha:
+              name: FireAlpha
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            FireAnimDelay:
+              name: FireAnimDelay
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            FireRecalc:
+              name: FireRecalc
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FireRecalcDelay:
+              name: FireRecalcDelay
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            FireStack:
+              name: FireStack
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.objects.IsoFire>
+            FireTintMod:
+              name: FireTintMod
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            Green_Oscilator:
+              name: Green_Oscilator
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            Green_Oscilator_Rate:
+              name: Green_Oscilator_Rate
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            Green_Oscilator_Val:
+              name: Green_Oscilator_Val
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            LightCalcFromBurningCharacters:
+              name: LightCalcFromBurningCharacters
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            MaxFireObjects:
+              name: MaxFireObjects
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            OscilatorEffectScalar:
+              name: OscilatorEffectScalar
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            OscilatorSpeedScalar:
+              name: OscilatorSpeedScalar
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            Red_Oscilator:
+              name: Red_Oscilator
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            Red_Oscilator_Rate:
+              name: Red_Oscilator_Rate
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            Red_Oscilator_Val:
+              name: Red_Oscilator_Val
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            SmokeAlpha:
+              name: SmokeAlpha
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            SmokeAnimDelay:
+              name: SmokeAnimDelay
+              modifiers:
+              - public
+              - static
+              type:
+                basic: float
+                full: float
+            SmokeTintMod:
+              name: SmokeTintMod
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ColorInfo
+                full: zombie.core.textures.ColorInfo
+            charactersOnFire:
+              name: charactersOnFire
+              modifiers:
+              - private
+              - static
+              type:
+                basic: HashSet
+                full: java.util.HashSet<zombie.characters.IsoGameCharacter>
+            fireSounds:
+              name: fireSounds
+              modifiers:
+              - private
+              - static
+              type:
+                basic: IsoFireManager.FireSounds
+                full: zombie.iso.objects.IsoFireManager$FireSounds
+            updateStack:
+              name: updateStack
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Stack
+                full: java.util.Stack<zombie.iso.objects.IsoFire>
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: Add
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: NewFire
+              type:
+                basic: IsoFire
+                full: zombie.iso.objects.IsoFire
+            return:
+              type:
+                basic: void
+                full: void
+          - name: AddBurningCharacter
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: BurningCharacter
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Fire_LightCalc
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: FireSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: TestSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: playerIndex
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LightTileWithFire
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: TestSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: MolotovSmash
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: gridSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Remove
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: DyingFire
+              type:
+                basic: IsoFire
+                full: zombie.iso.objects.IsoFire
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RemoveAllOn
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: sq
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: void
+                full: void
+          - name: RemoveBurningCharacter
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: BurningCharacter
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: StartFire
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: gridSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: IgniteOnAny
+              type:
+                basic: boolean
+                full: boolean
+            - name: FireStartingEnergy
+              type:
+                basic: int
+                full: int
+            - name: Life
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: StartFire
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: gridSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: IgniteOnAny
+              type:
+                basic: boolean
+                full: boolean
+            - name: FireStartingEnergy
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: StartSmoke
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: gridSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: IgniteOnAny
+              type:
+                basic: boolean
+                full: boolean
+            - name: FireStartingEnergy
+              type:
+                basic: int
+                full: int
+            - name: Life
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Update
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addCharacterOnFire
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: character
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: deleteCharacterOnFire
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: character
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: explode
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: gridSquare
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: power
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stopSound
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: fire
+              type:
+                basic: IsoFire
+                full: zombie.iso.objects.IsoFire
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateSound
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: fire
+              type:
+                basic: IsoFire
+                full: zombie.iso.objects.IsoFire
+            return:
+              type:
+                basic: void
+                full: void

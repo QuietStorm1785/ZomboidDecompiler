@@ -1,0 +1,123 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        IsoGameCharacter.Location:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            z:
+              name: z
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: other
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getZ
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoGameCharacter.Location
+                full: zombie.characters.IsoGameCharacter$Location

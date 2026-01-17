@@ -1,0 +1,52 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.entity.components.crafting:
+        CraftRecipe.RequiredSkill:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            level:
+              name: level
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            perk:
+              name: perk
+              modifiers:
+              - private
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk
+            - name: arg1
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: getLevel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getPerk
+            modifiers:
+            - public
+            return:
+              type:
+                basic: PerkFactory.Perk
+                full: zombie.characters.skills.PerkFactory$Perk

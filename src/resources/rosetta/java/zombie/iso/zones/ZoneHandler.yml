@@ -1,0 +1,59 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.zones:
+        ZoneHandler:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            zones:
+              name: zones
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.util.UUID, U>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: Dispose
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addZone
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: U
+                full: U
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getZone
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UUID
+                full: java.util.UUID
+            return:
+              type:
+                basic: U
+                full: U
+          - name: getZones
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Collection
+                full: java.util.Collection<U>

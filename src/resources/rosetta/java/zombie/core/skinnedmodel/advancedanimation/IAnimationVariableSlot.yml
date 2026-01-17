@@ -1,0 +1,193 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.advancedanimation:
+        IAnimationVariableSlot:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "An Animation Variable Slot\n  Used to store a variable's key+value\
+            \ pair, and its current type."
+          methods:
+          - name: canConvertFrom
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: val
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: "Returns TRUE if this variable slot can accept and/or convert the\
+              \ supplied value object.\n Returns FALSE if the conversion would result\
+              \ in a loss of data.\n\n  Eg. If a String is given to a Float variable,\
+              \ and the string is not of a numeric format, then the string value\n\
+              \      would be lost."
+          - name: clear
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Clear this variable, its value is set to a null-value. Blank for
+              Strings, 0 for Floats, False for Booleans, etc.
+          - name: getDescription
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: IAnimationVariableSource
+                full: zombie.core.skinnedmodel.advancedanimation.IAnimationVariableSource
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getEnumValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: EnumType
+                full: EnumType
+            return:
+              type:
+                basic: EnumType
+                full: EnumType
+          - name: getHandle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AnimationVariableHandle
+                full: zombie.core.skinnedmodel.advancedanimation.AnimationVariableHandle
+          - name: getKey
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+            notes: This variable's unique key
+          - name: getType
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: AnimationVariableType
+                full: zombie.core.skinnedmodel.advancedanimation.AnimationVariableType
+            notes: This variable's value type
+          - name: getValueBool
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: This variable's value, as a Boolean.
+          - name: getValueFloat
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+            notes: This variable's value, as a Float.
+          - name: getValueString
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+            notes: This variable's value, in String form.
+          - name: isReadOnly
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+            notes: "Returns TRUE if this variable is not writable. Typically, the\
+              \ value of this variable is specified by an outside\n condition, such\
+              \ as whether the character is currently falling, etc."
+          - name: setEnumValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: EnumType
+                full: EnumType
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setReadOnly
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setValue
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: val
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Set this variable's value
+          - name: setValue
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: val
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Set this variable's value
+          - name: setValue
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: val
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+            notes: Set this variable's value

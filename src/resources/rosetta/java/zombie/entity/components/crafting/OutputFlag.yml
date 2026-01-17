@@ -1,0 +1,132 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.entity.components.crafting:
+        OutputFlag:
+          extends: java.lang.Enum<zombie.entity.components.crafting.OutputFlag>
+          modifiers:
+          - public
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag[]
+            AlwaysFill:
+              name: AlwaysFill
+              modifiers:
+              - public
+              - static
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag
+            AutomationOnly:
+              name: AutomationOnly
+              modifiers:
+              - public
+              - static
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag
+            DontInheritCondition:
+              name: DontInheritCondition
+              modifiers:
+              - public
+              - static
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag
+            ForceEmpty:
+              name: ForceEmpty
+              modifiers:
+              - public
+              - static
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag
+            HandcraftOnly:
+              name: HandcraftOnly
+              modifiers:
+              - public
+              - static
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag
+            HasNoUses:
+              name: HasNoUses
+              modifiers:
+              - public
+              - static
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag
+            HasOneUse:
+              name: HasOneUse
+              modifiers:
+              - public
+              - static
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag
+            IsBlunt:
+              name: IsBlunt
+              modifiers:
+              - public
+              - static
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag
+            IsEmpty:
+              name: IsEmpty
+              modifiers:
+              - public
+              - static
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag
+            RespectCapacity:
+              name: RespectCapacity
+              modifiers:
+              - public
+              - static
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: OutputFlag
+                full: zombie.entity.components.crafting.OutputFlag[]

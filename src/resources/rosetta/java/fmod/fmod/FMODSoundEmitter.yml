@@ -1,0 +1,975 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      fmod.fmod:
+        FMODSoundEmitter:
+          extends: zombie.audio.BaseSoundEmitter
+          modifiers:
+          - public
+          - final
+          fields:
+            Instances:
+              name: Instances
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<fmod.fmod.FMODSoundEmitter$Sound>
+            Stopped:
+              name: Stopped
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<fmod.fmod.FMODSoundEmitter$Sound>
+            ToStart:
+              name: ToStart
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<fmod.fmod.FMODSoundEmitter$Sound>
+            emitterType:
+              name: emitterType
+              modifiers:
+              - public
+              type:
+                basic: EmitterType
+                full: fmod.fmod.EmitterType
+            eventSoundPool:
+              name: eventSoundPool
+              modifiers:
+              - private
+              type:
+                basic: ArrayDeque
+                full: java.util.ArrayDeque<fmod.fmod.FMODSoundEmitter$EventSound>
+            fileSoundPool:
+              name: fileSoundPool
+              modifiers:
+              - private
+              type:
+                basic: ArrayDeque
+                full: java.util.ArrayDeque<fmod.fmod.FMODSoundEmitter$FileSound>
+            occlusion:
+              name: occlusion
+              modifiers:
+              - private
+              type:
+                basic: ParameterOcclusion
+                full: zombie.audio.parameters.ParameterOcclusion
+            parameterUpdater:
+              name: parameterUpdater
+              modifiers:
+              - public
+              type:
+                basic: IFMODParameterUpdater
+                full: fmod.fmod.IFMODParameterUpdater
+            parameterValues:
+              name: parameterValues
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<fmod.fmod.FMODSoundEmitter$ParameterValue>
+            parameters:
+              name: parameters
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.audio.FMODParameter>
+            parent:
+              name: parent
+              modifiers:
+              - public
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            z:
+              name: z
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            CurrentTimeMS:
+              name: CurrentTimeMS
+              modifiers:
+              - private
+              - static
+              type:
+                basic: long
+                full: long
+            parameterSet:
+              name: parameterSet
+              modifiers:
+              - private
+              - static
+              type:
+                basic: BitSet
+                full: java.util.BitSet
+            parameterValuePool:
+              name: parameterValuePool
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ObjectPool
+                full: zombie.popman.ObjectPool<fmod.fmod.FMODSoundEmitter$ParameterValue>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: addParameter
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FMODParameter
+                full: zombie.audio.FMODParameter
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addSound
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: GameSoundClip
+                full: zombie.audio.GameSoundClip
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: FMODSoundEmitter.Sound
+                full: fmod.fmod.FMODSoundEmitter$Sound
+          - name: allocEventSound
+            modifiers:
+            - private
+            return:
+              type:
+                basic: FMODSoundEmitter.EventSound
+                full: fmod.fmod.FMODSoundEmitter$EventSound
+          - name: allocFileSound
+            modifiers:
+            - private
+            return:
+              type:
+                basic: FMODSoundEmitter.FileSound
+                full: fmod.fmod.FMODSoundEmitter$FileSound
+          - name: clearParameters
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: countInstances
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: GameSound
+                full: zombie.audio.GameSound
+            return:
+              type:
+                basic: int
+                full: int
+          - name: countToStart
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: GameSound
+                full: zombie.audio.GameSound
+            return:
+              type:
+                basic: int
+                full: int
+          - name: findInstance
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: int
+                full: int
+          - name: findInstance
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: findParameterValue
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: FMOD_STUDIO_PARAMETER_DESCRIPTION
+                full: fmod.fmod.FMOD_STUDIO_PARAMETER_DESCRIPTION
+            return:
+              type:
+                basic: int
+                full: int
+          - name: findStopped
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: int
+                full: int
+          - name: findToStart
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: int
+                full: int
+          - name: findToStart
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: hasSoundsToStart
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasSustainPoints
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isEmpty
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPlaying
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isPlaying
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isUsingParameter
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: limitSound
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: GameSound
+                full: zombie.audio.GameSound
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: playAmbientLoopedImpl
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: long
+                full: long
+          - name: playAmbientSound
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: long
+                full: long
+          - name: playClip
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: GameSoundClip
+                full: zombie.audio.GameSoundClip
+            - name: arg1
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: long
+                full: long
+          - name: playSound
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: long
+                full: long
+          - name: playSound
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: IsoGameCharacter
+                full: zombie.characters.IsoGameCharacter
+            return:
+              type:
+                basic: long
+                full: long
+          - name: playSound
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: long
+                full: long
+          - name: playSound
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: long
+                full: long
+          - name: playSound
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: long
+                full: long
+          - name: playSound
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: long
+                full: long
+          - name: playSoundImpl
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            return:
+              type:
+                basic: long
+                full: long
+          - name: playSoundImpl
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg2
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: long
+                full: long
+          - name: playSoundImpl
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: IsoObject
+                full: zombie.iso.IsoObject
+            return:
+              type:
+                basic: long
+                full: long
+          - name: playSoundLooped
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: long
+                full: long
+          - name: playSoundLoopedImpl
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: long
+                full: long
+          - name: randomStart
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: releaseEventSound
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: FMODSoundEmitter.EventSound
+                full: fmod.fmod.FMODSoundEmitter$EventSound
+            return:
+              type:
+                basic: void
+                full: void
+          - name: releaseFileSound
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: FMODSoundEmitter.FileSound
+                full: fmod.fmod.FMODSoundEmitter$FileSound
+            return:
+              type:
+                basic: void
+                full: void
+          - name: restart
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: sendStopSound
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: set3D
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setParameterValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: FMOD_STUDIO_PARAMETER_DESCRIPTION
+                full: fmod.fmod.FMOD_STUDIO_PARAMETER_DESCRIPTION
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setParameterValueByName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPitch
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPos
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTimelinePosition
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVolume
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setVolumeAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: startEvent
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: GameSoundClip
+                full: zombie.audio.GameSoundClip
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stopAll
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stopEvent
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: GameSoundClip
+                full: zombie.audio.GameSoundClip
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stopOrTriggerSound
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stopOrTriggerSoundByName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stopOrTriggerSoundLocal
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: stopSound
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: int
+                full: int
+          - name: stopSound
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: int
+                full: int
+          - name: stopSoundByName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: stopSoundDelayRelease
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: int
+                full: int
+          - name: stopSoundLocal
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: tick
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: triggerCue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateEvent
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: GameSoundClip
+                full: zombie.audio.GameSoundClip
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: update
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void

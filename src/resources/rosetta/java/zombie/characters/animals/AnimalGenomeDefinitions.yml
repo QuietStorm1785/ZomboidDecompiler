@@ -1,0 +1,102 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.animals:
+        AnimalGenomeDefinitions:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            currentValue:
+              name: currentValue
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            forcedValues:
+              name: forcedValues
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            maxValue:
+              name: maxValue
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            minValue:
+              name: minValue
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            name:
+              name: name
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            ratios:
+              name: ratios
+              modifiers:
+              - public
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, java.lang.Float>
+          staticFields:
+            fullGenomeDef:
+              name: fullGenomeDef
+              modifiers:
+              - public
+              - static
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.characters.animals.AnimalGenomeDefinitions>
+            geneticDisorder:
+              name: geneticDisorder
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: loadRatio
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: KahluaTableImpl
+                full: se.krka.kahlua.j2se.KahluaTableImpl
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: getGeneticDisorderList
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          - name: loadGenomeDefinition
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void

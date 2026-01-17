@@ -1,0 +1,538 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        IsoLightSource:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            ID:
+              name: ID
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            b:
+              name: b
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            bActive:
+              name: bActive
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bActiveJNI:
+              name: bActiveJNI
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bHydroPowered:
+              name: bHydroPowered
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            bJNI:
+              name: bJNI
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            bWasActive:
+              name: bWasActive
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            chunk:
+              name: chunk
+              modifiers:
+              - public
+              type:
+                basic: IsoChunk
+                full: zombie.iso.IsoChunk
+            g:
+              name: g
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            gJNI:
+              name: gJNI
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            life:
+              name: life
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            lightMap:
+              name: lightMap
+              modifiers:
+              - public
+              type:
+                basic: Object
+                full: java.lang.Object
+            localToBuilding:
+              name: localToBuilding
+              modifiers:
+              - public
+              type:
+                basic: IsoBuilding
+                full: zombie.iso.areas.IsoBuilding
+            r:
+              name: r
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            rJNI:
+              name: rJNI
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            radius:
+              name: radius
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            startlife:
+              name: startlife
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            switches:
+              name: switches
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.objects.IsoLightSwitch>
+            x:
+              name: x
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            y:
+              name: y
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            z:
+              name: z
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          staticFields:
+            NextID:
+              name: NextID
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: radius
+              type:
+                basic: int
+                full: int
+          - modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: radius
+              type:
+                basic: int
+                full: int
+            - name: building
+              type:
+                basic: IsoBuilding
+                full: zombie.iso.areas.IsoBuilding
+          - modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+            - name: y
+              type:
+                basic: int
+                full: int
+            - name: z
+              type:
+                basic: int
+                full: int
+            - name: r
+              type:
+                basic: float
+                full: float
+            - name: g
+              type:
+                basic: float
+                full: float
+            - name: b
+              type:
+                basic: float
+                full: float
+            - name: radius
+              type:
+                basic: int
+                full: int
+            - name: life
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: clearInfluence
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getB
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the b
+          - name: getG
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the g
+          - name: getLocalToBuilding
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoBuilding
+                full: zombie.iso.areas.IsoBuilding
+          - name: getR
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the r
+          - name: getRadius
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the radius
+          - name: getSwitches
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.objects.IsoLightSwitch>
+              notes: the switches
+          - name: getX
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the x
+          - name: getY
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the y
+          - name: getZ
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the z
+          - name: isActive
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the bActive
+          - name: isHydroPowered
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInBounds
+            modifiers:
+            - public
+            parameters:
+            - name: minX
+              type:
+                basic: int
+                full: int
+            - name: minY
+              type:
+                basic: int
+                full: int
+            - name: maxX
+              type:
+                basic: int
+                full: int
+            - name: maxY
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isInBounds
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setActive
+            modifiers:
+            - public
+            parameters:
+            - name: bActive
+              type:
+                basic: boolean
+                full: boolean
+              notes: the bActive to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setB
+            modifiers:
+            - public
+            parameters:
+            - name: b
+              type:
+                basic: float
+                full: float
+              notes: the b to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setG
+            modifiers:
+            - public
+            parameters:
+            - name: g
+              type:
+                basic: float
+                full: float
+              notes: the g to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setR
+            modifiers:
+            - public
+            parameters:
+            - name: r
+              type:
+                basic: float
+                full: float
+              notes: the r to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRadius
+            modifiers:
+            - public
+            parameters:
+            - name: radius
+              type:
+                basic: int
+                full: int
+              notes: the radius to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSwitches
+            modifiers:
+            - public
+            parameters:
+            - name: switches
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.iso.objects.IsoLightSwitch>
+              notes: the switches to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setWasActive
+            modifiers:
+            - public
+            parameters:
+            - name: bWasActive
+              type:
+                basic: boolean
+                full: boolean
+              notes: the bWasActive to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setX
+            modifiers:
+            - public
+            parameters:
+            - name: x
+              type:
+                basic: int
+                full: int
+              notes: the x to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setY
+            modifiers:
+            - public
+            parameters:
+            - name: y
+              type:
+                basic: int
+                full: int
+              notes: the y to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setZ
+            modifiers:
+            - public
+            parameters:
+            - name: z
+              type:
+                basic: int
+                full: int
+              notes: the z to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: wasActive
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the bWasActive

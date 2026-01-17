@@ -1,0 +1,111 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.worldgen.rules:
+        Rules:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            aliases:
+              name: aliases
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.iso.worldgen.rules.Alias>
+            colors:
+              name: colors
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, int[]>
+            colorsInt:
+              name: colorsInt
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, java.lang.Integer>
+            rules:
+              name: rules
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.iso.worldgen.rules.Rule>
+            version:
+              name: version
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getAliases
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.iso.worldgen.rules.Alias>
+          - name: getColors
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, int[]>
+          - name: getColorsInt
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, java.lang.Integer>
+          - name: getRules
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.iso.worldgen.rules.Rule>
+          - name: getVersion
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          staticMethods:
+          - name: lambda$load$0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Rule
+                full: zombie.iso.worldgen.rules.Rule
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: load
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Rules
+                full: zombie.iso.worldgen.rules.Rules

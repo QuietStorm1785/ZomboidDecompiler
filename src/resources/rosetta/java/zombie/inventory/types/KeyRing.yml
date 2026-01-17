@@ -1,0 +1,96 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.inventory.types:
+        KeyRing:
+          extends: zombie.inventory.InventoryItem
+          modifiers:
+          - public
+          - final
+          fields:
+            keys:
+              name: keys
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.types.Key>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: module
+              type:
+                basic: String
+                full: java.lang.String
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: type
+              type:
+                basic: String
+                full: java.lang.String
+            - name: tex
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: addKey
+            modifiers:
+            - public
+            parameters:
+            - name: key
+              type:
+                basic: Key
+                full: zombie.inventory.types.Key
+            return:
+              type:
+                basic: void
+                full: void
+          - name: containsKeyId
+            modifiers:
+            - public
+            parameters:
+            - name: keyId
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getCategory
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getKeys
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.types.Key>
+          - name: getSaveType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: setKeys
+            modifiers:
+            - public
+            parameters:
+            - name: keys
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.inventory.types.Key>
+            return:
+              type:
+                basic: void
+                full: void

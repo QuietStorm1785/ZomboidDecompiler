@@ -1,0 +1,68 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.gameStates:
+        TermsOfServiceState:
+          extends: zombie.gameStates.GameState
+          modifiers:
+          - public
+          fields:
+            bCreated:
+              name: bCreated
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            bExit:
+              name: bExit
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: enter
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: exit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: fromLua0
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: render
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: update
+            modifiers:
+            - public
+            return:
+              type:
+                basic: GameStateMachine.StateAction
+                full: zombie.gameStates.GameStateMachine$StateAction

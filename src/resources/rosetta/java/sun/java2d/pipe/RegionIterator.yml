@@ -1,0 +1,83 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.java2d.pipe:
+        RegionIterator:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            curIndex:
+              name: curIndex
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            numXbands:
+              name: numXbands
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            region:
+              name: region
+              modifiers:
+              - package
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+          methods:
+          - name: copyStateFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: RegionIterator
+                full: sun.java2d.pipe.RegionIterator
+            return:
+              type:
+                basic: void
+                full: void
+          - name: createCopy
+            modifiers:
+            - public
+            return:
+              type:
+                basic: RegionIterator
+                full: sun.java2d.pipe.RegionIterator
+          - name: nextXBand
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: nextYRange
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int[]
+            return:
+              type:
+                basic: boolean
+                full: boolean

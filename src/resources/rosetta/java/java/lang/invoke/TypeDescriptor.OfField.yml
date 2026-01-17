@@ -1,0 +1,58 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.lang.invoke:
+        TypeDescriptor.OfField:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "An entity that has a field type descriptor.\n Field descriptors\
+            \ conforming to JVMS 4.3.2 can be described\n nominally via Class::describeConstable;\n\
+            \ otherwise they cannot be described nominally."
+          methods:
+          - name: arrayType
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: F
+                full: F
+              notes: the descriptor for the array type
+            notes: "Return a descriptor for the array type whose component type is\
+              \ described by this\n descriptor"
+          - name: componentType
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: F
+                full: F
+              notes: "the component type, or null if this field descriptor does\n\
+                \ not describe an array type"
+            notes: "If this field descriptor describes an array type, return\n a descriptor\
+              \ for its component type, otherwise return null."
+          - name: isArray
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: whether this field descriptor describes an array type
+            notes: Does this field descriptor describe an array type?
+          - name: isPrimitive
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: whether this field descriptor describes a primitive type
+            notes: Does this field descriptor describe a primitive type (including
+              void.)

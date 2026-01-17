@@ -1,0 +1,902 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      com.google.common.collect:
+        ImmutableList:
+          extends: com.google.common.collect.ImmutableCollection<E>
+          modifiers:
+          - public
+          - abstract
+          constructors:
+          - modifiers:
+            - package
+          methods:
+          - name: add
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addAll
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Collection
+                full: java.util.Collection<? extends E>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: asList
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: contains
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: copyIntoArray
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: forEach
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<? super E>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: indexOf
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: int
+                full: int
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: UnmodifiableIterator
+                full: com.google.common.collect.UnmodifiableIterator<E>
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Iterator
+                full: java.util.Iterator
+          - name: lastIndexOf
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: int
+                full: int
+          - name: listIterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: UnmodifiableListIterator
+                full: com.google.common.collect.UnmodifiableListIterator<E>
+          - name: listIterator
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: UnmodifiableListIterator
+                full: com.google.common.collect.UnmodifiableListIterator<E>
+          - name: listIterator
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ListIterator
+                full: java.util.ListIterator
+          - name: listIterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ListIterator
+                full: java.util.ListIterator
+          - name: readObject
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ObjectInputStream
+                full: java.io.ObjectInputStream
+            return:
+              type:
+                basic: void
+                full: void
+          - name: remove
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: E
+                full: E
+          - name: replaceAll
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: UnaryOperator
+                full: java.util.function.UnaryOperator<E>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reverse
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: set
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: E
+                full: E
+          - name: sort
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Comparator
+                full: java.util.Comparator<? super E>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: spliterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Spliterator
+                full: java.util.Spliterator<E>
+          - name: subList
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: subList
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: List
+                full: java.util.List
+          - name: subListUnchecked
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: writeReplace
+            modifiers:
+            - package
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          staticMethods:
+          - name: asImmutableList
+            modifiers:
+            - package
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: asImmutableList
+            modifiers:
+            - package
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: builder
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ImmutableList.Builder
+                full: com.google.common.collect.ImmutableList$Builder<E>
+          - name: construct
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object[]
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: copyOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Iterable
+                full: java.lang.Iterable<? extends E>
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: copyOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Collection
+                full: java.util.Collection<? extends E>
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: copyOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Iterator
+                full: java.util.Iterator<? extends E>
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: copyOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E[]
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: of
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            - name: arg2
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            - name: arg2
+              type:
+                basic: E
+                full: E
+            - name: arg3
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            - name: arg2
+              type:
+                basic: E
+                full: E
+            - name: arg3
+              type:
+                basic: E
+                full: E
+            - name: arg4
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            - name: arg2
+              type:
+                basic: E
+                full: E
+            - name: arg3
+              type:
+                basic: E
+                full: E
+            - name: arg4
+              type:
+                basic: E
+                full: E
+            - name: arg5
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            - name: arg2
+              type:
+                basic: E
+                full: E
+            - name: arg3
+              type:
+                basic: E
+                full: E
+            - name: arg4
+              type:
+                basic: E
+                full: E
+            - name: arg5
+              type:
+                basic: E
+                full: E
+            - name: arg6
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            - name: arg2
+              type:
+                basic: E
+                full: E
+            - name: arg3
+              type:
+                basic: E
+                full: E
+            - name: arg4
+              type:
+                basic: E
+                full: E
+            - name: arg5
+              type:
+                basic: E
+                full: E
+            - name: arg6
+              type:
+                basic: E
+                full: E
+            - name: arg7
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            - name: arg2
+              type:
+                basic: E
+                full: E
+            - name: arg3
+              type:
+                basic: E
+                full: E
+            - name: arg4
+              type:
+                basic: E
+                full: E
+            - name: arg5
+              type:
+                basic: E
+                full: E
+            - name: arg6
+              type:
+                basic: E
+                full: E
+            - name: arg7
+              type:
+                basic: E
+                full: E
+            - name: arg8
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            - name: arg2
+              type:
+                basic: E
+                full: E
+            - name: arg3
+              type:
+                basic: E
+                full: E
+            - name: arg4
+              type:
+                basic: E
+                full: E
+            - name: arg5
+              type:
+                basic: E
+                full: E
+            - name: arg6
+              type:
+                basic: E
+                full: E
+            - name: arg7
+              type:
+                basic: E
+                full: E
+            - name: arg8
+              type:
+                basic: E
+                full: E
+            - name: arg9
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            - name: arg2
+              type:
+                basic: E
+                full: E
+            - name: arg3
+              type:
+                basic: E
+                full: E
+            - name: arg4
+              type:
+                basic: E
+                full: E
+            - name: arg5
+              type:
+                basic: E
+                full: E
+            - name: arg6
+              type:
+                basic: E
+                full: E
+            - name: arg7
+              type:
+                basic: E
+                full: E
+            - name: arg8
+              type:
+                basic: E
+                full: E
+            - name: arg9
+              type:
+                basic: E
+                full: E
+            - name: arg10
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: of
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            - name: arg1
+              type:
+                basic: E
+                full: E
+            - name: arg2
+              type:
+                basic: E
+                full: E
+            - name: arg3
+              type:
+                basic: E
+                full: E
+            - name: arg4
+              type:
+                basic: E
+                full: E
+            - name: arg5
+              type:
+                basic: E
+                full: E
+            - name: arg6
+              type:
+                basic: E
+                full: E
+            - name: arg7
+              type:
+                basic: E
+                full: E
+            - name: arg8
+              type:
+                basic: E
+                full: E
+            - name: arg9
+              type:
+                basic: E
+                full: E
+            - name: arg10
+              type:
+                basic: E
+                full: E
+            - name: arg11
+              type:
+                basic: E
+                full: E
+            - name: arg12
+              type:
+                basic: E
+                full: E[]
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: sortedCopyOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Iterable
+                full: java.lang.Iterable<? extends E>
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: sortedCopyOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Comparator
+                full: java.util.Comparator<? super E>
+            - name: arg1
+              type:
+                basic: Iterable
+                full: java.lang.Iterable<? extends E>
+            return:
+              type:
+                basic: ImmutableList
+                full: com.google.common.collect.ImmutableList<E>
+          - name: toImmutableList
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: Collector
+                full: java.util.stream.Collector<E, ?, com.google.common.collect.ImmutableList<E>>

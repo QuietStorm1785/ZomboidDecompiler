@@ -1,0 +1,114 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.animation.debug:
+        AnimationEventRecordingFrame:
+          extends: zombie.core.skinnedmodel.animation.debug.GenericNameValueRecordingFrame
+          modifiers:
+          - public
+          fields:
+            m_events:
+              name: m_events
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.skinnedmodel.advancedanimation.AnimEvent>
+            m_tracks:
+              name: m_tracks
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: getValueAt
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: logAnimEvent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AnimationTrack
+                full: zombie.core.skinnedmodel.animation.AnimationTrack
+            - name: arg1
+              type:
+                basic: AnimEvent
+                full: zombie.core.skinnedmodel.advancedanimation.AnimEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: logGlobalAnimEvent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AnimEvent
+                full: zombie.core.skinnedmodel.advancedanimation.AnimEvent
+            return:
+              type:
+                basic: void
+                full: void
+          - name: onColumnAdded
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: writeData
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: AnimEvent
+                full: zombie.core.skinnedmodel.advancedanimation.AnimEvent
+            - name: arg2
+              type:
+                basic: StringBuilder
+                full: java.lang.StringBuilder
+            return:
+              type:
+                basic: void
+                full: void
+          - name: writeData
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void

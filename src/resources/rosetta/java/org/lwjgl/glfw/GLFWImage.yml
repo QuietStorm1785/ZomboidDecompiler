@@ -1,0 +1,596 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      org.lwjgl.glfw:
+        GLFWImage:
+          extends: org.lwjgl.system.Struct<org.lwjgl.glfw.GLFWImage>
+          modifiers:
+          - public
+          staticFields:
+            ALIGNOF:
+              name: ALIGNOF
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            HEIGHT:
+              name: HEIGHT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            PIXELS:
+              name: PIXELS
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            SIZEOF:
+              name: SIZEOF
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            WIDTH:
+              name: WIDTH
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          methods:
+          - name: create
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: create
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: Struct
+                full: org.lwjgl.system.Struct
+          - name: height
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: height
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: pixels
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: pixels
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: set
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: sizeof
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: width
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: width
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          staticMethods:
+          - name: calloc
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: calloc
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: GLFWImage.Buffer
+                full: org.lwjgl.glfw.GLFWImage$Buffer
+          - name: calloc
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: MemoryStack
+                full: org.lwjgl.system.MemoryStack
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: calloc
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: MemoryStack
+                full: org.lwjgl.system.MemoryStack
+            return:
+              type:
+                basic: GLFWImage.Buffer
+                full: org.lwjgl.glfw.GLFWImage$Buffer
+          - name: callocStack
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: callocStack
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: MemoryStack
+                full: org.lwjgl.system.MemoryStack
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: callocStack
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: GLFWImage.Buffer
+                full: org.lwjgl.glfw.GLFWImage$Buffer
+          - name: callocStack
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: MemoryStack
+                full: org.lwjgl.system.MemoryStack
+            return:
+              type:
+                basic: GLFWImage.Buffer
+                full: org.lwjgl.glfw.GLFWImage$Buffer
+          - name: create
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: create
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: create
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: GLFWImage.Buffer
+                full: org.lwjgl.glfw.GLFWImage$Buffer
+          - name: create
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: GLFWImage.Buffer
+                full: org.lwjgl.glfw.GLFWImage$Buffer
+          - name: createSafe
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: createSafe
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: GLFWImage.Buffer
+                full: org.lwjgl.glfw.GLFWImage$Buffer
+          - name: malloc
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: malloc
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: GLFWImage.Buffer
+                full: org.lwjgl.glfw.GLFWImage$Buffer
+          - name: malloc
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: MemoryStack
+                full: org.lwjgl.system.MemoryStack
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: malloc
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: MemoryStack
+                full: org.lwjgl.system.MemoryStack
+            return:
+              type:
+                basic: GLFWImage.Buffer
+                full: org.lwjgl.glfw.GLFWImage$Buffer
+          - name: mallocStack
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: mallocStack
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: MemoryStack
+                full: org.lwjgl.system.MemoryStack
+            return:
+              type:
+                basic: GLFWImage
+                full: org.lwjgl.glfw.GLFWImage
+          - name: mallocStack
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: GLFWImage.Buffer
+                full: org.lwjgl.glfw.GLFWImage$Buffer
+          - name: mallocStack
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: MemoryStack
+                full: org.lwjgl.system.MemoryStack
+            return:
+              type:
+                basic: GLFWImage.Buffer
+                full: org.lwjgl.glfw.GLFWImage$Buffer
+          - name: nheight
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: int
+                full: int
+          - name: nheight
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: npixels
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: npixels
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: nwidth
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: int
+                full: int
+          - name: nwidth
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: validate
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void

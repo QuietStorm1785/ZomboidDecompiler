@@ -1,0 +1,98 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      com.google.common.collect:
+        ImmutableCollection.Builder:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          staticFields:
+            DEFAULT_INITIAL_CAPACITY:
+              name: DEFAULT_INITIAL_CAPACITY
+              modifiers:
+              - package
+              - static
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - package
+          methods:
+          - name: add
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E
+            return:
+              type:
+                basic: ImmutableCollection.Builder
+                full: com.google.common.collect.ImmutableCollection$Builder<E>
+          - name: add
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: E
+                full: E[]
+            return:
+              type:
+                basic: ImmutableCollection.Builder
+                full: com.google.common.collect.ImmutableCollection$Builder<E>
+          - name: addAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Iterable
+                full: java.lang.Iterable<? extends E>
+            return:
+              type:
+                basic: ImmutableCollection.Builder
+                full: com.google.common.collect.ImmutableCollection$Builder<E>
+          - name: addAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Iterator
+                full: java.util.Iterator<? extends E>
+            return:
+              type:
+                basic: ImmutableCollection.Builder
+                full: com.google.common.collect.ImmutableCollection$Builder<E>
+          - name: build
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: ImmutableCollection
+                full: com.google.common.collect.ImmutableCollection<E>
+          staticMethods:
+          - name: expandedCapacity
+            modifiers:
+            - package
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int

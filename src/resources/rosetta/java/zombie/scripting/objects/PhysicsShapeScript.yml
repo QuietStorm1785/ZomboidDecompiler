@@ -1,0 +1,88 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.objects:
+        PhysicsShapeScript:
+          extends: zombie.scripting.objects.BaseScriptObject
+          modifiers:
+          - public
+          fields:
+            bAllMeshes:
+              name: bAllMeshes
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            meshName:
+              name: meshName
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            postProcess:
+              name: postProcess
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            rotate:
+              name: rotate
+              modifiers:
+              - public
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            scale:
+              name: scale
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            translate:
+              name: translate
+              modifiers:
+              - public
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+          constructors:
+          - modifiers:
+            - protected
+          methods:
+          - name: Load
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: parseVector3f
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: Vector3f
+                full: org.joml.Vector3f
+            return:
+              type:
+                basic: void
+                full: void

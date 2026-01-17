@@ -1,0 +1,57 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.erosion:
+        ErosionConfig.Debug:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            enabled:
+              name: enabled
+              modifiers:
+              - package
+              type:
+                basic: boolean
+                full: boolean
+            startday:
+              name: startday
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+            startmonth:
+              name: startmonth
+              modifiers:
+              - package
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getEnabled
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getStartDay
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getStartMonth
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int

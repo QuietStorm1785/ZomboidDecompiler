@@ -1,0 +1,325 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.entity:
+        GameEntityScript:
+          extends: zombie.scripting.objects.BaseScriptObject
+          modifiers:
+          - public
+          fields:
+            componentScripts:
+              name: componentScripts
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.entity.ComponentScript>
+            existsAsVanilla:
+              name: existsAsVanilla
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            fileAbsPath:
+              name: fileAbsPath
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            modID:
+              name: modID
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            name:
+              name: name
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            registry_id:
+              name: registry_id
+              modifiers:
+              - private
+              type:
+                basic: short
+                full: short
+          constructors:
+          - modifiers:
+            - public
+          - modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+          methods:
+          - name: InitLoadPP
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Load
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Load
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptParser.Block
+                full: zombie.scripting.ScriptParser$Block
+            return:
+              type:
+                basic: void
+                full: void
+          - name: LoadAttribute
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: LoadComponentBlock
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptParser.Block
+                full: zombie.scripting.ScriptParser$Block
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnLoadedAfterLua
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnPostWorldDictionaryInit
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: OnScriptsLoaded
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptLoadMode
+                full: zombie.scripting.ScriptLoadMode
+            return:
+              type:
+                basic: void
+                full: void
+          - name: PreReload
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: containsComponent
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: copyFrom
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: GameEntityScript
+                full: zombie.scripting.entity.GameEntityScript
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getComponentScript
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            return:
+              type:
+                basic: ComponentScript
+                full: zombie.scripting.entity.ComponentScript
+          - name: getComponentScriptFor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            return:
+              type:
+                basic: T
+                full: T
+          - name: getComponentScripts
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.entity.ComponentScript>
+          - name: getDisplayNameDebug
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getExistsAsVanilla
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getFileAbsPath
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFullName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getModID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getModuleName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getObsolete
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getOrCreateComponentScript
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: ComponentType
+                full: zombie.entity.ComponentType
+            return:
+              type:
+                basic: ComponentScript
+                full: zombie.scripting.entity.ComponentScript
+          - name: getRegistry_id
+            modifiers:
+            - public
+            return:
+              type:
+                basic: short
+                full: short
+          - name: hasComponents
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setModID
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRegistry_id
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: short
+                full: short
+            return:
+              type:
+                basic: void
+                full: void

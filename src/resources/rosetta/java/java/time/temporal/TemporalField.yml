@@ -1,0 +1,158 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.time.temporal:
+        TemporalField:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          notes: "A field of date-time, such as month-of-year or minute-of-hour.\n\
+            \ \n Date and time is expressed using fields which partition the time-line\
+            \ into something\n meaningful for humans. Implementations of this interface\
+            \ represent those fields.\n \n The most commonly used units are defined\
+            \ in ChronoField.\n Further fields are supplied in IsoFields, WeekFields\
+            \ and JulianFields.\n Fields can also be written by application code by\
+            \ implementing this interface.\n \n The field works using double dispatch.\
+            \ Client code calls methods on a date-time like\n LocalDateTime which\
+            \ check if the field is a ChronoField.\n If it is, then the date-time\
+            \ must handle it.\n Otherwise, the method call is re-dispatched to the\
+            \ matching method in this interface."
+          methods:
+          - name: adjustInto
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: R
+                full: R
+            - name: arg1
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: R
+                full: R
+          - name: getBaseUnit
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: TemporalUnit
+                full: java.time.temporal.TemporalUnit
+          - name: getDisplayName
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Locale
+                full: java.util.Locale
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getFrom
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TemporalAccessor
+                full: java.time.temporal.TemporalAccessor
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getRangeUnit
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: TemporalUnit
+                full: java.time.temporal.TemporalUnit
+          - name: isDateBased
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSupportedBy
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TemporalAccessor
+                full: java.time.temporal.TemporalAccessor
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTimeBased
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: range
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: ValueRange
+                full: java.time.temporal.ValueRange
+          - name: rangeRefinedBy
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: TemporalAccessor
+                full: java.time.temporal.TemporalAccessor
+            return:
+              type:
+                basic: ValueRange
+                full: java.time.temporal.ValueRange
+          - name: resolve
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Map
+                full: java.util.Map<java.time.temporal.TemporalField, java.lang.Long>
+            - name: arg1
+              type:
+                basic: TemporalAccessor
+                full: java.time.temporal.TemporalAccessor
+            - name: arg2
+              type:
+                basic: ResolverStyle
+                full: java.time.format.ResolverStyle
+            return:
+              type:
+                basic: TemporalAccessor
+                full: java.time.temporal.TemporalAccessor
+          - name: toString
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: String
+                full: java.lang.String

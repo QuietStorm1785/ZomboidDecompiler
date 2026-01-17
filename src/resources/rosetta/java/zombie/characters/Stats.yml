@@ -1,0 +1,1167 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters:
+        Stats:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            Anger:
+              name: Anger
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            Boredom:
+              name: Boredom
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            ChasingZombiesDanger:
+              name: ChasingZombiesDanger
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            Drunkenness:
+              name: Drunkenness
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            Fear:
+              name: Fear
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            Idleness:
+              name: Idleness
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            LastNumChasingZombies:
+              name: LastNumChasingZombies
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            LastNumVisibleZombies:
+              name: LastNumVisibleZombies
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            LastVeryCloseZombies:
+              name: LastVeryCloseZombies
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            MusicZombiesTargeting_DistantMoving:
+              name: MusicZombiesTargeting_DistantMoving
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            MusicZombiesTargeting_DistantNotMoving:
+              name: MusicZombiesTargeting_DistantNotMoving
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            MusicZombiesTargeting_NearbyMoving:
+              name: MusicZombiesTargeting_NearbyMoving
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            MusicZombiesTargeting_NearbyNotMoving:
+              name: MusicZombiesTargeting_NearbyNotMoving
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            MusicZombiesVisible:
+              name: MusicZombiesVisible
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            NumChasingZombies:
+              name: NumChasingZombies
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            NumVisibleZombies:
+              name: NumVisibleZombies
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            Pain:
+              name: Pain
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            Panic:
+              name: Panic
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            Sanity:
+              name: Sanity
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            Sickness:
+              name: Sickness
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            Tripping:
+              name: Tripping
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            TrippingRotAngle:
+              name: TrippingRotAngle
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            boredom:
+              name: boredom
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            endurance:
+              name: endurance
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            enduranceRecharging:
+              name: enduranceRecharging
+              modifiers:
+              - public
+              type:
+                basic: boolean
+                full: boolean
+            endurancedanger:
+              name: endurancedanger
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            endurancelast:
+              name: endurancelast
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            endurancewarn:
+              name: endurancewarn
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            fatigue:
+              name: fatigue
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            fitness:
+              name: fitness
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            hunger:
+              name: hunger
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            morale:
+              name: morale
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            stress:
+              name: stress
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            stressFromCigarettes:
+              name: stressFromCigarettes
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            thirst:
+              name: thirst
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+          staticFields:
+            NumCloseZombies:
+              name: NumCloseZombies
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            _Anger:
+              name: _Anger
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Boredom:
+              name: _Boredom
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Drunkennes:
+              name: _Drunkennes
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Endurance:
+              name: _Endurance
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Fatigue:
+              name: _Fatigue
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Fear:
+              name: _Fear
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Fitness:
+              name: _Fitness
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Hunger:
+              name: _Hunger
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _MaxStat:
+              name: _MaxStat
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Morale:
+              name: _Morale
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Pain:
+              name: _Pain
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Panic:
+              name: _Panic
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Sanity:
+              name: _Sanity
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Sickness:
+              name: _Sickness
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Stress:
+              name: _Stress
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _StressFromCigarettes:
+              name: _StressFromCigarettes
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+            _Thirst:
+              name: _Thirst
+              modifiers:
+              - public
+              - static
+              type:
+                basic: byte
+                full: byte
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getAnger
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the Anger
+          - name: getBasicStress
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getBoredom
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the boredom
+          - name: getDrunkenness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the Drunkenness
+          - name: getEndurance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the endurance
+          - name: getEnduranceRecharging
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: getEndurancedanger
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the endurancedanger
+          - name: getEndurancelast
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the endurancelast
+          - name: getEndurancewarn
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the endurancewarn
+          - name: getFatigue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the fatigue
+          - name: getFear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the Fear
+          - name: getFitness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the fitness
+          - name: getHunger
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the hunger
+          - name: getIdleness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMaxStressFromCigarettes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getMorale
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the morale
+          - name: getNumChasingZombies
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getNumVeryCloseZombies
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getNumVisibleZombies
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getPain
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the Pain
+          - name: getPanic
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the Panic
+          - name: getSanity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the Sanity
+          - name: getSickness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the Sickness
+          - name: getStress
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the stress
+          - name: getStressFromCigarettes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getThirst
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the thirst
+          - name: getTrippingRotAngle
+            modifiers:
+            - public
+            return:
+              type:
+                basic: float
+                full: float
+              notes: the TrippingRotAngle
+          - name: getVisibleZombies
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: the NumVisibleZombies
+          - name: isTripping
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: the Tripping
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: input
+              type:
+                basic: DataInputStream
+                full: java.io.DataInputStream
+            return:
+              type:
+                basic: void
+                full: void
+          - name: load
+            modifiers:
+            - public
+            parameters:
+            - name: input
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: WorldVersion
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeAnger
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeDrunkeness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeEndurance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeFatigue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeFear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeFitness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeHunger
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeIdleness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeMaxOneHundredValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: normalizeMaxOneValue
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: normalizeMorale
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizePain
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizePanic
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeSanity
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeSickness
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeStats
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeStress
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeStressFromCigarettes
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalizeThirst
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: normalize_boredom
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: parse
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: void
+                full: void
+          - name: resetStats
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: output
+              type:
+                basic: DataOutputStream
+                full: java.io.DataOutputStream
+            return:
+              type:
+                basic: void
+                full: void
+          - name: save
+            modifiers:
+            - public
+            parameters:
+            - name: output
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setAnger
+            modifiers:
+            - public
+            parameters:
+            - name: Anger
+              type:
+                basic: float
+                full: float
+              notes: the Anger to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setBoredom
+            modifiers:
+            - public
+            parameters:
+            - name: boredom
+              type:
+                basic: float
+                full: float
+              notes: the boredom to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDrunkenness
+            modifiers:
+            - public
+            parameters:
+            - name: Drunkenness
+              type:
+                basic: float
+                full: float
+              notes: the Drunkenness to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEndurance
+            modifiers:
+            - public
+            parameters:
+            - name: endurance
+              type:
+                basic: float
+                full: float
+              notes: the endurance to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEndurancedanger
+            modifiers:
+            - public
+            parameters:
+            - name: endurancedanger
+              type:
+                basic: float
+                full: float
+              notes: the endurancedanger to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEndurancelast
+            modifiers:
+            - public
+            parameters:
+            - name: endurancelast
+              type:
+                basic: float
+                full: float
+              notes: the endurancelast to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setEndurancewarn
+            modifiers:
+            - public
+            parameters:
+            - name: endurancewarn
+              type:
+                basic: float
+                full: float
+              notes: the endurancewarn to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFatigue
+            modifiers:
+            - public
+            parameters:
+            - name: fatigue
+              type:
+                basic: float
+                full: float
+              notes: the fatigue to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFear
+            modifiers:
+            - public
+            parameters:
+            - name: Fear
+              type:
+                basic: float
+                full: float
+              notes: the Fear to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFitness
+            modifiers:
+            - public
+            parameters:
+            - name: fitness
+              type:
+                basic: float
+                full: float
+              notes: the fitness to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setHunger
+            modifiers:
+            - public
+            parameters:
+            - name: hunger
+              type:
+                basic: float
+                full: float
+              notes: the hunger to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setIdleness
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setMorale
+            modifiers:
+            - public
+            parameters:
+            - name: morale
+              type:
+                basic: float
+                full: float
+              notes: the morale to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setNumVisibleZombies
+            modifiers:
+            - public
+            parameters:
+            - name: NumVisibleZombies
+              type:
+                basic: int
+                full: int
+              notes: the NumVisibleZombies to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPain
+            modifiers:
+            - public
+            parameters:
+            - name: Pain
+              type:
+                basic: float
+                full: float
+              notes: the Pain to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPanic
+            modifiers:
+            - public
+            parameters:
+            - name: Panic
+              type:
+                basic: float
+                full: float
+              notes: the Panic to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSanity
+            modifiers:
+            - public
+            parameters:
+            - name: Sanity
+              type:
+                basic: float
+                full: float
+              notes: the Sanity to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setSickness
+            modifiers:
+            - public
+            parameters:
+            - name: Sickness
+              type:
+                basic: float
+                full: float
+              notes: the Sickness to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStress
+            modifiers:
+            - public
+            parameters:
+            - name: stress
+              type:
+                basic: float
+                full: float
+              notes: the stress to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStressFromCigarettes
+            modifiers:
+            - public
+            parameters:
+            - name: stressFromCigarettes
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setThirst
+            modifiers:
+            - public
+            parameters:
+            - name: thirst
+              type:
+                basic: float
+                full: float
+              notes: the thirst to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTripping
+            modifiers:
+            - public
+            parameters:
+            - name: Tripping
+              type:
+                basic: boolean
+                full: boolean
+              notes: the Tripping to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTrippingRotAngle
+            modifiers:
+            - public
+            parameters:
+            - name: TrippingRotAngle
+              type:
+                basic: float
+                full: float
+              notes: the TrippingRotAngle to set
+            return:
+              type:
+                basic: void
+                full: void
+          - name: write
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            - name: arg1
+              type:
+                basic: byte
+                full: byte
+            return:
+              type:
+                basic: void
+                full: void

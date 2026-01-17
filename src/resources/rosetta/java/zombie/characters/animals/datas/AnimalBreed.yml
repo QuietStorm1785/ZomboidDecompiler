@@ -1,0 +1,277 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.characters.animals.datas:
+        AnimalBreed:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            featherItem:
+              name: featherItem
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            forcedGenes:
+              name: forcedGenes
+              modifiers:
+              - public
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.characters.animals.datas.AnimalBreed$ForcedGenes>
+            headItem:
+              name: headItem
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            invIconBaby:
+              name: invIconBaby
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            invIconBabyDead:
+              name: invIconBabyDead
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            invIconBabySkel:
+              name: invIconBabySkel
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            invIconFemale:
+              name: invIconFemale
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            invIconFemaleDead:
+              name: invIconFemaleDead
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            invIconFemaleSkel:
+              name: invIconFemaleSkel
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            invIconMale:
+              name: invIconMale
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            invIconMaleDead:
+              name: invIconMaleDead
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            invIconMaleSkel:
+              name: invIconMaleSkel
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            leather:
+              name: leather
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            maxFeather:
+              name: maxFeather
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            maxWeightBonus:
+              name: maxWeightBonus
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            milkType:
+              name: milkType
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            minWeightBonus:
+              name: minWeightBonus
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            name:
+              name: name
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            rottenTexture:
+              name: rottenTexture
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            sounds:
+              name: sounds
+              modifiers:
+              - private
+              type:
+                basic: HashMap
+                full: java.util.HashMap<java.lang.String, zombie.characters.animals.datas.AnimalBreed$Sound>
+            texture:
+              name: texture
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<java.lang.String>
+            textureBaby:
+              name: textureBaby
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            textureMale:
+              name: textureMale
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+            woolType:
+              name: woolType
+              modifiers:
+              - public
+              type:
+                basic: String
+                full: java.lang.String
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getFeatherItem
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getMilkType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getRottenTexture
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getSound
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: AnimalBreed.Sound
+                full: zombie.characters.animals.datas.AnimalBreed$Sound
+          - name: getWoolType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: isSoundDefined
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isSoundUndefined
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: loadForcedGenes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: KahluaTableImpl
+                full: se.krka.kahlua.j2se.KahluaTableImpl
+            return:
+              type:
+                basic: void
+                full: void
+          - name: loadSounds
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: KahluaTableImpl
+                full: se.krka.kahlua.j2se.KahluaTableImpl
+            return:
+              type:
+                basic: void
+                full: void

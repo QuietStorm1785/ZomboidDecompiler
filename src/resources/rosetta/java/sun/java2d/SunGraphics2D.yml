@@ -1,0 +1,2873 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      sun.java2d:
+        SunGraphics2D:
+          extends: java.awt.Graphics2D
+          modifiers:
+          - public
+          - final
+          fields:
+            alphafill:
+              name: alphafill
+              modifiers:
+              - public
+              type:
+                basic: MaskFill
+                full: sun.java2d.loops.MaskFill
+            antialiasHint:
+              name: antialiasHint
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            backgroundColor:
+              name: backgroundColor
+              modifiers:
+              - public
+              type:
+                basic: Color
+                full: java.awt.Color
+            cachedFRC:
+              name: cachedFRC
+              modifiers:
+              - private
+              type:
+                basic: FontRenderContext
+                full: java.awt.font.FontRenderContext
+            clipRegion:
+              name: clipRegion
+              modifiers:
+              - public
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+            clipState:
+              name: clipState
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            composite:
+              name: composite
+              modifiers:
+              - public
+              type:
+                basic: Composite
+                full: java.awt.Composite
+            compositeState:
+              name: compositeState
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            constrainClip:
+              name: constrainClip
+              modifiers:
+              - public
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+            constrainX:
+              name: constrainX
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            constrainY:
+              name: constrainY
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            devClip:
+              name: devClip
+              modifiers:
+              - protected
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+            drawpipe:
+              name: drawpipe
+              modifiers:
+              - public
+              type:
+                basic: PixelDrawPipe
+                full: sun.java2d.pipe.PixelDrawPipe
+            eargb:
+              name: eargb
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            fillpipe:
+              name: fillpipe
+              modifiers:
+              - public
+              type:
+                basic: PixelFillPipe
+                full: sun.java2d.pipe.PixelFillPipe
+            font:
+              name: font
+              modifiers:
+              - protected
+              type:
+                basic: Font
+                full: java.awt.Font
+            fontInfo:
+              name: fontInfo
+              modifiers:
+              - private
+              type:
+                basic: FontInfo
+                full: sun.java2d.loops.FontInfo
+            fontMetrics:
+              name: fontMetrics
+              modifiers:
+              - protected
+              type:
+                basic: FontMetrics
+                full: java.awt.FontMetrics
+            foregroundColor:
+              name: foregroundColor
+              modifiers:
+              - public
+              type:
+                basic: Color
+                full: java.awt.Color
+            fractionalMetricsHint:
+              name: fractionalMetricsHint
+              modifiers:
+              - protected
+              type:
+                basic: int
+                full: int
+            glyphVectorFRC:
+              name: glyphVectorFRC
+              modifiers:
+              - private
+              type:
+                basic: FontRenderContext
+                full: java.awt.font.FontRenderContext
+            glyphVectorFontInfo:
+              name: glyphVectorFontInfo
+              modifiers:
+              - private
+              type:
+                basic: FontInfo
+                full: sun.java2d.loops.FontInfo
+            hints:
+              name: hints
+              modifiers:
+              - public
+              type:
+                basic: RenderingHints
+                full: java.awt.RenderingHints
+            imageComp:
+              name: imageComp
+              modifiers:
+              - public
+              type:
+                basic: CompositeType
+                full: sun.java2d.loops.CompositeType
+            imagepipe:
+              name: imagepipe
+              modifiers:
+              - public
+              type:
+                basic: DrawImagePipe
+                full: sun.java2d.pipe.DrawImagePipe
+            interpolationHint:
+              name: interpolationHint
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            interpolationType:
+              name: interpolationType
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            lastCAblit:
+              name: lastCAblit
+              modifiers:
+              - package
+              type:
+                basic: Blit
+                full: sun.java2d.loops.Blit
+            lastCAcomp:
+              name: lastCAcomp
+              modifiers:
+              - package
+              type:
+                basic: Composite
+                full: java.awt.Composite
+            lcdTextContrast:
+              name: lcdTextContrast
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            loops:
+              name: loops
+              modifiers:
+              - public
+              type:
+                basic: RenderLoops
+                full: sun.java2d.loops.RenderLoops
+            paint:
+              name: paint
+              modifiers:
+              - public
+              type:
+                basic: Paint
+                full: java.awt.Paint
+            paintState:
+              name: paintState
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            pixel:
+              name: pixel
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            renderHint:
+              name: renderHint
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            resolutionVariantHint:
+              name: resolutionVariantHint
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            shapepipe:
+              name: shapepipe
+              modifiers:
+              - public
+              type:
+                basic: ShapeDrawPipe
+                full: sun.java2d.pipe.ShapeDrawPipe
+            stroke:
+              name: stroke
+              modifiers:
+              - public
+              type:
+                basic: Stroke
+                full: java.awt.Stroke
+            strokeHint:
+              name: strokeHint
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            strokeState:
+              name: strokeState
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            surfaceData:
+              name: surfaceData
+              modifiers:
+              - public
+              type:
+                basic: SurfaceData
+                full: sun.java2d.SurfaceData
+            textAntialiasHint:
+              name: textAntialiasHint
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            textpipe:
+              name: textpipe
+              modifiers:
+              - public
+              type:
+                basic: TextPipe
+                full: sun.java2d.pipe.TextPipe
+            transX:
+              name: transX
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            transY:
+              name: transY
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            transform:
+              name: transform
+              modifiers:
+              - public
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            transformState:
+              name: transformState
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+            usrClip:
+              name: usrClip
+              modifiers:
+              - public
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            validFontInfo:
+              name: validFontInfo
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+          staticFields:
+            $assertionsDisabled:
+              name: $assertionsDisabled
+              modifiers:
+              - package
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            CLIP_DEVICE:
+              name: CLIP_DEVICE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            CLIP_RECTANGULAR:
+              name: CLIP_RECTANGULAR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            CLIP_SHAPE:
+              name: CLIP_SHAPE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            COMP_ALPHA:
+              name: COMP_ALPHA
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            COMP_CUSTOM:
+              name: COMP_CUSTOM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            COMP_ISCOPY:
+              name: COMP_ISCOPY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            COMP_XOR:
+              name: COMP_XOR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            IDENT_ATX:
+              name: IDENT_ATX
+              modifiers:
+              - private
+              - static
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            IDENT_MATRIX:
+              name: IDENT_MATRIX
+              modifiers:
+              - private
+              - static
+              type:
+                basic: double
+                full: double[]
+            MINALLOCATED:
+              name: MINALLOCATED
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            MinPenSizeAA:
+              name: MinPenSizeAA
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            MinPenSizeAASquared:
+              name: MinPenSizeAASquared
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            MinPenSizeSquared:
+              name: MinPenSizeSquared
+              modifiers:
+              - public
+              - static
+              type:
+                basic: double
+                full: double
+            NON_RECTILINEAR_TRANSFORM_MASK:
+              name: NON_RECTILINEAR_TRANSFORM_MASK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: int
+                full: int
+            NON_UNIFORM_SCALE_MASK:
+              name: NON_UNIFORM_SCALE_MASK
+              modifiers:
+              - package
+              - static
+              type:
+                basic: int
+                full: int
+            PAINT_ALPHACOLOR:
+              name: PAINT_ALPHACOLOR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            PAINT_CUSTOM:
+              name: PAINT_CUSTOM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            PAINT_GRADIENT:
+              name: PAINT_GRADIENT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            PAINT_LIN_GRADIENT:
+              name: PAINT_LIN_GRADIENT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            PAINT_OPAQUECOLOR:
+              name: PAINT_OPAQUECOLOR
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            PAINT_RAD_GRADIENT:
+              name: PAINT_RAD_GRADIENT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            PAINT_TEXTURE:
+              name: PAINT_TEXTURE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            STROKE_CUSTOM:
+              name: STROKE_CUSTOM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            STROKE_THIN:
+              name: STROKE_THIN
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            STROKE_THINDASHED:
+              name: STROKE_THINDASHED
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            STROKE_WIDE:
+              name: STROKE_WIDE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            TEXTARRSIZE:
+              name: TEXTARRSIZE
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            TRANSFORM_ANY_TRANSLATE:
+              name: TRANSFORM_ANY_TRANSLATE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            TRANSFORM_GENERIC:
+              name: TRANSFORM_GENERIC
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            TRANSFORM_INT_TRANSLATE:
+              name: TRANSFORM_INT_TRANSLATE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            TRANSFORM_ISIDENT:
+              name: TRANSFORM_ISIDENT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            TRANSFORM_TRANSLATESCALE:
+              name: TRANSFORM_TRANSLATESCALE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            defaultComposite:
+              name: defaultComposite
+              modifiers:
+              - protected
+              - static
+              type:
+                basic: Composite
+                full: java.awt.Composite
+            defaultFont:
+              name: defaultFont
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Font
+                full: java.awt.Font
+            defaultStroke:
+              name: defaultStroke
+              modifiers:
+              - protected
+              - static
+              type:
+                basic: Stroke
+                full: java.awt.Stroke
+            invalidpipe:
+              name: invalidpipe
+              modifiers:
+              - protected
+              - static
+              type:
+                basic: ValidatePipe
+                full: sun.java2d.pipe.ValidatePipe
+            lcdTextContrastDefaultValue:
+              name: lcdTextContrastDefaultValue
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            slowTextTransformMask:
+              name: slowTextTransformMask
+              modifiers:
+              - private
+              - static
+              type:
+                basic: int
+                full: int
+            textAtArr:
+              name: textAtArr
+              modifiers:
+              - private
+              - static
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform[]
+            textTxArr:
+              name: textTxArr
+              modifiers:
+              - private
+              - static
+              type:
+                basic: double
+                full: double[][]
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: SurfaceData
+                full: sun.java2d.SurfaceData
+            - name: arg1
+              type:
+                basic: Color
+                full: java.awt.Color
+            - name: arg2
+              type:
+                basic: Color
+                full: java.awt.Color
+            - name: arg3
+              type:
+                basic: Font
+                full: java.awt.Font
+          methods:
+          - name: addRenderingHints
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Map
+                full: java.util.Map<?, ?>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: checkFontInfo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: FontInfo
+                full: sun.java2d.loops.FontInfo
+            - name: arg1
+              type:
+                basic: Font
+                full: java.awt.Font
+            - name: arg2
+              type:
+                basic: FontRenderContext
+                full: java.awt.font.FontRenderContext
+            return:
+              type:
+                basic: FontInfo
+                full: sun.java2d.loops.FontInfo
+          - name: clearRect
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clip
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clipRect
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clipTo
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+            - name: arg1
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: clone
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: cloneTransform
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+          - name: constrain
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+            return:
+              type:
+                basic: void
+                full: void
+          - name: constrain
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyArea
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: copyImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: int
+                full: int
+            - name: arg7
+              type:
+                basic: Color
+                full: java.awt.Color
+            - name: arg8
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: create
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Graphics
+                full: java.awt.Graphics
+          - name: dispose
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: doCopyArea
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: draw
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawArc
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawBytes
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: byte
+                full: byte[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawChars
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: char
+                full: char[]
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawGlyphVector
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: GlyphVector
+                full: java.awt.font.GlyphVector
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawHiDPIImage
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: int
+                full: int
+            - name: arg7
+              type:
+                basic: int
+                full: int
+            - name: arg8
+              type:
+                basic: int
+                full: int
+            - name: arg9
+              type:
+                basic: Color
+                full: java.awt.Color
+            - name: arg10
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            - name: arg11
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            return:
+              type:
+                basic: Boolean
+                full: java.lang.Boolean
+          - name: drawImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: drawImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: Color
+                full: java.awt.Color
+            - name: arg6
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: drawImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: drawImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: Color
+                full: java.awt.Color
+            - name: arg4
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: drawImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: int
+                full: int
+            - name: arg7
+              type:
+                basic: int
+                full: int
+            - name: arg8
+              type:
+                basic: int
+                full: int
+            - name: arg9
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: drawImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: int
+                full: int
+            - name: arg7
+              type:
+                basic: int
+                full: int
+            - name: arg8
+              type:
+                basic: int
+                full: int
+            - name: arg9
+              type:
+                basic: Color
+                full: java.awt.Color
+            - name: arg10
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: drawImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            - name: arg2
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: drawImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: BufferedImage
+                full: java.awt.image.BufferedImage
+            - name: arg1
+              type:
+                basic: BufferedImageOp
+                full: java.awt.image.BufferedImageOp
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawLine
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawOval
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawPolygon
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int[]
+            - name: arg1
+              type:
+                basic: int
+                full: int[]
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawPolyline
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int[]
+            - name: arg1
+              type:
+                basic: int
+                full: int[]
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawRect
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawRenderableImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: RenderableImage
+                full: java.awt.image.renderable.RenderableImage
+            - name: arg1
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawRenderedImage
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: RenderedImage
+                full: java.awt.image.RenderedImage
+            - name: arg1
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawRoundRect
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawString
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawString
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawString
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AttributedCharacterIterator
+                full: java.text.AttributedCharacterIterator
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawString
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AttributedCharacterIterator
+                full: java.text.AttributedCharacterIterator
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: void
+                full: void
+          - name: drawTranslatedRenderedImage
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: RenderedImage
+                full: java.awt.image.RenderedImage
+            - name: arg1
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: fill
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            return:
+              type:
+                basic: void
+                full: void
+          - name: fillArc
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: fillOval
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: fillPolygon
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int[]
+            - name: arg1
+              type:
+                basic: int
+                full: int[]
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: fillRect
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: fillRoundRect
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: finalize
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getBackground
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Color
+                full: java.awt.Color
+          - name: getClip
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Shape
+                full: java.awt.Shape
+          - name: getClipBounds
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+          - name: getClipBounds
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+            return:
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+          - name: getColor
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Color
+                full: java.awt.Color
+          - name: getCompClip
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+          - name: getComposite
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Composite
+                full: java.awt.Composite
+          - name: getDefaultTransform
+            modifiers:
+            - private
+            return:
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+          - name: getDestSurface
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Surface
+                full: sun.java2d.Surface
+          - name: getDestination
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getDeviceColorModel
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ColorModel
+                full: java.awt.image.ColorModel
+          - name: getDeviceConfiguration
+            modifiers:
+            - public
+            return:
+              type:
+                basic: GraphicsConfiguration
+                full: java.awt.GraphicsConfiguration
+          - name: getFont
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Font
+                full: java.awt.Font
+          - name: getFontInfo
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FontInfo
+                full: sun.java2d.loops.FontInfo
+          - name: getFontMetrics
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FontMetrics
+                full: java.awt.FontMetrics
+          - name: getFontMetrics
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Font
+                full: java.awt.Font
+            return:
+              type:
+                basic: FontMetrics
+                full: java.awt.FontMetrics
+          - name: getFontRenderContext
+            modifiers:
+            - public
+            return:
+              type:
+                basic: FontRenderContext
+                full: java.awt.font.FontRenderContext
+          - name: getGVFontInfo
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Font
+                full: java.awt.Font
+            - name: arg1
+              type:
+                basic: FontRenderContext
+                full: java.awt.font.FontRenderContext
+            return:
+              type:
+                basic: FontInfo
+                full: sun.java2d.loops.FontInfo
+          - name: getPaint
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Paint
+                full: java.awt.Paint
+          - name: getRenderingHint
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: RenderingHints.Key
+                full: java.awt.RenderingHints$Key
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: getRenderingHints
+            modifiers:
+            - public
+            return:
+              type:
+                basic: RenderingHints
+                full: java.awt.RenderingHints
+          - name: getResolutionVariant
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: MultiResolutionImage
+                full: java.awt.image.MultiResolutionImage
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: int
+                full: int
+            - name: arg7
+              type:
+                basic: int
+                full: int
+            - name: arg8
+              type:
+                basic: int
+                full: int
+            - name: arg9
+              type:
+                basic: int
+                full: int
+            - name: arg10
+              type:
+                basic: int
+                full: int
+            - name: arg11
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            return:
+              type:
+                basic: Image
+                full: java.awt.Image
+          - name: getStroke
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Stroke
+                full: java.awt.Stroke
+          - name: getSurfaceData
+            modifiers:
+            - public
+            return:
+              type:
+                basic: SurfaceData
+                full: sun.java2d.SurfaceData
+          - name: getTransform
+            modifiers:
+            - public
+            return:
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+          - name: hit
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+            - name: arg1
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hitClip
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: intersectByArea
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            - name: arg1
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: Shape
+                full: java.awt.Shape
+          - name: intersectRectShape
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Rectangle2D
+                full: java.awt.geom.Rectangle2D
+            - name: arg1
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: Shape
+                full: java.awt.Shape
+          - name: intersectShapes
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            - name: arg1
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg3
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: Shape
+                full: java.awt.Shape
+          - name: invalidatePipe
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: invalidateTransform
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: makeHints
+            modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: Map
+                full: java.util.Map<?, ?>
+            return:
+              type:
+                basic: RenderingHints
+                full: java.awt.RenderingHints
+          - name: revalidateAll
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: rotate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: rotate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            - name: arg2
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: scale
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: scaleImage
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            - name: arg6
+              type:
+                basic: int
+                full: int
+            - name: arg7
+              type:
+                basic: int
+                full: int
+            - name: arg8
+              type:
+                basic: int
+                full: int
+            - name: arg9
+              type:
+                basic: Color
+                full: java.awt.Color
+            - name: arg10
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setBackground
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Color
+                full: java.awt.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setClip
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setClip
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setColor
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Color
+                full: java.awt.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setComposite
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Composite
+                full: java.awt.Composite
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDevClip
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            - name: arg3
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setDevClip
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setFont
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Font
+                full: java.awt.Font
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPaint
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Paint
+                full: java.awt.Paint
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setPaintMode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRenderingHint
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: RenderingHints.Key
+                full: java.awt.RenderingHints$Key
+            - name: arg1
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setRenderingHints
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Map
+                full: java.util.Map<?, ?>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setStroke
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Stroke
+                full: java.awt.Stroke
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setTransform
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setXORMode
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Color
+                full: java.awt.Color
+            return:
+              type:
+                basic: void
+                full: void
+          - name: shear
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transform
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            return:
+              type:
+                basic: void
+                full: void
+          - name: transformBounds
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+            - name: arg1
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            return:
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+          - name: transformImage
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: Image
+                full: java.awt.Image
+            - name: arg1
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            - name: arg2
+              type:
+                basic: ImageObserver
+                full: java.awt.image.ImageObserver
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: transformShape
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            return:
+              type:
+                basic: Shape
+                full: java.awt.Shape
+          - name: translate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double
+            - name: arg1
+              type:
+                basic: double
+                full: double
+            return:
+              type:
+                basic: void
+                full: void
+          - name: translate
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: untransformShape
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            return:
+              type:
+                basic: Shape
+                full: java.awt.Shape
+          - name: validateBasicStroke
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: BasicStroke
+                full: java.awt.BasicStroke
+            return:
+              type:
+                basic: void
+                full: void
+          - name: validateColor
+            modifiers:
+            - package
+            return:
+              type:
+                basic: void
+                full: void
+          - name: validateCompClip
+            modifiers:
+            - protected
+            return:
+              type:
+                basic: void
+                full: void
+          - name: validatePipe
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: cloneShape
+            modifiers:
+            - protected
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            return:
+              type:
+                basic: Shape
+                full: java.awt.Shape
+          - name: fixRectangleOrientation
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double[]
+            - name: arg1
+              type:
+                basic: Rectangle2D
+                full: java.awt.geom.Rectangle2D
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getImageRegion
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: RenderedImage
+                full: java.awt.image.RenderedImage
+            - name: arg1
+              type:
+                basic: Region
+                full: sun.java2d.pipe.Region
+            - name: arg2
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            - name: arg3
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            - name: arg4
+              type:
+                basic: int
+                full: int
+            - name: arg5
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: Rectangle
+                full: java.awt.Rectangle
+          - name: getTileIndex
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: int
+                full: int
+          - name: isIntegerTranslation
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isRotated
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: double
+                full: double[]
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: transformShape
+            modifiers:
+            - protected
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: int
+                full: int
+            - name: arg2
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            return:
+              type:
+                basic: Shape
+                full: java.awt.Shape
+          - name: transformShape
+            modifiers:
+            - protected
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: AffineTransform
+                full: java.awt.geom.AffineTransform
+            - name: arg1
+              type:
+                basic: Shape
+                full: java.awt.Shape
+            return:
+              type:
+                basic: Shape
+                full: java.awt.Shape

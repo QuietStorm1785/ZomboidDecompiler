@@ -1,0 +1,84 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        Helicopter.State:
+          extends: java.lang.Enum<zombie.iso.Helicopter$State>
+          modifiers:
+          - package
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Helicopter.State
+                full: zombie.iso.Helicopter$State[]
+            Arriving:
+              name: Arriving
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Helicopter.State
+                full: zombie.iso.Helicopter$State
+            Hovering:
+              name: Hovering
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Helicopter.State
+                full: zombie.iso.Helicopter$State
+            Leaving:
+              name: Leaving
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Helicopter.State
+                full: zombie.iso.Helicopter$State
+            Searching:
+              name: Searching
+              modifiers:
+              - public
+              - static
+              type:
+                basic: Helicopter.State
+                full: zombie.iso.Helicopter$State
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: Helicopter.State
+                full: zombie.iso.Helicopter$State[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: Helicopter.State
+                full: zombie.iso.Helicopter$State
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: Helicopter.State
+                full: zombie.iso.Helicopter$State[]

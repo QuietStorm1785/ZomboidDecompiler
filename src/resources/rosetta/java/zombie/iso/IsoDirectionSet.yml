@@ -1,0 +1,46 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso:
+        IsoDirectionSet:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            set:
+              name: set
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: getNext
+            modifiers:
+            - public
+            return:
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+          staticMethods:
+          - name: rotate
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: dir
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections
+            - name: amount
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: IsoDirections
+                full: zombie.iso.IsoDirections

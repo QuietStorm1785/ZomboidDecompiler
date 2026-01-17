@@ -1,0 +1,131 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie:
+        SandboxOptions.ZombieConfig:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            FollowSoundDistance:
+              name: FollowSoundDistance
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.IntegerSandboxOption
+                full: zombie.SandboxOptions$IntegerSandboxOption
+            PopulationMultiplier:
+              name: PopulationMultiplier
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            PopulationPeakDay:
+              name: PopulationPeakDay
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.IntegerSandboxOption
+                full: zombie.SandboxOptions$IntegerSandboxOption
+            PopulationPeakMultiplier:
+              name: PopulationPeakMultiplier
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            PopulationStartMultiplier:
+              name: PopulationStartMultiplier
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            RallyGroupRadius:
+              name: RallyGroupRadius
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.IntegerSandboxOption
+                full: zombie.SandboxOptions$IntegerSandboxOption
+            RallyGroupSeparation:
+              name: RallyGroupSeparation
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.IntegerSandboxOption
+                full: zombie.SandboxOptions$IntegerSandboxOption
+            RallyGroupSize:
+              name: RallyGroupSize
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.IntegerSandboxOption
+                full: zombie.SandboxOptions$IntegerSandboxOption
+            RallyGroupSizeVariance:
+              name: RallyGroupSizeVariance
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.IntegerSandboxOption
+                full: zombie.SandboxOptions$IntegerSandboxOption
+            RallyTravelDistance:
+              name: RallyTravelDistance
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.IntegerSandboxOption
+                full: zombie.SandboxOptions$IntegerSandboxOption
+            RedistributeHours:
+              name: RedistributeHours
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            RespawnHours:
+              name: RespawnHours
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            RespawnMultiplier:
+              name: RespawnMultiplier
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            RespawnUnseenHours:
+              name: RespawnUnseenHours
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.DoubleSandboxOption
+                full: zombie.SandboxOptions$DoubleSandboxOption
+            ZombiesCountBeforeDeletion:
+              name: ZombiesCountBeforeDeletion
+              modifiers:
+              - public
+              type:
+                basic: SandboxOptions.IntegerSandboxOption
+                full: zombie.SandboxOptions$IntegerSandboxOption
+            this$0:
+              name: this$0
+              modifiers:
+              - package
+              type:
+                basic: SandboxOptions
+                full: zombie.SandboxOptions
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: SandboxOptions
+                full: zombie.SandboxOptions

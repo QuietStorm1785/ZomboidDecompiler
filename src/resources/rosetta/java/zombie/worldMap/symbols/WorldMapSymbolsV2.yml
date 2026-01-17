@@ -1,0 +1,445 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.worldMap.symbols:
+        WorldMapSymbolsV2:
+          extends: zombie.worldMap.symbols.WorldMapSymbolsAPI
+          modifiers:
+          - public
+          - final
+          fields:
+            m_listener:
+              name: m_listener
+              modifiers:
+              - private
+              type:
+                basic: WorldMapSymbolsV2.Listener
+                full: zombie.worldMap.symbols.WorldMapSymbolsV2$Listener
+            m_symbols:
+              name: m_symbols
+              modifiers:
+              - private
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapBaseSymbolV2>
+            m_ui:
+              name: m_ui
+              modifiers:
+              - private
+              type:
+                basic: UIWorldMap
+                full: zombie.worldMap.UIWorldMap
+            m_uiSymbols:
+              name: m_uiSymbols
+              modifiers:
+              - private
+              type:
+                basic: WorldMapSymbols
+                full: zombie.worldMap.symbols.WorldMapSymbols
+          staticFields:
+            TL_textLayout:
+              name: TL_textLayout
+              modifiers:
+              - package
+              - static
+              type:
+                basic: ThreadLocal
+                full: java.lang.ThreadLocal<zombie.worldMap.symbols.TextLayout>
+            s_textPool:
+              name: s_textPool
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Pool
+                full: zombie.util.Pool<zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapTextSymbolV2>
+            s_texturePool:
+              name: s_texturePool
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Pool
+                full: zombie.util.Pool<zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapTextureSymbolV2>
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: UIWorldMap
+                full: zombie.worldMap.UIWorldMap
+            - name: arg1
+              type:
+                basic: WorldMapSymbols
+                full: zombie.worldMap.symbols.WorldMapSymbols
+          methods:
+          - name: addTexture
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: WorldMapSymbolsV2.WorldMapTextureSymbolV2
+                full: zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapTextureSymbolV2
+          - name: addTranslatedText
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: WorldMapSymbolsV2.WorldMapTextSymbolV2
+                full: zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapTextSymbolV2
+          - name: addTranslatedText
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: WorldMapSymbolsV2.WorldMapTextSymbolV2
+                full: zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapTextSymbolV2
+          - name: addUntranslatedText
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: UIFont
+                full: zombie.ui.UIFont
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: WorldMapSymbolsV2.WorldMapTextSymbolV2
+                full: zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapTextSymbolV2
+          - name: addUntranslatedText
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg2
+              type:
+                basic: float
+                full: float
+            - name: arg3
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: WorldMapSymbolsV2.WorldMapTextSymbolV2
+                full: zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapTextSymbolV2
+          - name: checkLayout
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clear
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: clearUserAnnotations
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getDefaultLayerID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDefaultTextLayerID
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: getDisplayScale
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: float
+                full: float
+          - name: getSymbolByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: WorldMapSymbolsV2.WorldMapBaseSymbolV2
+                full: zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapBaseSymbolV2
+          - name: getSymbolCount
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getTextLayoutHeight
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getTextLayoutWidth
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: int
+                full: int
+          - name: hitTest
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: int
+                full: int
+          - name: initDefaultAnnotations
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: isUserEditing
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: reinit
+            modifiers:
+            - private
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reinitDefaultAnnotations
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeSymbol
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WorldMapSymbolsV2.WorldMapBaseSymbolV2
+                full: zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapBaseSymbolV2
+            return:
+              type:
+                basic: void
+                full: void
+          - name: removeSymbolByIndex
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendModifySymbol
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WorldMapSymbolsV2.WorldMapBaseSymbolV2
+                full: zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapBaseSymbolV2
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendRemoveSymbol
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WorldMapSymbolsV2.WorldMapBaseSymbolV2
+                full: zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapBaseSymbolV2
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendSetPrivateSymbol
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WorldMapSymbolsV2.WorldMapBaseSymbolV2
+                full: zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapBaseSymbolV2
+            return:
+              type:
+                basic: void
+                full: void
+          - name: sendShareSymbol
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: WorldMapSymbolsV2.WorldMapBaseSymbolV2
+                full: zombie.worldMap.symbols.WorldMapSymbolsV2$WorldMapBaseSymbolV2
+            - name: arg1
+              type:
+                basic: WorldMapSymbolNetworkInfo
+                full: zombie.worldMap.network.WorldMapSymbolNetworkInfo
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUserEditing
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: setExposed
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: LuaManager.Exposer
+                full: zombie.Lua.LuaManager$Exposer
+            return:
+              type:
+                basic: void
+                full: void

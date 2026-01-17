@@ -1,0 +1,92 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.ui:
+        ScreenFader.Stage:
+          extends: java.lang.Enum<zombie.ui.ScreenFader$Stage>
+          modifiers:
+          - package
+          - final
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ScreenFader.Stage
+                full: zombie.ui.ScreenFader$Stage[]
+            Hold:
+              name: Hold
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScreenFader.Stage
+                full: zombie.ui.ScreenFader$Stage
+            StartFadeFromBlack:
+              name: StartFadeFromBlack
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScreenFader.Stage
+                full: zombie.ui.ScreenFader$Stage
+            StartFadeToBlack:
+              name: StartFadeToBlack
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScreenFader.Stage
+                full: zombie.ui.ScreenFader$Stage
+            UpdateFadeFromBlack:
+              name: UpdateFadeFromBlack
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScreenFader.Stage
+                full: zombie.ui.ScreenFader$Stage
+            UpdateFadeToBlack:
+              name: UpdateFadeToBlack
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScreenFader.Stage
+                full: zombie.ui.ScreenFader$Stage
+          constructors:
+          - modifiers:
+            - private
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ScreenFader.Stage
+                full: zombie.ui.ScreenFader$Stage[]
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ScreenFader.Stage
+                full: zombie.ui.ScreenFader$Stage
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ScreenFader.Stage
+                full: zombie.ui.ScreenFader$Stage[]

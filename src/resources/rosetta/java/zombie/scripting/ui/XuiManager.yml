@@ -1,0 +1,336 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting.ui:
+        XuiManager:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          staticFields:
+            DEFAULT_SKIN_NAME:
+              name: DEFAULT_SKIN_NAME
+              modifiers:
+              - private
+              - static
+              type:
+                basic: String
+                full: java.lang.String
+            XuiScriptTypes:
+              name: XuiScriptTypes
+              modifiers:
+              - public
+              - static
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.scripting.ScriptType>
+            combinedList:
+              name: combinedList
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ui.XuiScript>
+            defaultStylesScriptsMap:
+              name: defaultStylesScriptsMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.scripting.objects.XuiLayoutScript>
+            hasParsedOnce:
+              name: hasParsedOnce
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            layoutScriptsMap:
+              name: layoutScriptsMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.scripting.objects.XuiLayoutScript>
+            parseOnce:
+              name: parseOnce
+              modifiers:
+              - private
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            stylesScriptsMap:
+              name: stylesScriptsMap
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.scripting.objects.XuiLayoutScript>
+            xuiDefaultSkin:
+              name: xuiDefaultSkin
+              modifiers:
+              - private
+              - static
+              type:
+                basic: XuiSkin
+                full: zombie.scripting.ui.XuiSkin
+            xuiDefaultStyles:
+              name: xuiDefaultStyles
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.scripting.ui.XuiScript>
+            xuiDefaultStylesList:
+              name: xuiDefaultStylesList
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ui.XuiScript>
+            xuiLayouts:
+              name: xuiLayouts
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.scripting.ui.XuiScript>
+            xuiLayoutsList:
+              name: xuiLayoutsList
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ui.XuiScript>
+            xuiSkins:
+              name: xuiSkins
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.scripting.ui.XuiSkin>
+            xuiStyles:
+              name: xuiStyles
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, zombie.scripting.ui.XuiScript>
+            xuiStylesList:
+              name: xuiStylesList
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ui.XuiScript>
+          constructors:
+          - modifiers:
+            - public
+          staticMethods:
+          - name: GetAllDefaultStyles
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ui.XuiScript>
+          - name: GetAllLayouts
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ui.XuiScript>
+          - name: GetAllStyles
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ui.XuiScript>
+          - name: GetCombinedScripts
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ui.XuiScript>
+          - name: GetDefaultSkin
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: XuiSkin
+                full: zombie.scripting.ui.XuiSkin
+          - name: GetDefaultStyle
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+          - name: GetDefaultStyleScript
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: XuiLayoutScript
+                full: zombie.scripting.objects.XuiLayoutScript
+          - name: GetLayout
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+          - name: GetLayoutScript
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: XuiLayoutScript
+                full: zombie.scripting.objects.XuiLayoutScript
+          - name: GetSkin
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: XuiSkin
+                full: zombie.scripting.ui.XuiSkin
+          - name: GetStyle
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: XuiScript
+                full: zombie.scripting.ui.XuiScript
+          - name: GetStyleScript
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: XuiLayoutScript
+                full: zombie.scripting.objects.XuiLayoutScript
+          - name: ParseScripts
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getDefaultSkinName
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: parseLayout
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: XuiLayoutScript
+                full: zombie.scripting.objects.XuiLayoutScript
+            return:
+              type:
+                basic: void
+                full: void
+          - name: registerLayout
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: XuiLayoutScript
+                full: zombie.scripting.objects.XuiLayoutScript
+            return:
+              type:
+                basic: void
+                full: void
+          - name: reset
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setParseOnce
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void

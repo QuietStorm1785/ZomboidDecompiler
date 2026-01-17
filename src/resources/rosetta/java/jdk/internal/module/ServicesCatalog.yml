@@ -1,0 +1,143 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      jdk.internal.module:
+        ServicesCatalog:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            map:
+              name: map
+              modifiers:
+              - private
+              type:
+                basic: Map
+                full: java.util.Map<java.lang.String, java.util.List<jdk.internal.module.ServicesCatalog$ServiceProvider>>
+          staticFields:
+            CLV:
+              name: CLV
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ClassLoaderValue
+                full: jdk.internal.loader.ClassLoaderValue<jdk.internal.module.ServicesCatalog>
+          constructors:
+          - modifiers:
+            - private
+          methods:
+          - name: addProvider
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Module
+                full: java.lang.Module
+            - name: arg1
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            - name: arg2
+              type:
+                basic: Class
+                full: java.lang.Class<?>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: addProviders
+            modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            - name: arg1
+              type:
+                basic: ServicesCatalog.ServiceProvider
+                full: jdk.internal.module.ServicesCatalog$ServiceProvider[]
+            return:
+              type:
+                basic: void
+                full: void
+          - name: findServices
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: List
+                full: java.util.List<jdk.internal.module.ServicesCatalog$ServiceProvider>
+          - name: register
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Module
+                full: java.lang.Module
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: create
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ServicesCatalog
+                full: jdk.internal.module.ServicesCatalog
+          - name: getServicesCatalog
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ClassLoader
+                full: java.lang.ClassLoader
+            return:
+              type:
+                basic: ServicesCatalog
+                full: jdk.internal.module.ServicesCatalog
+          - name: getServicesCatalogOrNull
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ClassLoader
+                full: java.lang.ClassLoader
+            return:
+              type:
+                basic: ServicesCatalog
+                full: jdk.internal.module.ServicesCatalog
+          - name: putServicesCatalog
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ClassLoader
+                full: java.lang.ClassLoader
+            - name: arg1
+              type:
+                basic: ServicesCatalog
+                full: jdk.internal.module.ServicesCatalog
+            return:
+              type:
+                basic: void
+                full: void

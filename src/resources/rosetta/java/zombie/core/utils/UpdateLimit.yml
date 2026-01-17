@@ -1,0 +1,137 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.utils:
+        UpdateLimit:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            delay:
+              name: delay
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            last:
+              name: last
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+            lastPeriod:
+              name: lastPeriod
+              modifiers:
+              - private
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: ms
+              type:
+                basic: long
+                full: long
+          - modifiers:
+            - public
+            parameters:
+            - name: ms
+              type:
+                basic: long
+                full: long
+            - name: shift
+              type:
+                basic: long
+                full: long
+          methods:
+          - name: BlockCheck
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Check
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: Reset
+            modifiers:
+            - public
+            parameters:
+            - name: ms
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: Reset
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getDelay
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getLast
+            modifiers:
+            - public
+            return:
+              type:
+                basic: long
+                full: long
+          - name: getTimePeriod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: double
+                full: double
+          - name: setSmoothUpdatePeriod
+            modifiers:
+            - public
+            parameters:
+            - name: ms
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: setUpdatePeriod
+            modifiers:
+            - public
+            parameters:
+            - name: ms
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: void
+                full: void
+          - name: updateTimePeriod
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void

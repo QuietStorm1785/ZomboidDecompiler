@@ -1,0 +1,779 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      org.joml:
+        Vector2fc:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          methods:
+          - name: absolute
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: add
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: add
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: angle
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            return:
+              type:
+                basic: float
+                full: float
+          - name: ceil
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: distance
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            return:
+              type:
+                basic: float
+                full: float
+          - name: distance
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: distanceSquared
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            return:
+              type:
+                basic: float
+                full: float
+          - name: distanceSquared
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: float
+                full: float
+          - name: div
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: div
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: div
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: dot
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            return:
+              type:
+                basic: float
+                full: float
+          - name: equals
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: equals
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: floor
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: fma
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            - name: arg1
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            - name: arg2
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: fma
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            - name: arg2
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+            return:
+              type:
+                basic: ByteBuffer
+                full: java.nio.ByteBuffer
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+            return:
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+            return:
+              type:
+                basic: FloatBuffer
+                full: java.nio.FloatBuffer
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            return:
+              type:
+                basic: float
+                full: float
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: int
+                full: int
+            - name: arg1
+              type:
+                basic: Vector2i
+                full: org.joml.Vector2i
+            return:
+              type:
+                basic: Vector2i
+                full: org.joml.Vector2i
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: get
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2d
+                full: org.joml.Vector2d
+            return:
+              type:
+                basic: Vector2d
+                full: org.joml.Vector2d
+          - name: getToAddress
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: long
+                full: long
+            return:
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+          - name: isFinite
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: length
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: lengthSquared
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: lerp
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: max
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: maxComponent
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: min
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: minComponent
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: int
+                full: int
+          - name: mul
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: mul
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: mul
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: mul
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix2fc
+                full: org.joml.Matrix2fc
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: mul
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix2dc
+                full: org.joml.Matrix2dc
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: mulDirection
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix3x2fc
+                full: org.joml.Matrix3x2fc
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: mulPosition
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix3x2fc
+                full: org.joml.Matrix3x2fc
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: mulTranspose
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Matrix2fc
+                full: org.joml.Matrix2fc
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: negate
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: normalize
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: normalize
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: round
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: sub
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: Vector2fc
+                full: org.joml.Vector2fc
+            - name: arg1
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: sub
+            modifiers:
+            - public
+            - abstract
+            parameters:
+            - name: arg0
+              type:
+                basic: float
+                full: float
+            - name: arg1
+              type:
+                basic: float
+                full: float
+            - name: arg2
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+            return:
+              type:
+                basic: Vector2f
+                full: org.joml.Vector2f
+          - name: x
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float
+          - name: y
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: float
+                full: float

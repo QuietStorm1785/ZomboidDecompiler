@@ -1,0 +1,80 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      se.krka.kahlua.vm:
+        UpValue:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            coroutine:
+              name: coroutine
+              modifiers:
+              - private
+              type:
+                basic: Coroutine
+                full: se.krka.kahlua.vm.Coroutine
+            index:
+              name: index
+              modifiers:
+              - private
+              type:
+                basic: int
+                full: int
+            value:
+              name: value
+              modifiers:
+              - private
+              type:
+                basic: Object
+                full: java.lang.Object
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Coroutine
+                full: se.krka.kahlua.vm.Coroutine
+            - name: arg1
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: close
+            modifiers:
+            - public
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getIndex
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+          - name: getValue
+            modifiers:
+            - public
+            - final
+            return:
+              type:
+                basic: Object
+                full: java.lang.Object
+          - name: setValue
+            modifiers:
+            - public
+            - final
+            parameters:
+            - name: arg0
+              type:
+                basic: Object
+                full: java.lang.Object
+            return:
+              type:
+                basic: void
+                full: void

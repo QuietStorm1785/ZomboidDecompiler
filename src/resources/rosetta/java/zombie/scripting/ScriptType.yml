@@ -1,0 +1,498 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.scripting:
+        ScriptType:
+          extends: java.lang.Enum<zombie.scripting.ScriptType>
+          modifiers:
+          - public
+          - final
+          fields:
+            flags:
+              name: flags
+              modifiers:
+              - private
+              type:
+                basic: Set
+                full: java.util.Set<zombie.scripting.ScriptType$Flags>
+            isCritical:
+              name: isCritical
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            isTemplate:
+              name: isTemplate
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+            scriptTag:
+              name: scriptTag
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+            verbose:
+              name: verbose
+              modifiers:
+              - private
+              type:
+                basic: boolean
+                full: boolean
+          staticFields:
+            $VALUES:
+              name: $VALUES
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType[]
+            AnimationMesh:
+              name: AnimationMesh
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            Clock:
+              name: Clock
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            CraftRecipe:
+              name: CraftRecipe
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            EnergyDefinition:
+              name: EnergyDefinition
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            Entity:
+              name: Entity
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            EntityComponent:
+              name: EntityComponent
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            EntityTemplate:
+              name: EntityTemplate
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            EvolvedRecipe:
+              name: EvolvedRecipe
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            Fixing:
+              name: Fixing
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            FluidDefinition:
+              name: FluidDefinition
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            FluidFilter:
+              name: FluidFilter
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            Item:
+              name: Item
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            ItemConfig:
+              name: ItemConfig
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            ItemFilter:
+              name: ItemFilter
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            Mannequin:
+              name: Mannequin
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            Model:
+              name: Model
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            PhysicsHitReaction:
+              name: PhysicsHitReaction
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            PhysicsShape:
+              name: PhysicsShape
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            Ragdoll:
+              name: Ragdoll
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            Recipe:
+              name: Recipe
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            RuntimeAnimation:
+              name: RuntimeAnimation
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            Sound:
+              name: Sound
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            SoundTimeline:
+              name: SoundTimeline
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            SpriteModel:
+              name: SpriteModel
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            StringList:
+              name: StringList
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            TimedAction:
+              name: TimedAction
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            UniqueRecipe:
+              name: UniqueRecipe
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            Vehicle:
+              name: Vehicle
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            VehicleEngineRPM:
+              name: VehicleEngineRPM
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            VehicleTemplate:
+              name: VehicleTemplate
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            XuiColor:
+              name: XuiColor
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            XuiConfig:
+              name: XuiConfig
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            XuiDefaultStyle:
+              name: XuiDefaultStyle
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            XuiLayout:
+              name: XuiLayout
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            XuiSkin:
+              name: XuiSkin
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            XuiStyle:
+              name: XuiStyle
+              modifiers:
+              - public
+              - static
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            sortedList:
+              name: sortedList
+              modifiers:
+              - private
+              - static
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ScriptType>
+            typeComparator:
+              name: typeComparator
+              modifiers:
+              - private
+              - static
+              type:
+                basic: Comparator
+                full: java.util.Comparator<zombie.scripting.ScriptType>
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            - name: arg1
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: getScriptTag
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: hasFlag
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptType.Flags
+                full: zombie.scripting.ScriptType$Flags
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: hasFlags
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: EnumSet
+                full: java.util.EnumSet<zombie.scripting.ScriptType$Flags>
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isCritical
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isTemplate
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: isVerbose
+            modifiers:
+            - public
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: setVerbose
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void
+          staticMethods:
+          - name: $values
+            modifiers:
+            - private
+            - static
+            return:
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType[]
+          - name: GetEnumListLua
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.scripting.ScriptType>
+          - name: lambda$static$0
+            modifiers:
+            - private
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            - name: arg1
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+            return:
+              type:
+                basic: int
+                full: int
+          - name: valueOf
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType
+          - name: values
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: ScriptType
+                full: zombie.scripting.ScriptType[]

@@ -1,0 +1,68 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      org.lwjgl.system:
+        Pointer:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - abstract
+          staticFields:
+            BITS32:
+              name: BITS32
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            BITS64:
+              name: BITS64
+              modifiers:
+              - public
+              - static
+              type:
+                basic: boolean
+                full: boolean
+            CLONG_SHIFT:
+              name: CLONG_SHIFT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            CLONG_SIZE:
+              name: CLONG_SIZE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            POINTER_SHIFT:
+              name: POINTER_SHIFT
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+            POINTER_SIZE:
+              name: POINTER_SIZE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: int
+                full: int
+          methods:
+          - name: address
+            modifiers:
+            - public
+            - abstract
+            return:
+              type:
+                basic: long
+                full: long

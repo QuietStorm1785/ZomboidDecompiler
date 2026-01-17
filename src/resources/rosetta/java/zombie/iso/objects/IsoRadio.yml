@@ -1,0 +1,52 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.iso.objects:
+        IsoRadio:
+          extends: zombie.iso.objects.IsoWaveSignal
+          modifiers:
+          - public
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+          - modifiers:
+            - public
+            parameters:
+            - name: cell
+              type:
+                basic: IsoCell
+                full: zombie.iso.IsoCell
+            - name: sq
+              type:
+                basic: IsoGridSquare
+                full: zombie.iso.IsoGridSquare
+            - name: spr
+              type:
+                basic: IsoSprite
+                full: zombie.iso.sprite.IsoSprite
+          methods:
+          - name: getObjectName
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          - name: init
+            modifiers:
+            - protected
+            parameters:
+            - name: arg0
+              type:
+                basic: boolean
+                full: boolean
+            return:
+              type:
+                basic: void
+                full: void

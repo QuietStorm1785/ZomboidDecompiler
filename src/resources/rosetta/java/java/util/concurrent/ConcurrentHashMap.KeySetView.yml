@@ -1,0 +1,192 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.util.concurrent:
+        ConcurrentHashMap.KeySetView:
+          extends: java.util.concurrent.ConcurrentHashMap$CollectionView<K, V, K>
+          modifiers:
+          - public
+          notes: "A view of a ConcurrentHashMap as a Set of keys, in\n which additions\
+            \ may optionally be enabled by mapping to a\n common value.  This class\
+            \ cannot be directly instantiated.\n See keySet(),\n keySet(V),\n newKeySet(),\n\
+            \ newKeySet(int)."
+          fields:
+            value:
+              name: value
+              modifiers:
+              - private
+              type:
+                basic: V
+                full: V
+          staticFields:
+            serialVersionUID:
+              name: serialVersionUID
+              modifiers:
+              - private
+              - static
+              type:
+                basic: long
+                full: long
+          constructors:
+          - modifiers:
+            - package
+            parameters:
+            - name: arg0
+              type:
+                basic: ConcurrentHashMap
+                full: java.util.concurrent.ConcurrentHashMap<K, V>
+            - name: arg1
+              type:
+                basic: V
+                full: V
+          methods:
+          - name: add
+            modifiers:
+            - public
+            parameters:
+            - name: e
+              type:
+                basic: K
+                full: K
+              notes: key to be added
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: true if this set changed as a result of the call
+            notes: "Adds the specified key to this set view by mapping the key to\n\
+              \ the default mapped value in the backing map, if defined."
+          - name: addAll
+            modifiers:
+            - public
+            parameters:
+            - name: c
+              type:
+                basic: Collection
+                full: java.util.Collection<? extends K>
+              notes: the elements to be inserted into this set
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: true if this set changed as a result of the call
+            notes: "Adds all of the elements in the specified collection to this set,\n\
+              \ as if by calling add(K) on each one."
+          - name: contains
+            modifiers:
+            - public
+            parameters:
+            - name: o
+              type:
+                basic: Object
+                full: java.lang.Object
+              notes: element whose presence in this collection is to be tested
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: "true if this collection contains the specified\n         element"
+            notes: "Returns true if this collection contains the specified element.\n\
+              \ More formally, returns true if and only if this collection\n contains\
+              \ at least one element e such that\n Objects.equals(o, e)."
+          - name: equals
+            modifiers:
+            - public
+            parameters:
+            - name: o
+              type:
+                basic: Object
+                full: java.lang.Object
+              notes: the reference object with which to compare.
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: "true if this object is the same as the obj\n          argument;\
+                \ false otherwise."
+            notes: 'Description copied from class: Object'
+          - name: forEach
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Consumer
+                full: java.util.function.Consumer<? super K>
+            return:
+              type:
+                basic: void
+                full: void
+          - name: getMap
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ConcurrentHashMap
+                full: java.util.concurrent.ConcurrentHashMap
+          - name: getMappedValue
+            modifiers:
+            - public
+            return:
+              type:
+                basic: V
+                full: V
+              notes: "the default mapped value for additions, or null\n if not supported"
+            notes: "Returns the default mapped value for additions,\n or null if additions\
+              \ are not supported."
+          - name: hashCode
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int
+              notes: a hash code value for this object.
+            notes: 'Description copied from class: Object'
+          - name: iterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Iterator
+                full: java.util.Iterator<K>
+              notes: an iterator over the keys of the backing map
+            notes: "Returns an iterator over the elements in this collection.\n\n\
+              \ The returned iterator is\n weakly consistent."
+          - name: remove
+            modifiers:
+            - public
+            parameters:
+            - name: o
+              type:
+                basic: Object
+                full: java.lang.Object
+              notes: the key to be removed from the backing map
+            return:
+              type:
+                basic: boolean
+                full: boolean
+              notes: true if the backing map contained the specified key
+            notes: "Removes the key from this map view, by removing the key (and its\n\
+              \ corresponding value) from the backing map.  This method does\n nothing\
+              \ if the key is not in the map."
+          - name: removeAll
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: Collection
+                full: java.util.Collection
+            return:
+              type:
+                basic: boolean
+                full: boolean
+          - name: spliterator
+            modifiers:
+            - public
+            return:
+              type:
+                basic: Spliterator
+                full: java.util.Spliterator<K>

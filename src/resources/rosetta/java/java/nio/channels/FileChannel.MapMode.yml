@@ -1,0 +1,62 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      java.nio.channels:
+        FileChannel.MapMode:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          notes: A file-mapping mode.
+          fields:
+            name:
+              name: name
+              modifiers:
+              - private
+              type:
+                basic: String
+                full: java.lang.String
+          staticFields:
+            PRIVATE:
+              name: PRIVATE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FileChannel.MapMode
+                full: java.nio.channels.FileChannel$MapMode
+              notes: Mode for a private (copy-on-write) mapping.
+            READ_ONLY:
+              name: READ_ONLY
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FileChannel.MapMode
+                full: java.nio.channels.FileChannel$MapMode
+              notes: Mode for a read-only mapping.
+            READ_WRITE:
+              name: READ_WRITE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: FileChannel.MapMode
+                full: java.nio.channels.FileChannel$MapMode
+              notes: Mode for a read/write mapping.
+          constructors:
+          - modifiers:
+            - private
+            parameters:
+            - name: arg0
+              type:
+                basic: String
+                full: java.lang.String
+          methods:
+          - name: toString
+            modifiers:
+            - public
+            return:
+              type:
+                basic: String
+                full: java.lang.String

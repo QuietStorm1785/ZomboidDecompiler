@@ -1,0 +1,35 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.asset:
+        AssetType:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            type:
+              name: type
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+          staticFields:
+            INVALID_ASSET_TYPE:
+              name: INVALID_ASSET_TYPE
+              modifiers:
+              - public
+              - static
+              type:
+                basic: AssetType
+                full: zombie.asset.AssetType
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: typeName
+              type:
+                basic: String
+                full: java.lang.String

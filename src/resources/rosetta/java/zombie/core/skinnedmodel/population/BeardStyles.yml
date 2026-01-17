@@ -1,0 +1,111 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.core.skinnedmodel.population:
+        BeardStyles:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          fields:
+            m_Styles:
+              name: m_Styles
+              modifiers:
+              - public
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.skinnedmodel.population.BeardStyle>
+          staticFields:
+            instance:
+              name: instance
+              modifiers:
+              - public
+              - static
+              type:
+                basic: BeardStyles
+                full: zombie.core.skinnedmodel.population.BeardStyles
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: FindStyle
+            modifiers:
+            - public
+            parameters:
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: BeardStyle
+                full: zombie.core.skinnedmodel.population.BeardStyle
+          - name: getAllStyles
+            modifiers:
+            - public
+            return:
+              type:
+                basic: ArrayList
+                full: java.util.ArrayList<zombie.core.skinnedmodel.population.BeardStyle>
+          - name: getInstance
+            modifiers:
+            - public
+            return:
+              type:
+                basic: BeardStyles
+                full: zombie.core.skinnedmodel.population.BeardStyles
+          - name: getRandomStyle
+            modifiers:
+            - public
+            parameters:
+            - name: outfitName
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: String
+                full: java.lang.String
+          staticMethods:
+          - name: Parse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: filename
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: BeardStyles
+                full: zombie.core.skinnedmodel.population.BeardStyles
+          - name: Reset
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: init
+            modifiers:
+            - public
+            - static
+            return:
+              type:
+                basic: void
+                full: void
+          - name: parse
+            modifiers:
+            - public
+            - static
+            parameters:
+            - name: filename
+              type:
+                basic: String
+                full: java.lang.String
+            return:
+              type:
+                basic: BeardStyles
+                full: zombie.core.skinnedmodel.population.BeardStyles

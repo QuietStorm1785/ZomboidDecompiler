@@ -1,0 +1,45 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie:
+        ZomboidFileSystem.PZModFolder:
+          extends: java.lang.Object
+          modifiers:
+          - public
+          - final
+          fields:
+            common:
+              name: common
+              modifiers:
+              - public
+              type:
+                basic: ZomboidFileSystem.PZFolder
+                full: zombie.ZomboidFileSystem$PZFolder
+            version:
+              name: version
+              modifiers:
+              - public
+              type:
+                basic: ZomboidFileSystem.PZFolder
+                full: zombie.ZomboidFileSystem$PZFolder
+          constructors:
+          - modifiers:
+            - public
+          methods:
+          - name: setWithCatch
+            modifiers:
+            - public
+            parameters:
+            - name: arg0
+              type:
+                basic: File
+                full: java.io.File
+            - name: arg1
+              type:
+                basic: File
+                full: java.io.File
+            return:
+              type:
+                basic: void
+                full: void

@@ -1,0 +1,57 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.inventory.types:
+        ComboItem:
+          extends: zombie.inventory.InventoryItem
+          modifiers:
+          - public
+          - final
+          constructors:
+          - modifiers:
+            - public
+            parameters:
+            - name: module
+              type:
+                basic: String
+                full: java.lang.String
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: itemType
+              type:
+                basic: String
+                full: java.lang.String
+            - name: texName
+              type:
+                basic: String
+                full: java.lang.String
+          - modifiers:
+            - public
+            parameters:
+            - name: module
+              type:
+                basic: String
+                full: java.lang.String
+            - name: name
+              type:
+                basic: String
+                full: java.lang.String
+            - name: itemType
+              type:
+                basic: String
+                full: java.lang.String
+            - name: item
+              type:
+                basic: Item
+                full: zombie.scripting.objects.Item
+          methods:
+          - name: getSaveType
+            modifiers:
+            - public
+            return:
+              type:
+                basic: int
+                full: int

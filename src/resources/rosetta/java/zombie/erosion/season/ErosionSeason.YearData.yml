@@ -1,0 +1,202 @@
+version: '1.1'
+languages:
+  java:
+    packages:
+      zombie.erosion.season:
+        ErosionSeason.YearData:
+          extends: java.lang.Object
+          modifiers:
+          - package
+          fields:
+            coldestDay:
+              name: coldestDay
+              modifiers:
+              - public
+              type:
+                basic: GregorianCalendar
+                full: java.util.GregorianCalendar
+            coldestDayUnx:
+              name: coldestDayUnx
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            hottestDay:
+              name: hottestDay
+              modifiers:
+              - public
+              type:
+                basic: GregorianCalendar
+                full: java.util.GregorianCalendar
+            hottestDayUnx:
+              name: hottestDayUnx
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            lastSummerStr:
+              name: lastSummerStr
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            lastWinterStr:
+              name: lastWinterStr
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            nextSummerStr:
+              name: nextSummerStr
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            nextWinterStr:
+              name: nextWinterStr
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            sumSols:
+              name: sumSols
+              modifiers:
+              - public
+              type:
+                basic: GregorianCalendar
+                full: java.util.GregorianCalendar
+            sumSolsUnx:
+              name: sumSolsUnx
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            summerE:
+              name: summerE
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            summerEndDay:
+              name: summerEndDay
+              modifiers:
+              - public
+              type:
+                basic: GregorianCalendar
+                full: java.util.GregorianCalendar
+            summerEndDayUnx:
+              name: summerEndDayUnx
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            summerS:
+              name: summerS
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            summerStartDay:
+              name: summerStartDay
+              modifiers:
+              - public
+              type:
+                basic: GregorianCalendar
+                full: java.util.GregorianCalendar
+            summerStartDayUnx:
+              name: summerStartDayUnx
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            summerStr:
+              name: summerStr
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            winSols:
+              name: winSols
+              modifiers:
+              - public
+              type:
+                basic: GregorianCalendar
+                full: java.util.GregorianCalendar
+            winSolsUnx:
+              name: winSolsUnx
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            winterE:
+              name: winterE
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            winterEndDay:
+              name: winterEndDay
+              modifiers:
+              - public
+              type:
+                basic: GregorianCalendar
+                full: java.util.GregorianCalendar
+            winterEndDayUnx:
+              name: winterEndDayUnx
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            winterS:
+              name: winterS
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            winterStartDay:
+              name: winterStartDay
+              modifiers:
+              - public
+              type:
+                basic: GregorianCalendar
+                full: java.util.GregorianCalendar
+            winterStartDayUnx:
+              name: winterStartDayUnx
+              modifiers:
+              - public
+              type:
+                basic: long
+                full: long
+            winterStr:
+              name: winterStr
+              modifiers:
+              - public
+              type:
+                basic: float
+                full: float
+            year:
+              name: year
+              modifiers:
+              - public
+              type:
+                basic: int
+                full: int
+          constructors:
+          - modifiers:
+            - private

@@ -63,15 +63,10 @@ public class FileUtils {
         if (Files.isDirectory(source)) {
             Files.createDirectory(destination);
             try (Stream<Path> files = Files.list(source)) {
-                files.forEach(
-                        path -> {
-                            try {
-                                copyFileOrDirectory(path, destination.resolve(
-                                        path.getFileName().toString()));
-                            } catch (IOException e) {
-                                ZomboidDecompiler.log.log(e);
-                            }
-                        });
+                // Convert stream to list to avoid lambda throwing checked exceptions
+                for (Path path : files.toList()) {
+                    copyFileOrDirectory(path, destination.resolve(path.getFileName().toString()));
+                }
             }
         } else {
             Files.copy(source, destination);
@@ -86,7 +81,8 @@ public class FileUtils {
         assert Files.isDirectory(directory);
 
         try (Stream<Path> files = Files.list(directory)) {
-            files.forEach(path -> {
+            // Convert to list to avoid forEach overhead and enable cleaner iteration
+            for (Path path : files.toList()) {
                 try {
                     if (Files.isDirectory(path)) {
                         clearDirectory(path);
@@ -95,7 +91,7 @@ public class FileUtils {
                 } catch (IOException e) {
                     ZomboidDecompiler.log.log(e);
                 }
-            });
+            }
         } catch (IOException e) {
             ZomboidDecompiler.log.log(e);
         }

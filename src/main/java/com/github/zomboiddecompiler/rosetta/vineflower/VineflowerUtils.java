@@ -72,10 +72,10 @@ public class VineflowerUtils {
 
     public static boolean isSameType(VarType vineflowerType, String rosettaType) {
         String vineflowerTypeName = getTypeName(vineflowerType);
-        int lowestQualificationLevel = Math.min(
-                countInString(vineflowerTypeName, "."),
-                countInString(rosettaType, ".")
-        );
+        // Cache dot counts to avoid redundant string scanning
+        int vineflowerDots = countInString(vineflowerTypeName, ".");
+        int rosettaDots = countInString(rosettaType, ".");
+        int lowestQualificationLevel = Math.min(vineflowerDots, rosettaDots);
         rosettaType = changeQualificationLevel(rosettaType, lowestQualificationLevel);
         vineflowerTypeName = changeQualificationLevel(vineflowerTypeName, lowestQualificationLevel);
         return rosettaType.equals(vineflowerTypeName);

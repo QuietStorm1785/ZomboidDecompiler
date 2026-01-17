@@ -18,7 +18,7 @@ public class RosettaNameProvider extends AbstractRosettaNameProvider {
 
     /**
      * Gets the 'true' index of a variable from its 'raw' index.
-     * Raw indices jump a number for double width types.
+     * Raw indices jump a number for double width types (long, double).
      * Raw indices consider 'this' as a function parameter for instance functions.
      * @param index Raw index of the variable.
      * @return True index of the variable.
@@ -30,12 +30,10 @@ public class RosettaNameProvider extends AbstractRosettaNameProvider {
         }
 
         int i = 0;
-        // FIXME: this doesn't account for wide local variables
-        // VarType has getStackSize that could be used for this but would need to rewrite this whole method
+        // Account for wide local variables (long and double take 2 slots)
         while (i < index && i < executable.getParameters().size()) {
             String parameterType = executable.getParameters().get(i).getType();
-            if (Objects.equals(parameterType, "long")
-                    || Objects.equals(parameterType, "double")) {
+            if ("long".equals(parameterType) || "double".equals(parameterType)) {
                 index--;
             }
             i++;
@@ -59,8 +57,8 @@ public class RosettaNameProvider extends AbstractRosettaNameProvider {
 
             // don't rename parameters, renameParameter already got them
             if (index >= executable.getParameters().size()) {
-                // FIXME: i really don't know why this is null now and it probably breaks stuff with obfuscated code
-                if (entry.getValue().a != null) {
+                // Use the variable type if available; skip if null (obfuscated code)
+                if (entry.getValue() != null && entry.getValue().a != null) {
                     unknownVariables.put(pair, entry.getValue().a);
                 }
             }

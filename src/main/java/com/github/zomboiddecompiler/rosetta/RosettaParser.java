@@ -1,5 +1,6 @@
 package com.github.zomboiddecompiler.rosetta;
 
+import com.github.zomboiddecompiler.ZomboidDecompiler;
 import org.json.JSONObject;
 import org.snakeyaml.engine.v2.api.Load;
 import org.snakeyaml.engine.v2.api.LoadSettings;
@@ -25,22 +26,22 @@ import java.util.stream.Stream;
         assert Files.exists(directory) && Files.isDirectory(directory);
 
         try (Stream<Path> files = Files.walk(directory)) {
-            for (Path file : files.toList()) {
+            files.forEach(file -> {
                 String fileName = file.getFileName().toString().toLowerCase();
-                if (fileName.endsWith(".json")) {
-                    try {
+                try {
+                    if (fileName.endsWith(".json")) {
                         parseJson(Files.newInputStream(file));
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    }
-                } else if (fileName.endsWith(".yml")) {
-                    try {
+                    } else if (fileName.endsWith(".yml")) {
                         parseYaml(Files.newInputStream(file));
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
                     }
+                } catch (FileNotFoundException e) {
+                    ZomboidDecompiler.log.log("Failed to parse rosetta file: " + file);
+                    ZomboidDecompiler.log.log(e);
+                } catch (IOException e) {
+                    ZomboidDecompiler.log.log("I/O error reading rosetta file: " + file);
+                    ZomboidDecompiler.log.log(e);
                 }
-            }
+            });
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -52,19 +53,24 @@ import java.util.stream.Stream;
      * @return True if parsing succeeded, false otherwise.
      */
     public boolean parseJson(InputStream stream) {
-        StringBuilder source = new StringBuilder();
         try (InputStreamReader reader = new InputStreamReader(stream)) {
-            while(reader.ready()) {
-                source.append((char)reader.read());
+            // Read entire stream more efficiently
+            StringBuilder source = new StringBuilder();
+            char[] buffer = new char[8192];
+            int charsRead;
+            while ((charsRead = reader.read(buffer)) != -1) {
+                source.append(buffer, 0, charsRead);
             }
+            
+            // Remove newlines for JSON parsing
+            String sourceString = source.toString().replace("\n", "");
+            Map<String, Object> json = new JSONObject(sourceString).toMap();
+            return this.parseFile(json);
         } catch (IOException e) {
-            e.printStackTrace();
+            ZomboidDecompiler.log.log("Error reading JSON rosetta file");
+            ZomboidDecompiler.log.log(e);
             return false;
         }
-
-        String sourceString = source.toString().replace("\n", "");
-        Map<String, Object> json = new JSONObject(sourceString).toMap();
-        return this.parseFile(json);
     }
 
     /**

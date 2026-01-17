@@ -117,8 +117,10 @@ public final class ZomboidResultSaver implements IResultSaver {
             // this actually points to a .java file, which probably doesn't exist!!
             Path classFile = this.gameRoot.resolve(entryName);
             Path classDirectory = classFile.getParent();
-            String className = classFile.getFileName().toString();
-            className = className.substring(0, className.length() - ".java".length());
+            String classFileName = classFile.getFileName().toString();
+            String className = classFileName.endsWith(".java") 
+                ? classFileName.substring(0, classFileName.length() - 5)
+                : classFileName.substring(0, classFileName.lastIndexOf('.'));
 
             ZomboidDecompiler.log.log("Remapping line numbers in " + className);
 

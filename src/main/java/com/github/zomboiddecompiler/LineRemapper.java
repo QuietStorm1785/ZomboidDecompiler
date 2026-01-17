@@ -89,29 +89,36 @@ public final class LineRemapper {
         /**
          * Gets the corresponding source line number for a bytecode line number.
          * @param line The bytecode line number.
-         * @return The corresponding source line number.
+         * @return The corresponding source line number, or the original line if no mapping exists.
          */
         Integer getSourceLineNumber(Integer line) {
             if (line == 0) {
                 return 0;
             }
 
-            // No mappings available: keep original line numbers to avoid NPEs.
+            // No mappings available: keep original line numbers to avoid errors.
             if (max == null) {
                 return line;
             }
 
+            // If line is at or beyond the maximum mapped line, use the last available mapping
             if (line >= max) {
-                return mappings.getOrDefault(max, line);
+                Integer mappedLine = mappings.get(max);
+                return mappedLine != null ? mappedLine : line;
             }
 
-            int cursor = line;
-            while (cursor < max) {
-                Integer sourceLine = mappings.get(cursor);
+            // Check current line first before searching forward
+            Integer sourceLine = mappings.get(line);
+            if (sourceLine != null) {
+                return sourceLine;
+            }
+
+            // Search forward from the given line to find a mapping
+            for (int cursor = line + 1; cursor <= max; cursor++) {
+                sourceLine = mappings.get(cursor);
                 if (sourceLine != null) {
                     return sourceLine;
                 }
-                cursor++;
             }
 
             // Fallback: return the original line when no mapping was found

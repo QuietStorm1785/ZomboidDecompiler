@@ -13,6 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -39,7 +40,7 @@ public class ZomboidContextSource implements IContextSource, AutoCloseable {
             scanDirectory(root, classes, directories);
         }
 
-        return new Entries(classes, directories, new ArrayList<>(), new ArrayList<>());
+        return new Entries(classes, directories, Collections.emptyList(), Collections.emptyList());
     }
 
     void scanDirectory(final Path current, final List<Entry> classes, final List<String> directories) {
@@ -60,9 +61,9 @@ public class ZomboidContextSource implements IContextSource, AutoCloseable {
                     return;
                 }
 
-                if (file.getFileName().toString().endsWith(CLASS_SUFFIX)
+                String fileName = file.getFileName().toString();
+                if (fileName.endsWith(CLASS_SUFFIX)
                         && this.invertPatterns != this.patterns.fullMatch(file)) {
-                    String fileName = file.getFileName().toString();
                     String baseName = fileName.substring(0, fileName.length() - CLASS_SUFFIX.length());
                     String entryPath = baseDir.isEmpty() ? baseName : baseDir + "/" + baseName;
                     classes.add(Entry.atBase(entryPath));
@@ -186,24 +187,28 @@ public class ZomboidContextSource implements IContextSource, AutoCloseable {
             String trimmed = patterns.trim();
             // A single '*' matches all classes.
             if ("*".equals(trimmed)) {
-                return new ClassPatterns(List.of(ClassPattern.matchAll()), new ArrayList<>());
+                return new ClassPatterns(List.of(ClassPattern.matchAll()), Collections.emptyList());
             }
 
             List<ClassPattern> positivePatterns = new ArrayList<>();
-            List<ClassPattern> negativePatterns = new ArrayList<>();
+            List<ClassPattern> negativePatterns = null; // Lazy-initialize if negative patterns found
+            
             for (String pattern : patterns.split(",")) {
                 pattern = pattern.trim();
                 if (pattern.isEmpty()) {
                     continue;
                 }
                 if (pattern.startsWith("-")) {
+                    if (negativePatterns == null) {
+                        negativePatterns = new ArrayList<>();
+                    }
                     negativePatterns.add(ClassPattern.fromString(pattern.substring(1)));
                 } else {
                     positivePatterns.add(ClassPattern.fromString(pattern));
                 }
             }
 
-            return new ClassPatterns(positivePatterns, negativePatterns);
+            return new ClassPatterns(positivePatterns, negativePatterns != null ? negativePatterns : Collections.emptyList());
         }
 
         private ClassPatterns(final List<ClassPattern> positivePatterns, final List<ClassPattern> negativePatterns) {
@@ -261,20 +266,21 @@ public class ZomboidContextSource implements IContextSource, AutoCloseable {
         }
 
         public static ClassPattern fromString(final String pattern) {
-            final List<String> elements = new ArrayList<>(
-                    Arrays.asList(pattern.split("\\."))
-            );
-
+            // Parse pattern directly without unnecessary array conversions
+            List<String> elements = new ArrayList<>();
             boolean isWildcard = false;
-            if (elements.get(elements.size() - 1).equals("*")) {
-                elements.remove(elements.size() - 1);
-                isWildcard = true;
+            
+            String[] parts = pattern.split("\\.");
+            for (int i = 0; i < parts.length; i++) {
+                String part = parts[i];
+                if (i == parts.length - 1 && "*".equals(part)) {
+                    isWildcard = true;
+                } else {
+                    elements.add(part);
+                }
             }
 
-            return new ClassPattern(
-                    elements,
-                    isWildcard
-            );
+            return new ClassPattern(elements, isWildcard);
         }
 
         static ClassPattern matchAll() {

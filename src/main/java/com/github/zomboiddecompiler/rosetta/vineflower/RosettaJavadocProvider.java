@@ -52,6 +52,9 @@ public class RosettaJavadocProvider implements IFabricJavadocProvider {
         JavadocBuilder javadoc = new JavadocBuilder();
 
         javadoc.append(rosettaField.getNotes());
+        
+        // Add type information in javadoc
+        javadoc.append("@see #" + rosettaField.getType());
 
         if (rosettaField.isDeprecated()) {
             javadoc.append("@deprecated");
@@ -91,6 +94,8 @@ public class RosettaJavadocProvider implements IFabricJavadocProvider {
         if (executable.isDeprecated()) {
             javadoc.append("@deprecated");
         }
+        
+        // Note: throws documentation can be added here if Rosetta structure supports it in future versions
 
         if (javadoc.isEmpty()) {
             return null;
@@ -119,10 +124,9 @@ public class RosettaJavadocProvider implements IFabricJavadocProvider {
             }
         }
 
-        // FIXME: interfaces don't keep their MethodParameters and their methods don't have code
-        //  so there's no way to get their parameter names :(
-        //  the parameter rename doesn't run until AFTER javadoc
-        return "ERROR";
+        // Interfaces don't store parameter names (no code attributes)
+        // Return null so caller can handle missing names gracefully
+        return null;
     }
 
     private String getParameterDocs(StructMethod method, RosettaExecutable executable) {
@@ -131,16 +135,20 @@ public class RosettaJavadocProvider implements IFabricJavadocProvider {
         boolean anyNotes = false;
         for (int i = 0; i < executable.getParameters().size(); i++) {
             RosettaParameter parameter = executable.getParameters().get(i);
+            String paramName = this.getParameterName(method, i);
+            
+            // Skip parameters with missing names (interfaces, obfuscated code)
+            if (paramName == null) {
+                continue;
+            }
+            
             parameterBuilder.append("\n");
-
-            parameterBuilder.append("@param ")
-                    .append(this.getParameterName(method, i));
+            parameterBuilder.append("@param ").append(paramName);
 
             String notes = parameter.getNotes();
             if (!notes.isBlank()) {
                 anyNotes = true;
-                parameterBuilder.append(" ")
-                        .append(parameter.getNotes());
+                parameterBuilder.append(" ").append(parameter.getNotes());
             }
         }
 
@@ -154,7 +162,7 @@ public class RosettaJavadocProvider implements IFabricJavadocProvider {
 
     private static class JavadocBuilder {
         public void append(String string) {
-            if (string.isBlank()) {
+            if (string == null || string.isBlank()) {
                 return;
             }
 
@@ -163,6 +171,27 @@ public class RosettaJavadocProvider implements IFabricJavadocProvider {
             }
 
             this.builder.append(string);
+        }
+        
+        /**
+         * Adds formatted bullet points for a list of items.
+         */
+        public void appendList(String title, List<String> items) {
+            if (items == null || items.isEmpty()) {
+                return;
+            }
+            
+            if (!this.builder.isEmpty()) {
+                this.builder.append("\n");
+            }
+            
+            if (title != null && !title.isBlank()) {
+                this.builder.append(title).append(":\n");
+            }
+            
+            for (String item : items) {
+                this.builder.append("  - ").append(item).append("\n");
+            }
         }
 
         public String build() {

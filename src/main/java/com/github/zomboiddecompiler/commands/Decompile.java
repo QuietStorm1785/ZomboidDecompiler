@@ -94,8 +94,15 @@ public class Decompile implements Callable<Integer> {
                     result.append((char)reader.read());
                 }
 
-                // FIXME: this would fail if the user (for some reason) had 4 spaces in their install path
-                steamDirectory = result.substring(result.lastIndexOf("    ") + 1);
+                // Find the last tab (registry output format) instead of assuming 4 spaces
+                String output = result.toString();
+                int lastTab = output.lastIndexOf('\t');
+                if (lastTab != -1) {
+                    steamDirectory = output.substring(lastTab + 1);
+                } else {
+                    // Fallback: try space-based parsing
+                    steamDirectory = output.substring(output.lastIndexOf("    ") + 1);
+                }
                 steamDirectory = steamDirectory.trim();
             }
         } catch (InterruptedException | IOException e) {
@@ -132,11 +139,15 @@ public class Decompile implements Callable<Integer> {
 
         StringBuilder librariesVDF = new StringBuilder();
         try (InputStreamReader reader = new InputStreamReader(Files.newInputStream(libraryfolders))) {
-            while(reader.ready()) {
-                librariesVDF.append((char)reader.read());
+            // Use buffered reading for better I/O performance
+            char[] buffer = new char[4096];
+            int charsRead;
+            while ((charsRead = reader.read(buffer)) != -1) {
+                librariesVDF.append(buffer, 0, charsRead);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            ZomboidDecompiler.log.log("Failed to read Steam library folders");
+            ZomboidDecompiler.log.log(e);
         }
 
         VDFBlock librariesBlock = VDFBlock.parse(librariesVDF.toString()).getBlock("libraryfolders");

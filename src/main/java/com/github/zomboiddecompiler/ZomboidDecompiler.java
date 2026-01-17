@@ -133,22 +133,42 @@ public class ZomboidDecompiler {
                 .option(IFernflowerPreferences.INDENT_STRING, "    ")
                 // String literal formatting - escape special characters properly
                 .option("string_concat_same_class", true)
+                // Format numeric literals for readability (e.g. 1_000_000)
+                .option("numeric_literals", true)
                 // === MEMBER VISIBILITY & COMPLETENESS ===
                 // Ensure all members are visible and properly decompiled
                 .option("synthetic_not_set", false)
                 // Remove bridge method markers for cleaner code
                 .option("remove_bridge", false)
+                // Hide empty/trivial super constructors
+                .option("show_hidden_fields", false)
+                // Display annotations on classes and methods
+                .option("show_annotations", true)
                 // === SOURCE CODE ACCURACY ===
                 // Preserve debug information where possible
                 .option("verify_anonymous_classes", true)
                 // Better handling of lambdas and functional interfaces
                 .option("lambda_to_anonymous_class", false)
+                // Decompile methods to the fullest extent
+                .option("always_full", true)
+                // Inline simple getter/setter patterns where appropriate
+                .option("inline_simple_lambdas", true)
+                // Preserve local variable names from debug info
+                .option("use_variable_names", true)
+                // Better display of method signatures
+                .option("decompile_inner_classes", true)
+                // Proper handling of try-with-resources
+                .option("decompile_try_catch", true)
                 // === TYPE RESOLUTION & CLARITY ===
                 // Include Java runtime for better type inference
                 .option(IFernflowerPreferences.INCLUDE_JAVA_RUNTIME,
                         gamePath.resolve("jre64").toAbsolutePath().toString())
                 // Library context for proper dependency resolution
                 .libraries(dependencySource)
+                // Properly display inner classes with meaningful names
+                .option("use_name_resolving_for_inner", true)
+                // Improve readability of ternary operators
+                .option("indent_ternary", true)
                 // === LOGGING & DIAGNOSTICS ===
                 .logger(vineflowerLog instanceof StreamLogger fileLogger
                         ? new PrintStreamLogger(fileLogger.getStream())

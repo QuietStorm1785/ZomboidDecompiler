@@ -63,6 +63,7 @@ public abstract class AbstractRosettaNameProvider implements IVariableNameProvid
 
     /// Names that should never be used as variable names without a number suffix.
     private final static Set<String> reservedNames = Set.of(
+            // Java primitives
             "byte",
             "short",
             "int",
@@ -71,7 +72,26 @@ public abstract class AbstractRosettaNameProvider implements IVariableNameProvid
             "double",
             "boolean",
             "char",
-            "zombie"
+            // Project Zomboid specific
+            "zombie",
+            "game",
+            "player",
+            "world",
+            "map",
+            // Common overly generic names that should get numbers
+            "object",
+            "data",
+            "value",
+            "temp",
+            "var",
+            "index",
+            "result",
+            "item",
+            "element",
+            "entry",
+            "size",
+            "count",
+            "length"
     );
 
     private static boolean invalidTypeNameProviderWarned = false;
